@@ -1,0 +1,23 @@
+<FindBugsFilter>
+  <Match>
+    <Or>
+      <!-- Wir schauen darauf, dass wir mir den internen Referenzen, 
+           die wir von Objekten bekommen oder in ihnen speichern,
+           keinen Unsinn machen. -->
+      <Bug pattern="MS_EXPOSE_REP" />
+      <Bug pattern="EI_EXPOSE_STATIC_REP2" />
+      <Bug pattern="EI_EXPOSE_REP" />
+      <Bug pattern="EI_EXPOSE_REP2" />
+      <!-- Dieser Check macht keinen Sinn.
+           Wenn man nicht null zurückgeben wollte, dann würde man nicht Boolean,
+           sondern boolean als Rückgabetyp verwenden. -->
+      <Bug pattern="NP_BOOLEAN_RETURN_NULL" />
+
+      <!-- Dieser Check macht in dieser Allgemeinheit keinen Sinn.
+           Prinzipiell ist es natürlich richtig, dass man lieber auf null prüfen statt NPEs
+           fangen sollte. Es gibt jedoch Situationen
+           (z.B. Fremdbibliotheken) bei denen man diese Option nicht hat. -->
+      <Bug pattern="DCN_NULLPOINTER_EXCEPTION" />
+    </Or>
+  </Match>
+</FindBugsFilter>
