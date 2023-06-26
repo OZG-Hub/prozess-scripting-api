@@ -4,7 +4,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.form;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.validation.constraints.NotNull;
+import lombok.NonNull;
 
 /**
  * Zeile von Feldern in einem Formular.
@@ -17,7 +17,7 @@ public class FormRowV1 implements Cloneable {
   /**
    * Formularfelder dieser Zeile.
    */
-  @NotNull
+  @NonNull
   private List<FormFieldV1> fields;
 
   protected FormRowV1(FormRowV1 toCopy) {
@@ -63,7 +63,10 @@ public class FormRowV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormRowV1.FormRowV1Builder fields(final List<FormFieldV1> fields) {
+    public FormRowV1.FormRowV1Builder fields(@NonNull final List<FormFieldV1> fields) {
+      if (fields == null) {
+        throw new NullPointerException("fields is marked non-null but is null");
+      }
       this.fields$value = fields;
       fields$set = true;
       return this;
@@ -91,6 +94,7 @@ public class FormRowV1 implements Cloneable {
   /**
    * Formularfelder dieser Zeile.
    */
+  @NonNull
   @SuppressWarnings("all")
   public List<FormFieldV1> getFields() {
     return this.fields;
@@ -100,7 +104,10 @@ public class FormRowV1 implements Cloneable {
    * Formularfelder dieser Zeile.
    */
   @SuppressWarnings("all")
-  public void setFields(final List<FormFieldV1> fields) {
+  public void setFields(@NonNull final List<FormFieldV1> fields) {
+    if (fields == null) {
+      throw new NullPointerException("fields is marked non-null but is null");
+    }
     this.fields = fields;
   }
 
@@ -139,7 +146,10 @@ public class FormRowV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
-  public FormRowV1(final List<FormFieldV1> fields) {
+  public FormRowV1(@NonNull final List<FormFieldV1> fields) {
+    if (fields == null) {
+      throw new NullPointerException("fields is marked non-null but is null");
+    }
     this.fields = fields;
   }
 }

@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import javax.validation.constraints.NotNull;
 import de.seitenbau.serviceportal.scripting.api.v1.form.condition.DisplayConditionV1;
+import lombok.NonNull;
 
 /**
  * Abstrakte Elternklasse für Feldgruppen und deren Instanzen.
@@ -20,7 +20,7 @@ public abstract class AbstractFieldGroupV1 {
   /**
    * ID der Feldgruppe.
    */
-  @NotNull
+  @NonNull
   private String id;
   /**
    * Überschrift der Feldgruppe.
@@ -29,13 +29,13 @@ public abstract class AbstractFieldGroupV1 {
   /**
    * Formularzeilen der Feldgruppe. Default ist eine leere Liste.
    */
-  @NotNull
+  @NonNull
   private List<FormRowV1> rows;
   /**
    * Sichtbarkeitsbedingungen, über die die Feldgruppe dynamisch ein- oder ausgeblendet werden kann.
    * Default ist eine leere Liste.
    */
-  @NotNull
+  @NonNull
   private List<DisplayConditionV1> displayConditions;
 
   /**
@@ -45,7 +45,10 @@ public abstract class AbstractFieldGroupV1 {
    *
    * @throws NullPointerException Wenn die gegebene ID {@code null} ist
    */
-  protected AbstractFieldGroupV1(@NotNull String id) {
+  protected AbstractFieldGroupV1(@NonNull String id) {
+    if (id == null) {
+      throw new NullPointerException("id is marked non-null but is null");
+    }
     this.id = id;
   }
 
@@ -103,7 +106,10 @@ public abstract class AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public B id(final String id) {
+    public B id(@NonNull final String id) {
+      if (id == null) {
+        throw new NullPointerException("id is marked non-null but is null");
+      }
       this.id = id;
       return self();
     }
@@ -121,7 +127,10 @@ public abstract class AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public B rows(final List<FormRowV1> rows) {
+    public B rows(@NonNull final List<FormRowV1> rows) {
+      if (rows == null) {
+        throw new NullPointerException("rows is marked non-null but is null");
+      }
       this.rows$value = rows;
       rows$set = true;
       return self();
@@ -131,7 +140,10 @@ public abstract class AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public B displayConditions(final List<DisplayConditionV1> displayConditions) {
+    public B displayConditions(@NonNull final List<DisplayConditionV1> displayConditions) {
+      if (displayConditions == null) {
+        throw new NullPointerException("displayConditions is marked non-null but is null");
+      }
       this.displayConditions$value = displayConditions;
       displayConditions$set = true;
       return self();
@@ -153,16 +165,26 @@ public abstract class AbstractFieldGroupV1 {
   @SuppressWarnings("all")
   protected AbstractFieldGroupV1(final AbstractFieldGroupV1.AbstractFieldGroupV1Builder<?, ?> b) {
     this.id = b.id;
+    if (id == null) {
+      throw new NullPointerException("id is marked non-null but is null");
+    }
     this.title = b.title;
     if (b.rows$set) this.rows = b.rows$value;
      else this.rows = AbstractFieldGroupV1.$default$rows();
+    if (rows == null) {
+      throw new NullPointerException("rows is marked non-null but is null");
+    }
     if (b.displayConditions$set) this.displayConditions = b.displayConditions$value;
      else this.displayConditions = AbstractFieldGroupV1.$default$displayConditions();
+    if (displayConditions == null) {
+      throw new NullPointerException("displayConditions is marked non-null but is null");
+    }
   }
 
   /**
    * ID der Feldgruppe.
    */
+  @NonNull
   @SuppressWarnings("all")
   public String getId() {
     return this.id;
@@ -179,6 +201,7 @@ public abstract class AbstractFieldGroupV1 {
   /**
    * Formularzeilen der Feldgruppe. Default ist eine leere Liste.
    */
+  @NonNull
   @SuppressWarnings("all")
   public List<FormRowV1> getRows() {
     return this.rows;
@@ -188,6 +211,7 @@ public abstract class AbstractFieldGroupV1 {
    * Sichtbarkeitsbedingungen, über die die Feldgruppe dynamisch ein- oder ausgeblendet werden kann.
    * Default ist eine leere Liste.
    */
+  @NonNull
   @SuppressWarnings("all")
   public List<DisplayConditionV1> getDisplayConditions() {
     return this.displayConditions;
@@ -197,7 +221,10 @@ public abstract class AbstractFieldGroupV1 {
    * ID der Feldgruppe.
    */
   @SuppressWarnings("all")
-  public void setId(final String id) {
+  public void setId(@NonNull final String id) {
+    if (id == null) {
+      throw new NullPointerException("id is marked non-null but is null");
+    }
     this.id = id;
   }
 
@@ -213,7 +240,10 @@ public abstract class AbstractFieldGroupV1 {
    * Formularzeilen der Feldgruppe. Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
-  public void setRows(final List<FormRowV1> rows) {
+  public void setRows(@NonNull final List<FormRowV1> rows) {
+    if (rows == null) {
+      throw new NullPointerException("rows is marked non-null but is null");
+    }
     this.rows = rows;
   }
 
@@ -222,7 +252,10 @@ public abstract class AbstractFieldGroupV1 {
    * Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
-  public void setDisplayConditions(final List<DisplayConditionV1> displayConditions) {
+  public void setDisplayConditions(@NonNull final List<DisplayConditionV1> displayConditions) {
+    if (displayConditions == null) {
+      throw new NullPointerException("displayConditions is marked non-null but is null");
+    }
     this.displayConditions = displayConditions;
   }
 

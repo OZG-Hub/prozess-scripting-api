@@ -155,44 +155,10 @@ public class OrganisationseinheitParameterV1 {
     return this.erreichbarkeit;
   }
 
-  /**
-   * ID der Organisationseinheit.
-   */
+  @Override
   @SuppressWarnings("all")
-  public void setId(final String id) {
-    this.id = id;
-  }
-
-  /**
-   * Name der Organisationseinheit.
-   */
-  @SuppressWarnings("all")
-  public void setName(final String name) {
-    this.name = name;
-  }
-
-  /**
-   * URLs zu Webseiten der Organisationseinheit.
-   */
-  @SuppressWarnings("all")
-  public void setInternetadressen(final List<String> internetadressen) {
-    this.internetadressen = internetadressen;
-  }
-
-  /**
-   * Anschriften der Organisationseinheit.
-   */
-  @SuppressWarnings("all")
-  public void setAnschriften(final List<OrganisationseinheitAnschriftParameterV1> anschriften) {
-    this.anschriften = anschriften;
-  }
-
-  /**
-   * Kontaktdaten der Organisationseinheit.
-   */
-  @SuppressWarnings("all")
-  public void setErreichbarkeit(final OrganisationseinheitKontaktParameterV1 erreichbarkeit) {
-    this.erreichbarkeit = erreichbarkeit;
+  public String toString() {
+    return "OrganisationseinheitParameterV1(id=" + this.getId() + ", name=" + this.getName() + ", internetadressen=" + this.getInternetadressen() + ", anschriften=" + this.getAnschriften() + ", erreichbarkeit=" + this.getErreichbarkeit() + ")";
   }
 
   @Override
@@ -241,12 +207,6 @@ public class OrganisationseinheitParameterV1 {
     final Object $erreichbarkeit = this.getErreichbarkeit();
     result = result * PRIME + ($erreichbarkeit == null ? 43 : $erreichbarkeit.hashCode());
     return result;
-  }
-
-  @Override
-  @SuppressWarnings("all")
-  public String toString() {
-    return "OrganisationseinheitParameterV1(id=" + this.getId() + ", name=" + this.getName() + ", internetadressen=" + this.getInternetadressen() + ", anschriften=" + this.getAnschriften() + ", erreichbarkeit=" + this.getErreichbarkeit() + ")";
   }
 
   @SuppressWarnings("all")

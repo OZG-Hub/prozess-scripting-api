@@ -1,4 +1,4 @@
-package de.seitenbau.serviceportal.prozess.scripttask;
+package de.seitenbau.serviceportal.scripting.api.v1;
 
 import java.util.List;
 

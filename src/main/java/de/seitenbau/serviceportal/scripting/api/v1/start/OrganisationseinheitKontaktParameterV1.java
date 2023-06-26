@@ -105,28 +105,10 @@ public class OrganisationseinheitKontaktParameterV1 {
     return this.fax;
   }
 
-  /**
-   * E-Mail-Adresse. Kann {@code null} sein.
-   */
+  @Override
   @SuppressWarnings("all")
-  public void setEmail(final String email) {
-    this.email = email;
-  }
-
-  /**
-   * Telefonnummer. Kann {@code null} sein.
-   */
-  @SuppressWarnings("all")
-  public void setTelefon(final String telefon) {
-    this.telefon = telefon;
-  }
-
-  /**
-   * Fax-Nummer. Kann {@code null} sein.
-   */
-  @SuppressWarnings("all")
-  public void setFax(final String fax) {
-    this.fax = fax;
+  public String toString() {
+    return "OrganisationseinheitKontaktParameterV1(email=" + this.getEmail() + ", telefon=" + this.getTelefon() + ", fax=" + this.getFax() + ")";
   }
 
   @Override
@@ -165,12 +147,6 @@ public class OrganisationseinheitKontaktParameterV1 {
     final Object $fax = this.getFax();
     result = result * PRIME + ($fax == null ? 43 : $fax.hashCode());
     return result;
-  }
-
-  @Override
-  @SuppressWarnings("all")
-  public String toString() {
-    return "OrganisationseinheitKontaktParameterV1(email=" + this.getEmail() + ", telefon=" + this.getTelefon() + ", fax=" + this.getFax() + ")";
   }
 
   @SuppressWarnings("all")

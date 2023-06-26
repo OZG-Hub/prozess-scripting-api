@@ -3,12 +3,10 @@ package de.seitenbau.serviceportal.scripting.api.v1.form;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.BinaryContentV1;
-import de.seitenbau.serviceportal.scripting.api.v1.form.content.FileReferenceV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.GeoMapContentV1;
 
 /**
@@ -24,7 +22,7 @@ public enum FieldTypeV1 {
   TEXTAREA(String.class), /**
    * Dateiupload.
    */
-  FILE(FileReferenceV1.class, BinaryContentV1.class), /**
+  FILE(BinaryContentV1.class), /**
    * Dateiupload-Feld mit Möglichkeit mehrere Dateien hochzuladen.
    */
   MULTIPLE_FILE(ArrayList.class), /**
@@ -116,10 +114,6 @@ public enum FieldTypeV1 {
 
   FieldTypeV1(Class<?> valueClass) {
     valueClasses = Collections.singletonList(valueClass);
-  }
-
-  FieldTypeV1(Class<?> valueClass1, Class<?> valueClass2) {
-    valueClasses = Collections.unmodifiableList(Arrays.asList(valueClass1, valueClass2));
   }
 
   /**

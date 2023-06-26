@@ -3,7 +3,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.form;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.validation.constraints.NotNull;
+import lombok.NonNull;
 
 /**
  * Abschnitt in einem Formular.
@@ -16,7 +16,7 @@ public class FormSectionV1 {
   /**
    * Feldgruppen dieses Abschnitts. Default ist leere Liste.
    */
-  @NotNull
+  @NonNull
   private List<FieldGroupV1> fieldGroups;
 
   @SuppressWarnings("all")
@@ -25,7 +25,10 @@ public class FormSectionV1 {
   }
 
   @SuppressWarnings("all")
-  FormSectionV1(final String title, final List<FieldGroupV1> fieldGroups) {
+  FormSectionV1(final String title, @NonNull final List<FieldGroupV1> fieldGroups) {
+    if (fieldGroups == null) {
+      throw new NullPointerException("fieldGroups is marked non-null but is null");
+    }
     this.title = title;
     this.fieldGroups = fieldGroups;
   }
@@ -59,7 +62,10 @@ public class FormSectionV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormSectionV1.FormSectionV1Builder fieldGroups(final List<FieldGroupV1> fieldGroups) {
+    public FormSectionV1.FormSectionV1Builder fieldGroups(@NonNull final List<FieldGroupV1> fieldGroups) {
+      if (fieldGroups == null) {
+        throw new NullPointerException("fieldGroups is marked non-null but is null");
+      }
       this.fieldGroups$value = fieldGroups;
       fieldGroups$set = true;
       return this;
@@ -95,6 +101,7 @@ public class FormSectionV1 {
   /**
    * Feldgruppen dieses Abschnitts. Default ist leere Liste.
    */
+  @NonNull
   @SuppressWarnings("all")
   public List<FieldGroupV1> getFieldGroups() {
     return this.fieldGroups;
@@ -112,7 +119,10 @@ public class FormSectionV1 {
    * Feldgruppen dieses Abschnitts. Default ist leere Liste.
    */
   @SuppressWarnings("all")
-  public void setFieldGroups(final List<FieldGroupV1> fieldGroups) {
+  public void setFieldGroups(@NonNull final List<FieldGroupV1> fieldGroups) {
+    if (fieldGroups == null) {
+      throw new NullPointerException("fieldGroups is marked non-null but is null");
+    }
     this.fieldGroups = fieldGroups;
   }
 

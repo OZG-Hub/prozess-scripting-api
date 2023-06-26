@@ -79,20 +79,10 @@ public class JesajaOrganisationseinheitPolitischeKodierungV1 {
     return this.ags;
   }
 
-  /**
-   * Amtlicher Regionalschlüssel.
-   */
+  @Override
   @SuppressWarnings("all")
-  public void setArs(final String ars) {
-    this.ars = ars;
-  }
-
-  /**
-   * Amtlicher Gemeindeschlüssel.
-   */
-  @SuppressWarnings("all")
-  public void setAgs(final String ags) {
-    this.ags = ags;
+  public String toString() {
+    return "JesajaOrganisationseinheitPolitischeKodierungV1(ars=" + this.getArs() + ", ags=" + this.getAgs() + ")";
   }
 
   @Override
@@ -126,12 +116,6 @@ public class JesajaOrganisationseinheitPolitischeKodierungV1 {
     final Object $ags = this.getAgs();
     result = result * PRIME + ($ags == null ? 43 : $ags.hashCode());
     return result;
-  }
-
-  @Override
-  @SuppressWarnings("all")
-  public String toString() {
-    return "JesajaOrganisationseinheitPolitischeKodierungV1(ars=" + this.getArs() + ", ags=" + this.getAgs() + ")";
   }
 
   @SuppressWarnings("all")

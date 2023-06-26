@@ -10,15 +10,6 @@ import de.seitenbau.serviceportal.scripting.api.v1.form.FieldTypeV1;
  */
 public class GeoMapContentV1 {
   /**
-   * Base64-Bild der Karte mit Nutzereingaben.
-   * Wird nur beim Submit befüllt und nach dem Submit auf {@code null} gesetzt.
-   */
-  private String data;
-  /**
-   * Bild, welches die Karte mit Nutzereingaben darstellt. Wird nur beim Submit befüllt.
-   */
-  private FileReferenceV1 file;
-  /**
    * JSON der Nutzereingaben auf der Karte.
    */
   private String json;
@@ -28,9 +19,7 @@ public class GeoMapContentV1 {
   private String selectionJson;
 
   @SuppressWarnings("all")
-  GeoMapContentV1(final String data, final FileReferenceV1 file, final String json, final String selectionJson) {
-    this.data = data;
-    this.file = file;
+  GeoMapContentV1(final String json, final String selectionJson) {
     this.json = json;
     this.selectionJson = selectionJson;
   }
@@ -39,37 +28,12 @@ public class GeoMapContentV1 {
   @SuppressWarnings("all")
   public static class GeoMapContentV1Builder {
     @SuppressWarnings("all")
-    private String data;
-    @SuppressWarnings("all")
-    private FileReferenceV1 file;
-    @SuppressWarnings("all")
     private String json;
     @SuppressWarnings("all")
     private String selectionJson;
 
     @SuppressWarnings("all")
     GeoMapContentV1Builder() {
-    }
-
-    /**
-     * Base64-Bild der Karte mit Nutzereingaben.
-     * Wird nur beim Submit befüllt und nach dem Submit auf {@code null} gesetzt.
-     * @return {@code this}.
-     */
-    @SuppressWarnings("all")
-    public GeoMapContentV1.GeoMapContentV1Builder data(final String data) {
-      this.data = data;
-      return this;
-    }
-
-    /**
-     * Bild, welches die Karte mit Nutzereingaben darstellt. Wird nur beim Submit befüllt.
-     * @return {@code this}.
-     */
-    @SuppressWarnings("all")
-    public GeoMapContentV1.GeoMapContentV1Builder file(final FileReferenceV1 file) {
-      this.file = file;
-      return this;
     }
 
     /**
@@ -94,36 +58,19 @@ public class GeoMapContentV1 {
 
     @SuppressWarnings("all")
     public GeoMapContentV1 build() {
-      return new GeoMapContentV1(this.data, this.file, this.json, this.selectionJson);
+      return new GeoMapContentV1(this.json, this.selectionJson);
     }
 
     @Override
     @SuppressWarnings("all")
     public String toString() {
-      return "GeoMapContentV1.GeoMapContentV1Builder(data=" + this.data + ", file=" + this.file + ", json=" + this.json + ", selectionJson=" + this.selectionJson + ")";
+      return "GeoMapContentV1.GeoMapContentV1Builder(json=" + this.json + ", selectionJson=" + this.selectionJson + ")";
     }
   }
 
   @SuppressWarnings("all")
   public static GeoMapContentV1.GeoMapContentV1Builder builder() {
     return new GeoMapContentV1.GeoMapContentV1Builder();
-  }
-
-  /**
-   * Base64-Bild der Karte mit Nutzereingaben.
-   * Wird nur beim Submit befüllt und nach dem Submit auf {@code null} gesetzt.
-   */
-  @SuppressWarnings("all")
-  public String getData() {
-    return this.data;
-  }
-
-  /**
-   * Bild, welches die Karte mit Nutzereingaben darstellt. Wird nur beim Submit befüllt.
-   */
-  @SuppressWarnings("all")
-  public FileReferenceV1 getFile() {
-    return this.file;
   }
 
   /**
@@ -140,23 +87,6 @@ public class GeoMapContentV1 {
   @SuppressWarnings("all")
   public String getSelectionJson() {
     return this.selectionJson;
-  }
-
-  /**
-   * Base64-Bild der Karte mit Nutzereingaben.
-   * Wird nur beim Submit befüllt und nach dem Submit auf {@code null} gesetzt.
-   */
-  @SuppressWarnings("all")
-  public void setData(final String data) {
-    this.data = data;
-  }
-
-  /**
-   * Bild, welches die Karte mit Nutzereingaben darstellt. Wird nur beim Submit befüllt.
-   */
-  @SuppressWarnings("all")
-  public void setFile(final FileReferenceV1 file) {
-    this.file = file;
   }
 
   /**
@@ -182,12 +112,6 @@ public class GeoMapContentV1 {
     if (!(o instanceof GeoMapContentV1)) return false;
     final GeoMapContentV1 other = (GeoMapContentV1) o;
     if (!other.canEqual((Object) this)) return false;
-    final Object this$data = this.getData();
-    final Object other$data = other.getData();
-    if (this$data == null ? other$data != null : !this$data.equals(other$data)) return false;
-    final Object this$file = this.getFile();
-    final Object other$file = other.getFile();
-    if (this$file == null ? other$file != null : !this$file.equals(other$file)) return false;
     final Object this$json = this.getJson();
     final Object other$json = other.getJson();
     if (this$json == null ? other$json != null : !this$json.equals(other$json)) return false;
@@ -207,10 +131,6 @@ public class GeoMapContentV1 {
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
-    final Object $data = this.getData();
-    result = result * PRIME + ($data == null ? 43 : $data.hashCode());
-    final Object $file = this.getFile();
-    result = result * PRIME + ($file == null ? 43 : $file.hashCode());
     final Object $json = this.getJson();
     result = result * PRIME + ($json == null ? 43 : $json.hashCode());
     final Object $selectionJson = this.getSelectionJson();
@@ -221,6 +141,6 @@ public class GeoMapContentV1 {
   @Override
   @SuppressWarnings("all")
   public String toString() {
-    return "GeoMapContentV1(data=" + this.getData() + ", file=" + this.getFile() + ", json=" + this.getJson() + ", selectionJson=" + this.getSelectionJson() + ")";
+    return "GeoMapContentV1(json=" + this.getJson() + ", selectionJson=" + this.getSelectionJson() + ")";
   }
 }

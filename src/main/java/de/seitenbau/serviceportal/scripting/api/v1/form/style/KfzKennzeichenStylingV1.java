@@ -25,6 +25,11 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
    * {@code null}, wenn kein Sainsonkennzeichen.
    */
   private String saisonEnd;
+  /**
+   * Typ des Fahrzeugs / Kennzeichens.
+   * {@code null} wird als {@link KfzKennzeichenTypeV1#CAR CAR} interpretiert.
+   */
+  private KfzKennzeichenTypeV1 kennzeichenType;
 
   @Override
   public KfzKennzeichenStylingV1 clone() {
@@ -36,11 +41,12 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
   }
 
   @SuppressWarnings("all")
-  KfzKennzeichenStylingV1(final Boolean electric, final Boolean historic, final String saisonStart, final String saisonEnd) {
+  KfzKennzeichenStylingV1(final Boolean electric, final Boolean historic, final String saisonStart, final String saisonEnd, final KfzKennzeichenTypeV1 kennzeichenType) {
     this.electric = electric;
     this.historic = historic;
     this.saisonStart = saisonStart;
     this.saisonEnd = saisonEnd;
+    this.kennzeichenType = kennzeichenType;
   }
 
 
@@ -54,6 +60,8 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
     private String saisonStart;
     @SuppressWarnings("all")
     private String saisonEnd;
+    @SuppressWarnings("all")
+    private KfzKennzeichenTypeV1 kennzeichenType;
 
     @SuppressWarnings("all")
     KfzKennzeichenStylingV1Builder() {
@@ -103,15 +111,26 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
       return this;
     }
 
+    /**
+     * Typ des Fahrzeugs / Kennzeichens.
+     * {@code null} wird als {@link KfzKennzeichenTypeV1#CAR CAR} interpretiert.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public KfzKennzeichenStylingV1.KfzKennzeichenStylingV1Builder kennzeichenType(final KfzKennzeichenTypeV1 kennzeichenType) {
+      this.kennzeichenType = kennzeichenType;
+      return this;
+    }
+
     @SuppressWarnings("all")
     public KfzKennzeichenStylingV1 build() {
-      return new KfzKennzeichenStylingV1(this.electric, this.historic, this.saisonStart, this.saisonEnd);
+      return new KfzKennzeichenStylingV1(this.electric, this.historic, this.saisonStart, this.saisonEnd, this.kennzeichenType);
     }
 
     @Override
     @SuppressWarnings("all")
     public String toString() {
-      return "KfzKennzeichenStylingV1.KfzKennzeichenStylingV1Builder(electric=" + this.electric + ", historic=" + this.historic + ", saisonStart=" + this.saisonStart + ", saisonEnd=" + this.saisonEnd + ")";
+      return "KfzKennzeichenStylingV1.KfzKennzeichenStylingV1Builder(electric=" + this.electric + ", historic=" + this.historic + ", saisonStart=" + this.saisonStart + ", saisonEnd=" + this.saisonEnd + ", kennzeichenType=" + this.kennzeichenType + ")";
     }
   }
 
@@ -157,6 +176,15 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
   }
 
   /**
+   * Typ des Fahrzeugs / Kennzeichens.
+   * {@code null} wird als {@link KfzKennzeichenTypeV1#CAR CAR} interpretiert.
+   */
+  @SuppressWarnings("all")
+  public KfzKennzeichenTypeV1 getKennzeichenType() {
+    return this.kennzeichenType;
+  }
+
+  /**
    * {@code true}, wenn es ein Kennzeichen für ein Elektrofahrzeug ist.
    * Sonst {@code false} oder {@code null}.
    */
@@ -192,6 +220,15 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
     this.saisonEnd = saisonEnd;
   }
 
+  /**
+   * Typ des Fahrzeugs / Kennzeichens.
+   * {@code null} wird als {@link KfzKennzeichenTypeV1#CAR CAR} interpretiert.
+   */
+  @SuppressWarnings("all")
+  public void setKennzeichenType(final KfzKennzeichenTypeV1 kennzeichenType) {
+    this.kennzeichenType = kennzeichenType;
+  }
+
   @Override
   @SuppressWarnings("all")
   public boolean equals(final Object o) {
@@ -211,6 +248,9 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
     final Object this$saisonEnd = this.getSaisonEnd();
     final Object other$saisonEnd = other.getSaisonEnd();
     if (this$saisonEnd == null ? other$saisonEnd != null : !this$saisonEnd.equals(other$saisonEnd)) return false;
+    final Object this$kennzeichenType = this.getKennzeichenType();
+    final Object other$kennzeichenType = other.getKennzeichenType();
+    if (this$kennzeichenType == null ? other$kennzeichenType != null : !this$kennzeichenType.equals(other$kennzeichenType)) return false;
     return true;
   }
 
@@ -232,12 +272,14 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
     result = result * PRIME + ($saisonStart == null ? 43 : $saisonStart.hashCode());
     final Object $saisonEnd = this.getSaisonEnd();
     result = result * PRIME + ($saisonEnd == null ? 43 : $saisonEnd.hashCode());
+    final Object $kennzeichenType = this.getKennzeichenType();
+    result = result * PRIME + ($kennzeichenType == null ? 43 : $kennzeichenType.hashCode());
     return result;
   }
 
   @Override
   @SuppressWarnings("all")
   public String toString() {
-    return "KfzKennzeichenStylingV1(electric=" + this.getElectric() + ", historic=" + this.getHistoric() + ", saisonStart=" + this.getSaisonStart() + ", saisonEnd=" + this.getSaisonEnd() + ")";
+    return "KfzKennzeichenStylingV1(electric=" + this.getElectric() + ", historic=" + this.getHistoric() + ", saisonStart=" + this.getSaisonStart() + ", saisonEnd=" + this.getSaisonEnd() + ", kennzeichenType=" + this.getKennzeichenType() + ")";
   }
 }

@@ -2,6 +2,7 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.config;
 
 import de.seitenbau.serviceportal.scripting.api.v1.form.FieldTypeV1;
+import de.seitenbau.serviceportal.scripting.api.v1.form.style.KfzKennzeichenTypeV1;
 
 /**
  * Konfiguration für Kfz-Felder ({@link FieldTypeV1#KFZ_KENNZEICHEN KFZ_KENNZEICHEN}).
@@ -32,6 +33,11 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * {@code false} oder {@code null}.
    */
   private Boolean erkennungsnummer2Ausblenden;
+  /**
+   * Typ des Fahrzeugs / Kennzeichens.
+   * {@code null} wird interpretiert als {@link KfzKennzeichenTypeV1#CAR CAR}.
+   */
+  private KfzKennzeichenTypeV1 kennzeichenType;
 
   @Override
   public AdditionalKfzKennzeichenConfigV1 clone() {
@@ -43,13 +49,14 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
   }
 
   @SuppressWarnings("all")
-  AdditionalKfzKennzeichenConfigV1(final String unterscheidungszeichen, final Boolean electric, final Boolean historic, final String saisonStart, final String saisonEnd, final Boolean erkennungsnummer2Ausblenden) {
+  AdditionalKfzKennzeichenConfigV1(final String unterscheidungszeichen, final Boolean electric, final Boolean historic, final String saisonStart, final String saisonEnd, final Boolean erkennungsnummer2Ausblenden, final KfzKennzeichenTypeV1 kennzeichenType) {
     this.unterscheidungszeichen = unterscheidungszeichen;
     this.electric = electric;
     this.historic = historic;
     this.saisonStart = saisonStart;
     this.saisonEnd = saisonEnd;
     this.erkennungsnummer2Ausblenden = erkennungsnummer2Ausblenden;
+    this.kennzeichenType = kennzeichenType;
   }
 
 
@@ -67,6 +74,8 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
     private String saisonEnd;
     @SuppressWarnings("all")
     private Boolean erkennungsnummer2Ausblenden;
+    @SuppressWarnings("all")
+    private KfzKennzeichenTypeV1 kennzeichenType;
 
     @SuppressWarnings("all")
     AdditionalKfzKennzeichenConfigV1Builder() {
@@ -133,15 +142,26 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
       return this;
     }
 
+    /**
+     * Typ des Fahrzeugs / Kennzeichens.
+     * {@code null} wird interpretiert als {@link KfzKennzeichenTypeV1#CAR CAR}.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public AdditionalKfzKennzeichenConfigV1.AdditionalKfzKennzeichenConfigV1Builder kennzeichenType(final KfzKennzeichenTypeV1 kennzeichenType) {
+      this.kennzeichenType = kennzeichenType;
+      return this;
+    }
+
     @SuppressWarnings("all")
     public AdditionalKfzKennzeichenConfigV1 build() {
-      return new AdditionalKfzKennzeichenConfigV1(this.unterscheidungszeichen, this.electric, this.historic, this.saisonStart, this.saisonEnd, this.erkennungsnummer2Ausblenden);
+      return new AdditionalKfzKennzeichenConfigV1(this.unterscheidungszeichen, this.electric, this.historic, this.saisonStart, this.saisonEnd, this.erkennungsnummer2Ausblenden, this.kennzeichenType);
     }
 
     @Override
     @SuppressWarnings("all")
     public String toString() {
-      return "AdditionalKfzKennzeichenConfigV1.AdditionalKfzKennzeichenConfigV1Builder(unterscheidungszeichen=" + this.unterscheidungszeichen + ", electric=" + this.electric + ", historic=" + this.historic + ", saisonStart=" + this.saisonStart + ", saisonEnd=" + this.saisonEnd + ", erkennungsnummer2Ausblenden=" + this.erkennungsnummer2Ausblenden + ")";
+      return "AdditionalKfzKennzeichenConfigV1.AdditionalKfzKennzeichenConfigV1Builder(unterscheidungszeichen=" + this.unterscheidungszeichen + ", electric=" + this.electric + ", historic=" + this.historic + ", saisonStart=" + this.saisonStart + ", saisonEnd=" + this.saisonEnd + ", erkennungsnummer2Ausblenden=" + this.erkennungsnummer2Ausblenden + ", kennzeichenType=" + this.kennzeichenType + ")";
     }
   }
 
@@ -200,6 +220,15 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
   }
 
   /**
+   * Typ des Fahrzeugs / Kennzeichens.
+   * {@code null} wird interpretiert als {@link KfzKennzeichenTypeV1#CAR CAR}.
+   */
+  @SuppressWarnings("all")
+  public KfzKennzeichenTypeV1 getKennzeichenType() {
+    return this.kennzeichenType;
+  }
+
+  /**
    * Ortskürzel des Kennzeichens.
    */
   @SuppressWarnings("all")
@@ -248,6 +277,15 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
     this.erkennungsnummer2Ausblenden = erkennungsnummer2Ausblenden;
   }
 
+  /**
+   * Typ des Fahrzeugs / Kennzeichens.
+   * {@code null} wird interpretiert als {@link KfzKennzeichenTypeV1#CAR CAR}.
+   */
+  @SuppressWarnings("all")
+  public void setKennzeichenType(final KfzKennzeichenTypeV1 kennzeichenType) {
+    this.kennzeichenType = kennzeichenType;
+  }
+
   @Override
   @SuppressWarnings("all")
   public boolean equals(final Object o) {
@@ -273,6 +311,9 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
     final Object this$saisonEnd = this.getSaisonEnd();
     final Object other$saisonEnd = other.getSaisonEnd();
     if (this$saisonEnd == null ? other$saisonEnd != null : !this$saisonEnd.equals(other$saisonEnd)) return false;
+    final Object this$kennzeichenType = this.getKennzeichenType();
+    final Object other$kennzeichenType = other.getKennzeichenType();
+    if (this$kennzeichenType == null ? other$kennzeichenType != null : !this$kennzeichenType.equals(other$kennzeichenType)) return false;
     return true;
   }
 
@@ -298,12 +339,14 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
     result = result * PRIME + ($saisonStart == null ? 43 : $saisonStart.hashCode());
     final Object $saisonEnd = this.getSaisonEnd();
     result = result * PRIME + ($saisonEnd == null ? 43 : $saisonEnd.hashCode());
+    final Object $kennzeichenType = this.getKennzeichenType();
+    result = result * PRIME + ($kennzeichenType == null ? 43 : $kennzeichenType.hashCode());
     return result;
   }
 
   @Override
   @SuppressWarnings("all")
   public String toString() {
-    return "AdditionalKfzKennzeichenConfigV1(unterscheidungszeichen=" + this.getUnterscheidungszeichen() + ", electric=" + this.getElectric() + ", historic=" + this.getHistoric() + ", saisonStart=" + this.getSaisonStart() + ", saisonEnd=" + this.getSaisonEnd() + ", erkennungsnummer2Ausblenden=" + this.getErkennungsnummer2Ausblenden() + ")";
+    return "AdditionalKfzKennzeichenConfigV1(unterscheidungszeichen=" + this.getUnterscheidungszeichen() + ", electric=" + this.getElectric() + ", historic=" + this.getHistoric() + ", saisonStart=" + this.getSaisonStart() + ", saisonEnd=" + this.getSaisonEnd() + ", erkennungsnummer2Ausblenden=" + this.getErkennungsnummer2Ausblenden() + ", kennzeichenType=" + this.getKennzeichenType() + ")";
   }
 }

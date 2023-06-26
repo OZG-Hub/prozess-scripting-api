@@ -57,12 +57,10 @@ public class LeistungParameterV1 {
     return this.id;
   }
 
-  /**
-   * ID der Leistung.
-   */
+  @Override
   @SuppressWarnings("all")
-  public void setId(final String id) {
-    this.id = id;
+  public String toString() {
+    return "LeistungParameterV1(id=" + this.getId() + ")";
   }
 
   @Override
@@ -91,12 +89,6 @@ public class LeistungParameterV1 {
     final Object $id = this.getId();
     result = result * PRIME + ($id == null ? 43 : $id.hashCode());
     return result;
-  }
-
-  @Override
-  @SuppressWarnings("all")
-  public String toString() {
-    return "LeistungParameterV1(id=" + this.getId() + ")";
   }
 
   @SuppressWarnings("all")

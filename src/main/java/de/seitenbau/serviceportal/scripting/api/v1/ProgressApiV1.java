@@ -1,4 +1,4 @@
-package de.seitenbau.serviceportal.prozess.scripttask;
+package de.seitenbau.serviceportal.scripting.api.v1;
 
 /**
  * Scripting API Version 1 Schnittstelle für die Fortschrittsanzeige.

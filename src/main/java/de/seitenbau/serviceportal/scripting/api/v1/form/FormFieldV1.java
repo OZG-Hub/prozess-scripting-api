@@ -10,11 +10,11 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import javax.validation.constraints.NotNull;
 import de.seitenbau.serviceportal.scripting.api.v1.form.ajax.ExternalDataSourcePropertiesV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.condition.DisplayConditionV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalFieldConfigV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.validator.ValidationRuleV1;
+import lombok.NonNull;
 
 /**
  * Feld in einem Formular.
@@ -23,7 +23,7 @@ public class FormFieldV1 implements Cloneable {
   /**
    * ID des Feldes (eindeutig in Feldgruppen-Instanz).
    */
-  @NotNull
+  @NonNull
   private String id;
   /**
    * Beschriftung des Feldes.
@@ -32,7 +32,7 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Typ des Feldes.
    */
-  @NotNull
+  @NonNull
   private FieldTypeV1 type;
   /**
    * Aktueller Wert des Feldes.
@@ -90,7 +90,7 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Bedingungen, über die das Feld dynamisch ein- oder ausgeblendet werden kann.
    */
-  @NotNull
+  @NonNull
   private List<DisplayConditionV1> displayConditions;
   /**
    * Breite des Felds (die gesamte Formularbreite entspricht 12).
@@ -104,12 +104,12 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Validierungsregeln für das Feld.
    */
-  @NotNull
+  @NonNull
   private List<ValidationRuleV1> validationRules;
   /**
    * Texte für die Fehlermeldungen bei einfacher Formularvalidierung.
    */
-  @NotNull
+  @NonNull
   private Set<ValidationMessageV1> validationMessages;
   /**
    * Quelle, aus der der Feldinhalt gelesen wird. Falls {@code null}, wird ggf. eine Default-source
@@ -170,7 +170,13 @@ public class FormFieldV1 implements Cloneable {
    * @param id ID des Feldes
    * @param type Typ des Feldes
    */
-  public FormFieldV1(@NotNull String id, @NotNull FieldTypeV1 type) {
+  public FormFieldV1(@NonNull String id, @NonNull FieldTypeV1 type) {
+    if (id == null) {
+      throw new NullPointerException("id is marked non-null but is null");
+    }
+    if (type == null) {
+      throw new NullPointerException("type is marked non-null but is null");
+    }
     this.id = id;
     this.type = type;
   }
@@ -406,7 +412,10 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormFieldV1.FormFieldV1Builder id(final String id) {
+    public FormFieldV1.FormFieldV1Builder id(@NonNull final String id) {
+      if (id == null) {
+        throw new NullPointerException("id is marked non-null but is null");
+      }
       this.id = id;
       return this;
     }
@@ -426,7 +435,10 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormFieldV1.FormFieldV1Builder type(final FieldTypeV1 type) {
+    public FormFieldV1.FormFieldV1Builder type(@NonNull final FieldTypeV1 type) {
+      if (type == null) {
+        throw new NullPointerException("type is marked non-null but is null");
+      }
       this.type = type;
       return this;
     }
@@ -561,7 +573,10 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormFieldV1.FormFieldV1Builder displayConditions(final List<DisplayConditionV1> displayConditions) {
+    public FormFieldV1.FormFieldV1Builder displayConditions(@NonNull final List<DisplayConditionV1> displayConditions) {
+      if (displayConditions == null) {
+        throw new NullPointerException("displayConditions is marked non-null but is null");
+      }
       this.displayConditions$value = displayConditions;
       displayConditions$set = true;
       return this;
@@ -594,7 +609,10 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormFieldV1.FormFieldV1Builder validationRules(final List<ValidationRuleV1> validationRules) {
+    public FormFieldV1.FormFieldV1Builder validationRules(@NonNull final List<ValidationRuleV1> validationRules) {
+      if (validationRules == null) {
+        throw new NullPointerException("validationRules is marked non-null but is null");
+      }
       this.validationRules$value = validationRules;
       validationRules$set = true;
       return this;
@@ -605,7 +623,10 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormFieldV1.FormFieldV1Builder validationMessages(final Set<ValidationMessageV1> validationMessages) {
+    public FormFieldV1.FormFieldV1Builder validationMessages(@NonNull final Set<ValidationMessageV1> validationMessages) {
+      if (validationMessages == null) {
+        throw new NullPointerException("validationMessages is marked non-null but is null");
+      }
       this.validationMessages$value = validationMessages;
       validationMessages$set = true;
       return this;
@@ -751,6 +772,7 @@ public class FormFieldV1 implements Cloneable {
   /**
    * ID des Feldes (eindeutig in Feldgruppen-Instanz).
    */
+  @NonNull
   @SuppressWarnings("all")
   public String getId() {
     return this.id;
@@ -759,6 +781,7 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Typ des Feldes.
    */
+  @NonNull
   @SuppressWarnings("all")
   public FieldTypeV1 getType() {
     return this.type;
@@ -868,6 +891,7 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Bedingungen, über die das Feld dynamisch ein- oder ausgeblendet werden kann.
    */
+  @NonNull
   @SuppressWarnings("all")
   public List<DisplayConditionV1> getDisplayConditions() {
     return this.displayConditions;
@@ -893,6 +917,7 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Validierungsregeln für das Feld.
    */
+  @NonNull
   @SuppressWarnings("all")
   public List<ValidationRuleV1> getValidationRules() {
     return this.validationRules;
@@ -901,6 +926,7 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Texte für die Fehlermeldungen bei einfacher Formularvalidierung.
    */
+  @NonNull
   @SuppressWarnings("all")
   public Set<ValidationMessageV1> getValidationMessages() {
     return this.validationMessages;
@@ -1002,7 +1028,10 @@ public class FormFieldV1 implements Cloneable {
    * ID des Feldes (eindeutig in Feldgruppen-Instanz).
    */
   @SuppressWarnings("all")
-  public void setId(final String id) {
+  public void setId(@NonNull final String id) {
+    if (id == null) {
+      throw new NullPointerException("id is marked non-null but is null");
+    }
     this.id = id;
   }
 
@@ -1018,7 +1047,10 @@ public class FormFieldV1 implements Cloneable {
    * Typ des Feldes.
    */
   @SuppressWarnings("all")
-  public void setType(final FieldTypeV1 type) {
+  public void setType(@NonNull final FieldTypeV1 type) {
+    if (type == null) {
+      throw new NullPointerException("type is marked non-null but is null");
+    }
     this.type = type;
   }
 
@@ -1127,7 +1159,10 @@ public class FormFieldV1 implements Cloneable {
    * Bedingungen, über die das Feld dynamisch ein- oder ausgeblendet werden kann.
    */
   @SuppressWarnings("all")
-  public void setDisplayConditions(final List<DisplayConditionV1> displayConditions) {
+  public void setDisplayConditions(@NonNull final List<DisplayConditionV1> displayConditions) {
+    if (displayConditions == null) {
+      throw new NullPointerException("displayConditions is marked non-null but is null");
+    }
     this.displayConditions = displayConditions;
   }
 
@@ -1152,7 +1187,10 @@ public class FormFieldV1 implements Cloneable {
    * Validierungsregeln für das Feld.
    */
   @SuppressWarnings("all")
-  public void setValidationRules(final List<ValidationRuleV1> validationRules) {
+  public void setValidationRules(@NonNull final List<ValidationRuleV1> validationRules) {
+    if (validationRules == null) {
+      throw new NullPointerException("validationRules is marked non-null but is null");
+    }
     this.validationRules = validationRules;
   }
 
@@ -1160,7 +1198,10 @@ public class FormFieldV1 implements Cloneable {
    * Texte für die Fehlermeldungen bei einfacher Formularvalidierung.
    */
   @SuppressWarnings("all")
-  public void setValidationMessages(final Set<ValidationMessageV1> validationMessages) {
+  public void setValidationMessages(@NonNull final Set<ValidationMessageV1> validationMessages) {
+    if (validationMessages == null) {
+      throw new NullPointerException("validationMessages is marked non-null but is null");
+    }
     this.validationMessages = validationMessages;
   }
 
@@ -1433,7 +1474,22 @@ public class FormFieldV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
-  private FormFieldV1(final String id, final String label, final FieldTypeV1 type, final Object value, final String placeholder, final Boolean disabled, final Boolean required, final Boolean pickerDisabled, final Boolean consent, final String requiredValidationFailedMessage, final String typeValidationFailedMessage, final String thousandsSeparatorValidationFailedMessage, final String digitsAfterDecimalPointValidationFailedMessage, final String helptext, final List<PossibleValueV1> possibleValues, final List<DisplayConditionV1> displayConditions, final int width, final String layout, final List<ValidationRuleV1> validationRules, final Set<ValidationMessageV1> validationMessages, final DataResourcePointerV1 source, final DataResourcePointerV1 target, final DataResourcePointerV1 possibleValuesSource, final ExternalDataSourcePropertiesV1 externalDataSourceProperties, final ExternalDataSourcePropertiesV1 externalValue, final Boolean filterable, final Map<String, String> controlParameters, final FormFieldKeyV1 initializeWithAdressField, final AdditionalFieldConfigV1 additionalConfig, final ModalHelpDialogV1 helpDialog) {
+  private FormFieldV1(@NonNull final String id, final String label, @NonNull final FieldTypeV1 type, final Object value, final String placeholder, final Boolean disabled, final Boolean required, final Boolean pickerDisabled, final Boolean consent, final String requiredValidationFailedMessage, final String typeValidationFailedMessage, final String thousandsSeparatorValidationFailedMessage, final String digitsAfterDecimalPointValidationFailedMessage, final String helptext, final List<PossibleValueV1> possibleValues, @NonNull final List<DisplayConditionV1> displayConditions, final int width, final String layout, @NonNull final List<ValidationRuleV1> validationRules, @NonNull final Set<ValidationMessageV1> validationMessages, final DataResourcePointerV1 source, final DataResourcePointerV1 target, final DataResourcePointerV1 possibleValuesSource, final ExternalDataSourcePropertiesV1 externalDataSourceProperties, final ExternalDataSourcePropertiesV1 externalValue, final Boolean filterable, final Map<String, String> controlParameters, final FormFieldKeyV1 initializeWithAdressField, final AdditionalFieldConfigV1 additionalConfig, final ModalHelpDialogV1 helpDialog) {
+    if (id == null) {
+      throw new NullPointerException("id is marked non-null but is null");
+    }
+    if (type == null) {
+      throw new NullPointerException("type is marked non-null but is null");
+    }
+    if (displayConditions == null) {
+      throw new NullPointerException("displayConditions is marked non-null but is null");
+    }
+    if (validationRules == null) {
+      throw new NullPointerException("validationRules is marked non-null but is null");
+    }
+    if (validationMessages == null) {
+      throw new NullPointerException("validationMessages is marked non-null but is null");
+    }
     this.id = id;
     this.label = label;
     this.type = type;

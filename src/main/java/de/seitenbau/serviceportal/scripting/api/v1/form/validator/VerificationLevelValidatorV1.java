@@ -3,8 +3,8 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.validator;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.validation.constraints.NotNull;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.FormFieldVerificationLevelV1;
+import lombok.NonNull;
 
 /**
  * Validierungsregel, die prüft, dass der Wert eines Feldes eine bestimmte Herkunft hat.
@@ -14,7 +14,7 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
   /**
    * Erlaubte Vertrauensniveaus für die Überprüfung. Default ist eine leere Liste.
    */
-  @NotNull
+  @NonNull
   private List<FormFieldVerificationLevelV1> levels;
 
   @SuppressWarnings("all")
@@ -34,7 +34,10 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public B levels(final List<FormFieldVerificationLevelV1> levels) {
+    public B levels(@NonNull final List<FormFieldVerificationLevelV1> levels) {
+      if (levels == null) {
+        throw new NullPointerException("levels is marked non-null but is null");
+      }
       this.levels$value = levels;
       levels$set = true;
       return self();
@@ -80,6 +83,9 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
     super(b);
     if (b.levels$set) this.levels = b.levels$value;
      else this.levels = VerificationLevelValidatorV1.$default$levels();
+    if (levels == null) {
+      throw new NullPointerException("levels is marked non-null but is null");
+    }
   }
 
   @SuppressWarnings("all")
@@ -90,6 +96,7 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
   /**
    * Erlaubte Vertrauensniveaus für die Überprüfung. Default ist eine leere Liste.
    */
+  @NonNull
   @SuppressWarnings("all")
   public List<FormFieldVerificationLevelV1> getLevels() {
     return this.levels;
@@ -99,7 +106,10 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
    * Erlaubte Vertrauensniveaus für die Überprüfung. Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
-  public void setLevels(final List<FormFieldVerificationLevelV1> levels) {
+  public void setLevels(@NonNull final List<FormFieldVerificationLevelV1> levels) {
+    if (levels == null) {
+      throw new NullPointerException("levels is marked non-null but is null");
+    }
     this.levels = levels;
   }
 

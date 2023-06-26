@@ -153,44 +153,10 @@ public class OrganisationseinheitAnschriftParameterV1 {
     return this.verwaltungspolitischeKodierung;
   }
 
-  /**
-   * Straße und Hausnummer.
-   */
+  @Override
   @SuppressWarnings("all")
-  public void setStrasseHausnummer(final String strasseHausnummer) {
-    this.strasseHausnummer = strasseHausnummer;
-  }
-
-  /**
-   * Postleitzahl.
-   */
-  @SuppressWarnings("all")
-  public void setPostleitzahl(final String postleitzahl) {
-    this.postleitzahl = postleitzahl;
-  }
-
-  /**
-   * Stadt.
-   */
-  @SuppressWarnings("all")
-  public void setOrt(final String ort) {
-    this.ort = ort;
-  }
-
-  /**
-   * Postfach. Kann {@code null} sein.
-   */
-  @SuppressWarnings("all")
-  public void setPostfach(final String postfach) {
-    this.postfach = postfach;
-  }
-
-  /**
-   * Weitere verwaltungspolitische Adressdaten.
-   */
-  @SuppressWarnings("all")
-  public void setVerwaltungspolitischeKodierung(final OrganisationseinheitPolitischeKodierungParameterV1 verwaltungspolitischeKodierung) {
-    this.verwaltungspolitischeKodierung = verwaltungspolitischeKodierung;
+  public String toString() {
+    return "OrganisationseinheitAnschriftParameterV1(strasseHausnummer=" + this.getStrasseHausnummer() + ", postleitzahl=" + this.getPostleitzahl() + ", ort=" + this.getOrt() + ", postfach=" + this.getPostfach() + ", verwaltungspolitischeKodierung=" + this.getVerwaltungspolitischeKodierung() + ")";
   }
 
   @Override
@@ -239,12 +205,6 @@ public class OrganisationseinheitAnschriftParameterV1 {
     final Object $verwaltungspolitischeKodierung = this.getVerwaltungspolitischeKodierung();
     result = result * PRIME + ($verwaltungspolitischeKodierung == null ? 43 : $verwaltungspolitischeKodierung.hashCode());
     return result;
-  }
-
-  @Override
-  @SuppressWarnings("all")
-  public String toString() {
-    return "OrganisationseinheitAnschriftParameterV1(strasseHausnummer=" + this.getStrasseHausnummer() + ", postleitzahl=" + this.getPostleitzahl() + ", ort=" + this.getOrt() + ", postfach=" + this.getPostfach() + ", verwaltungspolitischeKodierung=" + this.getVerwaltungspolitischeKodierung() + ")";
   }
 
   @SuppressWarnings("all")

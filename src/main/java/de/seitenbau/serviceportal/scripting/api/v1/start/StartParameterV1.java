@@ -3,10 +3,14 @@ package de.seitenbau.serviceportal.scripting.api.v1.start;
 
 import java.util.Date;
 import java.util.Map;
+import de.seitenbau.serviceportal.scripting.api.v1.ScriptingApiV1;
 
 /**
- * Objekt, das beim Start eines Prozesses / Erzeugen einer Prozessinstanz in die Prozessinstanzvariable
- * {@code startParameter} gespeichert wird. Nur für OZG-Hub.
+ * Objekt, das beim Start eines Prozesses / Erzeugen einer Prozessinstanz zur Verfügung gestellt wird.
+ * Für den OZG-Hub wird das Objekt in die Prozessinstanzvariable {@code startParameter} gespeichert.
+ * Für amt24, service-bw und den OZG-Hub kann das Objekt über die Scripting-Api aufgerufen werden
+ *
+ * @see ScriptingApiV1#getStartParameter()
  */
 public class StartParameterV1 {
   /**
@@ -245,74 +249,10 @@ public class StartParameterV1 {
     return this.parameters;
   }
 
-  /**
-   * Zeitpunkt an dem der Prozess gestartet wurde.
-   */
+  @Override
   @SuppressWarnings("all")
-  public void setStartTime(final Date startTime) {
-    this.startTime = startTime;
-  }
-
-  /**
-   * Informationen über den Benutzer, der den Prozess gestartet hat.
-   * {@code null}, wenn der Benutzer nicht eingeloggt war.
-   */
-  @SuppressWarnings("all")
-  public void setStartedByUser(final StartedByUserV1 startedByUser) {
-    this.startedByUser = startedByUser;
-  }
-
-  /**
-   * Name des Prozesses aus der BPMN-Datei.
-   */
-  @SuppressWarnings("all")
-  public void setProcessName(final String processName) {
-    this.processName = processName;
-  }
-
-  /**
-   * Leistung.
-   * {@code null}, wenn keine Leistung definiert wurde.
-   */
-  @SuppressWarnings("all")
-  public void setLeistung(final LeistungParameterV1 leistung) {
-    this.leistung = leistung;
-  }
-
-  /**
-   * Organisationseinheit.
-   * {@code null}, wenn keine Organisationseinheit definiert wurde.
-   */
-  @SuppressWarnings("all")
-  public void setOrganisationseinheit(final OrganisationseinheitParameterV1 organisationseinheit) {
-    this.organisationseinheit = organisationseinheit;
-  }
-
-  /**
-   * Allgemeiner Gemeindeschlüssel.
-   * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
-   */
-  @SuppressWarnings("all")
-  public void setAgs(final String ags) {
-    this.ags = ags;
-  }
-
-  /**
-   * Frei wählbarer Parameter.
-   * {@code null}, wenn kein Parameter definiert wurde.
-   */
-  @SuppressWarnings("all")
-  public void setP(final String p) {
-    this.p = p;
-  }
-
-  /**
-   * Menge der Parameter von externen Parameter-Quellen, wie Jesaja.
-   * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
-   */
-  @SuppressWarnings("all")
-  public void setParameters(final Map<String, Object> parameters) {
-    this.parameters = parameters;
+  public String toString() {
+    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", ags=" + this.getAgs() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ")";
   }
 
   @Override
@@ -376,12 +316,6 @@ public class StartParameterV1 {
     final Object $parameters = this.getParameters();
     result = result * PRIME + ($parameters == null ? 43 : $parameters.hashCode());
     return result;
-  }
-
-  @Override
-  @SuppressWarnings("all")
-  public String toString() {
-    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", ags=" + this.getAgs() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ")";
   }
 
   @SuppressWarnings("all")

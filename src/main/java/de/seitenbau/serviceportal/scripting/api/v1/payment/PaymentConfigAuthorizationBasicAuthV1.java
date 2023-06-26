@@ -11,11 +11,11 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
    */
   private final PaymentConfigAuthorizationTypeV1 type = PaymentConfigAuthorizationTypeV1.BASICAUTH;
   /**
-   * Id zur Authenfizierung fuer BasicAuth und OAuth2
+   * Id zur Authenfizierung
    */
   private String clientId;
   /**
-   * Geheimnis (Passwort) zur Authenfizierung fuer BasicAuth und OAuth2
+   * Geheimnis (Passwort) zur Authenfizierung
    */
   private String clientSecret;
 
@@ -32,7 +32,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
     }
 
     /**
-     * Id zur Authenfizierung fuer BasicAuth und OAuth2
+     * Id zur Authenfizierung
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -42,7 +42,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
     }
 
     /**
-     * Geheimnis (Passwort) zur Authenfizierung fuer BasicAuth und OAuth2
+     * Geheimnis (Passwort) zur Authenfizierung
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -77,7 +77,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
   }
 
   /**
-   * Id zur Authenfizierung fuer BasicAuth und OAuth2
+   * Id zur Authenfizierung
    */
   @SuppressWarnings("all")
   public String getClientId() {
@@ -85,7 +85,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
   }
 
   /**
-   * Geheimnis (Passwort) zur Authenfizierung fuer BasicAuth und OAuth2
+   * Geheimnis (Passwort) zur Authenfizierung
    */
   @SuppressWarnings("all")
   public String getClientSecret() {
@@ -93,7 +93,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
   }
 
   /**
-   * Id zur Authenfizierung fuer BasicAuth und OAuth2
+   * Id zur Authenfizierung
    */
   @SuppressWarnings("all")
   public void setClientId(final String clientId) {
@@ -101,7 +101,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
   }
 
   /**
-   * Geheimnis (Passwort) zur Authenfizierung fuer BasicAuth und OAuth2
+   * Geheimnis (Passwort) zur Authenfizierung
    */
   @SuppressWarnings("all")
   public void setClientSecret(final String clientSecret) {

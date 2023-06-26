@@ -233,70 +233,10 @@ public class JesajaOrganisationseinheitV1 {
     return this.kontakt;
   }
 
-  /**
-   * ID der Organisationseinheit.
-   */
+  @Override
   @SuppressWarnings("all")
-  public void setId(final String id) {
-    this.id = id;
-  }
-
-  @SuppressWarnings("all")
-  public void setExterneId(final String externeId) {
-    this.externeId = externeId;
-  }
-
-  @SuppressWarnings("all")
-  public void setQuelleId(final String quelleId) {
-    this.quelleId = quelleId;
-  }
-
-  /**
-   * Name der Behörde.
-   */
-  @SuppressWarnings("all")
-  public void setOrganisation(final String organisation) {
-    this.organisation = organisation;
-  }
-
-  /**
-   * Name der Organisationseinheit.
-   */
-  @SuppressWarnings("all")
-  public void setName(final String name) {
-    this.name = name;
-  }
-
-  /**
-   * URL zur Webseite der Organisationseinheit.
-   */
-  @SuppressWarnings("all")
-  public void setUrl(final String url) {
-    this.url = url;
-  }
-
-  /**
-   * Verwaltungspolitische Kodierung.
-   */
-  @SuppressWarnings("all")
-  public void setVerwaltungspolitischeKodierung(final JesajaOrganisationseinheitPolitischeKodierungV1 verwaltungspolitischeKodierung) {
-    this.verwaltungspolitischeKodierung = verwaltungspolitischeKodierung;
-  }
-
-  /**
-   * Anschrift der Organisationseinheit.
-   */
-  @SuppressWarnings("all")
-  public void setAnschrift(final JesajaOrganisationseinheitAnschriftV1 anschrift) {
-    this.anschrift = anschrift;
-  }
-
-  /**
-   * Kontaktdaten der Organisationseinheit.
-   */
-  @SuppressWarnings("all")
-  public void setKontakt(final JesajaOrganisationseinheitKontaktV1 kontakt) {
-    this.kontakt = kontakt;
+  public String toString() {
+    return "JesajaOrganisationseinheitV1(id=" + this.getId() + ", externeId=" + this.getExterneId() + ", quelleId=" + this.getQuelleId() + ", organisation=" + this.getOrganisation() + ", name=" + this.getName() + ", url=" + this.getUrl() + ", verwaltungspolitischeKodierung=" + this.getVerwaltungspolitischeKodierung() + ", anschrift=" + this.getAnschrift() + ", kontakt=" + this.getKontakt() + ")";
   }
 
   @Override
@@ -365,12 +305,6 @@ public class JesajaOrganisationseinheitV1 {
     final Object $kontakt = this.getKontakt();
     result = result * PRIME + ($kontakt == null ? 43 : $kontakt.hashCode());
     return result;
-  }
-
-  @Override
-  @SuppressWarnings("all")
-  public String toString() {
-    return "JesajaOrganisationseinheitV1(id=" + this.getId() + ", externeId=" + this.getExterneId() + ", quelleId=" + this.getQuelleId() + ", organisation=" + this.getOrganisation() + ", name=" + this.getName() + ", url=" + this.getUrl() + ", verwaltungspolitischeKodierung=" + this.getVerwaltungspolitischeKodierung() + ", anschrift=" + this.getAnschrift() + ", kontakt=" + this.getKontakt() + ")";
   }
 
   @SuppressWarnings("all")

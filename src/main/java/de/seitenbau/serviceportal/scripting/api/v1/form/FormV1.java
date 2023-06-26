@@ -11,12 +11,12 @@ import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import javax.validation.constraints.NotNull;
 import de.seitenbau.serviceportal.scripting.api.v1.form.button.CustomButtonV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.button.CustomButtonsV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.FormContentV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.FormFieldContentV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.FormReplacementValuesV1;
+import lombok.NonNull;
 
 /**
  * Formular.
@@ -25,7 +25,7 @@ public class FormV1 {
   /**
    * ID des Formulars.
    */
-  @NotNull
+  @NonNull
   private String id;
   /**
    * Titel dieses Formulars.
@@ -38,7 +38,7 @@ public class FormV1 {
   /**
    * Liste der Formularabschnitte. Default ist eine leere Liste.
    */
-  @NotNull
+  @NonNull
   private List<FormSectionV1> sections;
   /**
    * Quelle, aus der die Inhalte des gesamten Formulars gelesen werden.
@@ -51,7 +51,7 @@ public class FormV1 {
   /**
    * Validierungsmeldungen des gesamten Formulars. Default ist leere Menge.
    */
-  @NotNull
+  @NonNull
   private Set<ValidationMessageV1> validationMessages;
   /**
    * Kontext, in dem das Formular abgeschickt wurde.
@@ -75,7 +75,10 @@ public class FormV1 {
    *
    * @throws NullPointerException Falls die gegebene ID {@code null} ist
    */
-  public FormV1(@NotNull String id) {
+  public FormV1(@NonNull String id) {
+    if (id == null) {
+      throw new NullPointerException("id is marked non-null but is null");
+    }
     this.id = id;
   }
 
@@ -365,7 +368,10 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormV1.FormV1Builder id(final String id) {
+    public FormV1.FormV1Builder id(@NonNull final String id) {
+      if (id == null) {
+        throw new NullPointerException("id is marked non-null but is null");
+      }
       this.id = id;
       return this;
     }
@@ -395,7 +401,10 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormV1.FormV1Builder sections(final List<FormSectionV1> sections) {
+    public FormV1.FormV1Builder sections(@NonNull final List<FormSectionV1> sections) {
+      if (sections == null) {
+        throw new NullPointerException("sections is marked non-null but is null");
+      }
       this.sections$value = sections;
       sections$set = true;
       return this;
@@ -426,7 +435,10 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormV1.FormV1Builder validationMessages(final Set<ValidationMessageV1> validationMessages) {
+    public FormV1.FormV1Builder validationMessages(@NonNull final Set<ValidationMessageV1> validationMessages) {
+      if (validationMessages == null) {
+        throw new NullPointerException("validationMessages is marked non-null but is null");
+      }
       this.validationMessages$value = validationMessages;
       validationMessages$set = true;
       return this;
@@ -488,6 +500,7 @@ public class FormV1 {
   /**
    * ID des Formulars.
    */
+  @NonNull
   @SuppressWarnings("all")
   public String getId() {
     return this.id;
@@ -512,6 +525,7 @@ public class FormV1 {
   /**
    * Liste der Formularabschnitte. Default ist eine leere Liste.
    */
+  @NonNull
   @SuppressWarnings("all")
   public List<FormSectionV1> getSections() {
     return this.sections;
@@ -536,6 +550,7 @@ public class FormV1 {
   /**
    * Validierungsmeldungen des gesamten Formulars. Default ist leere Menge.
    */
+  @NonNull
   @SuppressWarnings("all")
   public Set<ValidationMessageV1> getValidationMessages() {
     return this.validationMessages;
@@ -571,7 +586,10 @@ public class FormV1 {
    * ID des Formulars.
    */
   @SuppressWarnings("all")
-  public void setId(final String id) {
+  public void setId(@NonNull final String id) {
+    if (id == null) {
+      throw new NullPointerException("id is marked non-null but is null");
+    }
     this.id = id;
   }
 
@@ -595,7 +613,10 @@ public class FormV1 {
    * Liste der Formularabschnitte. Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
-  public void setSections(final List<FormSectionV1> sections) {
+  public void setSections(@NonNull final List<FormSectionV1> sections) {
+    if (sections == null) {
+      throw new NullPointerException("sections is marked non-null but is null");
+    }
     this.sections = sections;
   }
 
@@ -619,7 +640,10 @@ public class FormV1 {
    * Validierungsmeldungen des gesamten Formulars. Default ist leere Menge.
    */
   @SuppressWarnings("all")
-  public void setValidationMessages(final Set<ValidationMessageV1> validationMessages) {
+  public void setValidationMessages(@NonNull final Set<ValidationMessageV1> validationMessages) {
+    if (validationMessages == null) {
+      throw new NullPointerException("validationMessages is marked non-null but is null");
+    }
     this.validationMessages = validationMessages;
   }
 
@@ -729,7 +753,16 @@ public class FormV1 {
   }
 
   @SuppressWarnings("all")
-  private FormV1(final String id, final String title, final String language, final List<FormSectionV1> sections, final DataResourcePointerV1 source, final DataResourcePointerV1 target, final Set<ValidationMessageV1> validationMessages, final Map<String, Object> context, final CustomButtonsV1 customButtons, final FormReplacementValuesV1 appliedReplacements) {
+  private FormV1(@NonNull final String id, final String title, final String language, @NonNull final List<FormSectionV1> sections, final DataResourcePointerV1 source, final DataResourcePointerV1 target, @NonNull final Set<ValidationMessageV1> validationMessages, final Map<String, Object> context, final CustomButtonsV1 customButtons, final FormReplacementValuesV1 appliedReplacements) {
+    if (id == null) {
+      throw new NullPointerException("id is marked non-null but is null");
+    }
+    if (sections == null) {
+      throw new NullPointerException("sections is marked non-null but is null");
+    }
+    if (validationMessages == null) {
+      throw new NullPointerException("validationMessages is marked non-null but is null");
+    }
     this.id = id;
     this.title = title;
     this.language = language;

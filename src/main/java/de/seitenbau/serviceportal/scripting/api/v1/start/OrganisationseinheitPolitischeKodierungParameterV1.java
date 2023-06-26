@@ -57,12 +57,10 @@ public class OrganisationseinheitPolitischeKodierungParameterV1 {
     return this.regionalschluessel;
   }
 
-  /**
-   * Amtlicher Regionalschlüssel.
-   */
+  @Override
   @SuppressWarnings("all")
-  public void setRegionalschluessel(final String regionalschluessel) {
-    this.regionalschluessel = regionalschluessel;
+  public String toString() {
+    return "OrganisationseinheitPolitischeKodierungParameterV1(regionalschluessel=" + this.getRegionalschluessel() + ")";
   }
 
   @Override
@@ -91,12 +89,6 @@ public class OrganisationseinheitPolitischeKodierungParameterV1 {
     final Object $regionalschluessel = this.getRegionalschluessel();
     result = result * PRIME + ($regionalschluessel == null ? 43 : $regionalschluessel.hashCode());
     return result;
-  }
-
-  @Override
-  @SuppressWarnings("all")
-  public String toString() {
-    return "OrganisationseinheitPolitischeKodierungParameterV1(regionalschluessel=" + this.getRegionalschluessel() + ")";
   }
 
   @SuppressWarnings("all")

@@ -175,52 +175,10 @@ public class JesajaOrganisationseinheitAnschriftV1 {
     return this.bundesland;
   }
 
-  /**
-   * Anschreiben.
-   */
+  @Override
   @SuppressWarnings("all")
-  public void setAnschreiben(final String anschreiben) {
-    this.anschreiben = anschreiben;
-  }
-
-  /**
-   * Straße und Hausnummer.
-   */
-  @SuppressWarnings("all")
-  public void setStrasse(final String strasse) {
-    this.strasse = strasse;
-  }
-
-  /**
-   * Stadt.
-   */
-  @SuppressWarnings("all")
-  public void setStadt(final String stadt) {
-    this.stadt = stadt;
-  }
-
-  /**
-   * Postleitzahl.
-   */
-  @SuppressWarnings("all")
-  public void setPlz(final String plz) {
-    this.plz = plz;
-  }
-
-  /**
-   * Postfach.
-   */
-  @SuppressWarnings("all")
-  public void setPostfach(final String postfach) {
-    this.postfach = postfach;
-  }
-
-  /**
-   * Länderkürzel.
-   */
-  @SuppressWarnings("all")
-  public void setBundesland(final String bundesland) {
-    this.bundesland = bundesland;
+  public String toString() {
+    return "JesajaOrganisationseinheitAnschriftV1(anschreiben=" + this.getAnschreiben() + ", strasse=" + this.getStrasse() + ", stadt=" + this.getStadt() + ", plz=" + this.getPlz() + ", postfach=" + this.getPostfach() + ", bundesland=" + this.getBundesland() + ")";
   }
 
   @Override
@@ -274,12 +232,6 @@ public class JesajaOrganisationseinheitAnschriftV1 {
     final Object $bundesland = this.getBundesland();
     result = result * PRIME + ($bundesland == null ? 43 : $bundesland.hashCode());
     return result;
-  }
-
-  @Override
-  @SuppressWarnings("all")
-  public String toString() {
-    return "JesajaOrganisationseinheitAnschriftV1(anschreiben=" + this.getAnschreiben() + ", strasse=" + this.getStrasse() + ", stadt=" + this.getStadt() + ", plz=" + this.getPlz() + ", postfach=" + this.getPostfach() + ", bundesland=" + this.getBundesland() + ")";
   }
 
   @SuppressWarnings("all")

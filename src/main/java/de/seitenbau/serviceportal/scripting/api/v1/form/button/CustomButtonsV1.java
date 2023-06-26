@@ -3,8 +3,8 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.button;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.validation.constraints.NotNull;
 import de.seitenbau.serviceportal.scripting.api.v1.form.DataResourcePointerV1;
+import lombok.NonNull;
 
 /**
  * Klasse der Liste der Custom-Buttons am Formular.
@@ -13,7 +13,7 @@ public class CustomButtonsV1 {
   /**
    * Liste der Buttons. Default ist eine leere Liste.
    */
-  @NotNull
+  @NonNull
   private List<CustomButtonV1> buttons;
   /**
    * Prozessinstanzvariable, in die der Wert des geklickten Buttons geschrieben wird.
@@ -44,7 +44,10 @@ public class CustomButtonsV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public CustomButtonsV1.CustomButtonsV1Builder buttons(final List<CustomButtonV1> buttons) {
+    public CustomButtonsV1.CustomButtonsV1Builder buttons(@NonNull final List<CustomButtonV1> buttons) {
+      if (buttons == null) {
+        throw new NullPointerException("buttons is marked non-null but is null");
+      }
       this.buttons$value = buttons;
       buttons$set = true;
       return this;
@@ -82,6 +85,7 @@ public class CustomButtonsV1 {
   /**
    * Liste der Buttons. Default ist eine leere Liste.
    */
+  @NonNull
   @SuppressWarnings("all")
   public List<CustomButtonV1> getButtons() {
     return this.buttons;
@@ -99,7 +103,10 @@ public class CustomButtonsV1 {
    * Liste der Buttons. Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
-  public void setButtons(final List<CustomButtonV1> buttons) {
+  public void setButtons(@NonNull final List<CustomButtonV1> buttons) {
+    if (buttons == null) {
+      throw new NullPointerException("buttons is marked non-null but is null");
+    }
     this.buttons = buttons;
   }
 
@@ -156,7 +163,10 @@ public class CustomButtonsV1 {
   }
 
   @SuppressWarnings("all")
-  private CustomButtonsV1(final List<CustomButtonV1> buttons, final DataResourcePointerV1 target) {
+  private CustomButtonsV1(@NonNull final List<CustomButtonV1> buttons, final DataResourcePointerV1 target) {
+    if (buttons == null) {
+      throw new NullPointerException("buttons is marked non-null but is null");
+    }
     this.buttons = buttons;
     this.target = target;
   }

@@ -106,28 +106,10 @@ public class PaymentResult implements Serializable {
     return this.bezahlverfahren;
   }
 
-  /**
-   * Gezahlter Geldbetrag in Cents.
-   */
+  @Override
   @SuppressWarnings("all")
-  public void setBetrag(final long betrag) {
-    this.betrag = betrag;
-  }
-
-  /**
-   * Kassenzeichen der Bezahlung.
-   */
-  @SuppressWarnings("all")
-  public void setKassenzeichen(final String kassenzeichen) {
-    this.kassenzeichen = kassenzeichen;
-  }
-
-  /**
-   * Bezahlverfahren der Bezahlung.
-   */
-  @SuppressWarnings("all")
-  public void setBezahlverfahren(final String bezahlverfahren) {
-    this.bezahlverfahren = bezahlverfahren;
+  public String toString() {
+    return "PaymentResult(betrag=" + this.getBetrag() + ", kassenzeichen=" + this.getKassenzeichen() + ", bezahlverfahren=" + this.getBezahlverfahren() + ")";
   }
 
   @Override
@@ -164,12 +146,6 @@ public class PaymentResult implements Serializable {
     final Object $bezahlverfahren = this.getBezahlverfahren();
     result = result * PRIME + ($bezahlverfahren == null ? 43 : $bezahlverfahren.hashCode());
     return result;
-  }
-
-  @Override
-  @SuppressWarnings("all")
-  public String toString() {
-    return "PaymentResult(betrag=" + this.getBetrag() + ", kassenzeichen=" + this.getKassenzeichen() + ", bezahlverfahren=" + this.getBezahlverfahren() + ")";
   }
 
   @SuppressWarnings("all")

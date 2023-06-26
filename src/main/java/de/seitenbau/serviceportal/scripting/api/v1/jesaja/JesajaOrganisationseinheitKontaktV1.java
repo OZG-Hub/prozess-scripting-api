@@ -103,28 +103,10 @@ public class JesajaOrganisationseinheitKontaktV1 {
     return this.telefon;
   }
 
-  /**
-   * E-Mail-Adresse.
-   */
+  @Override
   @SuppressWarnings("all")
-  public void setEmail(final String email) {
-    this.email = email;
-  }
-
-  /**
-   * Fax-Nummer.
-   */
-  @SuppressWarnings("all")
-  public void setFax(final String fax) {
-    this.fax = fax;
-  }
-
-  /**
-   * Telefonnummer.
-   */
-  @SuppressWarnings("all")
-  public void setTelefon(final String telefon) {
-    this.telefon = telefon;
+  public String toString() {
+    return "JesajaOrganisationseinheitKontaktV1(email=" + this.getEmail() + ", fax=" + this.getFax() + ", telefon=" + this.getTelefon() + ")";
   }
 
   @Override
@@ -163,12 +145,6 @@ public class JesajaOrganisationseinheitKontaktV1 {
     final Object $telefon = this.getTelefon();
     result = result * PRIME + ($telefon == null ? 43 : $telefon.hashCode());
     return result;
-  }
-
-  @Override
-  @SuppressWarnings("all")
-  public String toString() {
-    return "JesajaOrganisationseinheitKontaktV1(email=" + this.getEmail() + ", fax=" + this.getFax() + ", telefon=" + this.getTelefon() + ")";
   }
 
   @SuppressWarnings("all")

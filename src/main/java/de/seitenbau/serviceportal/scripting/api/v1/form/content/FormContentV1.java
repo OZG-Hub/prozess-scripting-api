@@ -7,10 +7,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import javax.validation.constraints.NotNull;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldKeyV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.MessageTypeV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.ValidationMessageV1;
+import lombok.NonNull;
 
 /**
  * Inhalt eines Formulars.
@@ -19,7 +19,7 @@ public class FormContentV1 {
   /**
    * ID des zugehörigen Formulars.
    */
-  @NotNull
+  @NonNull
   private String formId;
   /**
    * Titel des zugehörigen Formulars. Wird nur zu Ausgabezwecken verwendet, überschreibt nicht den Titel des
@@ -35,7 +35,7 @@ public class FormContentV1 {
    * Enthält die Inhalte der Felder. Key der Map ist der String-Wert des {@link FormFieldKeyV1 FormFieldKeys}.
    * Default ist eine leere Map.
    */
-  @NotNull
+  @NonNull
   private Map<String, FormFieldContentV1> fields;
   /**
    * Enthält die Texte der Validierungsmeldungen für das Formular insgesamt
@@ -45,7 +45,7 @@ public class FormContentV1 {
    * oder wenn keine Validierung durchgeführt wurde).
    * Default ist eine leere Liste.
    */
-  @NotNull
+  @NonNull
   private List<ValidationMessageV1> validationMessages;
   /**
    * Wert des Custom-Buttons, der zum Submitten des Formulars gedrückt wurde.
@@ -70,7 +70,10 @@ public class FormContentV1 {
    *
    * @throws NullPointerException Falls die gegebene Formular-ID {@code null} ist
    */
-  public FormContentV1(@NotNull String formId) {
+  public FormContentV1(@NonNull String formId) {
+    if (formId == null) {
+      throw new NullPointerException("formId is marked non-null but is null");
+    }
     this.formId = formId;
   }
 
@@ -137,7 +140,10 @@ public class FormContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormContentV1.FormContentV1Builder formId(final String formId) {
+    public FormContentV1.FormContentV1Builder formId(@NonNull final String formId) {
+      if (formId == null) {
+        throw new NullPointerException("formId is marked non-null but is null");
+      }
       this.formId = formId;
       return this;
     }
@@ -170,7 +176,10 @@ public class FormContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormContentV1.FormContentV1Builder fields(final Map<String, FormFieldContentV1> fields) {
+    public FormContentV1.FormContentV1Builder fields(@NonNull final Map<String, FormFieldContentV1> fields) {
+      if (fields == null) {
+        throw new NullPointerException("fields is marked non-null but is null");
+      }
       this.fields$value = fields;
       fields$set = true;
       return this;
@@ -186,7 +195,10 @@ public class FormContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormContentV1.FormContentV1Builder validationMessages(final List<ValidationMessageV1> validationMessages) {
+    public FormContentV1.FormContentV1Builder validationMessages(@NonNull final List<ValidationMessageV1> validationMessages) {
+      if (validationMessages == null) {
+        throw new NullPointerException("validationMessages is marked non-null but is null");
+      }
       this.validationMessages$value = validationMessages;
       validationMessages$set = true;
       return this;
@@ -249,6 +261,7 @@ public class FormContentV1 {
   /**
    * ID des zugehörigen Formulars.
    */
+  @NonNull
   @SuppressWarnings("all")
   public String getFormId() {
     return this.formId;
@@ -276,6 +289,7 @@ public class FormContentV1 {
    * Enthält die Inhalte der Felder. Key der Map ist der String-Wert des {@link FormFieldKeyV1 FormFieldKeys}.
    * Default ist eine leere Map.
    */
+  @NonNull
   @SuppressWarnings("all")
   public Map<String, FormFieldContentV1> getFields() {
     return this.fields;
@@ -289,6 +303,7 @@ public class FormContentV1 {
    * oder wenn keine Validierung durchgeführt wurde).
    * Default ist eine leere Liste.
    */
+  @NonNull
   @SuppressWarnings("all")
   public List<ValidationMessageV1> getValidationMessages() {
     return this.validationMessages;
@@ -325,7 +340,10 @@ public class FormContentV1 {
    * ID des zugehörigen Formulars.
    */
   @SuppressWarnings("all")
-  public void setFormId(final String formId) {
+  public void setFormId(@NonNull final String formId) {
+    if (formId == null) {
+      throw new NullPointerException("formId is marked non-null but is null");
+    }
     this.formId = formId;
   }
 
@@ -352,7 +370,10 @@ public class FormContentV1 {
    * Default ist eine leere Map.
    */
   @SuppressWarnings("all")
-  public void setFields(final Map<String, FormFieldContentV1> fields) {
+  public void setFields(@NonNull final Map<String, FormFieldContentV1> fields) {
+    if (fields == null) {
+      throw new NullPointerException("fields is marked non-null but is null");
+    }
     this.fields = fields;
   }
 
@@ -365,7 +386,10 @@ public class FormContentV1 {
    * Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
-  public void setValidationMessages(final List<ValidationMessageV1> validationMessages) {
+  public void setValidationMessages(@NonNull final List<ValidationMessageV1> validationMessages) {
+    if (validationMessages == null) {
+      throw new NullPointerException("validationMessages is marked non-null but is null");
+    }
     this.validationMessages = validationMessages;
   }
 
@@ -466,7 +490,16 @@ public class FormContentV1 {
   }
 
   @SuppressWarnings("all")
-  private FormContentV1(final String formId, final String formTitle, final Map<String, Object> context, final Map<String, FormFieldContentV1> fields, final List<ValidationMessageV1> validationMessages, final String pressedCustomButton, final Date createdOn, final FormReplacementValuesV1 appliedReplacements) {
+  private FormContentV1(@NonNull final String formId, final String formTitle, final Map<String, Object> context, @NonNull final Map<String, FormFieldContentV1> fields, @NonNull final List<ValidationMessageV1> validationMessages, final String pressedCustomButton, final Date createdOn, final FormReplacementValuesV1 appliedReplacements) {
+    if (formId == null) {
+      throw new NullPointerException("formId is marked non-null but is null");
+    }
+    if (fields == null) {
+      throw new NullPointerException("fields is marked non-null but is null");
+    }
+    if (validationMessages == null) {
+      throw new NullPointerException("validationMessages is marked non-null but is null");
+    }
     this.formId = formId;
     this.formTitle = formTitle;
     this.context = context;

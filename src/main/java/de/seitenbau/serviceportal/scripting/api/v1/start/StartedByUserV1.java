@@ -115,32 +115,10 @@ public class StartedByUserV1 {
     return this.postfachHandle;
   }
 
-  /**
-   * ID des Benutzers, der den Prozess gestartet hat. Das ist die geprefixte Organisationskonto-ID,
-   * falls diese nicht vorhanden ist, die geprefixte User-ID oder, falls diese nicht vorhanden ist, die
-   * geprefixte Session-ID.
-   */
+  @Override
   @SuppressWarnings("all")
-  public void setUserId(final String userId) {
-    this.userId = userId;
-  }
-
-  /**
-   * Lesbarer Name des Benutzers, der den Prozess gestartet hat.
-   * {@code null}, falls der Benutzer nicht eingeloggt war.
-   */
-  @SuppressWarnings("all")
-  public void setDisplayName(final String displayName) {
-    this.displayName = displayName;
-  }
-
-  /**
-   * Postfach-Handle des Benutzers, der den Prozess gestartet hat.
-   * {@code null}, falls der Benutzer nicht eingeloggt war.
-   */
-  @SuppressWarnings("all")
-  public void setPostfachHandle(final String postfachHandle) {
-    this.postfachHandle = postfachHandle;
+  public String toString() {
+    return "StartedByUserV1(userId=" + this.getUserId() + ", displayName=" + this.getDisplayName() + ", postfachHandle=" + this.getPostfachHandle() + ")";
   }
 
   @Override
@@ -179,12 +157,6 @@ public class StartedByUserV1 {
     final Object $postfachHandle = this.getPostfachHandle();
     result = result * PRIME + ($postfachHandle == null ? 43 : $postfachHandle.hashCode());
     return result;
-  }
-
-  @Override
-  @SuppressWarnings("all")
-  public String toString() {
-    return "StartedByUserV1(userId=" + this.getUserId() + ", displayName=" + this.getDisplayName() + ", postfachHandle=" + this.getPostfachHandle() + ")";
   }
 
   @SuppressWarnings("all")

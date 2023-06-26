@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.validation.constraints.NotNull;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldKeyV1;
+import lombok.NonNull;
 
 /**
  * Klasse zur Konfiguration von Ajax-Aufrufen.
@@ -16,7 +16,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * URL, an die der Aufruf gesendet werden soll.
    * Für DOWNLOAD- und PDF-Felder kann ein ServiceAlias verwendet werden.
    */
-  @NotNull
+  @NonNull
   private String url;
   /**
    * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix http://).
@@ -37,7 +37,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * Typ, der definiert, auf welche Art und Weise die Felder, deren Werte mitgeschickt werden,
    * bestimmt werden sollen.
    */
-  @NotNull
+  @NonNull
   private AjaxRequestIncludedFieldsScopeV1 scope;
   /**
    * Liste mit IDs von explizit definierten Felder, falls Scope
@@ -49,7 +49,13 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    */
   private String variableName;
 
-  public ExternalDataSourcePropertiesV1(@NotNull String url, @NotNull AjaxRequestIncludedFieldsScopeV1 scope) {
+  public ExternalDataSourcePropertiesV1(@NonNull String url, @NonNull AjaxRequestIncludedFieldsScopeV1 scope) {
+    if (url == null) {
+      throw new NullPointerException("url is marked non-null but is null");
+    }
+    if (scope == null) {
+      throw new NullPointerException("scope is marked non-null but is null");
+    }
     this.url = url;
     this.scope = scope;
   }
@@ -112,7 +118,10 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder url(final String url) {
+    public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder url(@NonNull final String url) {
+      if (url == null) {
+        throw new NullPointerException("url is marked non-null but is null");
+      }
       this.url = url;
       return this;
     }
@@ -156,7 +165,10 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder scope(final AjaxRequestIncludedFieldsScopeV1 scope) {
+    public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder scope(@NonNull final AjaxRequestIncludedFieldsScopeV1 scope) {
+      if (scope == null) {
+        throw new NullPointerException("scope is marked non-null but is null");
+      }
       this.scope = scope;
       return this;
     }
@@ -203,6 +215,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * URL, an die der Aufruf gesendet werden soll.
    * Für DOWNLOAD- und PDF-Felder kann ein ServiceAlias verwendet werden.
    */
+  @NonNull
   @SuppressWarnings("all")
   public String getUrl() {
     return this.url;
@@ -239,6 +252,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * Typ, der definiert, auf welche Art und Weise die Felder, deren Werte mitgeschickt werden,
    * bestimmt werden sollen.
    */
+  @NonNull
   @SuppressWarnings("all")
   public AjaxRequestIncludedFieldsScopeV1 getScope() {
     return this.scope;
@@ -266,7 +280,10 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * Für DOWNLOAD- und PDF-Felder kann ein ServiceAlias verwendet werden.
    */
   @SuppressWarnings("all")
-  public void setUrl(final String url) {
+  public void setUrl(@NonNull final String url) {
+    if (url == null) {
+      throw new NullPointerException("url is marked non-null but is null");
+    }
     this.url = url;
   }
 
@@ -302,7 +319,10 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * bestimmt werden sollen.
    */
   @SuppressWarnings("all")
-  public void setScope(final AjaxRequestIncludedFieldsScopeV1 scope) {
+  public void setScope(@NonNull final AjaxRequestIncludedFieldsScopeV1 scope) {
+    if (scope == null) {
+      throw new NullPointerException("scope is marked non-null but is null");
+    }
     this.scope = scope;
   }
 
@@ -388,7 +408,13 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
-  private ExternalDataSourcePropertiesV1(final String url, final String proxyHost, final Integer proxyPort, final Map<String, String> headers, final AjaxRequestIncludedFieldsScopeV1 scope, final List<FormFieldKeyV1> fieldIds, final String variableName) {
+  private ExternalDataSourcePropertiesV1(@NonNull final String url, final String proxyHost, final Integer proxyPort, final Map<String, String> headers, @NonNull final AjaxRequestIncludedFieldsScopeV1 scope, final List<FormFieldKeyV1> fieldIds, final String variableName) {
+    if (url == null) {
+      throw new NullPointerException("url is marked non-null but is null");
+    }
+    if (scope == null) {
+      throw new NullPointerException("scope is marked non-null but is null");
+    }
     this.url = url;
     this.proxyHost = proxyHost;
     this.proxyPort = proxyPort;
