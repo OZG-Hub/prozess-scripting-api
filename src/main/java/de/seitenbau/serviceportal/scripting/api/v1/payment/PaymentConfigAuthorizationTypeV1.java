@@ -1,7 +1,7 @@
 package de.seitenbau.serviceportal.scripting.api.v1.payment;
 
 /**
- * Die unterstützten Authorisierungsmethoden.
+ * Die unterstützten Autorisierungsmethoden.
  */
 public enum PaymentConfigAuthorizationTypeV1
 {

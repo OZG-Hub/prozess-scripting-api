@@ -13,12 +13,30 @@ public class StartedByUserV1 {
   private String userId;
   /**
    * Lesbarer Name des Benutzers, der den Prozess gestartet hat.
+   * War der Nutzer im Kontext eines Organisationskontos eingeloggt, ist dieses Attribut der Name des
+   * Organisationskontos.
    * {@code null}, falls der Benutzer nicht eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
   private String displayName;
   /**
+   * Nachname des Benutzers, der den Prozess gestartet hat.
+   * War der Nutzer im Kontext eines Organisationskontos eingeloggt, ist dieses Attribut der Name des
+   * Organisationskontos.
+   * {@code null}, falls der Benutzer nicht eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   */
+  private String primaryName;
+  /**
+   * Vorname des Benutzers, der den Prozess gestartet hat.
+   * {@code null}, falls der Benutzer nicht oder im Kontext eines Organisationskontos eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   */
+  private String secondaryName;
+  /**
    * Postfach-Handle des Benutzers, der den Prozess gestartet hat.
    * {@code null}, falls der Benutzer nicht eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
   private String postfachHandle;
 
@@ -29,6 +47,10 @@ public class StartedByUserV1 {
     private String userId;
     @SuppressWarnings("all")
     private String displayName;
+    @SuppressWarnings("all")
+    private String primaryName;
+    @SuppressWarnings("all")
+    private String secondaryName;
     @SuppressWarnings("all")
     private String postfachHandle;
 
@@ -50,7 +72,10 @@ public class StartedByUserV1 {
 
     /**
      * Lesbarer Name des Benutzers, der den Prozess gestartet hat.
+     * War der Nutzer im Kontext eines Organisationskontos eingeloggt, ist dieses Attribut der Name des
+     * Organisationskontos.
      * {@code null}, falls der Benutzer nicht eingeloggt war.
+     * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -60,8 +85,35 @@ public class StartedByUserV1 {
     }
 
     /**
+     * Nachname des Benutzers, der den Prozess gestartet hat.
+     * War der Nutzer im Kontext eines Organisationskontos eingeloggt, ist dieses Attribut der Name des
+     * Organisationskontos.
+     * {@code null}, falls der Benutzer nicht eingeloggt war.
+     * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public StartedByUserV1.StartedByUserV1Builder primaryName(final String primaryName) {
+      this.primaryName = primaryName;
+      return this;
+    }
+
+    /**
+     * Vorname des Benutzers, der den Prozess gestartet hat.
+     * {@code null}, falls der Benutzer nicht oder im Kontext eines Organisationskontos eingeloggt war.
+     * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public StartedByUserV1.StartedByUserV1Builder secondaryName(final String secondaryName) {
+      this.secondaryName = secondaryName;
+      return this;
+    }
+
+    /**
      * Postfach-Handle des Benutzers, der den Prozess gestartet hat.
      * {@code null}, falls der Benutzer nicht eingeloggt war.
+     * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -72,13 +124,13 @@ public class StartedByUserV1 {
 
     @SuppressWarnings("all")
     public StartedByUserV1 build() {
-      return new StartedByUserV1(this.userId, this.displayName, this.postfachHandle);
+      return new StartedByUserV1(this.userId, this.displayName, this.primaryName, this.secondaryName, this.postfachHandle);
     }
 
     @Override
     @SuppressWarnings("all")
     public String toString() {
-      return "StartedByUserV1.StartedByUserV1Builder(userId=" + this.userId + ", displayName=" + this.displayName + ", postfachHandle=" + this.postfachHandle + ")";
+      return "StartedByUserV1.StartedByUserV1Builder(userId=" + this.userId + ", displayName=" + this.displayName + ", primaryName=" + this.primaryName + ", secondaryName=" + this.secondaryName + ", postfachHandle=" + this.postfachHandle + ")";
     }
   }
 
@@ -99,7 +151,10 @@ public class StartedByUserV1 {
 
   /**
    * Lesbarer Name des Benutzers, der den Prozess gestartet hat.
+   * War der Nutzer im Kontext eines Organisationskontos eingeloggt, ist dieses Attribut der Name des
+   * Organisationskontos.
    * {@code null}, falls der Benutzer nicht eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
   @SuppressWarnings("all")
   public String getDisplayName() {
@@ -107,8 +162,31 @@ public class StartedByUserV1 {
   }
 
   /**
+   * Nachname des Benutzers, der den Prozess gestartet hat.
+   * War der Nutzer im Kontext eines Organisationskontos eingeloggt, ist dieses Attribut der Name des
+   * Organisationskontos.
+   * {@code null}, falls der Benutzer nicht eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   */
+  @SuppressWarnings("all")
+  public String getPrimaryName() {
+    return this.primaryName;
+  }
+
+  /**
+   * Vorname des Benutzers, der den Prozess gestartet hat.
+   * {@code null}, falls der Benutzer nicht oder im Kontext eines Organisationskontos eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   */
+  @SuppressWarnings("all")
+  public String getSecondaryName() {
+    return this.secondaryName;
+  }
+
+  /**
    * Postfach-Handle des Benutzers, der den Prozess gestartet hat.
    * {@code null}, falls der Benutzer nicht eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
   @SuppressWarnings("all")
   public String getPostfachHandle() {
@@ -118,7 +196,7 @@ public class StartedByUserV1 {
   @Override
   @SuppressWarnings("all")
   public String toString() {
-    return "StartedByUserV1(userId=" + this.getUserId() + ", displayName=" + this.getDisplayName() + ", postfachHandle=" + this.getPostfachHandle() + ")";
+    return "StartedByUserV1(userId=" + this.getUserId() + ", displayName=" + this.getDisplayName() + ", primaryName=" + this.getPrimaryName() + ", secondaryName=" + this.getSecondaryName() + ", postfachHandle=" + this.getPostfachHandle() + ")";
   }
 
   @Override
@@ -134,6 +212,12 @@ public class StartedByUserV1 {
     final Object this$displayName = this.getDisplayName();
     final Object other$displayName = other.getDisplayName();
     if (this$displayName == null ? other$displayName != null : !this$displayName.equals(other$displayName)) return false;
+    final Object this$primaryName = this.getPrimaryName();
+    final Object other$primaryName = other.getPrimaryName();
+    if (this$primaryName == null ? other$primaryName != null : !this$primaryName.equals(other$primaryName)) return false;
+    final Object this$secondaryName = this.getSecondaryName();
+    final Object other$secondaryName = other.getSecondaryName();
+    if (this$secondaryName == null ? other$secondaryName != null : !this$secondaryName.equals(other$secondaryName)) return false;
     final Object this$postfachHandle = this.getPostfachHandle();
     final Object other$postfachHandle = other.getPostfachHandle();
     if (this$postfachHandle == null ? other$postfachHandle != null : !this$postfachHandle.equals(other$postfachHandle)) return false;
@@ -154,6 +238,10 @@ public class StartedByUserV1 {
     result = result * PRIME + ($userId == null ? 43 : $userId.hashCode());
     final Object $displayName = this.getDisplayName();
     result = result * PRIME + ($displayName == null ? 43 : $displayName.hashCode());
+    final Object $primaryName = this.getPrimaryName();
+    result = result * PRIME + ($primaryName == null ? 43 : $primaryName.hashCode());
+    final Object $secondaryName = this.getSecondaryName();
+    result = result * PRIME + ($secondaryName == null ? 43 : $secondaryName.hashCode());
     final Object $postfachHandle = this.getPostfachHandle();
     result = result * PRIME + ($postfachHandle == null ? 43 : $postfachHandle.hashCode());
     return result;
@@ -164,9 +252,11 @@ public class StartedByUserV1 {
   }
 
   @SuppressWarnings("all")
-  public StartedByUserV1(final String userId, final String displayName, final String postfachHandle) {
+  public StartedByUserV1(final String userId, final String displayName, final String primaryName, final String secondaryName, final String postfachHandle) {
     this.userId = userId;
     this.displayName = displayName;
+    this.primaryName = primaryName;
+    this.secondaryName = secondaryName;
     this.postfachHandle = postfachHandle;
   }
 }

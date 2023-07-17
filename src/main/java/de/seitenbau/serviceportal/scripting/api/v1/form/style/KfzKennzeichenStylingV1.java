@@ -17,12 +17,12 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
   private Boolean historic;
   /**
    * Numerischer Wert des Startmonats eines Saisonkennzeichens.
-   * {@code null}, wenn kein Sainsonkennzeichen.
+   * {@code null}, wenn kein Saisonkennzeichen.
    */
   private String saisonStart;
   /**
    * Numerischer Wert des Endmonats eines Saisonkennzeichens.
-   * {@code null}, wenn kein Sainsonkennzeichen.
+   * {@code null}, wenn kein Saisonkennzeichen.
    */
   private String saisonEnd;
   /**
@@ -91,7 +91,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
 
     /**
      * Numerischer Wert des Startmonats eines Saisonkennzeichens.
-     * {@code null}, wenn kein Sainsonkennzeichen.
+     * {@code null}, wenn kein Saisonkennzeichen.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -102,7 +102,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
 
     /**
      * Numerischer Wert des Endmonats eines Saisonkennzeichens.
-     * {@code null}, wenn kein Sainsonkennzeichen.
+     * {@code null}, wenn kein Saisonkennzeichen.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -159,7 +159,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
 
   /**
    * Numerischer Wert des Startmonats eines Saisonkennzeichens.
-   * {@code null}, wenn kein Sainsonkennzeichen.
+   * {@code null}, wenn kein Saisonkennzeichen.
    */
   @SuppressWarnings("all")
   public String getSaisonStart() {
@@ -168,7 +168,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
 
   /**
    * Numerischer Wert des Endmonats eines Saisonkennzeichens.
-   * {@code null}, wenn kein Sainsonkennzeichen.
+   * {@code null}, wenn kein Saisonkennzeichen.
    */
   @SuppressWarnings("all")
   public String getSaisonEnd() {
@@ -204,7 +204,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
 
   /**
    * Numerischer Wert des Startmonats eines Saisonkennzeichens.
-   * {@code null}, wenn kein Sainsonkennzeichen.
+   * {@code null}, wenn kein Saisonkennzeichen.
    */
   @SuppressWarnings("all")
   public void setSaisonStart(final String saisonStart) {
@@ -213,7 +213,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
 
   /**
    * Numerischer Wert des Endmonats eines Saisonkennzeichens.
-   * {@code null}, wenn kein Sainsonkennzeichen.
+   * {@code null}, wenn kein Saisonkennzeichen.
    */
   @SuppressWarnings("all")
   public void setSaisonEnd(final String saisonEnd) {

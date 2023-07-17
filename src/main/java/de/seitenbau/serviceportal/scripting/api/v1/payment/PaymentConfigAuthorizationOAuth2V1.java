@@ -2,20 +2,19 @@
 package de.seitenbau.serviceportal.scripting.api.v1.payment;
 
 /**
- * Beinhaltet Daten zur Authorisierung bei Bezahl-Providern für die Authorisierungsmethode OAuth2.
+ * Beinhaltet Daten zur Authentifizierung bei Bezahl-Providern für die Authentifizierungsmethode OAuth2.
  */
 public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthorizationV1 {
-  private static final long serialVersionUID = 1L;
   /**
-   * Typ der Authorisierung.
+   * Typ der Authentifizierung.
    */
   private final PaymentConfigAuthorizationTypeV1 type = PaymentConfigAuthorizationTypeV1.OAUTH2;
   /**
-   * Id zur Authenfizierung
+   * Benutzername oder ID zur Authentifizierung
    */
   private String clientId;
   /**
-   * Geheimnis (Passwort) zur Authenfizierung
+   * Geheimnis (Passwort) zur Authentifizierung
    */
   private String clientSecret;
   /**
@@ -38,7 +37,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
     }
 
     /**
-     * Id zur Authenfizierung
+     * Benutzername oder ID zur Authentifizierung
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -48,7 +47,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
     }
 
     /**
-     * Geheimnis (Passwort) zur Authenfizierung
+     * Geheimnis (Passwort) zur Authentifizierung
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -85,7 +84,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
   }
 
   /**
-   * Typ der Authorisierung.
+   * Typ der Authentifizierung.
    */
   @SuppressWarnings("all")
   public PaymentConfigAuthorizationTypeV1 getType() {
@@ -93,7 +92,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
   }
 
   /**
-   * Id zur Authenfizierung
+   * Benutzername oder ID zur Authentifizierung
    */
   @SuppressWarnings("all")
   public String getClientId() {
@@ -101,7 +100,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
   }
 
   /**
-   * Geheimnis (Passwort) zur Authenfizierung
+   * Geheimnis (Passwort) zur Authentifizierung
    */
   @SuppressWarnings("all")
   public String getClientSecret() {
@@ -117,7 +116,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
   }
 
   /**
-   * Id zur Authenfizierung
+   * Benutzername oder ID zur Authentifizierung
    */
   @SuppressWarnings("all")
   public void setClientId(final String clientId) {
@@ -125,7 +124,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
   }
 
   /**
-   * Geheimnis (Passwort) zur Authenfizierung
+   * Geheimnis (Passwort) zur Authentifizierung
    */
   @SuppressWarnings("all")
   public void setClientSecret(final String clientSecret) {

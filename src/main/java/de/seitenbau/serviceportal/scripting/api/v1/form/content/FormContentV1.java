@@ -78,6 +78,27 @@ public class FormContentV1 {
   }
 
   /**
+   * Gibt den Wert eines Feldes zurück.
+   *
+   * @param combinedFieldId String-Wert des {@link FormFieldKeyV1 FormFieldKeys}
+   *
+   * @return Wert des Feldes oder {@code null} falls das Feld nicht vorhanden ist
+   */
+  public Object getFieldValue(String combinedFieldId) {
+    return fields.containsKey(combinedFieldId) ? fields.get(combinedFieldId).getValue() : null;
+  }
+
+  /**
+   * Setzt den Wert eines Feldes. Falls das Feld noch nicht vorhanden ist, wird es zuerst angelegt.
+   *
+   * @param combinedFieldId String-Wert des {@link FormFieldKeyV1 FormFieldKeys}
+   * @param value Wert der gesetzt wird
+   */
+  public void setFieldValue(String combinedFieldId, Object value) {
+    fields.put(combinedFieldId, FormFieldContentV1.builder().value(value).build());
+  }
+
+  /**
    * Gibt die Liste der Validierungsmeldungen am Formular zurück. Der Typ der Validierungsmeldung wird
    * ignoriert.
    *

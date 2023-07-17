@@ -2,15 +2,15 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.storage;
 
 /**
- * Konfiguration zur Angabe einer externen Dateiablange.
+ * Konfiguration zur Angabe einer externen Dateiablage.
  */
 public class EndpointFolderConfigV1 implements Cloneable {
   /**
-   * URL zur externen Dateiablange. Nicht {@code null}.
+   * URL zur externen Dateiablage. Nicht {@code null}.
    */
   private String baseUrl;
   /**
-   * Ordner oder über "/" geschachtelter Pfad von Ordnern auf der externen Dateiablange, wo eine Datei
+   * Ordner oder über "/" geschachtelter Pfad von Ordnern auf der externen Dateiablage, wo eine Datei
    * gespeichert werden soll. Nicht {@code null}.
    */
   private String folder;
@@ -37,7 +37,7 @@ public class EndpointFolderConfigV1 implements Cloneable {
     }
 
     /**
-     * URL zur externen Dateiablange. Nicht {@code null}.
+     * URL zur externen Dateiablage. Nicht {@code null}.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -47,7 +47,7 @@ public class EndpointFolderConfigV1 implements Cloneable {
     }
 
     /**
-     * Ordner oder über "/" geschachtelter Pfad von Ordnern auf der externen Dateiablange, wo eine Datei
+     * Ordner oder über "/" geschachtelter Pfad von Ordnern auf der externen Dateiablage, wo eine Datei
      * gespeichert werden soll. Nicht {@code null}.
      * @return {@code this}.
      */
@@ -75,7 +75,7 @@ public class EndpointFolderConfigV1 implements Cloneable {
   }
 
   /**
-   * URL zur externen Dateiablange. Nicht {@code null}.
+   * URL zur externen Dateiablage. Nicht {@code null}.
    */
   @SuppressWarnings("all")
   public String getBaseUrl() {
@@ -83,7 +83,7 @@ public class EndpointFolderConfigV1 implements Cloneable {
   }
 
   /**
-   * Ordner oder über "/" geschachtelter Pfad von Ordnern auf der externen Dateiablange, wo eine Datei
+   * Ordner oder über "/" geschachtelter Pfad von Ordnern auf der externen Dateiablage, wo eine Datei
    * gespeichert werden soll. Nicht {@code null}.
    */
   @SuppressWarnings("all")
@@ -92,7 +92,7 @@ public class EndpointFolderConfigV1 implements Cloneable {
   }
 
   /**
-   * URL zur externen Dateiablange. Nicht {@code null}.
+   * URL zur externen Dateiablage. Nicht {@code null}.
    */
   @SuppressWarnings("all")
   public void setBaseUrl(final String baseUrl) {
@@ -100,7 +100,7 @@ public class EndpointFolderConfigV1 implements Cloneable {
   }
 
   /**
-   * Ordner oder über "/" geschachtelter Pfad von Ordnern auf der externen Dateiablange, wo eine Datei
+   * Ordner oder über "/" geschachtelter Pfad von Ordnern auf der externen Dateiablage, wo eine Datei
    * gespeichert werden soll. Nicht {@code null}.
    */
   @SuppressWarnings("all")

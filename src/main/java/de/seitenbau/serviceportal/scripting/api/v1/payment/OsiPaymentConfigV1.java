@@ -18,7 +18,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
    */
   private String accountNo;
   /**
-   * Sap-Nummber. Falls nicht definiert, wird die Sap-Nr. des verknüpften Zahlungsmandanten verwendet.
+   * Sap-Number. Falls nicht definiert, wird die Sap-Nr. des verknüpften Zahlungsmandanten verwendet.
    */
   private String sapNo;
   /**
@@ -69,7 +69,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
     }
 
     /**
-     * Sap-Nummber. Falls nicht definiert, wird die Sap-Nr. des verknüpften Zahlungsmandanten verwendet.
+     * Sap-Number. Falls nicht definiert, wird die Sap-Nr. des verknüpften Zahlungsmandanten verwendet.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -140,7 +140,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
   }
 
   /**
-   * Sap-Nummber. Falls nicht definiert, wird die Sap-Nr. des verknüpften Zahlungsmandanten verwendet.
+   * Sap-Number. Falls nicht definiert, wird die Sap-Nr. des verknüpften Zahlungsmandanten verwendet.
    */
   @SuppressWarnings("all")
   public String getSapNo() {
@@ -180,7 +180,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
   }
 
   /**
-   * Sap-Nummber. Falls nicht definiert, wird die Sap-Nr. des verknüpften Zahlungsmandanten verwendet.
+   * Sap-Number. Falls nicht definiert, wird die Sap-Nr. des verknüpften Zahlungsmandanten verwendet.
    */
   @SuppressWarnings("all")
   public void setSapNo(final String sapNo) {

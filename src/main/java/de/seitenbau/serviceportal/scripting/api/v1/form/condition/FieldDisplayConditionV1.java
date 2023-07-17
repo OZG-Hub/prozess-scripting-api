@@ -15,11 +15,6 @@ public abstract class FieldDisplayConditionV1 extends DisplayConditionV1 {
    */
   private FormFieldKeyV1 conditionFieldKey;
 
-  @Override
-  public DisplayConditionV1 clone() {
-    return super.clone();
-  }
-
   public final FormFieldKeyV1 getReferencedFieldKey(FieldGroupInstanceV1 instance) {
     return instance.resolveSameInstancePointers(conditionFieldKey);
   }

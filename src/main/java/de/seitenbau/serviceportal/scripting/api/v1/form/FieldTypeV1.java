@@ -92,7 +92,7 @@ public enum FieldTypeV1 {
    * Hinweisboxanzeige.
    */
   HINTBOX(String.class), /**
-   * PDF anzeigen mit Option zur Bestätigung der Anzeige.
+   * PDFs anzeigen mit Option zur Bestätigung der Anzeige.
    */
   PDF(String.class), /**
    * Dropdown, aus dem mehrere Werte ausgewählt werden können.

@@ -19,7 +19,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
   @NonNull
   private String url;
   /**
-   * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix http://).
+   * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix 'http://').
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
    */
   private String proxyHost;
@@ -127,7 +127,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
     }
 
     /**
-     * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix http://).
+     * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix 'http://').
      * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
      * @return {@code this}.
      */
@@ -222,7 +222,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
   }
 
   /**
-   * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix http://).
+   * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix 'http://').
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
    */
   @SuppressWarnings("all")
@@ -288,7 +288,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
   }
 
   /**
-   * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix http://).
+   * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix 'http://').
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
    */
   @SuppressWarnings("all")

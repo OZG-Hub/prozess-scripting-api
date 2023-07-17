@@ -2,20 +2,19 @@
 package de.seitenbau.serviceportal.scripting.api.v1.payment;
 
 /**
- * Beinhaltet Daten zur Authorisierung bei Bezahl-Providern für die Authorisierungsmethode Basic Auth.
+ * Beinhaltet Daten zur Authentifizierung bei Bezahl-Providern für die Authentifizierungsmethode Basic Auth.
  */
 public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAuthorizationV1 {
-  private static final long serialVersionUID = 1L;
   /**
-   * Typ der Authorisierung.
+   * Typ der Authentifizierung.
    */
   private final PaymentConfigAuthorizationTypeV1 type = PaymentConfigAuthorizationTypeV1.BASICAUTH;
   /**
-   * Id zur Authenfizierung
+   * Benutzername oder ID zur Authentifizierung
    */
   private String clientId;
   /**
-   * Geheimnis (Passwort) zur Authenfizierung
+   * Geheimnis (Passwort) zur Authentifizierung
    */
   private String clientSecret;
 
@@ -32,7 +31,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
     }
 
     /**
-     * Id zur Authenfizierung
+     * Benutzername oder ID zur Authentifizierung
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -42,7 +41,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
     }
 
     /**
-     * Geheimnis (Passwort) zur Authenfizierung
+     * Geheimnis (Passwort) zur Authentifizierung
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -69,7 +68,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
   }
 
   /**
-   * Typ der Authorisierung.
+   * Typ der Authentifizierung.
    */
   @SuppressWarnings("all")
   public PaymentConfigAuthorizationTypeV1 getType() {
@@ -77,7 +76,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
   }
 
   /**
-   * Id zur Authenfizierung
+   * Benutzername oder ID zur Authentifizierung
    */
   @SuppressWarnings("all")
   public String getClientId() {
@@ -85,7 +84,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
   }
 
   /**
-   * Geheimnis (Passwort) zur Authenfizierung
+   * Geheimnis (Passwort) zur Authentifizierung
    */
   @SuppressWarnings("all")
   public String getClientSecret() {
@@ -93,7 +92,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
   }
 
   /**
-   * Id zur Authenfizierung
+   * Benutzername oder ID zur Authentifizierung
    */
   @SuppressWarnings("all")
   public void setClientId(final String clientId) {
@@ -101,7 +100,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
   }
 
   /**
-   * Geheimnis (Passwort) zur Authenfizierung
+   * Geheimnis (Passwort) zur Authentifizierung
    */
   @SuppressWarnings("all")
   public void setClientSecret(final String clientSecret) {

@@ -33,7 +33,13 @@ public enum PaymentProviderV1
    * Berlin.de-Payment.
    * Payment-Config ist {@link BerlinPaymentConfigV1}.
    */
-  BERLIN_PAYMENT("berlinpayment");
+  BERLIN_PAYMENT("berlinpayment"),
+
+    /**
+   * EPay21.
+   * Payment-Config ist {@link Epay21PaymentConfigV1}.
+   */
+  EPAY21("epay21");
 
   private final String name;
 

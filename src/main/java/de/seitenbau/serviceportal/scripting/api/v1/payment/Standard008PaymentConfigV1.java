@@ -12,7 +12,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
    */
   private final String provider = PaymentProviderV1.STANDARD_PAYMENT_008.toString();
   /**
-   * BaseUrl des implentierenden Endpunkts der Standardbezahlschnittstelle.
+   * BaseUrl des implementierten Endpunkts der Standardbezahlschnittstelle.
    */
   private String baseUrl;
   /**
@@ -24,7 +24,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
    */
   private String endPointId;
   /**
-   * Authorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
+   * Autorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
    */
   private PaymentConfigAuthorizationV1 authorization;
   /**
@@ -51,7 +51,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
     }
 
     /**
-     * BaseUrl des implentierenden Endpunkts der Standardbezahlschnittstelle.
+     * BaseUrl des implementierten Endpunkts der Standardbezahlschnittstelle.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -81,7 +81,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
     }
 
     /**
-     * Authorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
+     * Autorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -126,7 +126,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
   }
 
   /**
-   * BaseUrl des implentierenden Endpunkts der Standardbezahlschnittstelle.
+   * BaseUrl des implementierten Endpunkts der Standardbezahlschnittstelle.
    */
   @SuppressWarnings("all")
   public String getBaseUrl() {
@@ -150,7 +150,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
   }
 
   /**
-   * Authorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
+   * Autorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
    */
   @SuppressWarnings("all")
   public PaymentConfigAuthorizationV1 getAuthorization() {
@@ -166,7 +166,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
   }
 
   /**
-   * BaseUrl des implentierenden Endpunkts der Standardbezahlschnittstelle.
+   * BaseUrl des implementierten Endpunkts der Standardbezahlschnittstelle.
    */
   @SuppressWarnings("all")
   public void setBaseUrl(final String baseUrl) {
@@ -190,7 +190,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
   }
 
   /**
-   * Authorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
+   * Autorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
    */
   @SuppressWarnings("all")
   public void setAuthorization(final PaymentConfigAuthorizationV1 authorization) {

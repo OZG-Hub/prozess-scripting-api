@@ -15,7 +15,7 @@ public class BerlinPaymentConfigV1 implements PaymentConfigV1 {
    */
   private String transPrefix;
   /**
-   * Benuztername für die HTTP-Authentifizierung per BasicAuth.
+   * Benutzername für die HTTP-Authentifizierung per BasicAuth.
    */
   private String username;
   /**
@@ -61,7 +61,7 @@ public class BerlinPaymentConfigV1 implements PaymentConfigV1 {
     }
 
     /**
-     * Benuztername für die HTTP-Authentifizierung per BasicAuth.
+     * Benutzername für die HTTP-Authentifizierung per BasicAuth.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -135,7 +135,7 @@ public class BerlinPaymentConfigV1 implements PaymentConfigV1 {
   }
 
   /**
-   * Benuztername für die HTTP-Authentifizierung per BasicAuth.
+   * Benutzername für die HTTP-Authentifizierung per BasicAuth.
    */
   @SuppressWarnings("all")
   public String getUsername() {
@@ -176,7 +176,7 @@ public class BerlinPaymentConfigV1 implements PaymentConfigV1 {
   }
 
   /**
-   * Benuztername für die HTTP-Authentifizierung per BasicAuth.
+   * Benutzername für die HTTP-Authentifizierung per BasicAuth.
    */
   @SuppressWarnings("all")
   public void setUsername(final String username) {

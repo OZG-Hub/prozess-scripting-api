@@ -2,12 +2,11 @@
 package de.seitenbau.serviceportal.scripting.api.v1.payment;
 
 /**
- * Beinhaltet Daten zur Authorisierung bei Bezahl-Providern für die Authorisierungsmethode Keystore.
+ * Beinhaltet Daten zur Authentifizierung bei Bezahl-Providern für die Authentifizierungsmethode Keystore.
  */
 public class PaymentConfigAuthorizationKeystoreV1 implements PaymentConfigAuthorizationV1 {
-  private static final long serialVersionUID = 1L;
   /**
-   * Typ der Authorisierung.
+   * Typ der Authentifizierung.
    */
   private final PaymentConfigAuthorizationTypeV1 type = PaymentConfigAuthorizationTypeV1.KEYSTORE;
   /**
@@ -69,7 +68,7 @@ public class PaymentConfigAuthorizationKeystoreV1 implements PaymentConfigAuthor
   }
 
   /**
-   * Typ der Authorisierung.
+   * Typ der Authentifizierung.
    */
   @SuppressWarnings("all")
   public PaymentConfigAuthorizationTypeV1 getType() {

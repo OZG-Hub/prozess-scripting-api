@@ -89,6 +89,13 @@ public interface ScriptingApiV1
   void setVariable(String name, Object value);
 
   /**
+   * Entfernt eine Prozessinstanzvariable des Prozesses.
+   *
+   * @param name Name der Prozessinstanzvariable, nicht {@code null}
+   */
+  void removeVariable(String name);
+
+  /**
    * Gibt die Formulardefinition des Formulars mit der übergebenen ID zurück.
    * Das Formular muss in der Sprache deutsch deployt sein.
    *
@@ -138,4 +145,11 @@ public interface ScriptingApiV1
    * @throws IllegalStateException Falls die Methode auf anderen Plattformen als dem OZG-Hub verwendet wird
    */
   JesajaApiV1 getJesaja();
+
+  /**
+   * Gibt einen Logger zurück. Der Name des Loggers enthält den Definition-Key der Hauptprozessinstanz.
+   *
+   * @return ein Logger, nie {@code null}
+   */
+  LoggerApiV1 getLogger();
 }

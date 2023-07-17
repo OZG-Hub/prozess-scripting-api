@@ -5,7 +5,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.payment;
  */
 public enum GiroCheckoutPaymentMethodV1
 {
-  /** Anstragsssteller wählt Bezahlverfahren auf externer Payment-Page aus. */
+  /** Antragssteller wählt Bezahlverfahren auf externer Payment-Page aus. */
   PAYMENTPAGE,
 
   /** Paydirekt. */

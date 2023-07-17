@@ -5,7 +5,7 @@ import de.seitenbau.serviceportal.scripting.api.v1.form.FieldGroupInstanceV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormV1;
 
 /**
- * Sichtbarkeitsbedingung, die erfüllt ist, wenn ein boolscher Wert {@code true} ist.
+ * Sichtbarkeitsbedingung, die erfüllt ist, wenn ein boolescher Wert {@code true} ist.
  */
 public class ShowOnBooleanConditionV1 extends DisplayConditionV1 {
   /**

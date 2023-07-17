@@ -16,7 +16,7 @@ public class TransactionArtikelV1 {
    */
   private String referenz;
   /**
-   * Bechreibung.
+   * Beschreibung.
    */
   private String beschreibung;
   /**
@@ -79,7 +79,7 @@ public class TransactionArtikelV1 {
     }
 
     /**
-     * Bechreibung.
+     * Beschreibung.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -162,7 +162,7 @@ public class TransactionArtikelV1 {
   }
 
   /**
-   * Bechreibung.
+   * Beschreibung.
    */
   @SuppressWarnings("all")
   public String getBeschreibung() {
@@ -218,7 +218,7 @@ public class TransactionArtikelV1 {
   }
 
   /**
-   * Bechreibung.
+   * Beschreibung.
    */
   @SuppressWarnings("all")
   public void setBeschreibung(final String beschreibung) {

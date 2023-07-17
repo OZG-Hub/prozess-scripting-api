@@ -4,7 +4,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.payment;
 import java.util.List;
 
 /**
- * Adressinformationen  über den Auslösder der Bezahlung über den generischen Bezahltask.
+ * Adressinformationen über den Auslöser der Bezahlung über den generischen Bezahltask.
  */
 public class TransactionAdresseV1 {
   /**

@@ -14,4 +14,39 @@ public interface ProcessInstanceApiV1
    * @return ID der Hauptprozessinstanz
    */
   String getRootId();
+
+  /**
+   * Gibt die ID der aktiven Prozessinstanz zurück.
+   *
+   * @return ID der aktiven Prozessinstanz
+   */
+  String getId();
+
+  /**
+   * Gibt die Definition-ID der Hauptprozessinstanz zurück.
+   *
+   * @return Definition-ID der Hauptprozessinstanz
+   */
+  String getRootDefinitionId();
+
+  /**
+   * Gibt den Definition-Key der Hauptprozessinstanz zurück.
+   *
+   * @return Definition-Key der Hauptprozessinstanz
+   */
+  String getRootDefinitionKey();
+
+  /**
+   * Gibt die Definition-ID der aktiven Prozessinstanz zurück.
+   *
+   * @return Definition-ID der aktiven Prozessinstanz
+   */
+  String getDefinitionId();
+
+  /**
+   * Gibt den Definition-Key der aktiven Prozessinstanz zurück.
+   *
+   * @return Definition-Key der aktiven Prozessinstanz
+   */
+  String getDefinitionKey();
 }
