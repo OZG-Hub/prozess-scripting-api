@@ -13,7 +13,7 @@ public class TransactionConfigV1 {
    */
   private Long betrag;
   /**
-   * Verwendungszweck.
+   * Verwendungszweck. Für pmPayment wird der Verwendungszweck ignoriert.
    */
   private String verwendungszweck;
   /**
@@ -58,7 +58,7 @@ public class TransactionConfigV1 {
     }
 
     /**
-     * Verwendungszweck.
+     * Verwendungszweck. Für pmPayment wird der Verwendungszweck ignoriert.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -123,7 +123,7 @@ public class TransactionConfigV1 {
   }
 
   /**
-   * Verwendungszweck.
+   * Verwendungszweck. Für pmPayment wird der Verwendungszweck ignoriert.
    */
   @SuppressWarnings("all")
   public String getVerwendungszweck() {
@@ -163,7 +163,7 @@ public class TransactionConfigV1 {
   }
 
   /**
-   * Verwendungszweck.
+   * Verwendungszweck. Für pmPayment wird der Verwendungszweck ignoriert.
    */
   @SuppressWarnings("all")
   public void setVerwendungszweck(final String verwendungszweck) {

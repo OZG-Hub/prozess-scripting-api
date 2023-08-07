@@ -42,12 +42,18 @@ public class StartParameterV1 {
    */
   private String ags;
   /**
+   * Area-ID der FitConnect Routing-API.
+   * NULL, wenn der Parameter nicht beim Prozessstart definiert wurde.
+   */
+  private String fitConnectAreaId;
+  /**
    * Frei wählbarer Parameter.
    * {@code null}, wenn kein Parameter definiert wurde.
    */
   private String p;
   /**
-   * Menge der Parameter von externen Parameter-Quellen, wie Jesaja.
+   * Parameter einer externen Parameter-Quelle.
+   * Mögliche Quellen sind Jesaja und Fit-Connect.
    * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
    */
   private Map<String, Object> parameters;
@@ -67,6 +73,8 @@ public class StartParameterV1 {
     private OrganisationseinheitParameterV1 organisationseinheit;
     @SuppressWarnings("all")
     private String ags;
+    @SuppressWarnings("all")
+    private String fitConnectAreaId;
     @SuppressWarnings("all")
     private String p;
     @SuppressWarnings("all")
@@ -141,6 +149,17 @@ public class StartParameterV1 {
     }
 
     /**
+     * Area-ID der FitConnect Routing-API.
+     * NULL, wenn der Parameter nicht beim Prozessstart definiert wurde.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public StartParameterV1.StartParameterV1Builder fitConnectAreaId(final String fitConnectAreaId) {
+      this.fitConnectAreaId = fitConnectAreaId;
+      return this;
+    }
+
+    /**
      * Frei wählbarer Parameter.
      * {@code null}, wenn kein Parameter definiert wurde.
      * @return {@code this}.
@@ -152,7 +171,8 @@ public class StartParameterV1 {
     }
 
     /**
-     * Menge der Parameter von externen Parameter-Quellen, wie Jesaja.
+     * Parameter einer externen Parameter-Quelle.
+     * Mögliche Quellen sind Jesaja und Fit-Connect.
      * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
      * @return {@code this}.
      */
@@ -164,13 +184,13 @@ public class StartParameterV1 {
 
     @SuppressWarnings("all")
     public StartParameterV1 build() {
-      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.ags, this.p, this.parameters);
+      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.ags, this.fitConnectAreaId, this.p, this.parameters);
     }
 
     @Override
     @SuppressWarnings("all")
     public String toString() {
-      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", ags=" + this.ags + ", p=" + this.p + ", parameters=" + this.parameters + ")";
+      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", p=" + this.p + ", parameters=" + this.parameters + ")";
     }
   }
 
@@ -232,6 +252,15 @@ public class StartParameterV1 {
   }
 
   /**
+   * Area-ID der FitConnect Routing-API.
+   * NULL, wenn der Parameter nicht beim Prozessstart definiert wurde.
+   */
+  @SuppressWarnings("all")
+  public String getFitConnectAreaId() {
+    return this.fitConnectAreaId;
+  }
+
+  /**
    * Frei wählbarer Parameter.
    * {@code null}, wenn kein Parameter definiert wurde.
    */
@@ -241,7 +270,8 @@ public class StartParameterV1 {
   }
 
   /**
-   * Menge der Parameter von externen Parameter-Quellen, wie Jesaja.
+   * Parameter einer externen Parameter-Quelle.
+   * Mögliche Quellen sind Jesaja und Fit-Connect.
    * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
    */
   @SuppressWarnings("all")
@@ -252,7 +282,7 @@ public class StartParameterV1 {
   @Override
   @SuppressWarnings("all")
   public String toString() {
-    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", ags=" + this.getAgs() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ")";
+    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ")";
   }
 
   @Override
@@ -280,6 +310,9 @@ public class StartParameterV1 {
     final Object this$ags = this.getAgs();
     final Object other$ags = other.getAgs();
     if (this$ags == null ? other$ags != null : !this$ags.equals(other$ags)) return false;
+    final Object this$fitConnectAreaId = this.getFitConnectAreaId();
+    final Object other$fitConnectAreaId = other.getFitConnectAreaId();
+    if (this$fitConnectAreaId == null ? other$fitConnectAreaId != null : !this$fitConnectAreaId.equals(other$fitConnectAreaId)) return false;
     final Object this$p = this.getP();
     final Object other$p = other.getP();
     if (this$p == null ? other$p != null : !this$p.equals(other$p)) return false;
@@ -311,6 +344,8 @@ public class StartParameterV1 {
     result = result * PRIME + ($organisationseinheit == null ? 43 : $organisationseinheit.hashCode());
     final Object $ags = this.getAgs();
     result = result * PRIME + ($ags == null ? 43 : $ags.hashCode());
+    final Object $fitConnectAreaId = this.getFitConnectAreaId();
+    result = result * PRIME + ($fitConnectAreaId == null ? 43 : $fitConnectAreaId.hashCode());
     final Object $p = this.getP();
     result = result * PRIME + ($p == null ? 43 : $p.hashCode());
     final Object $parameters = this.getParameters();
@@ -323,13 +358,14 @@ public class StartParameterV1 {
   }
 
   @SuppressWarnings("all")
-  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final String ags, final String p, final Map<String, Object> parameters) {
+  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final String ags, final String fitConnectAreaId, final String p, final Map<String, Object> parameters) {
     this.startTime = startTime;
     this.startedByUser = startedByUser;
     this.processName = processName;
     this.leistung = leistung;
     this.organisationseinheit = organisationseinheit;
     this.ags = ags;
+    this.fitConnectAreaId = fitConnectAreaId;
     this.p = p;
     this.parameters = parameters;
   }

@@ -13,24 +13,24 @@ public class StartedByUserV1 {
   private String userId;
   /**
    * Lesbarer Name des Benutzers, der den Prozess gestartet hat.
-   * War der Nutzer im Kontext eines Organisationskontos eingeloggt, ist dieses Attribut der Name des
-   * Organisationskontos.
+   * War der Nutzer im Kontext eines Behörden- oder Organisationskontos eingeloggt, ist dieses Attribut der
+   * Name dieses Behörden- bzw. Organisationskontos.
    * {@code null}, falls der Benutzer nicht eingeloggt war.
    * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
   private String displayName;
   /**
    * Nachname des Benutzers, der den Prozess gestartet hat.
-   * War der Nutzer im Kontext eines Organisationskontos eingeloggt, ist dieses Attribut der Name des
-   * Organisationskontos.
+   * War der Nutzer im Kontext eines Behörden- oder Organisationskontos eingeloggt, ist dieses Attribut der
+   * Name dieses Behörden- bzw. Organisationskontos.
    * {@code null}, falls der Benutzer nicht eingeloggt war.
    * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
   private String primaryName;
   /**
    * Vorname des Benutzers, der den Prozess gestartet hat.
-   * {@code null}, falls der Benutzer nicht oder im Kontext eines Organisationskontos eingeloggt war.
-   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   * {@code null}, falls der Benutzer nicht oder im Kontext eines Behörden- oder Organisationskontos
+   * eingeloggt war. Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
   private String secondaryName;
   /**
@@ -72,8 +72,8 @@ public class StartedByUserV1 {
 
     /**
      * Lesbarer Name des Benutzers, der den Prozess gestartet hat.
-     * War der Nutzer im Kontext eines Organisationskontos eingeloggt, ist dieses Attribut der Name des
-     * Organisationskontos.
+     * War der Nutzer im Kontext eines Behörden- oder Organisationskontos eingeloggt, ist dieses Attribut der
+     * Name dieses Behörden- bzw. Organisationskontos.
      * {@code null}, falls der Benutzer nicht eingeloggt war.
      * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
      * @return {@code this}.
@@ -86,8 +86,8 @@ public class StartedByUserV1 {
 
     /**
      * Nachname des Benutzers, der den Prozess gestartet hat.
-     * War der Nutzer im Kontext eines Organisationskontos eingeloggt, ist dieses Attribut der Name des
-     * Organisationskontos.
+     * War der Nutzer im Kontext eines Behörden- oder Organisationskontos eingeloggt, ist dieses Attribut der
+     * Name dieses Behörden- bzw. Organisationskontos.
      * {@code null}, falls der Benutzer nicht eingeloggt war.
      * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
      * @return {@code this}.
@@ -100,8 +100,8 @@ public class StartedByUserV1 {
 
     /**
      * Vorname des Benutzers, der den Prozess gestartet hat.
-     * {@code null}, falls der Benutzer nicht oder im Kontext eines Organisationskontos eingeloggt war.
-     * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+     * {@code null}, falls der Benutzer nicht oder im Kontext eines Behörden- oder Organisationskontos
+     * eingeloggt war. Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -151,8 +151,8 @@ public class StartedByUserV1 {
 
   /**
    * Lesbarer Name des Benutzers, der den Prozess gestartet hat.
-   * War der Nutzer im Kontext eines Organisationskontos eingeloggt, ist dieses Attribut der Name des
-   * Organisationskontos.
+   * War der Nutzer im Kontext eines Behörden- oder Organisationskontos eingeloggt, ist dieses Attribut der
+   * Name dieses Behörden- bzw. Organisationskontos.
    * {@code null}, falls der Benutzer nicht eingeloggt war.
    * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
@@ -163,8 +163,8 @@ public class StartedByUserV1 {
 
   /**
    * Nachname des Benutzers, der den Prozess gestartet hat.
-   * War der Nutzer im Kontext eines Organisationskontos eingeloggt, ist dieses Attribut der Name des
-   * Organisationskontos.
+   * War der Nutzer im Kontext eines Behörden- oder Organisationskontos eingeloggt, ist dieses Attribut der
+   * Name dieses Behörden- bzw. Organisationskontos.
    * {@code null}, falls der Benutzer nicht eingeloggt war.
    * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
@@ -175,8 +175,8 @@ public class StartedByUserV1 {
 
   /**
    * Vorname des Benutzers, der den Prozess gestartet hat.
-   * {@code null}, falls der Benutzer nicht oder im Kontext eines Organisationskontos eingeloggt war.
-   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   * {@code null}, falls der Benutzer nicht oder im Kontext eines Behörden- oder Organisationskontos
+   * eingeloggt war. Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
   @SuppressWarnings("all")
   public String getSecondaryName() {

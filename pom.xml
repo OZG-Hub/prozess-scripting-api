@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.seitenbau.serviceportal</groupId>
   <artifactId>prozess-scripting-api</artifactId>
-  <version>1.162.8</version>
+  <version>1.163.4</version>
   <packaging>jar</packaging>
 
   <name>prozess-scripting-api</name>
