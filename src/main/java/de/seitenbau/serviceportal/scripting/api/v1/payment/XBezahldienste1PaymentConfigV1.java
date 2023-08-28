@@ -4,18 +4,15 @@ package de.seitenbau.serviceportal.scripting.api.v1.payment;
 import java.util.Map;
 
 /**
- * Payment-Config für den generischen Bezahltask über die Standardbezahlschnittstelle v0.0.8.
- * <br />
- * Deprecated. Stattdessen {@link XBezahldienste1PaymentConfigV1} nutzen.
+ * Payment-Config für den generischen Bezahltask über XBezahldienste v1.0.0.
  */
-@Deprecated(since = "1.164")
-public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
+public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
   /**
-   * Provider. Hat den Wert "standardbezahlschnittstellev0.0.8".
+   * Provider. Hat den Wert "xbezahldienstev1".
    */
-  private final String provider = PaymentProviderV1.STANDARD_PAYMENT_008.toString();
+  private final String provider = PaymentProviderV1.X_BEZAHLDIENSTE_V1.toString();
   /**
-   * BaseUrl des implementierten Endpunkts der Standardbezahlschnittstelle.
+   * Base-URL des implementierten Endpunkts.
    */
   private String baseUrl;
   /**
@@ -37,7 +34,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
 
 
   @SuppressWarnings("all")
-  public static class Standard008PaymentConfigV1Builder {
+  public static class XBezahldienste1PaymentConfigV1Builder {
     @SuppressWarnings("all")
     private String baseUrl;
     @SuppressWarnings("all")
@@ -50,15 +47,15 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
     private Map<String, String> additionalBookingData;
 
     @SuppressWarnings("all")
-    Standard008PaymentConfigV1Builder() {
+    XBezahldienste1PaymentConfigV1Builder() {
     }
 
     /**
-     * BaseUrl des implementierten Endpunkts der Standardbezahlschnittstelle.
+     * Base-URL des implementierten Endpunkts.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder baseUrl(final String baseUrl) {
+    public XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder baseUrl(final String baseUrl) {
       this.baseUrl = baseUrl;
       return this;
     }
@@ -68,7 +65,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder originatorId(final String originatorId) {
+    public XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder originatorId(final String originatorId) {
       this.originatorId = originatorId;
       return this;
     }
@@ -78,7 +75,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder endPointId(final String endPointId) {
+    public XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder endPointId(final String endPointId) {
       this.endPointId = endPointId;
       return this;
     }
@@ -88,7 +85,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder authorization(final PaymentConfigAuthorizationV1 authorization) {
+    public XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder authorization(final PaymentConfigAuthorizationV1 authorization) {
       this.authorization = authorization;
       return this;
     }
@@ -98,30 +95,30 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder additionalBookingData(final Map<String, String> additionalBookingData) {
+    public XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder additionalBookingData(final Map<String, String> additionalBookingData) {
       this.additionalBookingData = additionalBookingData;
       return this;
     }
 
     @SuppressWarnings("all")
-    public Standard008PaymentConfigV1 build() {
-      return new Standard008PaymentConfigV1(this.baseUrl, this.originatorId, this.endPointId, this.authorization, this.additionalBookingData);
+    public XBezahldienste1PaymentConfigV1 build() {
+      return new XBezahldienste1PaymentConfigV1(this.baseUrl, this.originatorId, this.endPointId, this.authorization, this.additionalBookingData);
     }
 
     @Override
     @SuppressWarnings("all")
     public String toString() {
-      return "Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder(baseUrl=" + this.baseUrl + ", originatorId=" + this.originatorId + ", endPointId=" + this.endPointId + ", authorization=" + this.authorization + ", additionalBookingData=" + this.additionalBookingData + ")";
+      return "XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder(baseUrl=" + this.baseUrl + ", originatorId=" + this.originatorId + ", endPointId=" + this.endPointId + ", authorization=" + this.authorization + ", additionalBookingData=" + this.additionalBookingData + ")";
     }
   }
 
   @SuppressWarnings("all")
-  public static Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder builder() {
-    return new Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder();
+  public static XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder builder() {
+    return new XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder();
   }
 
   /**
-   * Provider. Hat den Wert "standardbezahlschnittstellev0.0.8".
+   * Provider. Hat den Wert "xbezahldienstev1".
    */
   @SuppressWarnings("all")
   public String getProvider() {
@@ -129,7 +126,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
   }
 
   /**
-   * BaseUrl des implementierten Endpunkts der Standardbezahlschnittstelle.
+   * Base-URL des implementierten Endpunkts.
    */
   @SuppressWarnings("all")
   public String getBaseUrl() {
@@ -169,7 +166,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
   }
 
   /**
-   * BaseUrl des implementierten Endpunkts der Standardbezahlschnittstelle.
+   * Base-URL des implementierten Endpunkts.
    */
   @SuppressWarnings("all")
   public void setBaseUrl(final String baseUrl) {
@@ -212,8 +209,8 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
   @SuppressWarnings("all")
   public boolean equals(final Object o) {
     if (o == this) return true;
-    if (!(o instanceof Standard008PaymentConfigV1)) return false;
-    final Standard008PaymentConfigV1 other = (Standard008PaymentConfigV1) o;
+    if (!(o instanceof XBezahldienste1PaymentConfigV1)) return false;
+    final XBezahldienste1PaymentConfigV1 other = (XBezahldienste1PaymentConfigV1) o;
     if (!other.canEqual((Object) this)) return false;
     final Object this$provider = this.getProvider();
     final Object other$provider = other.getProvider();
@@ -238,7 +235,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
 
   @SuppressWarnings("all")
   protected boolean canEqual(final Object other) {
-    return other instanceof Standard008PaymentConfigV1;
+    return other instanceof XBezahldienste1PaymentConfigV1;
   }
 
   @Override
@@ -264,15 +261,15 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
   @Override
   @SuppressWarnings("all")
   public String toString() {
-    return "Standard008PaymentConfigV1(provider=" + this.getProvider() + ", baseUrl=" + this.getBaseUrl() + ", originatorId=" + this.getOriginatorId() + ", endPointId=" + this.getEndPointId() + ", authorization=" + this.getAuthorization() + ", additionalBookingData=" + this.getAdditionalBookingData() + ")";
+    return "XBezahldienste1PaymentConfigV1(provider=" + this.getProvider() + ", baseUrl=" + this.getBaseUrl() + ", originatorId=" + this.getOriginatorId() + ", endPointId=" + this.getEndPointId() + ", authorization=" + this.getAuthorization() + ", additionalBookingData=" + this.getAdditionalBookingData() + ")";
   }
 
   @SuppressWarnings("all")
-  public Standard008PaymentConfigV1() {
+  public XBezahldienste1PaymentConfigV1() {
   }
 
   @SuppressWarnings("all")
-  public Standard008PaymentConfigV1(final String baseUrl, final String originatorId, final String endPointId, final PaymentConfigAuthorizationV1 authorization, final Map<String, String> additionalBookingData) {
+  public XBezahldienste1PaymentConfigV1(final String baseUrl, final String originatorId, final String endPointId, final PaymentConfigAuthorizationV1 authorization, final Map<String, String> additionalBookingData) {
     this.baseUrl = baseUrl;
     this.originatorId = originatorId;
     this.endPointId = endPointId;

@@ -26,6 +26,10 @@ public class FormFieldV1 implements Cloneable {
   @NonNull
   private String id;
   /**
+   * ID des Feldes als Datenfeld im FIM-Standard (Föderales Informationsmanagement).
+   */
+  private String fimId;
+  /**
    * Beschriftung des Feldes.
    */
   private String label;
@@ -193,6 +197,7 @@ public class FormFieldV1 implements Cloneable {
 
   private void copy(FormFieldV1 toCopy) {
     id = toCopy.getId();
+    fimId = toCopy.getFimId();
     label = toCopy.getLabel();
     type = toCopy.getType();
     disabled = toCopy.getDisabled();
@@ -337,6 +342,8 @@ public class FormFieldV1 implements Cloneable {
     @SuppressWarnings("all")
     private String id;
     @SuppressWarnings("all")
+    private String fimId;
+    @SuppressWarnings("all")
     private String label;
     @SuppressWarnings("all")
     private FieldTypeV1 type;
@@ -417,6 +424,16 @@ public class FormFieldV1 implements Cloneable {
         throw new NullPointerException("id is marked non-null but is null");
       }
       this.id = id;
+      return this;
+    }
+
+    /**
+     * ID des Feldes als Datenfeld im FIM-Standard (Föderales Informationsmanagement).
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public FormFieldV1.FormFieldV1Builder fimId(final String fimId) {
+      this.fimId = fimId;
       return this;
     }
 
@@ -754,13 +771,13 @@ public class FormFieldV1 implements Cloneable {
       if (!this.validationRules$set) validationRules$value = FormFieldV1.$default$validationRules();
       Set<ValidationMessageV1> validationMessages$value = this.validationMessages$value;
       if (!this.validationMessages$set) validationMessages$value = FormFieldV1.$default$validationMessages();
-      return new FormFieldV1(this.id, this.label, this.type, this.value, this.placeholder, this.disabled, this.required, this.pickerDisabled, this.consent, this.requiredValidationFailedMessage, this.typeValidationFailedMessage, this.thousandsSeparatorValidationFailedMessage, this.digitsAfterDecimalPointValidationFailedMessage, this.helptext, this.possibleValues, displayConditions$value, width$value, this.layout, validationRules$value, validationMessages$value, this.source, this.target, this.possibleValuesSource, this.externalDataSourceProperties, this.externalValue, this.filterable, this.controlParameters, this.initializeWithAdressField, this.additionalConfig, this.helpDialog);
+      return new FormFieldV1(this.id, this.fimId, this.label, this.type, this.value, this.placeholder, this.disabled, this.required, this.pickerDisabled, this.consent, this.requiredValidationFailedMessage, this.typeValidationFailedMessage, this.thousandsSeparatorValidationFailedMessage, this.digitsAfterDecimalPointValidationFailedMessage, this.helptext, this.possibleValues, displayConditions$value, width$value, this.layout, validationRules$value, validationMessages$value, this.source, this.target, this.possibleValuesSource, this.externalDataSourceProperties, this.externalValue, this.filterable, this.controlParameters, this.initializeWithAdressField, this.additionalConfig, this.helpDialog);
     }
 
     @Override
     @SuppressWarnings("all")
     public String toString() {
-      return "FormFieldV1.FormFieldV1Builder(id=" + this.id + ", label=" + this.label + ", type=" + this.type + ", value=" + this.value + ", placeholder=" + this.placeholder + ", disabled=" + this.disabled + ", required=" + this.required + ", pickerDisabled=" + this.pickerDisabled + ", consent=" + this.consent + ", requiredValidationFailedMessage=" + this.requiredValidationFailedMessage + ", typeValidationFailedMessage=" + this.typeValidationFailedMessage + ", thousandsSeparatorValidationFailedMessage=" + this.thousandsSeparatorValidationFailedMessage + ", digitsAfterDecimalPointValidationFailedMessage=" + this.digitsAfterDecimalPointValidationFailedMessage + ", helptext=" + this.helptext + ", possibleValues=" + this.possibleValues + ", displayConditions$value=" + this.displayConditions$value + ", width$value=" + this.width$value + ", layout=" + this.layout + ", validationRules$value=" + this.validationRules$value + ", validationMessages$value=" + this.validationMessages$value + ", source=" + this.source + ", target=" + this.target + ", possibleValuesSource=" + this.possibleValuesSource + ", externalDataSourceProperties=" + this.externalDataSourceProperties + ", externalValue=" + this.externalValue + ", filterable=" + this.filterable + ", controlParameters=" + this.controlParameters + ", initializeWithAdressField=" + this.initializeWithAdressField + ", additionalConfig=" + this.additionalConfig + ", helpDialog=" + this.helpDialog + ")";
+      return "FormFieldV1.FormFieldV1Builder(id=" + this.id + ", fimId=" + this.fimId + ", label=" + this.label + ", type=" + this.type + ", value=" + this.value + ", placeholder=" + this.placeholder + ", disabled=" + this.disabled + ", required=" + this.required + ", pickerDisabled=" + this.pickerDisabled + ", consent=" + this.consent + ", requiredValidationFailedMessage=" + this.requiredValidationFailedMessage + ", typeValidationFailedMessage=" + this.typeValidationFailedMessage + ", thousandsSeparatorValidationFailedMessage=" + this.thousandsSeparatorValidationFailedMessage + ", digitsAfterDecimalPointValidationFailedMessage=" + this.digitsAfterDecimalPointValidationFailedMessage + ", helptext=" + this.helptext + ", possibleValues=" + this.possibleValues + ", displayConditions$value=" + this.displayConditions$value + ", width$value=" + this.width$value + ", layout=" + this.layout + ", validationRules$value=" + this.validationRules$value + ", validationMessages$value=" + this.validationMessages$value + ", source=" + this.source + ", target=" + this.target + ", possibleValuesSource=" + this.possibleValuesSource + ", externalDataSourceProperties=" + this.externalDataSourceProperties + ", externalValue=" + this.externalValue + ", filterable=" + this.filterable + ", controlParameters=" + this.controlParameters + ", initializeWithAdressField=" + this.initializeWithAdressField + ", additionalConfig=" + this.additionalConfig + ", helpDialog=" + this.helpDialog + ")";
     }
   }
 
@@ -776,6 +793,14 @@ public class FormFieldV1 implements Cloneable {
   @SuppressWarnings("all")
   public String getId() {
     return this.id;
+  }
+
+  /**
+   * ID des Feldes als Datenfeld im FIM-Standard (Föderales Informationsmanagement).
+   */
+  @SuppressWarnings("all")
+  public String getFimId() {
+    return this.fimId;
   }
 
   /**
@@ -1033,6 +1058,14 @@ public class FormFieldV1 implements Cloneable {
       throw new NullPointerException("id is marked non-null but is null");
     }
     this.id = id;
+  }
+
+  /**
+   * ID des Feldes als Datenfeld im FIM-Standard (Föderales Informationsmanagement).
+   */
+  @SuppressWarnings("all")
+  public void setFimId(final String fimId) {
+    this.fimId = fimId;
   }
 
   /**
@@ -1323,6 +1356,9 @@ public class FormFieldV1 implements Cloneable {
     final Object this$id = this.getId();
     final Object other$id = other.getId();
     if (this$id == null ? other$id != null : !this$id.equals(other$id)) return false;
+    final Object this$fimId = this.getFimId();
+    final Object other$fimId = other.getFimId();
+    if (this$fimId == null ? other$fimId != null : !this$fimId.equals(other$fimId)) return false;
     final Object this$label = this.getLabel();
     final Object other$label = other.getLabel();
     if (this$label == null ? other$label != null : !this$label.equals(other$label)) return false;
@@ -1418,6 +1454,8 @@ public class FormFieldV1 implements Cloneable {
     result = result * PRIME + ($filterable == null ? 43 : $filterable.hashCode());
     final Object $id = this.getId();
     result = result * PRIME + ($id == null ? 43 : $id.hashCode());
+    final Object $fimId = this.getFimId();
+    result = result * PRIME + ($fimId == null ? 43 : $fimId.hashCode());
     final Object $label = this.getLabel();
     result = result * PRIME + ($label == null ? 43 : $label.hashCode());
     final Object $type = this.getType();
@@ -1470,11 +1508,11 @@ public class FormFieldV1 implements Cloneable {
   @Override
   @SuppressWarnings("all")
   public String toString() {
-    return "FormFieldV1(id=" + this.getId() + ", label=" + this.getLabel() + ", type=" + this.getType() + ", value=" + this.getValue() + ", placeholder=" + this.getPlaceholder() + ", disabled=" + this.getDisabled() + ", required=" + this.getRequired() + ", pickerDisabled=" + this.getPickerDisabled() + ", consent=" + this.getConsent() + ", requiredValidationFailedMessage=" + this.getRequiredValidationFailedMessage() + ", typeValidationFailedMessage=" + this.getTypeValidationFailedMessage() + ", thousandsSeparatorValidationFailedMessage=" + this.getThousandsSeparatorValidationFailedMessage() + ", digitsAfterDecimalPointValidationFailedMessage=" + this.getDigitsAfterDecimalPointValidationFailedMessage() + ", helptext=" + this.getHelptext() + ", possibleValues=" + this.getPossibleValues() + ", displayConditions=" + this.getDisplayConditions() + ", width=" + this.getWidth() + ", layout=" + this.getLayout() + ", validationRules=" + this.getValidationRules() + ", validationMessages=" + this.getValidationMessages() + ", source=" + this.getSource() + ", target=" + this.getTarget() + ", possibleValuesSource=" + this.getPossibleValuesSource() + ", externalDataSourceProperties=" + this.getExternalDataSourceProperties() + ", externalValue=" + this.getExternalValue() + ", filterable=" + this.getFilterable() + ", controlParameters=" + this.getControlParameters() + ", initializeWithAdressField=" + this.getInitializeWithAdressField() + ", additionalConfig=" + this.getAdditionalConfig() + ", helpDialog=" + this.getHelpDialog() + ")";
+    return "FormFieldV1(id=" + this.getId() + ", fimId=" + this.getFimId() + ", label=" + this.getLabel() + ", type=" + this.getType() + ", value=" + this.getValue() + ", placeholder=" + this.getPlaceholder() + ", disabled=" + this.getDisabled() + ", required=" + this.getRequired() + ", pickerDisabled=" + this.getPickerDisabled() + ", consent=" + this.getConsent() + ", requiredValidationFailedMessage=" + this.getRequiredValidationFailedMessage() + ", typeValidationFailedMessage=" + this.getTypeValidationFailedMessage() + ", thousandsSeparatorValidationFailedMessage=" + this.getThousandsSeparatorValidationFailedMessage() + ", digitsAfterDecimalPointValidationFailedMessage=" + this.getDigitsAfterDecimalPointValidationFailedMessage() + ", helptext=" + this.getHelptext() + ", possibleValues=" + this.getPossibleValues() + ", displayConditions=" + this.getDisplayConditions() + ", width=" + this.getWidth() + ", layout=" + this.getLayout() + ", validationRules=" + this.getValidationRules() + ", validationMessages=" + this.getValidationMessages() + ", source=" + this.getSource() + ", target=" + this.getTarget() + ", possibleValuesSource=" + this.getPossibleValuesSource() + ", externalDataSourceProperties=" + this.getExternalDataSourceProperties() + ", externalValue=" + this.getExternalValue() + ", filterable=" + this.getFilterable() + ", controlParameters=" + this.getControlParameters() + ", initializeWithAdressField=" + this.getInitializeWithAdressField() + ", additionalConfig=" + this.getAdditionalConfig() + ", helpDialog=" + this.getHelpDialog() + ")";
   }
 
   @SuppressWarnings("all")
-  private FormFieldV1(@NonNull final String id, final String label, @NonNull final FieldTypeV1 type, final Object value, final String placeholder, final Boolean disabled, final Boolean required, final Boolean pickerDisabled, final Boolean consent, final String requiredValidationFailedMessage, final String typeValidationFailedMessage, final String thousandsSeparatorValidationFailedMessage, final String digitsAfterDecimalPointValidationFailedMessage, final String helptext, final List<PossibleValueV1> possibleValues, @NonNull final List<DisplayConditionV1> displayConditions, final int width, final String layout, @NonNull final List<ValidationRuleV1> validationRules, @NonNull final Set<ValidationMessageV1> validationMessages, final DataResourcePointerV1 source, final DataResourcePointerV1 target, final DataResourcePointerV1 possibleValuesSource, final ExternalDataSourcePropertiesV1 externalDataSourceProperties, final ExternalDataSourcePropertiesV1 externalValue, final Boolean filterable, final Map<String, String> controlParameters, final FormFieldKeyV1 initializeWithAdressField, final AdditionalFieldConfigV1 additionalConfig, final ModalHelpDialogV1 helpDialog) {
+  private FormFieldV1(@NonNull final String id, final String fimId, final String label, @NonNull final FieldTypeV1 type, final Object value, final String placeholder, final Boolean disabled, final Boolean required, final Boolean pickerDisabled, final Boolean consent, final String requiredValidationFailedMessage, final String typeValidationFailedMessage, final String thousandsSeparatorValidationFailedMessage, final String digitsAfterDecimalPointValidationFailedMessage, final String helptext, final List<PossibleValueV1> possibleValues, @NonNull final List<DisplayConditionV1> displayConditions, final int width, final String layout, @NonNull final List<ValidationRuleV1> validationRules, @NonNull final Set<ValidationMessageV1> validationMessages, final DataResourcePointerV1 source, final DataResourcePointerV1 target, final DataResourcePointerV1 possibleValuesSource, final ExternalDataSourcePropertiesV1 externalDataSourceProperties, final ExternalDataSourcePropertiesV1 externalValue, final Boolean filterable, final Map<String, String> controlParameters, final FormFieldKeyV1 initializeWithAdressField, final AdditionalFieldConfigV1 additionalConfig, final ModalHelpDialogV1 helpDialog) {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");
     }
@@ -1491,6 +1529,7 @@ public class FormFieldV1 implements Cloneable {
       throw new NullPointerException("validationMessages is marked non-null but is null");
     }
     this.id = id;
+    this.fimId = fimId;
     this.label = label;
     this.type = type;
     this.value = value;

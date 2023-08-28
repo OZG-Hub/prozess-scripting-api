@@ -14,8 +14,17 @@ public enum PaymentProviderV1
   /**
    * Standardbezahlen v0.0.8.
    * Payment-Config ist {@link Standard008PaymentConfigV1}.
+   * <br />
+   * Deprecated. Stattdessen {@link #X_BEZAHLDIENSTE_V1} verwenden.
    */
+  @Deprecated(since = "1.164")
   STANDARD_PAYMENT_008("standardbezahlschnittstellev0.0.8"),
+
+  /**
+   * XBezahldienste v1.0.0.
+   * Payment-Config für {@link XBezahldienste1PaymentConfigV1}.
+   */
+  X_BEZAHLDIENSTE_V1("xbezahldienstev1"),
 
   /**
    * OSI-Payment.
@@ -35,7 +44,7 @@ public enum PaymentProviderV1
    */
   BERLIN_PAYMENT("berlinpayment"),
 
-    /**
+  /**
    * EPay21.
    * Payment-Config ist {@link Epay21PaymentConfigV1}.
    */

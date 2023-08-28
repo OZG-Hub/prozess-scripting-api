@@ -26,6 +26,7 @@ public class FieldGroupInstanceV1 extends AbstractFieldGroupV1 {
    */
   protected FieldGroupInstanceV1(FieldGroupV1 group, int index) {
     super(group.getId());
+    this.setFimId(group.getFimId());
     this.setTitle(group.getTitle());
     this.setRows(group.getRows().stream().map(FormRowV1::clone).collect(Collectors.toList()));
     this.setDisplayConditions(group.getDisplayConditions().stream().map(DisplayConditionV1::clone).collect(Collectors.toList()));

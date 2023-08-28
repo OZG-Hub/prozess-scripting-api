@@ -23,6 +23,10 @@ public abstract class AbstractFieldGroupV1 {
   @NonNull
   private String id;
   /**
+   * Die ID der Feldgruppe als Datenfeldgruppe im FIM-Standard (Föderales Informationsmanagement).
+   */
+  private String fimId;
+  /**
    * Überschrift der Feldgruppe.
    */
   private String title;
@@ -92,6 +96,8 @@ public abstract class AbstractFieldGroupV1 {
     @SuppressWarnings("all")
     private String id;
     @SuppressWarnings("all")
+    private String fimId;
+    @SuppressWarnings("all")
     private String title;
     @SuppressWarnings("all")
     private boolean rows$set;
@@ -111,6 +117,15 @@ public abstract class AbstractFieldGroupV1 {
         throw new NullPointerException("id is marked non-null but is null");
       }
       this.id = id;
+      return self();
+    }
+
+    /**
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public B fimId(final String fimId) {
+      this.fimId = fimId;
       return self();
     }
 
@@ -158,7 +173,7 @@ public abstract class AbstractFieldGroupV1 {
     @Override
     @SuppressWarnings("all")
     public String toString() {
-      return "AbstractFieldGroupV1.AbstractFieldGroupV1Builder(id=" + this.id + ", title=" + this.title + ", rows$value=" + this.rows$value + ", displayConditions$value=" + this.displayConditions$value + ")";
+      return "AbstractFieldGroupV1.AbstractFieldGroupV1Builder(id=" + this.id + ", fimId=" + this.fimId + ", title=" + this.title + ", rows$value=" + this.rows$value + ", displayConditions$value=" + this.displayConditions$value + ")";
     }
   }
 
@@ -168,6 +183,7 @@ public abstract class AbstractFieldGroupV1 {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");
     }
+    this.fimId = b.fimId;
     this.title = b.title;
     if (b.rows$set) this.rows = b.rows$value;
      else this.rows = AbstractFieldGroupV1.$default$rows();
@@ -188,6 +204,14 @@ public abstract class AbstractFieldGroupV1 {
   @SuppressWarnings("all")
   public String getId() {
     return this.id;
+  }
+
+  /**
+   * Die ID der Feldgruppe als Datenfeldgruppe im FIM-Standard (Föderales Informationsmanagement).
+   */
+  @SuppressWarnings("all")
+  public String getFimId() {
+    return this.fimId;
   }
 
   /**
@@ -226,6 +250,14 @@ public abstract class AbstractFieldGroupV1 {
       throw new NullPointerException("id is marked non-null but is null");
     }
     this.id = id;
+  }
+
+  /**
+   * Die ID der Feldgruppe als Datenfeldgruppe im FIM-Standard (Föderales Informationsmanagement).
+   */
+  @SuppressWarnings("all")
+  public void setFimId(final String fimId) {
+    this.fimId = fimId;
   }
 
   /**
@@ -269,6 +301,9 @@ public abstract class AbstractFieldGroupV1 {
     final Object this$id = this.getId();
     final Object other$id = other.getId();
     if (this$id == null ? other$id != null : !this$id.equals(other$id)) return false;
+    final Object this$fimId = this.getFimId();
+    final Object other$fimId = other.getFimId();
+    if (this$fimId == null ? other$fimId != null : !this$fimId.equals(other$fimId)) return false;
     final Object this$title = this.getTitle();
     final Object other$title = other.getTitle();
     if (this$title == null ? other$title != null : !this$title.equals(other$title)) return false;
@@ -293,6 +328,8 @@ public abstract class AbstractFieldGroupV1 {
     int result = 1;
     final Object $id = this.getId();
     result = result * PRIME + ($id == null ? 43 : $id.hashCode());
+    final Object $fimId = this.getFimId();
+    result = result * PRIME + ($fimId == null ? 43 : $fimId.hashCode());
     final Object $title = this.getTitle();
     result = result * PRIME + ($title == null ? 43 : $title.hashCode());
     final Object $rows = this.getRows();
@@ -305,6 +342,6 @@ public abstract class AbstractFieldGroupV1 {
   @Override
   @SuppressWarnings("all")
   public String toString() {
-    return "AbstractFieldGroupV1(id=" + this.getId() + ", title=" + this.getTitle() + ", rows=" + this.getRows() + ", displayConditions=" + this.getDisplayConditions() + ")";
+    return "AbstractFieldGroupV1(id=" + this.getId() + ", fimId=" + this.getFimId() + ", title=" + this.getTitle() + ", rows=" + this.getRows() + ", displayConditions=" + this.getDisplayConditions() + ")";
   }
 }

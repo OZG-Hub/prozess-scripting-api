@@ -1,8 +1,6 @@
 package de.seitenbau.serviceportal.scripting.api.v1.payment;
 
-import java.io.Serializable;
-
-public interface PaymentConfigAuthorizationV1 extends Serializable
+public interface PaymentConfigAuthorizationV1
 {
   PaymentConfigAuthorizationTypeV1 getType();
 }
