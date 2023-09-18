@@ -183,6 +183,10 @@ public class FormFieldV1 implements Cloneable {
     }
     this.id = id;
     this.type = type;
+    displayConditions = new ArrayList<>();
+    width = GRID_ROW_WIDTH;
+    validationRules = new ArrayList<>();
+    validationMessages = new HashSet<>();
   }
 
   /**

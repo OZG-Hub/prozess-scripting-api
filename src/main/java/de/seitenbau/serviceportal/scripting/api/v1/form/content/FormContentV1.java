@@ -75,6 +75,8 @@ public class FormContentV1 {
       throw new NullPointerException("formId is marked non-null but is null");
     }
     this.formId = formId;
+    fields = new HashMap<>();
+    validationMessages = new ArrayList<>();
   }
 
   /**

@@ -80,6 +80,8 @@ public class FormV1 {
       throw new NullPointerException("id is marked non-null but is null");
     }
     this.id = id;
+    sections = new ArrayList<>();
+    validationMessages = new HashSet<>();
   }
 
   /**

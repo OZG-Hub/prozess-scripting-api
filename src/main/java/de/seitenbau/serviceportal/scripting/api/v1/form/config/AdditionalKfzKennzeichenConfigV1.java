@@ -5,7 +5,14 @@ import de.seitenbau.serviceportal.scripting.api.v1.form.FieldTypeV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.style.KfzKennzeichenTypeV1;
 
 /**
- * Konfiguration für Kfz-Felder ({@link FieldTypeV1#KFZ_KENNZEICHEN KFZ_KENNZEICHEN}).
+ * Konfiguration für Kfz-Felder ({@link FieldTypeV1#KFZ_KENNZEICHEN KFZ_KENNZEICHEN}) für Kennzeichen für
+ * normale, elektrische, historische und saisonale Kennzeichen von Autos und Motorrädern.
+ * Für die folgenden speziellen Kfz-Kennzeichen gibt es individuelle Konfigurationen:
+ * <ul>
+ *   <li>Ausfuhr- und Überführungskennzeichen, {@link AdditionalKfzUeberfuehrungsKennzeichenConfigV1}</li>
+ *   <li>Kurzzeitkennzeichen, {@link AdditionalKfzKurzzeitKennzeichenConfigV1}</li>
+ *   <li>Rotes Kennzeichen, {@link AdditionalKfzRotesKennzeichenConfigV1}</li>
+ * </ul>
  */
 public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1 {
   /**

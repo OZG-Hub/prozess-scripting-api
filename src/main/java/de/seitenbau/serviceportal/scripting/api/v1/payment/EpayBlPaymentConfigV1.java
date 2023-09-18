@@ -53,6 +53,10 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Enthält die Zahlungsfrist in Tagen.
    */
   private int frist;
+  /**
+   * Haushaltsreferenz. Wird nur für die Instanz für NRW benötigt.
+   */
+  private String href;
 
 
   @SuppressWarnings("all")
@@ -79,6 +83,8 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
     private String kennzeichenMahnverfahren;
     @SuppressWarnings("all")
     private int frist;
+    @SuppressWarnings("all")
+    private String href;
 
     @SuppressWarnings("all")
     EpayBlPaymentConfigV1Builder() {
@@ -194,15 +200,25 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
       return this;
     }
 
+    /**
+     * Haushaltsreferenz. Wird nur für die Instanz für NRW benötigt.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder href(final String href) {
+      this.href = href;
+      return this;
+    }
+
     @SuppressWarnings("all")
     public EpayBlPaymentConfigV1 build() {
-      return new EpayBlPaymentConfigV1(this.instanz, this.keystore, this.keystoreResource, this.keystoreType, this.keystorePassword, this.mandant, this.bewirtschafter, this.haushaltsstelle, this.objektnummer, this.kennzeichenMahnverfahren, this.frist);
+      return new EpayBlPaymentConfigV1(this.instanz, this.keystore, this.keystoreResource, this.keystoreType, this.keystorePassword, this.mandant, this.bewirtschafter, this.haushaltsstelle, this.objektnummer, this.kennzeichenMahnverfahren, this.frist, this.href);
     }
 
     @Override
     @SuppressWarnings("all")
     public String toString() {
-      return "EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder(instanz=" + this.instanz + ", keystore=" + this.keystore + ", keystoreResource=" + this.keystoreResource + ", keystoreType=" + this.keystoreType + ", keystorePassword=" + this.keystorePassword + ", mandant=" + this.mandant + ", bewirtschafter=" + this.bewirtschafter + ", haushaltsstelle=" + this.haushaltsstelle + ", objektnummer=" + this.objektnummer + ", kennzeichenMahnverfahren=" + this.kennzeichenMahnverfahren + ", frist=" + this.frist + ")";
+      return "EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder(instanz=" + this.instanz + ", keystore=" + this.keystore + ", keystoreResource=" + this.keystoreResource + ", keystoreType=" + this.keystoreType + ", keystorePassword=" + this.keystorePassword + ", mandant=" + this.mandant + ", bewirtschafter=" + this.bewirtschafter + ", haushaltsstelle=" + this.haushaltsstelle + ", objektnummer=" + this.objektnummer + ", kennzeichenMahnverfahren=" + this.kennzeichenMahnverfahren + ", frist=" + this.frist + ", href=" + this.href + ")";
     }
   }
 
@@ -308,6 +324,14 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
   }
 
   /**
+   * Haushaltsreferenz. Wird nur für die Instanz für NRW benötigt.
+   */
+  @SuppressWarnings("all")
+  public String getHref() {
+    return this.href;
+  }
+
+  /**
    * ePayBL-Instanz die verwendet werden soll.
    */
   @SuppressWarnings("all")
@@ -395,6 +419,14 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
     this.frist = frist;
   }
 
+  /**
+   * Haushaltsreferenz. Wird nur für die Instanz für NRW benötigt.
+   */
+  @SuppressWarnings("all")
+  public void setHref(final String href) {
+    this.href = href;
+  }
+
   @Override
   @SuppressWarnings("all")
   public boolean equals(final Object o) {
@@ -436,6 +468,9 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
     final Object this$kennzeichenMahnverfahren = this.getKennzeichenMahnverfahren();
     final Object other$kennzeichenMahnverfahren = other.getKennzeichenMahnverfahren();
     if (this$kennzeichenMahnverfahren == null ? other$kennzeichenMahnverfahren != null : !this$kennzeichenMahnverfahren.equals(other$kennzeichenMahnverfahren)) return false;
+    final Object this$href = this.getHref();
+    final Object other$href = other.getHref();
+    if (this$href == null ? other$href != null : !this$href.equals(other$href)) return false;
     return true;
   }
 
@@ -472,13 +507,15 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
     result = result * PRIME + ($objektnummer == null ? 43 : $objektnummer.hashCode());
     final Object $kennzeichenMahnverfahren = this.getKennzeichenMahnverfahren();
     result = result * PRIME + ($kennzeichenMahnverfahren == null ? 43 : $kennzeichenMahnverfahren.hashCode());
+    final Object $href = this.getHref();
+    result = result * PRIME + ($href == null ? 43 : $href.hashCode());
     return result;
   }
 
   @Override
   @SuppressWarnings("all")
   public String toString() {
-    return "EpayBlPaymentConfigV1(provider=" + this.getProvider() + ", instanz=" + this.getInstanz() + ", keystore=" + this.getKeystore() + ", keystoreResource=" + this.getKeystoreResource() + ", keystoreType=" + this.getKeystoreType() + ", keystorePassword=" + this.getKeystorePassword() + ", mandant=" + this.getMandant() + ", bewirtschafter=" + this.getBewirtschafter() + ", haushaltsstelle=" + this.getHaushaltsstelle() + ", objektnummer=" + this.getObjektnummer() + ", kennzeichenMahnverfahren=" + this.getKennzeichenMahnverfahren() + ", frist=" + this.getFrist() + ")";
+    return "EpayBlPaymentConfigV1(provider=" + this.getProvider() + ", instanz=" + this.getInstanz() + ", keystore=" + this.getKeystore() + ", keystoreResource=" + this.getKeystoreResource() + ", keystoreType=" + this.getKeystoreType() + ", keystorePassword=" + this.getKeystorePassword() + ", mandant=" + this.getMandant() + ", bewirtschafter=" + this.getBewirtschafter() + ", haushaltsstelle=" + this.getHaushaltsstelle() + ", objektnummer=" + this.getObjektnummer() + ", kennzeichenMahnverfahren=" + this.getKennzeichenMahnverfahren() + ", frist=" + this.getFrist() + ", href=" + this.getHref() + ")";
   }
 
   @SuppressWarnings("all")
@@ -486,7 +523,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
   }
 
   @SuppressWarnings("all")
-  public EpayBlPaymentConfigV1(final String instanz, final String keystore, final String keystoreResource, final String keystoreType, final String keystorePassword, final String mandant, final String bewirtschafter, final String haushaltsstelle, final String objektnummer, final String kennzeichenMahnverfahren, final int frist) {
+  public EpayBlPaymentConfigV1(final String instanz, final String keystore, final String keystoreResource, final String keystoreType, final String keystorePassword, final String mandant, final String bewirtschafter, final String haushaltsstelle, final String objektnummer, final String kennzeichenMahnverfahren, final int frist, final String href) {
     this.instanz = instanz;
     this.keystore = keystore;
     this.keystoreResource = keystoreResource;
@@ -498,5 +535,6 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
     this.objektnummer = objektnummer;
     this.kennzeichenMahnverfahren = kennzeichenMahnverfahren;
     this.frist = frist;
+    this.href = href;
   }
 }

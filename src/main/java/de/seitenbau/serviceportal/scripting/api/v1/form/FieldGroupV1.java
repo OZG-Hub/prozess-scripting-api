@@ -69,6 +69,8 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    */
   public FieldGroupV1(String id) {
     super(id);
+    maxInstanceCount = DEFAULT_MAX_INSTANCE_COUNT;
+    instances = new ArrayList<>();
   }
 
   /**

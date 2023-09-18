@@ -54,6 +54,8 @@ public abstract class AbstractFieldGroupV1 {
       throw new NullPointerException("id is marked non-null but is null");
     }
     this.id = id;
+    rows = new ArrayList<>();
+    displayConditions = new ArrayList<>();
   }
 
   /**
