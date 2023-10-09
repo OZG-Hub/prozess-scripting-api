@@ -51,6 +51,7 @@ public class ShowOnFieldValueNotInValuesConditionV1 extends FieldDisplayConditio
     private Set<String> values$value;
 
     /**
+     * Werte, für die das Zielfeld nicht angezeigt wird.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

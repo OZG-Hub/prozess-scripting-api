@@ -18,6 +18,7 @@ public class MaxTotalFilesizeValidatorV1 extends ValidationRuleV1 {
     private int maxTotalFilesize;
 
     /**
+     * Maximale Gesamtgröße der Dateien (in Bytes).
      * @return {@code this}.
      */
     @SuppressWarnings("all")

@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldKeyV1;
+import de.seitenbau.serviceportal.scripting.api.v1.form.auth.AuthenticationConfigV1;
 import lombok.NonNull;
 
 /**
@@ -48,6 +49,23 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * Name der Variable aus der gelesen werden soll. Nur für DOWNLOAD- und PDF-Felder.
    */
   private String variableName;
+  /**
+   * Authentifizierungs-Informationen.
+   * Aktuell wird nur die Authentifizierung mittels Keystore unterstützt
+   * ({@link de.seitenbau.serviceportal.scripting.api.v1.form.auth.KeystoreAuthenticationConfigV1
+   * KeystoreAuthenticationConfigV1}).
+   */
+  private AuthenticationConfigV1 authentication;
+  /*
+   * Base64-Repräsentation des Truststores mit Server-Zertifikaten.
+   * Pflicht, wenn der externe Server Zertifikate nutzt, die nicht Teil des Standard-Java-Truststores sind.
+   * Wenn nicht gesetzt, wird der Standard-Java-Truststore verwendet.
+   */
+  private String truststore;
+  /**
+   * Passwort des Truststores. Pflicht, wenn ein Truststore in {@link #truststore} definiert wurde.
+   */
+  private String truststorePassword;
 
   public ExternalDataSourcePropertiesV1(@NonNull String url, @NonNull AjaxRequestIncludedFieldsScopeV1 scope) {
     if (url == null) {
@@ -70,11 +88,16 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
     this.proxyPort = toCopy.proxyPort;
     this.scope = toCopy.scope;
     this.variableName = toCopy.variableName;
+    this.truststore = toCopy.truststore;
+    this.truststorePassword = toCopy.truststorePassword;
     if (toCopy.getFieldIds() != null) {
       this.fieldIds = new ArrayList<>(toCopy.getFieldIds());
     }
     if (toCopy.getHeaders() != null) {
       this.headers = new HashMap<>(toCopy.getHeaders());
+    }
+    if (toCopy.getAuthentication() != null) {
+      this.authentication = toCopy.getAuthentication().clone();
     }
   }
 
@@ -107,6 +130,12 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
     private List<FormFieldKeyV1> fieldIds;
     @SuppressWarnings("all")
     private String variableName;
+    @SuppressWarnings("all")
+    private AuthenticationConfigV1 authentication;
+    @SuppressWarnings("all")
+    private String truststore;
+    @SuppressWarnings("all")
+    private String truststorePassword;
 
     @SuppressWarnings("all")
     ExternalDataSourcePropertiesV1Builder() {
@@ -194,15 +223,47 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
       return this;
     }
 
+    /**
+     * Authentifizierungs-Informationen.
+     * Aktuell wird nur die Authentifizierung mittels Keystore unterstützt
+     * ({@link de.seitenbau.serviceportal.scripting.api.v1.form.auth.KeystoreAuthenticationConfigV1
+     * KeystoreAuthenticationConfigV1}).
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder authentication(final AuthenticationConfigV1 authentication) {
+      this.authentication = authentication;
+      return this;
+    }
+
+    /**
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder truststore(final String truststore) {
+      this.truststore = truststore;
+      return this;
+    }
+
+    /**
+     * Passwort des Truststores. Pflicht, wenn ein Truststore in {@link #truststore} definiert wurde.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder truststorePassword(final String truststorePassword) {
+      this.truststorePassword = truststorePassword;
+      return this;
+    }
+
     @SuppressWarnings("all")
     public ExternalDataSourcePropertiesV1 build() {
-      return new ExternalDataSourcePropertiesV1(this.url, this.proxyHost, this.proxyPort, this.headers, this.scope, this.fieldIds, this.variableName);
+      return new ExternalDataSourcePropertiesV1(this.url, this.proxyHost, this.proxyPort, this.headers, this.scope, this.fieldIds, this.variableName, this.authentication, this.truststore, this.truststorePassword);
     }
 
     @Override
     @SuppressWarnings("all")
     public String toString() {
-      return "ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder(url=" + this.url + ", proxyHost=" + this.proxyHost + ", proxyPort=" + this.proxyPort + ", headers=" + this.headers + ", scope=" + this.scope + ", fieldIds=" + this.fieldIds + ", variableName=" + this.variableName + ")";
+      return "ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder(url=" + this.url + ", proxyHost=" + this.proxyHost + ", proxyPort=" + this.proxyPort + ", headers=" + this.headers + ", scope=" + this.scope + ", fieldIds=" + this.fieldIds + ", variableName=" + this.variableName + ", authentication=" + this.authentication + ", truststore=" + this.truststore + ", truststorePassword=" + this.truststorePassword + ")";
     }
   }
 
@@ -276,6 +337,30 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
   }
 
   /**
+   * Authentifizierungs-Informationen.
+   * Aktuell wird nur die Authentifizierung mittels Keystore unterstützt
+   * ({@link de.seitenbau.serviceportal.scripting.api.v1.form.auth.KeystoreAuthenticationConfigV1
+   * KeystoreAuthenticationConfigV1}).
+   */
+  @SuppressWarnings("all")
+  public AuthenticationConfigV1 getAuthentication() {
+    return this.authentication;
+  }
+
+  @SuppressWarnings("all")
+  public String getTruststore() {
+    return this.truststore;
+  }
+
+  /**
+   * Passwort des Truststores. Pflicht, wenn ein Truststore in {@link #truststore} definiert wurde.
+   */
+  @SuppressWarnings("all")
+  public String getTruststorePassword() {
+    return this.truststorePassword;
+  }
+
+  /**
    * URL, an die der Aufruf gesendet werden soll.
    * Für DOWNLOAD- und PDF-Felder kann ein ServiceAlias verwendet werden.
    */
@@ -343,6 +428,30 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
     this.variableName = variableName;
   }
 
+  /**
+   * Authentifizierungs-Informationen.
+   * Aktuell wird nur die Authentifizierung mittels Keystore unterstützt
+   * ({@link de.seitenbau.serviceportal.scripting.api.v1.form.auth.KeystoreAuthenticationConfigV1
+   * KeystoreAuthenticationConfigV1}).
+   */
+  @SuppressWarnings("all")
+  public void setAuthentication(final AuthenticationConfigV1 authentication) {
+    this.authentication = authentication;
+  }
+
+  @SuppressWarnings("all")
+  public void setTruststore(final String truststore) {
+    this.truststore = truststore;
+  }
+
+  /**
+   * Passwort des Truststores. Pflicht, wenn ein Truststore in {@link #truststore} definiert wurde.
+   */
+  @SuppressWarnings("all")
+  public void setTruststorePassword(final String truststorePassword) {
+    this.truststorePassword = truststorePassword;
+  }
+
   @Override
   @SuppressWarnings("all")
   public boolean equals(final Object o) {
@@ -371,6 +480,15 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
     final Object this$variableName = this.getVariableName();
     final Object other$variableName = other.getVariableName();
     if (this$variableName == null ? other$variableName != null : !this$variableName.equals(other$variableName)) return false;
+    final Object this$authentication = this.getAuthentication();
+    final Object other$authentication = other.getAuthentication();
+    if (this$authentication == null ? other$authentication != null : !this$authentication.equals(other$authentication)) return false;
+    final Object this$truststore = this.getTruststore();
+    final Object other$truststore = other.getTruststore();
+    if (this$truststore == null ? other$truststore != null : !this$truststore.equals(other$truststore)) return false;
+    final Object this$truststorePassword = this.getTruststorePassword();
+    final Object other$truststorePassword = other.getTruststorePassword();
+    if (this$truststorePassword == null ? other$truststorePassword != null : !this$truststorePassword.equals(other$truststorePassword)) return false;
     return true;
   }
 
@@ -398,17 +516,23 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
     result = result * PRIME + ($fieldIds == null ? 43 : $fieldIds.hashCode());
     final Object $variableName = this.getVariableName();
     result = result * PRIME + ($variableName == null ? 43 : $variableName.hashCode());
+    final Object $authentication = this.getAuthentication();
+    result = result * PRIME + ($authentication == null ? 43 : $authentication.hashCode());
+    final Object $truststore = this.getTruststore();
+    result = result * PRIME + ($truststore == null ? 43 : $truststore.hashCode());
+    final Object $truststorePassword = this.getTruststorePassword();
+    result = result * PRIME + ($truststorePassword == null ? 43 : $truststorePassword.hashCode());
     return result;
   }
 
   @Override
   @SuppressWarnings("all")
   public String toString() {
-    return "ExternalDataSourcePropertiesV1(url=" + this.getUrl() + ", proxyHost=" + this.getProxyHost() + ", proxyPort=" + this.getProxyPort() + ", headers=" + this.getHeaders() + ", scope=" + this.getScope() + ", fieldIds=" + this.getFieldIds() + ", variableName=" + this.getVariableName() + ")";
+    return "ExternalDataSourcePropertiesV1(url=" + this.getUrl() + ", proxyHost=" + this.getProxyHost() + ", proxyPort=" + this.getProxyPort() + ", headers=" + this.getHeaders() + ", scope=" + this.getScope() + ", fieldIds=" + this.getFieldIds() + ", variableName=" + this.getVariableName() + ", authentication=" + this.getAuthentication() + ", truststore=" + this.getTruststore() + ", truststorePassword=" + this.getTruststorePassword() + ")";
   }
 
   @SuppressWarnings("all")
-  private ExternalDataSourcePropertiesV1(@NonNull final String url, final String proxyHost, final Integer proxyPort, final Map<String, String> headers, @NonNull final AjaxRequestIncludedFieldsScopeV1 scope, final List<FormFieldKeyV1> fieldIds, final String variableName) {
+  private ExternalDataSourcePropertiesV1(@NonNull final String url, final String proxyHost, final Integer proxyPort, final Map<String, String> headers, @NonNull final AjaxRequestIncludedFieldsScopeV1 scope, final List<FormFieldKeyV1> fieldIds, final String variableName, final AuthenticationConfigV1 authentication, final String truststore, final String truststorePassword) {
     if (url == null) {
       throw new NullPointerException("url is marked non-null but is null");
     }
@@ -422,5 +546,8 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
     this.scope = scope;
     this.fieldIds = fieldIds;
     this.variableName = variableName;
+    this.authentication = authentication;
+    this.truststore = truststore;
+    this.truststorePassword = truststorePassword;
   }
 }

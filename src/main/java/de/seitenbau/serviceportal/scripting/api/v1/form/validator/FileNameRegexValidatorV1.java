@@ -18,6 +18,7 @@ public class FileNameRegexValidatorV1 extends ValidationRuleV1 {
     private String regex;
 
     /**
+     * Regex für die Überprüfung (in Java Regex Syntax).
      * @return {@code this}.
      */
     @SuppressWarnings("all")

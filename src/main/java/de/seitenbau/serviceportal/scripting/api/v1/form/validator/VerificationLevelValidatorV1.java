@@ -31,6 +31,7 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
     private List<FormFieldVerificationLevelV1> levels$value;
 
     /**
+     * Erlaubte Vertrauensniveaus für die Überprüfung. Default ist eine leere Liste.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

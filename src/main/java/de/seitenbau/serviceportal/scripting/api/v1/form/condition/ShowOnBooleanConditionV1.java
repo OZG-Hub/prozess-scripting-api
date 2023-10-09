@@ -25,6 +25,7 @@ public class ShowOnBooleanConditionV1 extends DisplayConditionV1 {
     private boolean showField;
 
     /**
+     * {@code true}, wenn die Sichtbarkeitsbedingung erfüllt ist.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

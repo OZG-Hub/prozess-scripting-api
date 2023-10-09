@@ -20,6 +20,7 @@ public class RequiredOnFieldValueValidatorV1 extends ConditionalFieldValidationR
     private Set<Object> values;
 
     /**
+     * Werte des referenzierten Feldes, bei denen das Feld zum Pflichtfeld wird.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

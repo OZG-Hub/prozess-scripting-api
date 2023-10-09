@@ -19,6 +19,7 @@ public abstract class ConditionalFieldValidationRuleV1 extends ValidationRuleV1 
     private FormFieldKeyV1 sourceFieldKey;
 
     /**
+     * Schlüssel des Feldes, auf das sich die Validierungsregel bezieht.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

@@ -18,6 +18,7 @@ public class MaxFilesizeValidatorV1 extends ValidationRuleV1 {
     private int maxFilesize;
 
     /**
+     * Maximale Größe der Datei (in Bytes).
      * @return {@code this}.
      */
     @SuppressWarnings("all")

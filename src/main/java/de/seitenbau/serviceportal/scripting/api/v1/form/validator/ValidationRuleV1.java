@@ -26,6 +26,7 @@ public abstract class ValidationRuleV1 implements Cloneable {
     private String validationErrorMessage;
 
     /**
+     * Optionale benutzerdefinierte Fehlermeldung, falls Validierung fehlschlägt.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

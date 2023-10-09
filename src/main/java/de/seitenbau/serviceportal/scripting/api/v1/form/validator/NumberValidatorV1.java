@@ -35,6 +35,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
     private String validationNonNegativeNumberError;
 
     /**
+     * {@code true}, wenn die Zahl nicht negativ sein darf.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -44,6 +45,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
     }
 
     /**
+     * Maximale Anzahl an Dezimalstellen.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -53,6 +55,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
     }
 
     /**
+     * Der benutzerdefinierte Fehlertext bei zu vielen Dezimalstellen.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -62,6 +65,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
     }
 
     /**
+     * Der benutzerdefinierte Fehlertext bei Verwendung einer negativen Zahl.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

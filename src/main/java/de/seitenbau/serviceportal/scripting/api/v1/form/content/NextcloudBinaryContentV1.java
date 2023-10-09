@@ -50,6 +50,7 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
     private AuthenticationV1 authentication;
 
     /**
+     * Die Größe der Datei in Bytes.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -59,6 +60,7 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
     }
 
     /**
+     * Ordner in der die Datei gespeichert wird.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -68,6 +70,7 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
     }
 
     /**
+     * Infix in Nextcloud-URL: "baseUrl/infix/folder/[file]name".
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -77,6 +80,7 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
     }
 
     /**
+     * Informationen zur Authentifizierung bei der externen Dateiablage.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

@@ -51,6 +51,7 @@ public class ShowOnFieldValuesConditionV1 extends FieldDisplayConditionV1 {
     private Set<String> values$value;
 
     /**
+     * Werte, für die das Zielfeld angezeigt wird.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

@@ -27,6 +27,7 @@ public abstract class AggregatorDisplayConditionV1 extends DisplayConditionV1 {
     private List<DisplayConditionV1> conditions$value;
 
     /**
+     * Liste der Sichtbarkeitsbedingungen, die in dieser Sichtbarkeitsbedingung enthalten sind.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

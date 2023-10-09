@@ -53,6 +53,7 @@ public class BinaryContentV1 {
     private byte[] data;
 
     /**
+     * Ein Key, welcher zur Identifikation dieses Dokuments verwendet werden kann. Wird dynamisch erzeugt.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -62,6 +63,7 @@ public class BinaryContentV1 {
     }
 
     /**
+     * Der Dateiname der vom Nutzer hochgeladenen Datei.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -71,6 +73,7 @@ public class BinaryContentV1 {
     }
 
     /**
+     * Der Anzeigename.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -80,6 +83,7 @@ public class BinaryContentV1 {
     }
 
     /**
+     * Der Content-Type der Daten.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -89,6 +93,7 @@ public class BinaryContentV1 {
     }
 
     /**
+     * Die Binärdaten.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

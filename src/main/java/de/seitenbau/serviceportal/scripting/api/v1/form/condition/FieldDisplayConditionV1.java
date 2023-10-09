@@ -31,6 +31,7 @@ public abstract class FieldDisplayConditionV1 extends DisplayConditionV1 {
     private FormFieldKeyV1 conditionFieldKey;
 
     /**
+     * Schlüssel des Feldes, das auf die enthaltene Bedingung geprüft wird.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

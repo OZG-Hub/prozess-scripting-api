@@ -20,6 +20,7 @@ public class RequiredOnFieldValueNotInValuesValidatorV1 extends ConditionalField
     private Set<Object> values;
 
     /**
+     * Werte des referenzierten Feldes, bei denen das Feld nicht zum Pflichtfeld wird.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

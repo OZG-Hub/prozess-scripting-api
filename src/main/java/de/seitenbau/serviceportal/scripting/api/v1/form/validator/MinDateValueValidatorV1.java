@@ -20,6 +20,7 @@ public class MinDateValueValidatorV1 extends ValidationRuleV1 {
     private Date minValue;
 
     /**
+     * Frühestes erlaubtes Datum.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

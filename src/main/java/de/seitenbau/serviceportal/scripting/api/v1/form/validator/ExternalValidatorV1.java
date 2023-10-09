@@ -19,6 +19,7 @@ public class ExternalValidatorV1 extends ValidationRuleV1 {
     private ExternalDataSourcePropertiesV1 settings;
 
     /**
+     * Daten für die externe Validierung. Das hier hinterlegte externe System führt die Validierung durch.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

@@ -20,6 +20,7 @@ public class MaxDateValueValidatorV1 extends ValidationRuleV1 {
     private Date maxValue;
 
     /**
+     * Spätestes erlaubtes Datum.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

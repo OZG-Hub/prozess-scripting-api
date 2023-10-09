@@ -77,6 +77,7 @@ public class FieldGroupInstanceV1 extends AbstractFieldGroupV1 {
     private int index;
 
     /**
+     * Index der Feldgruppen-Instanz innerhalb der umschließenden Feldgruppe.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

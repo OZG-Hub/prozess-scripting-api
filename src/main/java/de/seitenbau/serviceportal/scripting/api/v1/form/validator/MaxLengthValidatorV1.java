@@ -18,6 +18,7 @@ public class MaxLengthValidatorV1 extends ValidationRuleV1 {
     private int maxLength;
 
     /**
+     * Maximallänge des Strings.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

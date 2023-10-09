@@ -17,6 +17,7 @@ public class EuroBetragPositiveValidatorV1 extends ValidationRuleV1 {
     private Boolean strictlyPositive;
 
     /**
+     * {@code true}, wenn der Betrag nicht 0 sein darf.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

@@ -18,6 +18,7 @@ public class MaxFileCountValidatorV1 extends ValidationRuleV1 {
     private int maxFileCount;
 
     /**
+     * Maximale Anzahl an Dateien.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

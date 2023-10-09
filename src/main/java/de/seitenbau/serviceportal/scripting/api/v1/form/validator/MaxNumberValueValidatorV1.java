@@ -26,6 +26,7 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
     private String validationInvalidNumberMessage;
 
     /**
+     * Maximalwert, der nicht überschritten werden darf.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -35,6 +36,7 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
     }
 
     /**
+     * Benutzerdefinierter Fehlertext bei ungültiger Eingabe.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

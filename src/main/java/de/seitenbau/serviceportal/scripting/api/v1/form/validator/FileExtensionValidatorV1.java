@@ -19,6 +19,7 @@ public class FileExtensionValidatorV1 extends ValidationRuleV1 {
     private List<String> values;
 
     /**
+     * Liste der erlaubten Dateiendungen.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

@@ -11,7 +11,7 @@ import lombok.NonNull;
 /**
  * Abstrakte Elternklasse für Feldgruppen und deren Instanzen.
  */
-public abstract class AbstractFieldGroupV1 {
+public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
   /**
    * Default und Maximum der maximalen Anzahl an Instanzen, die eine mehrfach-ausfüllbare Feldgruppe haben
    * kann.
@@ -111,6 +111,7 @@ public abstract class AbstractFieldGroupV1 {
     private List<DisplayConditionV1> displayConditions$value;
 
     /**
+     * ID der Feldgruppe.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -123,6 +124,7 @@ public abstract class AbstractFieldGroupV1 {
     }
 
     /**
+     * Die ID der Feldgruppe als Datenfeldgruppe im FIM-Standard (Föderales Informationsmanagement).
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -132,6 +134,7 @@ public abstract class AbstractFieldGroupV1 {
     }
 
     /**
+     * Überschrift der Feldgruppe.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -141,6 +144,7 @@ public abstract class AbstractFieldGroupV1 {
     }
 
     /**
+     * Formularzeilen der Feldgruppe. Default ist eine leere Liste.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -154,6 +158,8 @@ public abstract class AbstractFieldGroupV1 {
     }
 
     /**
+     * Sichtbarkeitsbedingungen, über die die Feldgruppe dynamisch ein- oder ausgeblendet werden kann.
+     * Default ist eine leere Liste.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

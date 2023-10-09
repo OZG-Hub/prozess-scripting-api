@@ -17,15 +17,15 @@ public class FormSectionV1 {
    * Feldgruppen dieses Abschnitts. Default ist leere Liste.
    */
   @NonNull
-  private List<FieldGroupV1> fieldGroups;
+  private List<FieldGroupInterfaceV1> fieldGroups;
 
   @SuppressWarnings("all")
-  private static List<FieldGroupV1> $default$fieldGroups() {
+  private static List<FieldGroupInterfaceV1> $default$fieldGroups() {
     return new ArrayList<>();
   }
 
   @SuppressWarnings("all")
-  FormSectionV1(final String title, @NonNull final List<FieldGroupV1> fieldGroups) {
+  FormSectionV1(final String title, @NonNull final List<FieldGroupInterfaceV1> fieldGroups) {
     if (fieldGroups == null) {
       throw new NullPointerException("fieldGroups is marked non-null but is null");
     }
@@ -41,7 +41,7 @@ public class FormSectionV1 {
     @SuppressWarnings("all")
     private boolean fieldGroups$set;
     @SuppressWarnings("all")
-    private List<FieldGroupV1> fieldGroups$value;
+    private List<FieldGroupInterfaceV1> fieldGroups$value;
 
     @SuppressWarnings("all")
     FormSectionV1Builder() {
@@ -62,7 +62,7 @@ public class FormSectionV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
-    public FormSectionV1.FormSectionV1Builder fieldGroups(@NonNull final List<FieldGroupV1> fieldGroups) {
+    public FormSectionV1.FormSectionV1Builder fieldGroups(@NonNull final List<FieldGroupInterfaceV1> fieldGroups) {
       if (fieldGroups == null) {
         throw new NullPointerException("fieldGroups is marked non-null but is null");
       }
@@ -73,7 +73,7 @@ public class FormSectionV1 {
 
     @SuppressWarnings("all")
     public FormSectionV1 build() {
-      List<FieldGroupV1> fieldGroups$value = this.fieldGroups$value;
+      List<FieldGroupInterfaceV1> fieldGroups$value = this.fieldGroups$value;
       if (!this.fieldGroups$set) fieldGroups$value = FormSectionV1.$default$fieldGroups();
       return new FormSectionV1(this.title, fieldGroups$value);
     }
@@ -103,7 +103,7 @@ public class FormSectionV1 {
    */
   @NonNull
   @SuppressWarnings("all")
-  public List<FieldGroupV1> getFieldGroups() {
+  public List<FieldGroupInterfaceV1> getFieldGroups() {
     return this.fieldGroups;
   }
 
@@ -119,7 +119,7 @@ public class FormSectionV1 {
    * Feldgruppen dieses Abschnitts. Default ist leere Liste.
    */
   @SuppressWarnings("all")
-  public void setFieldGroups(@NonNull final List<FieldGroupV1> fieldGroups) {
+  public void setFieldGroups(@NonNull final List<FieldGroupInterfaceV1> fieldGroups) {
     if (fieldGroups == null) {
       throw new NullPointerException("fieldGroups is marked non-null but is null");
     }

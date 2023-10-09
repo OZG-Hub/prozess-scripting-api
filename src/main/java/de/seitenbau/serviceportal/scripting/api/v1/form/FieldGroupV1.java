@@ -232,6 +232,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     private List<FieldGroupInstanceV1> instances$value;
 
     /**
+     * {@code true}, wenn beim Ausfüllen des Formulars mehrere Feldgruppen dieser Art angelegt werden können.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -241,6 +242,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     }
 
     /**
+     * Beschriftung des Buttons zum Hinzufügen einer neuen Feldgruppen-Instanz.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -250,6 +252,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     }
 
     /**
+     * Beschriftung des Buttons zum Entfernen einer Feldgruppen-Instanz.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -259,6 +262,8 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     }
 
     /**
+     * Text des Tooltips am Button zum Hinzufügen einer neuen Instanz, warum keine weitere
+     * Feldgruppen-Instanz hinzugefügt werden kann.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -268,6 +273,8 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     }
 
     /**
+     * Text des Tooltips am Button zum Entfernen einer existierenden Instanz, warum die Instanz nicht entfernt
+     * werden kann.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -277,6 +284,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     }
 
     /**
+     * Layout der Feldgruppen-Instanzen, wenn es eine mehrfach-ausfüllbare Feldgruppe ist.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -286,6 +294,8 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     }
 
     /**
+     * {@code true}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
+     * Auf der Oberfläche beim Ausfüllen des Formulars ist die Gruppe dann nicht sichtbar.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -295,6 +305,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     }
 
     /**
+     * Maximal erlaubte Anzahl an Instanzen der Feldgruppe. Default ist 99.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -305,6 +316,8 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     }
 
     /**
+     * {@code true}, wenn die Anzahl an Feldgruppen-Instanzen beim Bearbeiten des Formulars und Submit nicht
+     * geändert werden.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -314,6 +327,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     }
 
     /**
+     * Gibt an, wie der Titel der Instanzen der Feldgruppe generiert werden soll.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -323,6 +337,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     }
 
     /**
+     * Instanzen dieser Feldgruppe.
      * @return {@code this}.
      */
     @SuppressWarnings("all")

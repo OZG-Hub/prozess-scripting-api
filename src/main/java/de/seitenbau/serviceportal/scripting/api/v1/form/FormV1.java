@@ -93,12 +93,13 @@ public class FormV1 {
    * @throws NullPointerException Falls die gegebene ID {@code null} ist
    */
   public FieldGroupV1 getGroupTemplate(String id) {
-    return sections.stream().flatMap(section -> section.getFieldGroups().stream()).filter(group -> id.equals(group.getId())).findFirst().orElse(null);
+    return sections.stream().flatMap(section -> section.getFieldGroups().stream()).filter(FieldGroupV1.class::isInstance).map(FieldGroupV1.class::cast).filter(group -> id.equals(group.getId())).findFirst().orElse(null);
   }
 
   /**
    * Gibt die Feldgruppen-Instanz innerhalb dieses Formulars für die Gruppe mit der gegebenen ID mit dem
-   * gegebenen Index zurück.
+   * gegebenen Index zurück. Medien-Akkordeons können mit dieser Methode nicht abgerufen werden, da diese
+   * keie Instanzen haben.
    *
    * @param id ID einer Feldgruppe, nicht {@code null}
    * @param index Index einer Feldgruppeninstanz
@@ -132,7 +133,7 @@ public class FormV1 {
    * @throws NullPointerException Wenn das gegebene Predicate {@code null} ist
    */
   public List<FieldGroupInstanceV1> getGroupInstancesWith(Predicate<FieldGroupInstanceV1> predicate) {
-    return sections.stream().flatMap(s -> s.getFieldGroups().stream()).flatMap(g -> g.getInstances().stream()).filter(predicate).collect(Collectors.toList());
+    return sections.stream().flatMap(s -> s.getFieldGroups().stream()).filter(FieldGroupV1.class::isInstance).map(FieldGroupV1.class::cast).flatMap(g -> g.getInstances().stream()).filter(predicate).collect(Collectors.toList());
   }
 
   /**
@@ -169,7 +170,7 @@ public class FormV1 {
    * @throws NullPointerException Falls das gegebene Predicate {@code null} ist
    */
   public List<FormFieldV1> getInstanceFieldsWith(Predicate<FormFieldV1> predicate) {
-    return sections.stream().flatMap(section -> section.getFieldGroups().stream()).flatMap(group -> group.getFieldsInInstanceWith(predicate).stream()).collect(Collectors.toList());
+    return sections.stream().flatMap(section -> section.getFieldGroups().stream()).filter(FieldGroupV1.class::isInstance).map(FieldGroupV1.class::cast).flatMap(group -> group.getFieldsInInstanceWith(predicate).stream()).collect(Collectors.toList());
   }
 
   /**
@@ -193,7 +194,9 @@ public class FormV1 {
   }
 
   /**
-   * Gibt den Inhalt dieses Formulars zurück,
+   * Gibt den Inhalt dieses Formulars zurück.
+   * <p>
+   * Felder in Medien-Akkordeons sind nicht Teil des FormContent.
    *
    * @return FormContent mit den Inhalten des Formulars
    */
