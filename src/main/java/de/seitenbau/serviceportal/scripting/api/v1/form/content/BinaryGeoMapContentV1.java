@@ -21,6 +21,10 @@ public class BinaryGeoMapContentV1 {
    * JSON der selektierten Objekte auf der Karte. {@code null} wenn keine Elemente ausgewählt wurden.
    */
   private String selectionJson;
+  /**
+   * JSON der Suchergebnisse der Suche in der Karte. {@code null} wenn nichts gesucht wurde.
+   */
+  private String searchJson;
 
 
   @SuppressWarnings("all")
@@ -31,6 +35,8 @@ public class BinaryGeoMapContentV1 {
     private String json;
     @SuppressWarnings("all")
     private String selectionJson;
+    @SuppressWarnings("all")
+    private String searchJson;
 
     @SuppressWarnings("all")
     BinaryGeoMapContentV1Builder() {
@@ -66,15 +72,25 @@ public class BinaryGeoMapContentV1 {
       return this;
     }
 
+    /**
+     * JSON der Suchergebnisse der Suche in der Karte. {@code null} wenn nichts gesucht wurde.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public BinaryGeoMapContentV1.BinaryGeoMapContentV1Builder searchJson(final String searchJson) {
+      this.searchJson = searchJson;
+      return this;
+    }
+
     @SuppressWarnings("all")
     public BinaryGeoMapContentV1 build() {
-      return new BinaryGeoMapContentV1(this.file, this.json, this.selectionJson);
+      return new BinaryGeoMapContentV1(this.file, this.json, this.selectionJson, this.searchJson);
     }
 
     @Override
     @SuppressWarnings("all")
     public String toString() {
-      return "BinaryGeoMapContentV1.BinaryGeoMapContentV1Builder(file=" + this.file + ", json=" + this.json + ", selectionJson=" + this.selectionJson + ")";
+      return "BinaryGeoMapContentV1.BinaryGeoMapContentV1Builder(file=" + this.file + ", json=" + this.json + ", selectionJson=" + this.selectionJson + ", searchJson=" + this.searchJson + ")";
     }
   }
 
@@ -108,6 +124,14 @@ public class BinaryGeoMapContentV1 {
   }
 
   /**
+   * JSON der Suchergebnisse der Suche in der Karte. {@code null} wenn nichts gesucht wurde.
+   */
+  @SuppressWarnings("all")
+  public String getSearchJson() {
+    return this.searchJson;
+  }
+
+  /**
    * Datei, welches die Karte mit Nutzereingaben darstellt.
    */
   @SuppressWarnings("all")
@@ -131,6 +155,14 @@ public class BinaryGeoMapContentV1 {
     this.selectionJson = selectionJson;
   }
 
+  /**
+   * JSON der Suchergebnisse der Suche in der Karte. {@code null} wenn nichts gesucht wurde.
+   */
+  @SuppressWarnings("all")
+  public void setSearchJson(final String searchJson) {
+    this.searchJson = searchJson;
+  }
+
   @Override
   @SuppressWarnings("all")
   public boolean equals(final Object o) {
@@ -147,6 +179,9 @@ public class BinaryGeoMapContentV1 {
     final Object this$selectionJson = this.getSelectionJson();
     final Object other$selectionJson = other.getSelectionJson();
     if (this$selectionJson == null ? other$selectionJson != null : !this$selectionJson.equals(other$selectionJson)) return false;
+    final Object this$searchJson = this.getSearchJson();
+    final Object other$searchJson = other.getSearchJson();
+    if (this$searchJson == null ? other$searchJson != null : !this$searchJson.equals(other$searchJson)) return false;
     return true;
   }
 
@@ -166,13 +201,15 @@ public class BinaryGeoMapContentV1 {
     result = result * PRIME + ($json == null ? 43 : $json.hashCode());
     final Object $selectionJson = this.getSelectionJson();
     result = result * PRIME + ($selectionJson == null ? 43 : $selectionJson.hashCode());
+    final Object $searchJson = this.getSearchJson();
+    result = result * PRIME + ($searchJson == null ? 43 : $searchJson.hashCode());
     return result;
   }
 
   @Override
   @SuppressWarnings("all")
   public String toString() {
-    return "BinaryGeoMapContentV1(file=" + this.getFile() + ", json=" + this.getJson() + ", selectionJson=" + this.getSelectionJson() + ")";
+    return "BinaryGeoMapContentV1(file=" + this.getFile() + ", json=" + this.getJson() + ", selectionJson=" + this.getSelectionJson() + ", searchJson=" + this.getSearchJson() + ")";
   }
 
   @SuppressWarnings("all")
@@ -180,9 +217,10 @@ public class BinaryGeoMapContentV1 {
   }
 
   @SuppressWarnings("all")
-  public BinaryGeoMapContentV1(final BinaryContentV1 file, final String json, final String selectionJson) {
+  public BinaryGeoMapContentV1(final BinaryContentV1 file, final String json, final String selectionJson, final String searchJson) {
     this.file = file;
     this.json = json;
     this.selectionJson = selectionJson;
+    this.searchJson = searchJson;
   }
 }
