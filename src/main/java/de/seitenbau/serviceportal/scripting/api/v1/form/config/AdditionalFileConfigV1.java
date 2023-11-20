@@ -14,6 +14,11 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
    */
   private boolean compress;
   /**
+   * {@code true}, wenn der Externen-Upload-Hinweis deaktiviert werden soll.
+   * @since Release 1.168
+   */
+  private boolean disableExternalUploadHint;
+  /**
    * Konfiguration, wenn hochgeladene Dateien auf einer externen Dateiablage gespeichert werden sollen.
    * Nur für Multiupload-Felder ({@link FieldTypeV1#MULTIPLE_FILE MULTIPLE_FILE}).
    */
@@ -29,8 +34,9 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
   }
 
   @SuppressWarnings("all")
-  AdditionalFileConfigV1(final boolean compress, final StorageConfigV1 storage) {
+  AdditionalFileConfigV1(final boolean compress, final boolean disableExternalUploadHint, final StorageConfigV1 storage) {
     this.compress = compress;
+    this.disableExternalUploadHint = disableExternalUploadHint;
     this.storage = storage;
   }
 
@@ -39,6 +45,8 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
   public static class AdditionalFileConfigV1Builder {
     @SuppressWarnings("all")
     private boolean compress;
+    @SuppressWarnings("all")
+    private boolean disableExternalUploadHint;
     @SuppressWarnings("all")
     private StorageConfigV1 storage;
 
@@ -57,6 +65,17 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
     }
 
     /**
+     * {@code true}, wenn der Externen-Upload-Hinweis deaktiviert werden soll.
+     * @since Release 1.168
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public AdditionalFileConfigV1.AdditionalFileConfigV1Builder disableExternalUploadHint(final boolean disableExternalUploadHint) {
+      this.disableExternalUploadHint = disableExternalUploadHint;
+      return this;
+    }
+
+    /**
      * Konfiguration, wenn hochgeladene Dateien auf einer externen Dateiablage gespeichert werden sollen.
      * Nur für Multiupload-Felder ({@link FieldTypeV1#MULTIPLE_FILE MULTIPLE_FILE}).
      * @return {@code this}.
@@ -69,13 +88,13 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
 
     @SuppressWarnings("all")
     public AdditionalFileConfigV1 build() {
-      return new AdditionalFileConfigV1(this.compress, this.storage);
+      return new AdditionalFileConfigV1(this.compress, this.disableExternalUploadHint, this.storage);
     }
 
     @Override
     @SuppressWarnings("all")
     public String toString() {
-      return "AdditionalFileConfigV1.AdditionalFileConfigV1Builder(compress=" + this.compress + ", storage=" + this.storage + ")";
+      return "AdditionalFileConfigV1.AdditionalFileConfigV1Builder(compress=" + this.compress + ", disableExternalUploadHint=" + this.disableExternalUploadHint + ", storage=" + this.storage + ")";
     }
   }
 
@@ -90,6 +109,15 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
   @SuppressWarnings("all")
   public boolean isCompress() {
     return this.compress;
+  }
+
+  /**
+   * {@code true}, wenn der Externen-Upload-Hinweis deaktiviert werden soll.
+   * @since Release 1.168
+   */
+  @SuppressWarnings("all")
+  public boolean isDisableExternalUploadHint() {
+    return this.disableExternalUploadHint;
   }
 
   /**
@@ -110,6 +138,15 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
   }
 
   /**
+   * {@code true}, wenn der Externen-Upload-Hinweis deaktiviert werden soll.
+   * @since Release 1.168
+   */
+  @SuppressWarnings("all")
+  public void setDisableExternalUploadHint(final boolean disableExternalUploadHint) {
+    this.disableExternalUploadHint = disableExternalUploadHint;
+  }
+
+  /**
    * Konfiguration, wenn hochgeladene Dateien auf einer externen Dateiablage gespeichert werden sollen.
    * Nur für Multiupload-Felder ({@link FieldTypeV1#MULTIPLE_FILE MULTIPLE_FILE}).
    */
@@ -126,6 +163,7 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
     final AdditionalFileConfigV1 other = (AdditionalFileConfigV1) o;
     if (!other.canEqual((Object) this)) return false;
     if (this.isCompress() != other.isCompress()) return false;
+    if (this.isDisableExternalUploadHint() != other.isDisableExternalUploadHint()) return false;
     final Object this$storage = this.getStorage();
     final Object other$storage = other.getStorage();
     if (this$storage == null ? other$storage != null : !this$storage.equals(other$storage)) return false;
@@ -143,6 +181,7 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
     final int PRIME = 59;
     int result = 1;
     result = result * PRIME + (this.isCompress() ? 79 : 97);
+    result = result * PRIME + (this.isDisableExternalUploadHint() ? 79 : 97);
     final Object $storage = this.getStorage();
     result = result * PRIME + ($storage == null ? 43 : $storage.hashCode());
     return result;
@@ -151,6 +190,6 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
   @Override
   @SuppressWarnings("all")
   public String toString() {
-    return "AdditionalFileConfigV1(compress=" + this.isCompress() + ", storage=" + this.getStorage() + ")";
+    return "AdditionalFileConfigV1(compress=" + this.isCompress() + ", disableExternalUploadHint=" + this.isDisableExternalUploadHint() + ", storage=" + this.getStorage() + ")";
   }
 }
