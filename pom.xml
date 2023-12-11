@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.seitenbau.serviceportal</groupId>
   <artifactId>prozess-scripting-api</artifactId>
-  <version>1.168.5</version>
+  <version>1.169.13</version>
   <packaging>jar</packaging>
 
   <name>prozess-scripting-api</name>
@@ -22,7 +22,7 @@
   <!-- https://central.sonatype.org/publish/requirements/#developer-information -->
   <developers>
     <developer>
-      <name>Serviceportale Prozesslattform</name>
+      <name>Serviceportale Prozessplattform</name>
       <email>serviceportal-prozesse@seitenbau.com</email>
       <organization>SEITENBAU GmbH</organization>
       <organizationUrl>https://www.seitenbau.com/</organizationUrl>
@@ -55,7 +55,7 @@
     <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
     <jakarta.validation-api.version>2.0.2</jakarta.validation-api.version>
     <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
-    <maven-javadoc-plugin.version>3.6.0</maven-javadoc-plugin.version>
+    <maven-javadoc-plugin.version>3.6.2</maven-javadoc-plugin.version>
     <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
     <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
   </properties>

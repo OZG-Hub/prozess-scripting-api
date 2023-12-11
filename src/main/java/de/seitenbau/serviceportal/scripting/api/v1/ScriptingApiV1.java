@@ -152,4 +152,20 @@ public interface ScriptingApiV1
    * @return ein Logger, nie {@code null}
    */
   LoggerApiV1 getLogger();
+
+  /**
+   * Gibt die Verschlüsselungs-API zurück.
+   *
+   * @return die Verschlüsselungs-API, nie {@code null}
+   * @since Release 1.169
+   */
+  CryptoApiV1 getCrypto();
+
+  /**
+   * Gibt die Mapper-API zurück.
+   *
+   * @return die Mapper-API, nie {@code null}
+   * @since Release 1.169
+   */
+  MapperApiV1 getMapper();
 }
