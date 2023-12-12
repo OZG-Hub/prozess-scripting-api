@@ -11,14 +11,14 @@ public class PBKDConfigurationV1 {
    * Der Secret-Key-Factory-Algorithmus, der verwendet wird, um einen geheimen Schlüssel aus dem Passwort zu
    * generieren.
    *
-   * @link <a href="https://tinyurl.com/standard-names#secretkeyfactory-algorithms">
+   * @see <a href="https://tinyurl.com/standard-names#secretkeyfactory-algorithms">
    * SecretKeyFactory Algorithms</a>
    */
   private String secretKeyFactoryAlgorithm;
   /**
    * Der Secret-Key-Algorithmus, der mit dem angegebenen Schlüsselmaterial assoziiert werden soll.
    *
-   * @link <a href="https://tinyurl.com/standard-names">Java Security Standard Algorithm Names</a>
+   * @see <a href="https://tinyurl.com/standard-names">Java Security Standard Algorithm Names</a>
    */
   private String secretKeySpecAlgorithm;
   /**
@@ -51,7 +51,7 @@ public class PBKDConfigurationV1 {
      * Der Secret-Key-Factory-Algorithmus, der verwendet wird, um einen geheimen Schlüssel aus dem Passwort zu
      * generieren.
      *
-     * @link <a href="https://tinyurl.com/standard-names#secretkeyfactory-algorithms">
+     * @see <a href="https://tinyurl.com/standard-names#secretkeyfactory-algorithms">
      * SecretKeyFactory Algorithms</a>
      * @return {@code this}.
      */
@@ -64,7 +64,7 @@ public class PBKDConfigurationV1 {
     /**
      * Der Secret-Key-Algorithmus, der mit dem angegebenen Schlüsselmaterial assoziiert werden soll.
      *
-     * @link <a href="https://tinyurl.com/standard-names">Java Security Standard Algorithm Names</a>
+     * @see <a href="https://tinyurl.com/standard-names">Java Security Standard Algorithm Names</a>
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -115,7 +115,7 @@ public class PBKDConfigurationV1 {
    * Der Secret-Key-Factory-Algorithmus, der verwendet wird, um einen geheimen Schlüssel aus dem Passwort zu
    * generieren.
    *
-   * @link <a href="https://tinyurl.com/standard-names#secretkeyfactory-algorithms">
+   * @see <a href="https://tinyurl.com/standard-names#secretkeyfactory-algorithms">
    * SecretKeyFactory Algorithms</a>
    */
   @SuppressWarnings("all")
@@ -126,7 +126,7 @@ public class PBKDConfigurationV1 {
   /**
    * Der Secret-Key-Algorithmus, der mit dem angegebenen Schlüsselmaterial assoziiert werden soll.
    *
-   * @link <a href="https://tinyurl.com/standard-names">Java Security Standard Algorithm Names</a>
+   * @see <a href="https://tinyurl.com/standard-names">Java Security Standard Algorithm Names</a>
    */
   @SuppressWarnings("all")
   public String getSecretKeySpecAlgorithm() {
@@ -154,7 +154,7 @@ public class PBKDConfigurationV1 {
    * Der Secret-Key-Factory-Algorithmus, der verwendet wird, um einen geheimen Schlüssel aus dem Passwort zu
    * generieren.
    *
-   * @link <a href="https://tinyurl.com/standard-names#secretkeyfactory-algorithms">
+   * @see <a href="https://tinyurl.com/standard-names#secretkeyfactory-algorithms">
    * SecretKeyFactory Algorithms</a>
    */
   @SuppressWarnings("all")
@@ -165,7 +165,7 @@ public class PBKDConfigurationV1 {
   /**
    * Der Secret-Key-Algorithmus, der mit dem angegebenen Schlüsselmaterial assoziiert werden soll.
    *
-   * @link <a href="https://tinyurl.com/standard-names">Java Security Standard Algorithm Names</a>
+   * @see <a href="https://tinyurl.com/standard-names">Java Security Standard Algorithm Names</a>
    */
   @SuppressWarnings("all")
   public void setSecretKeySpecAlgorithm(final String secretKeySpecAlgorithm) {

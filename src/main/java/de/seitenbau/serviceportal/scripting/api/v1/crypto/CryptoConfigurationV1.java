@@ -11,9 +11,9 @@ public class CryptoConfigurationV1 {
   /**
    * Cipher Transformation (Name/Mode/Padding).
    *
-   * @link <a href="https://tinyurl.com/standard-names#cipher-algorithm-names">Cipher Algorithm Names</a>
-   * @link <a href="https://tinyurl.com/standard-names#cipher-algorithm-modes">Cipher Algorithm Modes</a>
-   * @link <a href="https://tinyurl.com/standard-names#cipher-algorithm-paddings">
+   * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-names">Cipher Algorithm Names</a>
+   * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-modes">Cipher Algorithm Modes</a>
+   * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-paddings">
    * Cipher Algorithm Paddings</a>
    */
   private String cipherTransformation;
@@ -43,9 +43,9 @@ public class CryptoConfigurationV1 {
     /**
      * Cipher Transformation (Name/Mode/Padding).
      *
-     * @link <a href="https://tinyurl.com/standard-names#cipher-algorithm-names">Cipher Algorithm Names</a>
-     * @link <a href="https://tinyurl.com/standard-names#cipher-algorithm-modes">Cipher Algorithm Modes</a>
-     * @link <a href="https://tinyurl.com/standard-names#cipher-algorithm-paddings">
+     * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-names">Cipher Algorithm Names</a>
+     * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-modes">Cipher Algorithm Modes</a>
+     * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-paddings">
      * Cipher Algorithm Paddings</a>
      * @return {@code this}.
      */
@@ -95,9 +95,9 @@ public class CryptoConfigurationV1 {
   /**
    * Cipher Transformation (Name/Mode/Padding).
    *
-   * @link <a href="https://tinyurl.com/standard-names#cipher-algorithm-names">Cipher Algorithm Names</a>
-   * @link <a href="https://tinyurl.com/standard-names#cipher-algorithm-modes">Cipher Algorithm Modes</a>
-   * @link <a href="https://tinyurl.com/standard-names#cipher-algorithm-paddings">
+   * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-names">Cipher Algorithm Names</a>
+   * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-modes">Cipher Algorithm Modes</a>
+   * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-paddings">
    * Cipher Algorithm Paddings</a>
    */
   @SuppressWarnings("all")
@@ -124,9 +124,9 @@ public class CryptoConfigurationV1 {
   /**
    * Cipher Transformation (Name/Mode/Padding).
    *
-   * @link <a href="https://tinyurl.com/standard-names#cipher-algorithm-names">Cipher Algorithm Names</a>
-   * @link <a href="https://tinyurl.com/standard-names#cipher-algorithm-modes">Cipher Algorithm Modes</a>
-   * @link <a href="https://tinyurl.com/standard-names#cipher-algorithm-paddings">
+   * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-names">Cipher Algorithm Names</a>
+   * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-modes">Cipher Algorithm Modes</a>
+   * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-paddings">
    * Cipher Algorithm Paddings</a>
    */
   @SuppressWarnings("all")
