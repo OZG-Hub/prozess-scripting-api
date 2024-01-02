@@ -47,8 +47,8 @@ public interface CryptoApiV1
   /**
    * Verschlüsselt die Input-Daten mit AES-256 symmetrischer Verschlüsselung und
    * ist identisch zu encrypt(input, password, getAES256CryptoConfiguration()).
-   * Der Schlüssel wird aus dem Passwort mit der <a
-   * href="https://de.wikipedia.org/wiki/PBKDF2">Password-Based Key Derivation Function 2</a> abgeleitet.
+   * Der Schlüssel wird aus dem Passwort mit der
+   * <a href="https://de.wikipedia.org/wiki/PBKDF2">Password-Based Key Derivation Function 2</a> abgeleitet.
    * Die {@link #getAES256CryptoConfiguration()} Konfiguration wird angewendet.
    *
    * @param input Die zu verschlüsselnden Daten.
@@ -67,8 +67,8 @@ public interface CryptoApiV1
    * Entschlüsselt die Input-Daten mit AES-256 symmetrischer Verschlüsselung und
    * ist identisch zu decrypt(encryptedValue, password, getAES256CryptoConfiguration());
    * {@link #decrypt(EncryptedValueV1, String, CryptoConfigurationV1)}
-   * Der Schlüssel wird aus dem Passwort mit der <a
-   * href="https://de.wikipedia.org/wiki/PBKDF2">Password-Based Key Derivation Function 2</a> abgeleitet.
+   * Der Schlüssel wird aus dem Passwort mit der
+   * <a href="https://de.wikipedia.org/wiki/PBKDF2">Password-Based Key Derivation Function 2</a> abgeleitet.
    * Die {@link #getAES256CryptoConfiguration()} Konfiguration wird angewendet.
    *
    * @param encryptedValue Die zu entschlüsselnden Daten.

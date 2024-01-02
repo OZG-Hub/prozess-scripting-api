@@ -110,9 +110,7 @@ public interface ScriptingApiV1
    * Gibt den beim Start eines Prozesses / Erzeugen einer Prozessinstanz zur Verfügung gestellt StartParameter
    * zurück.
    *
-   * @return Der StartParameter, nicht {@code null}. Für amt24 und service-bw geben
-   * {@link StartParameterV1#getOrganisationseinheit()} und {@link StartParameterV1#getParameters()} immer
-   * {@code null} zurück
+   * @return Der StartParameter, nicht {@code null}.
    * @throws IllegalStateException Falls der StartParameter nicht aufgerufen werden konnte
    */
   StartParameterV1 getStartParameter();

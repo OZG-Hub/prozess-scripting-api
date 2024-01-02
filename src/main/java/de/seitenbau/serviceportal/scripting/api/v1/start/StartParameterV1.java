@@ -34,6 +34,7 @@ public class StartParameterV1 {
   /**
    * Organisationseinheit.
    * {@code null}, wenn keine Organisationseinheit definiert wurde.
+   * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
    */
   private OrganisationseinheitParameterV1 organisationseinheit;
   /**
@@ -55,6 +56,7 @@ public class StartParameterV1 {
    * Parameter einer externen Parameter-Quelle.
    * Mögliche Quellen sind Jesaja und Fit-Connect.
    * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
+   * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
    */
   private Map<String, Object> parameters;
 
@@ -129,6 +131,7 @@ public class StartParameterV1 {
     /**
      * Organisationseinheit.
      * {@code null}, wenn keine Organisationseinheit definiert wurde.
+     * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -174,6 +177,7 @@ public class StartParameterV1 {
      * Parameter einer externen Parameter-Quelle.
      * Mögliche Quellen sind Jesaja und Fit-Connect.
      * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
+     * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -236,6 +240,7 @@ public class StartParameterV1 {
   /**
    * Organisationseinheit.
    * {@code null}, wenn keine Organisationseinheit definiert wurde.
+   * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
    */
   @SuppressWarnings("all")
   public OrganisationseinheitParameterV1 getOrganisationseinheit() {
@@ -273,6 +278,7 @@ public class StartParameterV1 {
    * Parameter einer externen Parameter-Quelle.
    * Mögliche Quellen sind Jesaja und Fit-Connect.
    * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
+   * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
    */
   @SuppressWarnings("all")
   public Map<String, Object> getParameters() {
