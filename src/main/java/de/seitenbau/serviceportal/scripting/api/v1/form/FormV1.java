@@ -28,6 +28,12 @@ public class FormV1 {
   @NonNull
   private String id;
   /**
+   * Version der Formular-Engine. Default ist {@link FormularEngineVersionV1#V1 V1}.
+   *
+   * @since Release 1.174
+   */
+  private FormularEngineVersionV1 engineVersion;
+  /**
    * Titel dieses Formulars.
    */
   private String title;
@@ -80,6 +86,7 @@ public class FormV1 {
       throw new NullPointerException("id is marked non-null but is null");
     }
     this.id = id;
+    engineVersion = FormularEngineVersionV1.V1;
     sections = new ArrayList<>();
     validationMessages = new HashSet<>();
   }
@@ -327,6 +334,11 @@ public class FormV1 {
   }
 
   @SuppressWarnings("all")
+  private static FormularEngineVersionV1 $default$engineVersion() {
+    return FormularEngineVersionV1.V1;
+  }
+
+  @SuppressWarnings("all")
   private static List<FormSectionV1> $default$sections() {
     return new ArrayList<>();
   }
@@ -341,6 +353,10 @@ public class FormV1 {
   public static class FormV1Builder {
     @SuppressWarnings("all")
     private String id;
+    @SuppressWarnings("all")
+    private boolean engineVersion$set;
+    @SuppressWarnings("all")
+    private FormularEngineVersionV1 engineVersion$value;
     @SuppressWarnings("all")
     private String title;
     @SuppressWarnings("all")
@@ -378,6 +394,19 @@ public class FormV1 {
         throw new NullPointerException("id is marked non-null but is null");
       }
       this.id = id;
+      return this;
+    }
+
+    /**
+     * Version der Formular-Engine. Default ist {@link FormularEngineVersionV1#V1 V1}.
+     *
+     * @since Release 1.174
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    public FormV1.FormV1Builder engineVersion(final FormularEngineVersionV1 engineVersion) {
+      this.engineVersion$value = engineVersion;
+      engineVersion$set = true;
       return this;
     }
 
@@ -483,17 +512,19 @@ public class FormV1 {
 
     @SuppressWarnings("all")
     public FormV1 build() {
+      FormularEngineVersionV1 engineVersion$value = this.engineVersion$value;
+      if (!this.engineVersion$set) engineVersion$value = FormV1.$default$engineVersion();
       List<FormSectionV1> sections$value = this.sections$value;
       if (!this.sections$set) sections$value = FormV1.$default$sections();
       Set<ValidationMessageV1> validationMessages$value = this.validationMessages$value;
       if (!this.validationMessages$set) validationMessages$value = FormV1.$default$validationMessages();
-      return new FormV1(this.id, this.title, this.language, sections$value, this.source, this.target, validationMessages$value, this.context, this.customButtons, this.appliedReplacements);
+      return new FormV1(this.id, engineVersion$value, this.title, this.language, sections$value, this.source, this.target, validationMessages$value, this.context, this.customButtons, this.appliedReplacements);
     }
 
     @Override
     @SuppressWarnings("all")
     public String toString() {
-      return "FormV1.FormV1Builder(id=" + this.id + ", title=" + this.title + ", language=" + this.language + ", sections$value=" + this.sections$value + ", source=" + this.source + ", target=" + this.target + ", validationMessages$value=" + this.validationMessages$value + ", context=" + this.context + ", customButtons=" + this.customButtons + ", appliedReplacements=" + this.appliedReplacements + ")";
+      return "FormV1.FormV1Builder(id=" + this.id + ", engineVersion$value=" + this.engineVersion$value + ", title=" + this.title + ", language=" + this.language + ", sections$value=" + this.sections$value + ", source=" + this.source + ", target=" + this.target + ", validationMessages$value=" + this.validationMessages$value + ", context=" + this.context + ", customButtons=" + this.customButtons + ", appliedReplacements=" + this.appliedReplacements + ")";
     }
   }
 
@@ -509,6 +540,16 @@ public class FormV1 {
   @SuppressWarnings("all")
   public String getId() {
     return this.id;
+  }
+
+  /**
+   * Version der Formular-Engine. Default ist {@link FormularEngineVersionV1#V1 V1}.
+   *
+   * @since Release 1.174
+   */
+  @SuppressWarnings("all")
+  public FormularEngineVersionV1 getEngineVersion() {
+    return this.engineVersion;
   }
 
   /**
@@ -596,6 +637,16 @@ public class FormV1 {
       throw new NullPointerException("id is marked non-null but is null");
     }
     this.id = id;
+  }
+
+  /**
+   * Version der Formular-Engine. Default ist {@link FormularEngineVersionV1#V1 V1}.
+   *
+   * @since Release 1.174
+   */
+  @SuppressWarnings("all")
+  public void setEngineVersion(final FormularEngineVersionV1 engineVersion) {
+    this.engineVersion = engineVersion;
   }
 
   /**
@@ -688,6 +739,9 @@ public class FormV1 {
     final Object this$id = this.getId();
     final Object other$id = other.getId();
     if (this$id == null ? other$id != null : !this$id.equals(other$id)) return false;
+    final Object this$engineVersion = this.getEngineVersion();
+    final Object other$engineVersion = other.getEngineVersion();
+    if (this$engineVersion == null ? other$engineVersion != null : !this$engineVersion.equals(other$engineVersion)) return false;
     final Object this$title = this.getTitle();
     final Object other$title = other.getTitle();
     if (this$title == null ? other$title != null : !this$title.equals(other$title)) return false;
@@ -730,6 +784,8 @@ public class FormV1 {
     int result = 1;
     final Object $id = this.getId();
     result = result * PRIME + ($id == null ? 43 : $id.hashCode());
+    final Object $engineVersion = this.getEngineVersion();
+    result = result * PRIME + ($engineVersion == null ? 43 : $engineVersion.hashCode());
     final Object $title = this.getTitle();
     result = result * PRIME + ($title == null ? 43 : $title.hashCode());
     final Object $language = this.getLanguage();
@@ -754,11 +810,11 @@ public class FormV1 {
   @Override
   @SuppressWarnings("all")
   public String toString() {
-    return "FormV1(id=" + this.getId() + ", title=" + this.getTitle() + ", language=" + this.getLanguage() + ", sections=" + this.getSections() + ", source=" + this.getSource() + ", target=" + this.getTarget() + ", validationMessages=" + this.getValidationMessages() + ", context=" + this.getContext() + ", customButtons=" + this.getCustomButtons() + ", appliedReplacements=" + this.getAppliedReplacements() + ")";
+    return "FormV1(id=" + this.getId() + ", engineVersion=" + this.getEngineVersion() + ", title=" + this.getTitle() + ", language=" + this.getLanguage() + ", sections=" + this.getSections() + ", source=" + this.getSource() + ", target=" + this.getTarget() + ", validationMessages=" + this.getValidationMessages() + ", context=" + this.getContext() + ", customButtons=" + this.getCustomButtons() + ", appliedReplacements=" + this.getAppliedReplacements() + ")";
   }
 
   @SuppressWarnings("all")
-  private FormV1(@NonNull final String id, final String title, final String language, @NonNull final List<FormSectionV1> sections, final DataResourcePointerV1 source, final DataResourcePointerV1 target, @NonNull final Set<ValidationMessageV1> validationMessages, final Map<String, Object> context, final CustomButtonsV1 customButtons, final FormReplacementValuesV1 appliedReplacements) {
+  private FormV1(@NonNull final String id, final FormularEngineVersionV1 engineVersion, final String title, final String language, @NonNull final List<FormSectionV1> sections, final DataResourcePointerV1 source, final DataResourcePointerV1 target, @NonNull final Set<ValidationMessageV1> validationMessages, final Map<String, Object> context, final CustomButtonsV1 customButtons, final FormReplacementValuesV1 appliedReplacements) {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");
     }
@@ -769,6 +825,7 @@ public class FormV1 {
       throw new NullPointerException("validationMessages is marked non-null but is null");
     }
     this.id = id;
+    this.engineVersion = engineVersion;
     this.title = title;
     this.language = language;
     this.sections = sections;

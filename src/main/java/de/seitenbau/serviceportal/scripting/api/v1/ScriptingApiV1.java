@@ -166,4 +166,12 @@ public interface ScriptingApiV1
    * @since Release 1.169
    */
   MapperApiV1 getMapper();
+
+  /**
+   * Gibt die DataStorage-API zurück.
+   *
+   * @return die DataStorage-API, nie {@code null}
+   * @since Release 1.174
+   */
+  DataStorageApiV1 getDataStorage();
 }
