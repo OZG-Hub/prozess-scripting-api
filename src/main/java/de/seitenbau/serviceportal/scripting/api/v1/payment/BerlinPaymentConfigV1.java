@@ -33,7 +33,9 @@ public class BerlinPaymentConfigV1 implements PaymentConfigV1 {
    */
   private String authPassword;
   /**
-   * Liste der Bezahlmethoden, die zur Auswahl gestellt werden sollen
+   * Optionale Liste der Bezahlmethoden, die zur Auswahl gestellt werden sollen.
+   *
+   * @since Release 1.174
    */
   private List<BerlinPaymentPaymentMethodV1> paymentMethods;
 
@@ -109,7 +111,9 @@ public class BerlinPaymentConfigV1 implements PaymentConfigV1 {
     }
 
     /**
-     * Liste der Bezahlmethoden, die zur Auswahl gestellt werden sollen
+     * Optionale Liste der Bezahlmethoden, die zur Auswahl gestellt werden sollen.
+     *
+     * @since Release 1.174
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -185,7 +189,9 @@ public class BerlinPaymentConfigV1 implements PaymentConfigV1 {
   }
 
   /**
-   * Liste der Bezahlmethoden, die zur Auswahl gestellt werden sollen
+   * Optionale Liste der Bezahlmethoden, die zur Auswahl gestellt werden sollen.
+   *
+   * @since Release 1.174
    */
   @SuppressWarnings("all")
   public List<BerlinPaymentPaymentMethodV1> getPaymentMethods() {
@@ -234,7 +240,9 @@ public class BerlinPaymentConfigV1 implements PaymentConfigV1 {
   }
 
   /**
-   * Liste der Bezahlmethoden, die zur Auswahl gestellt werden sollen
+   * Optionale Liste der Bezahlmethoden, die zur Auswahl gestellt werden sollen.
+   *
+   * @since Release 1.174
    */
   @SuppressWarnings("all")
   public void setPaymentMethods(final List<BerlinPaymentPaymentMethodV1> paymentMethods) {
