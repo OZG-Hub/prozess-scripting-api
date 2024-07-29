@@ -24,14 +24,19 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class NumberValidatorV1Builder<C extends NumberValidatorV1, B extends NumberValidatorV1.NumberValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean nonNegative;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Integer digitsAfterDecimalPoint;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String validationDecimalPointError;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String validationNonNegativeNumberError;
 
     /**
@@ -39,6 +44,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B nonNegative(final Boolean nonNegative) {
       this.nonNegative = nonNegative;
       return self();
@@ -49,6 +55,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B digitsAfterDecimalPoint(final Integer digitsAfterDecimalPoint) {
       this.digitsAfterDecimalPoint = digitsAfterDecimalPoint;
       return self();
@@ -59,6 +66,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B validationDecimalPointError(final String validationDecimalPointError) {
       this.validationDecimalPointError = validationDecimalPointError;
       return self();
@@ -69,6 +77,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B validationNonNegativeNumberError(final String validationNonNegativeNumberError) {
       this.validationNonNegativeNumberError = validationNonNegativeNumberError;
       return self();
@@ -76,14 +85,17 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "NumberValidatorV1.NumberValidatorV1Builder(super=" + super.toString() + ", nonNegative=" + this.nonNegative + ", digitsAfterDecimalPoint=" + this.digitsAfterDecimalPoint + ", validationDecimalPointError=" + this.validationDecimalPointError + ", validationNonNegativeNumberError=" + this.validationNonNegativeNumberError + ")";
     }
@@ -91,25 +103,30 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class NumberValidatorV1BuilderImpl extends NumberValidatorV1.NumberValidatorV1Builder<NumberValidatorV1, NumberValidatorV1.NumberValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private NumberValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected NumberValidatorV1.NumberValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public NumberValidatorV1 build() {
       return new NumberValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected NumberValidatorV1(final NumberValidatorV1.NumberValidatorV1Builder<?, ?> b) {
     super(b);
     this.nonNegative = b.nonNegative;
@@ -119,6 +136,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static NumberValidatorV1.NumberValidatorV1Builder<?, ?> builder() {
     return new NumberValidatorV1.NumberValidatorV1BuilderImpl();
   }
@@ -127,6 +145,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
    * {@code true}, wenn die Zahl nicht negativ sein darf.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getNonNegative() {
     return this.nonNegative;
   }
@@ -135,6 +154,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
    * Maximale Anzahl an Dezimalstellen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Integer getDigitsAfterDecimalPoint() {
     return this.digitsAfterDecimalPoint;
   }
@@ -143,6 +163,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
    * Der benutzerdefinierte Fehlertext bei zu vielen Dezimalstellen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getValidationDecimalPointError() {
     return this.validationDecimalPointError;
   }
@@ -151,6 +172,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
    * Der benutzerdefinierte Fehlertext bei Verwendung einer negativen Zahl.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getValidationNonNegativeNumberError() {
     return this.validationNonNegativeNumberError;
   }
@@ -159,6 +181,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
    * {@code true}, wenn die Zahl nicht negativ sein darf.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setNonNegative(final Boolean nonNegative) {
     this.nonNegative = nonNegative;
   }
@@ -167,6 +190,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
    * Maximale Anzahl an Dezimalstellen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setDigitsAfterDecimalPoint(final Integer digitsAfterDecimalPoint) {
     this.digitsAfterDecimalPoint = digitsAfterDecimalPoint;
   }
@@ -175,6 +199,7 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
    * Der benutzerdefinierte Fehlertext bei zu vielen Dezimalstellen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValidationDecimalPointError(final String validationDecimalPointError) {
     this.validationDecimalPointError = validationDecimalPointError;
   }
@@ -183,18 +208,21 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
    * Der benutzerdefinierte Fehlertext bei Verwendung einer negativen Zahl.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValidationNonNegativeNumberError(final String validationNonNegativeNumberError) {
     this.validationNonNegativeNumberError = validationNonNegativeNumberError;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "NumberValidatorV1(nonNegative=" + this.getNonNegative() + ", digitsAfterDecimalPoint=" + this.getDigitsAfterDecimalPoint() + ", validationDecimalPointError=" + this.getValidationDecimalPointError() + ", validationNonNegativeNumberError=" + this.getValidationNonNegativeNumberError() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof NumberValidatorV1)) return false;
@@ -216,12 +244,14 @@ public class NumberValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof NumberValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

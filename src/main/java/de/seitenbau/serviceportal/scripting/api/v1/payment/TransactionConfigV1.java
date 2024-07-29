@@ -31,19 +31,26 @@ public class TransactionConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class TransactionConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Long betrag;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String verwendungszweck;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String beschreibung;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<TransactionArtikelV1> artikel;
     @SuppressWarnings("all")
+    @lombok.Generated
     private TransactionBezahlerinfoV1 bezahlerinfo;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     TransactionConfigV1Builder() {
     }
 
@@ -52,6 +59,7 @@ public class TransactionConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionConfigV1.TransactionConfigV1Builder betrag(final Long betrag) {
       this.betrag = betrag;
       return this;
@@ -62,6 +70,7 @@ public class TransactionConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionConfigV1.TransactionConfigV1Builder verwendungszweck(final String verwendungszweck) {
       this.verwendungszweck = verwendungszweck;
       return this;
@@ -72,6 +81,7 @@ public class TransactionConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionConfigV1.TransactionConfigV1Builder beschreibung(final String beschreibung) {
       this.beschreibung = beschreibung;
       return this;
@@ -82,6 +92,7 @@ public class TransactionConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionConfigV1.TransactionConfigV1Builder artikel(final List<TransactionArtikelV1> artikel) {
       this.artikel = artikel;
       return this;
@@ -92,24 +103,28 @@ public class TransactionConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionConfigV1.TransactionConfigV1Builder bezahlerinfo(final TransactionBezahlerinfoV1 bezahlerinfo) {
       this.bezahlerinfo = bezahlerinfo;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionConfigV1 build() {
       return new TransactionConfigV1(this.betrag, this.verwendungszweck, this.beschreibung, this.artikel, this.bezahlerinfo);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "TransactionConfigV1.TransactionConfigV1Builder(betrag=" + this.betrag + ", verwendungszweck=" + this.verwendungszweck + ", beschreibung=" + this.beschreibung + ", artikel=" + this.artikel + ", bezahlerinfo=" + this.bezahlerinfo + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static TransactionConfigV1.TransactionConfigV1Builder builder() {
     return new TransactionConfigV1.TransactionConfigV1Builder();
   }
@@ -118,6 +133,7 @@ public class TransactionConfigV1 {
    * Bruttobetrag in Cents.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Long getBetrag() {
     return this.betrag;
   }
@@ -126,6 +142,7 @@ public class TransactionConfigV1 {
    * Verwendungszweck. Für pmPayment wird der Verwendungszweck ignoriert.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getVerwendungszweck() {
     return this.verwendungszweck;
   }
@@ -134,6 +151,7 @@ public class TransactionConfigV1 {
    * Beschreibung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getBeschreibung() {
     return this.beschreibung;
   }
@@ -142,6 +160,7 @@ public class TransactionConfigV1 {
    * Artikel.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<TransactionArtikelV1> getArtikel() {
     return this.artikel;
   }
@@ -150,6 +169,7 @@ public class TransactionConfigV1 {
    * Auslöser der Bezahlung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public TransactionBezahlerinfoV1 getBezahlerinfo() {
     return this.bezahlerinfo;
   }
@@ -158,6 +178,7 @@ public class TransactionConfigV1 {
    * Bruttobetrag in Cents.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setBetrag(final Long betrag) {
     this.betrag = betrag;
   }
@@ -166,6 +187,7 @@ public class TransactionConfigV1 {
    * Verwendungszweck. Für pmPayment wird der Verwendungszweck ignoriert.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setVerwendungszweck(final String verwendungszweck) {
     this.verwendungszweck = verwendungszweck;
   }
@@ -174,6 +196,7 @@ public class TransactionConfigV1 {
    * Beschreibung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setBeschreibung(final String beschreibung) {
     this.beschreibung = beschreibung;
   }
@@ -182,6 +205,7 @@ public class TransactionConfigV1 {
    * Artikel.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setArtikel(final List<TransactionArtikelV1> artikel) {
     this.artikel = artikel;
   }
@@ -190,12 +214,14 @@ public class TransactionConfigV1 {
    * Auslöser der Bezahlung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setBezahlerinfo(final TransactionBezahlerinfoV1 bezahlerinfo) {
     this.bezahlerinfo = bezahlerinfo;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof TransactionConfigV1)) return false;
@@ -220,12 +246,14 @@ public class TransactionConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof TransactionConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -244,15 +272,27 @@ public class TransactionConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "TransactionConfigV1(betrag=" + this.getBetrag() + ", verwendungszweck=" + this.getVerwendungszweck() + ", beschreibung=" + this.getBeschreibung() + ", artikel=" + this.getArtikel() + ", bezahlerinfo=" + this.getBezahlerinfo() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public TransactionConfigV1() {
   }
 
+  /**
+   * Creates a new {@code TransactionConfigV1} instance.
+   *
+   * @param betrag Bruttobetrag in Cents.
+   * @param verwendungszweck Verwendungszweck. Für pmPayment wird der Verwendungszweck ignoriert.
+   * @param beschreibung Beschreibung.
+   * @param artikel Artikel.
+   * @param bezahlerinfo Auslöser der Bezahlung.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public TransactionConfigV1(final Long betrag, final String verwendungszweck, final String beschreibung, final List<TransactionArtikelV1> artikel, final TransactionBezahlerinfoV1 bezahlerinfo) {
     this.betrag = betrag;
     this.verwendungszweck = verwendungszweck;

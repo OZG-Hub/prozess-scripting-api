@@ -20,15 +20,20 @@ public class ProcessOrganisationseinheitSectionV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessOrganisationseinheitSectionV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String textblockId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String headline;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String text;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessOrganisationseinheitSectionV1Builder() {
     }
 
@@ -37,6 +42,7 @@ public class ProcessOrganisationseinheitSectionV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitSectionV1.ProcessOrganisationseinheitSectionV1Builder textblockId(final String textblockId) {
       this.textblockId = textblockId;
       return this;
@@ -47,6 +53,7 @@ public class ProcessOrganisationseinheitSectionV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitSectionV1.ProcessOrganisationseinheitSectionV1Builder headline(final String headline) {
       this.headline = headline;
       return this;
@@ -57,24 +64,28 @@ public class ProcessOrganisationseinheitSectionV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitSectionV1.ProcessOrganisationseinheitSectionV1Builder text(final String text) {
       this.text = text;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitSectionV1 build() {
       return new ProcessOrganisationseinheitSectionV1(this.textblockId, this.headline, this.text);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessOrganisationseinheitSectionV1.ProcessOrganisationseinheitSectionV1Builder(textblockId=" + this.textblockId + ", headline=" + this.headline + ", text=" + this.text + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessOrganisationseinheitSectionV1.ProcessOrganisationseinheitSectionV1Builder builder() {
     return new ProcessOrganisationseinheitSectionV1.ProcessOrganisationseinheitSectionV1Builder();
   }
@@ -83,6 +94,7 @@ public class ProcessOrganisationseinheitSectionV1 {
    * ID des Abschnitts.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTextblockId() {
     return this.textblockId;
   }
@@ -91,6 +103,7 @@ public class ProcessOrganisationseinheitSectionV1 {
    * Überschrift des Abschnitts.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getHeadline() {
     return this.headline;
   }
@@ -99,18 +112,21 @@ public class ProcessOrganisationseinheitSectionV1 {
    * Text des Abschnitts.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getText() {
     return this.text;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessOrganisationseinheitSectionV1(textblockId=" + this.getTextblockId() + ", headline=" + this.getHeadline() + ", text=" + this.getText() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessOrganisationseinheitSectionV1)) return false;
@@ -129,12 +145,14 @@ public class ProcessOrganisationseinheitSectionV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessOrganisationseinheitSectionV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -148,10 +166,19 @@ public class ProcessOrganisationseinheitSectionV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitSectionV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessOrganisationseinheitSectionV1} instance.
+   *
+   * @param textblockId ID des Abschnitts.
+   * @param headline Überschrift des Abschnitts.
+   * @param text Text des Abschnitts.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitSectionV1(final String textblockId, final String headline, final String text) {
     this.textblockId = textblockId;
     this.headline = headline;

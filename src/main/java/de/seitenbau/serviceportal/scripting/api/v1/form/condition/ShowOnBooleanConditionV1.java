@@ -20,8 +20,10 @@ public class ShowOnBooleanConditionV1 extends DisplayConditionV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class ShowOnBooleanConditionV1Builder<C extends ShowOnBooleanConditionV1, B extends ShowOnBooleanConditionV1.ShowOnBooleanConditionV1Builder<C, B>> extends DisplayConditionV1.DisplayConditionV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean showField;
 
     /**
@@ -29,6 +31,7 @@ public class ShowOnBooleanConditionV1 extends DisplayConditionV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B showField(final boolean showField) {
       this.showField = showField;
       return self();
@@ -36,14 +39,17 @@ public class ShowOnBooleanConditionV1 extends DisplayConditionV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ShowOnBooleanConditionV1.ShowOnBooleanConditionV1Builder(super=" + super.toString() + ", showField=" + this.showField + ")";
     }
@@ -51,31 +57,37 @@ public class ShowOnBooleanConditionV1 extends DisplayConditionV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class ShowOnBooleanConditionV1BuilderImpl extends ShowOnBooleanConditionV1.ShowOnBooleanConditionV1Builder<ShowOnBooleanConditionV1, ShowOnBooleanConditionV1.ShowOnBooleanConditionV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private ShowOnBooleanConditionV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected ShowOnBooleanConditionV1.ShowOnBooleanConditionV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public ShowOnBooleanConditionV1 build() {
       return new ShowOnBooleanConditionV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected ShowOnBooleanConditionV1(final ShowOnBooleanConditionV1.ShowOnBooleanConditionV1Builder<?, ?> b) {
     super(b);
     this.showField = b.showField;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ShowOnBooleanConditionV1.ShowOnBooleanConditionV1Builder<?, ?> builder() {
     return new ShowOnBooleanConditionV1.ShowOnBooleanConditionV1BuilderImpl();
   }
@@ -84,6 +96,7 @@ public class ShowOnBooleanConditionV1 extends DisplayConditionV1 {
    * {@code true}, wenn die Sichtbarkeitsbedingung erfüllt ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean isShowField() {
     return this.showField;
   }
@@ -92,18 +105,21 @@ public class ShowOnBooleanConditionV1 extends DisplayConditionV1 {
    * {@code true}, wenn die Sichtbarkeitsbedingung erfüllt ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setShowField(final boolean showField) {
     this.showField = showField;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ShowOnBooleanConditionV1(showField=" + this.isShowField() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ShowOnBooleanConditionV1)) return false;
@@ -115,12 +131,14 @@ public class ShowOnBooleanConditionV1 extends DisplayConditionV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ShowOnBooleanConditionV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = super.hashCode();

@@ -20,13 +20,17 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class PaymentConfigAuthorizationBasicAuthV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String clientId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String clientSecret;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     PaymentConfigAuthorizationBasicAuthV1Builder() {
     }
 
@@ -35,6 +39,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentConfigAuthorizationBasicAuthV1.PaymentConfigAuthorizationBasicAuthV1Builder clientId(final String clientId) {
       this.clientId = clientId;
       return this;
@@ -45,24 +50,28 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentConfigAuthorizationBasicAuthV1.PaymentConfigAuthorizationBasicAuthV1Builder clientSecret(final String clientSecret) {
       this.clientSecret = clientSecret;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentConfigAuthorizationBasicAuthV1 build() {
       return new PaymentConfigAuthorizationBasicAuthV1(this.clientId, this.clientSecret);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "PaymentConfigAuthorizationBasicAuthV1.PaymentConfigAuthorizationBasicAuthV1Builder(clientId=" + this.clientId + ", clientSecret=" + this.clientSecret + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static PaymentConfigAuthorizationBasicAuthV1.PaymentConfigAuthorizationBasicAuthV1Builder builder() {
     return new PaymentConfigAuthorizationBasicAuthV1.PaymentConfigAuthorizationBasicAuthV1Builder();
   }
@@ -71,6 +80,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
    * Typ der Authentifizierung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public PaymentConfigAuthorizationTypeV1 getType() {
     return this.type;
   }
@@ -79,6 +89,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
    * Benutzername oder ID zur Authentifizierung
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getClientId() {
     return this.clientId;
   }
@@ -87,6 +98,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
    * Geheimnis (Passwort) zur Authentifizierung
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getClientSecret() {
     return this.clientSecret;
   }
@@ -95,6 +107,7 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
    * Benutzername oder ID zur Authentifizierung
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setClientId(final String clientId) {
     this.clientId = clientId;
   }
@@ -103,12 +116,14 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
    * Geheimnis (Passwort) zur Authentifizierung
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setClientSecret(final String clientSecret) {
     this.clientSecret = clientSecret;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof PaymentConfigAuthorizationBasicAuthV1)) return false;
@@ -127,12 +142,14 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof PaymentConfigAuthorizationBasicAuthV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -147,15 +164,24 @@ public class PaymentConfigAuthorizationBasicAuthV1 implements PaymentConfigAutho
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "PaymentConfigAuthorizationBasicAuthV1(type=" + this.getType() + ", clientId=" + this.getClientId() + ", clientSecret=" + this.getClientSecret() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public PaymentConfigAuthorizationBasicAuthV1() {
   }
 
+  /**
+   * Creates a new {@code PaymentConfigAuthorizationBasicAuthV1} instance.
+   *
+   * @param clientId Benutzername oder ID zur Authentifizierung
+   * @param clientSecret Geheimnis (Passwort) zur Authentifizierung
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public PaymentConfigAuthorizationBasicAuthV1(final String clientId, final String clientSecret) {
     this.clientId = clientId;
     this.clientSecret = clientSecret;

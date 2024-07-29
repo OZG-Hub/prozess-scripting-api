@@ -29,21 +29,29 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessOrganisationseinheitInternetadresseI18nV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String sprache;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean kennzeichenAnzeigeNeuesFenster;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String uri;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String titel;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String beschreibung;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String alternativtext;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessOrganisationseinheitInternetadresseI18nV1Builder() {
     }
 
@@ -52,6 +60,7 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitInternetadresseI18nV1.ProcessOrganisationseinheitInternetadresseI18nV1Builder sprache(final String sprache) {
       this.sprache = sprache;
       return this;
@@ -61,6 +70,7 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitInternetadresseI18nV1.ProcessOrganisationseinheitInternetadresseI18nV1Builder kennzeichenAnzeigeNeuesFenster(final Boolean kennzeichenAnzeigeNeuesFenster) {
       this.kennzeichenAnzeigeNeuesFenster = kennzeichenAnzeigeNeuesFenster;
       return this;
@@ -71,6 +81,7 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitInternetadresseI18nV1.ProcessOrganisationseinheitInternetadresseI18nV1Builder uri(final String uri) {
       this.uri = uri;
       return this;
@@ -81,6 +92,7 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitInternetadresseI18nV1.ProcessOrganisationseinheitInternetadresseI18nV1Builder titel(final String titel) {
       this.titel = titel;
       return this;
@@ -91,6 +103,7 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitInternetadresseI18nV1.ProcessOrganisationseinheitInternetadresseI18nV1Builder beschreibung(final String beschreibung) {
       this.beschreibung = beschreibung;
       return this;
@@ -101,24 +114,28 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitInternetadresseI18nV1.ProcessOrganisationseinheitInternetadresseI18nV1Builder alternativtext(final String alternativtext) {
       this.alternativtext = alternativtext;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitInternetadresseI18nV1 build() {
       return new ProcessOrganisationseinheitInternetadresseI18nV1(this.sprache, this.kennzeichenAnzeigeNeuesFenster, this.uri, this.titel, this.beschreibung, this.alternativtext);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessOrganisationseinheitInternetadresseI18nV1.ProcessOrganisationseinheitInternetadresseI18nV1Builder(sprache=" + this.sprache + ", kennzeichenAnzeigeNeuesFenster=" + this.kennzeichenAnzeigeNeuesFenster + ", uri=" + this.uri + ", titel=" + this.titel + ", beschreibung=" + this.beschreibung + ", alternativtext=" + this.alternativtext + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessOrganisationseinheitInternetadresseI18nV1.ProcessOrganisationseinheitInternetadresseI18nV1Builder builder() {
     return new ProcessOrganisationseinheitInternetadresseI18nV1.ProcessOrganisationseinheitInternetadresseI18nV1Builder();
   }
@@ -127,11 +144,13 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
    * Sprache der Internetadresse.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSprache() {
     return this.sprache;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getKennzeichenAnzeigeNeuesFenster() {
     return this.kennzeichenAnzeigeNeuesFenster;
   }
@@ -140,6 +159,7 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
    * Uri der Internetadresse.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getUri() {
     return this.uri;
   }
@@ -148,6 +168,7 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
    * Titel der Internetadresse.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTitel() {
     return this.titel;
   }
@@ -156,6 +177,7 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
    * Beschreibung der Internetadresse.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getBeschreibung() {
     return this.beschreibung;
   }
@@ -164,18 +186,21 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
    * Alternativtext.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getAlternativtext() {
     return this.alternativtext;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessOrganisationseinheitInternetadresseI18nV1(sprache=" + this.getSprache() + ", kennzeichenAnzeigeNeuesFenster=" + this.getKennzeichenAnzeigeNeuesFenster() + ", uri=" + this.getUri() + ", titel=" + this.getTitel() + ", beschreibung=" + this.getBeschreibung() + ", alternativtext=" + this.getAlternativtext() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessOrganisationseinheitInternetadresseI18nV1)) return false;
@@ -203,12 +228,14 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessOrganisationseinheitInternetadresseI18nV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -228,10 +255,22 @@ public class ProcessOrganisationseinheitInternetadresseI18nV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitInternetadresseI18nV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessOrganisationseinheitInternetadresseI18nV1} instance.
+   *
+   * @param sprache Sprache der Internetadresse.
+   * @param kennzeichenAnzeigeNeuesFenster
+   * @param uri Uri der Internetadresse.
+   * @param titel Titel der Internetadresse.
+   * @param beschreibung Beschreibung der Internetadresse.
+   * @param alternativtext Alternativtext.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitInternetadresseI18nV1(final String sprache, final Boolean kennzeichenAnzeigeNeuesFenster, final String uri, final String titel, final String beschreibung, final String alternativtext) {
     this.sprache = sprache;
     this.kennzeichenAnzeigeNeuesFenster = kennzeichenAnzeigeNeuesFenster;

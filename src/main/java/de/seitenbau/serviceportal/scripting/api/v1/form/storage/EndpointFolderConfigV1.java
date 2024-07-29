@@ -26,13 +26,17 @@ public class EndpointFolderConfigV1 implements Cloneable {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class EndpointFolderConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String baseUrl;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String folder;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     EndpointFolderConfigV1Builder() {
     }
 
@@ -41,6 +45,7 @@ public class EndpointFolderConfigV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EndpointFolderConfigV1.EndpointFolderConfigV1Builder baseUrl(final String baseUrl) {
       this.baseUrl = baseUrl;
       return this;
@@ -52,24 +57,28 @@ public class EndpointFolderConfigV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EndpointFolderConfigV1.EndpointFolderConfigV1Builder folder(final String folder) {
       this.folder = folder;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public EndpointFolderConfigV1 build() {
       return new EndpointFolderConfigV1(this.baseUrl, this.folder);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "EndpointFolderConfigV1.EndpointFolderConfigV1Builder(baseUrl=" + this.baseUrl + ", folder=" + this.folder + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static EndpointFolderConfigV1.EndpointFolderConfigV1Builder builder() {
     return new EndpointFolderConfigV1.EndpointFolderConfigV1Builder();
   }
@@ -78,6 +87,7 @@ public class EndpointFolderConfigV1 implements Cloneable {
    * URL zur externen Dateiablage. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getBaseUrl() {
     return this.baseUrl;
   }
@@ -87,6 +97,7 @@ public class EndpointFolderConfigV1 implements Cloneable {
    * gespeichert werden soll. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getFolder() {
     return this.folder;
   }
@@ -95,6 +106,7 @@ public class EndpointFolderConfigV1 implements Cloneable {
    * URL zur externen Dateiablage. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setBaseUrl(final String baseUrl) {
     this.baseUrl = baseUrl;
   }
@@ -104,12 +116,14 @@ public class EndpointFolderConfigV1 implements Cloneable {
    * gespeichert werden soll. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setFolder(final String folder) {
     this.folder = folder;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof EndpointFolderConfigV1)) return false;
@@ -125,12 +139,14 @@ public class EndpointFolderConfigV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof EndpointFolderConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -143,15 +159,25 @@ public class EndpointFolderConfigV1 implements Cloneable {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "EndpointFolderConfigV1(baseUrl=" + this.getBaseUrl() + ", folder=" + this.getFolder() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public EndpointFolderConfigV1() {
   }
 
+  /**
+   * Creates a new {@code EndpointFolderConfigV1} instance.
+   *
+   * @param baseUrl URL zur externen Dateiablage. Nicht {@code null}.
+   * @param folder Ordner oder über "/" geschachtelter Pfad von Ordnern auf der externen Dateiablage, wo eine Datei
+   * gespeichert werden soll. Nicht {@code null}.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public EndpointFolderConfigV1(final String baseUrl, final String folder) {
     this.baseUrl = baseUrl;
     this.folder = folder;

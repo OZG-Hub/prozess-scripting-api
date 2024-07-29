@@ -55,7 +55,21 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
     }
   }
 
+  /**
+   * Creates a new {@code AdditionalKfzKennzeichenConfigV1} instance.
+   *
+   * @param unterscheidungszeichen Ortskürzel des Kennzeichens.
+   * @param electric {@code true}, wenn Kennzeichen für ein Elektrofahrzeug. Sonst {@code false} oder {@code null}.
+   * @param historic {@code true}, wenn Kennzeichen für ein historisches Fahrzeug. Sonst {@code false} oder {@code null}.
+   * @param saisonStart Numerischer Wert des Startmonats eines Saisonkennzeichens.
+   * @param saisonEnd Numerischer Wert des Endmonats eines Saisonkennzeichens.
+   * @param erkennungsnummer2Ausblenden {@code true}, wenn die Erkennungsnummer 2 (Nummernteil) des Kennzeichens nicht angezeigt wird. Sonst
+   * {@code false} oder {@code null}.
+   * @param kennzeichenType Typ des Fahrzeugs / Kennzeichens.
+   * {@code null} wird interpretiert als {@link KfzKennzeichenTypeV1#CAR CAR}.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   AdditionalKfzKennzeichenConfigV1(final String unterscheidungszeichen, final Boolean electric, final Boolean historic, final String saisonStart, final String saisonEnd, final Boolean erkennungsnummer2Ausblenden, final KfzKennzeichenTypeV1 kennzeichenType) {
     this.unterscheidungszeichen = unterscheidungszeichen;
     this.electric = electric;
@@ -68,23 +82,32 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class AdditionalKfzKennzeichenConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String unterscheidungszeichen;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean electric;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean historic;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String saisonStart;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String saisonEnd;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean erkennungsnummer2Ausblenden;
     @SuppressWarnings("all")
+    @lombok.Generated
     private KfzKennzeichenTypeV1 kennzeichenType;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     AdditionalKfzKennzeichenConfigV1Builder() {
     }
 
@@ -93,6 +116,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalKfzKennzeichenConfigV1.AdditionalKfzKennzeichenConfigV1Builder unterscheidungszeichen(final String unterscheidungszeichen) {
       this.unterscheidungszeichen = unterscheidungszeichen;
       return this;
@@ -103,6 +127,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalKfzKennzeichenConfigV1.AdditionalKfzKennzeichenConfigV1Builder electric(final Boolean electric) {
       this.electric = electric;
       return this;
@@ -113,6 +138,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalKfzKennzeichenConfigV1.AdditionalKfzKennzeichenConfigV1Builder historic(final Boolean historic) {
       this.historic = historic;
       return this;
@@ -123,6 +149,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalKfzKennzeichenConfigV1.AdditionalKfzKennzeichenConfigV1Builder saisonStart(final String saisonStart) {
       this.saisonStart = saisonStart;
       return this;
@@ -133,6 +160,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalKfzKennzeichenConfigV1.AdditionalKfzKennzeichenConfigV1Builder saisonEnd(final String saisonEnd) {
       this.saisonEnd = saisonEnd;
       return this;
@@ -144,6 +172,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalKfzKennzeichenConfigV1.AdditionalKfzKennzeichenConfigV1Builder erkennungsnummer2Ausblenden(final Boolean erkennungsnummer2Ausblenden) {
       this.erkennungsnummer2Ausblenden = erkennungsnummer2Ausblenden;
       return this;
@@ -155,24 +184,28 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalKfzKennzeichenConfigV1.AdditionalKfzKennzeichenConfigV1Builder kennzeichenType(final KfzKennzeichenTypeV1 kennzeichenType) {
       this.kennzeichenType = kennzeichenType;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalKfzKennzeichenConfigV1 build() {
       return new AdditionalKfzKennzeichenConfigV1(this.unterscheidungszeichen, this.electric, this.historic, this.saisonStart, this.saisonEnd, this.erkennungsnummer2Ausblenden, this.kennzeichenType);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "AdditionalKfzKennzeichenConfigV1.AdditionalKfzKennzeichenConfigV1Builder(unterscheidungszeichen=" + this.unterscheidungszeichen + ", electric=" + this.electric + ", historic=" + this.historic + ", saisonStart=" + this.saisonStart + ", saisonEnd=" + this.saisonEnd + ", erkennungsnummer2Ausblenden=" + this.erkennungsnummer2Ausblenden + ", kennzeichenType=" + this.kennzeichenType + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static AdditionalKfzKennzeichenConfigV1.AdditionalKfzKennzeichenConfigV1Builder builder() {
     return new AdditionalKfzKennzeichenConfigV1.AdditionalKfzKennzeichenConfigV1Builder();
   }
@@ -181,6 +214,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * Ortskürzel des Kennzeichens.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getUnterscheidungszeichen() {
     return this.unterscheidungszeichen;
   }
@@ -189,6 +223,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * {@code true}, wenn Kennzeichen für ein Elektrofahrzeug. Sonst {@code false} oder {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getElectric() {
     return this.electric;
   }
@@ -197,6 +232,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * {@code true}, wenn Kennzeichen für ein historisches Fahrzeug. Sonst {@code false} oder {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getHistoric() {
     return this.historic;
   }
@@ -205,6 +241,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * Numerischer Wert des Startmonats eines Saisonkennzeichens.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSaisonStart() {
     return this.saisonStart;
   }
@@ -213,6 +250,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * Numerischer Wert des Endmonats eines Saisonkennzeichens.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSaisonEnd() {
     return this.saisonEnd;
   }
@@ -222,6 +260,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * {@code false} oder {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getErkennungsnummer2Ausblenden() {
     return this.erkennungsnummer2Ausblenden;
   }
@@ -231,6 +270,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * {@code null} wird interpretiert als {@link KfzKennzeichenTypeV1#CAR CAR}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public KfzKennzeichenTypeV1 getKennzeichenType() {
     return this.kennzeichenType;
   }
@@ -239,6 +279,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * Ortskürzel des Kennzeichens.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setUnterscheidungszeichen(final String unterscheidungszeichen) {
     this.unterscheidungszeichen = unterscheidungszeichen;
   }
@@ -247,6 +288,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * {@code true}, wenn Kennzeichen für ein Elektrofahrzeug. Sonst {@code false} oder {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setElectric(final Boolean electric) {
     this.electric = electric;
   }
@@ -255,6 +297,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * {@code true}, wenn Kennzeichen für ein historisches Fahrzeug. Sonst {@code false} oder {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setHistoric(final Boolean historic) {
     this.historic = historic;
   }
@@ -263,6 +306,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * Numerischer Wert des Startmonats eines Saisonkennzeichens.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSaisonStart(final String saisonStart) {
     this.saisonStart = saisonStart;
   }
@@ -271,6 +315,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * Numerischer Wert des Endmonats eines Saisonkennzeichens.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSaisonEnd(final String saisonEnd) {
     this.saisonEnd = saisonEnd;
   }
@@ -280,6 +325,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * {@code false} oder {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setErkennungsnummer2Ausblenden(final Boolean erkennungsnummer2Ausblenden) {
     this.erkennungsnummer2Ausblenden = erkennungsnummer2Ausblenden;
   }
@@ -289,12 +335,14 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
    * {@code null} wird interpretiert als {@link KfzKennzeichenTypeV1#CAR CAR}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setKennzeichenType(final KfzKennzeichenTypeV1 kennzeichenType) {
     this.kennzeichenType = kennzeichenType;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof AdditionalKfzKennzeichenConfigV1)) return false;
@@ -325,12 +373,14 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof AdditionalKfzKennzeichenConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -353,6 +403,7 @@ public class AdditionalKfzKennzeichenConfigV1 implements AdditionalFieldConfigV1
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "AdditionalKfzKennzeichenConfigV1(unterscheidungszeichen=" + this.getUnterscheidungszeichen() + ", electric=" + this.getElectric() + ", historic=" + this.getHistoric() + ", saisonStart=" + this.getSaisonStart() + ", saisonEnd=" + this.getSaisonEnd() + ", erkennungsnummer2Ausblenden=" + this.getErkennungsnummer2Ausblenden() + ", kennzeichenType=" + this.getKennzeichenType() + ")";
   }

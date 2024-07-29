@@ -56,26 +56,32 @@ public abstract class DisplayConditionV1 implements Cloneable {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class DisplayConditionV1Builder<C extends DisplayConditionV1, B extends DisplayConditionV1.DisplayConditionV1Builder<C, B>> {
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "DisplayConditionV1.DisplayConditionV1Builder()";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected DisplayConditionV1(final DisplayConditionV1.DisplayConditionV1Builder<?, ?> b) {
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof DisplayConditionV1)) return false;
@@ -85,12 +91,14 @@ public abstract class DisplayConditionV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof DisplayConditionV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int result = 1;
     return result;
@@ -98,11 +106,13 @@ public abstract class DisplayConditionV1 implements Cloneable {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "DisplayConditionV1()";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public DisplayConditionV1() {
   }
 }

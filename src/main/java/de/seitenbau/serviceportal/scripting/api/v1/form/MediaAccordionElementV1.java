@@ -23,18 +23,23 @@ public class MediaAccordionElementV1 {
   private List<FormFieldV1> fields;
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<FormFieldV1> $default$fields() {
     return new ArrayList<>();
   }
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class MediaAccordionElementV1Builder<C extends MediaAccordionElementV1, B extends MediaAccordionElementV1.MediaAccordionElementV1Builder<C, B>> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String title;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean fields$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<FormFieldV1> fields$value;
 
     /**
@@ -42,6 +47,7 @@ public class MediaAccordionElementV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B title(@NonNull final String title) {
       if (title == null) {
         throw new NullPointerException("title is marked non-null but is null");
@@ -55,6 +61,7 @@ public class MediaAccordionElementV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B fields(@NonNull final List<FormFieldV1> fields) {
       if (fields == null) {
         throw new NullPointerException("fields is marked non-null but is null");
@@ -65,13 +72,16 @@ public class MediaAccordionElementV1 {
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "MediaAccordionElementV1.MediaAccordionElementV1Builder(title=" + this.title + ", fields$value=" + this.fields$value + ")";
     }
@@ -79,25 +89,30 @@ public class MediaAccordionElementV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class MediaAccordionElementV1BuilderImpl extends MediaAccordionElementV1.MediaAccordionElementV1Builder<MediaAccordionElementV1, MediaAccordionElementV1.MediaAccordionElementV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private MediaAccordionElementV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected MediaAccordionElementV1.MediaAccordionElementV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public MediaAccordionElementV1 build() {
       return new MediaAccordionElementV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected MediaAccordionElementV1(final MediaAccordionElementV1.MediaAccordionElementV1Builder<?, ?> b) {
     this.title = b.title;
     if (title == null) {
@@ -111,6 +126,7 @@ public class MediaAccordionElementV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static MediaAccordionElementV1.MediaAccordionElementV1Builder<?, ?> builder() {
     return new MediaAccordionElementV1.MediaAccordionElementV1BuilderImpl();
   }
@@ -120,6 +136,7 @@ public class MediaAccordionElementV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTitle() {
     return this.title;
   }
@@ -129,6 +146,7 @@ public class MediaAccordionElementV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<FormFieldV1> getFields() {
     return this.fields;
   }
@@ -137,6 +155,7 @@ public class MediaAccordionElementV1 {
    * Titel des Akkordeon-Elements.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setTitle(@NonNull final String title) {
     if (title == null) {
       throw new NullPointerException("title is marked non-null but is null");
@@ -148,6 +167,7 @@ public class MediaAccordionElementV1 {
    * Formularfelder des Akkordeon-Elements.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setFields(@NonNull final List<FormFieldV1> fields) {
     if (fields == null) {
       throw new NullPointerException("fields is marked non-null but is null");
@@ -157,6 +177,7 @@ public class MediaAccordionElementV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof MediaAccordionElementV1)) return false;
@@ -172,12 +193,14 @@ public class MediaAccordionElementV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof MediaAccordionElementV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -190,11 +213,19 @@ public class MediaAccordionElementV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "MediaAccordionElementV1(title=" + this.getTitle() + ", fields=" + this.getFields() + ")";
   }
 
+  /**
+   * Creates a new {@code MediaAccordionElementV1} instance.
+   *
+   * @param title Titel des Akkordeon-Elements.
+   * @param fields Formularfelder des Akkordeon-Elements.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public MediaAccordionElementV1(@NonNull final String title, @NonNull final List<FormFieldV1> fields) {
     if (title == null) {
       throw new NullPointerException("title is marked non-null but is null");

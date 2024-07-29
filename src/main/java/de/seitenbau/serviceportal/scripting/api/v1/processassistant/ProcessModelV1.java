@@ -24,13 +24,17 @@ public class ProcessModelV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessModelV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String name;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Map<VersionNameV1, List<BpmnModelIdV1>> versions;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessModelV1Builder() {
     }
 
@@ -39,6 +43,7 @@ public class ProcessModelV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessModelV1.ProcessModelV1Builder name(final String name) {
       this.name = name;
       return this;
@@ -50,24 +55,28 @@ public class ProcessModelV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessModelV1.ProcessModelV1Builder versions(final Map<VersionNameV1, List<BpmnModelIdV1>> versions) {
       this.versions = versions;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessModelV1 build() {
       return new ProcessModelV1(this.name, this.versions);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessModelV1.ProcessModelV1Builder(name=" + this.name + ", versions=" + this.versions + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessModelV1.ProcessModelV1Builder builder() {
     return new ProcessModelV1.ProcessModelV1Builder();
   }
@@ -76,6 +85,7 @@ public class ProcessModelV1 {
    * Der Name des Prozessmodels.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getName() {
     return this.name;
   }
@@ -85,6 +95,7 @@ public class ProcessModelV1 {
    * und den Id's der dazugehörigen BPMN Dateien als Value.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Map<VersionNameV1, List<BpmnModelIdV1>> getVersions() {
     return this.versions;
   }
@@ -93,6 +104,7 @@ public class ProcessModelV1 {
    * Der Name des Prozessmodels.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setName(final String name) {
     this.name = name;
   }
@@ -102,12 +114,14 @@ public class ProcessModelV1 {
    * und den Id's der dazugehörigen BPMN Dateien als Value.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setVersions(final Map<VersionNameV1, List<BpmnModelIdV1>> versions) {
     this.versions = versions;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessModelV1)) return false;
@@ -123,12 +137,14 @@ public class ProcessModelV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessModelV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -141,15 +157,25 @@ public class ProcessModelV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessModelV1(name=" + this.getName() + ", versions=" + this.getVersions() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessModelV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessModelV1} instance.
+   *
+   * @param name Der Name des Prozessmodels.
+   * @param versions Eine Map mit den verfügbaren Versionen dieses Prozessmodels als Key
+   * und den Id's der dazugehörigen BPMN Dateien als Value.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessModelV1(final String name, final Map<VersionNameV1, List<BpmnModelIdV1>> versions) {
     this.name = name;
     this.versions = versions;

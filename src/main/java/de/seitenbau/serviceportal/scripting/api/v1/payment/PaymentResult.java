@@ -25,15 +25,20 @@ public class PaymentResult implements Serializable {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class PaymentResultBuilder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private long betrag;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String kassenzeichen;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String bezahlverfahren;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     PaymentResultBuilder() {
     }
 
@@ -42,6 +47,7 @@ public class PaymentResult implements Serializable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentResult.PaymentResultBuilder betrag(final long betrag) {
       this.betrag = betrag;
       return this;
@@ -52,6 +58,7 @@ public class PaymentResult implements Serializable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentResult.PaymentResultBuilder kassenzeichen(final String kassenzeichen) {
       this.kassenzeichen = kassenzeichen;
       return this;
@@ -62,24 +69,28 @@ public class PaymentResult implements Serializable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentResult.PaymentResultBuilder bezahlverfahren(final String bezahlverfahren) {
       this.bezahlverfahren = bezahlverfahren;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentResult build() {
       return new PaymentResult(this.betrag, this.kassenzeichen, this.bezahlverfahren);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "PaymentResult.PaymentResultBuilder(betrag=" + this.betrag + ", kassenzeichen=" + this.kassenzeichen + ", bezahlverfahren=" + this.bezahlverfahren + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static PaymentResult.PaymentResultBuilder builder() {
     return new PaymentResult.PaymentResultBuilder();
   }
@@ -88,6 +99,7 @@ public class PaymentResult implements Serializable {
    * Gezahlter Geldbetrag in Cents.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public long getBetrag() {
     return this.betrag;
   }
@@ -96,6 +108,7 @@ public class PaymentResult implements Serializable {
    * Kassenzeichen der Bezahlung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKassenzeichen() {
     return this.kassenzeichen;
   }
@@ -104,18 +117,21 @@ public class PaymentResult implements Serializable {
    * Bezahlverfahren der Bezahlung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getBezahlverfahren() {
     return this.bezahlverfahren;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "PaymentResult(betrag=" + this.getBetrag() + ", kassenzeichen=" + this.getKassenzeichen() + ", bezahlverfahren=" + this.getBezahlverfahren() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof PaymentResult)) return false;
@@ -132,12 +148,14 @@ public class PaymentResult implements Serializable {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof PaymentResult;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -151,10 +169,19 @@ public class PaymentResult implements Serializable {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public PaymentResult() {
   }
 
+  /**
+   * Creates a new {@code PaymentResult} instance.
+   *
+   * @param betrag Gezahlter Geldbetrag in Cents.
+   * @param kassenzeichen Kassenzeichen der Bezahlung.
+   * @param bezahlverfahren Bezahlverfahren der Bezahlung.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public PaymentResult(final long betrag, final String kassenzeichen, final String bezahlverfahren) {
     this.betrag = betrag;
     this.kassenzeichen = kassenzeichen;

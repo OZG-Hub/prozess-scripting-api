@@ -60,33 +60,47 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class EpayBlPaymentConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String instanz;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String keystore;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String keystoreResource;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String keystoreType;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String keystorePassword;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String mandant;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String bewirtschafter;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String haushaltsstelle;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String objektnummer;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String kennzeichenMahnverfahren;
     @SuppressWarnings("all")
+    @lombok.Generated
     private int frist;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String href;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     EpayBlPaymentConfigV1Builder() {
     }
 
@@ -95,6 +109,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder instanz(final String instanz) {
       this.instanz = instanz;
       return this;
@@ -105,6 +120,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder keystore(final String keystore) {
       this.keystore = keystore;
       return this;
@@ -115,6 +131,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder keystoreResource(final String keystoreResource) {
       this.keystoreResource = keystoreResource;
       return this;
@@ -125,6 +142,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder keystoreType(final String keystoreType) {
       this.keystoreType = keystoreType;
       return this;
@@ -135,6 +153,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder keystorePassword(final String keystorePassword) {
       this.keystorePassword = keystorePassword;
       return this;
@@ -145,6 +164,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder mandant(final String mandant) {
       this.mandant = mandant;
       return this;
@@ -155,6 +175,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder bewirtschafter(final String bewirtschafter) {
       this.bewirtschafter = bewirtschafter;
       return this;
@@ -165,6 +186,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder haushaltsstelle(final String haushaltsstelle) {
       this.haushaltsstelle = haushaltsstelle;
       return this;
@@ -175,6 +197,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder objektnummer(final String objektnummer) {
       this.objektnummer = objektnummer;
       return this;
@@ -185,6 +208,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder kennzeichenMahnverfahren(final String kennzeichenMahnverfahren) {
       this.kennzeichenMahnverfahren = kennzeichenMahnverfahren;
       return this;
@@ -195,6 +219,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder frist(final int frist) {
       this.frist = frist;
       return this;
@@ -205,24 +230,28 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder href(final String href) {
       this.href = href;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public EpayBlPaymentConfigV1 build() {
       return new EpayBlPaymentConfigV1(this.instanz, this.keystore, this.keystoreResource, this.keystoreType, this.keystorePassword, this.mandant, this.bewirtschafter, this.haushaltsstelle, this.objektnummer, this.kennzeichenMahnverfahren, this.frist, this.href);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder(instanz=" + this.instanz + ", keystore=" + this.keystore + ", keystoreResource=" + this.keystoreResource + ", keystoreType=" + this.keystoreType + ", keystorePassword=" + this.keystorePassword + ", mandant=" + this.mandant + ", bewirtschafter=" + this.bewirtschafter + ", haushaltsstelle=" + this.haushaltsstelle + ", objektnummer=" + this.objektnummer + ", kennzeichenMahnverfahren=" + this.kennzeichenMahnverfahren + ", frist=" + this.frist + ", href=" + this.href + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder builder() {
     return new EpayBlPaymentConfigV1.EpayBlPaymentConfigV1Builder();
   }
@@ -231,6 +260,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Provider. Hat den Wert "epaybl".
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getProvider() {
     return this.provider;
   }
@@ -239,6 +269,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * ePayBL-Instanz die verwendet werden soll.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getInstanz() {
     return this.instanz;
   }
@@ -247,6 +278,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Base64-kodierte String-Repräsentation des byte-Arrays des Keystores.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKeystore() {
     return this.keystore;
   }
@@ -255,6 +287,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Pfad zum Keystore im Deployment.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKeystoreResource() {
     return this.keystoreResource;
   }
@@ -263,6 +296,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Typ des Keystores.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKeystoreType() {
     return this.keystoreType;
   }
@@ -271,6 +305,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Passwort des Keystores.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKeystorePassword() {
     return this.keystorePassword;
   }
@@ -279,6 +314,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Mandantennummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getMandant() {
     return this.mandant;
   }
@@ -287,6 +323,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Bewirtschafternummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getBewirtschafter() {
     return this.bewirtschafter;
   }
@@ -295,6 +332,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Haushaltsstellennummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getHaushaltsstelle() {
     return this.haushaltsstelle;
   }
@@ -303,6 +341,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Objektnummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getObjektnummer() {
     return this.objektnummer;
   }
@@ -311,6 +350,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Kennzeichen fürs Mahnverfahren.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKennzeichenMahnverfahren() {
     return this.kennzeichenMahnverfahren;
   }
@@ -319,6 +359,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Enthält die Zahlungsfrist in Tagen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public int getFrist() {
     return this.frist;
   }
@@ -327,6 +368,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Haushaltsreferenz. Wird nur für die Instanz für NRW benötigt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getHref() {
     return this.href;
   }
@@ -335,6 +377,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * ePayBL-Instanz die verwendet werden soll.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setInstanz(final String instanz) {
     this.instanz = instanz;
   }
@@ -343,6 +386,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Base64-kodierte String-Repräsentation des byte-Arrays des Keystores.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setKeystore(final String keystore) {
     this.keystore = keystore;
   }
@@ -351,6 +395,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Pfad zum Keystore im Deployment.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setKeystoreResource(final String keystoreResource) {
     this.keystoreResource = keystoreResource;
   }
@@ -359,6 +404,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Typ des Keystores.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setKeystoreType(final String keystoreType) {
     this.keystoreType = keystoreType;
   }
@@ -367,6 +413,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Passwort des Keystores.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setKeystorePassword(final String keystorePassword) {
     this.keystorePassword = keystorePassword;
   }
@@ -375,6 +422,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Mandantennummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMandant(final String mandant) {
     this.mandant = mandant;
   }
@@ -383,6 +431,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Bewirtschafternummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setBewirtschafter(final String bewirtschafter) {
     this.bewirtschafter = bewirtschafter;
   }
@@ -391,6 +440,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Haushaltsstellennummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setHaushaltsstelle(final String haushaltsstelle) {
     this.haushaltsstelle = haushaltsstelle;
   }
@@ -399,6 +449,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Objektnummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setObjektnummer(final String objektnummer) {
     this.objektnummer = objektnummer;
   }
@@ -407,6 +458,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Kennzeichen fürs Mahnverfahren.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setKennzeichenMahnverfahren(final String kennzeichenMahnverfahren) {
     this.kennzeichenMahnverfahren = kennzeichenMahnverfahren;
   }
@@ -415,6 +467,7 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Enthält die Zahlungsfrist in Tagen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setFrist(final int frist) {
     this.frist = frist;
   }
@@ -423,12 +476,14 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
    * Haushaltsreferenz. Wird nur für die Instanz für NRW benötigt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setHref(final String href) {
     this.href = href;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof EpayBlPaymentConfigV1)) return false;
@@ -475,12 +530,14 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof EpayBlPaymentConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -514,15 +571,34 @@ public class EpayBlPaymentConfigV1 implements PaymentConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "EpayBlPaymentConfigV1(provider=" + this.getProvider() + ", instanz=" + this.getInstanz() + ", keystore=" + this.getKeystore() + ", keystoreResource=" + this.getKeystoreResource() + ", keystoreType=" + this.getKeystoreType() + ", keystorePassword=" + this.getKeystorePassword() + ", mandant=" + this.getMandant() + ", bewirtschafter=" + this.getBewirtschafter() + ", haushaltsstelle=" + this.getHaushaltsstelle() + ", objektnummer=" + this.getObjektnummer() + ", kennzeichenMahnverfahren=" + this.getKennzeichenMahnverfahren() + ", frist=" + this.getFrist() + ", href=" + this.getHref() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public EpayBlPaymentConfigV1() {
   }
 
+  /**
+   * Creates a new {@code EpayBlPaymentConfigV1} instance.
+   *
+   * @param instanz ePayBL-Instanz die verwendet werden soll.
+   * @param keystore Base64-kodierte String-Repräsentation des byte-Arrays des Keystores.
+   * @param keystoreResource Pfad zum Keystore im Deployment.
+   * @param keystoreType Typ des Keystores.
+   * @param keystorePassword Passwort des Keystores.
+   * @param mandant Mandantennummer.
+   * @param bewirtschafter Bewirtschafternummer.
+   * @param haushaltsstelle Haushaltsstellennummer.
+   * @param objektnummer Objektnummer.
+   * @param kennzeichenMahnverfahren Kennzeichen fürs Mahnverfahren.
+   * @param frist Enthält die Zahlungsfrist in Tagen.
+   * @param href Haushaltsreferenz. Wird nur für die Instanz für NRW benötigt.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public EpayBlPaymentConfigV1(final String instanz, final String keystore, final String keystoreResource, final String keystoreType, final String keystorePassword, final String mandant, final String bewirtschafter, final String haushaltsstelle, final String objektnummer, final String kennzeichenMahnverfahren, final int frist, final String href) {
     this.instanz = instanz;
     this.keystore = keystore;

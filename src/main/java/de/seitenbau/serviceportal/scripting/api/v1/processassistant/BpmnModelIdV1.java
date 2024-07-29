@@ -6,11 +6,14 @@ public class BpmnModelIdV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class BpmnModelIdV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String id;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     BpmnModelIdV1Builder() {
     }
 
@@ -18,40 +21,47 @@ public class BpmnModelIdV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public BpmnModelIdV1.BpmnModelIdV1Builder id(final String id) {
       this.id = id;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public BpmnModelIdV1 build() {
       return new BpmnModelIdV1(this.id);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "BpmnModelIdV1.BpmnModelIdV1Builder(id=" + this.id + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static BpmnModelIdV1.BpmnModelIdV1Builder builder() {
     return new BpmnModelIdV1.BpmnModelIdV1Builder();
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getId() {
     return this.id;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setId(final String id) {
     this.id = id;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof BpmnModelIdV1)) return false;
@@ -64,12 +74,14 @@ public class BpmnModelIdV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof BpmnModelIdV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -80,15 +92,18 @@ public class BpmnModelIdV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "BpmnModelIdV1(id=" + this.getId() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public BpmnModelIdV1() {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public BpmnModelIdV1(final String id) {
     this.id = id;
   }

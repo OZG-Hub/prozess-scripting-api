@@ -16,13 +16,17 @@ public class NachrichtAbsenderV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class NachrichtAbsenderV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Long servicekontoId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String name;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     NachrichtAbsenderV1Builder() {
     }
 
@@ -31,6 +35,7 @@ public class NachrichtAbsenderV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public NachrichtAbsenderV1.NachrichtAbsenderV1Builder servicekontoId(final Long servicekontoId) {
       this.servicekontoId = servicekontoId;
       return this;
@@ -41,24 +46,28 @@ public class NachrichtAbsenderV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public NachrichtAbsenderV1.NachrichtAbsenderV1Builder name(final String name) {
       this.name = name;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public NachrichtAbsenderV1 build() {
       return new NachrichtAbsenderV1(this.servicekontoId, this.name);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "NachrichtAbsenderV1.NachrichtAbsenderV1Builder(servicekontoId=" + this.servicekontoId + ", name=" + this.name + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static NachrichtAbsenderV1.NachrichtAbsenderV1Builder builder() {
     return new NachrichtAbsenderV1.NachrichtAbsenderV1Builder();
   }
@@ -67,6 +76,7 @@ public class NachrichtAbsenderV1 {
    * ID des Servicekontos.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Long getServicekontoId() {
     return this.servicekontoId;
   }
@@ -75,18 +85,21 @@ public class NachrichtAbsenderV1 {
    * Name des Absenders.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getName() {
     return this.name;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "NachrichtAbsenderV1(servicekontoId=" + this.getServicekontoId() + ", name=" + this.getName() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof NachrichtAbsenderV1)) return false;
@@ -102,12 +115,14 @@ public class NachrichtAbsenderV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof NachrichtAbsenderV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -119,10 +134,18 @@ public class NachrichtAbsenderV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public NachrichtAbsenderV1() {
   }
 
+  /**
+   * Creates a new {@code NachrichtAbsenderV1} instance.
+   *
+   * @param servicekontoId ID des Servicekontos.
+   * @param name Name des Absenders.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public NachrichtAbsenderV1(final Long servicekontoId, final String name) {
     this.servicekontoId = servicekontoId;
     this.name = name;

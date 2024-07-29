@@ -35,21 +35,29 @@ public class CustomButtonV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class CustomButtonV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String label;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String helptext;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean primary;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean wasPressed;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean skipValidation;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     CustomButtonV1Builder() {
     }
 
@@ -58,6 +66,7 @@ public class CustomButtonV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public CustomButtonV1.CustomButtonV1Builder label(final String label) {
       this.label = label;
       return this;
@@ -69,6 +78,7 @@ public class CustomButtonV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public CustomButtonV1.CustomButtonV1Builder value(final String value) {
       this.value = value;
       return this;
@@ -79,6 +89,7 @@ public class CustomButtonV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public CustomButtonV1.CustomButtonV1Builder helptext(final String helptext) {
       this.helptext = helptext;
       return this;
@@ -90,6 +101,7 @@ public class CustomButtonV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public CustomButtonV1.CustomButtonV1Builder primary(final Boolean primary) {
       this.primary = primary;
       return this;
@@ -100,6 +112,7 @@ public class CustomButtonV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public CustomButtonV1.CustomButtonV1Builder wasPressed(final boolean wasPressed) {
       this.wasPressed = wasPressed;
       return this;
@@ -111,24 +124,28 @@ public class CustomButtonV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public CustomButtonV1.CustomButtonV1Builder skipValidation(final boolean skipValidation) {
       this.skipValidation = skipValidation;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public CustomButtonV1 build() {
       return new CustomButtonV1(this.label, this.value, this.helptext, this.primary, this.wasPressed, this.skipValidation);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "CustomButtonV1.CustomButtonV1Builder(label=" + this.label + ", value=" + this.value + ", helptext=" + this.helptext + ", primary=" + this.primary + ", wasPressed=" + this.wasPressed + ", skipValidation=" + this.skipValidation + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static CustomButtonV1.CustomButtonV1Builder builder() {
     return new CustomButtonV1.CustomButtonV1Builder();
   }
@@ -137,6 +154,7 @@ public class CustomButtonV1 {
    * Angezeigter Text im Button.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getLabel() {
     return this.label;
   }
@@ -146,6 +164,7 @@ public class CustomButtonV1 {
    * Prozessinstanzvariable geschrieben.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getValue() {
     return this.value;
   }
@@ -154,6 +173,7 @@ public class CustomButtonV1 {
    * Text für den Tooltip, der beim Mouseover über den Button angezeigt wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getHelptext() {
     return this.helptext;
   }
@@ -163,6 +183,7 @@ public class CustomButtonV1 {
    * {@code null}. Default ist {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getPrimary() {
     return this.primary;
   }
@@ -171,6 +192,7 @@ public class CustomButtonV1 {
    * {@code true}, wenn der Button zum Submit gedrückt wurde. Sonst {@code false}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean isWasPressed() {
     return this.wasPressed;
   }
@@ -180,6 +202,7 @@ public class CustomButtonV1 {
    * {@code false}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean isSkipValidation() {
     return this.skipValidation;
   }
@@ -188,6 +211,7 @@ public class CustomButtonV1 {
    * Angezeigter Text im Button.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setLabel(final String label) {
     this.label = label;
   }
@@ -197,6 +221,7 @@ public class CustomButtonV1 {
    * Prozessinstanzvariable geschrieben.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValue(final String value) {
     this.value = value;
   }
@@ -205,6 +230,7 @@ public class CustomButtonV1 {
    * Text für den Tooltip, der beim Mouseover über den Button angezeigt wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setHelptext(final String helptext) {
     this.helptext = helptext;
   }
@@ -214,6 +240,7 @@ public class CustomButtonV1 {
    * {@code null}. Default ist {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPrimary(final Boolean primary) {
     this.primary = primary;
   }
@@ -222,6 +249,7 @@ public class CustomButtonV1 {
    * {@code true}, wenn der Button zum Submit gedrückt wurde. Sonst {@code false}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setWasPressed(final boolean wasPressed) {
     this.wasPressed = wasPressed;
   }
@@ -231,12 +259,14 @@ public class CustomButtonV1 {
    * {@code false}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSkipValidation(final boolean skipValidation) {
     this.skipValidation = skipValidation;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof CustomButtonV1)) return false;
@@ -260,12 +290,14 @@ public class CustomButtonV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof CustomButtonV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -284,15 +316,31 @@ public class CustomButtonV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "CustomButtonV1(label=" + this.getLabel() + ", value=" + this.getValue() + ", helptext=" + this.getHelptext() + ", primary=" + this.getPrimary() + ", wasPressed=" + this.isWasPressed() + ", skipValidation=" + this.isSkipValidation() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public CustomButtonV1() {
   }
 
+  /**
+   * Creates a new {@code CustomButtonV1} instance.
+   *
+   * @param label Angezeigter Text im Button.
+   * @param value Wert des Buttons. Dieser Wert wird, wenn der Button geklickt wird, in die verknüpfte
+   * Prozessinstanzvariable geschrieben.
+   * @param helptext Text für den Tooltip, der beim Mouseover über den Button angezeigt wird.
+   * @param primary {@code true}, wenn der Button hervorgehoben dargestellt werden soll. Sonst {@code false} oder
+   * {@code null}. Default ist {@code null}.
+   * @param wasPressed {@code true}, wenn der Button zum Submit gedrückt wurde. Sonst {@code false}.
+   * @param skipValidation {@code true}, wenn beim Submit die Validierung der Eingaben des Formulars unterdrückt werden soll. Sonst
+   * {@code false}.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   private CustomButtonV1(final String label, final String value, final String helptext, final Boolean primary, final boolean wasPressed, final boolean skipValidation) {
     this.label = label;
     this.value = value;

@@ -19,30 +19,36 @@ public class AdditionalKfzUeberfuehrungsKennzeichenConfigV1 implements Additiona
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class AdditionalKfzUeberfuehrungsKennzeichenConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     AdditionalKfzUeberfuehrungsKennzeichenConfigV1Builder() {
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalKfzUeberfuehrungsKennzeichenConfigV1 build() {
       return new AdditionalKfzUeberfuehrungsKennzeichenConfigV1();
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "AdditionalKfzUeberfuehrungsKennzeichenConfigV1.AdditionalKfzUeberfuehrungsKennzeichenConfigV1Builder()";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static AdditionalKfzUeberfuehrungsKennzeichenConfigV1.AdditionalKfzUeberfuehrungsKennzeichenConfigV1Builder builder() {
     return new AdditionalKfzUeberfuehrungsKennzeichenConfigV1.AdditionalKfzUeberfuehrungsKennzeichenConfigV1Builder();
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof AdditionalKfzUeberfuehrungsKennzeichenConfigV1)) return false;
@@ -52,12 +58,14 @@ public class AdditionalKfzUeberfuehrungsKennzeichenConfigV1 implements Additiona
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof AdditionalKfzUeberfuehrungsKennzeichenConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int result = 1;
     return result;
@@ -65,11 +73,13 @@ public class AdditionalKfzUeberfuehrungsKennzeichenConfigV1 implements Additiona
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "AdditionalKfzUeberfuehrungsKennzeichenConfigV1()";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public AdditionalKfzUeberfuehrungsKennzeichenConfigV1() {
   }
 }

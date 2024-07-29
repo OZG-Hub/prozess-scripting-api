@@ -14,11 +14,14 @@ public class LeistungParameterV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class LeistungParameterV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String id;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     LeistungParameterV1Builder() {
     }
 
@@ -27,24 +30,28 @@ public class LeistungParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public LeistungParameterV1.LeistungParameterV1Builder id(final String id) {
       this.id = id;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public LeistungParameterV1 build() {
       return new LeistungParameterV1(this.id);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "LeistungParameterV1.LeistungParameterV1Builder(id=" + this.id + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static LeistungParameterV1.LeistungParameterV1Builder builder() {
     return new LeistungParameterV1.LeistungParameterV1Builder();
   }
@@ -53,18 +60,21 @@ public class LeistungParameterV1 {
    * ID der Leistung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getId() {
     return this.id;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "LeistungParameterV1(id=" + this.getId() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof LeistungParameterV1)) return false;
@@ -77,12 +87,14 @@ public class LeistungParameterV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof LeistungParameterV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -92,10 +104,17 @@ public class LeistungParameterV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public LeistungParameterV1() {
   }
 
+  /**
+   * Creates a new {@code LeistungParameterV1} instance.
+   *
+   * @param id ID der Leistung.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public LeistungParameterV1(final String id) {
     this.id = id;
   }

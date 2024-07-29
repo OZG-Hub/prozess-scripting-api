@@ -29,7 +29,15 @@ public class AdditionalVideoConfigV1 implements AdditionalFieldConfigV1 {
     }
   }
 
+  /**
+   * Creates a new {@code AdditionalVideoConfigV1} instance.
+   *
+   * @param url URL zum Video.
+   * @param subtitleUrl URL zum Untertitel des Videos.
+   * @param caption Videounterschrift.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   AdditionalVideoConfigV1(final String url, final String subtitleUrl, final String caption) {
     this.url = url;
     this.subtitleUrl = subtitleUrl;
@@ -38,15 +46,20 @@ public class AdditionalVideoConfigV1 implements AdditionalFieldConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class AdditionalVideoConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String url;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String subtitleUrl;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String caption;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     AdditionalVideoConfigV1Builder() {
     }
 
@@ -55,6 +68,7 @@ public class AdditionalVideoConfigV1 implements AdditionalFieldConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalVideoConfigV1.AdditionalVideoConfigV1Builder url(final String url) {
       this.url = url;
       return this;
@@ -65,6 +79,7 @@ public class AdditionalVideoConfigV1 implements AdditionalFieldConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalVideoConfigV1.AdditionalVideoConfigV1Builder subtitleUrl(final String subtitleUrl) {
       this.subtitleUrl = subtitleUrl;
       return this;
@@ -75,24 +90,28 @@ public class AdditionalVideoConfigV1 implements AdditionalFieldConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalVideoConfigV1.AdditionalVideoConfigV1Builder caption(final String caption) {
       this.caption = caption;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalVideoConfigV1 build() {
       return new AdditionalVideoConfigV1(this.url, this.subtitleUrl, this.caption);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "AdditionalVideoConfigV1.AdditionalVideoConfigV1Builder(url=" + this.url + ", subtitleUrl=" + this.subtitleUrl + ", caption=" + this.caption + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static AdditionalVideoConfigV1.AdditionalVideoConfigV1Builder builder() {
     return new AdditionalVideoConfigV1.AdditionalVideoConfigV1Builder();
   }
@@ -101,6 +120,7 @@ public class AdditionalVideoConfigV1 implements AdditionalFieldConfigV1 {
    * URL zum Video.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getUrl() {
     return this.url;
   }
@@ -109,6 +129,7 @@ public class AdditionalVideoConfigV1 implements AdditionalFieldConfigV1 {
    * URL zum Untertitel des Videos.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSubtitleUrl() {
     return this.subtitleUrl;
   }
@@ -117,6 +138,7 @@ public class AdditionalVideoConfigV1 implements AdditionalFieldConfigV1 {
    * Videounterschrift.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getCaption() {
     return this.caption;
   }
@@ -125,6 +147,7 @@ public class AdditionalVideoConfigV1 implements AdditionalFieldConfigV1 {
    * URL zum Video.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setUrl(final String url) {
     this.url = url;
   }
@@ -133,6 +156,7 @@ public class AdditionalVideoConfigV1 implements AdditionalFieldConfigV1 {
    * URL zum Untertitel des Videos.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSubtitleUrl(final String subtitleUrl) {
     this.subtitleUrl = subtitleUrl;
   }
@@ -141,12 +165,14 @@ public class AdditionalVideoConfigV1 implements AdditionalFieldConfigV1 {
    * Videounterschrift.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setCaption(final String caption) {
     this.caption = caption;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof AdditionalVideoConfigV1)) return false;
@@ -165,12 +191,14 @@ public class AdditionalVideoConfigV1 implements AdditionalFieldConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof AdditionalVideoConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -185,6 +213,7 @@ public class AdditionalVideoConfigV1 implements AdditionalFieldConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "AdditionalVideoConfigV1(url=" + this.getUrl() + ", subtitleUrl=" + this.getSubtitleUrl() + ", caption=" + this.getCaption() + ")";
   }

@@ -32,19 +32,26 @@ public class OrganisationseinheitParameterV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class OrganisationseinheitParameterV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String id;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String name;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<String> internetadressen;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<OrganisationseinheitAnschriftParameterV1> anschriften;
     @SuppressWarnings("all")
+    @lombok.Generated
     private OrganisationseinheitKontaktParameterV1 erreichbarkeit;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     OrganisationseinheitParameterV1Builder() {
     }
 
@@ -53,6 +60,7 @@ public class OrganisationseinheitParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitParameterV1.OrganisationseinheitParameterV1Builder id(final String id) {
       this.id = id;
       return this;
@@ -63,6 +71,7 @@ public class OrganisationseinheitParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitParameterV1.OrganisationseinheitParameterV1Builder name(final String name) {
       this.name = name;
       return this;
@@ -73,6 +82,7 @@ public class OrganisationseinheitParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitParameterV1.OrganisationseinheitParameterV1Builder internetadressen(final List<String> internetadressen) {
       this.internetadressen = internetadressen;
       return this;
@@ -83,6 +93,7 @@ public class OrganisationseinheitParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitParameterV1.OrganisationseinheitParameterV1Builder anschriften(final List<OrganisationseinheitAnschriftParameterV1> anschriften) {
       this.anschriften = anschriften;
       return this;
@@ -93,24 +104,28 @@ public class OrganisationseinheitParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitParameterV1.OrganisationseinheitParameterV1Builder erreichbarkeit(final OrganisationseinheitKontaktParameterV1 erreichbarkeit) {
       this.erreichbarkeit = erreichbarkeit;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitParameterV1 build() {
       return new OrganisationseinheitParameterV1(this.id, this.name, this.internetadressen, this.anschriften, this.erreichbarkeit);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "OrganisationseinheitParameterV1.OrganisationseinheitParameterV1Builder(id=" + this.id + ", name=" + this.name + ", internetadressen=" + this.internetadressen + ", anschriften=" + this.anschriften + ", erreichbarkeit=" + this.erreichbarkeit + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static OrganisationseinheitParameterV1.OrganisationseinheitParameterV1Builder builder() {
     return new OrganisationseinheitParameterV1.OrganisationseinheitParameterV1Builder();
   }
@@ -119,6 +134,7 @@ public class OrganisationseinheitParameterV1 {
    * ID der Organisationseinheit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getId() {
     return this.id;
   }
@@ -127,6 +143,7 @@ public class OrganisationseinheitParameterV1 {
    * Name der Organisationseinheit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getName() {
     return this.name;
   }
@@ -135,6 +152,7 @@ public class OrganisationseinheitParameterV1 {
    * URLs zu Webseiten der Organisationseinheit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<String> getInternetadressen() {
     return this.internetadressen;
   }
@@ -143,6 +161,7 @@ public class OrganisationseinheitParameterV1 {
    * Anschriften der Organisationseinheit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<OrganisationseinheitAnschriftParameterV1> getAnschriften() {
     return this.anschriften;
   }
@@ -151,18 +170,21 @@ public class OrganisationseinheitParameterV1 {
    * Kontaktdaten der Organisationseinheit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public OrganisationseinheitKontaktParameterV1 getErreichbarkeit() {
     return this.erreichbarkeit;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "OrganisationseinheitParameterV1(id=" + this.getId() + ", name=" + this.getName() + ", internetadressen=" + this.getInternetadressen() + ", anschriften=" + this.getAnschriften() + ", erreichbarkeit=" + this.getErreichbarkeit() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof OrganisationseinheitParameterV1)) return false;
@@ -187,12 +209,14 @@ public class OrganisationseinheitParameterV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof OrganisationseinheitParameterV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -210,10 +234,21 @@ public class OrganisationseinheitParameterV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public OrganisationseinheitParameterV1() {
   }
 
+  /**
+   * Creates a new {@code OrganisationseinheitParameterV1} instance.
+   *
+   * @param id ID der Organisationseinheit.
+   * @param name Name der Organisationseinheit.
+   * @param internetadressen URLs zu Webseiten der Organisationseinheit.
+   * @param anschriften Anschriften der Organisationseinheit.
+   * @param erreichbarkeit Kontaktdaten der Organisationseinheit.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public OrganisationseinheitParameterV1(final String id, final String name, final List<String> internetadressen, final List<OrganisationseinheitAnschriftParameterV1> anschriften, final OrganisationseinheitKontaktParameterV1 erreichbarkeit) {
     this.id = id;
     this.name = name;

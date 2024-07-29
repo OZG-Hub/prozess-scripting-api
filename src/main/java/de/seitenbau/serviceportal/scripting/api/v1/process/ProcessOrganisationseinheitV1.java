@@ -47,27 +47,38 @@ public class ProcessOrganisationseinheitV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessOrganisationseinheitV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Long id;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String mandant;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Long parentId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean behoerde;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<ProcessOrganisationseinheitAnschriftV1> anschrift;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<ProcessOrganisationseinheitI18nV1> i18n;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<ProcessOrganisationseinheitAnschriftV1> zugehoerigeBehoerdeAnschrift;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1> zugehoerigeBehoerde;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<ProcessOrganisationseinheitKommunikationV1> kommunikation;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessOrganisationseinheitV1Builder() {
     }
 
@@ -76,6 +87,7 @@ public class ProcessOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitV1.ProcessOrganisationseinheitV1Builder id(final Long id) {
       this.id = id;
       return this;
@@ -86,6 +98,7 @@ public class ProcessOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitV1.ProcessOrganisationseinheitV1Builder mandant(final String mandant) {
       this.mandant = mandant;
       return this;
@@ -96,6 +109,7 @@ public class ProcessOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitV1.ProcessOrganisationseinheitV1Builder parentId(final Long parentId) {
       this.parentId = parentId;
       return this;
@@ -106,6 +120,7 @@ public class ProcessOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitV1.ProcessOrganisationseinheitV1Builder behoerde(final Boolean behoerde) {
       this.behoerde = behoerde;
       return this;
@@ -116,6 +131,7 @@ public class ProcessOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitV1.ProcessOrganisationseinheitV1Builder anschrift(final Set<ProcessOrganisationseinheitAnschriftV1> anschrift) {
       this.anschrift = anschrift;
       return this;
@@ -126,6 +142,7 @@ public class ProcessOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitV1.ProcessOrganisationseinheitV1Builder i18n(final Set<ProcessOrganisationseinheitI18nV1> i18n) {
       this.i18n = i18n;
       return this;
@@ -136,6 +153,7 @@ public class ProcessOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitV1.ProcessOrganisationseinheitV1Builder zugehoerigeBehoerdeAnschrift(final Set<ProcessOrganisationseinheitAnschriftV1> zugehoerigeBehoerdeAnschrift) {
       this.zugehoerigeBehoerdeAnschrift = zugehoerigeBehoerdeAnschrift;
       return this;
@@ -146,6 +164,7 @@ public class ProcessOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitV1.ProcessOrganisationseinheitV1Builder zugehoerigeBehoerde(final Set<ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1> zugehoerigeBehoerde) {
       this.zugehoerigeBehoerde = zugehoerigeBehoerde;
       return this;
@@ -157,24 +176,28 @@ public class ProcessOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitV1.ProcessOrganisationseinheitV1Builder kommunikation(final Set<ProcessOrganisationseinheitKommunikationV1> kommunikation) {
       this.kommunikation = kommunikation;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitV1 build() {
       return new ProcessOrganisationseinheitV1(this.id, this.mandant, this.parentId, this.behoerde, this.anschrift, this.i18n, this.zugehoerigeBehoerdeAnschrift, this.zugehoerigeBehoerde, this.kommunikation);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessOrganisationseinheitV1.ProcessOrganisationseinheitV1Builder(id=" + this.id + ", mandant=" + this.mandant + ", parentId=" + this.parentId + ", behoerde=" + this.behoerde + ", anschrift=" + this.anschrift + ", i18n=" + this.i18n + ", zugehoerigeBehoerdeAnschrift=" + this.zugehoerigeBehoerdeAnschrift + ", zugehoerigeBehoerde=" + this.zugehoerigeBehoerde + ", kommunikation=" + this.kommunikation + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessOrganisationseinheitV1.ProcessOrganisationseinheitV1Builder builder() {
     return new ProcessOrganisationseinheitV1.ProcessOrganisationseinheitV1Builder();
   }
@@ -183,6 +206,7 @@ public class ProcessOrganisationseinheitV1 {
    * ID der OE.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Long getId() {
     return this.id;
   }
@@ -191,6 +215,7 @@ public class ProcessOrganisationseinheitV1 {
    * ID des Mandanten, dem diese OE zugeordnet ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getMandant() {
     return this.mandant;
   }
@@ -199,6 +224,7 @@ public class ProcessOrganisationseinheitV1 {
    * ID der übergeordneten OE.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Long getParentId() {
     return this.parentId;
   }
@@ -207,6 +233,7 @@ public class ProcessOrganisationseinheitV1 {
    * {@code true}, falls diese OE eine Behörde ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getBehoerde() {
     return this.behoerde;
   }
@@ -215,6 +242,7 @@ public class ProcessOrganisationseinheitV1 {
    * Anschriften der OE, z.B. Besuchsanschrift oder Postanschrift.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<ProcessOrganisationseinheitAnschriftV1> getAnschrift() {
     return this.anschrift;
   }
@@ -223,6 +251,7 @@ public class ProcessOrganisationseinheitV1 {
    * Internationalisierter Teil des OE-Objekts. Die OE hat genau einen deutschen Namen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<ProcessOrganisationseinheitI18nV1> getI18n() {
     return this.i18n;
   }
@@ -231,6 +260,7 @@ public class ProcessOrganisationseinheitV1 {
    * Zur OE zugehörige Behörden.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<ProcessOrganisationseinheitAnschriftV1> getZugehoerigeBehoerdeAnschrift() {
     return this.zugehoerigeBehoerdeAnschrift;
   }
@@ -239,6 +269,7 @@ public class ProcessOrganisationseinheitV1 {
    * Internationalisierter Teil der zur OE zugehörigen Behörden.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1> getZugehoerigeBehoerde() {
     return this.zugehoerigeBehoerde;
   }
@@ -248,18 +279,21 @@ public class ProcessOrganisationseinheitV1 {
    * In der Regel verbirgt sich hinter jedem Kommunikationskanal eine Person.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<ProcessOrganisationseinheitKommunikationV1> getKommunikation() {
     return this.kommunikation;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessOrganisationseinheitV1(id=" + this.getId() + ", mandant=" + this.getMandant() + ", parentId=" + this.getParentId() + ", behoerde=" + this.getBehoerde() + ", anschrift=" + this.getAnschrift() + ", i18n=" + this.getI18n() + ", zugehoerigeBehoerdeAnschrift=" + this.getZugehoerigeBehoerdeAnschrift() + ", zugehoerigeBehoerde=" + this.getZugehoerigeBehoerde() + ", kommunikation=" + this.getKommunikation() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessOrganisationseinheitV1)) return false;
@@ -296,12 +330,14 @@ public class ProcessOrganisationseinheitV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessOrganisationseinheitV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -327,10 +363,26 @@ public class ProcessOrganisationseinheitV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessOrganisationseinheitV1} instance.
+   *
+   * @param id ID der OE.
+   * @param mandant ID des Mandanten, dem diese OE zugeordnet ist.
+   * @param parentId ID der übergeordneten OE.
+   * @param behoerde {@code true}, falls diese OE eine Behörde ist.
+   * @param anschrift Anschriften der OE, z.B. Besuchsanschrift oder Postanschrift.
+   * @param i18n Internationalisierter Teil des OE-Objekts. Die OE hat genau einen deutschen Namen.
+   * @param zugehoerigeBehoerdeAnschrift Zur OE zugehörige Behörden.
+   * @param zugehoerigeBehoerde Internationalisierter Teil der zur OE zugehörigen Behörden.
+   * @param kommunikation Zu dieser OE zugeordnete Kommunikationskanäle.
+   * In der Regel verbirgt sich hinter jedem Kommunikationskanal eine Person.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitV1(final Long id, final String mandant, final Long parentId, final Boolean behoerde, final Set<ProcessOrganisationseinheitAnschriftV1> anschrift, final Set<ProcessOrganisationseinheitI18nV1> i18n, final Set<ProcessOrganisationseinheitAnschriftV1> zugehoerigeBehoerdeAnschrift, final Set<ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1> zugehoerigeBehoerde, final Set<ProcessOrganisationseinheitKommunikationV1> kommunikation) {
     this.id = id;
     this.mandant = mandant;

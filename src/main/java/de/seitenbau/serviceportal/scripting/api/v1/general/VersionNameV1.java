@@ -6,11 +6,14 @@ public class VersionNameV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class VersionNameV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String name;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     VersionNameV1Builder() {
     }
 
@@ -18,40 +21,47 @@ public class VersionNameV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public VersionNameV1.VersionNameV1Builder name(final String name) {
       this.name = name;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public VersionNameV1 build() {
       return new VersionNameV1(this.name);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "VersionNameV1.VersionNameV1Builder(name=" + this.name + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static VersionNameV1.VersionNameV1Builder builder() {
     return new VersionNameV1.VersionNameV1Builder();
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getName() {
     return this.name;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setName(final String name) {
     this.name = name;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof VersionNameV1)) return false;
@@ -64,12 +74,14 @@ public class VersionNameV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof VersionNameV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -80,15 +92,18 @@ public class VersionNameV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "VersionNameV1(name=" + this.getName() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public VersionNameV1() {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public VersionNameV1(final String name) {
     this.name = name;
   }

@@ -22,15 +22,20 @@ public class ProcessOrganisationseinheitSearchIndexEntryV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessOrganisationseinheitSearchIndexEntryV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String title;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String preamble;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Collection<ProcessOrganisationseinheitSectionV1> sections;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessOrganisationseinheitSearchIndexEntryV1Builder() {
     }
 
@@ -39,6 +44,7 @@ public class ProcessOrganisationseinheitSearchIndexEntryV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitSearchIndexEntryV1.ProcessOrganisationseinheitSearchIndexEntryV1Builder title(final String title) {
       this.title = title;
       return this;
@@ -49,6 +55,7 @@ public class ProcessOrganisationseinheitSearchIndexEntryV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitSearchIndexEntryV1.ProcessOrganisationseinheitSearchIndexEntryV1Builder preamble(final String preamble) {
       this.preamble = preamble;
       return this;
@@ -59,24 +66,28 @@ public class ProcessOrganisationseinheitSearchIndexEntryV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitSearchIndexEntryV1.ProcessOrganisationseinheitSearchIndexEntryV1Builder sections(final Collection<ProcessOrganisationseinheitSectionV1> sections) {
       this.sections = sections;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitSearchIndexEntryV1 build() {
       return new ProcessOrganisationseinheitSearchIndexEntryV1(this.title, this.preamble, this.sections);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessOrganisationseinheitSearchIndexEntryV1.ProcessOrganisationseinheitSearchIndexEntryV1Builder(title=" + this.title + ", preamble=" + this.preamble + ", sections=" + this.sections + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessOrganisationseinheitSearchIndexEntryV1.ProcessOrganisationseinheitSearchIndexEntryV1Builder builder() {
     return new ProcessOrganisationseinheitSearchIndexEntryV1.ProcessOrganisationseinheitSearchIndexEntryV1Builder();
   }
@@ -85,6 +96,7 @@ public class ProcessOrganisationseinheitSearchIndexEntryV1 {
    * Titel des Sucheintrags.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTitle() {
     return this.title;
   }
@@ -93,6 +105,7 @@ public class ProcessOrganisationseinheitSearchIndexEntryV1 {
    * Einleitung des Sucheintrags.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPreamble() {
     return this.preamble;
   }
@@ -101,18 +114,21 @@ public class ProcessOrganisationseinheitSearchIndexEntryV1 {
    * Abschnitte des Sucheintrags.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Collection<ProcessOrganisationseinheitSectionV1> getSections() {
     return this.sections;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessOrganisationseinheitSearchIndexEntryV1(title=" + this.getTitle() + ", preamble=" + this.getPreamble() + ", sections=" + this.getSections() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessOrganisationseinheitSearchIndexEntryV1)) return false;
@@ -131,12 +147,14 @@ public class ProcessOrganisationseinheitSearchIndexEntryV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessOrganisationseinheitSearchIndexEntryV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -150,10 +168,19 @@ public class ProcessOrganisationseinheitSearchIndexEntryV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitSearchIndexEntryV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessOrganisationseinheitSearchIndexEntryV1} instance.
+   *
+   * @param title Titel des Sucheintrags.
+   * @param preamble Einleitung des Sucheintrags.
+   * @param sections Abschnitte des Sucheintrags.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitSearchIndexEntryV1(final String title, final String preamble, final Collection<ProcessOrganisationseinheitSectionV1> sections) {
     this.title = title;
     this.preamble = preamble;

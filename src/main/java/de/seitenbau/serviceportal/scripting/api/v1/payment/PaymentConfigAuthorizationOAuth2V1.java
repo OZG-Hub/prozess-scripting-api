@@ -24,15 +24,20 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class PaymentConfigAuthorizationOAuth2V1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String clientId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String clientSecret;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String authUrl;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     PaymentConfigAuthorizationOAuth2V1Builder() {
     }
 
@@ -41,6 +46,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentConfigAuthorizationOAuth2V1.PaymentConfigAuthorizationOAuth2V1Builder clientId(final String clientId) {
       this.clientId = clientId;
       return this;
@@ -51,6 +57,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentConfigAuthorizationOAuth2V1.PaymentConfigAuthorizationOAuth2V1Builder clientSecret(final String clientSecret) {
       this.clientSecret = clientSecret;
       return this;
@@ -61,24 +68,28 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentConfigAuthorizationOAuth2V1.PaymentConfigAuthorizationOAuth2V1Builder authUrl(final String authUrl) {
       this.authUrl = authUrl;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentConfigAuthorizationOAuth2V1 build() {
       return new PaymentConfigAuthorizationOAuth2V1(this.clientId, this.clientSecret, this.authUrl);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "PaymentConfigAuthorizationOAuth2V1.PaymentConfigAuthorizationOAuth2V1Builder(clientId=" + this.clientId + ", clientSecret=" + this.clientSecret + ", authUrl=" + this.authUrl + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static PaymentConfigAuthorizationOAuth2V1.PaymentConfigAuthorizationOAuth2V1Builder builder() {
     return new PaymentConfigAuthorizationOAuth2V1.PaymentConfigAuthorizationOAuth2V1Builder();
   }
@@ -87,6 +98,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
    * Typ der Authentifizierung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public PaymentConfigAuthorizationTypeV1 getType() {
     return this.type;
   }
@@ -95,6 +107,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
    * Benutzername oder ID zur Authentifizierung
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getClientId() {
     return this.clientId;
   }
@@ -103,6 +116,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
    * Geheimnis (Passwort) zur Authentifizierung
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getClientSecret() {
     return this.clientSecret;
   }
@@ -111,6 +125,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
    * Vollständige URL der Stelle an der ein OAuth2-Bearer-Token angefragt werden kann
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getAuthUrl() {
     return this.authUrl;
   }
@@ -119,6 +134,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
    * Benutzername oder ID zur Authentifizierung
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setClientId(final String clientId) {
     this.clientId = clientId;
   }
@@ -127,6 +143,7 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
    * Geheimnis (Passwort) zur Authentifizierung
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setClientSecret(final String clientSecret) {
     this.clientSecret = clientSecret;
   }
@@ -135,12 +152,14 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
    * Vollständige URL der Stelle an der ein OAuth2-Bearer-Token angefragt werden kann
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAuthUrl(final String authUrl) {
     this.authUrl = authUrl;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof PaymentConfigAuthorizationOAuth2V1)) return false;
@@ -162,12 +181,14 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof PaymentConfigAuthorizationOAuth2V1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -184,15 +205,25 @@ public class PaymentConfigAuthorizationOAuth2V1 implements PaymentConfigAuthoriz
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "PaymentConfigAuthorizationOAuth2V1(type=" + this.getType() + ", clientId=" + this.getClientId() + ", clientSecret=" + this.getClientSecret() + ", authUrl=" + this.getAuthUrl() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public PaymentConfigAuthorizationOAuth2V1() {
   }
 
+  /**
+   * Creates a new {@code PaymentConfigAuthorizationOAuth2V1} instance.
+   *
+   * @param clientId Benutzername oder ID zur Authentifizierung
+   * @param clientSecret Geheimnis (Passwort) zur Authentifizierung
+   * @param authUrl Vollständige URL der Stelle an der ein OAuth2-Bearer-Token angefragt werden kann
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public PaymentConfigAuthorizationOAuth2V1(final String clientId, final String clientSecret, final String authUrl) {
     this.clientId = clientId;
     this.clientSecret = clientSecret;

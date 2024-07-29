@@ -19,10 +19,13 @@ public class MinNumberValueValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class MinNumberValueValidatorV1Builder<C extends MinNumberValueValidatorV1, B extends MinNumberValueValidatorV1.MinNumberValueValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private BigDecimal minValue;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String validationInvalidNumberMessage;
 
     /**
@@ -30,6 +33,7 @@ public class MinNumberValueValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B minValue(final BigDecimal minValue) {
       this.minValue = minValue;
       return self();
@@ -40,6 +44,7 @@ public class MinNumberValueValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B validationInvalidNumberMessage(final String validationInvalidNumberMessage) {
       this.validationInvalidNumberMessage = validationInvalidNumberMessage;
       return self();
@@ -47,14 +52,17 @@ public class MinNumberValueValidatorV1 extends ValidationRuleV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "MinNumberValueValidatorV1.MinNumberValueValidatorV1Builder(super=" + super.toString() + ", minValue=" + this.minValue + ", validationInvalidNumberMessage=" + this.validationInvalidNumberMessage + ")";
     }
@@ -62,25 +70,30 @@ public class MinNumberValueValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class MinNumberValueValidatorV1BuilderImpl extends MinNumberValueValidatorV1.MinNumberValueValidatorV1Builder<MinNumberValueValidatorV1, MinNumberValueValidatorV1.MinNumberValueValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private MinNumberValueValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected MinNumberValueValidatorV1.MinNumberValueValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public MinNumberValueValidatorV1 build() {
       return new MinNumberValueValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected MinNumberValueValidatorV1(final MinNumberValueValidatorV1.MinNumberValueValidatorV1Builder<?, ?> b) {
     super(b);
     this.minValue = b.minValue;
@@ -88,6 +101,7 @@ public class MinNumberValueValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static MinNumberValueValidatorV1.MinNumberValueValidatorV1Builder<?, ?> builder() {
     return new MinNumberValueValidatorV1.MinNumberValueValidatorV1BuilderImpl();
   }
@@ -96,6 +110,7 @@ public class MinNumberValueValidatorV1 extends ValidationRuleV1 {
    * Minimalwert, der nicht unterschritten werden darf.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public BigDecimal getMinValue() {
     return this.minValue;
   }
@@ -104,6 +119,7 @@ public class MinNumberValueValidatorV1 extends ValidationRuleV1 {
    * Benutzerdefinierter Fehlertext bei ungültiger Eingabe.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getValidationInvalidNumberMessage() {
     return this.validationInvalidNumberMessage;
   }
@@ -112,6 +128,7 @@ public class MinNumberValueValidatorV1 extends ValidationRuleV1 {
    * Minimalwert, der nicht unterschritten werden darf.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMinValue(final BigDecimal minValue) {
     this.minValue = minValue;
   }
@@ -120,18 +137,21 @@ public class MinNumberValueValidatorV1 extends ValidationRuleV1 {
    * Benutzerdefinierter Fehlertext bei ungültiger Eingabe.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValidationInvalidNumberMessage(final String validationInvalidNumberMessage) {
     this.validationInvalidNumberMessage = validationInvalidNumberMessage;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "MinNumberValueValidatorV1(minValue=" + this.getMinValue() + ", validationInvalidNumberMessage=" + this.getValidationInvalidNumberMessage() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof MinNumberValueValidatorV1)) return false;
@@ -147,12 +167,14 @@ public class MinNumberValueValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof MinNumberValueValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

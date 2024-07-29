@@ -15,8 +15,10 @@ public class RequiredOnFieldValueNotInValuesValidatorV1 extends ConditionalField
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class RequiredOnFieldValueNotInValuesValidatorV1Builder<C extends RequiredOnFieldValueNotInValuesValidatorV1, B extends RequiredOnFieldValueNotInValuesValidatorV1.RequiredOnFieldValueNotInValuesValidatorV1Builder<C, B>> extends ConditionalFieldValidationRuleV1.ConditionalFieldValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<Object> values;
 
     /**
@@ -24,6 +26,7 @@ public class RequiredOnFieldValueNotInValuesValidatorV1 extends ConditionalField
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B values(final Set<Object> values) {
       this.values = values;
       return self();
@@ -31,14 +34,17 @@ public class RequiredOnFieldValueNotInValuesValidatorV1 extends ConditionalField
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "RequiredOnFieldValueNotInValuesValidatorV1.RequiredOnFieldValueNotInValuesValidatorV1Builder(super=" + super.toString() + ", values=" + this.values + ")";
     }
@@ -46,31 +52,37 @@ public class RequiredOnFieldValueNotInValuesValidatorV1 extends ConditionalField
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class RequiredOnFieldValueNotInValuesValidatorV1BuilderImpl extends RequiredOnFieldValueNotInValuesValidatorV1.RequiredOnFieldValueNotInValuesValidatorV1Builder<RequiredOnFieldValueNotInValuesValidatorV1, RequiredOnFieldValueNotInValuesValidatorV1.RequiredOnFieldValueNotInValuesValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private RequiredOnFieldValueNotInValuesValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected RequiredOnFieldValueNotInValuesValidatorV1.RequiredOnFieldValueNotInValuesValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public RequiredOnFieldValueNotInValuesValidatorV1 build() {
       return new RequiredOnFieldValueNotInValuesValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected RequiredOnFieldValueNotInValuesValidatorV1(final RequiredOnFieldValueNotInValuesValidatorV1.RequiredOnFieldValueNotInValuesValidatorV1Builder<?, ?> b) {
     super(b);
     this.values = b.values;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static RequiredOnFieldValueNotInValuesValidatorV1.RequiredOnFieldValueNotInValuesValidatorV1Builder<?, ?> builder() {
     return new RequiredOnFieldValueNotInValuesValidatorV1.RequiredOnFieldValueNotInValuesValidatorV1BuilderImpl();
   }
@@ -79,6 +91,7 @@ public class RequiredOnFieldValueNotInValuesValidatorV1 extends ConditionalField
    * Werte des referenzierten Feldes, bei denen das Feld nicht zum Pflichtfeld wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<Object> getValues() {
     return this.values;
   }
@@ -87,18 +100,21 @@ public class RequiredOnFieldValueNotInValuesValidatorV1 extends ConditionalField
    * Werte des referenzierten Feldes, bei denen das Feld nicht zum Pflichtfeld wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValues(final Set<Object> values) {
     this.values = values;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "RequiredOnFieldValueNotInValuesValidatorV1(values=" + this.getValues() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof RequiredOnFieldValueNotInValuesValidatorV1)) return false;
@@ -112,12 +128,14 @@ public class RequiredOnFieldValueNotInValuesValidatorV1 extends ConditionalField
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof RequiredOnFieldValueNotInValuesValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = super.hashCode();

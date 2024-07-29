@@ -39,14 +39,19 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class NextcloudBinaryContentV1Builder<C extends NextcloudBinaryContentV1, B extends NextcloudBinaryContentV1.NextcloudBinaryContentV1Builder<C, B>> extends BinaryContentV1.BinaryContentV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Long size;
     @SuppressWarnings("all")
+    @lombok.Generated
     private EndpointFolderV1 endpointFolder;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String infix;
     @SuppressWarnings("all")
+    @lombok.Generated
     private AuthenticationV1 authentication;
 
     /**
@@ -54,6 +59,7 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B size(final Long size) {
       this.size = size;
       return self();
@@ -64,6 +70,7 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B endpointFolder(final EndpointFolderV1 endpointFolder) {
       this.endpointFolder = endpointFolder;
       return self();
@@ -74,6 +81,7 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B infix(final String infix) {
       this.infix = infix;
       return self();
@@ -84,6 +92,7 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B authentication(final AuthenticationV1 authentication) {
       this.authentication = authentication;
       return self();
@@ -91,14 +100,17 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "NextcloudBinaryContentV1.NextcloudBinaryContentV1Builder(super=" + super.toString() + ", size=" + this.size + ", endpointFolder=" + this.endpointFolder + ", infix=" + this.infix + ", authentication=" + this.authentication + ")";
     }
@@ -106,25 +118,30 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class NextcloudBinaryContentV1BuilderImpl extends NextcloudBinaryContentV1.NextcloudBinaryContentV1Builder<NextcloudBinaryContentV1, NextcloudBinaryContentV1.NextcloudBinaryContentV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private NextcloudBinaryContentV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected NextcloudBinaryContentV1.NextcloudBinaryContentV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public NextcloudBinaryContentV1 build() {
       return new NextcloudBinaryContentV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected NextcloudBinaryContentV1(final NextcloudBinaryContentV1.NextcloudBinaryContentV1Builder<?, ?> b) {
     super(b);
     this.size = b.size;
@@ -134,18 +151,21 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static NextcloudBinaryContentV1.NextcloudBinaryContentV1Builder<?, ?> builder() {
     return new NextcloudBinaryContentV1.NextcloudBinaryContentV1BuilderImpl();
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "NextcloudBinaryContentV1(size=" + this.getSize() + ", endpointFolder=" + this.getEndpointFolder() + ", infix=" + this.getInfix() + ", authentication=" + this.getAuthentication() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof NextcloudBinaryContentV1)) return false;
@@ -166,12 +186,14 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof NextcloudBinaryContentV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = super.hashCode();
@@ -187,10 +209,20 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public NextcloudBinaryContentV1() {
   }
 
+  /**
+   * Creates a new {@code NextcloudBinaryContentV1} instance.
+   *
+   * @param size Die Größe der Datei in Bytes.
+   * @param endpointFolder Ordner in der die Datei gespeichert wird.
+   * @param infix Infix in Nextcloud-URL: "baseUrl/infix/folder/[file]name".
+   * @param authentication Informationen zur Authentifizierung bei der externen Dateiablage.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public NextcloudBinaryContentV1(final Long size, final EndpointFolderV1 endpointFolder, final String infix, final AuthenticationV1 authentication) {
     this.size = size;
     this.endpointFolder = endpointFolder;
@@ -202,6 +234,7 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
    * Ordner in der die Datei gespeichert wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public EndpointFolderV1 getEndpointFolder() {
     return this.endpointFolder;
   }
@@ -210,6 +243,7 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
    * Infix in Nextcloud-URL: "baseUrl/infix/folder/[file]name".
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getInfix() {
     return this.infix;
   }
@@ -218,6 +252,7 @@ public class NextcloudBinaryContentV1 extends BinaryContentV1 {
    * Informationen zur Authentifizierung bei der externen Dateiablage.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public AuthenticationV1 getAuthentication() {
     return this.authentication;
   }

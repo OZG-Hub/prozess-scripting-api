@@ -15,8 +15,10 @@ public class MinDateValueValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class MinDateValueValidatorV1Builder<C extends MinDateValueValidatorV1, B extends MinDateValueValidatorV1.MinDateValueValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Date minValue;
 
     /**
@@ -24,6 +26,7 @@ public class MinDateValueValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B minValue(final Date minValue) {
       this.minValue = minValue;
       return self();
@@ -31,14 +34,17 @@ public class MinDateValueValidatorV1 extends ValidationRuleV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "MinDateValueValidatorV1.MinDateValueValidatorV1Builder(super=" + super.toString() + ", minValue=" + this.minValue + ")";
     }
@@ -46,31 +52,37 @@ public class MinDateValueValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class MinDateValueValidatorV1BuilderImpl extends MinDateValueValidatorV1.MinDateValueValidatorV1Builder<MinDateValueValidatorV1, MinDateValueValidatorV1.MinDateValueValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private MinDateValueValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected MinDateValueValidatorV1.MinDateValueValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public MinDateValueValidatorV1 build() {
       return new MinDateValueValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected MinDateValueValidatorV1(final MinDateValueValidatorV1.MinDateValueValidatorV1Builder<?, ?> b) {
     super(b);
     this.minValue = b.minValue;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static MinDateValueValidatorV1.MinDateValueValidatorV1Builder<?, ?> builder() {
     return new MinDateValueValidatorV1.MinDateValueValidatorV1BuilderImpl();
   }
@@ -79,6 +91,7 @@ public class MinDateValueValidatorV1 extends ValidationRuleV1 {
    * Frühestes erlaubtes Datum.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Date getMinValue() {
     return this.minValue;
   }
@@ -87,18 +100,21 @@ public class MinDateValueValidatorV1 extends ValidationRuleV1 {
    * Frühestes erlaubtes Datum.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMinValue(final Date minValue) {
     this.minValue = minValue;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "MinDateValueValidatorV1(minValue=" + this.getMinValue() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof MinDateValueValidatorV1)) return false;
@@ -111,12 +127,14 @@ public class MinDateValueValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof MinDateValueValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

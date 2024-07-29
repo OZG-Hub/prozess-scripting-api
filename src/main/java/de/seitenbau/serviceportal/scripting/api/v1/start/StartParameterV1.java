@@ -62,27 +62,38 @@ public class StartParameterV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class StartParameterV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Date startTime;
     @SuppressWarnings("all")
+    @lombok.Generated
     private StartedByUserV1 startedByUser;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String processName;
     @SuppressWarnings("all")
+    @lombok.Generated
     private LeistungParameterV1 leistung;
     @SuppressWarnings("all")
+    @lombok.Generated
     private OrganisationseinheitParameterV1 organisationseinheit;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String ags;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String fitConnectAreaId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String p;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Map<String, Object> parameters;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     StartParameterV1Builder() {
     }
 
@@ -91,6 +102,7 @@ public class StartParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartParameterV1.StartParameterV1Builder startTime(final Date startTime) {
       this.startTime = startTime;
       return this;
@@ -102,6 +114,7 @@ public class StartParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartParameterV1.StartParameterV1Builder startedByUser(final StartedByUserV1 startedByUser) {
       this.startedByUser = startedByUser;
       return this;
@@ -112,6 +125,7 @@ public class StartParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartParameterV1.StartParameterV1Builder processName(final String processName) {
       this.processName = processName;
       return this;
@@ -123,6 +137,7 @@ public class StartParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartParameterV1.StartParameterV1Builder leistung(final LeistungParameterV1 leistung) {
       this.leistung = leistung;
       return this;
@@ -135,6 +150,7 @@ public class StartParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartParameterV1.StartParameterV1Builder organisationseinheit(final OrganisationseinheitParameterV1 organisationseinheit) {
       this.organisationseinheit = organisationseinheit;
       return this;
@@ -146,6 +162,7 @@ public class StartParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartParameterV1.StartParameterV1Builder ags(final String ags) {
       this.ags = ags;
       return this;
@@ -157,6 +174,7 @@ public class StartParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartParameterV1.StartParameterV1Builder fitConnectAreaId(final String fitConnectAreaId) {
       this.fitConnectAreaId = fitConnectAreaId;
       return this;
@@ -168,6 +186,7 @@ public class StartParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartParameterV1.StartParameterV1Builder p(final String p) {
       this.p = p;
       return this;
@@ -181,24 +200,28 @@ public class StartParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartParameterV1.StartParameterV1Builder parameters(final Map<String, Object> parameters) {
       this.parameters = parameters;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartParameterV1 build() {
       return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.ags, this.fitConnectAreaId, this.p, this.parameters);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", p=" + this.p + ", parameters=" + this.parameters + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static StartParameterV1.StartParameterV1Builder builder() {
     return new StartParameterV1.StartParameterV1Builder();
   }
@@ -207,6 +230,7 @@ public class StartParameterV1 {
    * Zeitpunkt an dem der Prozess gestartet wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Date getStartTime() {
     return this.startTime;
   }
@@ -216,6 +240,7 @@ public class StartParameterV1 {
    * {@code null}, wenn der Benutzer nicht eingeloggt war.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public StartedByUserV1 getStartedByUser() {
     return this.startedByUser;
   }
@@ -224,6 +249,7 @@ public class StartParameterV1 {
    * Name des Prozesses aus der BPMN-Datei.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getProcessName() {
     return this.processName;
   }
@@ -233,6 +259,7 @@ public class StartParameterV1 {
    * {@code null}, wenn keine Leistung definiert wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public LeistungParameterV1 getLeistung() {
     return this.leistung;
   }
@@ -243,6 +270,7 @@ public class StartParameterV1 {
    * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public OrganisationseinheitParameterV1 getOrganisationseinheit() {
     return this.organisationseinheit;
   }
@@ -252,6 +280,7 @@ public class StartParameterV1 {
    * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getAgs() {
     return this.ags;
   }
@@ -261,6 +290,7 @@ public class StartParameterV1 {
    * NULL, wenn der Parameter nicht beim Prozessstart definiert wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getFitConnectAreaId() {
     return this.fitConnectAreaId;
   }
@@ -270,6 +300,7 @@ public class StartParameterV1 {
    * {@code null}, wenn kein Parameter definiert wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getP() {
     return this.p;
   }
@@ -281,18 +312,21 @@ public class StartParameterV1 {
    * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Map<String, Object> getParameters() {
     return this.parameters;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof StartParameterV1)) return false;
@@ -329,12 +363,14 @@ public class StartParameterV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof StartParameterV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -360,10 +396,35 @@ public class StartParameterV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public StartParameterV1() {
   }
 
+  /**
+   * Creates a new {@code StartParameterV1} instance.
+   *
+   * @param startTime Zeitpunkt an dem der Prozess gestartet wurde.
+   * @param startedByUser Informationen über den Benutzer, der den Prozess gestartet hat.
+   * {@code null}, wenn der Benutzer nicht eingeloggt war.
+   * @param processName Name des Prozesses aus der BPMN-Datei.
+   * @param leistung Leistung.
+   * {@code null}, wenn keine Leistung definiert wurde.
+   * @param organisationseinheit Organisationseinheit.
+   * {@code null}, wenn keine Organisationseinheit definiert wurde.
+   * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
+   * @param ags Allgemeiner Gemeindeschlüssel.
+   * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
+   * @param fitConnectAreaId Area-ID der FitConnect Routing-API.
+   * NULL, wenn der Parameter nicht beim Prozessstart definiert wurde.
+   * @param p Frei wählbarer Parameter.
+   * {@code null}, wenn kein Parameter definiert wurde.
+   * @param parameters Parameter einer externen Parameter-Quelle.
+   * Mögliche Quellen sind Jesaja und Fit-Connect.
+   * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
+   * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final String ags, final String fitConnectAreaId, final String p, final Map<String, Object> parameters) {
     this.startTime = startTime;
     this.startedByUser = startedByUser;

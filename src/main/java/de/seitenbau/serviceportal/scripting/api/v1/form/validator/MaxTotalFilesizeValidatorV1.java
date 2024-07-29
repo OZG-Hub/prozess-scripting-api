@@ -13,8 +13,10 @@ public class MaxTotalFilesizeValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class MaxTotalFilesizeValidatorV1Builder<C extends MaxTotalFilesizeValidatorV1, B extends MaxTotalFilesizeValidatorV1.MaxTotalFilesizeValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private int maxTotalFilesize;
 
     /**
@@ -22,6 +24,7 @@ public class MaxTotalFilesizeValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B maxTotalFilesize(final int maxTotalFilesize) {
       this.maxTotalFilesize = maxTotalFilesize;
       return self();
@@ -29,14 +32,17 @@ public class MaxTotalFilesizeValidatorV1 extends ValidationRuleV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "MaxTotalFilesizeValidatorV1.MaxTotalFilesizeValidatorV1Builder(super=" + super.toString() + ", maxTotalFilesize=" + this.maxTotalFilesize + ")";
     }
@@ -44,31 +50,37 @@ public class MaxTotalFilesizeValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class MaxTotalFilesizeValidatorV1BuilderImpl extends MaxTotalFilesizeValidatorV1.MaxTotalFilesizeValidatorV1Builder<MaxTotalFilesizeValidatorV1, MaxTotalFilesizeValidatorV1.MaxTotalFilesizeValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private MaxTotalFilesizeValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected MaxTotalFilesizeValidatorV1.MaxTotalFilesizeValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public MaxTotalFilesizeValidatorV1 build() {
       return new MaxTotalFilesizeValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected MaxTotalFilesizeValidatorV1(final MaxTotalFilesizeValidatorV1.MaxTotalFilesizeValidatorV1Builder<?, ?> b) {
     super(b);
     this.maxTotalFilesize = b.maxTotalFilesize;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static MaxTotalFilesizeValidatorV1.MaxTotalFilesizeValidatorV1Builder<?, ?> builder() {
     return new MaxTotalFilesizeValidatorV1.MaxTotalFilesizeValidatorV1BuilderImpl();
   }
@@ -77,6 +89,7 @@ public class MaxTotalFilesizeValidatorV1 extends ValidationRuleV1 {
    * Maximale Gesamtgröße der Dateien (in Bytes).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public int getMaxTotalFilesize() {
     return this.maxTotalFilesize;
   }
@@ -85,18 +98,21 @@ public class MaxTotalFilesizeValidatorV1 extends ValidationRuleV1 {
    * Maximale Gesamtgröße der Dateien (in Bytes).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMaxTotalFilesize(final int maxTotalFilesize) {
     this.maxTotalFilesize = maxTotalFilesize;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "MaxTotalFilesizeValidatorV1(maxTotalFilesize=" + this.getMaxTotalFilesize() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof MaxTotalFilesizeValidatorV1)) return false;
@@ -107,12 +123,14 @@ public class MaxTotalFilesizeValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof MaxTotalFilesizeValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

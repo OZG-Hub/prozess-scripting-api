@@ -19,10 +19,13 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class MaxNumberValueValidatorV1Builder<C extends MaxNumberValueValidatorV1, B extends MaxNumberValueValidatorV1.MaxNumberValueValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private BigDecimal maxValue;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String validationInvalidNumberMessage;
 
     /**
@@ -30,6 +33,7 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B maxValue(final BigDecimal maxValue) {
       this.maxValue = maxValue;
       return self();
@@ -40,6 +44,7 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B validationInvalidNumberMessage(final String validationInvalidNumberMessage) {
       this.validationInvalidNumberMessage = validationInvalidNumberMessage;
       return self();
@@ -47,14 +52,17 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "MaxNumberValueValidatorV1.MaxNumberValueValidatorV1Builder(super=" + super.toString() + ", maxValue=" + this.maxValue + ", validationInvalidNumberMessage=" + this.validationInvalidNumberMessage + ")";
     }
@@ -62,25 +70,30 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class MaxNumberValueValidatorV1BuilderImpl extends MaxNumberValueValidatorV1.MaxNumberValueValidatorV1Builder<MaxNumberValueValidatorV1, MaxNumberValueValidatorV1.MaxNumberValueValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private MaxNumberValueValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected MaxNumberValueValidatorV1.MaxNumberValueValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public MaxNumberValueValidatorV1 build() {
       return new MaxNumberValueValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected MaxNumberValueValidatorV1(final MaxNumberValueValidatorV1.MaxNumberValueValidatorV1Builder<?, ?> b) {
     super(b);
     this.maxValue = b.maxValue;
@@ -88,6 +101,7 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static MaxNumberValueValidatorV1.MaxNumberValueValidatorV1Builder<?, ?> builder() {
     return new MaxNumberValueValidatorV1.MaxNumberValueValidatorV1BuilderImpl();
   }
@@ -96,6 +110,7 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
    * Maximalwert, der nicht überschritten werden darf.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public BigDecimal getMaxValue() {
     return this.maxValue;
   }
@@ -104,6 +119,7 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
    * Benutzerdefinierter Fehlertext bei ungültiger Eingabe.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getValidationInvalidNumberMessage() {
     return this.validationInvalidNumberMessage;
   }
@@ -112,6 +128,7 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
    * Maximalwert, der nicht überschritten werden darf.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMaxValue(final BigDecimal maxValue) {
     this.maxValue = maxValue;
   }
@@ -120,18 +137,21 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
    * Benutzerdefinierter Fehlertext bei ungültiger Eingabe.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValidationInvalidNumberMessage(final String validationInvalidNumberMessage) {
     this.validationInvalidNumberMessage = validationInvalidNumberMessage;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "MaxNumberValueValidatorV1(maxValue=" + this.getMaxValue() + ", validationInvalidNumberMessage=" + this.getValidationInvalidNumberMessage() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof MaxNumberValueValidatorV1)) return false;
@@ -147,12 +167,14 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof MaxNumberValueValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

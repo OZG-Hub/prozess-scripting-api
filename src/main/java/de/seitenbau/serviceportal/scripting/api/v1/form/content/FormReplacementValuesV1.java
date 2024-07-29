@@ -15,6 +15,7 @@ public class FormReplacementValuesV1 {
   private Map<FormReplacementV1.ReturnType, HashMap<String, Object>> store = new HashMap<>();
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public FormReplacementValuesV1() {
   }
 
@@ -23,6 +24,7 @@ public class FormReplacementValuesV1 {
    * Key ist der Typ der Ersetzung. Value ist Map aus Namen und Wert des Platzhalters.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Map<FormReplacementV1.ReturnType, HashMap<String, Object>> getStore() {
     return this.store;
   }
@@ -32,12 +34,14 @@ public class FormReplacementValuesV1 {
    * Key ist der Typ der Ersetzung. Value ist Map aus Namen und Wert des Platzhalters.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setStore(final Map<FormReplacementV1.ReturnType, HashMap<String, Object>> store) {
     this.store = store;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof FormReplacementValuesV1)) return false;
@@ -50,12 +54,14 @@ public class FormReplacementValuesV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof FormReplacementValuesV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -66,6 +72,7 @@ public class FormReplacementValuesV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "FormReplacementValuesV1(store=" + this.getStore() + ")";
   }

@@ -19,30 +19,36 @@ public class AdditionalKfzRotesKennzeichenConfigV1 implements AdditionalFieldCon
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class AdditionalKfzRotesKennzeichenConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     AdditionalKfzRotesKennzeichenConfigV1Builder() {
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalKfzRotesKennzeichenConfigV1 build() {
       return new AdditionalKfzRotesKennzeichenConfigV1();
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "AdditionalKfzRotesKennzeichenConfigV1.AdditionalKfzRotesKennzeichenConfigV1Builder()";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static AdditionalKfzRotesKennzeichenConfigV1.AdditionalKfzRotesKennzeichenConfigV1Builder builder() {
     return new AdditionalKfzRotesKennzeichenConfigV1.AdditionalKfzRotesKennzeichenConfigV1Builder();
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof AdditionalKfzRotesKennzeichenConfigV1)) return false;
@@ -52,12 +58,14 @@ public class AdditionalKfzRotesKennzeichenConfigV1 implements AdditionalFieldCon
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof AdditionalKfzRotesKennzeichenConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int result = 1;
     return result;
@@ -65,11 +73,13 @@ public class AdditionalKfzRotesKennzeichenConfigV1 implements AdditionalFieldCon
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "AdditionalKfzRotesKennzeichenConfigV1()";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public AdditionalKfzRotesKennzeichenConfigV1() {
   }
 }

@@ -115,29 +115,41 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ExternalDataSourcePropertiesV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String url;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String proxyHost;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Integer proxyPort;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Map<String, String> headers;
     @SuppressWarnings("all")
+    @lombok.Generated
     private AjaxRequestIncludedFieldsScopeV1 scope;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<FormFieldKeyV1> fieldIds;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String variableName;
     @SuppressWarnings("all")
+    @lombok.Generated
     private AuthenticationConfigV1 authentication;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String truststore;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String truststorePassword;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ExternalDataSourcePropertiesV1Builder() {
     }
 
@@ -147,6 +159,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder url(@NonNull final String url) {
       if (url == null) {
         throw new NullPointerException("url is marked non-null but is null");
@@ -161,6 +174,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder proxyHost(final String proxyHost) {
       this.proxyHost = proxyHost;
       return this;
@@ -172,6 +186,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder proxyPort(final Integer proxyPort) {
       this.proxyPort = proxyPort;
       return this;
@@ -183,6 +198,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder headers(final Map<String, String> headers) {
       this.headers = headers;
       return this;
@@ -194,6 +210,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder scope(@NonNull final AjaxRequestIncludedFieldsScopeV1 scope) {
       if (scope == null) {
         throw new NullPointerException("scope is marked non-null but is null");
@@ -208,6 +225,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder fieldIds(final List<FormFieldKeyV1> fieldIds) {
       this.fieldIds = fieldIds;
       return this;
@@ -218,6 +236,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder variableName(final String variableName) {
       this.variableName = variableName;
       return this;
@@ -231,6 +250,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder authentication(final AuthenticationConfigV1 authentication) {
       this.authentication = authentication;
       return this;
@@ -240,6 +260,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder truststore(final String truststore) {
       this.truststore = truststore;
       return this;
@@ -250,24 +271,28 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder truststorePassword(final String truststorePassword) {
       this.truststorePassword = truststorePassword;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ExternalDataSourcePropertiesV1 build() {
       return new ExternalDataSourcePropertiesV1(this.url, this.proxyHost, this.proxyPort, this.headers, this.scope, this.fieldIds, this.variableName, this.authentication, this.truststore, this.truststorePassword);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder(url=" + this.url + ", proxyHost=" + this.proxyHost + ", proxyPort=" + this.proxyPort + ", headers=" + this.headers + ", scope=" + this.scope + ", fieldIds=" + this.fieldIds + ", variableName=" + this.variableName + ", authentication=" + this.authentication + ", truststore=" + this.truststore + ", truststorePassword=" + this.truststorePassword + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder builder() {
     return new ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder();
   }
@@ -278,6 +303,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getUrl() {
     return this.url;
   }
@@ -287,6 +313,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getProxyHost() {
     return this.proxyHost;
   }
@@ -296,6 +323,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Integer getProxyPort() {
     return this.proxyPort;
   }
@@ -305,6 +333,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * entsprechen. Keys und Values können Platzhalter enthalten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Map<String, String> getHeaders() {
     return this.headers;
   }
@@ -315,6 +344,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public AjaxRequestIncludedFieldsScopeV1 getScope() {
     return this.scope;
   }
@@ -324,6 +354,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * {@link AjaxRequestIncludedFieldsScopeV1#DEFINED DEFINED} ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<FormFieldKeyV1> getFieldIds() {
     return this.fieldIds;
   }
@@ -332,6 +363,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * Name der Variable aus der gelesen werden soll. Nur für DOWNLOAD- und PDF-Felder.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getVariableName() {
     return this.variableName;
   }
@@ -343,11 +375,13 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * KeystoreAuthenticationConfigV1}).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public AuthenticationConfigV1 getAuthentication() {
     return this.authentication;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTruststore() {
     return this.truststore;
   }
@@ -356,6 +390,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * Passwort des Truststores. Pflicht, wenn ein Truststore in {@link #truststore} definiert wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTruststorePassword() {
     return this.truststorePassword;
   }
@@ -365,6 +400,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * Für DOWNLOAD- und PDF-Felder kann ein ServiceAlias verwendet werden.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setUrl(@NonNull final String url) {
     if (url == null) {
       throw new NullPointerException("url is marked non-null but is null");
@@ -377,6 +413,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setProxyHost(final String proxyHost) {
     this.proxyHost = proxyHost;
   }
@@ -386,6 +423,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setProxyPort(final Integer proxyPort) {
     this.proxyPort = proxyPort;
   }
@@ -395,6 +433,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * entsprechen. Keys und Values können Platzhalter enthalten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setHeaders(final Map<String, String> headers) {
     this.headers = headers;
   }
@@ -404,6 +443,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * bestimmt werden sollen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setScope(@NonNull final AjaxRequestIncludedFieldsScopeV1 scope) {
     if (scope == null) {
       throw new NullPointerException("scope is marked non-null but is null");
@@ -416,6 +456,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * {@link AjaxRequestIncludedFieldsScopeV1#DEFINED DEFINED} ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setFieldIds(final List<FormFieldKeyV1> fieldIds) {
     this.fieldIds = fieldIds;
   }
@@ -424,6 +465,7 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * Name der Variable aus der gelesen werden soll. Nur für DOWNLOAD- und PDF-Felder.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setVariableName(final String variableName) {
     this.variableName = variableName;
   }
@@ -435,11 +477,13 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * KeystoreAuthenticationConfigV1}).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAuthentication(final AuthenticationConfigV1 authentication) {
     this.authentication = authentication;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setTruststore(final String truststore) {
     this.truststore = truststore;
   }
@@ -448,12 +492,14 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    * Passwort des Truststores. Pflicht, wenn ein Truststore in {@link #truststore} definiert wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setTruststorePassword(final String truststorePassword) {
     this.truststorePassword = truststorePassword;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ExternalDataSourcePropertiesV1)) return false;
@@ -493,12 +539,14 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ExternalDataSourcePropertiesV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -527,11 +575,36 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ExternalDataSourcePropertiesV1(url=" + this.getUrl() + ", proxyHost=" + this.getProxyHost() + ", proxyPort=" + this.getProxyPort() + ", headers=" + this.getHeaders() + ", scope=" + this.getScope() + ", fieldIds=" + this.getFieldIds() + ", variableName=" + this.getVariableName() + ", authentication=" + this.getAuthentication() + ", truststore=" + this.getTruststore() + ", truststorePassword=" + this.getTruststorePassword() + ")";
   }
 
+  /**
+   * Creates a new {@code ExternalDataSourcePropertiesV1} instance.
+   *
+   * @param url URL, an die der Aufruf gesendet werden soll.
+   * Für DOWNLOAD- und PDF-Felder kann ein ServiceAlias verwendet werden.
+   * @param proxyHost Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix 'http://').
+   * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   * @param proxyPort Port der URL des Proxies, der zum Senden des Requests verwendet werden soll.
+   * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   * @param headers Map der HTTP-Header die beim AJAX-Request gesetzt werden sollen. Die Header müssen der Allow-List
+   * entsprechen. Keys und Values können Platzhalter enthalten.
+   * @param scope Typ, der definiert, auf welche Art und Weise die Felder, deren Werte mitgeschickt werden,
+   * bestimmt werden sollen.
+   * @param fieldIds Liste mit IDs von explizit definierten Felder, falls Scope
+   * {@link AjaxRequestIncludedFieldsScopeV1#DEFINED DEFINED} ist.
+   * @param variableName Name der Variable aus der gelesen werden soll. Nur für DOWNLOAD- und PDF-Felder.
+   * @param authentication Authentifizierungs-Informationen.
+   * Aktuell wird nur die Authentifizierung mittels Keystore unterstützt
+   * ({@link de.seitenbau.serviceportal.scripting.api.v1.form.auth.KeystoreAuthenticationConfigV1
+   * KeystoreAuthenticationConfigV1}).
+   * @param truststore
+   * @param truststorePassword Passwort des Truststores. Pflicht, wenn ein Truststore in {@link #truststore} definiert wurde.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   private ExternalDataSourcePropertiesV1(@NonNull final String url, final String proxyHost, final Integer proxyPort, final Map<String, String> headers, @NonNull final AjaxRequestIncludedFieldsScopeV1 scope, final List<FormFieldKeyV1> fieldIds, final String variableName, final AuthenticationConfigV1 authentication, final String truststore, final String truststorePassword) {
     if (url == null) {
       throw new NullPointerException("url is marked non-null but is null");

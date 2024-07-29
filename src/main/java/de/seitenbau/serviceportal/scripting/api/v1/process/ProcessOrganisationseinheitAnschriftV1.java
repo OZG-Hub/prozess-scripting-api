@@ -47,27 +47,38 @@ public class ProcessOrganisationseinheitAnschriftV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessOrganisationseinheitAnschriftV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String type;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String strasse;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String hausnummer;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String postleitzahl;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String postfach;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String ort;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String ortsteil;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String zusatz;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<ProcessOrganisationseinheitZeitraumV1> gueltigkeit;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessOrganisationseinheitAnschriftV1Builder() {
     }
 
@@ -76,6 +87,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitAnschriftV1.ProcessOrganisationseinheitAnschriftV1Builder type(final String type) {
       this.type = type;
       return this;
@@ -86,6 +98,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitAnschriftV1.ProcessOrganisationseinheitAnschriftV1Builder strasse(final String strasse) {
       this.strasse = strasse;
       return this;
@@ -96,6 +109,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitAnschriftV1.ProcessOrganisationseinheitAnschriftV1Builder hausnummer(final String hausnummer) {
       this.hausnummer = hausnummer;
       return this;
@@ -106,6 +120,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitAnschriftV1.ProcessOrganisationseinheitAnschriftV1Builder postleitzahl(final String postleitzahl) {
       this.postleitzahl = postleitzahl;
       return this;
@@ -116,6 +131,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitAnschriftV1.ProcessOrganisationseinheitAnschriftV1Builder postfach(final String postfach) {
       this.postfach = postfach;
       return this;
@@ -126,6 +142,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitAnschriftV1.ProcessOrganisationseinheitAnschriftV1Builder ort(final String ort) {
       this.ort = ort;
       return this;
@@ -136,6 +153,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitAnschriftV1.ProcessOrganisationseinheitAnschriftV1Builder ortsteil(final String ortsteil) {
       this.ortsteil = ortsteil;
       return this;
@@ -146,6 +164,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitAnschriftV1.ProcessOrganisationseinheitAnschriftV1Builder zusatz(final String zusatz) {
       this.zusatz = zusatz;
       return this;
@@ -156,24 +175,28 @@ public class ProcessOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitAnschriftV1.ProcessOrganisationseinheitAnschriftV1Builder gueltigkeit(final Set<ProcessOrganisationseinheitZeitraumV1> gueltigkeit) {
       this.gueltigkeit = gueltigkeit;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitAnschriftV1 build() {
       return new ProcessOrganisationseinheitAnschriftV1(this.type, this.strasse, this.hausnummer, this.postleitzahl, this.postfach, this.ort, this.ortsteil, this.zusatz, this.gueltigkeit);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessOrganisationseinheitAnschriftV1.ProcessOrganisationseinheitAnschriftV1Builder(type=" + this.type + ", strasse=" + this.strasse + ", hausnummer=" + this.hausnummer + ", postleitzahl=" + this.postleitzahl + ", postfach=" + this.postfach + ", ort=" + this.ort + ", ortsteil=" + this.ortsteil + ", zusatz=" + this.zusatz + ", gueltigkeit=" + this.gueltigkeit + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessOrganisationseinheitAnschriftV1.ProcessOrganisationseinheitAnschriftV1Builder builder() {
     return new ProcessOrganisationseinheitAnschriftV1.ProcessOrganisationseinheitAnschriftV1Builder();
   }
@@ -182,6 +205,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
    * Typ der Anschrift.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getType() {
     return this.type;
   }
@@ -190,6 +214,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
    * Straße.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getStrasse() {
     return this.strasse;
   }
@@ -198,6 +223,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
    * Hausnummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getHausnummer() {
     return this.hausnummer;
   }
@@ -206,6 +232,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
    * Postleitzahl.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPostleitzahl() {
     return this.postleitzahl;
   }
@@ -214,6 +241,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
    * Postfach.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPostfach() {
     return this.postfach;
   }
@@ -222,6 +250,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
    * Ort.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getOrt() {
     return this.ort;
   }
@@ -230,6 +259,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
    * Ortsteil.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getOrtsteil() {
     return this.ortsteil;
   }
@@ -238,6 +268,7 @@ public class ProcessOrganisationseinheitAnschriftV1 {
    * Adresszusatz.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getZusatz() {
     return this.zusatz;
   }
@@ -246,18 +277,21 @@ public class ProcessOrganisationseinheitAnschriftV1 {
    * Gültigkeitszeitraum der Anschrift.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<ProcessOrganisationseinheitZeitraumV1> getGueltigkeit() {
     return this.gueltigkeit;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessOrganisationseinheitAnschriftV1(type=" + this.getType() + ", strasse=" + this.getStrasse() + ", hausnummer=" + this.getHausnummer() + ", postleitzahl=" + this.getPostleitzahl() + ", postfach=" + this.getPostfach() + ", ort=" + this.getOrt() + ", ortsteil=" + this.getOrtsteil() + ", zusatz=" + this.getZusatz() + ", gueltigkeit=" + this.getGueltigkeit() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessOrganisationseinheitAnschriftV1)) return false;
@@ -294,12 +328,14 @@ public class ProcessOrganisationseinheitAnschriftV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessOrganisationseinheitAnschriftV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -325,10 +361,25 @@ public class ProcessOrganisationseinheitAnschriftV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitAnschriftV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessOrganisationseinheitAnschriftV1} instance.
+   *
+   * @param type Typ der Anschrift.
+   * @param strasse Straße.
+   * @param hausnummer Hausnummer.
+   * @param postleitzahl Postleitzahl.
+   * @param postfach Postfach.
+   * @param ort Ort.
+   * @param ortsteil Ortsteil.
+   * @param zusatz Adresszusatz.
+   * @param gueltigkeit Gültigkeitszeitraum der Anschrift.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitAnschriftV1(final String type, final String strasse, final String hausnummer, final String postleitzahl, final String postfach, final String ort, final String ortsteil, final String zusatz, final Set<ProcessOrganisationseinheitZeitraumV1> gueltigkeit) {
     this.type = type;
     this.strasse = strasse;

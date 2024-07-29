@@ -28,17 +28,23 @@ public class BinaryGeoMapContentV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class BinaryGeoMapContentV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private BinaryContentV1 file;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String json;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String selectionJson;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String searchJson;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     BinaryGeoMapContentV1Builder() {
     }
 
@@ -47,6 +53,7 @@ public class BinaryGeoMapContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public BinaryGeoMapContentV1.BinaryGeoMapContentV1Builder file(final BinaryContentV1 file) {
       this.file = file;
       return this;
@@ -57,6 +64,7 @@ public class BinaryGeoMapContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public BinaryGeoMapContentV1.BinaryGeoMapContentV1Builder json(final String json) {
       this.json = json;
       return this;
@@ -67,6 +75,7 @@ public class BinaryGeoMapContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public BinaryGeoMapContentV1.BinaryGeoMapContentV1Builder selectionJson(final String selectionJson) {
       this.selectionJson = selectionJson;
       return this;
@@ -77,24 +86,28 @@ public class BinaryGeoMapContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public BinaryGeoMapContentV1.BinaryGeoMapContentV1Builder searchJson(final String searchJson) {
       this.searchJson = searchJson;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public BinaryGeoMapContentV1 build() {
       return new BinaryGeoMapContentV1(this.file, this.json, this.selectionJson, this.searchJson);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "BinaryGeoMapContentV1.BinaryGeoMapContentV1Builder(file=" + this.file + ", json=" + this.json + ", selectionJson=" + this.selectionJson + ", searchJson=" + this.searchJson + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static BinaryGeoMapContentV1.BinaryGeoMapContentV1Builder builder() {
     return new BinaryGeoMapContentV1.BinaryGeoMapContentV1Builder();
   }
@@ -103,6 +116,7 @@ public class BinaryGeoMapContentV1 {
    * Datei, welches die Karte mit Nutzereingaben darstellt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public BinaryContentV1 getFile() {
     return this.file;
   }
@@ -111,6 +125,7 @@ public class BinaryGeoMapContentV1 {
    * JSON der Nutzereingaben auf der Karte.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getJson() {
     return this.json;
   }
@@ -119,6 +134,7 @@ public class BinaryGeoMapContentV1 {
    * JSON der selektierten Objekte auf der Karte. {@code null} wenn keine Elemente ausgewählt wurden.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSelectionJson() {
     return this.selectionJson;
   }
@@ -127,6 +143,7 @@ public class BinaryGeoMapContentV1 {
    * JSON der Suchergebnisse der Suche in der Karte. {@code null} wenn nichts gesucht wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSearchJson() {
     return this.searchJson;
   }
@@ -135,6 +152,7 @@ public class BinaryGeoMapContentV1 {
    * Datei, welches die Karte mit Nutzereingaben darstellt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setFile(final BinaryContentV1 file) {
     this.file = file;
   }
@@ -143,6 +161,7 @@ public class BinaryGeoMapContentV1 {
    * JSON der Nutzereingaben auf der Karte.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setJson(final String json) {
     this.json = json;
   }
@@ -151,6 +170,7 @@ public class BinaryGeoMapContentV1 {
    * JSON der selektierten Objekte auf der Karte. {@code null} wenn keine Elemente ausgewählt wurden.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSelectionJson(final String selectionJson) {
     this.selectionJson = selectionJson;
   }
@@ -159,12 +179,14 @@ public class BinaryGeoMapContentV1 {
    * JSON der Suchergebnisse der Suche in der Karte. {@code null} wenn nichts gesucht wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSearchJson(final String searchJson) {
     this.searchJson = searchJson;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof BinaryGeoMapContentV1)) return false;
@@ -186,12 +208,14 @@ public class BinaryGeoMapContentV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof BinaryGeoMapContentV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -208,15 +232,26 @@ public class BinaryGeoMapContentV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "BinaryGeoMapContentV1(file=" + this.getFile() + ", json=" + this.getJson() + ", selectionJson=" + this.getSelectionJson() + ", searchJson=" + this.getSearchJson() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public BinaryGeoMapContentV1() {
   }
 
+  /**
+   * Creates a new {@code BinaryGeoMapContentV1} instance.
+   *
+   * @param file Datei, welches die Karte mit Nutzereingaben darstellt.
+   * @param json JSON der Nutzereingaben auf der Karte.
+   * @param selectionJson JSON der selektierten Objekte auf der Karte. {@code null} wenn keine Elemente ausgewählt wurden.
+   * @param searchJson JSON der Suchergebnisse der Suche in der Karte. {@code null} wenn nichts gesucht wurde.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public BinaryGeoMapContentV1(final BinaryContentV1 file, final String json, final String selectionJson, final String searchJson) {
     this.file = file;
     this.json = json;

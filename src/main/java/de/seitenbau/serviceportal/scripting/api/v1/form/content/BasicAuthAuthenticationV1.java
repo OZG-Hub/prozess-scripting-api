@@ -25,13 +25,17 @@ public class BasicAuthAuthenticationV1 implements AuthenticationV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class BasicAuthAuthenticationV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String username;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String password;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     BasicAuthAuthenticationV1Builder() {
     }
 
@@ -40,6 +44,7 @@ public class BasicAuthAuthenticationV1 implements AuthenticationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public BasicAuthAuthenticationV1.BasicAuthAuthenticationV1Builder username(final String username) {
       this.username = username;
       return this;
@@ -50,24 +55,28 @@ public class BasicAuthAuthenticationV1 implements AuthenticationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public BasicAuthAuthenticationV1.BasicAuthAuthenticationV1Builder password(final String password) {
       this.password = password;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public BasicAuthAuthenticationV1 build() {
       return new BasicAuthAuthenticationV1(this.username, this.password);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "BasicAuthAuthenticationV1.BasicAuthAuthenticationV1Builder(username=" + this.username + ", password=" + this.password + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static BasicAuthAuthenticationV1.BasicAuthAuthenticationV1Builder builder() {
     return new BasicAuthAuthenticationV1.BasicAuthAuthenticationV1Builder();
   }
@@ -76,6 +85,7 @@ public class BasicAuthAuthenticationV1 implements AuthenticationV1 {
    * Benutzername. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getUsername() {
     return this.username;
   }
@@ -84,18 +94,21 @@ public class BasicAuthAuthenticationV1 implements AuthenticationV1 {
    * Passwort. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPassword() {
     return this.password;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "BasicAuthAuthenticationV1(username=" + this.getUsername() + ", password=" + this.getPassword() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof BasicAuthAuthenticationV1)) return false;
@@ -111,12 +124,14 @@ public class BasicAuthAuthenticationV1 implements AuthenticationV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof BasicAuthAuthenticationV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -128,10 +143,18 @@ public class BasicAuthAuthenticationV1 implements AuthenticationV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public BasicAuthAuthenticationV1() {
   }
 
+  /**
+   * Creates a new {@code BasicAuthAuthenticationV1} instance.
+   *
+   * @param username Benutzername. Nicht {@code null}.
+   * @param password Passwort. Nicht {@code null}.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public BasicAuthAuthenticationV1(final String username, final String password) {
     this.username = username;
     this.password = password;

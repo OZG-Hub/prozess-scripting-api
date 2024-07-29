@@ -14,8 +14,10 @@ public abstract class ConditionalFieldValidationRuleV1 extends ValidationRuleV1 
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class ConditionalFieldValidationRuleV1Builder<C extends ConditionalFieldValidationRuleV1, B extends ConditionalFieldValidationRuleV1.ConditionalFieldValidationRuleV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private FormFieldKeyV1 sourceFieldKey;
 
     /**
@@ -23,6 +25,7 @@ public abstract class ConditionalFieldValidationRuleV1 extends ValidationRuleV1 
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B sourceFieldKey(final FormFieldKeyV1 sourceFieldKey) {
       this.sourceFieldKey = sourceFieldKey;
       return self();
@@ -30,20 +33,24 @@ public abstract class ConditionalFieldValidationRuleV1 extends ValidationRuleV1 
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ConditionalFieldValidationRuleV1.ConditionalFieldValidationRuleV1Builder(super=" + super.toString() + ", sourceFieldKey=" + this.sourceFieldKey + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected ConditionalFieldValidationRuleV1(final ConditionalFieldValidationRuleV1.ConditionalFieldValidationRuleV1Builder<?, ?> b) {
     super(b);
     this.sourceFieldKey = b.sourceFieldKey;
@@ -53,6 +60,7 @@ public abstract class ConditionalFieldValidationRuleV1 extends ValidationRuleV1 
    * Schlüssel des Feldes, auf das sich die Validierungsregel bezieht.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public FormFieldKeyV1 getSourceFieldKey() {
     return this.sourceFieldKey;
   }
@@ -61,18 +69,21 @@ public abstract class ConditionalFieldValidationRuleV1 extends ValidationRuleV1 
    * Schlüssel des Feldes, auf das sich die Validierungsregel bezieht.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSourceFieldKey(final FormFieldKeyV1 sourceFieldKey) {
     this.sourceFieldKey = sourceFieldKey;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ConditionalFieldValidationRuleV1(sourceFieldKey=" + this.getSourceFieldKey() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ConditionalFieldValidationRuleV1)) return false;
@@ -85,12 +96,14 @@ public abstract class ConditionalFieldValidationRuleV1 extends ValidationRuleV1 
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ConditionalFieldValidationRuleV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

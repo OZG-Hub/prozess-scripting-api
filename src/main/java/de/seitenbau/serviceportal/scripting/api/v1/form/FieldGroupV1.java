@@ -192,43 +192,59 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static int $default$maxInstanceCount() {
     return DEFAULT_MAX_INSTANCE_COUNT;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<FieldGroupInstanceV1> $default$instances() {
     return new ArrayList<>();
   }
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class FieldGroupV1Builder<C extends FieldGroupV1, B extends FieldGroupV1.FieldGroupV1Builder<C, B>> extends AbstractFieldGroupV1.AbstractFieldGroupV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean multiple;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String addRowButtonText;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String deleteRowButtonText;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String addRowButtonInfoText;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String deleteRowButtonInfoText;
     @SuppressWarnings("all")
+    @lombok.Generated
     private FieldGroupLayoutV1 layout;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean printOnly;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean maxInstanceCount$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private int maxInstanceCount$value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean fixedInstanceCount;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String instanceTitleTemplate;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean instances$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<FieldGroupInstanceV1> instances$value;
 
     /**
@@ -236,6 +252,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B multiple(final boolean multiple) {
       this.multiple = multiple;
       return self();
@@ -246,6 +263,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B addRowButtonText(final String addRowButtonText) {
       this.addRowButtonText = addRowButtonText;
       return self();
@@ -256,6 +274,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B deleteRowButtonText(final String deleteRowButtonText) {
       this.deleteRowButtonText = deleteRowButtonText;
       return self();
@@ -267,6 +286,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B addRowButtonInfoText(final String addRowButtonInfoText) {
       this.addRowButtonInfoText = addRowButtonInfoText;
       return self();
@@ -278,6 +298,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B deleteRowButtonInfoText(final String deleteRowButtonInfoText) {
       this.deleteRowButtonInfoText = deleteRowButtonInfoText;
       return self();
@@ -288,6 +309,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B layout(final FieldGroupLayoutV1 layout) {
       this.layout = layout;
       return self();
@@ -299,6 +321,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B printOnly(final boolean printOnly) {
       this.printOnly = printOnly;
       return self();
@@ -309,6 +332,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B maxInstanceCount(final int maxInstanceCount) {
       this.maxInstanceCount$value = maxInstanceCount;
       maxInstanceCount$set = true;
@@ -321,6 +345,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B fixedInstanceCount(final boolean fixedInstanceCount) {
       this.fixedInstanceCount = fixedInstanceCount;
       return self();
@@ -331,6 +356,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B instanceTitleTemplate(final String instanceTitleTemplate) {
       this.instanceTitleTemplate = instanceTitleTemplate;
       return self();
@@ -341,6 +367,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B instances(final List<FieldGroupInstanceV1> instances) {
       this.instances$value = instances;
       instances$set = true;
@@ -349,14 +376,17 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "FieldGroupV1.FieldGroupV1Builder(super=" + super.toString() + ", multiple=" + this.multiple + ", addRowButtonText=" + this.addRowButtonText + ", deleteRowButtonText=" + this.deleteRowButtonText + ", addRowButtonInfoText=" + this.addRowButtonInfoText + ", deleteRowButtonInfoText=" + this.deleteRowButtonInfoText + ", layout=" + this.layout + ", printOnly=" + this.printOnly + ", maxInstanceCount$value=" + this.maxInstanceCount$value + ", fixedInstanceCount=" + this.fixedInstanceCount + ", instanceTitleTemplate=" + this.instanceTitleTemplate + ", instances$value=" + this.instances$value + ")";
     }
@@ -364,25 +394,30 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class FieldGroupV1BuilderImpl extends FieldGroupV1.FieldGroupV1Builder<FieldGroupV1, FieldGroupV1.FieldGroupV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private FieldGroupV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected FieldGroupV1.FieldGroupV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public FieldGroupV1 build() {
       return new FieldGroupV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected FieldGroupV1(final FieldGroupV1.FieldGroupV1Builder<?, ?> b) {
     super(b);
     this.multiple = b.multiple;
@@ -401,6 +436,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static FieldGroupV1.FieldGroupV1Builder<?, ?> builder() {
     return new FieldGroupV1.FieldGroupV1BuilderImpl();
   }
@@ -409,6 +445,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * {@code true}, wenn beim Ausfüllen des Formulars mehrere Feldgruppen dieser Art angelegt werden können.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean isMultiple() {
     return this.multiple;
   }
@@ -417,6 +454,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Beschriftung des Buttons zum Hinzufügen einer neuen Feldgruppen-Instanz.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getAddRowButtonText() {
     return this.addRowButtonText;
   }
@@ -425,6 +463,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Beschriftung des Buttons zum Entfernen einer Feldgruppen-Instanz.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getDeleteRowButtonText() {
     return this.deleteRowButtonText;
   }
@@ -434,6 +473,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Feldgruppen-Instanz hinzugefügt werden kann.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getAddRowButtonInfoText() {
     return this.addRowButtonInfoText;
   }
@@ -443,6 +483,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * werden kann.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getDeleteRowButtonInfoText() {
     return this.deleteRowButtonInfoText;
   }
@@ -451,6 +492,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Layout der Feldgruppen-Instanzen, wenn es eine mehrfach-ausfüllbare Feldgruppe ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public FieldGroupLayoutV1 getLayout() {
     return this.layout;
   }
@@ -460,6 +502,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Auf der Oberfläche beim Ausfüllen des Formulars ist die Gruppe dann nicht sichtbar.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean isPrintOnly() {
     return this.printOnly;
   }
@@ -468,6 +511,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Maximal erlaubte Anzahl an Instanzen der Feldgruppe. Default ist 99.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public int getMaxInstanceCount() {
     return this.maxInstanceCount;
   }
@@ -477,6 +521,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * geändert werden.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean isFixedInstanceCount() {
     return this.fixedInstanceCount;
   }
@@ -485,6 +530,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Gibt an, wie der Titel der Instanzen der Feldgruppe generiert werden soll.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getInstanceTitleTemplate() {
     return this.instanceTitleTemplate;
   }
@@ -493,6 +539,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * {@code true}, wenn beim Ausfüllen des Formulars mehrere Feldgruppen dieser Art angelegt werden können.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMultiple(final boolean multiple) {
     this.multiple = multiple;
   }
@@ -501,6 +548,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Beschriftung des Buttons zum Hinzufügen einer neuen Feldgruppen-Instanz.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAddRowButtonText(final String addRowButtonText) {
     this.addRowButtonText = addRowButtonText;
   }
@@ -509,6 +557,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Beschriftung des Buttons zum Entfernen einer Feldgruppen-Instanz.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setDeleteRowButtonText(final String deleteRowButtonText) {
     this.deleteRowButtonText = deleteRowButtonText;
   }
@@ -518,6 +567,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Feldgruppen-Instanz hinzugefügt werden kann.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAddRowButtonInfoText(final String addRowButtonInfoText) {
     this.addRowButtonInfoText = addRowButtonInfoText;
   }
@@ -527,6 +577,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * werden kann.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setDeleteRowButtonInfoText(final String deleteRowButtonInfoText) {
     this.deleteRowButtonInfoText = deleteRowButtonInfoText;
   }
@@ -535,6 +586,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Layout der Feldgruppen-Instanzen, wenn es eine mehrfach-ausfüllbare Feldgruppe ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setLayout(final FieldGroupLayoutV1 layout) {
     this.layout = layout;
   }
@@ -544,6 +596,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Auf der Oberfläche beim Ausfüllen des Formulars ist die Gruppe dann nicht sichtbar.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPrintOnly(final boolean printOnly) {
     this.printOnly = printOnly;
   }
@@ -552,6 +605,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Maximal erlaubte Anzahl an Instanzen der Feldgruppe. Default ist 99.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMaxInstanceCount(final int maxInstanceCount) {
     this.maxInstanceCount = maxInstanceCount;
   }
@@ -561,6 +615,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * geändert werden.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setFixedInstanceCount(final boolean fixedInstanceCount) {
     this.fixedInstanceCount = fixedInstanceCount;
   }
@@ -569,6 +624,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Gibt an, wie der Titel der Instanzen der Feldgruppe generiert werden soll.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setInstanceTitleTemplate(final String instanceTitleTemplate) {
     this.instanceTitleTemplate = instanceTitleTemplate;
   }
@@ -577,18 +633,21 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * Instanzen dieser Feldgruppe.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setInstances(final List<FieldGroupInstanceV1> instances) {
     this.instances = instances;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "FieldGroupV1(multiple=" + this.isMultiple() + ", addRowButtonText=" + this.getAddRowButtonText() + ", deleteRowButtonText=" + this.getDeleteRowButtonText() + ", addRowButtonInfoText=" + this.getAddRowButtonInfoText() + ", deleteRowButtonInfoText=" + this.getDeleteRowButtonInfoText() + ", layout=" + this.getLayout() + ", printOnly=" + this.isPrintOnly() + ", maxInstanceCount=" + this.getMaxInstanceCount() + ", fixedInstanceCount=" + this.isFixedInstanceCount() + ", instanceTitleTemplate=" + this.getInstanceTitleTemplate() + ", instances=" + this.getInstances() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof FieldGroupV1)) return false;
@@ -624,12 +683,14 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof FieldGroupV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = super.hashCode();

@@ -48,7 +48,14 @@ public class FormReplacementV1 {
   @NonNull
   private ReturnType returnType;
 
+  /**
+   * Creates a new {@code FormReplacementV1} instance.
+   *
+   * @param template Platzhalter, der ersetzt wurde.
+   * @param returnType Typ des Platzhalters.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   FormReplacementV1(@NonNull final String template, @NonNull final ReturnType returnType) {
     if (template == null) {
       throw new NullPointerException("template is marked non-null but is null");
@@ -62,13 +69,17 @@ public class FormReplacementV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class FormReplacementV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String template;
     @SuppressWarnings("all")
+    @lombok.Generated
     private ReturnType returnType;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     FormReplacementV1Builder() {
     }
 
@@ -77,6 +88,7 @@ public class FormReplacementV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormReplacementV1.FormReplacementV1Builder template(@NonNull final String template) {
       if (template == null) {
         throw new NullPointerException("template is marked non-null but is null");
@@ -90,6 +102,7 @@ public class FormReplacementV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormReplacementV1.FormReplacementV1Builder returnType(@NonNull final ReturnType returnType) {
       if (returnType == null) {
         throw new NullPointerException("returnType is marked non-null but is null");
@@ -99,18 +112,21 @@ public class FormReplacementV1 {
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormReplacementV1 build() {
       return new FormReplacementV1(this.template, this.returnType);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "FormReplacementV1.FormReplacementV1Builder(template=" + this.template + ", returnType=" + this.returnType + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static FormReplacementV1.FormReplacementV1Builder builder() {
     return new FormReplacementV1.FormReplacementV1Builder();
   }
@@ -120,6 +136,7 @@ public class FormReplacementV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTemplate() {
     return this.template;
   }
@@ -129,6 +146,7 @@ public class FormReplacementV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public ReturnType getReturnType() {
     return this.returnType;
   }
@@ -137,6 +155,7 @@ public class FormReplacementV1 {
    * Platzhalter, der ersetzt wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setTemplate(@NonNull final String template) {
     if (template == null) {
       throw new NullPointerException("template is marked non-null but is null");
@@ -148,6 +167,7 @@ public class FormReplacementV1 {
    * Typ des Platzhalters.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setReturnType(@NonNull final ReturnType returnType) {
     if (returnType == null) {
       throw new NullPointerException("returnType is marked non-null but is null");
@@ -157,6 +177,7 @@ public class FormReplacementV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof FormReplacementV1)) return false;
@@ -172,12 +193,14 @@ public class FormReplacementV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof FormReplacementV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -190,6 +213,7 @@ public class FormReplacementV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "FormReplacementV1(template=" + this.getTemplate() + ", returnType=" + this.getReturnType() + ")";
   }

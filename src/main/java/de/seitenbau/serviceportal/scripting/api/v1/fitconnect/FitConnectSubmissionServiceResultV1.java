@@ -16,13 +16,17 @@ public class FitConnectSubmissionServiceResultV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class FitConnectSubmissionServiceResultV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String submissionId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String caseId;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     FitConnectSubmissionServiceResultV1Builder() {
     }
 
@@ -31,6 +35,7 @@ public class FitConnectSubmissionServiceResultV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FitConnectSubmissionServiceResultV1.FitConnectSubmissionServiceResultV1Builder submissionId(final String submissionId) {
       this.submissionId = submissionId;
       return this;
@@ -41,24 +46,28 @@ public class FitConnectSubmissionServiceResultV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FitConnectSubmissionServiceResultV1.FitConnectSubmissionServiceResultV1Builder caseId(final String caseId) {
       this.caseId = caseId;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public FitConnectSubmissionServiceResultV1 build() {
       return new FitConnectSubmissionServiceResultV1(this.submissionId, this.caseId);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "FitConnectSubmissionServiceResultV1.FitConnectSubmissionServiceResultV1Builder(submissionId=" + this.submissionId + ", caseId=" + this.caseId + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static FitConnectSubmissionServiceResultV1.FitConnectSubmissionServiceResultV1Builder builder() {
     return new FitConnectSubmissionServiceResultV1.FitConnectSubmissionServiceResultV1Builder();
   }
@@ -67,6 +76,7 @@ public class FitConnectSubmissionServiceResultV1 {
    * ID der Einreichung. {@code null}, wenn zuvor ein Fehler aufgetreten ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSubmissionId() {
     return this.submissionId;
   }
@@ -75,18 +85,21 @@ public class FitConnectSubmissionServiceResultV1 {
    * ID des Vorgangs zu dem die Einreichung gehört. {@code null}, wenn zuvor ein Fehler aufgetreten ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getCaseId() {
     return this.caseId;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "FitConnectSubmissionServiceResultV1(submissionId=" + this.getSubmissionId() + ", caseId=" + this.getCaseId() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof FitConnectSubmissionServiceResultV1)) return false;
@@ -102,12 +115,14 @@ public class FitConnectSubmissionServiceResultV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof FitConnectSubmissionServiceResultV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -119,10 +134,18 @@ public class FitConnectSubmissionServiceResultV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public FitConnectSubmissionServiceResultV1() {
   }
 
+  /**
+   * Creates a new {@code FitConnectSubmissionServiceResultV1} instance.
+   *
+   * @param submissionId ID der Einreichung. {@code null}, wenn zuvor ein Fehler aufgetreten ist.
+   * @param caseId ID des Vorgangs zu dem die Einreichung gehört. {@code null}, wenn zuvor ein Fehler aufgetreten ist.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public FitConnectSubmissionServiceResultV1(final String submissionId, final String caseId) {
     this.submissionId = submissionId;
     this.caseId = caseId;

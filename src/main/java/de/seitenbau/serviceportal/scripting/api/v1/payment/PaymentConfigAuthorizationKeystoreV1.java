@@ -20,13 +20,17 @@ public class PaymentConfigAuthorizationKeystoreV1 implements PaymentConfigAuthor
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class PaymentConfigAuthorizationKeystoreV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String keystore;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String keystorePassword;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     PaymentConfigAuthorizationKeystoreV1Builder() {
     }
 
@@ -35,6 +39,7 @@ public class PaymentConfigAuthorizationKeystoreV1 implements PaymentConfigAuthor
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentConfigAuthorizationKeystoreV1.PaymentConfigAuthorizationKeystoreV1Builder keystore(final String keystore) {
       this.keystore = keystore;
       return this;
@@ -45,24 +50,28 @@ public class PaymentConfigAuthorizationKeystoreV1 implements PaymentConfigAuthor
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentConfigAuthorizationKeystoreV1.PaymentConfigAuthorizationKeystoreV1Builder keystorePassword(final String keystorePassword) {
       this.keystorePassword = keystorePassword;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public PaymentConfigAuthorizationKeystoreV1 build() {
       return new PaymentConfigAuthorizationKeystoreV1(this.keystore, this.keystorePassword);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "PaymentConfigAuthorizationKeystoreV1.PaymentConfigAuthorizationKeystoreV1Builder(keystore=" + this.keystore + ", keystorePassword=" + this.keystorePassword + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static PaymentConfigAuthorizationKeystoreV1.PaymentConfigAuthorizationKeystoreV1Builder builder() {
     return new PaymentConfigAuthorizationKeystoreV1.PaymentConfigAuthorizationKeystoreV1Builder();
   }
@@ -71,6 +80,7 @@ public class PaymentConfigAuthorizationKeystoreV1 implements PaymentConfigAuthor
    * Typ der Authentifizierung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public PaymentConfigAuthorizationTypeV1 getType() {
     return this.type;
   }
@@ -79,6 +89,7 @@ public class PaymentConfigAuthorizationKeystoreV1 implements PaymentConfigAuthor
    * Base64-kodierte String-Repräsentation des byte-Inhalts des PKCS12-Keystores.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKeystore() {
     return this.keystore;
   }
@@ -87,6 +98,7 @@ public class PaymentConfigAuthorizationKeystoreV1 implements PaymentConfigAuthor
    * Passwort des Keystores.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKeystorePassword() {
     return this.keystorePassword;
   }
@@ -95,6 +107,7 @@ public class PaymentConfigAuthorizationKeystoreV1 implements PaymentConfigAuthor
    * Base64-kodierte String-Repräsentation des byte-Inhalts des PKCS12-Keystores.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setKeystore(final String keystore) {
     this.keystore = keystore;
   }
@@ -103,12 +116,14 @@ public class PaymentConfigAuthorizationKeystoreV1 implements PaymentConfigAuthor
    * Passwort des Keystores.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setKeystorePassword(final String keystorePassword) {
     this.keystorePassword = keystorePassword;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof PaymentConfigAuthorizationKeystoreV1)) return false;
@@ -127,12 +142,14 @@ public class PaymentConfigAuthorizationKeystoreV1 implements PaymentConfigAuthor
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof PaymentConfigAuthorizationKeystoreV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -147,15 +164,24 @@ public class PaymentConfigAuthorizationKeystoreV1 implements PaymentConfigAuthor
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "PaymentConfigAuthorizationKeystoreV1(type=" + this.getType() + ", keystore=" + this.getKeystore() + ", keystorePassword=" + this.getKeystorePassword() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public PaymentConfigAuthorizationKeystoreV1() {
   }
 
+  /**
+   * Creates a new {@code PaymentConfigAuthorizationKeystoreV1} instance.
+   *
+   * @param keystore Base64-kodierte String-Repräsentation des byte-Inhalts des PKCS12-Keystores.
+   * @param keystorePassword Passwort des Keystores.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public PaymentConfigAuthorizationKeystoreV1(final String keystore, final String keystorePassword) {
     this.keystore = keystore;
     this.keystorePassword = keystorePassword;

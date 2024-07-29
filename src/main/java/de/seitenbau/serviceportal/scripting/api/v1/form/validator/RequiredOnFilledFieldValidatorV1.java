@@ -8,17 +8,21 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.validator;
 public class RequiredOnFilledFieldValidatorV1 extends ConditionalFieldValidationRuleV1 {
 
 	@SuppressWarnings("all")
+	@lombok.Generated
 	public static abstract class RequiredOnFilledFieldValidatorV1Builder<C extends RequiredOnFilledFieldValidatorV1, B extends RequiredOnFilledFieldValidatorV1.RequiredOnFilledFieldValidatorV1Builder<C, B>> extends ConditionalFieldValidationRuleV1.ConditionalFieldValidationRuleV1Builder<C, B> {
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		protected abstract B self();
 
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		public abstract C build();
 
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		public String toString() {
 			return "RequiredOnFilledFieldValidatorV1.RequiredOnFilledFieldValidatorV1Builder(super=" + super.toString() + ")";
 		}
@@ -26,30 +30,36 @@ public class RequiredOnFilledFieldValidatorV1 extends ConditionalFieldValidation
 
 
 	@SuppressWarnings("all")
+	@lombok.Generated
 	private static final class RequiredOnFilledFieldValidatorV1BuilderImpl extends RequiredOnFilledFieldValidatorV1.RequiredOnFilledFieldValidatorV1Builder<RequiredOnFilledFieldValidatorV1, RequiredOnFilledFieldValidatorV1.RequiredOnFilledFieldValidatorV1BuilderImpl> {
 		@SuppressWarnings("all")
+		@lombok.Generated
 		private RequiredOnFilledFieldValidatorV1BuilderImpl() {
 		}
 
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		protected RequiredOnFilledFieldValidatorV1.RequiredOnFilledFieldValidatorV1BuilderImpl self() {
 			return this;
 		}
 
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		public RequiredOnFilledFieldValidatorV1 build() {
 			return new RequiredOnFilledFieldValidatorV1(this);
 		}
 	}
 
 	@SuppressWarnings("all")
+	@lombok.Generated
 	protected RequiredOnFilledFieldValidatorV1(final RequiredOnFilledFieldValidatorV1.RequiredOnFilledFieldValidatorV1Builder<?, ?> b) {
 		super(b);
 	}
 
 	@SuppressWarnings("all")
+	@lombok.Generated
 	public static RequiredOnFilledFieldValidatorV1.RequiredOnFilledFieldValidatorV1Builder<?, ?> builder() {
 		return new RequiredOnFilledFieldValidatorV1.RequiredOnFilledFieldValidatorV1BuilderImpl();
 	}

@@ -21,8 +21,10 @@ public abstract class ValidationRuleV1 implements Cloneable {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class ValidationRuleV1Builder<C extends ValidationRuleV1, B extends ValidationRuleV1.ValidationRuleV1Builder<C, B>> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String validationErrorMessage;
 
     /**
@@ -30,25 +32,30 @@ public abstract class ValidationRuleV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B validationErrorMessage(final String validationErrorMessage) {
       this.validationErrorMessage = validationErrorMessage;
       return self();
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ValidationRuleV1.ValidationRuleV1Builder(validationErrorMessage=" + this.validationErrorMessage + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected ValidationRuleV1(final ValidationRuleV1.ValidationRuleV1Builder<?, ?> b) {
     this.validationErrorMessage = b.validationErrorMessage;
   }
@@ -57,6 +64,7 @@ public abstract class ValidationRuleV1 implements Cloneable {
    * Optionale benutzerdefinierte Fehlermeldung, falls Validierung fehlschlägt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getValidationErrorMessage() {
     return this.validationErrorMessage;
   }
@@ -65,12 +73,14 @@ public abstract class ValidationRuleV1 implements Cloneable {
    * Optionale benutzerdefinierte Fehlermeldung, falls Validierung fehlschlägt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValidationErrorMessage(final String validationErrorMessage) {
     this.validationErrorMessage = validationErrorMessage;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ValidationRuleV1)) return false;
@@ -83,12 +93,14 @@ public abstract class ValidationRuleV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ValidationRuleV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -99,6 +111,7 @@ public abstract class ValidationRuleV1 implements Cloneable {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ValidationRuleV1(validationErrorMessage=" + this.getValidationErrorMessage() + ")";
   }

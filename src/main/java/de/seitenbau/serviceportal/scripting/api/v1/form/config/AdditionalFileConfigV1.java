@@ -33,7 +33,17 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
     }
   }
 
+  /**
+   * Creates a new {@code AdditionalFileConfigV1} instance.
+   *
+   * @param compress {@code true}, wenn Bilddateien beim Upload komprimiert werden sollen. Sonst {@code false}.
+   * @param disableExternalUploadHint {@code true}, wenn der Externen-Upload-Hinweis deaktiviert werden soll.
+   * @since Release 1.168
+   * @param storage Konfiguration, wenn hochgeladene Dateien auf einer externen Dateiablage gespeichert werden sollen.
+   * Nur für Multiupload-Felder ({@link FieldTypeV1#MULTIPLE_FILE MULTIPLE_FILE}).
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   AdditionalFileConfigV1(final boolean compress, final boolean disableExternalUploadHint, final StorageConfigV1 storage) {
     this.compress = compress;
     this.disableExternalUploadHint = disableExternalUploadHint;
@@ -42,15 +52,20 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class AdditionalFileConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean compress;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean disableExternalUploadHint;
     @SuppressWarnings("all")
+    @lombok.Generated
     private StorageConfigV1 storage;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     AdditionalFileConfigV1Builder() {
     }
 
@@ -59,6 +74,7 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalFileConfigV1.AdditionalFileConfigV1Builder compress(final boolean compress) {
       this.compress = compress;
       return this;
@@ -70,6 +86,7 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalFileConfigV1.AdditionalFileConfigV1Builder disableExternalUploadHint(final boolean disableExternalUploadHint) {
       this.disableExternalUploadHint = disableExternalUploadHint;
       return this;
@@ -81,24 +98,28 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalFileConfigV1.AdditionalFileConfigV1Builder storage(final StorageConfigV1 storage) {
       this.storage = storage;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalFileConfigV1 build() {
       return new AdditionalFileConfigV1(this.compress, this.disableExternalUploadHint, this.storage);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "AdditionalFileConfigV1.AdditionalFileConfigV1Builder(compress=" + this.compress + ", disableExternalUploadHint=" + this.disableExternalUploadHint + ", storage=" + this.storage + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static AdditionalFileConfigV1.AdditionalFileConfigV1Builder builder() {
     return new AdditionalFileConfigV1.AdditionalFileConfigV1Builder();
   }
@@ -107,6 +128,7 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
    * {@code true}, wenn Bilddateien beim Upload komprimiert werden sollen. Sonst {@code false}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean isCompress() {
     return this.compress;
   }
@@ -116,6 +138,7 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
    * @since Release 1.168
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean isDisableExternalUploadHint() {
     return this.disableExternalUploadHint;
   }
@@ -125,6 +148,7 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
    * Nur für Multiupload-Felder ({@link FieldTypeV1#MULTIPLE_FILE MULTIPLE_FILE}).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public StorageConfigV1 getStorage() {
     return this.storage;
   }
@@ -133,6 +157,7 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
    * {@code true}, wenn Bilddateien beim Upload komprimiert werden sollen. Sonst {@code false}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setCompress(final boolean compress) {
     this.compress = compress;
   }
@@ -142,6 +167,7 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
    * @since Release 1.168
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setDisableExternalUploadHint(final boolean disableExternalUploadHint) {
     this.disableExternalUploadHint = disableExternalUploadHint;
   }
@@ -151,12 +177,14 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
    * Nur für Multiupload-Felder ({@link FieldTypeV1#MULTIPLE_FILE MULTIPLE_FILE}).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setStorage(final StorageConfigV1 storage) {
     this.storage = storage;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof AdditionalFileConfigV1)) return false;
@@ -171,12 +199,14 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof AdditionalFileConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -189,6 +219,7 @@ public class AdditionalFileConfigV1 implements AdditionalFieldConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "AdditionalFileConfigV1(compress=" + this.isCompress() + ", disableExternalUploadHint=" + this.isDisableExternalUploadHint() + ", storage=" + this.getStorage() + ")";
   }

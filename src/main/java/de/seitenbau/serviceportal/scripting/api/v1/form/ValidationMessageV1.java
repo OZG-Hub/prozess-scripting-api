@@ -23,6 +23,7 @@ public class ValidationMessageV1 {
    * Typ der Validierungsmeldung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public MessageTypeV1 getType() {
     return this.type;
   }
@@ -31,6 +32,7 @@ public class ValidationMessageV1 {
    * Text der Validierungsmeldung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getMessageText() {
     return this.messageText;
   }
@@ -39,6 +41,7 @@ public class ValidationMessageV1 {
    * Typ der Validierungsmeldung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setType(final MessageTypeV1 type) {
     this.type = type;
   }
@@ -47,12 +50,14 @@ public class ValidationMessageV1 {
    * Text der Validierungsmeldung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMessageText(final String messageText) {
     this.messageText = messageText;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ValidationMessageV1)) return false;
@@ -68,12 +73,14 @@ public class ValidationMessageV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ValidationMessageV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -86,15 +93,24 @@ public class ValidationMessageV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ValidationMessageV1(type=" + this.getType() + ", messageText=" + this.getMessageText() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ValidationMessageV1() {
   }
 
+  /**
+   * Creates a new {@code ValidationMessageV1} instance.
+   *
+   * @param type Typ der Validierungsmeldung.
+   * @param messageText Text der Validierungsmeldung.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ValidationMessageV1(final MessageTypeV1 type, final String messageText) {
     this.type = type;
     this.messageText = messageText;

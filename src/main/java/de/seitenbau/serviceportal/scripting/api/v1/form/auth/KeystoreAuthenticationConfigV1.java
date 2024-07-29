@@ -25,13 +25,17 @@ public class KeystoreAuthenticationConfigV1 implements AuthenticationConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class KeystoreAuthenticationConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String keystore;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String keystorePassword;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     KeystoreAuthenticationConfigV1Builder() {
     }
 
@@ -40,6 +44,7 @@ public class KeystoreAuthenticationConfigV1 implements AuthenticationConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public KeystoreAuthenticationConfigV1.KeystoreAuthenticationConfigV1Builder keystore(final String keystore) {
       this.keystore = keystore;
       return this;
@@ -50,24 +55,28 @@ public class KeystoreAuthenticationConfigV1 implements AuthenticationConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public KeystoreAuthenticationConfigV1.KeystoreAuthenticationConfigV1Builder keystorePassword(final String keystorePassword) {
       this.keystorePassword = keystorePassword;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public KeystoreAuthenticationConfigV1 build() {
       return new KeystoreAuthenticationConfigV1(this.keystore, this.keystorePassword);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "KeystoreAuthenticationConfigV1.KeystoreAuthenticationConfigV1Builder(keystore=" + this.keystore + ", keystorePassword=" + this.keystorePassword + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static KeystoreAuthenticationConfigV1.KeystoreAuthenticationConfigV1Builder builder() {
     return new KeystoreAuthenticationConfigV1.KeystoreAuthenticationConfigV1Builder();
   }
@@ -76,6 +85,7 @@ public class KeystoreAuthenticationConfigV1 implements AuthenticationConfigV1 {
    * Base64-Repräsentation des Keystores mit den Client-Zertifikaten. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKeystore() {
     return this.keystore;
   }
@@ -84,6 +94,7 @@ public class KeystoreAuthenticationConfigV1 implements AuthenticationConfigV1 {
    * Password des Keystores. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKeystorePassword() {
     return this.keystorePassword;
   }
@@ -92,6 +103,7 @@ public class KeystoreAuthenticationConfigV1 implements AuthenticationConfigV1 {
    * Base64-Repräsentation des Keystores mit den Client-Zertifikaten. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setKeystore(final String keystore) {
     this.keystore = keystore;
   }
@@ -100,12 +112,14 @@ public class KeystoreAuthenticationConfigV1 implements AuthenticationConfigV1 {
    * Password des Keystores. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setKeystorePassword(final String keystorePassword) {
     this.keystorePassword = keystorePassword;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof KeystoreAuthenticationConfigV1)) return false;
@@ -121,12 +135,14 @@ public class KeystoreAuthenticationConfigV1 implements AuthenticationConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof KeystoreAuthenticationConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -139,15 +155,24 @@ public class KeystoreAuthenticationConfigV1 implements AuthenticationConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "KeystoreAuthenticationConfigV1(keystore=" + this.getKeystore() + ", keystorePassword=" + this.getKeystorePassword() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public KeystoreAuthenticationConfigV1() {
   }
 
+  /**
+   * Creates a new {@code KeystoreAuthenticationConfigV1} instance.
+   *
+   * @param keystore Base64-Repräsentation des Keystores mit den Client-Zertifikaten. Nicht {@code null}.
+   * @param keystorePassword Password des Keystores. Nicht {@code null}.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public KeystoreAuthenticationConfigV1(final String keystore, final String keystorePassword) {
     this.keystore = keystore;
     this.keystorePassword = keystorePassword;

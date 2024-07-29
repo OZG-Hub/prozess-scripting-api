@@ -42,19 +42,26 @@ public class StartedByUserV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class StartedByUserV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String userId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String displayName;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String primaryName;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String secondaryName;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String postfachHandle;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     StartedByUserV1Builder() {
     }
 
@@ -65,6 +72,7 @@ public class StartedByUserV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartedByUserV1.StartedByUserV1Builder userId(final String userId) {
       this.userId = userId;
       return this;
@@ -79,6 +87,7 @@ public class StartedByUserV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartedByUserV1.StartedByUserV1Builder displayName(final String displayName) {
       this.displayName = displayName;
       return this;
@@ -93,6 +102,7 @@ public class StartedByUserV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartedByUserV1.StartedByUserV1Builder primaryName(final String primaryName) {
       this.primaryName = primaryName;
       return this;
@@ -105,6 +115,7 @@ public class StartedByUserV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartedByUserV1.StartedByUserV1Builder secondaryName(final String secondaryName) {
       this.secondaryName = secondaryName;
       return this;
@@ -117,24 +128,28 @@ public class StartedByUserV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartedByUserV1.StartedByUserV1Builder postfachHandle(final String postfachHandle) {
       this.postfachHandle = postfachHandle;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public StartedByUserV1 build() {
       return new StartedByUserV1(this.userId, this.displayName, this.primaryName, this.secondaryName, this.postfachHandle);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "StartedByUserV1.StartedByUserV1Builder(userId=" + this.userId + ", displayName=" + this.displayName + ", primaryName=" + this.primaryName + ", secondaryName=" + this.secondaryName + ", postfachHandle=" + this.postfachHandle + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static StartedByUserV1.StartedByUserV1Builder builder() {
     return new StartedByUserV1.StartedByUserV1Builder();
   }
@@ -145,6 +160,7 @@ public class StartedByUserV1 {
    * geprefixte Session-ID.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getUserId() {
     return this.userId;
   }
@@ -157,6 +173,7 @@ public class StartedByUserV1 {
    * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getDisplayName() {
     return this.displayName;
   }
@@ -169,6 +186,7 @@ public class StartedByUserV1 {
    * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPrimaryName() {
     return this.primaryName;
   }
@@ -179,6 +197,7 @@ public class StartedByUserV1 {
    * eingeloggt war. Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSecondaryName() {
     return this.secondaryName;
   }
@@ -189,18 +208,21 @@ public class StartedByUserV1 {
    * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPostfachHandle() {
     return this.postfachHandle;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "StartedByUserV1(userId=" + this.getUserId() + ", displayName=" + this.getDisplayName() + ", primaryName=" + this.getPrimaryName() + ", secondaryName=" + this.getSecondaryName() + ", postfachHandle=" + this.getPostfachHandle() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof StartedByUserV1)) return false;
@@ -225,12 +247,14 @@ public class StartedByUserV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof StartedByUserV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -248,10 +272,35 @@ public class StartedByUserV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public StartedByUserV1() {
   }
 
+  /**
+   * Creates a new {@code StartedByUserV1} instance.
+   *
+   * @param userId ID des Benutzers, der den Prozess gestartet hat. Das ist die geprefixte Organisationskonto-ID,
+   * falls diese nicht vorhanden ist, die geprefixte User-ID oder, falls diese nicht vorhanden ist, die
+   * geprefixte Session-ID.
+   * @param displayName Lesbarer Name des Benutzers, der den Prozess gestartet hat.
+   * War der Nutzer im Kontext eines Behörden- oder Organisationskontos eingeloggt, ist dieses Attribut der
+   * Name dieses Behörden- bzw. Organisationskontos.
+   * {@code null}, falls der Benutzer nicht eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   * @param primaryName Nachname des Benutzers, der den Prozess gestartet hat.
+   * War der Nutzer im Kontext eines Behörden- oder Organisationskontos eingeloggt, ist dieses Attribut der
+   * Name dieses Behörden- bzw. Organisationskontos.
+   * {@code null}, falls der Benutzer nicht eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   * @param secondaryName Vorname des Benutzers, der den Prozess gestartet hat.
+   * {@code null}, falls der Benutzer nicht oder im Kontext eines Behörden- oder Organisationskontos
+   * eingeloggt war. Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   * @param postfachHandle Postfach-Handle des Benutzers, der den Prozess gestartet hat.
+   * {@code null}, falls der Benutzer nicht eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public StartedByUserV1(final String userId, final String displayName, final String primaryName, final String secondaryName, final String postfachHandle) {
     this.userId = userId;
     this.displayName = displayName;

@@ -22,7 +22,15 @@ public class GeoMapContentV1 {
    */
   private String searchJson;
 
+  /**
+   * Creates a new {@code GeoMapContentV1} instance.
+   *
+   * @param json JSON der Nutzereingaben auf der Karte.
+   * @param selectionJson JSON der selektierten Objekte auf der Karte. {@code null} wenn keine Elemente ausgewählt wurden.
+   * @param searchJson JSON der Suchergebnisse der Suche in der Karte. {@code null} wenn nichts gesucht wurde.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   GeoMapContentV1(final String json, final String selectionJson, final String searchJson) {
     this.json = json;
     this.selectionJson = selectionJson;
@@ -31,15 +39,20 @@ public class GeoMapContentV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class GeoMapContentV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String json;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String selectionJson;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String searchJson;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     GeoMapContentV1Builder() {
     }
 
@@ -48,6 +61,7 @@ public class GeoMapContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public GeoMapContentV1.GeoMapContentV1Builder json(final String json) {
       this.json = json;
       return this;
@@ -58,6 +72,7 @@ public class GeoMapContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public GeoMapContentV1.GeoMapContentV1Builder selectionJson(final String selectionJson) {
       this.selectionJson = selectionJson;
       return this;
@@ -68,24 +83,28 @@ public class GeoMapContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public GeoMapContentV1.GeoMapContentV1Builder searchJson(final String searchJson) {
       this.searchJson = searchJson;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public GeoMapContentV1 build() {
       return new GeoMapContentV1(this.json, this.selectionJson, this.searchJson);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "GeoMapContentV1.GeoMapContentV1Builder(json=" + this.json + ", selectionJson=" + this.selectionJson + ", searchJson=" + this.searchJson + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static GeoMapContentV1.GeoMapContentV1Builder builder() {
     return new GeoMapContentV1.GeoMapContentV1Builder();
   }
@@ -94,6 +113,7 @@ public class GeoMapContentV1 {
    * JSON der Nutzereingaben auf der Karte.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getJson() {
     return this.json;
   }
@@ -102,6 +122,7 @@ public class GeoMapContentV1 {
    * JSON der selektierten Objekte auf der Karte. {@code null} wenn keine Elemente ausgewählt wurden.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSelectionJson() {
     return this.selectionJson;
   }
@@ -110,6 +131,7 @@ public class GeoMapContentV1 {
    * JSON der Suchergebnisse der Suche in der Karte. {@code null} wenn nichts gesucht wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSearchJson() {
     return this.searchJson;
   }
@@ -118,6 +140,7 @@ public class GeoMapContentV1 {
    * JSON der Nutzereingaben auf der Karte.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setJson(final String json) {
     this.json = json;
   }
@@ -126,6 +149,7 @@ public class GeoMapContentV1 {
    * JSON der selektierten Objekte auf der Karte. {@code null} wenn keine Elemente ausgewählt wurden.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSelectionJson(final String selectionJson) {
     this.selectionJson = selectionJson;
   }
@@ -134,12 +158,14 @@ public class GeoMapContentV1 {
    * JSON der Suchergebnisse der Suche in der Karte. {@code null} wenn nichts gesucht wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSearchJson(final String searchJson) {
     this.searchJson = searchJson;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof GeoMapContentV1)) return false;
@@ -158,12 +184,14 @@ public class GeoMapContentV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof GeoMapContentV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -178,6 +206,7 @@ public class GeoMapContentV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "GeoMapContentV1(json=" + this.getJson() + ", selectionJson=" + this.getSelectionJson() + ", searchJson=" + this.getSearchJson() + ")";
   }

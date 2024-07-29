@@ -40,13 +40,17 @@ public class DataResourcePointerV1 implements Cloneable {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class DataResourcePointerV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String service;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String variableName;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     DataResourcePointerV1Builder() {
     }
 
@@ -58,6 +62,7 @@ public class DataResourcePointerV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public DataResourcePointerV1.DataResourcePointerV1Builder service(@NonNull final String service) {
       if (service == null) {
         throw new NullPointerException("service is marked non-null but is null");
@@ -71,6 +76,7 @@ public class DataResourcePointerV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public DataResourcePointerV1.DataResourcePointerV1Builder variableName(@NonNull final String variableName) {
       if (variableName == null) {
         throw new NullPointerException("variableName is marked non-null but is null");
@@ -80,18 +86,21 @@ public class DataResourcePointerV1 implements Cloneable {
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public DataResourcePointerV1 build() {
       return new DataResourcePointerV1(this.service, this.variableName);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "DataResourcePointerV1.DataResourcePointerV1Builder(service=" + this.service + ", variableName=" + this.variableName + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static DataResourcePointerV1.DataResourcePointerV1Builder builder() {
     return new DataResourcePointerV1.DataResourcePointerV1Builder();
   }
@@ -104,6 +113,7 @@ public class DataResourcePointerV1 implements Cloneable {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getService() {
     return this.service;
   }
@@ -113,6 +123,7 @@ public class DataResourcePointerV1 implements Cloneable {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getVariableName() {
     return this.variableName;
   }
@@ -124,6 +135,7 @@ public class DataResourcePointerV1 implements Cloneable {
    * eine Prozessinstanz-Variable geschrieben.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setService(@NonNull final String service) {
     if (service == null) {
       throw new NullPointerException("service is marked non-null but is null");
@@ -135,6 +147,7 @@ public class DataResourcePointerV1 implements Cloneable {
    * Variable, in die geschrieben oder aus der gelesen wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setVariableName(@NonNull final String variableName) {
     if (variableName == null) {
       throw new NullPointerException("variableName is marked non-null but is null");
@@ -144,6 +157,7 @@ public class DataResourcePointerV1 implements Cloneable {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof DataResourcePointerV1)) return false;
@@ -159,12 +173,14 @@ public class DataResourcePointerV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof DataResourcePointerV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -177,11 +193,22 @@ public class DataResourcePointerV1 implements Cloneable {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "DataResourcePointerV1(service=" + this.getService() + ", variableName=" + this.getVariableName() + ")";
   }
 
+  /**
+   * Creates a new {@code DataResourcePointerV1} instance.
+   *
+   * @param service Service, an den Daten geschickt oder aus den Daten gelesen werden sollen.
+   * <p>
+   * Sollen Daten geschrieben werden, ist nur "prozess" gültig. Dann wird der Feldwert / Formularinhalt in
+   * eine Prozessinstanz-Variable geschrieben.
+   * @param variableName Variable, in die geschrieben oder aus der gelesen wird.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public DataResourcePointerV1(@NonNull final String service, @NonNull final String variableName) {
     if (service == null) {
       throw new NullPointerException("service is marked non-null but is null");

@@ -38,27 +38,38 @@ public class JesajaOrganisationseinheitV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class JesajaOrganisationseinheitV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String id;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String externeId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String quelleId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String organisation;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String name;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String url;
     @SuppressWarnings("all")
+    @lombok.Generated
     private JesajaOrganisationseinheitPolitischeKodierungV1 verwaltungspolitischeKodierung;
     @SuppressWarnings("all")
+    @lombok.Generated
     private JesajaOrganisationseinheitAnschriftV1 anschrift;
     @SuppressWarnings("all")
+    @lombok.Generated
     private JesajaOrganisationseinheitKontaktV1 kontakt;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     JesajaOrganisationseinheitV1Builder() {
     }
 
@@ -67,6 +78,7 @@ public class JesajaOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitV1.JesajaOrganisationseinheitV1Builder id(final String id) {
       this.id = id;
       return this;
@@ -76,6 +88,7 @@ public class JesajaOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitV1.JesajaOrganisationseinheitV1Builder externeId(final String externeId) {
       this.externeId = externeId;
       return this;
@@ -85,6 +98,7 @@ public class JesajaOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitV1.JesajaOrganisationseinheitV1Builder quelleId(final String quelleId) {
       this.quelleId = quelleId;
       return this;
@@ -95,6 +109,7 @@ public class JesajaOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitV1.JesajaOrganisationseinheitV1Builder organisation(final String organisation) {
       this.organisation = organisation;
       return this;
@@ -105,6 +120,7 @@ public class JesajaOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitV1.JesajaOrganisationseinheitV1Builder name(final String name) {
       this.name = name;
       return this;
@@ -115,6 +131,7 @@ public class JesajaOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitV1.JesajaOrganisationseinheitV1Builder url(final String url) {
       this.url = url;
       return this;
@@ -125,6 +142,7 @@ public class JesajaOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitV1.JesajaOrganisationseinheitV1Builder verwaltungspolitischeKodierung(final JesajaOrganisationseinheitPolitischeKodierungV1 verwaltungspolitischeKodierung) {
       this.verwaltungspolitischeKodierung = verwaltungspolitischeKodierung;
       return this;
@@ -135,6 +153,7 @@ public class JesajaOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitV1.JesajaOrganisationseinheitV1Builder anschrift(final JesajaOrganisationseinheitAnschriftV1 anschrift) {
       this.anschrift = anschrift;
       return this;
@@ -145,24 +164,28 @@ public class JesajaOrganisationseinheitV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitV1.JesajaOrganisationseinheitV1Builder kontakt(final JesajaOrganisationseinheitKontaktV1 kontakt) {
       this.kontakt = kontakt;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitV1 build() {
       return new JesajaOrganisationseinheitV1(this.id, this.externeId, this.quelleId, this.organisation, this.name, this.url, this.verwaltungspolitischeKodierung, this.anschrift, this.kontakt);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "JesajaOrganisationseinheitV1.JesajaOrganisationseinheitV1Builder(id=" + this.id + ", externeId=" + this.externeId + ", quelleId=" + this.quelleId + ", organisation=" + this.organisation + ", name=" + this.name + ", url=" + this.url + ", verwaltungspolitischeKodierung=" + this.verwaltungspolitischeKodierung + ", anschrift=" + this.anschrift + ", kontakt=" + this.kontakt + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static JesajaOrganisationseinheitV1.JesajaOrganisationseinheitV1Builder builder() {
     return new JesajaOrganisationseinheitV1.JesajaOrganisationseinheitV1Builder();
   }
@@ -171,16 +194,19 @@ public class JesajaOrganisationseinheitV1 {
    * ID der Organisationseinheit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getId() {
     return this.id;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getExterneId() {
     return this.externeId;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getQuelleId() {
     return this.quelleId;
   }
@@ -189,6 +215,7 @@ public class JesajaOrganisationseinheitV1 {
    * Name der Behörde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getOrganisation() {
     return this.organisation;
   }
@@ -197,6 +224,7 @@ public class JesajaOrganisationseinheitV1 {
    * Name der Organisationseinheit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getName() {
     return this.name;
   }
@@ -205,6 +233,7 @@ public class JesajaOrganisationseinheitV1 {
    * URL zur Webseite der Organisationseinheit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getUrl() {
     return this.url;
   }
@@ -213,6 +242,7 @@ public class JesajaOrganisationseinheitV1 {
    * Verwaltungspolitische Kodierung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public JesajaOrganisationseinheitPolitischeKodierungV1 getVerwaltungspolitischeKodierung() {
     return this.verwaltungspolitischeKodierung;
   }
@@ -221,6 +251,7 @@ public class JesajaOrganisationseinheitV1 {
    * Anschrift der Organisationseinheit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public JesajaOrganisationseinheitAnschriftV1 getAnschrift() {
     return this.anschrift;
   }
@@ -229,18 +260,21 @@ public class JesajaOrganisationseinheitV1 {
    * Kontaktdaten der Organisationseinheit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public JesajaOrganisationseinheitKontaktV1 getKontakt() {
     return this.kontakt;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "JesajaOrganisationseinheitV1(id=" + this.getId() + ", externeId=" + this.getExterneId() + ", quelleId=" + this.getQuelleId() + ", organisation=" + this.getOrganisation() + ", name=" + this.getName() + ", url=" + this.getUrl() + ", verwaltungspolitischeKodierung=" + this.getVerwaltungspolitischeKodierung() + ", anschrift=" + this.getAnschrift() + ", kontakt=" + this.getKontakt() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof JesajaOrganisationseinheitV1)) return false;
@@ -277,12 +311,14 @@ public class JesajaOrganisationseinheitV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof JesajaOrganisationseinheitV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -308,10 +344,25 @@ public class JesajaOrganisationseinheitV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public JesajaOrganisationseinheitV1() {
   }
 
+  /**
+   * Creates a new {@code JesajaOrganisationseinheitV1} instance.
+   *
+   * @param id ID der Organisationseinheit.
+   * @param externeId
+   * @param quelleId
+   * @param organisation Name der Behörde.
+   * @param name Name der Organisationseinheit.
+   * @param url URL zur Webseite der Organisationseinheit.
+   * @param verwaltungspolitischeKodierung Verwaltungspolitische Kodierung.
+   * @param anschrift Anschrift der Organisationseinheit.
+   * @param kontakt Kontaktdaten der Organisationseinheit.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public JesajaOrganisationseinheitV1(final String id, final String externeId, final String quelleId, final String organisation, final String name, final String url, final JesajaOrganisationseinheitPolitischeKodierungV1 verwaltungspolitischeKodierung, final JesajaOrganisationseinheitAnschriftV1 anschrift, final JesajaOrganisationseinheitKontaktV1 kontakt) {
     this.id = id;
     this.externeId = externeId;

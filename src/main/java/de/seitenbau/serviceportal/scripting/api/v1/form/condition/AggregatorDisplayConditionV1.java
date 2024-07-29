@@ -14,16 +14,20 @@ public abstract class AggregatorDisplayConditionV1 extends DisplayConditionV1 {
   private List<DisplayConditionV1> conditions;
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<DisplayConditionV1> $default$conditions() {
     return new ArrayList<>();
   }
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class AggregatorDisplayConditionV1Builder<C extends AggregatorDisplayConditionV1, B extends AggregatorDisplayConditionV1.AggregatorDisplayConditionV1Builder<C, B>> extends DisplayConditionV1.DisplayConditionV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean conditions$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<DisplayConditionV1> conditions$value;
 
     /**
@@ -31,6 +35,7 @@ public abstract class AggregatorDisplayConditionV1 extends DisplayConditionV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B conditions(final List<DisplayConditionV1> conditions) {
       this.conditions$value = conditions;
       conditions$set = true;
@@ -39,20 +44,24 @@ public abstract class AggregatorDisplayConditionV1 extends DisplayConditionV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "AggregatorDisplayConditionV1.AggregatorDisplayConditionV1Builder(super=" + super.toString() + ", conditions$value=" + this.conditions$value + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected AggregatorDisplayConditionV1(final AggregatorDisplayConditionV1.AggregatorDisplayConditionV1Builder<?, ?> b) {
     super(b);
     if (b.conditions$set) this.conditions = b.conditions$value;
@@ -63,6 +72,7 @@ public abstract class AggregatorDisplayConditionV1 extends DisplayConditionV1 {
    * Liste der Sichtbarkeitsbedingungen, die in dieser Sichtbarkeitsbedingung enthalten sind.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<DisplayConditionV1> getConditions() {
     return this.conditions;
   }
@@ -71,18 +81,21 @@ public abstract class AggregatorDisplayConditionV1 extends DisplayConditionV1 {
    * Liste der Sichtbarkeitsbedingungen, die in dieser Sichtbarkeitsbedingung enthalten sind.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setConditions(final List<DisplayConditionV1> conditions) {
     this.conditions = conditions;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "AggregatorDisplayConditionV1(conditions=" + this.getConditions() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof AggregatorDisplayConditionV1)) return false;
@@ -95,12 +108,14 @@ public abstract class AggregatorDisplayConditionV1 extends DisplayConditionV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof AggregatorDisplayConditionV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -110,6 +125,7 @@ public abstract class AggregatorDisplayConditionV1 extends DisplayConditionV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public AggregatorDisplayConditionV1() {
     this.conditions = AggregatorDisplayConditionV1.$default$conditions();
   }

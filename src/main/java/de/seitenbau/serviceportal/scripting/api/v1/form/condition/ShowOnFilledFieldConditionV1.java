@@ -17,17 +17,21 @@ public class ShowOnFilledFieldConditionV1 extends FieldDisplayConditionV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class ShowOnFilledFieldConditionV1Builder<C extends ShowOnFilledFieldConditionV1, B extends ShowOnFilledFieldConditionV1.ShowOnFilledFieldConditionV1Builder<C, B>> extends FieldDisplayConditionV1.FieldDisplayConditionV1Builder<C, B> {
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ShowOnFilledFieldConditionV1.ShowOnFilledFieldConditionV1Builder(super=" + super.toString() + ")";
     }
@@ -35,30 +39,36 @@ public class ShowOnFilledFieldConditionV1 extends FieldDisplayConditionV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class ShowOnFilledFieldConditionV1BuilderImpl extends ShowOnFilledFieldConditionV1.ShowOnFilledFieldConditionV1Builder<ShowOnFilledFieldConditionV1, ShowOnFilledFieldConditionV1.ShowOnFilledFieldConditionV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private ShowOnFilledFieldConditionV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected ShowOnFilledFieldConditionV1.ShowOnFilledFieldConditionV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public ShowOnFilledFieldConditionV1 build() {
       return new ShowOnFilledFieldConditionV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected ShowOnFilledFieldConditionV1(final ShowOnFilledFieldConditionV1.ShowOnFilledFieldConditionV1Builder<?, ?> b) {
     super(b);
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ShowOnFilledFieldConditionV1.ShowOnFilledFieldConditionV1Builder<?, ?> builder() {
     return new ShowOnFilledFieldConditionV1.ShowOnFilledFieldConditionV1BuilderImpl();
   }

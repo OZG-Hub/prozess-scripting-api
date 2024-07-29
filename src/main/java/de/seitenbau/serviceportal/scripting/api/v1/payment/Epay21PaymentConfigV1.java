@@ -29,19 +29,26 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class Epay21PaymentConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String mandant;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String mandantDesc;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String app;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String user;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String password;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     Epay21PaymentConfigV1Builder() {
     }
 
@@ -50,6 +57,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public Epay21PaymentConfigV1.Epay21PaymentConfigV1Builder mandant(final String mandant) {
       this.mandant = mandant;
       return this;
@@ -60,6 +68,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public Epay21PaymentConfigV1.Epay21PaymentConfigV1Builder mandantDesc(final String mandantDesc) {
       this.mandantDesc = mandantDesc;
       return this;
@@ -70,6 +79,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public Epay21PaymentConfigV1.Epay21PaymentConfigV1Builder app(final String app) {
       this.app = app;
       return this;
@@ -80,6 +90,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public Epay21PaymentConfigV1.Epay21PaymentConfigV1Builder user(final String user) {
       this.user = user;
       return this;
@@ -90,24 +101,28 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public Epay21PaymentConfigV1.Epay21PaymentConfigV1Builder password(final String password) {
       this.password = password;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public Epay21PaymentConfigV1 build() {
       return new Epay21PaymentConfigV1(this.mandant, this.mandantDesc, this.app, this.user, this.password);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "Epay21PaymentConfigV1.Epay21PaymentConfigV1Builder(mandant=" + this.mandant + ", mandantDesc=" + this.mandantDesc + ", app=" + this.app + ", user=" + this.user + ", password=" + this.password + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static Epay21PaymentConfigV1.Epay21PaymentConfigV1Builder builder() {
     return new Epay21PaymentConfigV1.Epay21PaymentConfigV1Builder();
   }
@@ -116,6 +131,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Provider. Hat den Wert "epay21".
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getProvider() {
     return this.provider;
   }
@@ -124,6 +140,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Mandant-Identifier. *
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getMandant() {
     return this.mandant;
   }
@@ -132,6 +149,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Mandant-Beschreibung; der Text dient der Anzeige auf der PayPage.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getMandantDesc() {
     return this.mandantDesc;
   }
@@ -140,6 +158,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Fachverfahrens-Identifier. *
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getApp() {
     return this.app;
   }
@@ -148,6 +167,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Benutzername für die HTTP-Authentifizierung per BasicAuth. *
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getUser() {
     return this.user;
   }
@@ -156,6 +176,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Passwort für die HTTP-Authentifizierung per BasicAuth. *
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPassword() {
     return this.password;
   }
@@ -164,6 +185,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Mandant-Identifier. *
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMandant(final String mandant) {
     this.mandant = mandant;
   }
@@ -172,6 +194,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Mandant-Beschreibung; der Text dient der Anzeige auf der PayPage.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMandantDesc(final String mandantDesc) {
     this.mandantDesc = mandantDesc;
   }
@@ -180,6 +203,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Fachverfahrens-Identifier. *
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setApp(final String app) {
     this.app = app;
   }
@@ -188,6 +212,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Benutzername für die HTTP-Authentifizierung per BasicAuth. *
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setUser(final String user) {
     this.user = user;
   }
@@ -196,12 +221,14 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Passwort für die HTTP-Authentifizierung per BasicAuth. *
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPassword(final String password) {
     this.password = password;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof Epay21PaymentConfigV1)) return false;
@@ -229,12 +256,14 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof Epay21PaymentConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -255,15 +284,27 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "Epay21PaymentConfigV1(provider=" + this.getProvider() + ", mandant=" + this.getMandant() + ", mandantDesc=" + this.getMandantDesc() + ", app=" + this.getApp() + ", user=" + this.getUser() + ", password=" + this.getPassword() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public Epay21PaymentConfigV1() {
   }
 
+  /**
+   * Creates a new {@code Epay21PaymentConfigV1} instance.
+   *
+   * @param mandant Mandant-Identifier. *
+   * @param mandantDesc Mandant-Beschreibung; der Text dient der Anzeige auf der PayPage.
+   * @param app Fachverfahrens-Identifier. *
+   * @param user Benutzername für die HTTP-Authentifizierung per BasicAuth. *
+   * @param password Passwort für die HTTP-Authentifizierung per BasicAuth. *
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Epay21PaymentConfigV1(final String mandant, final String mandantDesc, final String app, final String user, final String password) {
     this.mandant = mandant;
     this.mandantDesc = mandantDesc;

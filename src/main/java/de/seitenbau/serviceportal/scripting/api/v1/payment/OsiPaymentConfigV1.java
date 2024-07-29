@@ -32,19 +32,26 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class OsiPaymentConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String consumer;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String accountNo;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String sapNo;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String paymentIdentifier;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String tenantKey;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     OsiPaymentConfigV1Builder() {
     }
 
@@ -53,6 +60,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OsiPaymentConfigV1.OsiPaymentConfigV1Builder consumer(final String consumer) {
       this.consumer = consumer;
       return this;
@@ -63,6 +71,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OsiPaymentConfigV1.OsiPaymentConfigV1Builder accountNo(final String accountNo) {
       this.accountNo = accountNo;
       return this;
@@ -73,6 +82,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OsiPaymentConfigV1.OsiPaymentConfigV1Builder sapNo(final String sapNo) {
       this.sapNo = sapNo;
       return this;
@@ -83,6 +93,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OsiPaymentConfigV1.OsiPaymentConfigV1Builder paymentIdentifier(final String paymentIdentifier) {
       this.paymentIdentifier = paymentIdentifier;
       return this;
@@ -93,24 +104,28 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OsiPaymentConfigV1.OsiPaymentConfigV1Builder tenantKey(final String tenantKey) {
       this.tenantKey = tenantKey;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public OsiPaymentConfigV1 build() {
       return new OsiPaymentConfigV1(this.consumer, this.accountNo, this.sapNo, this.paymentIdentifier, this.tenantKey);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "OsiPaymentConfigV1.OsiPaymentConfigV1Builder(consumer=" + this.consumer + ", accountNo=" + this.accountNo + ", sapNo=" + this.sapNo + ", paymentIdentifier=" + this.paymentIdentifier + ", tenantKey=" + this.tenantKey + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static OsiPaymentConfigV1.OsiPaymentConfigV1Builder builder() {
     return new OsiPaymentConfigV1.OsiPaymentConfigV1Builder();
   }
@@ -119,6 +134,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
    * Provider. Hat den Wert "osipayment".
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getProvider() {
     return this.provider;
   }
@@ -127,6 +143,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
    * Online-Dienst-Kürzel, wird mit Zahlungsanbietern und Zahlungsmandanten verknüpft.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getConsumer() {
     return this.consumer;
   }
@@ -135,6 +152,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
    * Account-Nummer. Falls nicht definiert, wird die Account-Nr. des verknüpften Zahlungsmandanten verwendet.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getAccountNo() {
     return this.accountNo;
   }
@@ -143,6 +161,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
    * Sap-Number. Falls nicht definiert, wird die Sap-Nr. des verknüpften Zahlungsmandanten verwendet.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSapNo() {
     return this.sapNo;
   }
@@ -151,6 +170,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
    * ID des Zahlungsmandanten, falls der Online-Dienst mehr als einen Zahlungsmandanten verwendet.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPaymentIdentifier() {
     return this.paymentIdentifier;
   }
@@ -159,6 +179,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
    * OSI-Mandant.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTenantKey() {
     return this.tenantKey;
   }
@@ -167,6 +188,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
    * Online-Dienst-Kürzel, wird mit Zahlungsanbietern und Zahlungsmandanten verknüpft.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setConsumer(final String consumer) {
     this.consumer = consumer;
   }
@@ -175,6 +197,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
    * Account-Nummer. Falls nicht definiert, wird die Account-Nr. des verknüpften Zahlungsmandanten verwendet.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAccountNo(final String accountNo) {
     this.accountNo = accountNo;
   }
@@ -183,6 +206,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
    * Sap-Number. Falls nicht definiert, wird die Sap-Nr. des verknüpften Zahlungsmandanten verwendet.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSapNo(final String sapNo) {
     this.sapNo = sapNo;
   }
@@ -191,6 +215,7 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
    * ID des Zahlungsmandanten, falls der Online-Dienst mehr als einen Zahlungsmandanten verwendet.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPaymentIdentifier(final String paymentIdentifier) {
     this.paymentIdentifier = paymentIdentifier;
   }
@@ -199,12 +224,14 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
    * OSI-Mandant.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setTenantKey(final String tenantKey) {
     this.tenantKey = tenantKey;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof OsiPaymentConfigV1)) return false;
@@ -232,12 +259,14 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof OsiPaymentConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -258,15 +287,27 @@ public class OsiPaymentConfigV1 implements PaymentConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "OsiPaymentConfigV1(provider=" + this.getProvider() + ", consumer=" + this.getConsumer() + ", accountNo=" + this.getAccountNo() + ", sapNo=" + this.getSapNo() + ", paymentIdentifier=" + this.getPaymentIdentifier() + ", tenantKey=" + this.getTenantKey() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public OsiPaymentConfigV1() {
   }
 
+  /**
+   * Creates a new {@code OsiPaymentConfigV1} instance.
+   *
+   * @param consumer Online-Dienst-Kürzel, wird mit Zahlungsanbietern und Zahlungsmandanten verknüpft.
+   * @param accountNo Account-Nummer. Falls nicht definiert, wird die Account-Nr. des verknüpften Zahlungsmandanten verwendet.
+   * @param sapNo Sap-Number. Falls nicht definiert, wird die Sap-Nr. des verknüpften Zahlungsmandanten verwendet.
+   * @param paymentIdentifier ID des Zahlungsmandanten, falls der Online-Dienst mehr als einen Zahlungsmandanten verwendet.
+   * @param tenantKey OSI-Mandant.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public OsiPaymentConfigV1(final String consumer, final String accountNo, final String sapNo, final String paymentIdentifier, final String tenantKey) {
     this.consumer = consumer;
     this.accountNo = accountNo;

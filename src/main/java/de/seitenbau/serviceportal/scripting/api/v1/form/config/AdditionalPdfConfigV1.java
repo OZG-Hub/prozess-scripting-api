@@ -26,7 +26,14 @@ public class AdditionalPdfConfigV1 implements AdditionalFieldConfigV1 {
     }
   }
 
+  /**
+   * Creates a new {@code AdditionalPdfConfigV1} instance.
+   *
+   * @param confirmPdfIsRendered {@code true}, wenn die Anzeige des PDFs bestätigt werden soll.
+   * @param confirmationTargetProperties Gibt eine externe Quelle an, an die die Bestätigung der Anzeige geschickt werden soll.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   AdditionalPdfConfigV1(final boolean confirmPdfIsRendered, final ExternalDataSourcePropertiesV1 confirmationTargetProperties) {
     this.confirmPdfIsRendered = confirmPdfIsRendered;
     this.confirmationTargetProperties = confirmationTargetProperties;
@@ -34,13 +41,17 @@ public class AdditionalPdfConfigV1 implements AdditionalFieldConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class AdditionalPdfConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean confirmPdfIsRendered;
     @SuppressWarnings("all")
+    @lombok.Generated
     private ExternalDataSourcePropertiesV1 confirmationTargetProperties;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     AdditionalPdfConfigV1Builder() {
     }
 
@@ -49,6 +60,7 @@ public class AdditionalPdfConfigV1 implements AdditionalFieldConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalPdfConfigV1.AdditionalPdfConfigV1Builder confirmPdfIsRendered(final boolean confirmPdfIsRendered) {
       this.confirmPdfIsRendered = confirmPdfIsRendered;
       return this;
@@ -59,24 +71,28 @@ public class AdditionalPdfConfigV1 implements AdditionalFieldConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalPdfConfigV1.AdditionalPdfConfigV1Builder confirmationTargetProperties(final ExternalDataSourcePropertiesV1 confirmationTargetProperties) {
       this.confirmationTargetProperties = confirmationTargetProperties;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalPdfConfigV1 build() {
       return new AdditionalPdfConfigV1(this.confirmPdfIsRendered, this.confirmationTargetProperties);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "AdditionalPdfConfigV1.AdditionalPdfConfigV1Builder(confirmPdfIsRendered=" + this.confirmPdfIsRendered + ", confirmationTargetProperties=" + this.confirmationTargetProperties + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static AdditionalPdfConfigV1.AdditionalPdfConfigV1Builder builder() {
     return new AdditionalPdfConfigV1.AdditionalPdfConfigV1Builder();
   }
@@ -85,6 +101,7 @@ public class AdditionalPdfConfigV1 implements AdditionalFieldConfigV1 {
    * {@code true}, wenn die Anzeige des PDFs bestätigt werden soll.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean isConfirmPdfIsRendered() {
     return this.confirmPdfIsRendered;
   }
@@ -93,6 +110,7 @@ public class AdditionalPdfConfigV1 implements AdditionalFieldConfigV1 {
    * Gibt eine externe Quelle an, an die die Bestätigung der Anzeige geschickt werden soll.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ExternalDataSourcePropertiesV1 getConfirmationTargetProperties() {
     return this.confirmationTargetProperties;
   }
@@ -101,6 +119,7 @@ public class AdditionalPdfConfigV1 implements AdditionalFieldConfigV1 {
    * {@code true}, wenn die Anzeige des PDFs bestätigt werden soll.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setConfirmPdfIsRendered(final boolean confirmPdfIsRendered) {
     this.confirmPdfIsRendered = confirmPdfIsRendered;
   }
@@ -109,12 +128,14 @@ public class AdditionalPdfConfigV1 implements AdditionalFieldConfigV1 {
    * Gibt eine externe Quelle an, an die die Bestätigung der Anzeige geschickt werden soll.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setConfirmationTargetProperties(final ExternalDataSourcePropertiesV1 confirmationTargetProperties) {
     this.confirmationTargetProperties = confirmationTargetProperties;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof AdditionalPdfConfigV1)) return false;
@@ -128,12 +149,14 @@ public class AdditionalPdfConfigV1 implements AdditionalFieldConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof AdditionalPdfConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -145,6 +168,7 @@ public class AdditionalPdfConfigV1 implements AdditionalFieldConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "AdditionalPdfConfigV1(confirmPdfIsRendered=" + this.isConfirmPdfIsRendered() + ", confirmationTargetProperties=" + this.getConfirmationTargetProperties() + ")";
   }

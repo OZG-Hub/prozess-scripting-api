@@ -34,21 +34,29 @@ public class ProcessOrganisationseinheitKommunikationV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessOrganisationseinheitKommunikationV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String kanal;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String kennung;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String kennungszusatz;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String zusatz;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean oeffentlich;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<ProcessOrganisationseinheitZeitraumV1> gueltigkeit;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessOrganisationseinheitKommunikationV1Builder() {
     }
 
@@ -57,6 +65,7 @@ public class ProcessOrganisationseinheitKommunikationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitKommunikationV1.ProcessOrganisationseinheitKommunikationV1Builder kanal(final String kanal) {
       this.kanal = kanal;
       return this;
@@ -67,6 +76,7 @@ public class ProcessOrganisationseinheitKommunikationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitKommunikationV1.ProcessOrganisationseinheitKommunikationV1Builder kennung(final String kennung) {
       this.kennung = kennung;
       return this;
@@ -77,6 +87,7 @@ public class ProcessOrganisationseinheitKommunikationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitKommunikationV1.ProcessOrganisationseinheitKommunikationV1Builder kennungszusatz(final String kennungszusatz) {
       this.kennungszusatz = kennungszusatz;
       return this;
@@ -87,6 +98,7 @@ public class ProcessOrganisationseinheitKommunikationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitKommunikationV1.ProcessOrganisationseinheitKommunikationV1Builder zusatz(final String zusatz) {
       this.zusatz = zusatz;
       return this;
@@ -97,6 +109,7 @@ public class ProcessOrganisationseinheitKommunikationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitKommunikationV1.ProcessOrganisationseinheitKommunikationV1Builder oeffentlich(final Boolean oeffentlich) {
       this.oeffentlich = oeffentlich;
       return this;
@@ -107,24 +120,28 @@ public class ProcessOrganisationseinheitKommunikationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitKommunikationV1.ProcessOrganisationseinheitKommunikationV1Builder gueltigkeit(final Set<ProcessOrganisationseinheitZeitraumV1> gueltigkeit) {
       this.gueltigkeit = gueltigkeit;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitKommunikationV1 build() {
       return new ProcessOrganisationseinheitKommunikationV1(this.kanal, this.kennung, this.kennungszusatz, this.zusatz, this.oeffentlich, this.gueltigkeit);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessOrganisationseinheitKommunikationV1.ProcessOrganisationseinheitKommunikationV1Builder(kanal=" + this.kanal + ", kennung=" + this.kennung + ", kennungszusatz=" + this.kennungszusatz + ", zusatz=" + this.zusatz + ", oeffentlich=" + this.oeffentlich + ", gueltigkeit=" + this.gueltigkeit + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessOrganisationseinheitKommunikationV1.ProcessOrganisationseinheitKommunikationV1Builder builder() {
     return new ProcessOrganisationseinheitKommunikationV1.ProcessOrganisationseinheitKommunikationV1Builder();
   }
@@ -133,6 +150,7 @@ public class ProcessOrganisationseinheitKommunikationV1 {
    * Kommunikationskanal der für diese Kommunikation offen ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKanal() {
     return this.kanal;
   }
@@ -141,6 +159,7 @@ public class ProcessOrganisationseinheitKommunikationV1 {
    * Kennung des Kommunikationskanals.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKennung() {
     return this.kennung;
   }
@@ -149,6 +168,7 @@ public class ProcessOrganisationseinheitKommunikationV1 {
    * Kennungszusatz des Kommunikationskanals.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKennungszusatz() {
     return this.kennungszusatz;
   }
@@ -157,6 +177,7 @@ public class ProcessOrganisationseinheitKommunikationV1 {
    * Zusatz des Kommunikationskanals.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getZusatz() {
     return this.zusatz;
   }
@@ -165,6 +186,7 @@ public class ProcessOrganisationseinheitKommunikationV1 {
    * {@code true}, falls es sich um einen öffentlichen Kommunikationskanal handelt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getOeffentlich() {
     return this.oeffentlich;
   }
@@ -173,18 +195,21 @@ public class ProcessOrganisationseinheitKommunikationV1 {
    * Gültigkeitszeitraum des Kommunikationskanals.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<ProcessOrganisationseinheitZeitraumV1> getGueltigkeit() {
     return this.gueltigkeit;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessOrganisationseinheitKommunikationV1(kanal=" + this.getKanal() + ", kennung=" + this.getKennung() + ", kennungszusatz=" + this.getKennungszusatz() + ", zusatz=" + this.getZusatz() + ", oeffentlich=" + this.getOeffentlich() + ", gueltigkeit=" + this.getGueltigkeit() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessOrganisationseinheitKommunikationV1)) return false;
@@ -212,12 +237,14 @@ public class ProcessOrganisationseinheitKommunikationV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessOrganisationseinheitKommunikationV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -237,10 +264,22 @@ public class ProcessOrganisationseinheitKommunikationV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitKommunikationV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessOrganisationseinheitKommunikationV1} instance.
+   *
+   * @param kanal Kommunikationskanal der für diese Kommunikation offen ist.
+   * @param kennung Kennung des Kommunikationskanals.
+   * @param kennungszusatz Kennungszusatz des Kommunikationskanals.
+   * @param zusatz Zusatz des Kommunikationskanals.
+   * @param oeffentlich {@code true}, falls es sich um einen öffentlichen Kommunikationskanal handelt.
+   * @param gueltigkeit Gültigkeitszeitraum des Kommunikationskanals.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitKommunikationV1(final String kanal, final String kennung, final String kennungszusatz, final String zusatz, final Boolean oeffentlich, final Set<ProcessOrganisationseinheitZeitraumV1> gueltigkeit) {
     this.kanal = kanal;
     this.kennung = kennung;

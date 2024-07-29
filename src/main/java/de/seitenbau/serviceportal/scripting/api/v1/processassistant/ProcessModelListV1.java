@@ -15,6 +15,7 @@ public class ProcessModelListV1 extends ArrayList<ProcessModelV1> {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessModelListV1() {
   }
 }

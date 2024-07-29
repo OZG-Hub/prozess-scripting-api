@@ -38,16 +38,20 @@ public class ShowOnFieldValueNotInValuesConditionV1 extends FieldDisplayConditio
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static Set<String> $default$values() {
     return new HashSet<>();
   }
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class ShowOnFieldValueNotInValuesConditionV1Builder<C extends ShowOnFieldValueNotInValuesConditionV1, B extends ShowOnFieldValueNotInValuesConditionV1.ShowOnFieldValueNotInValuesConditionV1Builder<C, B>> extends FieldDisplayConditionV1.FieldDisplayConditionV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean values$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<String> values$value;
 
     /**
@@ -55,6 +59,7 @@ public class ShowOnFieldValueNotInValuesConditionV1 extends FieldDisplayConditio
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B values(final Set<String> values) {
       this.values$value = values;
       values$set = true;
@@ -63,14 +68,17 @@ public class ShowOnFieldValueNotInValuesConditionV1 extends FieldDisplayConditio
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ShowOnFieldValueNotInValuesConditionV1.ShowOnFieldValueNotInValuesConditionV1Builder(super=" + super.toString() + ", values$value=" + this.values$value + ")";
     }
@@ -78,25 +86,30 @@ public class ShowOnFieldValueNotInValuesConditionV1 extends FieldDisplayConditio
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class ShowOnFieldValueNotInValuesConditionV1BuilderImpl extends ShowOnFieldValueNotInValuesConditionV1.ShowOnFieldValueNotInValuesConditionV1Builder<ShowOnFieldValueNotInValuesConditionV1, ShowOnFieldValueNotInValuesConditionV1.ShowOnFieldValueNotInValuesConditionV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private ShowOnFieldValueNotInValuesConditionV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected ShowOnFieldValueNotInValuesConditionV1.ShowOnFieldValueNotInValuesConditionV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public ShowOnFieldValueNotInValuesConditionV1 build() {
       return new ShowOnFieldValueNotInValuesConditionV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected ShowOnFieldValueNotInValuesConditionV1(final ShowOnFieldValueNotInValuesConditionV1.ShowOnFieldValueNotInValuesConditionV1Builder<?, ?> b) {
     super(b);
     if (b.values$set) this.values = b.values$value;
@@ -104,6 +117,7 @@ public class ShowOnFieldValueNotInValuesConditionV1 extends FieldDisplayConditio
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ShowOnFieldValueNotInValuesConditionV1.ShowOnFieldValueNotInValuesConditionV1Builder<?, ?> builder() {
     return new ShowOnFieldValueNotInValuesConditionV1.ShowOnFieldValueNotInValuesConditionV1BuilderImpl();
   }
@@ -112,6 +126,7 @@ public class ShowOnFieldValueNotInValuesConditionV1 extends FieldDisplayConditio
    * Werte, für die das Zielfeld nicht angezeigt wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<String> getValues() {
     return this.values;
   }
@@ -120,18 +135,21 @@ public class ShowOnFieldValueNotInValuesConditionV1 extends FieldDisplayConditio
    * Werte, für die das Zielfeld nicht angezeigt wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValues(final Set<String> values) {
     this.values = values;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ShowOnFieldValueNotInValuesConditionV1(values=" + this.getValues() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ShowOnFieldValueNotInValuesConditionV1)) return false;
@@ -145,12 +163,14 @@ public class ShowOnFieldValueNotInValuesConditionV1 extends FieldDisplayConditio
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ShowOnFieldValueNotInValuesConditionV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = super.hashCode();

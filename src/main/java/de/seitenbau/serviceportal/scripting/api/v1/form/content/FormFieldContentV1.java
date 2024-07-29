@@ -63,23 +63,30 @@ public class FormFieldContentV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<ValidationMessageV1> $default$validationMessages() {
     return new ArrayList<>();
   }
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class FormFieldContentV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Object value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean validationMessages$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<ValidationMessageV1> validationMessages$value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<PossibleValueV1> possibleValues;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     FormFieldContentV1Builder() {
     }
 
@@ -88,6 +95,7 @@ public class FormFieldContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldContentV1.FormFieldContentV1Builder value(final Object value) {
       this.value = value;
       return this;
@@ -102,6 +110,7 @@ public class FormFieldContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldContentV1.FormFieldContentV1Builder validationMessages(final List<ValidationMessageV1> validationMessages) {
       this.validationMessages$value = validationMessages;
       validationMessages$set = true;
@@ -114,12 +123,14 @@ public class FormFieldContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldContentV1.FormFieldContentV1Builder possibleValues(final List<PossibleValueV1> possibleValues) {
       this.possibleValues = possibleValues;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldContentV1 build() {
       List<ValidationMessageV1> validationMessages$value = this.validationMessages$value;
       if (!this.validationMessages$set) validationMessages$value = FormFieldContentV1.$default$validationMessages();
@@ -128,12 +139,14 @@ public class FormFieldContentV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "FormFieldContentV1.FormFieldContentV1Builder(value=" + this.value + ", validationMessages$value=" + this.validationMessages$value + ", possibleValues=" + this.possibleValues + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static FormFieldContentV1.FormFieldContentV1Builder builder() {
     return new FormFieldContentV1.FormFieldContentV1Builder();
   }
@@ -142,6 +155,7 @@ public class FormFieldContentV1 {
    * Wert des Feldes zum Zeitpunkt des Submits.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Object getValue() {
     return this.value;
   }
@@ -154,6 +168,7 @@ public class FormFieldContentV1 {
    * Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<ValidationMessageV1> getValidationMessages() {
     return this.validationMessages;
   }
@@ -163,6 +178,7 @@ public class FormFieldContentV1 {
    * CHECKBOX}, gesetzt. Default ist {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<PossibleValueV1> getPossibleValues() {
     return this.possibleValues;
   }
@@ -171,6 +187,7 @@ public class FormFieldContentV1 {
    * Wert des Feldes zum Zeitpunkt des Submits.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValue(final Object value) {
     this.value = value;
   }
@@ -183,6 +200,7 @@ public class FormFieldContentV1 {
    * Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValidationMessages(final List<ValidationMessageV1> validationMessages) {
     this.validationMessages = validationMessages;
   }
@@ -192,16 +210,31 @@ public class FormFieldContentV1 {
    * CHECKBOX}, gesetzt. Default ist {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPossibleValues(final List<PossibleValueV1> possibleValues) {
     this.possibleValues = possibleValues;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public FormFieldContentV1() {
     this.validationMessages = FormFieldContentV1.$default$validationMessages();
   }
 
+  /**
+   * Creates a new {@code FormFieldContentV1} instance.
+   *
+   * @param value Wert des Feldes zum Zeitpunkt des Submits.
+   * @param validationMessages Validierungsmeldungen am Feld.
+   * Stammt der FormContent aus einem submitteten Formular, ist diese Liste immer leer
+   * (Submit geht nur, wenn keine Validierungsfehler vorhanden sind
+   * oder wenn keine Validierung durchgeführt wurde).
+   * Default ist eine leere Liste.
+   * @param possibleValues Auswahlliste des Feldes. Nur bei Feldern mit auswählbaren Werten, z.B. {@link FieldTypeV1#CHECKBOX
+   * CHECKBOX}, gesetzt. Default ist {@code null}.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public FormFieldContentV1(final Object value, final List<ValidationMessageV1> validationMessages, final List<PossibleValueV1> possibleValues) {
     this.value = value;
     this.validationMessages = validationMessages;

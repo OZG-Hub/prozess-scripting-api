@@ -24,17 +24,23 @@ public class ProcessOrganisationseinheitMinimalV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessOrganisationseinheitMinimalV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String name;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Long id;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String mandantId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean behoerde;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessOrganisationseinheitMinimalV1Builder() {
     }
 
@@ -43,6 +49,7 @@ public class ProcessOrganisationseinheitMinimalV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitMinimalV1.ProcessOrganisationseinheitMinimalV1Builder name(final String name) {
       this.name = name;
       return this;
@@ -53,6 +60,7 @@ public class ProcessOrganisationseinheitMinimalV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitMinimalV1.ProcessOrganisationseinheitMinimalV1Builder id(final Long id) {
       this.id = id;
       return this;
@@ -63,6 +71,7 @@ public class ProcessOrganisationseinheitMinimalV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitMinimalV1.ProcessOrganisationseinheitMinimalV1Builder mandantId(final String mandantId) {
       this.mandantId = mandantId;
       return this;
@@ -73,24 +82,28 @@ public class ProcessOrganisationseinheitMinimalV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitMinimalV1.ProcessOrganisationseinheitMinimalV1Builder behoerde(final boolean behoerde) {
       this.behoerde = behoerde;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitMinimalV1 build() {
       return new ProcessOrganisationseinheitMinimalV1(this.name, this.id, this.mandantId, this.behoerde);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessOrganisationseinheitMinimalV1.ProcessOrganisationseinheitMinimalV1Builder(name=" + this.name + ", id=" + this.id + ", mandantId=" + this.mandantId + ", behoerde=" + this.behoerde + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessOrganisationseinheitMinimalV1.ProcessOrganisationseinheitMinimalV1Builder builder() {
     return new ProcessOrganisationseinheitMinimalV1.ProcessOrganisationseinheitMinimalV1Builder();
   }
@@ -99,6 +112,7 @@ public class ProcessOrganisationseinheitMinimalV1 {
    * Name der OE.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getName() {
     return this.name;
   }
@@ -107,6 +121,7 @@ public class ProcessOrganisationseinheitMinimalV1 {
    * ID der OE.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Long getId() {
     return this.id;
   }
@@ -115,6 +130,7 @@ public class ProcessOrganisationseinheitMinimalV1 {
    * ID des Mandanten, dem diese OE zugeordnet ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getMandantId() {
     return this.mandantId;
   }
@@ -123,18 +139,21 @@ public class ProcessOrganisationseinheitMinimalV1 {
    * {@code true}, falls diese OE eine Behörde ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean isBehoerde() {
     return this.behoerde;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessOrganisationseinheitMinimalV1(name=" + this.getName() + ", id=" + this.getId() + ", mandantId=" + this.getMandantId() + ", behoerde=" + this.isBehoerde() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessOrganisationseinheitMinimalV1)) return false;
@@ -154,12 +173,14 @@ public class ProcessOrganisationseinheitMinimalV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessOrganisationseinheitMinimalV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -174,10 +195,20 @@ public class ProcessOrganisationseinheitMinimalV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitMinimalV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessOrganisationseinheitMinimalV1} instance.
+   *
+   * @param name Name der OE.
+   * @param id ID der OE.
+   * @param mandantId ID des Mandanten, dem diese OE zugeordnet ist.
+   * @param behoerde {@code true}, falls diese OE eine Behörde ist.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitMinimalV1(final String name, final Long id, final String mandantId, final boolean behoerde) {
     this.name = name;
     this.id = id;

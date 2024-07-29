@@ -22,13 +22,17 @@ public class GiroCheckoutPaymentConfigV1 implements PaymentConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class GiroCheckoutPaymentConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private int merchantId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<GiroCheckoutProjectV1> projects;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     GiroCheckoutPaymentConfigV1Builder() {
     }
 
@@ -37,6 +41,7 @@ public class GiroCheckoutPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public GiroCheckoutPaymentConfigV1.GiroCheckoutPaymentConfigV1Builder merchantId(final int merchantId) {
       this.merchantId = merchantId;
       return this;
@@ -47,24 +52,28 @@ public class GiroCheckoutPaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public GiroCheckoutPaymentConfigV1.GiroCheckoutPaymentConfigV1Builder projects(final List<GiroCheckoutProjectV1> projects) {
       this.projects = projects;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public GiroCheckoutPaymentConfigV1 build() {
       return new GiroCheckoutPaymentConfigV1(this.merchantId, this.projects);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "GiroCheckoutPaymentConfigV1.GiroCheckoutPaymentConfigV1Builder(merchantId=" + this.merchantId + ", projects=" + this.projects + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static GiroCheckoutPaymentConfigV1.GiroCheckoutPaymentConfigV1Builder builder() {
     return new GiroCheckoutPaymentConfigV1.GiroCheckoutPaymentConfigV1Builder();
   }
@@ -73,6 +82,7 @@ public class GiroCheckoutPaymentConfigV1 implements PaymentConfigV1 {
    * Provider. Hat den Wert "girocheckout".
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getProvider() {
     return this.provider;
   }
@@ -81,6 +91,7 @@ public class GiroCheckoutPaymentConfigV1 implements PaymentConfigV1 {
    * ID der Behörde bei GiroCheckout/GiroCockpit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public int getMerchantId() {
     return this.merchantId;
   }
@@ -89,6 +100,7 @@ public class GiroCheckoutPaymentConfigV1 implements PaymentConfigV1 {
    * Liste von ProjektInfos für die möglichen Bezahlverfahren.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<GiroCheckoutProjectV1> getProjects() {
     return this.projects;
   }
@@ -97,6 +109,7 @@ public class GiroCheckoutPaymentConfigV1 implements PaymentConfigV1 {
    * ID der Behörde bei GiroCheckout/GiroCockpit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMerchantId(final int merchantId) {
     this.merchantId = merchantId;
   }
@@ -105,12 +118,14 @@ public class GiroCheckoutPaymentConfigV1 implements PaymentConfigV1 {
    * Liste von ProjektInfos für die möglichen Bezahlverfahren.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setProjects(final List<GiroCheckoutProjectV1> projects) {
     this.projects = projects;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof GiroCheckoutPaymentConfigV1)) return false;
@@ -127,12 +142,14 @@ public class GiroCheckoutPaymentConfigV1 implements PaymentConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof GiroCheckoutPaymentConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -146,15 +163,24 @@ public class GiroCheckoutPaymentConfigV1 implements PaymentConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "GiroCheckoutPaymentConfigV1(provider=" + this.getProvider() + ", merchantId=" + this.getMerchantId() + ", projects=" + this.getProjects() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public GiroCheckoutPaymentConfigV1() {
   }
 
+  /**
+   * Creates a new {@code GiroCheckoutPaymentConfigV1} instance.
+   *
+   * @param merchantId ID der Behörde bei GiroCheckout/GiroCockpit.
+   * @param projects Liste von ProjektInfos für die möglichen Bezahlverfahren.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public GiroCheckoutPaymentConfigV1(final int merchantId, final List<GiroCheckoutProjectV1> projects) {
     this.merchantId = merchantId;
     this.projects = projects;

@@ -15,8 +15,10 @@ public class RequiredOnFieldValueValidatorV1 extends ConditionalFieldValidationR
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class RequiredOnFieldValueValidatorV1Builder<C extends RequiredOnFieldValueValidatorV1, B extends RequiredOnFieldValueValidatorV1.RequiredOnFieldValueValidatorV1Builder<C, B>> extends ConditionalFieldValidationRuleV1.ConditionalFieldValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<Object> values;
 
     /**
@@ -24,6 +26,7 @@ public class RequiredOnFieldValueValidatorV1 extends ConditionalFieldValidationR
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B values(final Set<Object> values) {
       this.values = values;
       return self();
@@ -31,14 +34,17 @@ public class RequiredOnFieldValueValidatorV1 extends ConditionalFieldValidationR
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "RequiredOnFieldValueValidatorV1.RequiredOnFieldValueValidatorV1Builder(super=" + super.toString() + ", values=" + this.values + ")";
     }
@@ -46,31 +52,37 @@ public class RequiredOnFieldValueValidatorV1 extends ConditionalFieldValidationR
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class RequiredOnFieldValueValidatorV1BuilderImpl extends RequiredOnFieldValueValidatorV1.RequiredOnFieldValueValidatorV1Builder<RequiredOnFieldValueValidatorV1, RequiredOnFieldValueValidatorV1.RequiredOnFieldValueValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private RequiredOnFieldValueValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected RequiredOnFieldValueValidatorV1.RequiredOnFieldValueValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public RequiredOnFieldValueValidatorV1 build() {
       return new RequiredOnFieldValueValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected RequiredOnFieldValueValidatorV1(final RequiredOnFieldValueValidatorV1.RequiredOnFieldValueValidatorV1Builder<?, ?> b) {
     super(b);
     this.values = b.values;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static RequiredOnFieldValueValidatorV1.RequiredOnFieldValueValidatorV1Builder<?, ?> builder() {
     return new RequiredOnFieldValueValidatorV1.RequiredOnFieldValueValidatorV1BuilderImpl();
   }
@@ -79,6 +91,7 @@ public class RequiredOnFieldValueValidatorV1 extends ConditionalFieldValidationR
    * Werte des referenzierten Feldes, bei denen das Feld zum Pflichtfeld wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<Object> getValues() {
     return this.values;
   }
@@ -87,18 +100,21 @@ public class RequiredOnFieldValueValidatorV1 extends ConditionalFieldValidationR
    * Werte des referenzierten Feldes, bei denen das Feld zum Pflichtfeld wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValues(final Set<Object> values) {
     this.values = values;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "RequiredOnFieldValueValidatorV1(values=" + this.getValues() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof RequiredOnFieldValueValidatorV1)) return false;
@@ -112,12 +128,14 @@ public class RequiredOnFieldValueValidatorV1 extends ConditionalFieldValidationR
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof RequiredOnFieldValueValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = super.hashCode();

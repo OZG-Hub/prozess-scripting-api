@@ -14,11 +14,14 @@ public class OrganisationseinheitPolitischeKodierungParameterV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class OrganisationseinheitPolitischeKodierungParameterV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String regionalschluessel;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     OrganisationseinheitPolitischeKodierungParameterV1Builder() {
     }
 
@@ -27,24 +30,28 @@ public class OrganisationseinheitPolitischeKodierungParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitPolitischeKodierungParameterV1.OrganisationseinheitPolitischeKodierungParameterV1Builder regionalschluessel(final String regionalschluessel) {
       this.regionalschluessel = regionalschluessel;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitPolitischeKodierungParameterV1 build() {
       return new OrganisationseinheitPolitischeKodierungParameterV1(this.regionalschluessel);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "OrganisationseinheitPolitischeKodierungParameterV1.OrganisationseinheitPolitischeKodierungParameterV1Builder(regionalschluessel=" + this.regionalschluessel + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static OrganisationseinheitPolitischeKodierungParameterV1.OrganisationseinheitPolitischeKodierungParameterV1Builder builder() {
     return new OrganisationseinheitPolitischeKodierungParameterV1.OrganisationseinheitPolitischeKodierungParameterV1Builder();
   }
@@ -53,18 +60,21 @@ public class OrganisationseinheitPolitischeKodierungParameterV1 {
    * Amtlicher Regionalschlüssel.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getRegionalschluessel() {
     return this.regionalschluessel;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "OrganisationseinheitPolitischeKodierungParameterV1(regionalschluessel=" + this.getRegionalschluessel() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof OrganisationseinheitPolitischeKodierungParameterV1)) return false;
@@ -77,12 +87,14 @@ public class OrganisationseinheitPolitischeKodierungParameterV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof OrganisationseinheitPolitischeKodierungParameterV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -92,10 +104,17 @@ public class OrganisationseinheitPolitischeKodierungParameterV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public OrganisationseinheitPolitischeKodierungParameterV1() {
   }
 
+  /**
+   * Creates a new {@code OrganisationseinheitPolitischeKodierungParameterV1} instance.
+   *
+   * @param regionalschluessel Amtlicher Regionalschlüssel.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public OrganisationseinheitPolitischeKodierungParameterV1(final String regionalschluessel) {
     this.regionalschluessel = regionalschluessel;
   }

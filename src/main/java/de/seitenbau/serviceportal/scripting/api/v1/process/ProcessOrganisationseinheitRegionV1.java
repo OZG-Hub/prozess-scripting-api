@@ -12,11 +12,14 @@ public class ProcessOrganisationseinheitRegionV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessOrganisationseinheitRegionV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Long id;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessOrganisationseinheitRegionV1Builder() {
     }
 
@@ -25,24 +28,28 @@ public class ProcessOrganisationseinheitRegionV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitRegionV1.ProcessOrganisationseinheitRegionV1Builder id(final Long id) {
       this.id = id;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitRegionV1 build() {
       return new ProcessOrganisationseinheitRegionV1(this.id);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessOrganisationseinheitRegionV1.ProcessOrganisationseinheitRegionV1Builder(id=" + this.id + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessOrganisationseinheitRegionV1.ProcessOrganisationseinheitRegionV1Builder builder() {
     return new ProcessOrganisationseinheitRegionV1.ProcessOrganisationseinheitRegionV1Builder();
   }
@@ -51,18 +58,21 @@ public class ProcessOrganisationseinheitRegionV1 {
    * ID der im AdminCenter gepflegten Region.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Long getId() {
     return this.id;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessOrganisationseinheitRegionV1(id=" + this.getId() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessOrganisationseinheitRegionV1)) return false;
@@ -75,12 +85,14 @@ public class ProcessOrganisationseinheitRegionV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessOrganisationseinheitRegionV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -90,10 +102,17 @@ public class ProcessOrganisationseinheitRegionV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitRegionV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessOrganisationseinheitRegionV1} instance.
+   *
+   * @param id ID der im AdminCenter gepflegten Region.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitRegionV1(final Long id) {
     this.id = id;
   }

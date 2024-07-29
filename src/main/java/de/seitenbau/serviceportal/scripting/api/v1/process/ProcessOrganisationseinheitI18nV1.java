@@ -20,15 +20,20 @@ public class ProcessOrganisationseinheitI18nV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessOrganisationseinheitI18nV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String sprache;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String name;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String kurzbeschreibung;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessOrganisationseinheitI18nV1Builder() {
     }
 
@@ -37,6 +42,7 @@ public class ProcessOrganisationseinheitI18nV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitI18nV1.ProcessOrganisationseinheitI18nV1Builder sprache(final String sprache) {
       this.sprache = sprache;
       return this;
@@ -47,6 +53,7 @@ public class ProcessOrganisationseinheitI18nV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitI18nV1.ProcessOrganisationseinheitI18nV1Builder name(final String name) {
       this.name = name;
       return this;
@@ -57,24 +64,28 @@ public class ProcessOrganisationseinheitI18nV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitI18nV1.ProcessOrganisationseinheitI18nV1Builder kurzbeschreibung(final String kurzbeschreibung) {
       this.kurzbeschreibung = kurzbeschreibung;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitI18nV1 build() {
       return new ProcessOrganisationseinheitI18nV1(this.sprache, this.name, this.kurzbeschreibung);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessOrganisationseinheitI18nV1.ProcessOrganisationseinheitI18nV1Builder(sprache=" + this.sprache + ", name=" + this.name + ", kurzbeschreibung=" + this.kurzbeschreibung + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessOrganisationseinheitI18nV1.ProcessOrganisationseinheitI18nV1Builder builder() {
     return new ProcessOrganisationseinheitI18nV1.ProcessOrganisationseinheitI18nV1Builder();
   }
@@ -83,6 +94,7 @@ public class ProcessOrganisationseinheitI18nV1 {
    * Sprache.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSprache() {
     return this.sprache;
   }
@@ -91,6 +103,7 @@ public class ProcessOrganisationseinheitI18nV1 {
    * Name der Organisationseinheit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getName() {
     return this.name;
   }
@@ -99,18 +112,21 @@ public class ProcessOrganisationseinheitI18nV1 {
    * Beschreibung der Organisationseinheit.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKurzbeschreibung() {
     return this.kurzbeschreibung;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessOrganisationseinheitI18nV1(sprache=" + this.getSprache() + ", name=" + this.getName() + ", kurzbeschreibung=" + this.getKurzbeschreibung() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessOrganisationseinheitI18nV1)) return false;
@@ -129,12 +145,14 @@ public class ProcessOrganisationseinheitI18nV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessOrganisationseinheitI18nV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -148,10 +166,19 @@ public class ProcessOrganisationseinheitI18nV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitI18nV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessOrganisationseinheitI18nV1} instance.
+   *
+   * @param sprache Sprache.
+   * @param name Name der Organisationseinheit.
+   * @param kurzbeschreibung Beschreibung der Organisationseinheit.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitI18nV1(final String sprache, final String name, final String kurzbeschreibung) {
     this.sprache = sprache;
     this.name = name;

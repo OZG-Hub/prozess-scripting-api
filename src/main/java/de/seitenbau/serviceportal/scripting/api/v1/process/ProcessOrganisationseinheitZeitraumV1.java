@@ -18,13 +18,17 @@ public class ProcessOrganisationseinheitZeitraumV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessOrganisationseinheitZeitraumV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Date beginn;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Date ende;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessOrganisationseinheitZeitraumV1Builder() {
     }
 
@@ -33,6 +37,7 @@ public class ProcessOrganisationseinheitZeitraumV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitZeitraumV1.ProcessOrganisationseinheitZeitraumV1Builder beginn(final Date beginn) {
       this.beginn = beginn;
       return this;
@@ -43,24 +48,28 @@ public class ProcessOrganisationseinheitZeitraumV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitZeitraumV1.ProcessOrganisationseinheitZeitraumV1Builder ende(final Date ende) {
       this.ende = ende;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitZeitraumV1 build() {
       return new ProcessOrganisationseinheitZeitraumV1(this.beginn, this.ende);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessOrganisationseinheitZeitraumV1.ProcessOrganisationseinheitZeitraumV1Builder(beginn=" + this.beginn + ", ende=" + this.ende + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessOrganisationseinheitZeitraumV1.ProcessOrganisationseinheitZeitraumV1Builder builder() {
     return new ProcessOrganisationseinheitZeitraumV1.ProcessOrganisationseinheitZeitraumV1Builder();
   }
@@ -69,6 +78,7 @@ public class ProcessOrganisationseinheitZeitraumV1 {
    * Start des Zeitraums.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Date getBeginn() {
     return this.beginn;
   }
@@ -77,18 +87,21 @@ public class ProcessOrganisationseinheitZeitraumV1 {
    * Ende des Zeitraums.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Date getEnde() {
     return this.ende;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessOrganisationseinheitZeitraumV1(beginn=" + this.getBeginn() + ", ende=" + this.getEnde() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessOrganisationseinheitZeitraumV1)) return false;
@@ -104,12 +117,14 @@ public class ProcessOrganisationseinheitZeitraumV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessOrganisationseinheitZeitraumV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -121,10 +136,18 @@ public class ProcessOrganisationseinheitZeitraumV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitZeitraumV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessOrganisationseinheitZeitraumV1} instance.
+   *
+   * @param beginn Start des Zeitraums.
+   * @param ende Ende des Zeitraums.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitZeitraumV1(final Date beginn, final Date ende) {
     this.beginn = beginn;
     this.ende = ende;

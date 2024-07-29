@@ -21,21 +21,27 @@ public class CustomButtonsV1 {
   private DataResourcePointerV1 target;
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<CustomButtonV1> $default$buttons() {
     return new ArrayList<>();
   }
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class CustomButtonsV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean buttons$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<CustomButtonV1> buttons$value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private DataResourcePointerV1 target;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     CustomButtonsV1Builder() {
     }
 
@@ -44,6 +50,7 @@ public class CustomButtonsV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public CustomButtonsV1.CustomButtonsV1Builder buttons(@NonNull final List<CustomButtonV1> buttons) {
       if (buttons == null) {
         throw new NullPointerException("buttons is marked non-null but is null");
@@ -58,12 +65,14 @@ public class CustomButtonsV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public CustomButtonsV1.CustomButtonsV1Builder target(final DataResourcePointerV1 target) {
       this.target = target;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public CustomButtonsV1 build() {
       List<CustomButtonV1> buttons$value = this.buttons$value;
       if (!this.buttons$set) buttons$value = CustomButtonsV1.$default$buttons();
@@ -72,12 +81,14 @@ public class CustomButtonsV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "CustomButtonsV1.CustomButtonsV1Builder(buttons$value=" + this.buttons$value + ", target=" + this.target + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static CustomButtonsV1.CustomButtonsV1Builder builder() {
     return new CustomButtonsV1.CustomButtonsV1Builder();
   }
@@ -87,6 +98,7 @@ public class CustomButtonsV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<CustomButtonV1> getButtons() {
     return this.buttons;
   }
@@ -95,6 +107,7 @@ public class CustomButtonsV1 {
    * Prozessinstanzvariable, in die der Wert des geklickten Buttons geschrieben wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public DataResourcePointerV1 getTarget() {
     return this.target;
   }
@@ -103,6 +116,7 @@ public class CustomButtonsV1 {
    * Liste der Buttons. Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setButtons(@NonNull final List<CustomButtonV1> buttons) {
     if (buttons == null) {
       throw new NullPointerException("buttons is marked non-null but is null");
@@ -114,12 +128,14 @@ public class CustomButtonsV1 {
    * Prozessinstanzvariable, in die der Wert des geklickten Buttons geschrieben wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setTarget(final DataResourcePointerV1 target) {
     this.target = target;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof CustomButtonsV1)) return false;
@@ -135,12 +151,14 @@ public class CustomButtonsV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof CustomButtonsV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -153,16 +171,25 @@ public class CustomButtonsV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "CustomButtonsV1(buttons=" + this.getButtons() + ", target=" + this.getTarget() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public CustomButtonsV1() {
     this.buttons = CustomButtonsV1.$default$buttons();
   }
 
+  /**
+   * Creates a new {@code CustomButtonsV1} instance.
+   *
+   * @param buttons Liste der Buttons. Default ist eine leere Liste.
+   * @param target Prozessinstanzvariable, in die der Wert des geklickten Buttons geschrieben wird.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   private CustomButtonsV1(@NonNull final List<CustomButtonV1> buttons, final DataResourcePointerV1 target) {
     if (buttons == null) {
       throw new NullPointerException("buttons is marked non-null but is null");

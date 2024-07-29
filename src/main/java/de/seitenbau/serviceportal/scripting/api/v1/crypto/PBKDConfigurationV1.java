@@ -33,17 +33,23 @@ public class PBKDConfigurationV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class PBKDConfigurationV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String secretKeyFactoryAlgorithm;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String secretKeySpecAlgorithm;
     @SuppressWarnings("all")
+    @lombok.Generated
     private int pbeKeySpecIterationCount;
     @SuppressWarnings("all")
+    @lombok.Generated
     private int pbeKeySpecKeyLengthInBits;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     PBKDConfigurationV1Builder() {
     }
 
@@ -56,6 +62,7 @@ public class PBKDConfigurationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PBKDConfigurationV1.PBKDConfigurationV1Builder secretKeyFactoryAlgorithm(final String secretKeyFactoryAlgorithm) {
       this.secretKeyFactoryAlgorithm = secretKeyFactoryAlgorithm;
       return this;
@@ -68,6 +75,7 @@ public class PBKDConfigurationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PBKDConfigurationV1.PBKDConfigurationV1Builder secretKeySpecAlgorithm(final String secretKeySpecAlgorithm) {
       this.secretKeySpecAlgorithm = secretKeySpecAlgorithm;
       return this;
@@ -78,6 +86,7 @@ public class PBKDConfigurationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PBKDConfigurationV1.PBKDConfigurationV1Builder pbeKeySpecIterationCount(final int pbeKeySpecIterationCount) {
       this.pbeKeySpecIterationCount = pbeKeySpecIterationCount;
       return this;
@@ -89,24 +98,28 @@ public class PBKDConfigurationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PBKDConfigurationV1.PBKDConfigurationV1Builder pbeKeySpecKeyLengthInBits(final int pbeKeySpecKeyLengthInBits) {
       this.pbeKeySpecKeyLengthInBits = pbeKeySpecKeyLengthInBits;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public PBKDConfigurationV1 build() {
       return new PBKDConfigurationV1(this.secretKeyFactoryAlgorithm, this.secretKeySpecAlgorithm, this.pbeKeySpecIterationCount, this.pbeKeySpecKeyLengthInBits);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "PBKDConfigurationV1.PBKDConfigurationV1Builder(secretKeyFactoryAlgorithm=" + this.secretKeyFactoryAlgorithm + ", secretKeySpecAlgorithm=" + this.secretKeySpecAlgorithm + ", pbeKeySpecIterationCount=" + this.pbeKeySpecIterationCount + ", pbeKeySpecKeyLengthInBits=" + this.pbeKeySpecKeyLengthInBits + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static PBKDConfigurationV1.PBKDConfigurationV1Builder builder() {
     return new PBKDConfigurationV1.PBKDConfigurationV1Builder();
   }
@@ -119,6 +132,7 @@ public class PBKDConfigurationV1 {
    * SecretKeyFactory Algorithms</a>
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSecretKeyFactoryAlgorithm() {
     return this.secretKeyFactoryAlgorithm;
   }
@@ -129,6 +143,7 @@ public class PBKDConfigurationV1 {
    * @see <a href="https://tinyurl.com/standard-names">Java Security Standard Algorithm Names</a>
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSecretKeySpecAlgorithm() {
     return this.secretKeySpecAlgorithm;
   }
@@ -137,6 +152,7 @@ public class PBKDConfigurationV1 {
    * Gibt an, wie oft das Passwort während der Ableitung des symmetrischen Schlüssels gehasht wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public int getPbeKeySpecIterationCount() {
     return this.pbeKeySpecIterationCount;
   }
@@ -146,6 +162,7 @@ public class PBKDConfigurationV1 {
    * Muss durch 8 teilbar und größer als 0 sein.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public int getPbeKeySpecKeyLengthInBits() {
     return this.pbeKeySpecKeyLengthInBits;
   }
@@ -158,6 +175,7 @@ public class PBKDConfigurationV1 {
    * SecretKeyFactory Algorithms</a>
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSecretKeyFactoryAlgorithm(final String secretKeyFactoryAlgorithm) {
     this.secretKeyFactoryAlgorithm = secretKeyFactoryAlgorithm;
   }
@@ -168,6 +186,7 @@ public class PBKDConfigurationV1 {
    * @see <a href="https://tinyurl.com/standard-names">Java Security Standard Algorithm Names</a>
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSecretKeySpecAlgorithm(final String secretKeySpecAlgorithm) {
     this.secretKeySpecAlgorithm = secretKeySpecAlgorithm;
   }
@@ -176,6 +195,7 @@ public class PBKDConfigurationV1 {
    * Gibt an, wie oft das Passwort während der Ableitung des symmetrischen Schlüssels gehasht wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPbeKeySpecIterationCount(final int pbeKeySpecIterationCount) {
     this.pbeKeySpecIterationCount = pbeKeySpecIterationCount;
   }
@@ -185,12 +205,14 @@ public class PBKDConfigurationV1 {
    * Muss durch 8 teilbar und größer als 0 sein.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPbeKeySpecKeyLengthInBits(final int pbeKeySpecKeyLengthInBits) {
     this.pbeKeySpecKeyLengthInBits = pbeKeySpecKeyLengthInBits;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof PBKDConfigurationV1)) return false;
@@ -208,12 +230,14 @@ public class PBKDConfigurationV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof PBKDConfigurationV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -228,15 +252,33 @@ public class PBKDConfigurationV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "PBKDConfigurationV1(secretKeyFactoryAlgorithm=" + this.getSecretKeyFactoryAlgorithm() + ", secretKeySpecAlgorithm=" + this.getSecretKeySpecAlgorithm() + ", pbeKeySpecIterationCount=" + this.getPbeKeySpecIterationCount() + ", pbeKeySpecKeyLengthInBits=" + this.getPbeKeySpecKeyLengthInBits() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public PBKDConfigurationV1() {
   }
 
+  /**
+   * Creates a new {@code PBKDConfigurationV1} instance.
+   *
+   * @param secretKeyFactoryAlgorithm Der Secret-Key-Factory-Algorithmus, der verwendet wird, um einen geheimen Schlüssel aus dem Passwort zu
+   * generieren.
+   *
+   * @see <a href="https://tinyurl.com/standard-names#secretkeyfactory-algorithms">
+   * SecretKeyFactory Algorithms</a>
+   * @param secretKeySpecAlgorithm Der Secret-Key-Algorithmus, der mit dem angegebenen Schlüsselmaterial assoziiert werden soll.
+   *
+   * @see <a href="https://tinyurl.com/standard-names">Java Security Standard Algorithm Names</a>
+   * @param pbeKeySpecIterationCount Gibt an, wie oft das Passwort während der Ableitung des symmetrischen Schlüssels gehasht wird.
+   * @param pbeKeySpecKeyLengthInBits Die Schlüssellänge in Bits des geheimen Schlüssels, der aus dem Passwort generiert wird.
+   * Muss durch 8 teilbar und größer als 0 sein.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public PBKDConfigurationV1(final String secretKeyFactoryAlgorithm, final String secretKeySpecAlgorithm, final int pbeKeySpecIterationCount, final int pbeKeySpecKeyLengthInBits) {
     this.secretKeyFactoryAlgorithm = secretKeyFactoryAlgorithm;
     this.secretKeySpecAlgorithm = secretKeySpecAlgorithm;

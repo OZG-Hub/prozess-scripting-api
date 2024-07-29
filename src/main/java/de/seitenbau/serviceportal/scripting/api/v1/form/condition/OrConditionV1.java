@@ -16,17 +16,21 @@ public class OrConditionV1 extends AggregatorDisplayConditionV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class OrConditionV1Builder<C extends OrConditionV1, B extends OrConditionV1.OrConditionV1Builder<C, B>> extends AggregatorDisplayConditionV1.AggregatorDisplayConditionV1Builder<C, B> {
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "OrConditionV1.OrConditionV1Builder(super=" + super.toString() + ")";
     }
@@ -34,30 +38,36 @@ public class OrConditionV1 extends AggregatorDisplayConditionV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class OrConditionV1BuilderImpl extends OrConditionV1.OrConditionV1Builder<OrConditionV1, OrConditionV1.OrConditionV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private OrConditionV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected OrConditionV1.OrConditionV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrConditionV1 build() {
       return new OrConditionV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected OrConditionV1(final OrConditionV1.OrConditionV1Builder<?, ?> b) {
     super(b);
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static OrConditionV1.OrConditionV1Builder<?, ?> builder() {
     return new OrConditionV1.OrConditionV1BuilderImpl();
   }

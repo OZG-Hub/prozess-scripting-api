@@ -24,15 +24,20 @@ public class FitConnectSubmissionCallbackV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class FitConnectSubmissionCallbackV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String submissionId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String caseId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String eventType;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     FitConnectSubmissionCallbackV1Builder() {
     }
 
@@ -41,6 +46,7 @@ public class FitConnectSubmissionCallbackV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FitConnectSubmissionCallbackV1.FitConnectSubmissionCallbackV1Builder submissionId(final String submissionId) {
       this.submissionId = submissionId;
       return this;
@@ -51,6 +57,7 @@ public class FitConnectSubmissionCallbackV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FitConnectSubmissionCallbackV1.FitConnectSubmissionCallbackV1Builder caseId(final String caseId) {
       this.caseId = caseId;
       return this;
@@ -65,24 +72,28 @@ public class FitConnectSubmissionCallbackV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FitConnectSubmissionCallbackV1.FitConnectSubmissionCallbackV1Builder eventType(final String eventType) {
       this.eventType = eventType;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public FitConnectSubmissionCallbackV1 build() {
       return new FitConnectSubmissionCallbackV1(this.submissionId, this.caseId, this.eventType);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "FitConnectSubmissionCallbackV1.FitConnectSubmissionCallbackV1Builder(submissionId=" + this.submissionId + ", caseId=" + this.caseId + ", eventType=" + this.eventType + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static FitConnectSubmissionCallbackV1.FitConnectSubmissionCallbackV1Builder builder() {
     return new FitConnectSubmissionCallbackV1.FitConnectSubmissionCallbackV1Builder();
   }
@@ -91,6 +102,7 @@ public class FitConnectSubmissionCallbackV1 {
    * ID der Einreichung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSubmissionId() {
     return this.submissionId;
   }
@@ -99,6 +111,7 @@ public class FitConnectSubmissionCallbackV1 {
    * ID des Vorgangs zu dem die Einreichung gehört.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getCaseId() {
     return this.caseId;
   }
@@ -111,18 +124,21 @@ public class FitConnectSubmissionCallbackV1 {
    * - https://schema.fitko.de/fit-connect/events/forward-submission
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getEventType() {
     return this.eventType;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "FitConnectSubmissionCallbackV1(submissionId=" + this.getSubmissionId() + ", caseId=" + this.getCaseId() + ", eventType=" + this.getEventType() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof FitConnectSubmissionCallbackV1)) return false;
@@ -141,12 +157,14 @@ public class FitConnectSubmissionCallbackV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof FitConnectSubmissionCallbackV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -160,10 +178,23 @@ public class FitConnectSubmissionCallbackV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public FitConnectSubmissionCallbackV1() {
   }
 
+  /**
+   * Creates a new {@code FitConnectSubmissionCallbackV1} instance.
+   *
+   * @param submissionId ID der Einreichung.
+   * @param caseId ID des Vorgangs zu dem die Einreichung gehört.
+   * @param eventType Typ des Events des Callbacks.
+   * Mögliche Typen:
+   * - https://schema.fitko.de/fit-connect/events/accept-submission
+   * - https://schema.fitko.de/fit-connect/events/reject-submission
+   * - https://schema.fitko.de/fit-connect/events/forward-submission
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public FitConnectSubmissionCallbackV1(final String submissionId, final String caseId, final String eventType) {
     this.submissionId = submissionId;
     this.caseId = caseId;

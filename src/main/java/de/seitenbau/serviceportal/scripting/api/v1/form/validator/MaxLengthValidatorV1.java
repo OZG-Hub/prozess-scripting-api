@@ -13,8 +13,10 @@ public class MaxLengthValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class MaxLengthValidatorV1Builder<C extends MaxLengthValidatorV1, B extends MaxLengthValidatorV1.MaxLengthValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private int maxLength;
 
     /**
@@ -22,6 +24,7 @@ public class MaxLengthValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B maxLength(final int maxLength) {
       this.maxLength = maxLength;
       return self();
@@ -29,14 +32,17 @@ public class MaxLengthValidatorV1 extends ValidationRuleV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "MaxLengthValidatorV1.MaxLengthValidatorV1Builder(super=" + super.toString() + ", maxLength=" + this.maxLength + ")";
     }
@@ -44,31 +50,37 @@ public class MaxLengthValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class MaxLengthValidatorV1BuilderImpl extends MaxLengthValidatorV1.MaxLengthValidatorV1Builder<MaxLengthValidatorV1, MaxLengthValidatorV1.MaxLengthValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private MaxLengthValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected MaxLengthValidatorV1.MaxLengthValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public MaxLengthValidatorV1 build() {
       return new MaxLengthValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected MaxLengthValidatorV1(final MaxLengthValidatorV1.MaxLengthValidatorV1Builder<?, ?> b) {
     super(b);
     this.maxLength = b.maxLength;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static MaxLengthValidatorV1.MaxLengthValidatorV1Builder<?, ?> builder() {
     return new MaxLengthValidatorV1.MaxLengthValidatorV1BuilderImpl();
   }
@@ -77,6 +89,7 @@ public class MaxLengthValidatorV1 extends ValidationRuleV1 {
    * Maximallänge des Strings.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public int getMaxLength() {
     return this.maxLength;
   }
@@ -85,18 +98,21 @@ public class MaxLengthValidatorV1 extends ValidationRuleV1 {
    * Maximallänge des Strings.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMaxLength(final int maxLength) {
     this.maxLength = maxLength;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "MaxLengthValidatorV1(maxLength=" + this.getMaxLength() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof MaxLengthValidatorV1)) return false;
@@ -107,12 +123,14 @@ public class MaxLengthValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof MaxLengthValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

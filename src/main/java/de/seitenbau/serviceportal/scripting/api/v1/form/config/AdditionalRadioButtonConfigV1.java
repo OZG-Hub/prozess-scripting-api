@@ -5,13 +5,19 @@ import de.seitenbau.serviceportal.scripting.api.v1.form.FieldTypeV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.style.AdditionalFieldStylingV1;
 
 /**
- * Konfiguration für RadioButton-Felder ({@link FieldTypeV1#RADIO_BUTTONS RADIO_BUTTONS}).
+ * Konfiguration für Radiobutton-Felder ({@link FieldTypeV1#RADIO_BUTTONS}).
  */
 public class AdditionalRadioButtonConfigV1 implements AdditionalFieldConfigV1 {
   /**
-   * Style-Informationen. Nicht {@code null}.
+   * Style-Informationen. Optional für {@link FieldTypeV1#RADIO_BUTTONS}.
    */
   private AdditionalFieldStylingV1 styling;
+  /**
+   * Ausrichtung der Radio Buttons.
+   * Valide Werte sind 'horizontal' und 'vertical'.
+   * Nur verwendbar mit formular-engine version 2.
+   */
+  private String layout;
 
   @Override
   public AdditionalRadioButtonConfigV1 clone() {
@@ -22,66 +28,124 @@ public class AdditionalRadioButtonConfigV1 implements AdditionalFieldConfigV1 {
     }
   }
 
+  /**
+   * Creates a new {@code AdditionalRadioButtonConfigV1} instance.
+   *
+   * @param styling Style-Informationen. Optional für {@link FieldTypeV1#RADIO_BUTTONS}.
+   * @param layout Ausrichtung der Radio Buttons.
+   * Valide Werte sind 'horizontal' und 'vertical'.
+   * Nur verwendbar mit formular-engine version 2.
+   */
   @SuppressWarnings("all")
-  AdditionalRadioButtonConfigV1(final AdditionalFieldStylingV1 styling) {
+  @lombok.Generated
+  AdditionalRadioButtonConfigV1(final AdditionalFieldStylingV1 styling, final String layout) {
     this.styling = styling;
+    this.layout = layout;
   }
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class AdditionalRadioButtonConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private AdditionalFieldStylingV1 styling;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private String layout;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     AdditionalRadioButtonConfigV1Builder() {
     }
 
     /**
-     * Style-Informationen. Nicht {@code null}.
+     * Style-Informationen. Optional für {@link FieldTypeV1#RADIO_BUTTONS}.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalRadioButtonConfigV1.AdditionalRadioButtonConfigV1Builder styling(final AdditionalFieldStylingV1 styling) {
       this.styling = styling;
       return this;
     }
 
+    /**
+     * Ausrichtung der Radio Buttons.
+     * Valide Werte sind 'horizontal' und 'vertical'.
+     * Nur verwendbar mit formular-engine version 2.
+     * @return {@code this}.
+     */
     @SuppressWarnings("all")
+    @lombok.Generated
+    public AdditionalRadioButtonConfigV1.AdditionalRadioButtonConfigV1Builder layout(final String layout) {
+      this.layout = layout;
+      return this;
+    }
+
+    @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalRadioButtonConfigV1 build() {
-      return new AdditionalRadioButtonConfigV1(this.styling);
+      return new AdditionalRadioButtonConfigV1(this.styling, this.layout);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
-      return "AdditionalRadioButtonConfigV1.AdditionalRadioButtonConfigV1Builder(styling=" + this.styling + ")";
+      return "AdditionalRadioButtonConfigV1.AdditionalRadioButtonConfigV1Builder(styling=" + this.styling + ", layout=" + this.layout + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static AdditionalRadioButtonConfigV1.AdditionalRadioButtonConfigV1Builder builder() {
     return new AdditionalRadioButtonConfigV1.AdditionalRadioButtonConfigV1Builder();
   }
 
   /**
-   * Style-Informationen. Nicht {@code null}.
+   * Style-Informationen. Optional für {@link FieldTypeV1#RADIO_BUTTONS}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public AdditionalFieldStylingV1 getStyling() {
     return this.styling;
   }
 
   /**
-   * Style-Informationen. Nicht {@code null}.
+   * Ausrichtung der Radio Buttons.
+   * Valide Werte sind 'horizontal' und 'vertical'.
+   * Nur verwendbar mit formular-engine version 2.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
+  public String getLayout() {
+    return this.layout;
+  }
+
+  /**
+   * Style-Informationen. Optional für {@link FieldTypeV1#RADIO_BUTTONS}.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
   public void setStyling(final AdditionalFieldStylingV1 styling) {
     this.styling = styling;
   }
 
+  /**
+   * Ausrichtung der Radio Buttons.
+   * Valide Werte sind 'horizontal' und 'vertical'.
+   * Nur verwendbar mit formular-engine version 2.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setLayout(final String layout) {
+    this.layout = layout;
+  }
+
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof AdditionalRadioButtonConfigV1)) return false;
@@ -90,27 +154,35 @@ public class AdditionalRadioButtonConfigV1 implements AdditionalFieldConfigV1 {
     final Object this$styling = this.getStyling();
     final Object other$styling = other.getStyling();
     if (this$styling == null ? other$styling != null : !this$styling.equals(other$styling)) return false;
+    final Object this$layout = this.getLayout();
+    final Object other$layout = other.getLayout();
+    if (this$layout == null ? other$layout != null : !this$layout.equals(other$layout)) return false;
     return true;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof AdditionalRadioButtonConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
     final Object $styling = this.getStyling();
     result = result * PRIME + ($styling == null ? 43 : $styling.hashCode());
+    final Object $layout = this.getLayout();
+    result = result * PRIME + ($layout == null ? 43 : $layout.hashCode());
     return result;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
-    return "AdditionalRadioButtonConfigV1(styling=" + this.getStyling() + ")";
+    return "AdditionalRadioButtonConfigV1(styling=" + this.getStyling() + ", layout=" + this.getLayout() + ")";
   }
 }

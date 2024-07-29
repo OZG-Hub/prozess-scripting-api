@@ -56,9 +56,12 @@ public class FormFieldV1 implements Cloneable {
   private Boolean required;
   /**
    * {@code true}, wenn das Feld ein {@link FieldTypeV1#DATE Datum-Feld} ist und der grafische Picker des
-   * Felds nicht angeboten werden
-   * soll.
+   * Felds nicht angeboten werden soll.
+   * Ab Formularversion 2 kann dieser Parameter nur noch über die
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDateConfigV1}
+   * konfiguriert werden.
    */
+  @Deprecated(since = "Formularversion 2")
   private Boolean pickerDisabled;
   /**
    * {@code true}, wenn das Feld ein Einwilligungsfeld ist.
@@ -71,17 +74,22 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Individueller Fehlertext - Inhalt passt nicht zum Datentyp des Feldes ({@link FieldTypeV1#DATE Datums-},
    * {@link FieldTypeV1#TIME Zeit-} oder {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
+   * Ab Formularversion 2 nicht mehr verwendbar.
    */
+  @Deprecated
   private String typeValidationFailedMessage;
   /**
    * Individueller Fehlertext - falsches Tausendertrennzeichen (nur für
    * {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
    */
+  @Deprecated(since = "Formularversion 2")
   private String thousandsSeparatorValidationFailedMessage;
   /**
    * Individueller Fehlertext - falsche Anzahl an Nachkommastellen (nur für
    * {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
+   * Ab Formularversion 2 nicht mehr verwendbar.
    */
+  @Deprecated(since = "Formularversion 2")
   private String digitsAfterDecimalPointValidationFailedMessage;
   /**
    * Hilfetext zum Feld.
@@ -103,7 +111,13 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Layout (nur für {@link FieldTypeV1#CHECKBOX Checkbox-} und
    * {@link FieldTypeV1#RADIO_BUTTONS Radiobuttonfelder}).
+   * Ab Formularversion 2 kann dieser Parameter nur noch über die entsprechende additionConfig
+   * für das spezifische Feld konfiguriert werden:
+   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}
+   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}
+   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}
    */
+  @Deprecated(since = "Formularversion 2")
   private String layout;
   /**
    * Validierungsregeln für das Feld.
@@ -147,17 +161,30 @@ public class FormFieldV1 implements Cloneable {
   /**
    * {@code true}, wenn das Feld ein Select-Feld ist und die Einträge auf der Oberfläche durch Texteingabe
    * filterbar sind.
+   * Ab Formularversion 2 kann dieser Parameter nur noch über die additionalConfig für das
+   * entsprechende Feld konfiguriert werden:
+   * - {@link
+   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
+   * - {@link
+   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
    */
+  @Deprecated(since = "Formularversion 2")
   private Boolean filterable;
   /**
-   * Konfigurationsparameter für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder}. Für andere Feldtypen
-   * {@code null}.
+   * Konfigurationsparameter für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder}.
+   * Für andere Feldtypen {@code null}.
+   * Ab Formularversion 2 kann dieser Parameter nur noch über
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalGeoMapConfigV1}
+   * konfiguriert werden.
    */
+  @Deprecated(since = "Formularversion 2")
   private Map<String, String> controlParameters;
   /**
    * Schlüssel des Feldes, das als Address-Suchfeld für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder} dient.
    * Für andere Feldtypen {@code null}.
+   * Ab Formularversion 2 nicht mehr verwendbar.
    */
+  @Deprecated(since = "Formularversion 2")
   private FormFieldKeyV1 initializeWithAdressField;
   /**
    * Ergänzende Informationen für spezielle Feldtypen (sonst {@code null}).
@@ -321,100 +348,141 @@ public class FormFieldV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<DisplayConditionV1> $default$displayConditions() {
     return new ArrayList<>();
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static int $default$width() {
     return GRID_ROW_WIDTH;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<ValidationRuleV1> $default$validationRules() {
     return new ArrayList<>();
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static Set<ValidationMessageV1> $default$validationMessages() {
     return new HashSet<>();
   }
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class FormFieldV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String id;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String fimId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String label;
     @SuppressWarnings("all")
+    @lombok.Generated
     private FieldTypeV1 type;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Object value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String placeholder;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean disabled;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean required;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean pickerDisabled;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean consent;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String requiredValidationFailedMessage;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String typeValidationFailedMessage;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String thousandsSeparatorValidationFailedMessage;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String digitsAfterDecimalPointValidationFailedMessage;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String helptext;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<PossibleValueV1> possibleValues;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean displayConditions$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<DisplayConditionV1> displayConditions$value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean width$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private int width$value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String layout;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean validationRules$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<ValidationRuleV1> validationRules$value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean validationMessages$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<ValidationMessageV1> validationMessages$value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private DataResourcePointerV1 source;
     @SuppressWarnings("all")
+    @lombok.Generated
     private DataResourcePointerV1 target;
     @SuppressWarnings("all")
+    @lombok.Generated
     private DataResourcePointerV1 possibleValuesSource;
     @SuppressWarnings("all")
+    @lombok.Generated
     private ExternalDataSourcePropertiesV1 externalDataSourceProperties;
     @SuppressWarnings("all")
+    @lombok.Generated
     private ExternalDataSourcePropertiesV1 externalValue;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean filterable;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Map<String, String> controlParameters;
     @SuppressWarnings("all")
+    @lombok.Generated
     private FormFieldKeyV1 initializeWithAdressField;
     @SuppressWarnings("all")
+    @lombok.Generated
     private AdditionalFieldConfigV1 additionalConfig;
     @SuppressWarnings("all")
+    @lombok.Generated
     private ModalHelpDialogV1 helpDialog;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     FormFieldV1Builder() {
     }
 
@@ -423,6 +491,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder id(@NonNull final String id) {
       if (id == null) {
         throw new NullPointerException("id is marked non-null but is null");
@@ -436,6 +505,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder fimId(final String fimId) {
       this.fimId = fimId;
       return this;
@@ -446,6 +516,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder label(final String label) {
       this.label = label;
       return this;
@@ -456,6 +527,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder type(@NonNull final FieldTypeV1 type) {
       if (type == null) {
         throw new NullPointerException("type is marked non-null but is null");
@@ -469,6 +541,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder value(final Object value) {
       this.value = value;
       return this;
@@ -479,6 +552,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder placeholder(final String placeholder) {
       this.placeholder = placeholder;
       return this;
@@ -489,6 +563,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder disabled(final Boolean disabled) {
       this.disabled = disabled;
       return this;
@@ -499,6 +574,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder required(final Boolean required) {
       this.required = required;
       return this;
@@ -506,11 +582,15 @@ public class FormFieldV1 implements Cloneable {
 
     /**
      * {@code true}, wenn das Feld ein {@link FieldTypeV1#DATE Datum-Feld} ist und der grafische Picker des
-     * Felds nicht angeboten werden
-     * soll.
+     * Felds nicht angeboten werden soll.
+     * Ab Formularversion 2 kann dieser Parameter nur noch über die
+     * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDateConfigV1}
+     * konfiguriert werden.
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder pickerDisabled(final Boolean pickerDisabled) {
       this.pickerDisabled = pickerDisabled;
       return this;
@@ -521,6 +601,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder consent(final Boolean consent) {
       this.consent = consent;
       return this;
@@ -531,6 +612,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder requiredValidationFailedMessage(final String requiredValidationFailedMessage) {
       this.requiredValidationFailedMessage = requiredValidationFailedMessage;
       return this;
@@ -539,9 +621,12 @@ public class FormFieldV1 implements Cloneable {
     /**
      * Individueller Fehlertext - Inhalt passt nicht zum Datentyp des Feldes ({@link FieldTypeV1#DATE Datums-},
      * {@link FieldTypeV1#TIME Zeit-} oder {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
+     * Ab Formularversion 2 nicht mehr verwendbar.
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder typeValidationFailedMessage(final String typeValidationFailedMessage) {
       this.typeValidationFailedMessage = typeValidationFailedMessage;
       return this;
@@ -552,7 +637,9 @@ public class FormFieldV1 implements Cloneable {
      * {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder thousandsSeparatorValidationFailedMessage(final String thousandsSeparatorValidationFailedMessage) {
       this.thousandsSeparatorValidationFailedMessage = thousandsSeparatorValidationFailedMessage;
       return this;
@@ -561,9 +648,12 @@ public class FormFieldV1 implements Cloneable {
     /**
      * Individueller Fehlertext - falsche Anzahl an Nachkommastellen (nur für
      * {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
+     * Ab Formularversion 2 nicht mehr verwendbar.
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder digitsAfterDecimalPointValidationFailedMessage(final String digitsAfterDecimalPointValidationFailedMessage) {
       this.digitsAfterDecimalPointValidationFailedMessage = digitsAfterDecimalPointValidationFailedMessage;
       return this;
@@ -574,6 +664,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder helptext(final String helptext) {
       this.helptext = helptext;
       return this;
@@ -584,6 +675,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder possibleValues(final List<PossibleValueV1> possibleValues) {
       this.possibleValues = possibleValues;
       return this;
@@ -594,6 +686,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder displayConditions(@NonNull final List<DisplayConditionV1> displayConditions) {
       if (displayConditions == null) {
         throw new NullPointerException("displayConditions is marked non-null but is null");
@@ -608,6 +701,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder width(final int width) {
       this.width$value = width;
       width$set = true;
@@ -617,9 +711,16 @@ public class FormFieldV1 implements Cloneable {
     /**
      * Layout (nur für {@link FieldTypeV1#CHECKBOX Checkbox-} und
      * {@link FieldTypeV1#RADIO_BUTTONS Radiobuttonfelder}).
+     * Ab Formularversion 2 kann dieser Parameter nur noch über die entsprechende additionConfig
+     * für das spezifische Feld konfiguriert werden:
+     * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}
+     * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}
+     * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder layout(final String layout) {
       this.layout = layout;
       return this;
@@ -630,6 +731,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder validationRules(@NonNull final List<ValidationRuleV1> validationRules) {
       if (validationRules == null) {
         throw new NullPointerException("validationRules is marked non-null but is null");
@@ -644,6 +746,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder validationMessages(@NonNull final Set<ValidationMessageV1> validationMessages) {
       if (validationMessages == null) {
         throw new NullPointerException("validationMessages is marked non-null but is null");
@@ -659,6 +762,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder source(final DataResourcePointerV1 source) {
       this.source = source;
       return this;
@@ -669,6 +773,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder target(final DataResourcePointerV1 target) {
       this.target = target;
       return this;
@@ -682,6 +787,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder possibleValuesSource(final DataResourcePointerV1 possibleValuesSource) {
       this.possibleValuesSource = possibleValuesSource;
       return this;
@@ -694,6 +800,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder externalDataSourceProperties(final ExternalDataSourcePropertiesV1 externalDataSourceProperties) {
       this.externalDataSourceProperties = externalDataSourceProperties;
       return this;
@@ -707,6 +814,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder externalValue(final ExternalDataSourcePropertiesV1 externalValue) {
       this.externalValue = externalValue;
       return this;
@@ -715,20 +823,33 @@ public class FormFieldV1 implements Cloneable {
     /**
      * {@code true}, wenn das Feld ein Select-Feld ist und die Einträge auf der Oberfläche durch Texteingabe
      * filterbar sind.
+     * Ab Formularversion 2 kann dieser Parameter nur noch über die additionalConfig für das
+     * entsprechende Feld konfiguriert werden:
+     * - {@link
+     * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
+     * - {@link
+     * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder filterable(final Boolean filterable) {
       this.filterable = filterable;
       return this;
     }
 
     /**
-     * Konfigurationsparameter für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder}. Für andere Feldtypen
-     * {@code null}.
+     * Konfigurationsparameter für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder}.
+     * Für andere Feldtypen {@code null}.
+     * Ab Formularversion 2 kann dieser Parameter nur noch über
+     * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalGeoMapConfigV1}
+     * konfiguriert werden.
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder controlParameters(final Map<String, String> controlParameters) {
       this.controlParameters = controlParameters;
       return this;
@@ -737,9 +858,12 @@ public class FormFieldV1 implements Cloneable {
     /**
      * Schlüssel des Feldes, das als Address-Suchfeld für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder} dient.
      * Für andere Feldtypen {@code null}.
+     * Ab Formularversion 2 nicht mehr verwendbar.
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder initializeWithAdressField(final FormFieldKeyV1 initializeWithAdressField) {
       this.initializeWithAdressField = initializeWithAdressField;
       return this;
@@ -750,6 +874,7 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder additionalConfig(final AdditionalFieldConfigV1 additionalConfig) {
       this.additionalConfig = additionalConfig;
       return this;
@@ -760,12 +885,14 @@ public class FormFieldV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1.FormFieldV1Builder helpDialog(final ModalHelpDialogV1 helpDialog) {
       this.helpDialog = helpDialog;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldV1 build() {
       List<DisplayConditionV1> displayConditions$value = this.displayConditions$value;
       if (!this.displayConditions$set) displayConditions$value = FormFieldV1.$default$displayConditions();
@@ -780,12 +907,14 @@ public class FormFieldV1 implements Cloneable {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "FormFieldV1.FormFieldV1Builder(id=" + this.id + ", fimId=" + this.fimId + ", label=" + this.label + ", type=" + this.type + ", value=" + this.value + ", placeholder=" + this.placeholder + ", disabled=" + this.disabled + ", required=" + this.required + ", pickerDisabled=" + this.pickerDisabled + ", consent=" + this.consent + ", requiredValidationFailedMessage=" + this.requiredValidationFailedMessage + ", typeValidationFailedMessage=" + this.typeValidationFailedMessage + ", thousandsSeparatorValidationFailedMessage=" + this.thousandsSeparatorValidationFailedMessage + ", digitsAfterDecimalPointValidationFailedMessage=" + this.digitsAfterDecimalPointValidationFailedMessage + ", helptext=" + this.helptext + ", possibleValues=" + this.possibleValues + ", displayConditions$value=" + this.displayConditions$value + ", width$value=" + this.width$value + ", layout=" + this.layout + ", validationRules$value=" + this.validationRules$value + ", validationMessages$value=" + this.validationMessages$value + ", source=" + this.source + ", target=" + this.target + ", possibleValuesSource=" + this.possibleValuesSource + ", externalDataSourceProperties=" + this.externalDataSourceProperties + ", externalValue=" + this.externalValue + ", filterable=" + this.filterable + ", controlParameters=" + this.controlParameters + ", initializeWithAdressField=" + this.initializeWithAdressField + ", additionalConfig=" + this.additionalConfig + ", helpDialog=" + this.helpDialog + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static FormFieldV1.FormFieldV1Builder builder() {
     return new FormFieldV1.FormFieldV1Builder();
   }
@@ -795,6 +924,7 @@ public class FormFieldV1 implements Cloneable {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getId() {
     return this.id;
   }
@@ -803,6 +933,7 @@ public class FormFieldV1 implements Cloneable {
    * ID des Feldes als Datenfeld im FIM-Standard (Föderales Informationsmanagement).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getFimId() {
     return this.fimId;
   }
@@ -812,6 +943,7 @@ public class FormFieldV1 implements Cloneable {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public FieldTypeV1 getType() {
     return this.type;
   }
@@ -820,6 +952,7 @@ public class FormFieldV1 implements Cloneable {
    * Aktueller Wert des Feldes.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Object getValue() {
     return this.value;
   }
@@ -828,6 +961,7 @@ public class FormFieldV1 implements Cloneable {
    * Platzhalter, falls Feld nicht ausgefüllt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPlaceholder() {
     return this.placeholder;
   }
@@ -836,6 +970,7 @@ public class FormFieldV1 implements Cloneable {
    * {@code true}, wenn das Feld nicht editierbar / deaktiviert ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getDisabled() {
     return this.disabled;
   }
@@ -844,16 +979,21 @@ public class FormFieldV1 implements Cloneable {
    * {@code true}, wenn das Feld ein Pflichtfeld ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getRequired() {
     return this.required;
   }
 
   /**
    * {@code true}, wenn das Feld ein {@link FieldTypeV1#DATE Datum-Feld} ist und der grafische Picker des
-   * Felds nicht angeboten werden
-   * soll.
+   * Felds nicht angeboten werden soll.
+   * Ab Formularversion 2 kann dieser Parameter nur noch über die
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDateConfigV1}
+   * konfiguriert werden.
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getPickerDisabled() {
     return this.pickerDisabled;
   }
@@ -862,6 +1002,7 @@ public class FormFieldV1 implements Cloneable {
    * {@code true}, wenn das Feld ein Einwilligungsfeld ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getConsent() {
     return this.consent;
   }
@@ -870,6 +1011,7 @@ public class FormFieldV1 implements Cloneable {
    * Individueller Fehlertext - Pflichtfeld nicht ausgefüllt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getRequiredValidationFailedMessage() {
     return this.requiredValidationFailedMessage;
   }
@@ -877,8 +1019,11 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Individueller Fehlertext - Inhalt passt nicht zum Datentyp des Feldes ({@link FieldTypeV1#DATE Datums-},
    * {@link FieldTypeV1#TIME Zeit-} oder {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
+   * Ab Formularversion 2 nicht mehr verwendbar.
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTypeValidationFailedMessage() {
     return this.typeValidationFailedMessage;
   }
@@ -887,7 +1032,9 @@ public class FormFieldV1 implements Cloneable {
    * Individueller Fehlertext - falsches Tausendertrennzeichen (nur für
    * {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getThousandsSeparatorValidationFailedMessage() {
     return this.thousandsSeparatorValidationFailedMessage;
   }
@@ -895,8 +1042,11 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Individueller Fehlertext - falsche Anzahl an Nachkommastellen (nur für
    * {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
+   * Ab Formularversion 2 nicht mehr verwendbar.
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getDigitsAfterDecimalPointValidationFailedMessage() {
     return this.digitsAfterDecimalPointValidationFailedMessage;
   }
@@ -905,6 +1055,7 @@ public class FormFieldV1 implements Cloneable {
    * Hilfetext zum Feld.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getHelptext() {
     return this.helptext;
   }
@@ -913,6 +1064,7 @@ public class FormFieldV1 implements Cloneable {
    * Mögliche Werte bei Auswahllisten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<PossibleValueV1> getPossibleValues() {
     return this.possibleValues;
   }
@@ -922,6 +1074,7 @@ public class FormFieldV1 implements Cloneable {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<DisplayConditionV1> getDisplayConditions() {
     return this.displayConditions;
   }
@@ -930,6 +1083,7 @@ public class FormFieldV1 implements Cloneable {
    * Breite des Felds (die gesamte Formularbreite entspricht 12).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public int getWidth() {
     return this.width;
   }
@@ -937,8 +1091,15 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Layout (nur für {@link FieldTypeV1#CHECKBOX Checkbox-} und
    * {@link FieldTypeV1#RADIO_BUTTONS Radiobuttonfelder}).
+   * Ab Formularversion 2 kann dieser Parameter nur noch über die entsprechende additionConfig
+   * für das spezifische Feld konfiguriert werden:
+   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}
+   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}
+   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getLayout() {
     return this.layout;
   }
@@ -948,6 +1109,7 @@ public class FormFieldV1 implements Cloneable {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<ValidationRuleV1> getValidationRules() {
     return this.validationRules;
   }
@@ -957,6 +1119,7 @@ public class FormFieldV1 implements Cloneable {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<ValidationMessageV1> getValidationMessages() {
     return this.validationMessages;
   }
@@ -966,6 +1129,7 @@ public class FormFieldV1 implements Cloneable {
    * verwendet.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public DataResourcePointerV1 getSource() {
     return this.source;
   }
@@ -974,6 +1138,7 @@ public class FormFieldV1 implements Cloneable {
    * Ziel, in das der Feldinhalt geschrieben wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public DataResourcePointerV1 getTarget() {
     return this.target;
   }
@@ -985,6 +1150,7 @@ public class FormFieldV1 implements Cloneable {
    * verwendet.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public DataResourcePointerV1 getPossibleValuesSource() {
     return this.possibleValuesSource;
   }
@@ -995,6 +1161,7 @@ public class FormFieldV1 implements Cloneable {
    * Für {@link FieldTypeV1#DOWNLOAD Download-} und {@link FieldTypeV1#PDF PDF-}Felder ein Pflichtattribut.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ExternalDataSourcePropertiesV1 getExternalDataSourceProperties() {
     return this.externalDataSourceProperties;
   }
@@ -1006,6 +1173,7 @@ public class FormFieldV1 implements Cloneable {
    * aktualisiert, wenn nicht, wird der Wert nur dann aktualisiert, wenn der Wert vorher leer war.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ExternalDataSourcePropertiesV1 getExternalValue() {
     return this.externalValue;
   }
@@ -1013,17 +1181,30 @@ public class FormFieldV1 implements Cloneable {
   /**
    * {@code true}, wenn das Feld ein Select-Feld ist und die Einträge auf der Oberfläche durch Texteingabe
    * filterbar sind.
+   * Ab Formularversion 2 kann dieser Parameter nur noch über die additionalConfig für das
+   * entsprechende Feld konfiguriert werden:
+   * - {@link
+   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
+   * - {@link
+   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getFilterable() {
     return this.filterable;
   }
 
   /**
-   * Konfigurationsparameter für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder}. Für andere Feldtypen
-   * {@code null}.
+   * Konfigurationsparameter für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder}.
+   * Für andere Feldtypen {@code null}.
+   * Ab Formularversion 2 kann dieser Parameter nur noch über
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalGeoMapConfigV1}
+   * konfiguriert werden.
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public Map<String, String> getControlParameters() {
     return this.controlParameters;
   }
@@ -1031,8 +1212,11 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Schlüssel des Feldes, das als Address-Suchfeld für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder} dient.
    * Für andere Feldtypen {@code null}.
+   * Ab Formularversion 2 nicht mehr verwendbar.
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public FormFieldKeyV1 getInitializeWithAdressField() {
     return this.initializeWithAdressField;
   }
@@ -1041,6 +1225,7 @@ public class FormFieldV1 implements Cloneable {
    * Ergänzende Informationen für spezielle Feldtypen (sonst {@code null}).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public AdditionalFieldConfigV1 getAdditionalConfig() {
     return this.additionalConfig;
   }
@@ -1049,6 +1234,7 @@ public class FormFieldV1 implements Cloneable {
    * Informationen zum Hilfe-Dialog, wenn ein Hilfe-Button angezeigt werden soll.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ModalHelpDialogV1 getHelpDialog() {
     return this.helpDialog;
   }
@@ -1057,6 +1243,7 @@ public class FormFieldV1 implements Cloneable {
    * ID des Feldes (eindeutig in Feldgruppen-Instanz).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setId(@NonNull final String id) {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");
@@ -1068,6 +1255,7 @@ public class FormFieldV1 implements Cloneable {
    * ID des Feldes als Datenfeld im FIM-Standard (Föderales Informationsmanagement).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setFimId(final String fimId) {
     this.fimId = fimId;
   }
@@ -1076,6 +1264,7 @@ public class FormFieldV1 implements Cloneable {
    * Beschriftung des Feldes.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setLabel(final String label) {
     this.label = label;
   }
@@ -1084,6 +1273,7 @@ public class FormFieldV1 implements Cloneable {
    * Typ des Feldes.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setType(@NonNull final FieldTypeV1 type) {
     if (type == null) {
       throw new NullPointerException("type is marked non-null but is null");
@@ -1095,6 +1285,7 @@ public class FormFieldV1 implements Cloneable {
    * Aktueller Wert des Feldes.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValue(final Object value) {
     this.value = value;
   }
@@ -1103,6 +1294,7 @@ public class FormFieldV1 implements Cloneable {
    * Platzhalter, falls Feld nicht ausgefüllt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPlaceholder(final String placeholder) {
     this.placeholder = placeholder;
   }
@@ -1111,6 +1303,7 @@ public class FormFieldV1 implements Cloneable {
    * {@code true}, wenn das Feld nicht editierbar / deaktiviert ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setDisabled(final Boolean disabled) {
     this.disabled = disabled;
   }
@@ -1119,16 +1312,21 @@ public class FormFieldV1 implements Cloneable {
    * {@code true}, wenn das Feld ein Pflichtfeld ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setRequired(final Boolean required) {
     this.required = required;
   }
 
   /**
    * {@code true}, wenn das Feld ein {@link FieldTypeV1#DATE Datum-Feld} ist und der grafische Picker des
-   * Felds nicht angeboten werden
-   * soll.
+   * Felds nicht angeboten werden soll.
+   * Ab Formularversion 2 kann dieser Parameter nur noch über die
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDateConfigV1}
+   * konfiguriert werden.
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPickerDisabled(final Boolean pickerDisabled) {
     this.pickerDisabled = pickerDisabled;
   }
@@ -1137,6 +1335,7 @@ public class FormFieldV1 implements Cloneable {
    * {@code true}, wenn das Feld ein Einwilligungsfeld ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setConsent(final Boolean consent) {
     this.consent = consent;
   }
@@ -1145,6 +1344,7 @@ public class FormFieldV1 implements Cloneable {
    * Individueller Fehlertext - Pflichtfeld nicht ausgefüllt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setRequiredValidationFailedMessage(final String requiredValidationFailedMessage) {
     this.requiredValidationFailedMessage = requiredValidationFailedMessage;
   }
@@ -1152,8 +1352,11 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Individueller Fehlertext - Inhalt passt nicht zum Datentyp des Feldes ({@link FieldTypeV1#DATE Datums-},
    * {@link FieldTypeV1#TIME Zeit-} oder {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
+   * Ab Formularversion 2 nicht mehr verwendbar.
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setTypeValidationFailedMessage(final String typeValidationFailedMessage) {
     this.typeValidationFailedMessage = typeValidationFailedMessage;
   }
@@ -1162,7 +1365,9 @@ public class FormFieldV1 implements Cloneable {
    * Individueller Fehlertext - falsches Tausendertrennzeichen (nur für
    * {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setThousandsSeparatorValidationFailedMessage(final String thousandsSeparatorValidationFailedMessage) {
     this.thousandsSeparatorValidationFailedMessage = thousandsSeparatorValidationFailedMessage;
   }
@@ -1170,8 +1375,11 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Individueller Fehlertext - falsche Anzahl an Nachkommastellen (nur für
    * {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
+   * Ab Formularversion 2 nicht mehr verwendbar.
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setDigitsAfterDecimalPointValidationFailedMessage(final String digitsAfterDecimalPointValidationFailedMessage) {
     this.digitsAfterDecimalPointValidationFailedMessage = digitsAfterDecimalPointValidationFailedMessage;
   }
@@ -1180,6 +1388,7 @@ public class FormFieldV1 implements Cloneable {
    * Hilfetext zum Feld.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setHelptext(final String helptext) {
     this.helptext = helptext;
   }
@@ -1188,6 +1397,7 @@ public class FormFieldV1 implements Cloneable {
    * Mögliche Werte bei Auswahllisten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPossibleValues(final List<PossibleValueV1> possibleValues) {
     this.possibleValues = possibleValues;
   }
@@ -1196,6 +1406,7 @@ public class FormFieldV1 implements Cloneable {
    * Bedingungen, über die das Feld dynamisch ein- oder ausgeblendet werden kann.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setDisplayConditions(@NonNull final List<DisplayConditionV1> displayConditions) {
     if (displayConditions == null) {
       throw new NullPointerException("displayConditions is marked non-null but is null");
@@ -1207,6 +1418,7 @@ public class FormFieldV1 implements Cloneable {
    * Breite des Felds (die gesamte Formularbreite entspricht 12).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setWidth(final int width) {
     this.width = width;
   }
@@ -1214,8 +1426,15 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Layout (nur für {@link FieldTypeV1#CHECKBOX Checkbox-} und
    * {@link FieldTypeV1#RADIO_BUTTONS Radiobuttonfelder}).
+   * Ab Formularversion 2 kann dieser Parameter nur noch über die entsprechende additionConfig
+   * für das spezifische Feld konfiguriert werden:
+   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}
+   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}
+   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setLayout(final String layout) {
     this.layout = layout;
   }
@@ -1224,6 +1443,7 @@ public class FormFieldV1 implements Cloneable {
    * Validierungsregeln für das Feld.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValidationRules(@NonNull final List<ValidationRuleV1> validationRules) {
     if (validationRules == null) {
       throw new NullPointerException("validationRules is marked non-null but is null");
@@ -1235,6 +1455,7 @@ public class FormFieldV1 implements Cloneable {
    * Texte für die Fehlermeldungen bei einfacher Formularvalidierung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValidationMessages(@NonNull final Set<ValidationMessageV1> validationMessages) {
     if (validationMessages == null) {
       throw new NullPointerException("validationMessages is marked non-null but is null");
@@ -1247,6 +1468,7 @@ public class FormFieldV1 implements Cloneable {
    * verwendet.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSource(final DataResourcePointerV1 source) {
     this.source = source;
   }
@@ -1255,6 +1477,7 @@ public class FormFieldV1 implements Cloneable {
    * Ziel, in das der Feldinhalt geschrieben wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setTarget(final DataResourcePointerV1 target) {
     this.target = target;
   }
@@ -1266,6 +1489,7 @@ public class FormFieldV1 implements Cloneable {
    * verwendet.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPossibleValuesSource(final DataResourcePointerV1 possibleValuesSource) {
     this.possibleValuesSource = possibleValuesSource;
   }
@@ -1276,6 +1500,7 @@ public class FormFieldV1 implements Cloneable {
    * Für {@link FieldTypeV1#DOWNLOAD Download-} und {@link FieldTypeV1#PDF PDF-}Felder ein Pflichtattribut.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setExternalDataSourceProperties(final ExternalDataSourcePropertiesV1 externalDataSourceProperties) {
     this.externalDataSourceProperties = externalDataSourceProperties;
   }
@@ -1287,6 +1512,7 @@ public class FormFieldV1 implements Cloneable {
    * aktualisiert, wenn nicht, wird der Wert nur dann aktualisiert, wenn der Wert vorher leer war.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setExternalValue(final ExternalDataSourcePropertiesV1 externalValue) {
     this.externalValue = externalValue;
   }
@@ -1294,17 +1520,30 @@ public class FormFieldV1 implements Cloneable {
   /**
    * {@code true}, wenn das Feld ein Select-Feld ist und die Einträge auf der Oberfläche durch Texteingabe
    * filterbar sind.
+   * Ab Formularversion 2 kann dieser Parameter nur noch über die additionalConfig für das
+   * entsprechende Feld konfiguriert werden:
+   * - {@link
+   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
+   * - {@link
+   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setFilterable(final Boolean filterable) {
     this.filterable = filterable;
   }
 
   /**
-   * Konfigurationsparameter für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder}. Für andere Feldtypen
-   * {@code null}.
+   * Konfigurationsparameter für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder}.
+   * Für andere Feldtypen {@code null}.
+   * Ab Formularversion 2 kann dieser Parameter nur noch über
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalGeoMapConfigV1}
+   * konfiguriert werden.
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setControlParameters(final Map<String, String> controlParameters) {
     this.controlParameters = controlParameters;
   }
@@ -1312,8 +1551,11 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Schlüssel des Feldes, das als Address-Suchfeld für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder} dient.
    * Für andere Feldtypen {@code null}.
+   * Ab Formularversion 2 nicht mehr verwendbar.
    */
+  @Deprecated
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setInitializeWithAdressField(final FormFieldKeyV1 initializeWithAdressField) {
     this.initializeWithAdressField = initializeWithAdressField;
   }
@@ -1322,6 +1564,7 @@ public class FormFieldV1 implements Cloneable {
    * Ergänzende Informationen für spezielle Feldtypen (sonst {@code null}).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAdditionalConfig(final AdditionalFieldConfigV1 additionalConfig) {
     this.additionalConfig = additionalConfig;
   }
@@ -1330,12 +1573,14 @@ public class FormFieldV1 implements Cloneable {
    * Informationen zum Hilfe-Dialog, wenn ein Hilfe-Button angezeigt werden soll.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setHelpDialog(final ModalHelpDialogV1 helpDialog) {
     this.helpDialog = helpDialog;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof FormFieldV1)) return false;
@@ -1436,12 +1681,14 @@ public class FormFieldV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof FormFieldV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -1511,11 +1758,85 @@ public class FormFieldV1 implements Cloneable {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "FormFieldV1(id=" + this.getId() + ", fimId=" + this.getFimId() + ", label=" + this.getLabel() + ", type=" + this.getType() + ", value=" + this.getValue() + ", placeholder=" + this.getPlaceholder() + ", disabled=" + this.getDisabled() + ", required=" + this.getRequired() + ", pickerDisabled=" + this.getPickerDisabled() + ", consent=" + this.getConsent() + ", requiredValidationFailedMessage=" + this.getRequiredValidationFailedMessage() + ", typeValidationFailedMessage=" + this.getTypeValidationFailedMessage() + ", thousandsSeparatorValidationFailedMessage=" + this.getThousandsSeparatorValidationFailedMessage() + ", digitsAfterDecimalPointValidationFailedMessage=" + this.getDigitsAfterDecimalPointValidationFailedMessage() + ", helptext=" + this.getHelptext() + ", possibleValues=" + this.getPossibleValues() + ", displayConditions=" + this.getDisplayConditions() + ", width=" + this.getWidth() + ", layout=" + this.getLayout() + ", validationRules=" + this.getValidationRules() + ", validationMessages=" + this.getValidationMessages() + ", source=" + this.getSource() + ", target=" + this.getTarget() + ", possibleValuesSource=" + this.getPossibleValuesSource() + ", externalDataSourceProperties=" + this.getExternalDataSourceProperties() + ", externalValue=" + this.getExternalValue() + ", filterable=" + this.getFilterable() + ", controlParameters=" + this.getControlParameters() + ", initializeWithAdressField=" + this.getInitializeWithAdressField() + ", additionalConfig=" + this.getAdditionalConfig() + ", helpDialog=" + this.getHelpDialog() + ")";
   }
 
+  /**
+   * Creates a new {@code FormFieldV1} instance.
+   *
+   * @param id ID des Feldes (eindeutig in Feldgruppen-Instanz).
+   * @param fimId ID des Feldes als Datenfeld im FIM-Standard (Föderales Informationsmanagement).
+   * @param label Beschriftung des Feldes.
+   * @param type Typ des Feldes.
+   * @param value Aktueller Wert des Feldes.
+   * @param placeholder Platzhalter, falls Feld nicht ausgefüllt.
+   * @param disabled {@code true}, wenn das Feld nicht editierbar / deaktiviert ist.
+   * @param required {@code true}, wenn das Feld ein Pflichtfeld ist.
+   * @param pickerDisabled {@code true}, wenn das Feld ein {@link FieldTypeV1#DATE Datum-Feld} ist und der grafische Picker des
+   * Felds nicht angeboten werden soll.
+   * Ab Formularversion 2 kann dieser Parameter nur noch über die
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDateConfigV1}
+   * konfiguriert werden.
+   * @param consent {@code true}, wenn das Feld ein Einwilligungsfeld ist.
+   * @param requiredValidationFailedMessage Individueller Fehlertext - Pflichtfeld nicht ausgefüllt.
+   * @param typeValidationFailedMessage Individueller Fehlertext - Inhalt passt nicht zum Datentyp des Feldes ({@link FieldTypeV1#DATE Datums-},
+   * {@link FieldTypeV1#TIME Zeit-} oder {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
+   * Ab Formularversion 2 nicht mehr verwendbar.
+   * @param thousandsSeparatorValidationFailedMessage Individueller Fehlertext - falsches Tausendertrennzeichen (nur für
+   * {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
+   * @param digitsAfterDecimalPointValidationFailedMessage Individueller Fehlertext - falsche Anzahl an Nachkommastellen (nur für
+   * {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
+   * Ab Formularversion 2 nicht mehr verwendbar.
+   * @param helptext Hilfetext zum Feld.
+   * @param possibleValues Mögliche Werte bei Auswahllisten.
+   * @param displayConditions Bedingungen, über die das Feld dynamisch ein- oder ausgeblendet werden kann.
+   * @param width Breite des Felds (die gesamte Formularbreite entspricht 12).
+   * @param layout Layout (nur für {@link FieldTypeV1#CHECKBOX Checkbox-} und
+   * {@link FieldTypeV1#RADIO_BUTTONS Radiobuttonfelder}).
+   * Ab Formularversion 2 kann dieser Parameter nur noch über die entsprechende additionConfig
+   * für das spezifische Feld konfiguriert werden:
+   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}
+   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}
+   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}
+   * @param validationRules Validierungsregeln für das Feld.
+   * @param validationMessages Texte für die Fehlermeldungen bei einfacher Formularvalidierung.
+   * @param source Quelle, aus der der Feldinhalt gelesen wird. Falls {@code null}, wird ggf. eine Default-source
+   * verwendet.
+   * @param target Ziel, in das der Feldinhalt geschrieben wird.
+   * @param possibleValuesSource Quelle, aus der die Select-Items für das Formularfeld gelesen werden (es kann {@code null}
+   * zurückgeliefert werden, dann werden die Defaultwerte aus diesem Objekt verwendet, sonst muss eine Liste
+   * an PossibleValue Objekten zurückgegeben werden). Wenn {@code null}, dann werden die im Feld definierten
+   * verwendet.
+   * @param externalDataSourceProperties Properties für Felder, die AJAX-Calls absetzen.
+   * Wenn {@code null}, werden die am Feld angegebenen Default Werte verwendet.
+   * Für {@link FieldTypeV1#DOWNLOAD Download-} und {@link FieldTypeV1#PDF PDF-}Felder ein Pflichtattribut.
+   * @param externalValue Gibt eine externe Quelle an, aus der der Wert des Formularfeldes in Abhängigkeiten von anderen Werten im
+   * Formular berechnet wird. Wenn der Benutzer einen abhängigen Wert ändert, wird der Feldwert sofort ohne
+   * Abschicken des Formulars neu berechnet (per Ajax-Call). Wenn das Feld disabled ist, wird es immer
+   * aktualisiert, wenn nicht, wird der Wert nur dann aktualisiert, wenn der Wert vorher leer war.
+   * @param filterable {@code true}, wenn das Feld ein Select-Feld ist und die Einträge auf der Oberfläche durch Texteingabe
+   * filterbar sind.
+   * Ab Formularversion 2 kann dieser Parameter nur noch über die additionalConfig für das
+   * entsprechende Feld konfiguriert werden:
+   * - {@link
+   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
+   * - {@link
+   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
+   * @param controlParameters Konfigurationsparameter für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder}.
+   * Für andere Feldtypen {@code null}.
+   * Ab Formularversion 2 kann dieser Parameter nur noch über
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalGeoMapConfigV1}
+   * konfiguriert werden.
+   * @param initializeWithAdressField Schlüssel des Feldes, das als Address-Suchfeld für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder} dient.
+   * Für andere Feldtypen {@code null}.
+   * Ab Formularversion 2 nicht mehr verwendbar.
+   * @param additionalConfig Ergänzende Informationen für spezielle Feldtypen (sonst {@code null}).
+   * @param helpDialog Informationen zum Hilfe-Dialog, wenn ein Hilfe-Button angezeigt werden soll.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   private FormFieldV1(@NonNull final String id, final String fimId, final String label, @NonNull final FieldTypeV1 type, final Object value, final String placeholder, final Boolean disabled, final Boolean required, final Boolean pickerDisabled, final Boolean consent, final String requiredValidationFailedMessage, final String typeValidationFailedMessage, final String thousandsSeparatorValidationFailedMessage, final String digitsAfterDecimalPointValidationFailedMessage, final String helptext, final List<PossibleValueV1> possibleValues, @NonNull final List<DisplayConditionV1> displayConditions, final int width, final String layout, @NonNull final List<ValidationRuleV1> validationRules, @NonNull final Set<ValidationMessageV1> validationMessages, final DataResourcePointerV1 source, final DataResourcePointerV1 target, final DataResourcePointerV1 possibleValuesSource, final ExternalDataSourcePropertiesV1 externalDataSourceProperties, final ExternalDataSourcePropertiesV1 externalValue, final Boolean filterable, final Map<String, String> controlParameters, final FormFieldKeyV1 initializeWithAdressField, final AdditionalFieldConfigV1 additionalConfig, final ModalHelpDialogV1 helpDialog) {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");

@@ -30,19 +30,26 @@ public class OrganisationseinheitAnschriftParameterV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class OrganisationseinheitAnschriftParameterV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String strasseHausnummer;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String postleitzahl;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String ort;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String postfach;
     @SuppressWarnings("all")
+    @lombok.Generated
     private OrganisationseinheitPolitischeKodierungParameterV1 verwaltungspolitischeKodierung;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     OrganisationseinheitAnschriftParameterV1Builder() {
     }
 
@@ -51,6 +58,7 @@ public class OrganisationseinheitAnschriftParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitAnschriftParameterV1.OrganisationseinheitAnschriftParameterV1Builder strasseHausnummer(final String strasseHausnummer) {
       this.strasseHausnummer = strasseHausnummer;
       return this;
@@ -61,6 +69,7 @@ public class OrganisationseinheitAnschriftParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitAnschriftParameterV1.OrganisationseinheitAnschriftParameterV1Builder postleitzahl(final String postleitzahl) {
       this.postleitzahl = postleitzahl;
       return this;
@@ -71,6 +80,7 @@ public class OrganisationseinheitAnschriftParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitAnschriftParameterV1.OrganisationseinheitAnschriftParameterV1Builder ort(final String ort) {
       this.ort = ort;
       return this;
@@ -81,6 +91,7 @@ public class OrganisationseinheitAnschriftParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitAnschriftParameterV1.OrganisationseinheitAnschriftParameterV1Builder postfach(final String postfach) {
       this.postfach = postfach;
       return this;
@@ -91,24 +102,28 @@ public class OrganisationseinheitAnschriftParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitAnschriftParameterV1.OrganisationseinheitAnschriftParameterV1Builder verwaltungspolitischeKodierung(final OrganisationseinheitPolitischeKodierungParameterV1 verwaltungspolitischeKodierung) {
       this.verwaltungspolitischeKodierung = verwaltungspolitischeKodierung;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitAnschriftParameterV1 build() {
       return new OrganisationseinheitAnschriftParameterV1(this.strasseHausnummer, this.postleitzahl, this.ort, this.postfach, this.verwaltungspolitischeKodierung);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "OrganisationseinheitAnschriftParameterV1.OrganisationseinheitAnschriftParameterV1Builder(strasseHausnummer=" + this.strasseHausnummer + ", postleitzahl=" + this.postleitzahl + ", ort=" + this.ort + ", postfach=" + this.postfach + ", verwaltungspolitischeKodierung=" + this.verwaltungspolitischeKodierung + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static OrganisationseinheitAnschriftParameterV1.OrganisationseinheitAnschriftParameterV1Builder builder() {
     return new OrganisationseinheitAnschriftParameterV1.OrganisationseinheitAnschriftParameterV1Builder();
   }
@@ -117,6 +132,7 @@ public class OrganisationseinheitAnschriftParameterV1 {
    * Straße und Hausnummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getStrasseHausnummer() {
     return this.strasseHausnummer;
   }
@@ -125,6 +141,7 @@ public class OrganisationseinheitAnschriftParameterV1 {
    * Postleitzahl.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPostleitzahl() {
     return this.postleitzahl;
   }
@@ -133,6 +150,7 @@ public class OrganisationseinheitAnschriftParameterV1 {
    * Stadt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getOrt() {
     return this.ort;
   }
@@ -141,6 +159,7 @@ public class OrganisationseinheitAnschriftParameterV1 {
    * Postfach. Kann {@code null} sein.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPostfach() {
     return this.postfach;
   }
@@ -149,18 +168,21 @@ public class OrganisationseinheitAnschriftParameterV1 {
    * Weitere verwaltungspolitische Adressdaten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public OrganisationseinheitPolitischeKodierungParameterV1 getVerwaltungspolitischeKodierung() {
     return this.verwaltungspolitischeKodierung;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "OrganisationseinheitAnschriftParameterV1(strasseHausnummer=" + this.getStrasseHausnummer() + ", postleitzahl=" + this.getPostleitzahl() + ", ort=" + this.getOrt() + ", postfach=" + this.getPostfach() + ", verwaltungspolitischeKodierung=" + this.getVerwaltungspolitischeKodierung() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof OrganisationseinheitAnschriftParameterV1)) return false;
@@ -185,12 +207,14 @@ public class OrganisationseinheitAnschriftParameterV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof OrganisationseinheitAnschriftParameterV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -208,10 +232,21 @@ public class OrganisationseinheitAnschriftParameterV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public OrganisationseinheitAnschriftParameterV1() {
   }
 
+  /**
+   * Creates a new {@code OrganisationseinheitAnschriftParameterV1} instance.
+   *
+   * @param strasseHausnummer Straße und Hausnummer.
+   * @param postleitzahl Postleitzahl.
+   * @param ort Stadt.
+   * @param postfach Postfach. Kann {@code null} sein.
+   * @param verwaltungspolitischeKodierung Weitere verwaltungspolitische Adressdaten.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public OrganisationseinheitAnschriftParameterV1(final String strasseHausnummer, final String postleitzahl, final String ort, final String postfach, final OrganisationseinheitPolitischeKodierungParameterV1 verwaltungspolitischeKodierung) {
     this.strasseHausnummer = strasseHausnummer;
     this.postleitzahl = postleitzahl;

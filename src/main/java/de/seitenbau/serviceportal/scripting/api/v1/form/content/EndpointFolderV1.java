@@ -26,13 +26,17 @@ public class EndpointFolderV1 implements Cloneable {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class EndpointFolderV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String baseUrl;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String folder;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     EndpointFolderV1Builder() {
     }
 
@@ -41,6 +45,7 @@ public class EndpointFolderV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EndpointFolderV1.EndpointFolderV1Builder baseUrl(final String baseUrl) {
       this.baseUrl = baseUrl;
       return this;
@@ -52,24 +57,28 @@ public class EndpointFolderV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EndpointFolderV1.EndpointFolderV1Builder folder(final String folder) {
       this.folder = folder;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public EndpointFolderV1 build() {
       return new EndpointFolderV1(this.baseUrl, this.folder);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "EndpointFolderV1.EndpointFolderV1Builder(baseUrl=" + this.baseUrl + ", folder=" + this.folder + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static EndpointFolderV1.EndpointFolderV1Builder builder() {
     return new EndpointFolderV1.EndpointFolderV1Builder();
   }
@@ -78,6 +87,7 @@ public class EndpointFolderV1 implements Cloneable {
    * URL zur externen Dateiablage. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getBaseUrl() {
     return this.baseUrl;
   }
@@ -87,18 +97,21 @@ public class EndpointFolderV1 implements Cloneable {
    * gespeichert werden soll. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getFolder() {
     return this.folder;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "EndpointFolderV1(baseUrl=" + this.getBaseUrl() + ", folder=" + this.getFolder() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof EndpointFolderV1)) return false;
@@ -114,12 +127,14 @@ public class EndpointFolderV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof EndpointFolderV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -131,10 +146,19 @@ public class EndpointFolderV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public EndpointFolderV1() {
   }
 
+  /**
+   * Creates a new {@code EndpointFolderV1} instance.
+   *
+   * @param baseUrl URL zur externen Dateiablage. Nicht {@code null}.
+   * @param folder Ordner oder über "/" geschachtelter Pfad von Ordnern auf der externen Dateiablage, in dem eine Datei
+   * gespeichert werden soll. Nicht {@code null}.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public EndpointFolderV1(final String baseUrl, final String folder) {
     this.baseUrl = baseUrl;
     this.folder = folder;

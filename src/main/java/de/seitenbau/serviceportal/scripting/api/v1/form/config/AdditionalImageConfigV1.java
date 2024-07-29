@@ -29,7 +29,15 @@ public class AdditionalImageConfigV1 implements AdditionalFieldConfigV1 {
     }
   }
 
+  /**
+   * Creates a new {@code AdditionalImageConfigV1} instance.
+   *
+   * @param url URL zum Bild.
+   * @param alt Text, der angezeigt wird, falls das Bild nicht geladen werden kann.
+   * @param caption Bildunterschrift.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   AdditionalImageConfigV1(final String url, final String alt, final String caption) {
     this.url = url;
     this.alt = alt;
@@ -38,15 +46,20 @@ public class AdditionalImageConfigV1 implements AdditionalFieldConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class AdditionalImageConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String url;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String alt;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String caption;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     AdditionalImageConfigV1Builder() {
     }
 
@@ -55,6 +68,7 @@ public class AdditionalImageConfigV1 implements AdditionalFieldConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalImageConfigV1.AdditionalImageConfigV1Builder url(final String url) {
       this.url = url;
       return this;
@@ -65,6 +79,7 @@ public class AdditionalImageConfigV1 implements AdditionalFieldConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalImageConfigV1.AdditionalImageConfigV1Builder alt(final String alt) {
       this.alt = alt;
       return this;
@@ -75,24 +90,28 @@ public class AdditionalImageConfigV1 implements AdditionalFieldConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalImageConfigV1.AdditionalImageConfigV1Builder caption(final String caption) {
       this.caption = caption;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalImageConfigV1 build() {
       return new AdditionalImageConfigV1(this.url, this.alt, this.caption);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "AdditionalImageConfigV1.AdditionalImageConfigV1Builder(url=" + this.url + ", alt=" + this.alt + ", caption=" + this.caption + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static AdditionalImageConfigV1.AdditionalImageConfigV1Builder builder() {
     return new AdditionalImageConfigV1.AdditionalImageConfigV1Builder();
   }
@@ -101,6 +120,7 @@ public class AdditionalImageConfigV1 implements AdditionalFieldConfigV1 {
    * URL zum Bild.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getUrl() {
     return this.url;
   }
@@ -109,6 +129,7 @@ public class AdditionalImageConfigV1 implements AdditionalFieldConfigV1 {
    * Text, der angezeigt wird, falls das Bild nicht geladen werden kann.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getAlt() {
     return this.alt;
   }
@@ -117,6 +138,7 @@ public class AdditionalImageConfigV1 implements AdditionalFieldConfigV1 {
    * Bildunterschrift.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getCaption() {
     return this.caption;
   }
@@ -125,6 +147,7 @@ public class AdditionalImageConfigV1 implements AdditionalFieldConfigV1 {
    * URL zum Bild.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setUrl(final String url) {
     this.url = url;
   }
@@ -133,6 +156,7 @@ public class AdditionalImageConfigV1 implements AdditionalFieldConfigV1 {
    * Text, der angezeigt wird, falls das Bild nicht geladen werden kann.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAlt(final String alt) {
     this.alt = alt;
   }
@@ -141,12 +165,14 @@ public class AdditionalImageConfigV1 implements AdditionalFieldConfigV1 {
    * Bildunterschrift.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setCaption(final String caption) {
     this.caption = caption;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof AdditionalImageConfigV1)) return false;
@@ -165,12 +191,14 @@ public class AdditionalImageConfigV1 implements AdditionalFieldConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof AdditionalImageConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -185,6 +213,7 @@ public class AdditionalImageConfigV1 implements AdditionalFieldConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "AdditionalImageConfigV1(url=" + this.getUrl() + ", alt=" + this.getAlt() + ", caption=" + this.getCaption() + ")";
   }

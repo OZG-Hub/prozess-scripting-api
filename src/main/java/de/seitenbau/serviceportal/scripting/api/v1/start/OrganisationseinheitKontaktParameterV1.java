@@ -22,15 +22,20 @@ public class OrganisationseinheitKontaktParameterV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class OrganisationseinheitKontaktParameterV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String email;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String telefon;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String fax;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     OrganisationseinheitKontaktParameterV1Builder() {
     }
 
@@ -39,6 +44,7 @@ public class OrganisationseinheitKontaktParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitKontaktParameterV1.OrganisationseinheitKontaktParameterV1Builder email(final String email) {
       this.email = email;
       return this;
@@ -49,6 +55,7 @@ public class OrganisationseinheitKontaktParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitKontaktParameterV1.OrganisationseinheitKontaktParameterV1Builder telefon(final String telefon) {
       this.telefon = telefon;
       return this;
@@ -59,24 +66,28 @@ public class OrganisationseinheitKontaktParameterV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitKontaktParameterV1.OrganisationseinheitKontaktParameterV1Builder fax(final String fax) {
       this.fax = fax;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public OrganisationseinheitKontaktParameterV1 build() {
       return new OrganisationseinheitKontaktParameterV1(this.email, this.telefon, this.fax);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "OrganisationseinheitKontaktParameterV1.OrganisationseinheitKontaktParameterV1Builder(email=" + this.email + ", telefon=" + this.telefon + ", fax=" + this.fax + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static OrganisationseinheitKontaktParameterV1.OrganisationseinheitKontaktParameterV1Builder builder() {
     return new OrganisationseinheitKontaktParameterV1.OrganisationseinheitKontaktParameterV1Builder();
   }
@@ -85,6 +96,7 @@ public class OrganisationseinheitKontaktParameterV1 {
    * E-Mail-Adresse. Kann {@code null} sein.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getEmail() {
     return this.email;
   }
@@ -93,6 +105,7 @@ public class OrganisationseinheitKontaktParameterV1 {
    * Telefonnummer. Kann {@code null} sein.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTelefon() {
     return this.telefon;
   }
@@ -101,18 +114,21 @@ public class OrganisationseinheitKontaktParameterV1 {
    * Fax-Nummer. Kann {@code null} sein.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getFax() {
     return this.fax;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "OrganisationseinheitKontaktParameterV1(email=" + this.getEmail() + ", telefon=" + this.getTelefon() + ", fax=" + this.getFax() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof OrganisationseinheitKontaktParameterV1)) return false;
@@ -131,12 +147,14 @@ public class OrganisationseinheitKontaktParameterV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof OrganisationseinheitKontaktParameterV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -150,10 +168,19 @@ public class OrganisationseinheitKontaktParameterV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public OrganisationseinheitKontaktParameterV1() {
   }
 
+  /**
+   * Creates a new {@code OrganisationseinheitKontaktParameterV1} instance.
+   *
+   * @param email E-Mail-Adresse. Kann {@code null} sein.
+   * @param telefon Telefonnummer. Kann {@code null} sein.
+   * @param fax Fax-Nummer. Kann {@code null} sein.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public OrganisationseinheitKontaktParameterV1(final String email, final String telefon, final String fax) {
     this.email = email;
     this.telefon = telefon;

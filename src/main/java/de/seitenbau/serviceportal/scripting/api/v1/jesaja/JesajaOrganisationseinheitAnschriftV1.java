@@ -32,21 +32,29 @@ public class JesajaOrganisationseinheitAnschriftV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class JesajaOrganisationseinheitAnschriftV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String anschreiben;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String strasse;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String stadt;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String plz;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String postfach;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String bundesland;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     JesajaOrganisationseinheitAnschriftV1Builder() {
     }
 
@@ -55,6 +63,7 @@ public class JesajaOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitAnschriftV1.JesajaOrganisationseinheitAnschriftV1Builder anschreiben(final String anschreiben) {
       this.anschreiben = anschreiben;
       return this;
@@ -65,6 +74,7 @@ public class JesajaOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitAnschriftV1.JesajaOrganisationseinheitAnschriftV1Builder strasse(final String strasse) {
       this.strasse = strasse;
       return this;
@@ -75,6 +85,7 @@ public class JesajaOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitAnschriftV1.JesajaOrganisationseinheitAnschriftV1Builder stadt(final String stadt) {
       this.stadt = stadt;
       return this;
@@ -85,6 +96,7 @@ public class JesajaOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitAnschriftV1.JesajaOrganisationseinheitAnschriftV1Builder plz(final String plz) {
       this.plz = plz;
       return this;
@@ -95,6 +107,7 @@ public class JesajaOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitAnschriftV1.JesajaOrganisationseinheitAnschriftV1Builder postfach(final String postfach) {
       this.postfach = postfach;
       return this;
@@ -105,24 +118,28 @@ public class JesajaOrganisationseinheitAnschriftV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitAnschriftV1.JesajaOrganisationseinheitAnschriftV1Builder bundesland(final String bundesland) {
       this.bundesland = bundesland;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitAnschriftV1 build() {
       return new JesajaOrganisationseinheitAnschriftV1(this.anschreiben, this.strasse, this.stadt, this.plz, this.postfach, this.bundesland);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "JesajaOrganisationseinheitAnschriftV1.JesajaOrganisationseinheitAnschriftV1Builder(anschreiben=" + this.anschreiben + ", strasse=" + this.strasse + ", stadt=" + this.stadt + ", plz=" + this.plz + ", postfach=" + this.postfach + ", bundesland=" + this.bundesland + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static JesajaOrganisationseinheitAnschriftV1.JesajaOrganisationseinheitAnschriftV1Builder builder() {
     return new JesajaOrganisationseinheitAnschriftV1.JesajaOrganisationseinheitAnschriftV1Builder();
   }
@@ -131,6 +148,7 @@ public class JesajaOrganisationseinheitAnschriftV1 {
    * Anschreiben.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getAnschreiben() {
     return this.anschreiben;
   }
@@ -139,6 +157,7 @@ public class JesajaOrganisationseinheitAnschriftV1 {
    * Straße und Hausnummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getStrasse() {
     return this.strasse;
   }
@@ -147,6 +166,7 @@ public class JesajaOrganisationseinheitAnschriftV1 {
    * Stadt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getStadt() {
     return this.stadt;
   }
@@ -155,6 +175,7 @@ public class JesajaOrganisationseinheitAnschriftV1 {
    * Postleitzahl.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPlz() {
     return this.plz;
   }
@@ -163,6 +184,7 @@ public class JesajaOrganisationseinheitAnschriftV1 {
    * Postfach.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPostfach() {
     return this.postfach;
   }
@@ -171,18 +193,21 @@ public class JesajaOrganisationseinheitAnschriftV1 {
    * Länderkürzel.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getBundesland() {
     return this.bundesland;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "JesajaOrganisationseinheitAnschriftV1(anschreiben=" + this.getAnschreiben() + ", strasse=" + this.getStrasse() + ", stadt=" + this.getStadt() + ", plz=" + this.getPlz() + ", postfach=" + this.getPostfach() + ", bundesland=" + this.getBundesland() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof JesajaOrganisationseinheitAnschriftV1)) return false;
@@ -210,12 +235,14 @@ public class JesajaOrganisationseinheitAnschriftV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof JesajaOrganisationseinheitAnschriftV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -235,10 +262,22 @@ public class JesajaOrganisationseinheitAnschriftV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public JesajaOrganisationseinheitAnschriftV1() {
   }
 
+  /**
+   * Creates a new {@code JesajaOrganisationseinheitAnschriftV1} instance.
+   *
+   * @param anschreiben Anschreiben.
+   * @param strasse Straße und Hausnummer.
+   * @param stadt Stadt.
+   * @param plz Postleitzahl.
+   * @param postfach Postfach.
+   * @param bundesland Länderkürzel.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public JesajaOrganisationseinheitAnschriftV1(final String anschreiben, final String strasse, final String stadt, final String plz, final String postfach, final String bundesland) {
     this.anschreiben = anschreiben;
     this.strasse = strasse;

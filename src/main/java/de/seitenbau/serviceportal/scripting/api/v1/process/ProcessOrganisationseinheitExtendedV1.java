@@ -30,19 +30,26 @@ public class ProcessOrganisationseinheitExtendedV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessOrganisationseinheitExtendedV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private ProcessOrganisationseinheitV1 oe;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<ProcessOrganisationseinheitInternetadresseV1> internetadressen;
     @SuppressWarnings("all")
+    @lombok.Generated
     private ProcessOrganisationseinheitRegionV1 zustaendigkeitRegion;
     @SuppressWarnings("all")
+    @lombok.Generated
     private ProcessOrganisationseinheitSearchIndexEntryV1 leistungSearchIndexEntry;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String aufgabengebiet;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessOrganisationseinheitExtendedV1Builder() {
     }
 
@@ -51,6 +58,7 @@ public class ProcessOrganisationseinheitExtendedV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitExtendedV1.ProcessOrganisationseinheitExtendedV1Builder oe(final ProcessOrganisationseinheitV1 oe) {
       this.oe = oe;
       return this;
@@ -61,6 +69,7 @@ public class ProcessOrganisationseinheitExtendedV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitExtendedV1.ProcessOrganisationseinheitExtendedV1Builder internetadressen(final List<ProcessOrganisationseinheitInternetadresseV1> internetadressen) {
       this.internetadressen = internetadressen;
       return this;
@@ -71,6 +80,7 @@ public class ProcessOrganisationseinheitExtendedV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitExtendedV1.ProcessOrganisationseinheitExtendedV1Builder zustaendigkeitRegion(final ProcessOrganisationseinheitRegionV1 zustaendigkeitRegion) {
       this.zustaendigkeitRegion = zustaendigkeitRegion;
       return this;
@@ -81,6 +91,7 @@ public class ProcessOrganisationseinheitExtendedV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitExtendedV1.ProcessOrganisationseinheitExtendedV1Builder leistungSearchIndexEntry(final ProcessOrganisationseinheitSearchIndexEntryV1 leistungSearchIndexEntry) {
       this.leistungSearchIndexEntry = leistungSearchIndexEntry;
       return this;
@@ -91,24 +102,28 @@ public class ProcessOrganisationseinheitExtendedV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitExtendedV1.ProcessOrganisationseinheitExtendedV1Builder aufgabengebiet(final String aufgabengebiet) {
       this.aufgabengebiet = aufgabengebiet;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitExtendedV1 build() {
       return new ProcessOrganisationseinheitExtendedV1(this.oe, this.internetadressen, this.zustaendigkeitRegion, this.leistungSearchIndexEntry, this.aufgabengebiet);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessOrganisationseinheitExtendedV1.ProcessOrganisationseinheitExtendedV1Builder(oe=" + this.oe + ", internetadressen=" + this.internetadressen + ", zustaendigkeitRegion=" + this.zustaendigkeitRegion + ", leistungSearchIndexEntry=" + this.leistungSearchIndexEntry + ", aufgabengebiet=" + this.aufgabengebiet + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessOrganisationseinheitExtendedV1.ProcessOrganisationseinheitExtendedV1Builder builder() {
     return new ProcessOrganisationseinheitExtendedV1.ProcessOrganisationseinheitExtendedV1Builder();
   }
@@ -117,6 +132,7 @@ public class ProcessOrganisationseinheitExtendedV1 {
    * OE.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitV1 getOe() {
     return this.oe;
   }
@@ -125,6 +141,7 @@ public class ProcessOrganisationseinheitExtendedV1 {
    * Internetadressen der OE.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<ProcessOrganisationseinheitInternetadresseV1> getInternetadressen() {
     return this.internetadressen;
   }
@@ -133,6 +150,7 @@ public class ProcessOrganisationseinheitExtendedV1 {
    * Region für die diese OE zuständig ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitRegionV1 getZustaendigkeitRegion() {
     return this.zustaendigkeitRegion;
   }
@@ -141,6 +159,7 @@ public class ProcessOrganisationseinheitExtendedV1 {
    * Beschreibungstext einer Leistung der OE.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitSearchIndexEntryV1 getLeistungSearchIndexEntry() {
     return this.leistungSearchIndexEntry;
   }
@@ -149,18 +168,21 @@ public class ProcessOrganisationseinheitExtendedV1 {
    * Aufgabengebiet der OE.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getAufgabengebiet() {
     return this.aufgabengebiet;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessOrganisationseinheitExtendedV1(oe=" + this.getOe() + ", internetadressen=" + this.getInternetadressen() + ", zustaendigkeitRegion=" + this.getZustaendigkeitRegion() + ", leistungSearchIndexEntry=" + this.getLeistungSearchIndexEntry() + ", aufgabengebiet=" + this.getAufgabengebiet() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessOrganisationseinheitExtendedV1)) return false;
@@ -185,12 +207,14 @@ public class ProcessOrganisationseinheitExtendedV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessOrganisationseinheitExtendedV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -208,10 +232,21 @@ public class ProcessOrganisationseinheitExtendedV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitExtendedV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessOrganisationseinheitExtendedV1} instance.
+   *
+   * @param oe OE.
+   * @param internetadressen Internetadressen der OE.
+   * @param zustaendigkeitRegion Region für die diese OE zuständig ist.
+   * @param leistungSearchIndexEntry Beschreibungstext einer Leistung der OE.
+   * @param aufgabengebiet Aufgabengebiet der OE.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitExtendedV1(final ProcessOrganisationseinheitV1 oe, final List<ProcessOrganisationseinheitInternetadresseV1> internetadressen, final ProcessOrganisationseinheitRegionV1 zustaendigkeitRegion, final ProcessOrganisationseinheitSearchIndexEntryV1 leistungSearchIndexEntry, final String aufgabengebiet) {
     this.oe = oe;
     this.internetadressen = internetadressen;

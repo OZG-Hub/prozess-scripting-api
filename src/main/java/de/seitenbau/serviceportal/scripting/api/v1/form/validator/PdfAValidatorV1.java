@@ -7,17 +7,21 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.validator;
 public class PdfAValidatorV1 extends ValidationRuleV1 {
 
 	@SuppressWarnings("all")
+	@lombok.Generated
 	public static abstract class PdfAValidatorV1Builder<C extends PdfAValidatorV1, B extends PdfAValidatorV1.PdfAValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		protected abstract B self();
 
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		public abstract C build();
 
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		public String toString() {
 			return "PdfAValidatorV1.PdfAValidatorV1Builder(super=" + super.toString() + ")";
 		}
@@ -25,42 +29,50 @@ public class PdfAValidatorV1 extends ValidationRuleV1 {
 
 
 	@SuppressWarnings("all")
+	@lombok.Generated
 	private static final class PdfAValidatorV1BuilderImpl extends PdfAValidatorV1.PdfAValidatorV1Builder<PdfAValidatorV1, PdfAValidatorV1.PdfAValidatorV1BuilderImpl> {
 		@SuppressWarnings("all")
+		@lombok.Generated
 		private PdfAValidatorV1BuilderImpl() {
 		}
 
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		protected PdfAValidatorV1.PdfAValidatorV1BuilderImpl self() {
 			return this;
 		}
 
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		public PdfAValidatorV1 build() {
 			return new PdfAValidatorV1(this);
 		}
 	}
 
 	@SuppressWarnings("all")
+	@lombok.Generated
 	protected PdfAValidatorV1(final PdfAValidatorV1.PdfAValidatorV1Builder<?, ?> b) {
 		super(b);
 	}
 
 	@SuppressWarnings("all")
+	@lombok.Generated
 	public static PdfAValidatorV1.PdfAValidatorV1Builder<?, ?> builder() {
 		return new PdfAValidatorV1.PdfAValidatorV1BuilderImpl();
 	}
 
 	@Override
 	@SuppressWarnings("all")
+	@lombok.Generated
 	public String toString() {
 		return "PdfAValidatorV1()";
 	}
 
 	@Override
 	@SuppressWarnings("all")
+	@lombok.Generated
 	public boolean equals(final Object o) {
 		if (o == this) return true;
 		if (!(o instanceof PdfAValidatorV1)) return false;
@@ -70,12 +82,14 @@ public class PdfAValidatorV1 extends ValidationRuleV1 {
 	}
 
 	@SuppressWarnings("all")
+	@lombok.Generated
 	protected boolean canEqual(final Object other) {
 		return other instanceof PdfAValidatorV1;
 	}
 
 	@Override
 	@SuppressWarnings("all")
+	@lombok.Generated
 	public int hashCode() {
 		final int result = 1;
 		return result;

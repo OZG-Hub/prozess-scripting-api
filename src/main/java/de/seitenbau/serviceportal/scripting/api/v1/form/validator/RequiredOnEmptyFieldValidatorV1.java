@@ -7,17 +7,21 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.validator;
 public class RequiredOnEmptyFieldValidatorV1 extends ConditionalFieldValidationRuleV1 {
 
 	@SuppressWarnings("all")
+	@lombok.Generated
 	public static abstract class RequiredOnEmptyFieldValidatorV1Builder<C extends RequiredOnEmptyFieldValidatorV1, B extends RequiredOnEmptyFieldValidatorV1.RequiredOnEmptyFieldValidatorV1Builder<C, B>> extends ConditionalFieldValidationRuleV1.ConditionalFieldValidationRuleV1Builder<C, B> {
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		protected abstract B self();
 
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		public abstract C build();
 
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		public String toString() {
 			return "RequiredOnEmptyFieldValidatorV1.RequiredOnEmptyFieldValidatorV1Builder(super=" + super.toString() + ")";
 		}
@@ -25,30 +29,36 @@ public class RequiredOnEmptyFieldValidatorV1 extends ConditionalFieldValidationR
 
 
 	@SuppressWarnings("all")
+	@lombok.Generated
 	private static final class RequiredOnEmptyFieldValidatorV1BuilderImpl extends RequiredOnEmptyFieldValidatorV1.RequiredOnEmptyFieldValidatorV1Builder<RequiredOnEmptyFieldValidatorV1, RequiredOnEmptyFieldValidatorV1.RequiredOnEmptyFieldValidatorV1BuilderImpl> {
 		@SuppressWarnings("all")
+		@lombok.Generated
 		private RequiredOnEmptyFieldValidatorV1BuilderImpl() {
 		}
 
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		protected RequiredOnEmptyFieldValidatorV1.RequiredOnEmptyFieldValidatorV1BuilderImpl self() {
 			return this;
 		}
 
 		@Override
 		@SuppressWarnings("all")
+		@lombok.Generated
 		public RequiredOnEmptyFieldValidatorV1 build() {
 			return new RequiredOnEmptyFieldValidatorV1(this);
 		}
 	}
 
 	@SuppressWarnings("all")
+	@lombok.Generated
 	protected RequiredOnEmptyFieldValidatorV1(final RequiredOnEmptyFieldValidatorV1.RequiredOnEmptyFieldValidatorV1Builder<?, ?> b) {
 		super(b);
 	}
 
 	@SuppressWarnings("all")
+	@lombok.Generated
 	public static RequiredOnEmptyFieldValidatorV1.RequiredOnEmptyFieldValidatorV1Builder<?, ?> builder() {
 		return new RequiredOnEmptyFieldValidatorV1.RequiredOnEmptyFieldValidatorV1BuilderImpl();
 	}

@@ -37,19 +37,26 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class Standard008PaymentConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String baseUrl;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String originatorId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String endPointId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private PaymentConfigAuthorizationV1 authorization;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Map<String, String> additionalBookingData;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     Standard008PaymentConfigV1Builder() {
     }
 
@@ -58,6 +65,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder baseUrl(final String baseUrl) {
       this.baseUrl = baseUrl;
       return this;
@@ -68,6 +76,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder originatorId(final String originatorId) {
       this.originatorId = originatorId;
       return this;
@@ -78,6 +87,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder endPointId(final String endPointId) {
       this.endPointId = endPointId;
       return this;
@@ -88,6 +98,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder authorization(final PaymentConfigAuthorizationV1 authorization) {
       this.authorization = authorization;
       return this;
@@ -98,24 +109,28 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder additionalBookingData(final Map<String, String> additionalBookingData) {
       this.additionalBookingData = additionalBookingData;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public Standard008PaymentConfigV1 build() {
       return new Standard008PaymentConfigV1(this.baseUrl, this.originatorId, this.endPointId, this.authorization, this.additionalBookingData);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder(baseUrl=" + this.baseUrl + ", originatorId=" + this.originatorId + ", endPointId=" + this.endPointId + ", authorization=" + this.authorization + ", additionalBookingData=" + this.additionalBookingData + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder builder() {
     return new Standard008PaymentConfigV1.Standard008PaymentConfigV1Builder();
   }
@@ -124,6 +139,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
    * Provider. Hat den Wert "standardbezahlschnittstellev0.0.8".
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getProvider() {
     return this.provider;
   }
@@ -132,6 +148,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
    * BaseUrl des implementierten Endpunkts der Standardbezahlschnittstelle.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getBaseUrl() {
     return this.baseUrl;
   }
@@ -140,6 +157,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
    * Kennung des auslösenden Online-Dienstes.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getOriginatorId() {
     return this.originatorId;
   }
@@ -148,6 +166,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
    * Ordnungskriterium für die Identifikation der zuständigen Behörde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getEndPointId() {
     return this.endPointId;
   }
@@ -156,6 +175,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
    * Autorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public PaymentConfigAuthorizationV1 getAuthorization() {
     return this.authorization;
   }
@@ -164,6 +184,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
    * Zusätzliche Buchungsdaten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Map<String, String> getAdditionalBookingData() {
     return this.additionalBookingData;
   }
@@ -172,6 +193,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
    * BaseUrl des implementierten Endpunkts der Standardbezahlschnittstelle.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setBaseUrl(final String baseUrl) {
     this.baseUrl = baseUrl;
   }
@@ -180,6 +202,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
    * Kennung des auslösenden Online-Dienstes.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setOriginatorId(final String originatorId) {
     this.originatorId = originatorId;
   }
@@ -188,6 +211,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
    * Ordnungskriterium für die Identifikation der zuständigen Behörde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setEndPointId(final String endPointId) {
     this.endPointId = endPointId;
   }
@@ -196,6 +220,7 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
    * Autorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAuthorization(final PaymentConfigAuthorizationV1 authorization) {
     this.authorization = authorization;
   }
@@ -204,12 +229,14 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
    * Zusätzliche Buchungsdaten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAdditionalBookingData(final Map<String, String> additionalBookingData) {
     this.additionalBookingData = additionalBookingData;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof Standard008PaymentConfigV1)) return false;
@@ -237,12 +264,14 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof Standard008PaymentConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -263,15 +292,27 @@ public class Standard008PaymentConfigV1 implements PaymentConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "Standard008PaymentConfigV1(provider=" + this.getProvider() + ", baseUrl=" + this.getBaseUrl() + ", originatorId=" + this.getOriginatorId() + ", endPointId=" + this.getEndPointId() + ", authorization=" + this.getAuthorization() + ", additionalBookingData=" + this.getAdditionalBookingData() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public Standard008PaymentConfigV1() {
   }
 
+  /**
+   * Creates a new {@code Standard008PaymentConfigV1} instance.
+   *
+   * @param baseUrl BaseUrl des implementierten Endpunkts der Standardbezahlschnittstelle.
+   * @param originatorId Kennung des auslösenden Online-Dienstes.
+   * @param endPointId Ordnungskriterium für die Identifikation der zuständigen Behörde.
+   * @param authorization Autorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
+   * @param additionalBookingData Zusätzliche Buchungsdaten.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Standard008PaymentConfigV1(final String baseUrl, final String originatorId, final String endPointId, final PaymentConfigAuthorizationV1 authorization, final Map<String, String> additionalBookingData) {
     this.baseUrl = baseUrl;
     this.originatorId = originatorId;

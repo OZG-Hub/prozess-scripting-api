@@ -18,16 +18,20 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
   private List<FormFieldVerificationLevelV1> levels;
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<FormFieldVerificationLevelV1> $default$levels() {
     return new ArrayList<>();
   }
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class VerificationLevelValidatorV1Builder<C extends VerificationLevelValidatorV1, B extends VerificationLevelValidatorV1.VerificationLevelValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean levels$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<FormFieldVerificationLevelV1> levels$value;
 
     /**
@@ -35,6 +39,7 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B levels(@NonNull final List<FormFieldVerificationLevelV1> levels) {
       if (levels == null) {
         throw new NullPointerException("levels is marked non-null but is null");
@@ -46,14 +51,17 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "VerificationLevelValidatorV1.VerificationLevelValidatorV1Builder(super=" + super.toString() + ", levels$value=" + this.levels$value + ")";
     }
@@ -61,25 +69,30 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class VerificationLevelValidatorV1BuilderImpl extends VerificationLevelValidatorV1.VerificationLevelValidatorV1Builder<VerificationLevelValidatorV1, VerificationLevelValidatorV1.VerificationLevelValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private VerificationLevelValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected VerificationLevelValidatorV1.VerificationLevelValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public VerificationLevelValidatorV1 build() {
       return new VerificationLevelValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected VerificationLevelValidatorV1(final VerificationLevelValidatorV1.VerificationLevelValidatorV1Builder<?, ?> b) {
     super(b);
     if (b.levels$set) this.levels = b.levels$value;
@@ -90,6 +103,7 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static VerificationLevelValidatorV1.VerificationLevelValidatorV1Builder<?, ?> builder() {
     return new VerificationLevelValidatorV1.VerificationLevelValidatorV1BuilderImpl();
   }
@@ -99,6 +113,7 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<FormFieldVerificationLevelV1> getLevels() {
     return this.levels;
   }
@@ -107,6 +122,7 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
    * Erlaubte Vertrauensniveaus für die Überprüfung. Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setLevels(@NonNull final List<FormFieldVerificationLevelV1> levels) {
     if (levels == null) {
       throw new NullPointerException("levels is marked non-null but is null");
@@ -116,12 +132,14 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "VerificationLevelValidatorV1(levels=" + this.getLevels() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof VerificationLevelValidatorV1)) return false;
@@ -134,12 +152,14 @@ public class VerificationLevelValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof VerificationLevelValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

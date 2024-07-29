@@ -19,30 +19,36 @@ public class AdditionalKfzKurzzeitKennzeichenConfigV1 implements AdditionalField
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class AdditionalKfzKurzzeitKennzeichenConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     AdditionalKfzKurzzeitKennzeichenConfigV1Builder() {
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalKfzKurzzeitKennzeichenConfigV1 build() {
       return new AdditionalKfzKurzzeitKennzeichenConfigV1();
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "AdditionalKfzKurzzeitKennzeichenConfigV1.AdditionalKfzKurzzeitKennzeichenConfigV1Builder()";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static AdditionalKfzKurzzeitKennzeichenConfigV1.AdditionalKfzKurzzeitKennzeichenConfigV1Builder builder() {
     return new AdditionalKfzKurzzeitKennzeichenConfigV1.AdditionalKfzKurzzeitKennzeichenConfigV1Builder();
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof AdditionalKfzKurzzeitKennzeichenConfigV1)) return false;
@@ -52,12 +58,14 @@ public class AdditionalKfzKurzzeitKennzeichenConfigV1 implements AdditionalField
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof AdditionalKfzKurzzeitKennzeichenConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int result = 1;
     return result;
@@ -65,11 +73,13 @@ public class AdditionalKfzKurzzeitKennzeichenConfigV1 implements AdditionalField
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "AdditionalKfzKurzzeitKennzeichenConfigV1()";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public AdditionalKfzKurzzeitKennzeichenConfigV1() {
   }
 }

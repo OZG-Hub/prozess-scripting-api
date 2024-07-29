@@ -34,19 +34,26 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class XBezahldienste1PaymentConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String baseUrl;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String originatorId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String endPointId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private PaymentConfigAuthorizationV1 authorization;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Map<String, String> additionalBookingData;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     XBezahldienste1PaymentConfigV1Builder() {
     }
 
@@ -55,6 +62,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder baseUrl(final String baseUrl) {
       this.baseUrl = baseUrl;
       return this;
@@ -65,6 +73,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder originatorId(final String originatorId) {
       this.originatorId = originatorId;
       return this;
@@ -75,6 +84,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder endPointId(final String endPointId) {
       this.endPointId = endPointId;
       return this;
@@ -85,6 +95,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder authorization(final PaymentConfigAuthorizationV1 authorization) {
       this.authorization = authorization;
       return this;
@@ -95,24 +106,28 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder additionalBookingData(final Map<String, String> additionalBookingData) {
       this.additionalBookingData = additionalBookingData;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public XBezahldienste1PaymentConfigV1 build() {
       return new XBezahldienste1PaymentConfigV1(this.baseUrl, this.originatorId, this.endPointId, this.authorization, this.additionalBookingData);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder(baseUrl=" + this.baseUrl + ", originatorId=" + this.originatorId + ", endPointId=" + this.endPointId + ", authorization=" + this.authorization + ", additionalBookingData=" + this.additionalBookingData + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder builder() {
     return new XBezahldienste1PaymentConfigV1.XBezahldienste1PaymentConfigV1Builder();
   }
@@ -121,6 +136,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
    * Provider. Hat den Wert "xbezahldienstev1".
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getProvider() {
     return this.provider;
   }
@@ -129,6 +145,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
    * Base-URL des implementierten Endpunkts.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getBaseUrl() {
     return this.baseUrl;
   }
@@ -137,6 +154,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
    * Kennung des auslösenden Online-Dienstes.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getOriginatorId() {
     return this.originatorId;
   }
@@ -145,6 +163,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
    * Ordnungskriterium für die Identifikation der zuständigen Behörde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getEndPointId() {
     return this.endPointId;
   }
@@ -153,6 +172,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
    * Autorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public PaymentConfigAuthorizationV1 getAuthorization() {
     return this.authorization;
   }
@@ -161,6 +181,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
    * Zusätzliche Buchungsdaten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Map<String, String> getAdditionalBookingData() {
     return this.additionalBookingData;
   }
@@ -169,6 +190,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
    * Base-URL des implementierten Endpunkts.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setBaseUrl(final String baseUrl) {
     this.baseUrl = baseUrl;
   }
@@ -177,6 +199,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
    * Kennung des auslösenden Online-Dienstes.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setOriginatorId(final String originatorId) {
     this.originatorId = originatorId;
   }
@@ -185,6 +208,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
    * Ordnungskriterium für die Identifikation der zuständigen Behörde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setEndPointId(final String endPointId) {
     this.endPointId = endPointId;
   }
@@ -193,6 +217,7 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
    * Autorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAuthorization(final PaymentConfigAuthorizationV1 authorization) {
     this.authorization = authorization;
   }
@@ -201,12 +226,14 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
    * Zusätzliche Buchungsdaten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAdditionalBookingData(final Map<String, String> additionalBookingData) {
     this.additionalBookingData = additionalBookingData;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof XBezahldienste1PaymentConfigV1)) return false;
@@ -234,12 +261,14 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof XBezahldienste1PaymentConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -260,15 +289,27 @@ public class XBezahldienste1PaymentConfigV1 implements PaymentConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "XBezahldienste1PaymentConfigV1(provider=" + this.getProvider() + ", baseUrl=" + this.getBaseUrl() + ", originatorId=" + this.getOriginatorId() + ", endPointId=" + this.getEndPointId() + ", authorization=" + this.getAuthorization() + ", additionalBookingData=" + this.getAdditionalBookingData() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public XBezahldienste1PaymentConfigV1() {
   }
 
+  /**
+   * Creates a new {@code XBezahldienste1PaymentConfigV1} instance.
+   *
+   * @param baseUrl Base-URL des implementierten Endpunkts.
+   * @param originatorId Kennung des auslösenden Online-Dienstes.
+   * @param endPointId Ordnungskriterium für die Identifikation der zuständigen Behörde.
+   * @param authorization Autorisierungsdaten zur Nutzung der angegebenen Schnittstelle enthält.
+   * @param additionalBookingData Zusätzliche Buchungsdaten.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public XBezahldienste1PaymentConfigV1(final String baseUrl, final String originatorId, final String endPointId, final PaymentConfigAuthorizationV1 authorization, final Map<String, String> additionalBookingData) {
     this.baseUrl = baseUrl;
     this.originatorId = originatorId;

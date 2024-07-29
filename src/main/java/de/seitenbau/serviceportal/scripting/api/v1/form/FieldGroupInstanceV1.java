@@ -72,8 +72,10 @@ public class FieldGroupInstanceV1 extends AbstractFieldGroupV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class FieldGroupInstanceV1Builder<C extends FieldGroupInstanceV1, B extends FieldGroupInstanceV1.FieldGroupInstanceV1Builder<C, B>> extends AbstractFieldGroupV1.AbstractFieldGroupV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private int index;
 
     /**
@@ -81,6 +83,7 @@ public class FieldGroupInstanceV1 extends AbstractFieldGroupV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B index(final int index) {
       this.index = index;
       return self();
@@ -88,14 +91,17 @@ public class FieldGroupInstanceV1 extends AbstractFieldGroupV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "FieldGroupInstanceV1.FieldGroupInstanceV1Builder(super=" + super.toString() + ", index=" + this.index + ")";
     }
@@ -103,31 +109,37 @@ public class FieldGroupInstanceV1 extends AbstractFieldGroupV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class FieldGroupInstanceV1BuilderImpl extends FieldGroupInstanceV1.FieldGroupInstanceV1Builder<FieldGroupInstanceV1, FieldGroupInstanceV1.FieldGroupInstanceV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private FieldGroupInstanceV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected FieldGroupInstanceV1.FieldGroupInstanceV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public FieldGroupInstanceV1 build() {
       return new FieldGroupInstanceV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected FieldGroupInstanceV1(final FieldGroupInstanceV1.FieldGroupInstanceV1Builder<?, ?> b) {
     super(b);
     this.index = b.index;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static FieldGroupInstanceV1.FieldGroupInstanceV1Builder<?, ?> builder() {
     return new FieldGroupInstanceV1.FieldGroupInstanceV1BuilderImpl();
   }
@@ -136,6 +148,7 @@ public class FieldGroupInstanceV1 extends AbstractFieldGroupV1 {
    * Index der Feldgruppen-Instanz innerhalb der umschließenden Feldgruppe.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public int getIndex() {
     return this.index;
   }
@@ -144,18 +157,21 @@ public class FieldGroupInstanceV1 extends AbstractFieldGroupV1 {
    * Index der Feldgruppen-Instanz innerhalb der umschließenden Feldgruppe.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setIndex(final int index) {
     this.index = index;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "FieldGroupInstanceV1(index=" + this.getIndex() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof FieldGroupInstanceV1)) return false;
@@ -167,12 +183,14 @@ public class FieldGroupInstanceV1 extends AbstractFieldGroupV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof FieldGroupInstanceV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = super.hashCode();

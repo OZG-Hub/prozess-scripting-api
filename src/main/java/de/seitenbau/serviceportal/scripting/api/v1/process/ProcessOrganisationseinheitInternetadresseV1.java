@@ -15,13 +15,17 @@ public class ProcessOrganisationseinheitInternetadresseV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessOrganisationseinheitInternetadresseV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<ProcessOrganisationseinheitInternetadresseI18nV1> i18n;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Integer positionDarstellung;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessOrganisationseinheitInternetadresseV1Builder() {
     }
 
@@ -30,6 +34,7 @@ public class ProcessOrganisationseinheitInternetadresseV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitInternetadresseV1.ProcessOrganisationseinheitInternetadresseV1Builder i18n(final Set<ProcessOrganisationseinheitInternetadresseI18nV1> i18n) {
       this.i18n = i18n;
       return this;
@@ -39,24 +44,28 @@ public class ProcessOrganisationseinheitInternetadresseV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitInternetadresseV1.ProcessOrganisationseinheitInternetadresseV1Builder positionDarstellung(final Integer positionDarstellung) {
       this.positionDarstellung = positionDarstellung;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitInternetadresseV1 build() {
       return new ProcessOrganisationseinheitInternetadresseV1(this.i18n, this.positionDarstellung);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessOrganisationseinheitInternetadresseV1.ProcessOrganisationseinheitInternetadresseV1Builder(i18n=" + this.i18n + ", positionDarstellung=" + this.positionDarstellung + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessOrganisationseinheitInternetadresseV1.ProcessOrganisationseinheitInternetadresseV1Builder builder() {
     return new ProcessOrganisationseinheitInternetadresseV1.ProcessOrganisationseinheitInternetadresseV1Builder();
   }
@@ -65,23 +74,27 @@ public class ProcessOrganisationseinheitInternetadresseV1 {
    * Internationalisierte Internetadressen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<ProcessOrganisationseinheitInternetadresseI18nV1> getI18n() {
     return this.i18n;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public Integer getPositionDarstellung() {
     return this.positionDarstellung;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessOrganisationseinheitInternetadresseV1(i18n=" + this.getI18n() + ", positionDarstellung=" + this.getPositionDarstellung() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessOrganisationseinheitInternetadresseV1)) return false;
@@ -97,12 +110,14 @@ public class ProcessOrganisationseinheitInternetadresseV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessOrganisationseinheitInternetadresseV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -114,10 +129,18 @@ public class ProcessOrganisationseinheitInternetadresseV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitInternetadresseV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessOrganisationseinheitInternetadresseV1} instance.
+   *
+   * @param i18n Internationalisierte Internetadressen.
+   * @param positionDarstellung
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitInternetadresseV1(final Set<ProcessOrganisationseinheitInternetadresseI18nV1> i18n, final Integer positionDarstellung) {
     this.i18n = i18n;
     this.positionDarstellung = positionDarstellung;

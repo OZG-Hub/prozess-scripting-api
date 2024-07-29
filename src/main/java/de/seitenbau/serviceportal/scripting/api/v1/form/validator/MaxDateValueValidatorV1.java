@@ -15,8 +15,10 @@ public class MaxDateValueValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class MaxDateValueValidatorV1Builder<C extends MaxDateValueValidatorV1, B extends MaxDateValueValidatorV1.MaxDateValueValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Date maxValue;
 
     /**
@@ -24,6 +26,7 @@ public class MaxDateValueValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B maxValue(final Date maxValue) {
       this.maxValue = maxValue;
       return self();
@@ -31,14 +34,17 @@ public class MaxDateValueValidatorV1 extends ValidationRuleV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "MaxDateValueValidatorV1.MaxDateValueValidatorV1Builder(super=" + super.toString() + ", maxValue=" + this.maxValue + ")";
     }
@@ -46,31 +52,37 @@ public class MaxDateValueValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class MaxDateValueValidatorV1BuilderImpl extends MaxDateValueValidatorV1.MaxDateValueValidatorV1Builder<MaxDateValueValidatorV1, MaxDateValueValidatorV1.MaxDateValueValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private MaxDateValueValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected MaxDateValueValidatorV1.MaxDateValueValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public MaxDateValueValidatorV1 build() {
       return new MaxDateValueValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected MaxDateValueValidatorV1(final MaxDateValueValidatorV1.MaxDateValueValidatorV1Builder<?, ?> b) {
     super(b);
     this.maxValue = b.maxValue;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static MaxDateValueValidatorV1.MaxDateValueValidatorV1Builder<?, ?> builder() {
     return new MaxDateValueValidatorV1.MaxDateValueValidatorV1BuilderImpl();
   }
@@ -79,6 +91,7 @@ public class MaxDateValueValidatorV1 extends ValidationRuleV1 {
    * Spätestes erlaubtes Datum.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Date getMaxValue() {
     return this.maxValue;
   }
@@ -87,18 +100,21 @@ public class MaxDateValueValidatorV1 extends ValidationRuleV1 {
    * Spätestes erlaubtes Datum.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMaxValue(final Date maxValue) {
     this.maxValue = maxValue;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "MaxDateValueValidatorV1(maxValue=" + this.getMaxValue() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof MaxDateValueValidatorV1)) return false;
@@ -111,12 +127,14 @@ public class MaxDateValueValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof MaxDateValueValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

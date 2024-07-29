@@ -13,8 +13,10 @@ public class MaxFileCountValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class MaxFileCountValidatorV1Builder<C extends MaxFileCountValidatorV1, B extends MaxFileCountValidatorV1.MaxFileCountValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private int maxFileCount;
 
     /**
@@ -22,6 +24,7 @@ public class MaxFileCountValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B maxFileCount(final int maxFileCount) {
       this.maxFileCount = maxFileCount;
       return self();
@@ -29,14 +32,17 @@ public class MaxFileCountValidatorV1 extends ValidationRuleV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "MaxFileCountValidatorV1.MaxFileCountValidatorV1Builder(super=" + super.toString() + ", maxFileCount=" + this.maxFileCount + ")";
     }
@@ -44,31 +50,37 @@ public class MaxFileCountValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class MaxFileCountValidatorV1BuilderImpl extends MaxFileCountValidatorV1.MaxFileCountValidatorV1Builder<MaxFileCountValidatorV1, MaxFileCountValidatorV1.MaxFileCountValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private MaxFileCountValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected MaxFileCountValidatorV1.MaxFileCountValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public MaxFileCountValidatorV1 build() {
       return new MaxFileCountValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected MaxFileCountValidatorV1(final MaxFileCountValidatorV1.MaxFileCountValidatorV1Builder<?, ?> b) {
     super(b);
     this.maxFileCount = b.maxFileCount;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static MaxFileCountValidatorV1.MaxFileCountValidatorV1Builder<?, ?> builder() {
     return new MaxFileCountValidatorV1.MaxFileCountValidatorV1BuilderImpl();
   }
@@ -77,6 +89,7 @@ public class MaxFileCountValidatorV1 extends ValidationRuleV1 {
    * Maximale Anzahl an Dateien.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public int getMaxFileCount() {
     return this.maxFileCount;
   }
@@ -85,18 +98,21 @@ public class MaxFileCountValidatorV1 extends ValidationRuleV1 {
    * Maximale Anzahl an Dateien.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMaxFileCount(final int maxFileCount) {
     this.maxFileCount = maxFileCount;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "MaxFileCountValidatorV1(maxFileCount=" + this.getMaxFileCount() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof MaxFileCountValidatorV1)) return false;
@@ -107,12 +123,14 @@ public class MaxFileCountValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof MaxFileCountValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

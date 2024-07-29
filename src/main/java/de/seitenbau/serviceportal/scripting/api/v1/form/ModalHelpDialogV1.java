@@ -31,17 +31,23 @@ public class ModalHelpDialogV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ModalHelpDialogV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String url;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String caption;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String alt;
     @SuppressWarnings("all")
+    @lombok.Generated
     private ModalDialogSizeV1 size;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ModalHelpDialogV1Builder() {
     }
 
@@ -50,6 +56,7 @@ public class ModalHelpDialogV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ModalHelpDialogV1.ModalHelpDialogV1Builder url(final String url) {
       this.url = url;
       return this;
@@ -60,6 +67,7 @@ public class ModalHelpDialogV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ModalHelpDialogV1.ModalHelpDialogV1Builder caption(final String caption) {
       this.caption = caption;
       return this;
@@ -70,6 +78,7 @@ public class ModalHelpDialogV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ModalHelpDialogV1.ModalHelpDialogV1Builder alt(final String alt) {
       this.alt = alt;
       return this;
@@ -80,24 +89,28 @@ public class ModalHelpDialogV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ModalHelpDialogV1.ModalHelpDialogV1Builder size(final ModalDialogSizeV1 size) {
       this.size = size;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ModalHelpDialogV1 build() {
       return new ModalHelpDialogV1(this.url, this.caption, this.alt, this.size);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ModalHelpDialogV1.ModalHelpDialogV1Builder(url=" + this.url + ", caption=" + this.caption + ", alt=" + this.alt + ", size=" + this.size + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ModalHelpDialogV1.ModalHelpDialogV1Builder builder() {
     return new ModalHelpDialogV1.ModalHelpDialogV1Builder();
   }
@@ -106,6 +119,7 @@ public class ModalHelpDialogV1 {
    * URL zum Bild.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getUrl() {
     return this.url;
   }
@@ -114,6 +128,7 @@ public class ModalHelpDialogV1 {
    * Bildunterschrift.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getCaption() {
     return this.caption;
   }
@@ -122,6 +137,7 @@ public class ModalHelpDialogV1 {
    * Alternativer Anzeigetext, falls das Bild im Dialog nicht geladen werden kann.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getAlt() {
     return this.alt;
   }
@@ -130,6 +146,7 @@ public class ModalHelpDialogV1 {
    * Größe des Dialogs.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ModalDialogSizeV1 getSize() {
     return this.size;
   }
@@ -138,6 +155,7 @@ public class ModalHelpDialogV1 {
    * URL zum Bild.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setUrl(final String url) {
     this.url = url;
   }
@@ -146,6 +164,7 @@ public class ModalHelpDialogV1 {
    * Bildunterschrift.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setCaption(final String caption) {
     this.caption = caption;
   }
@@ -154,6 +173,7 @@ public class ModalHelpDialogV1 {
    * Alternativer Anzeigetext, falls das Bild im Dialog nicht geladen werden kann.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAlt(final String alt) {
     this.alt = alt;
   }
@@ -162,12 +182,14 @@ public class ModalHelpDialogV1 {
    * Größe des Dialogs.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSize(final ModalDialogSizeV1 size) {
     this.size = size;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ModalHelpDialogV1)) return false;
@@ -189,12 +211,14 @@ public class ModalHelpDialogV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ModalHelpDialogV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -211,11 +235,21 @@ public class ModalHelpDialogV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ModalHelpDialogV1(url=" + this.getUrl() + ", caption=" + this.getCaption() + ", alt=" + this.getAlt() + ", size=" + this.getSize() + ")";
   }
 
+  /**
+   * Creates a new {@code ModalHelpDialogV1} instance.
+   *
+   * @param url URL zum Bild.
+   * @param caption Bildunterschrift.
+   * @param alt Alternativer Anzeigetext, falls das Bild im Dialog nicht geladen werden kann.
+   * @param size Größe des Dialogs.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ModalHelpDialogV1(final String url, final String caption, final String alt, final ModalDialogSizeV1 size) {
     this.url = url;
     this.caption = caption;

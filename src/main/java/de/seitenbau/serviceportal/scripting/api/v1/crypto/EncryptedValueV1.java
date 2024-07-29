@@ -22,15 +22,20 @@ public class EncryptedValueV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class EncryptedValueV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private byte[] data;
     @SuppressWarnings("all")
+    @lombok.Generated
     private byte[] salt;
     @SuppressWarnings("all")
+    @lombok.Generated
     private byte[] iv;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     EncryptedValueV1Builder() {
     }
 
@@ -39,6 +44,7 @@ public class EncryptedValueV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EncryptedValueV1.EncryptedValueV1Builder data(final byte[] data) {
       this.data = data;
       return this;
@@ -49,6 +55,7 @@ public class EncryptedValueV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EncryptedValueV1.EncryptedValueV1Builder salt(final byte[] salt) {
       this.salt = salt;
       return this;
@@ -59,24 +66,28 @@ public class EncryptedValueV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public EncryptedValueV1.EncryptedValueV1Builder iv(final byte[] iv) {
       this.iv = iv;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public EncryptedValueV1 build() {
       return new EncryptedValueV1(this.data, this.salt, this.iv);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "EncryptedValueV1.EncryptedValueV1Builder(data=" + java.util.Arrays.toString(this.data) + ", salt=" + java.util.Arrays.toString(this.salt) + ", iv=" + java.util.Arrays.toString(this.iv) + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static EncryptedValueV1.EncryptedValueV1Builder builder() {
     return new EncryptedValueV1.EncryptedValueV1Builder();
   }
@@ -85,6 +96,7 @@ public class EncryptedValueV1 {
    * Die verschlüsselten Daten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public byte[] getData() {
     return this.data;
   }
@@ -93,6 +105,7 @@ public class EncryptedValueV1 {
    * Passwort Salt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public byte[] getSalt() {
     return this.salt;
   }
@@ -101,6 +114,7 @@ public class EncryptedValueV1 {
    * Initialisierungsvektor (IV).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public byte[] getIv() {
     return this.iv;
   }
@@ -109,6 +123,7 @@ public class EncryptedValueV1 {
    * Die verschlüsselten Daten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setData(final byte[] data) {
     this.data = data;
   }
@@ -117,6 +132,7 @@ public class EncryptedValueV1 {
    * Passwort Salt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSalt(final byte[] salt) {
     this.salt = salt;
   }
@@ -125,12 +141,14 @@ public class EncryptedValueV1 {
    * Initialisierungsvektor (IV).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setIv(final byte[] iv) {
     this.iv = iv;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof EncryptedValueV1)) return false;
@@ -143,12 +161,14 @@ public class EncryptedValueV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof EncryptedValueV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -160,15 +180,25 @@ public class EncryptedValueV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "EncryptedValueV1(data=" + java.util.Arrays.toString(this.getData()) + ", salt=" + java.util.Arrays.toString(this.getSalt()) + ", iv=" + java.util.Arrays.toString(this.getIv()) + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public EncryptedValueV1() {
   }
 
+  /**
+   * Creates a new {@code EncryptedValueV1} instance.
+   *
+   * @param data Die verschlüsselten Daten.
+   * @param salt Passwort Salt.
+   * @param iv Initialisierungsvektor (IV).
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public EncryptedValueV1(final byte[] data, final byte[] salt, final byte[] iv) {
     this.data = data;
     this.salt = salt;

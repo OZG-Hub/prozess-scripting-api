@@ -20,15 +20,20 @@ public class JesajaOrganisationseinheitKontaktV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class JesajaOrganisationseinheitKontaktV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String email;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String fax;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String telefon;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     JesajaOrganisationseinheitKontaktV1Builder() {
     }
 
@@ -37,6 +42,7 @@ public class JesajaOrganisationseinheitKontaktV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitKontaktV1.JesajaOrganisationseinheitKontaktV1Builder email(final String email) {
       this.email = email;
       return this;
@@ -47,6 +53,7 @@ public class JesajaOrganisationseinheitKontaktV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitKontaktV1.JesajaOrganisationseinheitKontaktV1Builder fax(final String fax) {
       this.fax = fax;
       return this;
@@ -57,24 +64,28 @@ public class JesajaOrganisationseinheitKontaktV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitKontaktV1.JesajaOrganisationseinheitKontaktV1Builder telefon(final String telefon) {
       this.telefon = telefon;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitKontaktV1 build() {
       return new JesajaOrganisationseinheitKontaktV1(this.email, this.fax, this.telefon);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "JesajaOrganisationseinheitKontaktV1.JesajaOrganisationseinheitKontaktV1Builder(email=" + this.email + ", fax=" + this.fax + ", telefon=" + this.telefon + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static JesajaOrganisationseinheitKontaktV1.JesajaOrganisationseinheitKontaktV1Builder builder() {
     return new JesajaOrganisationseinheitKontaktV1.JesajaOrganisationseinheitKontaktV1Builder();
   }
@@ -83,6 +94,7 @@ public class JesajaOrganisationseinheitKontaktV1 {
    * E-Mail-Adresse.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getEmail() {
     return this.email;
   }
@@ -91,6 +103,7 @@ public class JesajaOrganisationseinheitKontaktV1 {
    * Fax-Nummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getFax() {
     return this.fax;
   }
@@ -99,18 +112,21 @@ public class JesajaOrganisationseinheitKontaktV1 {
    * Telefonnummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTelefon() {
     return this.telefon;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "JesajaOrganisationseinheitKontaktV1(email=" + this.getEmail() + ", fax=" + this.getFax() + ", telefon=" + this.getTelefon() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof JesajaOrganisationseinheitKontaktV1)) return false;
@@ -129,12 +145,14 @@ public class JesajaOrganisationseinheitKontaktV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof JesajaOrganisationseinheitKontaktV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -148,10 +166,19 @@ public class JesajaOrganisationseinheitKontaktV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public JesajaOrganisationseinheitKontaktV1() {
   }
 
+  /**
+   * Creates a new {@code JesajaOrganisationseinheitKontaktV1} instance.
+   *
+   * @param email E-Mail-Adresse.
+   * @param fax Fax-Nummer.
+   * @param telefon Telefonnummer.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public JesajaOrganisationseinheitKontaktV1(final String email, final String fax, final String telefon) {
     this.email = email;
     this.fax = fax;

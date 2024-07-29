@@ -13,6 +13,7 @@ public class PossibleValueListV1 extends ArrayList<PossibleValueV1> {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public PossibleValueListV1() {
   }
 }

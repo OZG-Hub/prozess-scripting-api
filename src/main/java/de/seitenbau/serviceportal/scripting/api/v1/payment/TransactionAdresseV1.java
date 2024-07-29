@@ -38,23 +38,32 @@ public class TransactionAdresseV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class TransactionAdresseV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String strasse;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String hausnummer;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String postfach;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<String> internationaleAdresszeilen;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String plz;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String stadt;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String land;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     TransactionAdresseV1Builder() {
     }
 
@@ -63,6 +72,7 @@ public class TransactionAdresseV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionAdresseV1.TransactionAdresseV1Builder strasse(final String strasse) {
       this.strasse = strasse;
       return this;
@@ -73,6 +83,7 @@ public class TransactionAdresseV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionAdresseV1.TransactionAdresseV1Builder hausnummer(final String hausnummer) {
       this.hausnummer = hausnummer;
       return this;
@@ -83,6 +94,7 @@ public class TransactionAdresseV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionAdresseV1.TransactionAdresseV1Builder postfach(final String postfach) {
       this.postfach = postfach;
       return this;
@@ -93,6 +105,7 @@ public class TransactionAdresseV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionAdresseV1.TransactionAdresseV1Builder internationaleAdresszeilen(final List<String> internationaleAdresszeilen) {
       this.internationaleAdresszeilen = internationaleAdresszeilen;
       return this;
@@ -103,6 +116,7 @@ public class TransactionAdresseV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionAdresseV1.TransactionAdresseV1Builder plz(final String plz) {
       this.plz = plz;
       return this;
@@ -113,6 +127,7 @@ public class TransactionAdresseV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionAdresseV1.TransactionAdresseV1Builder stadt(final String stadt) {
       this.stadt = stadt;
       return this;
@@ -123,24 +138,28 @@ public class TransactionAdresseV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionAdresseV1.TransactionAdresseV1Builder land(final String land) {
       this.land = land;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionAdresseV1 build() {
       return new TransactionAdresseV1(this.strasse, this.hausnummer, this.postfach, this.internationaleAdresszeilen, this.plz, this.stadt, this.land);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "TransactionAdresseV1.TransactionAdresseV1Builder(strasse=" + this.strasse + ", hausnummer=" + this.hausnummer + ", postfach=" + this.postfach + ", internationaleAdresszeilen=" + this.internationaleAdresszeilen + ", plz=" + this.plz + ", stadt=" + this.stadt + ", land=" + this.land + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static TransactionAdresseV1.TransactionAdresseV1Builder builder() {
     return new TransactionAdresseV1.TransactionAdresseV1Builder();
   }
@@ -149,6 +168,7 @@ public class TransactionAdresseV1 {
    * Straße.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getStrasse() {
     return this.strasse;
   }
@@ -157,6 +177,7 @@ public class TransactionAdresseV1 {
    * Hausnummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getHausnummer() {
     return this.hausnummer;
   }
@@ -165,6 +186,7 @@ public class TransactionAdresseV1 {
    * Postfach.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPostfach() {
     return this.postfach;
   }
@@ -173,6 +195,7 @@ public class TransactionAdresseV1 {
    * Liste zum Abbilden von internationalen Adressen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<String> getInternationaleAdresszeilen() {
     return this.internationaleAdresszeilen;
   }
@@ -181,6 +204,7 @@ public class TransactionAdresseV1 {
    * Postleitzahl.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getPlz() {
     return this.plz;
   }
@@ -189,6 +213,7 @@ public class TransactionAdresseV1 {
    * Stadt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getStadt() {
     return this.stadt;
   }
@@ -197,6 +222,7 @@ public class TransactionAdresseV1 {
    * Land als ISO 3166-1, Alpha-2 code bestehend aus zwei Großbuchstaben.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getLand() {
     return this.land;
   }
@@ -205,6 +231,7 @@ public class TransactionAdresseV1 {
    * Straße.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setStrasse(final String strasse) {
     this.strasse = strasse;
   }
@@ -213,6 +240,7 @@ public class TransactionAdresseV1 {
    * Hausnummer.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setHausnummer(final String hausnummer) {
     this.hausnummer = hausnummer;
   }
@@ -221,6 +249,7 @@ public class TransactionAdresseV1 {
    * Postfach.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPostfach(final String postfach) {
     this.postfach = postfach;
   }
@@ -229,6 +258,7 @@ public class TransactionAdresseV1 {
    * Liste zum Abbilden von internationalen Adressen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setInternationaleAdresszeilen(final List<String> internationaleAdresszeilen) {
     this.internationaleAdresszeilen = internationaleAdresszeilen;
   }
@@ -237,6 +267,7 @@ public class TransactionAdresseV1 {
    * Postleitzahl.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPlz(final String plz) {
     this.plz = plz;
   }
@@ -245,6 +276,7 @@ public class TransactionAdresseV1 {
    * Stadt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setStadt(final String stadt) {
     this.stadt = stadt;
   }
@@ -253,12 +285,14 @@ public class TransactionAdresseV1 {
    * Land als ISO 3166-1, Alpha-2 code bestehend aus zwei Großbuchstaben.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setLand(final String land) {
     this.land = land;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof TransactionAdresseV1)) return false;
@@ -289,12 +323,14 @@ public class TransactionAdresseV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof TransactionAdresseV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -317,15 +353,29 @@ public class TransactionAdresseV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "TransactionAdresseV1(strasse=" + this.getStrasse() + ", hausnummer=" + this.getHausnummer() + ", postfach=" + this.getPostfach() + ", internationaleAdresszeilen=" + this.getInternationaleAdresszeilen() + ", plz=" + this.getPlz() + ", stadt=" + this.getStadt() + ", land=" + this.getLand() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public TransactionAdresseV1() {
   }
 
+  /**
+   * Creates a new {@code TransactionAdresseV1} instance.
+   *
+   * @param strasse Straße.
+   * @param hausnummer Hausnummer.
+   * @param postfach Postfach.
+   * @param internationaleAdresszeilen Liste zum Abbilden von internationalen Adressen.
+   * @param plz Postleitzahl.
+   * @param stadt Stadt.
+   * @param land Land als ISO 3166-1, Alpha-2 code bestehend aus zwei Großbuchstaben.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public TransactionAdresseV1(final String strasse, final String hausnummer, final String postfach, final List<String> internationaleAdresszeilen, final String plz, final String stadt, final String land) {
     this.strasse = strasse;
     this.hausnummer = hausnummer;

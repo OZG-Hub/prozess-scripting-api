@@ -14,8 +14,10 @@ public class ExternalValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class ExternalValidatorV1Builder<C extends ExternalValidatorV1, B extends ExternalValidatorV1.ExternalValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private ExternalDataSourcePropertiesV1 settings;
 
     /**
@@ -23,6 +25,7 @@ public class ExternalValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B settings(final ExternalDataSourcePropertiesV1 settings) {
       this.settings = settings;
       return self();
@@ -30,14 +33,17 @@ public class ExternalValidatorV1 extends ValidationRuleV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ExternalValidatorV1.ExternalValidatorV1Builder(super=" + super.toString() + ", settings=" + this.settings + ")";
     }
@@ -45,31 +51,37 @@ public class ExternalValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class ExternalValidatorV1BuilderImpl extends ExternalValidatorV1.ExternalValidatorV1Builder<ExternalValidatorV1, ExternalValidatorV1.ExternalValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private ExternalValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected ExternalValidatorV1.ExternalValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public ExternalValidatorV1 build() {
       return new ExternalValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected ExternalValidatorV1(final ExternalValidatorV1.ExternalValidatorV1Builder<?, ?> b) {
     super(b);
     this.settings = b.settings;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ExternalValidatorV1.ExternalValidatorV1Builder<?, ?> builder() {
     return new ExternalValidatorV1.ExternalValidatorV1BuilderImpl();
   }
@@ -78,6 +90,7 @@ public class ExternalValidatorV1 extends ValidationRuleV1 {
    * Daten für die externe Validierung. Das hier hinterlegte externe System führt die Validierung durch.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ExternalDataSourcePropertiesV1 getSettings() {
     return this.settings;
   }
@@ -86,18 +99,21 @@ public class ExternalValidatorV1 extends ValidationRuleV1 {
    * Daten für die externe Validierung. Das hier hinterlegte externe System führt die Validierung durch.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSettings(final ExternalDataSourcePropertiesV1 settings) {
     this.settings = settings;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ExternalValidatorV1(settings=" + this.getSettings() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ExternalValidatorV1)) return false;
@@ -110,12 +126,14 @@ public class ExternalValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ExternalValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

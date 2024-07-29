@@ -82,15 +82,20 @@ public class FormFieldKeyV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class FormFieldKeyV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String groupId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private int groupIndex;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String fieldId;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     FormFieldKeyV1Builder() {
     }
 
@@ -99,6 +104,7 @@ public class FormFieldKeyV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldKeyV1.FormFieldKeyV1Builder groupId(@NonNull final String groupId) {
       if (groupId == null) {
         throw new NullPointerException("groupId is marked non-null but is null");
@@ -112,6 +118,7 @@ public class FormFieldKeyV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldKeyV1.FormFieldKeyV1Builder groupIndex(final int groupIndex) {
       this.groupIndex = groupIndex;
       return this;
@@ -122,6 +129,7 @@ public class FormFieldKeyV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldKeyV1.FormFieldKeyV1Builder fieldId(@NonNull final String fieldId) {
       if (fieldId == null) {
         throw new NullPointerException("fieldId is marked non-null but is null");
@@ -131,18 +139,21 @@ public class FormFieldKeyV1 {
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormFieldKeyV1 build() {
       return new FormFieldKeyV1(this.groupId, this.groupIndex, this.fieldId);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "FormFieldKeyV1.FormFieldKeyV1Builder(groupId=" + this.groupId + ", groupIndex=" + this.groupIndex + ", fieldId=" + this.fieldId + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static FormFieldKeyV1.FormFieldKeyV1Builder builder() {
     return new FormFieldKeyV1.FormFieldKeyV1Builder();
   }
@@ -152,6 +163,7 @@ public class FormFieldKeyV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getGroupId() {
     return this.groupId;
   }
@@ -160,6 +172,7 @@ public class FormFieldKeyV1 {
    * Index der Feldgruppen-Instanz.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public int getGroupIndex() {
     return this.groupIndex;
   }
@@ -169,12 +182,14 @@ public class FormFieldKeyV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getFieldId() {
     return this.fieldId;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof FormFieldKeyV1)) return false;
@@ -191,12 +206,14 @@ public class FormFieldKeyV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof FormFieldKeyV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -208,7 +225,15 @@ public class FormFieldKeyV1 {
     return result;
   }
 
+  /**
+   * Creates a new {@code FormFieldKeyV1} instance.
+   *
+   * @param groupId ID der Feldgruppen-Instanz.
+   * @param groupIndex Index der Feldgruppen-Instanz.
+   * @param fieldId ID des Feldes innerhalb der Feldgruppen-Instanz.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public FormFieldKeyV1(@NonNull final String groupId, final int groupIndex, @NonNull final String fieldId) {
     if (groupId == null) {
       throw new NullPointerException("groupId is marked non-null but is null");

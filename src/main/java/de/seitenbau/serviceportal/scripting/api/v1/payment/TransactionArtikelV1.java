@@ -38,23 +38,32 @@ public class TransactionArtikelV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class TransactionArtikelV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String id;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String referenz;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String beschreibung;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Double steuersatz;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Integer anzahl;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Long betrag;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Map<String, String> zusatzinfo;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     TransactionArtikelV1Builder() {
     }
 
@@ -63,6 +72,7 @@ public class TransactionArtikelV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionArtikelV1.TransactionArtikelV1Builder id(final String id) {
       this.id = id;
       return this;
@@ -73,6 +83,7 @@ public class TransactionArtikelV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionArtikelV1.TransactionArtikelV1Builder referenz(final String referenz) {
       this.referenz = referenz;
       return this;
@@ -83,6 +94,7 @@ public class TransactionArtikelV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionArtikelV1.TransactionArtikelV1Builder beschreibung(final String beschreibung) {
       this.beschreibung = beschreibung;
       return this;
@@ -93,6 +105,7 @@ public class TransactionArtikelV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionArtikelV1.TransactionArtikelV1Builder steuersatz(final Double steuersatz) {
       this.steuersatz = steuersatz;
       return this;
@@ -103,6 +116,7 @@ public class TransactionArtikelV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionArtikelV1.TransactionArtikelV1Builder anzahl(final Integer anzahl) {
       this.anzahl = anzahl;
       return this;
@@ -113,6 +127,7 @@ public class TransactionArtikelV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionArtikelV1.TransactionArtikelV1Builder betrag(final Long betrag) {
       this.betrag = betrag;
       return this;
@@ -123,24 +138,28 @@ public class TransactionArtikelV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionArtikelV1.TransactionArtikelV1Builder zusatzinfo(final Map<String, String> zusatzinfo) {
       this.zusatzinfo = zusatzinfo;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionArtikelV1 build() {
       return new TransactionArtikelV1(this.id, this.referenz, this.beschreibung, this.steuersatz, this.anzahl, this.betrag, this.zusatzinfo);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "TransactionArtikelV1.TransactionArtikelV1Builder(id=" + this.id + ", referenz=" + this.referenz + ", beschreibung=" + this.beschreibung + ", steuersatz=" + this.steuersatz + ", anzahl=" + this.anzahl + ", betrag=" + this.betrag + ", zusatzinfo=" + this.zusatzinfo + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static TransactionArtikelV1.TransactionArtikelV1Builder builder() {
     return new TransactionArtikelV1.TransactionArtikelV1Builder();
   }
@@ -149,6 +168,7 @@ public class TransactionArtikelV1 {
    * ID des Artikels.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getId() {
     return this.id;
   }
@@ -157,6 +177,7 @@ public class TransactionArtikelV1 {
    * Fachliche Referenz.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getReferenz() {
     return this.referenz;
   }
@@ -165,6 +186,7 @@ public class TransactionArtikelV1 {
    * Beschreibung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getBeschreibung() {
     return this.beschreibung;
   }
@@ -173,6 +195,7 @@ public class TransactionArtikelV1 {
    * Steuersatz als Prozentbetrag.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Double getSteuersatz() {
     return this.steuersatz;
   }
@@ -181,6 +204,7 @@ public class TransactionArtikelV1 {
    * Anzahl.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Integer getAnzahl() {
     return this.anzahl;
   }
@@ -189,6 +213,7 @@ public class TransactionArtikelV1 {
    * Bruttobetrag des einzelnen Artikels in Cents.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Long getBetrag() {
     return this.betrag;
   }
@@ -197,6 +222,7 @@ public class TransactionArtikelV1 {
    * Zusatzinformationen für die Verbuchung im Bezahldienst oder nachgelagerten Systemen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Map<String, String> getZusatzinfo() {
     return this.zusatzinfo;
   }
@@ -205,6 +231,7 @@ public class TransactionArtikelV1 {
    * ID des Artikels.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setId(final String id) {
     this.id = id;
   }
@@ -213,6 +240,7 @@ public class TransactionArtikelV1 {
    * Fachliche Referenz.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setReferenz(final String referenz) {
     this.referenz = referenz;
   }
@@ -221,6 +249,7 @@ public class TransactionArtikelV1 {
    * Beschreibung.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setBeschreibung(final String beschreibung) {
     this.beschreibung = beschreibung;
   }
@@ -229,6 +258,7 @@ public class TransactionArtikelV1 {
    * Steuersatz als Prozentbetrag.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSteuersatz(final Double steuersatz) {
     this.steuersatz = steuersatz;
   }
@@ -237,6 +267,7 @@ public class TransactionArtikelV1 {
    * Anzahl.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAnzahl(final Integer anzahl) {
     this.anzahl = anzahl;
   }
@@ -245,6 +276,7 @@ public class TransactionArtikelV1 {
    * Bruttobetrag des einzelnen Artikels in Cents.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setBetrag(final Long betrag) {
     this.betrag = betrag;
   }
@@ -253,12 +285,14 @@ public class TransactionArtikelV1 {
    * Zusatzinformationen für die Verbuchung im Bezahldienst oder nachgelagerten Systemen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setZusatzinfo(final Map<String, String> zusatzinfo) {
     this.zusatzinfo = zusatzinfo;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof TransactionArtikelV1)) return false;
@@ -289,12 +323,14 @@ public class TransactionArtikelV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof TransactionArtikelV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -317,15 +353,29 @@ public class TransactionArtikelV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "TransactionArtikelV1(id=" + this.getId() + ", referenz=" + this.getReferenz() + ", beschreibung=" + this.getBeschreibung() + ", steuersatz=" + this.getSteuersatz() + ", anzahl=" + this.getAnzahl() + ", betrag=" + this.getBetrag() + ", zusatzinfo=" + this.getZusatzinfo() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public TransactionArtikelV1() {
   }
 
+  /**
+   * Creates a new {@code TransactionArtikelV1} instance.
+   *
+   * @param id ID des Artikels.
+   * @param referenz Fachliche Referenz.
+   * @param beschreibung Beschreibung.
+   * @param steuersatz Steuersatz als Prozentbetrag.
+   * @param anzahl Anzahl.
+   * @param betrag Bruttobetrag des einzelnen Artikels in Cents.
+   * @param zusatzinfo Zusatzinformationen für die Verbuchung im Bezahldienst oder nachgelagerten Systemen.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public TransactionArtikelV1(final String id, final String referenz, final String beschreibung, final Double steuersatz, final Integer anzahl, final Long betrag, final Map<String, String> zusatzinfo) {
     this.id = id;
     this.referenz = referenz;

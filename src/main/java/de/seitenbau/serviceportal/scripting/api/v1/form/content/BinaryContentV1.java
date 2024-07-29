@@ -40,16 +40,22 @@ public class BinaryContentV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class BinaryContentV1Builder<C extends BinaryContentV1, B extends BinaryContentV1.BinaryContentV1Builder<C, B>> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String key;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String uploadedFilename;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String label;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String mimetype;
     @SuppressWarnings("all")
+    @lombok.Generated
     private byte[] data;
 
     /**
@@ -57,6 +63,7 @@ public class BinaryContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B key(final String key) {
       this.key = key;
       return self();
@@ -67,6 +74,7 @@ public class BinaryContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B uploadedFilename(final String uploadedFilename) {
       this.uploadedFilename = uploadedFilename;
       return self();
@@ -77,6 +85,7 @@ public class BinaryContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B label(final String label) {
       this.label = label;
       return self();
@@ -87,6 +96,7 @@ public class BinaryContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B mimetype(final String mimetype) {
       this.mimetype = mimetype;
       return self();
@@ -97,19 +107,23 @@ public class BinaryContentV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B data(final byte[] data) {
       this.data = data;
       return self();
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "BinaryContentV1.BinaryContentV1Builder(key=" + this.key + ", uploadedFilename=" + this.uploadedFilename + ", label=" + this.label + ", mimetype=" + this.mimetype + ", data=" + java.util.Arrays.toString(this.data) + ")";
     }
@@ -117,25 +131,30 @@ public class BinaryContentV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class BinaryContentV1BuilderImpl extends BinaryContentV1.BinaryContentV1Builder<BinaryContentV1, BinaryContentV1.BinaryContentV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private BinaryContentV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected BinaryContentV1.BinaryContentV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public BinaryContentV1 build() {
       return new BinaryContentV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected BinaryContentV1(final BinaryContentV1.BinaryContentV1Builder<?, ?> b) {
     this.key = b.key;
     this.uploadedFilename = b.uploadedFilename;
@@ -145,6 +164,7 @@ public class BinaryContentV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static BinaryContentV1.BinaryContentV1Builder<?, ?> builder() {
     return new BinaryContentV1.BinaryContentV1BuilderImpl();
   }
@@ -153,6 +173,7 @@ public class BinaryContentV1 {
    * Ein Key, welcher zur Identifikation dieses Dokuments verwendet werden kann. Wird dynamisch erzeugt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getKey() {
     return this.key;
   }
@@ -161,6 +182,7 @@ public class BinaryContentV1 {
    * Der Dateiname der vom Nutzer hochgeladenen Datei.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getUploadedFilename() {
     return this.uploadedFilename;
   }
@@ -169,6 +191,7 @@ public class BinaryContentV1 {
    * Der Anzeigename.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getLabel() {
     return this.label;
   }
@@ -177,6 +200,7 @@ public class BinaryContentV1 {
    * Der Content-Type der Daten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getMimetype() {
     return this.mimetype;
   }
@@ -185,6 +209,7 @@ public class BinaryContentV1 {
    * Die Binärdaten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public byte[] getData() {
     return this.data;
   }
@@ -193,6 +218,7 @@ public class BinaryContentV1 {
    * Ein Key, welcher zur Identifikation dieses Dokuments verwendet werden kann. Wird dynamisch erzeugt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setKey(final String key) {
     this.key = key;
   }
@@ -201,6 +227,7 @@ public class BinaryContentV1 {
    * Der Dateiname der vom Nutzer hochgeladenen Datei.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setUploadedFilename(final String uploadedFilename) {
     this.uploadedFilename = uploadedFilename;
   }
@@ -209,6 +236,7 @@ public class BinaryContentV1 {
    * Der Anzeigename.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setLabel(final String label) {
     this.label = label;
   }
@@ -217,6 +245,7 @@ public class BinaryContentV1 {
    * Der Content-Type der Daten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setMimetype(final String mimetype) {
     this.mimetype = mimetype;
   }
@@ -225,21 +254,34 @@ public class BinaryContentV1 {
    * Die Binärdaten.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setData(final byte[] data) {
     this.data = data;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "BinaryContentV1(key=" + this.getKey() + ", uploadedFilename=" + this.getUploadedFilename() + ", label=" + this.getLabel() + ", mimetype=" + this.getMimetype() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public BinaryContentV1() {
   }
 
+  /**
+   * Creates a new {@code BinaryContentV1} instance.
+   *
+   * @param key Ein Key, welcher zur Identifikation dieses Dokuments verwendet werden kann. Wird dynamisch erzeugt.
+   * @param uploadedFilename Der Dateiname der vom Nutzer hochgeladenen Datei.
+   * @param label Der Anzeigename.
+   * @param mimetype Der Content-Type der Daten.
+   * @param data Die Binärdaten.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public BinaryContentV1(final String key, final String uploadedFilename, final String label, final String mimetype, final byte[] data) {
     this.key = key;
     this.uploadedFilename = uploadedFilename;

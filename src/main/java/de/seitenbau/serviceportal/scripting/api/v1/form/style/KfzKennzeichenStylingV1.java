@@ -40,7 +40,22 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
     }
   }
 
+  /**
+   * Creates a new {@code KfzKennzeichenStylingV1} instance.
+   *
+   * @param electric {@code true}, wenn es ein Kennzeichen für ein Elektrofahrzeug ist.
+   * Sonst {@code false} oder {@code null}.
+   * @param historic {@code true}, wenn es ein Kennzeichen für ein historisches Fahrzeug ist.
+   * Sonst {@code false} oder {@code null}.
+   * @param saisonStart Numerischer Wert des Startmonats eines Saisonkennzeichens.
+   * {@code null}, wenn kein Saisonkennzeichen.
+   * @param saisonEnd Numerischer Wert des Endmonats eines Saisonkennzeichens.
+   * {@code null}, wenn kein Saisonkennzeichen.
+   * @param kennzeichenType Typ des Fahrzeugs / Kennzeichens.
+   * {@code null} wird als {@link KfzKennzeichenTypeV1#CAR CAR} interpretiert.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   KfzKennzeichenStylingV1(final Boolean electric, final Boolean historic, final String saisonStart, final String saisonEnd, final KfzKennzeichenTypeV1 kennzeichenType) {
     this.electric = electric;
     this.historic = historic;
@@ -51,19 +66,26 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class KfzKennzeichenStylingV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean electric;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean historic;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String saisonStart;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String saisonEnd;
     @SuppressWarnings("all")
+    @lombok.Generated
     private KfzKennzeichenTypeV1 kennzeichenType;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     KfzKennzeichenStylingV1Builder() {
     }
 
@@ -73,6 +95,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public KfzKennzeichenStylingV1.KfzKennzeichenStylingV1Builder electric(final Boolean electric) {
       this.electric = electric;
       return this;
@@ -84,6 +107,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public KfzKennzeichenStylingV1.KfzKennzeichenStylingV1Builder historic(final Boolean historic) {
       this.historic = historic;
       return this;
@@ -95,6 +119,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public KfzKennzeichenStylingV1.KfzKennzeichenStylingV1Builder saisonStart(final String saisonStart) {
       this.saisonStart = saisonStart;
       return this;
@@ -106,6 +131,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public KfzKennzeichenStylingV1.KfzKennzeichenStylingV1Builder saisonEnd(final String saisonEnd) {
       this.saisonEnd = saisonEnd;
       return this;
@@ -117,24 +143,28 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public KfzKennzeichenStylingV1.KfzKennzeichenStylingV1Builder kennzeichenType(final KfzKennzeichenTypeV1 kennzeichenType) {
       this.kennzeichenType = kennzeichenType;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public KfzKennzeichenStylingV1 build() {
       return new KfzKennzeichenStylingV1(this.electric, this.historic, this.saisonStart, this.saisonEnd, this.kennzeichenType);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "KfzKennzeichenStylingV1.KfzKennzeichenStylingV1Builder(electric=" + this.electric + ", historic=" + this.historic + ", saisonStart=" + this.saisonStart + ", saisonEnd=" + this.saisonEnd + ", kennzeichenType=" + this.kennzeichenType + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static KfzKennzeichenStylingV1.KfzKennzeichenStylingV1Builder builder() {
     return new KfzKennzeichenStylingV1.KfzKennzeichenStylingV1Builder();
   }
@@ -144,6 +174,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
    * Sonst {@code false} oder {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getElectric() {
     return this.electric;
   }
@@ -153,6 +184,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
    * Sonst {@code false} oder {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getHistoric() {
     return this.historic;
   }
@@ -162,6 +194,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
    * {@code null}, wenn kein Saisonkennzeichen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSaisonStart() {
     return this.saisonStart;
   }
@@ -171,6 +204,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
    * {@code null}, wenn kein Saisonkennzeichen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSaisonEnd() {
     return this.saisonEnd;
   }
@@ -180,6 +214,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
    * {@code null} wird als {@link KfzKennzeichenTypeV1#CAR CAR} interpretiert.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public KfzKennzeichenTypeV1 getKennzeichenType() {
     return this.kennzeichenType;
   }
@@ -189,6 +224,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
    * Sonst {@code false} oder {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setElectric(final Boolean electric) {
     this.electric = electric;
   }
@@ -198,6 +234,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
    * Sonst {@code false} oder {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setHistoric(final Boolean historic) {
     this.historic = historic;
   }
@@ -207,6 +244,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
    * {@code null}, wenn kein Saisonkennzeichen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSaisonStart(final String saisonStart) {
     this.saisonStart = saisonStart;
   }
@@ -216,6 +254,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
    * {@code null}, wenn kein Saisonkennzeichen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSaisonEnd(final String saisonEnd) {
     this.saisonEnd = saisonEnd;
   }
@@ -225,12 +264,14 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
    * {@code null} wird als {@link KfzKennzeichenTypeV1#CAR CAR} interpretiert.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setKennzeichenType(final KfzKennzeichenTypeV1 kennzeichenType) {
     this.kennzeichenType = kennzeichenType;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof KfzKennzeichenStylingV1)) return false;
@@ -255,12 +296,14 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof KfzKennzeichenStylingV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -279,6 +322,7 @@ public class KfzKennzeichenStylingV1 implements AdditionalFieldStylingV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "KfzKennzeichenStylingV1(electric=" + this.getElectric() + ", historic=" + this.getHistoric() + ", saisonStart=" + this.getSaisonStart() + ", saisonEnd=" + this.getSaisonEnd() + ", kennzeichenType=" + this.getKennzeichenType() + ")";
   }

@@ -37,16 +37,28 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
   private List<DisplayConditionV1> displayConditions;
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<MediaAccordionElementV1> $default$elements() {
     return new ArrayList<>();
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<DisplayConditionV1> $default$displayConditions() {
     return new ArrayList<>();
   }
 
+  /**
+   * Creates a new {@code MediaAccordionV1} instance.
+   *
+   * @param id ID des Medien-Akkordeons.
+   * @param title Überschrift der Feldgruppe.
+   * @param elements Akkordeon-Elemente des Akkordeons. Diese enthalten die Formularfelder.
+   * @param displayConditions Sichtbarkeitsbedingungen, über die die Feldgruppe dynamisch ein- oder ausgeblendet werden kann.
+   * Default ist eine leere Liste.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   MediaAccordionV1(@NonNull final String id, final String title, @NonNull final List<MediaAccordionElementV1> elements, @NonNull final List<DisplayConditionV1> displayConditions) {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");
@@ -65,21 +77,29 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class MediaAccordionV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String id;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String title;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean elements$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<MediaAccordionElementV1> elements$value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean displayConditions$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<DisplayConditionV1> displayConditions$value;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     MediaAccordionV1Builder() {
     }
 
@@ -88,6 +108,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public MediaAccordionV1.MediaAccordionV1Builder id(@NonNull final String id) {
       if (id == null) {
         throw new NullPointerException("id is marked non-null but is null");
@@ -101,6 +122,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public MediaAccordionV1.MediaAccordionV1Builder title(final String title) {
       this.title = title;
       return this;
@@ -111,6 +133,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public MediaAccordionV1.MediaAccordionV1Builder elements(@NonNull final List<MediaAccordionElementV1> elements) {
       if (elements == null) {
         throw new NullPointerException("elements is marked non-null but is null");
@@ -126,6 +149,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public MediaAccordionV1.MediaAccordionV1Builder displayConditions(@NonNull final List<DisplayConditionV1> displayConditions) {
       if (displayConditions == null) {
         throw new NullPointerException("displayConditions is marked non-null but is null");
@@ -136,6 +160,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public MediaAccordionV1 build() {
       List<MediaAccordionElementV1> elements$value = this.elements$value;
       if (!this.elements$set) elements$value = MediaAccordionV1.$default$elements();
@@ -146,12 +171,14 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "MediaAccordionV1.MediaAccordionV1Builder(id=" + this.id + ", title=" + this.title + ", elements$value=" + this.elements$value + ", displayConditions$value=" + this.displayConditions$value + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static MediaAccordionV1.MediaAccordionV1Builder builder() {
     return new MediaAccordionV1.MediaAccordionV1Builder();
   }
@@ -161,6 +188,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getId() {
     return this.id;
   }
@@ -169,6 +197,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
    * Überschrift der Feldgruppe.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTitle() {
     return this.title;
   }
@@ -178,6 +207,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<MediaAccordionElementV1> getElements() {
     return this.elements;
   }
@@ -188,6 +218,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<DisplayConditionV1> getDisplayConditions() {
     return this.displayConditions;
   }
@@ -196,6 +227,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
    * ID des Medien-Akkordeons.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setId(@NonNull final String id) {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");
@@ -207,6 +239,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
    * Überschrift der Feldgruppe.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setTitle(final String title) {
     this.title = title;
   }
@@ -215,6 +248,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
    * Akkordeon-Elemente des Akkordeons. Diese enthalten die Formularfelder.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setElements(@NonNull final List<MediaAccordionElementV1> elements) {
     if (elements == null) {
       throw new NullPointerException("elements is marked non-null but is null");
@@ -227,6 +261,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
    * Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setDisplayConditions(@NonNull final List<DisplayConditionV1> displayConditions) {
     if (displayConditions == null) {
       throw new NullPointerException("displayConditions is marked non-null but is null");
@@ -236,6 +271,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof MediaAccordionV1)) return false;
@@ -257,12 +293,14 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof MediaAccordionV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -279,6 +317,7 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "MediaAccordionV1(id=" + this.getId() + ", title=" + this.getTitle() + ", elements=" + this.getElements() + ", displayConditions=" + this.getDisplayConditions() + ")";
   }

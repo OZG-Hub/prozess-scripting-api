@@ -42,19 +42,24 @@ public class FormRowV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<FormFieldV1> $default$fields() {
     return new ArrayList<>();
   }
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class FormRowV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean fields$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<FormFieldV1> fields$value;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     FormRowV1Builder() {
     }
 
@@ -63,6 +68,7 @@ public class FormRowV1 implements Cloneable {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormRowV1.FormRowV1Builder fields(@NonNull final List<FormFieldV1> fields) {
       if (fields == null) {
         throw new NullPointerException("fields is marked non-null but is null");
@@ -73,6 +79,7 @@ public class FormRowV1 implements Cloneable {
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormRowV1 build() {
       List<FormFieldV1> fields$value = this.fields$value;
       if (!this.fields$set) fields$value = FormRowV1.$default$fields();
@@ -81,12 +88,14 @@ public class FormRowV1 implements Cloneable {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "FormRowV1.FormRowV1Builder(fields$value=" + this.fields$value + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static FormRowV1.FormRowV1Builder builder() {
     return new FormRowV1.FormRowV1Builder();
   }
@@ -96,6 +105,7 @@ public class FormRowV1 implements Cloneable {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<FormFieldV1> getFields() {
     return this.fields;
   }
@@ -104,6 +114,7 @@ public class FormRowV1 implements Cloneable {
    * Formularfelder dieser Zeile.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setFields(@NonNull final List<FormFieldV1> fields) {
     if (fields == null) {
       throw new NullPointerException("fields is marked non-null but is null");
@@ -113,6 +124,7 @@ public class FormRowV1 implements Cloneable {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof FormRowV1)) return false;
@@ -125,12 +137,14 @@ public class FormRowV1 implements Cloneable {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof FormRowV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -141,11 +155,18 @@ public class FormRowV1 implements Cloneable {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "FormRowV1(fields=" + this.getFields() + ")";
   }
 
+  /**
+   * Creates a new {@code FormRowV1} instance.
+   *
+   * @param fields Formularfelder dieser Zeile.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public FormRowV1(@NonNull final List<FormFieldV1> fields) {
     if (fields == null) {
       throw new NullPointerException("fields is marked non-null but is null");

@@ -17,17 +17,21 @@ public class ShowOnEmptyFieldConditionV1 extends FieldDisplayConditionV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class ShowOnEmptyFieldConditionV1Builder<C extends ShowOnEmptyFieldConditionV1, B extends ShowOnEmptyFieldConditionV1.ShowOnEmptyFieldConditionV1Builder<C, B>> extends FieldDisplayConditionV1.FieldDisplayConditionV1Builder<C, B> {
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ShowOnEmptyFieldConditionV1.ShowOnEmptyFieldConditionV1Builder(super=" + super.toString() + ")";
     }
@@ -35,30 +39,36 @@ public class ShowOnEmptyFieldConditionV1 extends FieldDisplayConditionV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class ShowOnEmptyFieldConditionV1BuilderImpl extends ShowOnEmptyFieldConditionV1.ShowOnEmptyFieldConditionV1Builder<ShowOnEmptyFieldConditionV1, ShowOnEmptyFieldConditionV1.ShowOnEmptyFieldConditionV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private ShowOnEmptyFieldConditionV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected ShowOnEmptyFieldConditionV1.ShowOnEmptyFieldConditionV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public ShowOnEmptyFieldConditionV1 build() {
       return new ShowOnEmptyFieldConditionV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected ShowOnEmptyFieldConditionV1(final ShowOnEmptyFieldConditionV1.ShowOnEmptyFieldConditionV1Builder<?, ?> b) {
     super(b);
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ShowOnEmptyFieldConditionV1.ShowOnEmptyFieldConditionV1Builder<?, ?> builder() {
     return new ShowOnEmptyFieldConditionV1.ShowOnEmptyFieldConditionV1BuilderImpl();
   }

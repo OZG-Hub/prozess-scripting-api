@@ -28,15 +28,20 @@ public class CryptoConfigurationV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class CryptoConfigurationV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String cipherTransformation;
     @SuppressWarnings("all")
+    @lombok.Generated
     private int initialisationVectorLengthInBits;
     @SuppressWarnings("all")
+    @lombok.Generated
     private PBKDConfigurationV1 pbkdConfiguration;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     CryptoConfigurationV1Builder() {
     }
 
@@ -50,6 +55,7 @@ public class CryptoConfigurationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public CryptoConfigurationV1.CryptoConfigurationV1Builder cipherTransformation(final String cipherTransformation) {
       this.cipherTransformation = cipherTransformation;
       return this;
@@ -60,6 +66,7 @@ public class CryptoConfigurationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public CryptoConfigurationV1.CryptoConfigurationV1Builder initialisationVectorLengthInBits(final int initialisationVectorLengthInBits) {
       this.initialisationVectorLengthInBits = initialisationVectorLengthInBits;
       return this;
@@ -70,24 +77,28 @@ public class CryptoConfigurationV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public CryptoConfigurationV1.CryptoConfigurationV1Builder pbkdConfiguration(final PBKDConfigurationV1 pbkdConfiguration) {
       this.pbkdConfiguration = pbkdConfiguration;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public CryptoConfigurationV1 build() {
       return new CryptoConfigurationV1(this.cipherTransformation, this.initialisationVectorLengthInBits, this.pbkdConfiguration);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "CryptoConfigurationV1.CryptoConfigurationV1Builder(cipherTransformation=" + this.cipherTransformation + ", initialisationVectorLengthInBits=" + this.initialisationVectorLengthInBits + ", pbkdConfiguration=" + this.pbkdConfiguration + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static CryptoConfigurationV1.CryptoConfigurationV1Builder builder() {
     return new CryptoConfigurationV1.CryptoConfigurationV1Builder();
   }
@@ -101,6 +112,7 @@ public class CryptoConfigurationV1 {
    * Cipher Algorithm Paddings</a>
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getCipherTransformation() {
     return this.cipherTransformation;
   }
@@ -109,6 +121,7 @@ public class CryptoConfigurationV1 {
    * Länge des Initialisierungsvektors in Bits. Muss durch 8 teilbar und größer als 0 sein.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public int getInitialisationVectorLengthInBits() {
     return this.initialisationVectorLengthInBits;
   }
@@ -117,6 +130,7 @@ public class CryptoConfigurationV1 {
    * Password-Based Key Derivation Konfiguration.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public PBKDConfigurationV1 getPbkdConfiguration() {
     return this.pbkdConfiguration;
   }
@@ -130,6 +144,7 @@ public class CryptoConfigurationV1 {
    * Cipher Algorithm Paddings</a>
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setCipherTransformation(final String cipherTransformation) {
     this.cipherTransformation = cipherTransformation;
   }
@@ -138,6 +153,7 @@ public class CryptoConfigurationV1 {
    * Länge des Initialisierungsvektors in Bits. Muss durch 8 teilbar und größer als 0 sein.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setInitialisationVectorLengthInBits(final int initialisationVectorLengthInBits) {
     this.initialisationVectorLengthInBits = initialisationVectorLengthInBits;
   }
@@ -146,12 +162,14 @@ public class CryptoConfigurationV1 {
    * Password-Based Key Derivation Konfiguration.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setPbkdConfiguration(final PBKDConfigurationV1 pbkdConfiguration) {
     this.pbkdConfiguration = pbkdConfiguration;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof CryptoConfigurationV1)) return false;
@@ -168,12 +186,14 @@ public class CryptoConfigurationV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof CryptoConfigurationV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -187,15 +207,30 @@ public class CryptoConfigurationV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "CryptoConfigurationV1(cipherTransformation=" + this.getCipherTransformation() + ", initialisationVectorLengthInBits=" + this.getInitialisationVectorLengthInBits() + ", pbkdConfiguration=" + this.getPbkdConfiguration() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public CryptoConfigurationV1() {
   }
 
+  /**
+   * Creates a new {@code CryptoConfigurationV1} instance.
+   *
+   * @param cipherTransformation Cipher Transformation (Name/Mode/Padding).
+   *
+   * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-names">Cipher Algorithm Names</a>
+   * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-modes">Cipher Algorithm Modes</a>
+   * @see <a href="https://tinyurl.com/standard-names#cipher-algorithm-paddings">
+   * Cipher Algorithm Paddings</a>
+   * @param initialisationVectorLengthInBits Länge des Initialisierungsvektors in Bits. Muss durch 8 teilbar und größer als 0 sein.
+   * @param pbkdConfiguration Password-Based Key Derivation Konfiguration.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public CryptoConfigurationV1(final String cipherTransformation, final int initialisationVectorLengthInBits, final PBKDConfigurationV1 pbkdConfiguration) {
     this.cipherTransformation = cipherTransformation;
     this.initialisationVectorLengthInBits = initialisationVectorLengthInBits;

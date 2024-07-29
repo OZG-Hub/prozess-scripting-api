@@ -16,17 +16,21 @@ public class AndConditionV1 extends AggregatorDisplayConditionV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class AndConditionV1Builder<C extends AndConditionV1, B extends AndConditionV1.AndConditionV1Builder<C, B>> extends AggregatorDisplayConditionV1.AggregatorDisplayConditionV1Builder<C, B> {
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "AndConditionV1.AndConditionV1Builder(super=" + super.toString() + ")";
     }
@@ -34,30 +38,36 @@ public class AndConditionV1 extends AggregatorDisplayConditionV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class AndConditionV1BuilderImpl extends AndConditionV1.AndConditionV1Builder<AndConditionV1, AndConditionV1.AndConditionV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private AndConditionV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected AndConditionV1.AndConditionV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public AndConditionV1 build() {
       return new AndConditionV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected AndConditionV1(final AndConditionV1.AndConditionV1Builder<?, ?> b) {
     super(b);
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static AndConditionV1.AndConditionV1Builder<?, ?> builder() {
     return new AndConditionV1.AndConditionV1BuilderImpl();
   }

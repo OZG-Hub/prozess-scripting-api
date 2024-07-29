@@ -83,31 +83,41 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<FormRowV1> $default$rows() {
     return new ArrayList<>();
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<DisplayConditionV1> $default$displayConditions() {
     return new ArrayList<>();
   }
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class AbstractFieldGroupV1Builder<C extends AbstractFieldGroupV1, B extends AbstractFieldGroupV1.AbstractFieldGroupV1Builder<C, B>> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String id;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String fimId;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String title;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean rows$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<FormRowV1> rows$value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean displayConditions$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<DisplayConditionV1> displayConditions$value;
 
     /**
@@ -115,6 +125,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B id(@NonNull final String id) {
       if (id == null) {
         throw new NullPointerException("id is marked non-null but is null");
@@ -128,6 +139,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B fimId(final String fimId) {
       this.fimId = fimId;
       return self();
@@ -138,6 +150,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B title(final String title) {
       this.title = title;
       return self();
@@ -148,6 +161,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B rows(@NonNull final List<FormRowV1> rows) {
       if (rows == null) {
         throw new NullPointerException("rows is marked non-null but is null");
@@ -163,6 +177,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B displayConditions(@NonNull final List<DisplayConditionV1> displayConditions) {
       if (displayConditions == null) {
         throw new NullPointerException("displayConditions is marked non-null but is null");
@@ -173,19 +188,23 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "AbstractFieldGroupV1.AbstractFieldGroupV1Builder(id=" + this.id + ", fimId=" + this.fimId + ", title=" + this.title + ", rows$value=" + this.rows$value + ", displayConditions$value=" + this.displayConditions$value + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected AbstractFieldGroupV1(final AbstractFieldGroupV1.AbstractFieldGroupV1Builder<?, ?> b) {
     this.id = b.id;
     if (id == null) {
@@ -210,6 +229,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getId() {
     return this.id;
   }
@@ -218,6 +238,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
    * Die ID der Feldgruppe als Datenfeldgruppe im FIM-Standard (Föderales Informationsmanagement).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getFimId() {
     return this.fimId;
   }
@@ -226,6 +247,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
    * Überschrift der Feldgruppe.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTitle() {
     return this.title;
   }
@@ -235,6 +257,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<FormRowV1> getRows() {
     return this.rows;
   }
@@ -245,6 +268,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<DisplayConditionV1> getDisplayConditions() {
     return this.displayConditions;
   }
@@ -253,6 +277,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
    * ID der Feldgruppe.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setId(@NonNull final String id) {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");
@@ -264,6 +289,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
    * Die ID der Feldgruppe als Datenfeldgruppe im FIM-Standard (Föderales Informationsmanagement).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setFimId(final String fimId) {
     this.fimId = fimId;
   }
@@ -272,6 +298,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
    * Überschrift der Feldgruppe.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setTitle(final String title) {
     this.title = title;
   }
@@ -280,6 +307,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
    * Formularzeilen der Feldgruppe. Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setRows(@NonNull final List<FormRowV1> rows) {
     if (rows == null) {
       throw new NullPointerException("rows is marked non-null but is null");
@@ -292,6 +320,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
    * Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setDisplayConditions(@NonNull final List<DisplayConditionV1> displayConditions) {
     if (displayConditions == null) {
       throw new NullPointerException("displayConditions is marked non-null but is null");
@@ -301,6 +330,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof AbstractFieldGroupV1)) return false;
@@ -325,12 +355,14 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof AbstractFieldGroupV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -349,6 +381,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "AbstractFieldGroupV1(id=" + this.getId() + ", fimId=" + this.getFimId() + ", title=" + this.getTitle() + ", rows=" + this.getRows() + ", displayConditions=" + this.getDisplayConditions() + ")";
   }

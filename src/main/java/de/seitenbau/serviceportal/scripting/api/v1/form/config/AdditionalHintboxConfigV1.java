@@ -25,7 +25,14 @@ public class AdditionalHintboxConfigV1 implements AdditionalFieldConfigV1 {
     }
   }
 
+  /**
+   * Creates a new {@code AdditionalHintboxConfigV1} instance.
+   *
+   * @param text Text, der in einer Hinweisbox angezeigt wird.
+   * @param status Status, der das Aussehen der Hinweisbox festlegt.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   AdditionalHintboxConfigV1(final String text, final HintboxStatusV1 status) {
     this.text = text;
     this.status = status;
@@ -33,13 +40,17 @@ public class AdditionalHintboxConfigV1 implements AdditionalFieldConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class AdditionalHintboxConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String text;
     @SuppressWarnings("all")
+    @lombok.Generated
     private HintboxStatusV1 status;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     AdditionalHintboxConfigV1Builder() {
     }
 
@@ -48,6 +59,7 @@ public class AdditionalHintboxConfigV1 implements AdditionalFieldConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalHintboxConfigV1.AdditionalHintboxConfigV1Builder text(final String text) {
       this.text = text;
       return this;
@@ -58,24 +70,28 @@ public class AdditionalHintboxConfigV1 implements AdditionalFieldConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalHintboxConfigV1.AdditionalHintboxConfigV1Builder status(final HintboxStatusV1 status) {
       this.status = status;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalHintboxConfigV1 build() {
       return new AdditionalHintboxConfigV1(this.text, this.status);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "AdditionalHintboxConfigV1.AdditionalHintboxConfigV1Builder(text=" + this.text + ", status=" + this.status + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static AdditionalHintboxConfigV1.AdditionalHintboxConfigV1Builder builder() {
     return new AdditionalHintboxConfigV1.AdditionalHintboxConfigV1Builder();
   }
@@ -84,6 +100,7 @@ public class AdditionalHintboxConfigV1 implements AdditionalFieldConfigV1 {
    * Text, der in einer Hinweisbox angezeigt wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getText() {
     return this.text;
   }
@@ -92,6 +109,7 @@ public class AdditionalHintboxConfigV1 implements AdditionalFieldConfigV1 {
    * Status, der das Aussehen der Hinweisbox festlegt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public HintboxStatusV1 getStatus() {
     return this.status;
   }
@@ -100,6 +118,7 @@ public class AdditionalHintboxConfigV1 implements AdditionalFieldConfigV1 {
    * Text, der in einer Hinweisbox angezeigt wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setText(final String text) {
     this.text = text;
   }
@@ -108,12 +127,14 @@ public class AdditionalHintboxConfigV1 implements AdditionalFieldConfigV1 {
    * Status, der das Aussehen der Hinweisbox festlegt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setStatus(final HintboxStatusV1 status) {
     this.status = status;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof AdditionalHintboxConfigV1)) return false;
@@ -129,12 +150,14 @@ public class AdditionalHintboxConfigV1 implements AdditionalFieldConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof AdditionalHintboxConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -147,6 +170,7 @@ public class AdditionalHintboxConfigV1 implements AdditionalFieldConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "AdditionalHintboxConfigV1(text=" + this.getText() + ", status=" + this.getStatus() + ")";
   }

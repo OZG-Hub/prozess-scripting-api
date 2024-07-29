@@ -30,15 +30,20 @@ public class PossibleValueV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class PossibleValueV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String label;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private ModalHelpDialogV1 helpDialog;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     PossibleValueV1Builder() {
     }
 
@@ -47,6 +52,7 @@ public class PossibleValueV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PossibleValueV1.PossibleValueV1Builder label(final String label) {
       this.label = label;
       return this;
@@ -57,6 +63,7 @@ public class PossibleValueV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PossibleValueV1.PossibleValueV1Builder value(final String value) {
       this.value = value;
       return this;
@@ -67,24 +74,28 @@ public class PossibleValueV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public PossibleValueV1.PossibleValueV1Builder helpDialog(final ModalHelpDialogV1 helpDialog) {
       this.helpDialog = helpDialog;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public PossibleValueV1 build() {
       return new PossibleValueV1(this.label, this.value, this.helpDialog);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "PossibleValueV1.PossibleValueV1Builder(label=" + this.label + ", value=" + this.value + ", helpDialog=" + this.helpDialog + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static PossibleValueV1.PossibleValueV1Builder builder() {
     return new PossibleValueV1.PossibleValueV1Builder();
   }
@@ -93,6 +104,7 @@ public class PossibleValueV1 {
    * Anzeigetext des Werts einer Auswahlliste.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getLabel() {
     return this.label;
   }
@@ -101,6 +113,7 @@ public class PossibleValueV1 {
    * Interner Wert des Werts einer Auswahlliste.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getValue() {
     return this.value;
   }
@@ -109,6 +122,7 @@ public class PossibleValueV1 {
    * Informationen zum Hilfe-Dialog, wenn ein Hilfe-Button angezeigt werden soll.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ModalHelpDialogV1 getHelpDialog() {
     return this.helpDialog;
   }
@@ -117,6 +131,7 @@ public class PossibleValueV1 {
    * Anzeigetext des Werts einer Auswahlliste.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setLabel(final String label) {
     this.label = label;
   }
@@ -125,6 +140,7 @@ public class PossibleValueV1 {
    * Interner Wert des Werts einer Auswahlliste.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValue(final String value) {
     this.value = value;
   }
@@ -133,12 +149,14 @@ public class PossibleValueV1 {
    * Informationen zum Hilfe-Dialog, wenn ein Hilfe-Button angezeigt werden soll.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setHelpDialog(final ModalHelpDialogV1 helpDialog) {
     this.helpDialog = helpDialog;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof PossibleValueV1)) return false;
@@ -157,12 +175,14 @@ public class PossibleValueV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof PossibleValueV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -177,11 +197,20 @@ public class PossibleValueV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "PossibleValueV1(label=" + this.getLabel() + ", value=" + this.getValue() + ", helpDialog=" + this.getHelpDialog() + ")";
   }
 
+  /**
+   * Creates a new {@code PossibleValueV1} instance.
+   *
+   * @param label Anzeigetext des Werts einer Auswahlliste.
+   * @param value Interner Wert des Werts einer Auswahlliste.
+   * @param helpDialog Informationen zum Hilfe-Dialog, wenn ein Hilfe-Button angezeigt werden soll.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public PossibleValueV1(final String label, final String value, final ModalHelpDialogV1 helpDialog) {
     this.label = label;
     this.value = value;

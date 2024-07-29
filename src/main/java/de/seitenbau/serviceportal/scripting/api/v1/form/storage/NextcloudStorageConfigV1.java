@@ -27,13 +27,17 @@ public class NextcloudStorageConfigV1 implements StorageConfigV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class NextcloudStorageConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private AuthenticationConfigV1 authentication;
     @SuppressWarnings("all")
+    @lombok.Generated
     private EndpointFolderConfigV1 endpoint;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     NextcloudStorageConfigV1Builder() {
     }
 
@@ -42,6 +46,7 @@ public class NextcloudStorageConfigV1 implements StorageConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public NextcloudStorageConfigV1.NextcloudStorageConfigV1Builder authentication(final AuthenticationConfigV1 authentication) {
       this.authentication = authentication;
       return this;
@@ -52,24 +57,28 @@ public class NextcloudStorageConfigV1 implements StorageConfigV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public NextcloudStorageConfigV1.NextcloudStorageConfigV1Builder endpoint(final EndpointFolderConfigV1 endpoint) {
       this.endpoint = endpoint;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public NextcloudStorageConfigV1 build() {
       return new NextcloudStorageConfigV1(this.authentication, this.endpoint);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "NextcloudStorageConfigV1.NextcloudStorageConfigV1Builder(authentication=" + this.authentication + ", endpoint=" + this.endpoint + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static NextcloudStorageConfigV1.NextcloudStorageConfigV1Builder builder() {
     return new NextcloudStorageConfigV1.NextcloudStorageConfigV1Builder();
   }
@@ -78,6 +87,7 @@ public class NextcloudStorageConfigV1 implements StorageConfigV1 {
    * Authentifizierungs-Informationen. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public AuthenticationConfigV1 getAuthentication() {
     return this.authentication;
   }
@@ -86,6 +96,7 @@ public class NextcloudStorageConfigV1 implements StorageConfigV1 {
    * Informationen über den zu verwendenden Endpoint der Nextcloud. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public EndpointFolderConfigV1 getEndpoint() {
     return this.endpoint;
   }
@@ -94,6 +105,7 @@ public class NextcloudStorageConfigV1 implements StorageConfigV1 {
    * Authentifizierungs-Informationen. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAuthentication(final AuthenticationConfigV1 authentication) {
     this.authentication = authentication;
   }
@@ -102,12 +114,14 @@ public class NextcloudStorageConfigV1 implements StorageConfigV1 {
    * Informationen über den zu verwendenden Endpoint der Nextcloud. Nicht {@code null}.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setEndpoint(final EndpointFolderConfigV1 endpoint) {
     this.endpoint = endpoint;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof NextcloudStorageConfigV1)) return false;
@@ -123,12 +137,14 @@ public class NextcloudStorageConfigV1 implements StorageConfigV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof NextcloudStorageConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -141,15 +157,24 @@ public class NextcloudStorageConfigV1 implements StorageConfigV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "NextcloudStorageConfigV1(authentication=" + this.getAuthentication() + ", endpoint=" + this.getEndpoint() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public NextcloudStorageConfigV1() {
   }
 
+  /**
+   * Creates a new {@code NextcloudStorageConfigV1} instance.
+   *
+   * @param authentication Authentifizierungs-Informationen. Nicht {@code null}.
+   * @param endpoint Informationen über den zu verwendenden Endpoint der Nextcloud. Nicht {@code null}.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public NextcloudStorageConfigV1(final AuthenticationConfigV1 authentication, final EndpointFolderConfigV1 endpoint) {
     this.authentication = authentication;
     this.endpoint = endpoint;

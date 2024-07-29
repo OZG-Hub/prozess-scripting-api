@@ -12,8 +12,10 @@ public class EuroBetragNegativeValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class EuroBetragNegativeValidatorV1Builder<C extends EuroBetragNegativeValidatorV1, B extends EuroBetragNegativeValidatorV1.EuroBetragNegativeValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean strictlyNegative;
 
     /**
@@ -21,6 +23,7 @@ public class EuroBetragNegativeValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B strictlyNegative(final Boolean strictlyNegative) {
       this.strictlyNegative = strictlyNegative;
       return self();
@@ -28,14 +31,17 @@ public class EuroBetragNegativeValidatorV1 extends ValidationRuleV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "EuroBetragNegativeValidatorV1.EuroBetragNegativeValidatorV1Builder(super=" + super.toString() + ", strictlyNegative=" + this.strictlyNegative + ")";
     }
@@ -43,31 +49,37 @@ public class EuroBetragNegativeValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class EuroBetragNegativeValidatorV1BuilderImpl extends EuroBetragNegativeValidatorV1.EuroBetragNegativeValidatorV1Builder<EuroBetragNegativeValidatorV1, EuroBetragNegativeValidatorV1.EuroBetragNegativeValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private EuroBetragNegativeValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected EuroBetragNegativeValidatorV1.EuroBetragNegativeValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public EuroBetragNegativeValidatorV1 build() {
       return new EuroBetragNegativeValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected EuroBetragNegativeValidatorV1(final EuroBetragNegativeValidatorV1.EuroBetragNegativeValidatorV1Builder<?, ?> b) {
     super(b);
     this.strictlyNegative = b.strictlyNegative;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static EuroBetragNegativeValidatorV1.EuroBetragNegativeValidatorV1Builder<?, ?> builder() {
     return new EuroBetragNegativeValidatorV1.EuroBetragNegativeValidatorV1BuilderImpl();
   }
@@ -76,6 +88,7 @@ public class EuroBetragNegativeValidatorV1 extends ValidationRuleV1 {
    * {@code true}, wenn der Betrag nicht 0 sein darf.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getStrictlyNegative() {
     return this.strictlyNegative;
   }
@@ -84,18 +97,21 @@ public class EuroBetragNegativeValidatorV1 extends ValidationRuleV1 {
    * {@code true}, wenn der Betrag nicht 0 sein darf.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setStrictlyNegative(final Boolean strictlyNegative) {
     this.strictlyNegative = strictlyNegative;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "EuroBetragNegativeValidatorV1(strictlyNegative=" + this.getStrictlyNegative() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof EuroBetragNegativeValidatorV1)) return false;
@@ -108,12 +124,14 @@ public class EuroBetragNegativeValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof EuroBetragNegativeValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

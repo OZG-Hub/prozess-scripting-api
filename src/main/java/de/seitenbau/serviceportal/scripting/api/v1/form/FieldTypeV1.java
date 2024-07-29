@@ -20,8 +20,10 @@ public enum FieldTypeV1 {
    * Mehrzeilige Texteingabe.
    */
   TEXTAREA(String.class), /**
-   * Dateiupload.
+   * Der veraltete Dateiupload, nur noch zwecks Kompatibilität vorhanden.
+   * Stattdessen bitte den neuen Dateiupload "MULTIPLE_FILE" verwenden.
    */
+  @Deprecated
   FILE(BinaryContentV1.class), /**
    * Dateiupload-Feld mit Möglichkeit mehrere Dateien hochzuladen.
    */
@@ -73,6 +75,7 @@ public enum FieldTypeV1 {
   H2(String.class), /**
    * Speichert, ob der Benutzer beim Absenden mit dem nPA angemeldet war oder nicht.
    */
+  @Deprecated
   SUBMITTED_WITH_NPA_INFO(Boolean.class), /**
    * Geo-Dateneingabe.
    */
@@ -124,6 +127,7 @@ public enum FieldTypeV1 {
    * Trotzdem ist auch für diese Feldtypen eine Klasse (immer {@code String.class}) hinterlegt.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<Class<?>> getValueClasses() {
     return this.valueClasses;
   }

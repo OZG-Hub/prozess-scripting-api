@@ -13,8 +13,10 @@ public class FileNameRegexValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class FileNameRegexValidatorV1Builder<C extends FileNameRegexValidatorV1, B extends FileNameRegexValidatorV1.FileNameRegexValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String regex;
 
     /**
@@ -22,6 +24,7 @@ public class FileNameRegexValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B regex(final String regex) {
       this.regex = regex;
       return self();
@@ -29,14 +32,17 @@ public class FileNameRegexValidatorV1 extends ValidationRuleV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "FileNameRegexValidatorV1.FileNameRegexValidatorV1Builder(super=" + super.toString() + ", regex=" + this.regex + ")";
     }
@@ -44,31 +50,37 @@ public class FileNameRegexValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class FileNameRegexValidatorV1BuilderImpl extends FileNameRegexValidatorV1.FileNameRegexValidatorV1Builder<FileNameRegexValidatorV1, FileNameRegexValidatorV1.FileNameRegexValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private FileNameRegexValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected FileNameRegexValidatorV1.FileNameRegexValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public FileNameRegexValidatorV1 build() {
       return new FileNameRegexValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected FileNameRegexValidatorV1(final FileNameRegexValidatorV1.FileNameRegexValidatorV1Builder<?, ?> b) {
     super(b);
     this.regex = b.regex;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static FileNameRegexValidatorV1.FileNameRegexValidatorV1Builder<?, ?> builder() {
     return new FileNameRegexValidatorV1.FileNameRegexValidatorV1BuilderImpl();
   }
@@ -77,6 +89,7 @@ public class FileNameRegexValidatorV1 extends ValidationRuleV1 {
    * Regex für die Überprüfung (in Java Regex Syntax).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getRegex() {
     return this.regex;
   }
@@ -85,18 +98,21 @@ public class FileNameRegexValidatorV1 extends ValidationRuleV1 {
    * Regex für die Überprüfung (in Java Regex Syntax).
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setRegex(final String regex) {
     this.regex = regex;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "FileNameRegexValidatorV1(regex=" + this.getRegex() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof FileNameRegexValidatorV1)) return false;
@@ -109,12 +125,14 @@ public class FileNameRegexValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof FileNameRegexValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

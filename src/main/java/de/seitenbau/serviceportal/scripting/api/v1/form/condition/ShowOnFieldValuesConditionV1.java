@@ -38,16 +38,20 @@ public class ShowOnFieldValuesConditionV1 extends FieldDisplayConditionV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static Set<String> $default$values() {
     return new HashSet<>();
   }
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class ShowOnFieldValuesConditionV1Builder<C extends ShowOnFieldValuesConditionV1, B extends ShowOnFieldValuesConditionV1.ShowOnFieldValuesConditionV1Builder<C, B>> extends FieldDisplayConditionV1.FieldDisplayConditionV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean values$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<String> values$value;
 
     /**
@@ -55,6 +59,7 @@ public class ShowOnFieldValuesConditionV1 extends FieldDisplayConditionV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B values(final Set<String> values) {
       this.values$value = values;
       values$set = true;
@@ -63,14 +68,17 @@ public class ShowOnFieldValuesConditionV1 extends FieldDisplayConditionV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ShowOnFieldValuesConditionV1.ShowOnFieldValuesConditionV1Builder(super=" + super.toString() + ", values$value=" + this.values$value + ")";
     }
@@ -78,25 +86,30 @@ public class ShowOnFieldValuesConditionV1 extends FieldDisplayConditionV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class ShowOnFieldValuesConditionV1BuilderImpl extends ShowOnFieldValuesConditionV1.ShowOnFieldValuesConditionV1Builder<ShowOnFieldValuesConditionV1, ShowOnFieldValuesConditionV1.ShowOnFieldValuesConditionV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private ShowOnFieldValuesConditionV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected ShowOnFieldValuesConditionV1.ShowOnFieldValuesConditionV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public ShowOnFieldValuesConditionV1 build() {
       return new ShowOnFieldValuesConditionV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected ShowOnFieldValuesConditionV1(final ShowOnFieldValuesConditionV1.ShowOnFieldValuesConditionV1Builder<?, ?> b) {
     super(b);
     if (b.values$set) this.values = b.values$value;
@@ -104,6 +117,7 @@ public class ShowOnFieldValuesConditionV1 extends FieldDisplayConditionV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ShowOnFieldValuesConditionV1.ShowOnFieldValuesConditionV1Builder<?, ?> builder() {
     return new ShowOnFieldValuesConditionV1.ShowOnFieldValuesConditionV1BuilderImpl();
   }
@@ -112,6 +126,7 @@ public class ShowOnFieldValuesConditionV1 extends FieldDisplayConditionV1 {
    * Werte, für die das Zielfeld angezeigt wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<String> getValues() {
     return this.values;
   }
@@ -120,18 +135,21 @@ public class ShowOnFieldValuesConditionV1 extends FieldDisplayConditionV1 {
    * Werte, für die das Zielfeld angezeigt wird.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValues(final Set<String> values) {
     this.values = values;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ShowOnFieldValuesConditionV1(values=" + this.getValues() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ShowOnFieldValuesConditionV1)) return false;
@@ -145,12 +163,14 @@ public class ShowOnFieldValuesConditionV1 extends FieldDisplayConditionV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ShowOnFieldValuesConditionV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = super.hashCode();

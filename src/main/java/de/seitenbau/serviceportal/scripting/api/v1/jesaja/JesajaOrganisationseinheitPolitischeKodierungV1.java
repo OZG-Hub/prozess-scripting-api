@@ -16,13 +16,17 @@ public class JesajaOrganisationseinheitPolitischeKodierungV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class JesajaOrganisationseinheitPolitischeKodierungV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String ars;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String ags;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     JesajaOrganisationseinheitPolitischeKodierungV1Builder() {
     }
 
@@ -31,6 +35,7 @@ public class JesajaOrganisationseinheitPolitischeKodierungV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitPolitischeKodierungV1.JesajaOrganisationseinheitPolitischeKodierungV1Builder ars(final String ars) {
       this.ars = ars;
       return this;
@@ -41,24 +46,28 @@ public class JesajaOrganisationseinheitPolitischeKodierungV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitPolitischeKodierungV1.JesajaOrganisationseinheitPolitischeKodierungV1Builder ags(final String ags) {
       this.ags = ags;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public JesajaOrganisationseinheitPolitischeKodierungV1 build() {
       return new JesajaOrganisationseinheitPolitischeKodierungV1(this.ars, this.ags);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "JesajaOrganisationseinheitPolitischeKodierungV1.JesajaOrganisationseinheitPolitischeKodierungV1Builder(ars=" + this.ars + ", ags=" + this.ags + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static JesajaOrganisationseinheitPolitischeKodierungV1.JesajaOrganisationseinheitPolitischeKodierungV1Builder builder() {
     return new JesajaOrganisationseinheitPolitischeKodierungV1.JesajaOrganisationseinheitPolitischeKodierungV1Builder();
   }
@@ -67,6 +76,7 @@ public class JesajaOrganisationseinheitPolitischeKodierungV1 {
    * Amtlicher Regionalschlüssel.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getArs() {
     return this.ars;
   }
@@ -75,18 +85,21 @@ public class JesajaOrganisationseinheitPolitischeKodierungV1 {
    * Amtlicher Gemeindeschlüssel.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getAgs() {
     return this.ags;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "JesajaOrganisationseinheitPolitischeKodierungV1(ars=" + this.getArs() + ", ags=" + this.getAgs() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof JesajaOrganisationseinheitPolitischeKodierungV1)) return false;
@@ -102,12 +115,14 @@ public class JesajaOrganisationseinheitPolitischeKodierungV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof JesajaOrganisationseinheitPolitischeKodierungV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -119,10 +134,18 @@ public class JesajaOrganisationseinheitPolitischeKodierungV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public JesajaOrganisationseinheitPolitischeKodierungV1() {
   }
 
+  /**
+   * Creates a new {@code JesajaOrganisationseinheitPolitischeKodierungV1} instance.
+   *
+   * @param ars Amtlicher Regionalschlüssel.
+   * @param ags Amtlicher Gemeindeschlüssel.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public JesajaOrganisationseinheitPolitischeKodierungV1(final String ars, final String ags) {
     this.ars = ars;
     this.ags = ags;

@@ -334,53 +334,72 @@ public class FormV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static FormularEngineVersionV1 $default$engineVersion() {
     return FormularEngineVersionV1.V1;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static List<FormSectionV1> $default$sections() {
     return new ArrayList<>();
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static Set<ValidationMessageV1> $default$validationMessages() {
     return new HashSet<>();
   }
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class FormV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String id;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean engineVersion$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private FormularEngineVersionV1 engineVersion$value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String title;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String language;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean sections$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<FormSectionV1> sections$value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private DataResourcePointerV1 source;
     @SuppressWarnings("all")
+    @lombok.Generated
     private DataResourcePointerV1 target;
     @SuppressWarnings("all")
+    @lombok.Generated
     private boolean validationMessages$set;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Set<ValidationMessageV1> validationMessages$value;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Map<String, Object> context;
     @SuppressWarnings("all")
+    @lombok.Generated
     private CustomButtonsV1 customButtons;
     @SuppressWarnings("all")
+    @lombok.Generated
     private FormReplacementValuesV1 appliedReplacements;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     FormV1Builder() {
     }
 
@@ -389,6 +408,7 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormV1.FormV1Builder id(@NonNull final String id) {
       if (id == null) {
         throw new NullPointerException("id is marked non-null but is null");
@@ -404,6 +424,7 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormV1.FormV1Builder engineVersion(final FormularEngineVersionV1 engineVersion) {
       this.engineVersion$value = engineVersion;
       engineVersion$set = true;
@@ -415,6 +436,7 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormV1.FormV1Builder title(final String title) {
       this.title = title;
       return this;
@@ -425,6 +447,7 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormV1.FormV1Builder language(final String language) {
       this.language = language;
       return this;
@@ -435,6 +458,7 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormV1.FormV1Builder sections(@NonNull final List<FormSectionV1> sections) {
       if (sections == null) {
         throw new NullPointerException("sections is marked non-null but is null");
@@ -449,6 +473,7 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormV1.FormV1Builder source(final DataResourcePointerV1 source) {
       this.source = source;
       return this;
@@ -459,6 +484,7 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormV1.FormV1Builder target(final DataResourcePointerV1 target) {
       this.target = target;
       return this;
@@ -469,6 +495,7 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormV1.FormV1Builder validationMessages(@NonNull final Set<ValidationMessageV1> validationMessages) {
       if (validationMessages == null) {
         throw new NullPointerException("validationMessages is marked non-null but is null");
@@ -483,6 +510,7 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormV1.FormV1Builder context(final Map<String, Object> context) {
       this.context = context;
       return this;
@@ -493,6 +521,7 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormV1.FormV1Builder customButtons(final CustomButtonsV1 customButtons) {
       this.customButtons = customButtons;
       return this;
@@ -505,12 +534,14 @@ public class FormV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormV1.FormV1Builder appliedReplacements(final FormReplacementValuesV1 appliedReplacements) {
       this.appliedReplacements = appliedReplacements;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public FormV1 build() {
       FormularEngineVersionV1 engineVersion$value = this.engineVersion$value;
       if (!this.engineVersion$set) engineVersion$value = FormV1.$default$engineVersion();
@@ -523,12 +554,14 @@ public class FormV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "FormV1.FormV1Builder(id=" + this.id + ", engineVersion$value=" + this.engineVersion$value + ", title=" + this.title + ", language=" + this.language + ", sections$value=" + this.sections$value + ", source=" + this.source + ", target=" + this.target + ", validationMessages$value=" + this.validationMessages$value + ", context=" + this.context + ", customButtons=" + this.customButtons + ", appliedReplacements=" + this.appliedReplacements + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static FormV1.FormV1Builder builder() {
     return new FormV1.FormV1Builder();
   }
@@ -538,6 +571,7 @@ public class FormV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getId() {
     return this.id;
   }
@@ -548,6 +582,7 @@ public class FormV1 {
    * @since Release 1.174
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public FormularEngineVersionV1 getEngineVersion() {
     return this.engineVersion;
   }
@@ -556,6 +591,7 @@ public class FormV1 {
    * Titel dieses Formulars.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getTitle() {
     return this.title;
   }
@@ -564,6 +600,7 @@ public class FormV1 {
    * Sprache dieses Formulars.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getLanguage() {
     return this.language;
   }
@@ -573,6 +610,7 @@ public class FormV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<FormSectionV1> getSections() {
     return this.sections;
   }
@@ -581,6 +619,7 @@ public class FormV1 {
    * Quelle, aus der die Inhalte des gesamten Formulars gelesen werden.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public DataResourcePointerV1 getSource() {
     return this.source;
   }
@@ -589,6 +628,7 @@ public class FormV1 {
    * Ziel, in das der Inhalt des gesamten Formulars geschrieben werden.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public DataResourcePointerV1 getTarget() {
     return this.target;
   }
@@ -598,6 +638,7 @@ public class FormV1 {
    */
   @NonNull
   @SuppressWarnings("all")
+  @lombok.Generated
   public Set<ValidationMessageV1> getValidationMessages() {
     return this.validationMessages;
   }
@@ -606,6 +647,7 @@ public class FormV1 {
    * Kontext, in dem das Formular abgeschickt wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Map<String, Object> getContext() {
     return this.context;
   }
@@ -614,6 +656,7 @@ public class FormV1 {
    * Enthält die Custom-Buttons.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public CustomButtonsV1 getCustomButtons() {
     return this.customButtons;
   }
@@ -624,6 +667,7 @@ public class FormV1 {
    * eine vollständige Formulardefinition machen zu können.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public FormReplacementValuesV1 getAppliedReplacements() {
     return this.appliedReplacements;
   }
@@ -632,6 +676,7 @@ public class FormV1 {
    * ID des Formulars.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setId(@NonNull final String id) {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");
@@ -645,6 +690,7 @@ public class FormV1 {
    * @since Release 1.174
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setEngineVersion(final FormularEngineVersionV1 engineVersion) {
     this.engineVersion = engineVersion;
   }
@@ -653,6 +699,7 @@ public class FormV1 {
    * Titel dieses Formulars.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setTitle(final String title) {
     this.title = title;
   }
@@ -661,6 +708,7 @@ public class FormV1 {
    * Sprache dieses Formulars.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setLanguage(final String language) {
     this.language = language;
   }
@@ -669,6 +717,7 @@ public class FormV1 {
    * Liste der Formularabschnitte. Default ist eine leere Liste.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSections(@NonNull final List<FormSectionV1> sections) {
     if (sections == null) {
       throw new NullPointerException("sections is marked non-null but is null");
@@ -680,6 +729,7 @@ public class FormV1 {
    * Quelle, aus der die Inhalte des gesamten Formulars gelesen werden.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setSource(final DataResourcePointerV1 source) {
     this.source = source;
   }
@@ -688,6 +738,7 @@ public class FormV1 {
    * Ziel, in das der Inhalt des gesamten Formulars geschrieben werden.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setTarget(final DataResourcePointerV1 target) {
     this.target = target;
   }
@@ -696,6 +747,7 @@ public class FormV1 {
    * Validierungsmeldungen des gesamten Formulars. Default ist leere Menge.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValidationMessages(@NonNull final Set<ValidationMessageV1> validationMessages) {
     if (validationMessages == null) {
       throw new NullPointerException("validationMessages is marked non-null but is null");
@@ -707,6 +759,7 @@ public class FormV1 {
    * Kontext, in dem das Formular abgeschickt wurde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setContext(final Map<String, Object> context) {
     this.context = context;
   }
@@ -715,6 +768,7 @@ public class FormV1 {
    * Enthält die Custom-Buttons.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setCustomButtons(final CustomButtonsV1 customButtons) {
     this.customButtons = customButtons;
   }
@@ -725,12 +779,14 @@ public class FormV1 {
    * eine vollständige Formulardefinition machen zu können.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAppliedReplacements(final FormReplacementValuesV1 appliedReplacements) {
     this.appliedReplacements = appliedReplacements;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof FormV1)) return false;
@@ -773,12 +829,14 @@ public class FormV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof FormV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -809,11 +867,32 @@ public class FormV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "FormV1(id=" + this.getId() + ", engineVersion=" + this.getEngineVersion() + ", title=" + this.getTitle() + ", language=" + this.getLanguage() + ", sections=" + this.getSections() + ", source=" + this.getSource() + ", target=" + this.getTarget() + ", validationMessages=" + this.getValidationMessages() + ", context=" + this.getContext() + ", customButtons=" + this.getCustomButtons() + ", appliedReplacements=" + this.getAppliedReplacements() + ")";
   }
 
+  /**
+   * Creates a new {@code FormV1} instance.
+   *
+   * @param id ID des Formulars.
+   * @param engineVersion Version der Formular-Engine. Default ist {@link FormularEngineVersionV1#V1 V1}.
+   *
+   * @since Release 1.174
+   * @param title Titel dieses Formulars.
+   * @param language Sprache dieses Formulars.
+   * @param sections Liste der Formularabschnitte. Default ist eine leere Liste.
+   * @param source Quelle, aus der die Inhalte des gesamten Formulars gelesen werden.
+   * @param target Ziel, in das der Inhalt des gesamten Formulars geschrieben werden.
+   * @param validationMessages Validierungsmeldungen des gesamten Formulars. Default ist leere Menge.
+   * @param context Kontext, in dem das Formular abgeschickt wurde.
+   * @param customButtons Enthält die Custom-Buttons.
+   * @param appliedReplacements Die Ersetzungswerte für Platzhalter in der Formulardefinition, die verwendet wurden, um die
+   * Formulardefinition zu vervollständigen. Dient dazu, um aus der Formulardefinition mit Platzhaltern wieder
+   * eine vollständige Formulardefinition machen zu können.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   private FormV1(@NonNull final String id, final FormularEngineVersionV1 engineVersion, final String title, final String language, @NonNull final List<FormSectionV1> sections, final DataResourcePointerV1 source, final DataResourcePointerV1 target, @NonNull final Set<ValidationMessageV1> validationMessages, final Map<String, Object> context, final CustomButtonsV1 customButtons, final FormReplacementValuesV1 appliedReplacements) {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");

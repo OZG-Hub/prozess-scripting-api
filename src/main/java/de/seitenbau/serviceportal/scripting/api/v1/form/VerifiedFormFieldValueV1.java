@@ -31,12 +31,14 @@ public class VerifiedFormFieldValueV1 extends FormFieldValueV1 {
    * Token, das die Herkunft und Originalität des Feldwertes garantiert.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getVerificationToken() {
     return this.verificationToken;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof VerifiedFormFieldValueV1)) return false;
@@ -50,12 +52,14 @@ public class VerifiedFormFieldValueV1 extends FormFieldValueV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof VerifiedFormFieldValueV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = super.hashCode();

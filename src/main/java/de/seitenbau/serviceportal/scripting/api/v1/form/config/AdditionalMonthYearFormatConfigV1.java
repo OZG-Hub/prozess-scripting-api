@@ -20,30 +20,36 @@ public class AdditionalMonthYearFormatConfigV1 implements AdditionalFieldConfigV
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class AdditionalMonthYearFormatConfigV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     AdditionalMonthYearFormatConfigV1Builder() {
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public AdditionalMonthYearFormatConfigV1 build() {
       return new AdditionalMonthYearFormatConfigV1();
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "AdditionalMonthYearFormatConfigV1.AdditionalMonthYearFormatConfigV1Builder()";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static AdditionalMonthYearFormatConfigV1.AdditionalMonthYearFormatConfigV1Builder builder() {
     return new AdditionalMonthYearFormatConfigV1.AdditionalMonthYearFormatConfigV1Builder();
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof AdditionalMonthYearFormatConfigV1)) return false;
@@ -53,12 +59,14 @@ public class AdditionalMonthYearFormatConfigV1 implements AdditionalFieldConfigV
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof AdditionalMonthYearFormatConfigV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int result = 1;
     return result;
@@ -66,11 +74,13 @@ public class AdditionalMonthYearFormatConfigV1 implements AdditionalFieldConfigV
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "AdditionalMonthYearFormatConfigV1()";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public AdditionalMonthYearFormatConfigV1() {
   }
 }

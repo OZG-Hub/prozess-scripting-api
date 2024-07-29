@@ -32,21 +32,29 @@ public class TransactionBezahlerinfoV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class TransactionBezahlerinfoV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String name;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String vorname;
     @SuppressWarnings("all")
+    @lombok.Generated
     private GeschlechtV1 geschlecht;
     @SuppressWarnings("all")
+    @lombok.Generated
     private Boolean isOrganisation;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String organisationName;
     @SuppressWarnings("all")
+    @lombok.Generated
     private TransactionAdresseV1 adresse;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     TransactionBezahlerinfoV1Builder() {
     }
 
@@ -55,6 +63,7 @@ public class TransactionBezahlerinfoV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionBezahlerinfoV1.TransactionBezahlerinfoV1Builder name(final String name) {
       this.name = name;
       return this;
@@ -65,6 +74,7 @@ public class TransactionBezahlerinfoV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionBezahlerinfoV1.TransactionBezahlerinfoV1Builder vorname(final String vorname) {
       this.vorname = vorname;
       return this;
@@ -75,6 +85,7 @@ public class TransactionBezahlerinfoV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionBezahlerinfoV1.TransactionBezahlerinfoV1Builder geschlecht(final GeschlechtV1 geschlecht) {
       this.geschlecht = geschlecht;
       return this;
@@ -85,6 +96,7 @@ public class TransactionBezahlerinfoV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionBezahlerinfoV1.TransactionBezahlerinfoV1Builder isOrganisation(final Boolean isOrganisation) {
       this.isOrganisation = isOrganisation;
       return this;
@@ -95,6 +107,7 @@ public class TransactionBezahlerinfoV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionBezahlerinfoV1.TransactionBezahlerinfoV1Builder organisationName(final String organisationName) {
       this.organisationName = organisationName;
       return this;
@@ -105,24 +118,28 @@ public class TransactionBezahlerinfoV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionBezahlerinfoV1.TransactionBezahlerinfoV1Builder adresse(final TransactionAdresseV1 adresse) {
       this.adresse = adresse;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public TransactionBezahlerinfoV1 build() {
       return new TransactionBezahlerinfoV1(this.name, this.vorname, this.geschlecht, this.isOrganisation, this.organisationName, this.adresse);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "TransactionBezahlerinfoV1.TransactionBezahlerinfoV1Builder(name=" + this.name + ", vorname=" + this.vorname + ", geschlecht=" + this.geschlecht + ", isOrganisation=" + this.isOrganisation + ", organisationName=" + this.organisationName + ", adresse=" + this.adresse + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static TransactionBezahlerinfoV1.TransactionBezahlerinfoV1Builder builder() {
     return new TransactionBezahlerinfoV1.TransactionBezahlerinfoV1Builder();
   }
@@ -131,6 +148,7 @@ public class TransactionBezahlerinfoV1 {
    * Nachname.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getName() {
     return this.name;
   }
@@ -139,6 +157,7 @@ public class TransactionBezahlerinfoV1 {
    * Vorname.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getVorname() {
     return this.vorname;
   }
@@ -147,6 +166,7 @@ public class TransactionBezahlerinfoV1 {
    * Geschlecht.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public GeschlechtV1 getGeschlecht() {
     return this.geschlecht;
   }
@@ -155,6 +175,7 @@ public class TransactionBezahlerinfoV1 {
    * {@code true}, wenn der Auslöser der Bezahlung eine Organisation oder juristische Person ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Boolean getIsOrganisation() {
     return this.isOrganisation;
   }
@@ -163,6 +184,7 @@ public class TransactionBezahlerinfoV1 {
    * Name der Organisation, wenn der Auslöser der Bezahlung eine Organisation ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getOrganisationName() {
     return this.organisationName;
   }
@@ -171,6 +193,7 @@ public class TransactionBezahlerinfoV1 {
    * Adressinformationen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public TransactionAdresseV1 getAdresse() {
     return this.adresse;
   }
@@ -179,6 +202,7 @@ public class TransactionBezahlerinfoV1 {
    * Nachname.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setName(final String name) {
     this.name = name;
   }
@@ -187,6 +211,7 @@ public class TransactionBezahlerinfoV1 {
    * Vorname.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setVorname(final String vorname) {
     this.vorname = vorname;
   }
@@ -195,6 +220,7 @@ public class TransactionBezahlerinfoV1 {
    * Geschlecht.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setGeschlecht(final GeschlechtV1 geschlecht) {
     this.geschlecht = geschlecht;
   }
@@ -203,6 +229,7 @@ public class TransactionBezahlerinfoV1 {
    * {@code true}, wenn der Auslöser der Bezahlung eine Organisation oder juristische Person ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setIsOrganisation(final Boolean isOrganisation) {
     this.isOrganisation = isOrganisation;
   }
@@ -211,6 +238,7 @@ public class TransactionBezahlerinfoV1 {
    * Name der Organisation, wenn der Auslöser der Bezahlung eine Organisation ist.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setOrganisationName(final String organisationName) {
     this.organisationName = organisationName;
   }
@@ -219,12 +247,14 @@ public class TransactionBezahlerinfoV1 {
    * Adressinformationen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setAdresse(final TransactionAdresseV1 adresse) {
     this.adresse = adresse;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof TransactionBezahlerinfoV1)) return false;
@@ -252,12 +282,14 @@ public class TransactionBezahlerinfoV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof TransactionBezahlerinfoV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -278,15 +310,28 @@ public class TransactionBezahlerinfoV1 {
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "TransactionBezahlerinfoV1(name=" + this.getName() + ", vorname=" + this.getVorname() + ", geschlecht=" + this.getGeschlecht() + ", isOrganisation=" + this.getIsOrganisation() + ", organisationName=" + this.getOrganisationName() + ", adresse=" + this.getAdresse() + ")";
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public TransactionBezahlerinfoV1() {
   }
 
+  /**
+   * Creates a new {@code TransactionBezahlerinfoV1} instance.
+   *
+   * @param name Nachname.
+   * @param vorname Vorname.
+   * @param geschlecht Geschlecht.
+   * @param isOrganisation {@code true}, wenn der Auslöser der Bezahlung eine Organisation oder juristische Person ist.
+   * @param organisationName Name der Organisation, wenn der Auslöser der Bezahlung eine Organisation ist.
+   * @param adresse Adressinformationen.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public TransactionBezahlerinfoV1(final String name, final String vorname, final GeschlechtV1 geschlecht, final Boolean isOrganisation, final String organisationName, final TransactionAdresseV1 adresse) {
     this.name = name;
     this.vorname = vorname;

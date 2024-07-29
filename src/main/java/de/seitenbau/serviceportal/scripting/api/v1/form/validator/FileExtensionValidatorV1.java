@@ -14,8 +14,10 @@ public class FileExtensionValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static abstract class FileExtensionValidatorV1Builder<C extends FileExtensionValidatorV1, B extends FileExtensionValidatorV1.FileExtensionValidatorV1Builder<C, B>> extends ValidationRuleV1.ValidationRuleV1Builder<C, B> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private List<String> values;
 
     /**
@@ -23,6 +25,7 @@ public class FileExtensionValidatorV1 extends ValidationRuleV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public B values(final List<String> values) {
       this.values = values;
       return self();
@@ -30,14 +33,17 @@ public class FileExtensionValidatorV1 extends ValidationRuleV1 {
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected abstract B self();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public abstract C build();
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "FileExtensionValidatorV1.FileExtensionValidatorV1Builder(super=" + super.toString() + ", values=" + this.values + ")";
     }
@@ -45,31 +51,37 @@ public class FileExtensionValidatorV1 extends ValidationRuleV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   private static final class FileExtensionValidatorV1BuilderImpl extends FileExtensionValidatorV1.FileExtensionValidatorV1Builder<FileExtensionValidatorV1, FileExtensionValidatorV1.FileExtensionValidatorV1BuilderImpl> {
     @SuppressWarnings("all")
+    @lombok.Generated
     private FileExtensionValidatorV1BuilderImpl() {
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     protected FileExtensionValidatorV1.FileExtensionValidatorV1BuilderImpl self() {
       return this;
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public FileExtensionValidatorV1 build() {
       return new FileExtensionValidatorV1(this);
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected FileExtensionValidatorV1(final FileExtensionValidatorV1.FileExtensionValidatorV1Builder<?, ?> b) {
     super(b);
     this.values = b.values;
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static FileExtensionValidatorV1.FileExtensionValidatorV1Builder<?, ?> builder() {
     return new FileExtensionValidatorV1.FileExtensionValidatorV1BuilderImpl();
   }
@@ -78,6 +90,7 @@ public class FileExtensionValidatorV1 extends ValidationRuleV1 {
    * Liste der erlaubten Dateiendungen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public List<String> getValues() {
     return this.values;
   }
@@ -86,18 +99,21 @@ public class FileExtensionValidatorV1 extends ValidationRuleV1 {
    * Liste der erlaubten Dateiendungen.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public void setValues(final List<String> values) {
     this.values = values;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "FileExtensionValidatorV1(values=" + this.getValues() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof FileExtensionValidatorV1)) return false;
@@ -110,12 +126,14 @@ public class FileExtensionValidatorV1 extends ValidationRuleV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof FileExtensionValidatorV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

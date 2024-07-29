@@ -23,6 +23,7 @@ public abstract class FormFieldValueV1 {
    * Wert des Feldes.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public Object getValue() {
     return this.value;
   }
@@ -31,12 +32,14 @@ public abstract class FormFieldValueV1 {
    * Typ des Feldwertes.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ValueTypeV1 getValueType() {
     return this.valueType;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof FormFieldValueV1)) return false;
@@ -52,12 +55,14 @@ public abstract class FormFieldValueV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof FormFieldValueV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;

@@ -16,13 +16,17 @@ public class ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1 {
 
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static class ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1Builder {
     @SuppressWarnings("all")
+    @lombok.Generated
     private String sprache;
     @SuppressWarnings("all")
+    @lombok.Generated
     private String name;
 
     @SuppressWarnings("all")
+    @lombok.Generated
     ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1Builder() {
     }
 
@@ -31,6 +35,7 @@ public class ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1.ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1Builder sprache(final String sprache) {
       this.sprache = sprache;
       return this;
@@ -41,24 +46,28 @@ public class ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1 {
      * @return {@code this}.
      */
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1.ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1Builder name(final String name) {
       this.name = name;
       return this;
     }
 
     @SuppressWarnings("all")
+    @lombok.Generated
     public ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1 build() {
       return new ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1(this.sprache, this.name);
     }
 
     @Override
     @SuppressWarnings("all")
+    @lombok.Generated
     public String toString() {
       return "ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1.ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1Builder(sprache=" + this.sprache + ", name=" + this.name + ")";
     }
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public static ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1.ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1Builder builder() {
     return new ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1.ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1Builder();
   }
@@ -67,6 +76,7 @@ public class ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1 {
    * Sprache.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getSprache() {
     return this.sprache;
   }
@@ -75,18 +85,21 @@ public class ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1 {
    * Name der zugehörigen Behörde.
    */
   @SuppressWarnings("all")
+  @lombok.Generated
   public String getName() {
     return this.name;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public String toString() {
     return "ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1(sprache=" + this.getSprache() + ", name=" + this.getName() + ")";
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
     if (!(o instanceof ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1)) return false;
@@ -102,12 +115,14 @@ public class ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   protected boolean canEqual(final Object other) {
     return other instanceof ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1;
   }
 
   @Override
   @SuppressWarnings("all")
+  @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
@@ -119,10 +134,18 @@ public class ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1 {
   }
 
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1() {
   }
 
+  /**
+   * Creates a new {@code ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1} instance.
+   *
+   * @param sprache Sprache.
+   * @param name Name der zugehörigen Behörde.
+   */
   @SuppressWarnings("all")
+  @lombok.Generated
   public ProcessOrganisationseinheitZugehoerigeBehoerdeI18nV1(final String sprache, final String name) {
     this.sprache = sprache;
     this.name = name;
