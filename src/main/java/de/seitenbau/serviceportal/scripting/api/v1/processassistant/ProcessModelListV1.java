@@ -7,9 +7,16 @@ import java.util.Collection;
 /**
  * Liste von Prozessmodellen mit dem Namen des Prozessmodels, Namen der Versionen
  * und IDs der vorhanden BPMN Dateien.
+ *
  * @see ProcessModelV1
  */
 public class ProcessModelListV1 extends ArrayList<ProcessModelV1> {
+  /**
+   * Erstellt ein {@link ProcessModelListV1} Objekt und befüllt dieses
+   * aus einer Liste von {@link ProcessModelV1} Objekten.
+   *
+   * @param toFillWith Die Liste von {@link ProcessModelV1} Objekten, die zum Befüllen verwendet wird.
+   */
   public ProcessModelListV1(Collection<ProcessModelV1> toFillWith) {
     super(toFillWith);
   }

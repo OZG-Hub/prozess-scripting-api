@@ -15,10 +15,26 @@ public abstract class FieldDisplayConditionV1 extends DisplayConditionV1 {
    */
   private FormFieldKeyV1 conditionFieldKey;
 
+  /**
+   * Ermittelt und gibt den {@link FormFieldKeyV1} des Feldes zurück,
+   * das die {@link FieldDisplayConditionV1} referenziert.
+   *
+   * @param instance Die Instanz einer Feldgruppe, für die der referenzierte FormFieldKey ermittelt wird.
+   *
+   * @return Der referenzierte {@link FormFieldKeyV1}.
+   */
   public final FormFieldKeyV1 getReferencedFieldKey(FieldGroupInstanceV1 instance) {
     return instance.resolveSameInstancePointers(conditionFieldKey);
   }
 
+  /**
+   * Ermittelt das von der {@link FieldDisplayConditionV1} referenzierte Feld und gibt dieses zurück.
+   *
+   * @param instance Die Instanz der Feldgruppe in der sich das Feld befindet.
+   * @param form Das Formular in dem sich das Feld befindet.
+   *
+   * @return Das ermittelte {@link FormFieldV1}.
+   */
   protected final FormFieldV1 getReferencedField(FieldGroupInstanceV1 instance, FormV1 form) {
     FormFieldKeyV1 resolvedKey = getReferencedFieldKey(instance);
     return form.getFieldInInstance(resolvedKey);

@@ -20,6 +20,11 @@ public class PossibleValueV1 {
    */
   private ModalHelpDialogV1 helpDialog;
 
+  /**
+   * Erstellt eine Kopie eines bereits bestehenden {@link PossibleValueV1} Objekts.
+   *
+   * @param toCopy Das Objekt das kopiert werden soll.
+   */
   public PossibleValueV1(PossibleValueV1 toCopy) {
     this.label = toCopy.getLabel();
     this.value = toCopy.getValue();

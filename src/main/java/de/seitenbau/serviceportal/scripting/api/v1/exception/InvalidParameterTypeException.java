@@ -6,6 +6,12 @@ package de.seitenbau.serviceportal.scripting.api.v1.exception;
  */
 public class InvalidParameterTypeException extends RuntimeException
 {
+  /**
+   * Erstellt eine neue {@link InvalidParameterTypeException}.
+   *
+   * @param message Die Nachricht der Exception, beschreibt was fehlgeschlagen ist.
+   * @param cause Die Ursache der Exception.
+   */
   public InvalidParameterTypeException(String message, Throwable cause)
   {
     super(message, cause);

@@ -339,10 +339,24 @@ public class FormFieldV1 implements Cloneable {
     validationMessages.add(new ValidationMessageV1(MessageTypeV1.INTERNAL, message));
   }
 
+  /**
+   * Ermittelt {@link FormFieldKeyV1}'s der Felder, die von den Display Conditions
+   * des Feldes innerhalb einer Feldgruppe referenziert werden, und gibt diese zurück.
+   *
+   * @param instance Die Feldgruppeninstanz für aus der die referenzierten {@link FormFieldKeyV1}'s ermittelt
+   * werden sollen.
+   *
+   * @return Ein {@link Set} von {@link FormFieldKeyV1}'s.
+   */
   protected Set<FormFieldKeyV1> fieldsReferencedInDisplayConditions(FieldGroupInstanceV1 instance) {
     return displayConditions.stream().flatMap(DisplayConditionV1::identifyFieldDisplayConditions).map(c -> c.getReferencedFieldKey(instance)).collect(Collectors.toSet());
   }
 
+  /**
+   * Gibt das label des Feldes zurück.
+   *
+   * @return Das label des Feldes.
+   */
   public String getLabel() {
     return label;
   }

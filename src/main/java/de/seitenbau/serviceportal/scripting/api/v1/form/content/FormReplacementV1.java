@@ -15,7 +15,10 @@ public class FormReplacementV1 {
     /**
      * Text ({@link java.lang.String}).
      */
-    STRING, @Deprecated
+    STRING, /**
+     * Text ({@link java.lang.String}) mit HTML Inhalten.
+     */
+    @Deprecated
     HTML_SANITIZED_STRING, /**
      * 64-Bit Ganzzahl ({@link java.lang.Integer}).
      */

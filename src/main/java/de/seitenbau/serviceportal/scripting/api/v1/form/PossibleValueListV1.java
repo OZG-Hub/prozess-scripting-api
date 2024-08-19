@@ -8,6 +8,12 @@ import java.util.Collection;
  * Liste von Auswahlwerten eines Feldes.
  */
 public class PossibleValueListV1 extends ArrayList<PossibleValueV1> {
+  /**
+   * Erstellt ein {@link PossibleValueListV1} Objekt und befüllt dieses
+   * aus einer Liste von {@link PossibleValueV1} Objekten.
+   *
+   * @param toFillWith Die Liste von {@link PossibleValueV1} Objekten, die zum Befüllen verwendet wird.
+   */
   public PossibleValueListV1(Collection<PossibleValueV1> toFillWith) {
     super(toFillWith);
   }

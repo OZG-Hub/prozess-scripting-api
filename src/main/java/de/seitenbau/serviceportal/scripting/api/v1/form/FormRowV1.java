@@ -20,6 +20,11 @@ public class FormRowV1 implements Cloneable {
   @NonNull
   private List<FormFieldV1> fields;
 
+  /**
+   * Erstellt eine Kopie des aktuellen {@link FormRowV1} Objekts.
+   *
+   * @param toCopy Das zu klonende Objekte.
+   */
   protected FormRowV1(FormRowV1 toCopy) {
     copy(toCopy);
   }

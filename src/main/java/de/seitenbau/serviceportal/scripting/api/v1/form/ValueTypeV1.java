@@ -1,5 +1,7 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Date;
 
 /**
@@ -12,12 +14,35 @@ public enum ValueTypeV1
   /** Feldwert ist {@code null}. */
   NULL,
 
-  /** Feldwert ist ein String. */
+  /**
+   * Feldwert ist ein String.
+   */
   STRING,
 
-  /** Feldwert ist ein Datum. */
-  DATE;
+  /**
+   * Feldwert ist ein Datum vom Typ LocalDate.
+   * Nur verfügbar für Formularen in Engine-Version 2.
+   */
+  LOCAL_DATE,
 
+  /**
+   * Feldwert ist ein Datum.
+   */
+  DATE,
+
+  /**
+   * Feldwert ist eine Uhrzeit.
+   * Nur verfügbar für Formulare in Engine-Version 2.
+   */
+  TIME;
+
+  /**
+   * Ermittelt den Typen eines Wertes.
+   *
+   * @param value Der Wert, für den der Typ ermittelt werden soll.
+   *
+   * @return Der ermittelte Typ des Wertes.
+   */
   public static ValueTypeV1 getTypeOfValue(Object value)
   {
     if (value == null)
@@ -27,6 +52,14 @@ public enum ValueTypeV1
     if (String.class.equals(value.getClass()))
     {
       return STRING;
+    }
+    if (LocalDate.class.equals(value.getClass()))
+    {
+      return LOCAL_DATE;
+    }
+    if (LocalTime.class.equals(value.getClass()))
+    {
+      return TIME;
     }
     if (Date.class.equals(value.getClass()))
     {

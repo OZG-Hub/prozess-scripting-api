@@ -67,6 +67,12 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
    */
   private String truststorePassword;
 
+  /**
+   * Erstellt ein neues {@link ExternalDataSourcePropertiesV1} Objekt.
+   *
+   * @param url Die URL an die Aufrufe gesendet werden.
+   * @param scope Definiert auf welche Art und Weise Felder mitgeschickt werden.
+   */
   public ExternalDataSourcePropertiesV1(@NonNull String url, @NonNull AjaxRequestIncludedFieldsScopeV1 scope) {
     if (url == null) {
       throw new NullPointerException("url is marked non-null but is null");
@@ -78,6 +84,12 @@ public class ExternalDataSourcePropertiesV1 implements Cloneable {
     this.scope = scope;
   }
 
+  /**
+   * Erstellt eine neues {@link ExternalDataSourcePropertiesV1} Objekt,
+   * das eine Kopie des übergebenen Objektes darstellt.
+   *
+   * @param toCopy Das Objekt, für welches eine Kopie erstellt werden soll.
+   */
   public ExternalDataSourcePropertiesV1(ExternalDataSourcePropertiesV1 toCopy) {
     copy(toCopy);
   }

@@ -48,6 +48,13 @@ public class FieldGroupInstanceV1 extends AbstractFieldGroupV1 {
     return getDisplayConditions().isEmpty() || getDisplayConditions().stream().anyMatch(c -> c.isShown(this, form));
   }
 
+  /**
+   * Ermittelt die {@link FormFieldKeyV1}'s der Felder, die von den Display Conditions
+   *
+   * der Feldgruppe referenziert werden, und gibt diese zurück.
+   *
+   * @return Ein {@link Set} von {@link FormFieldKeyV1}'s.
+   */
   public Set<FormFieldKeyV1> fieldsReferencedInDisplayConditions() {
     return getDisplayConditions().stream().flatMap(DisplayConditionV1::identifyFieldDisplayConditions).map(c -> c.getReferencedFieldKey(this)).collect(Collectors.toSet());
   }

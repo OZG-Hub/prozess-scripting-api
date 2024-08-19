@@ -14,6 +14,12 @@ public abstract class FormFieldValueV1 {
    */
   private final ValueTypeV1 valueType;
 
+  /**
+   * Erstellt eines neues {@link FormFieldValueV1} Objekt,
+   * welches eine Kopie des übergebenen Objektes ist.
+   *
+   * @param value Das Objekt, von dem eine Kopie erstellt werden soll.
+   */
   protected FormFieldValueV1(Object value) {
     this.value = value;
     this.valueType = ValueTypeV1.getTypeOfValue(value);

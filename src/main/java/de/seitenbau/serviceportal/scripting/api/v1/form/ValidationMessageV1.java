@@ -14,6 +14,12 @@ public class ValidationMessageV1 {
    */
   private String messageText;
 
+  /**
+   * Erstellt eine neue {@link ValidationMessageV1}
+   * aus einem bereits bestehenden {@link ValidationMessageV1} Objekt.
+   *
+   * @param toCopy Das Objekt das geklont werden soll.
+   */
   public ValidationMessageV1(ValidationMessageV1 toCopy) {
     this.type = toCopy.getType();
     this.messageText = toCopy.getMessageText();

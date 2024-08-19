@@ -6,5 +6,10 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.auth;
  */
 public interface AuthenticationConfigV1 extends Cloneable
 {
+  /**
+   * Erstellt ein neues Objekt mit denselben Werten, des Objektes an dem diese Methode aufgerufen wurde.
+   *
+   * @return Ein Duplikat des Objekts an dem diese Methode aufgerufen wurde.
+   */
   AuthenticationConfigV1 clone();
 }

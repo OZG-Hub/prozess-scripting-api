@@ -6,6 +6,12 @@ package de.seitenbau.serviceportal.scripting.api.v1.exception;
  */
 public class JesajaException extends RuntimeException
 {
+  /**
+   * Erstellt eine neue {@link JesajaException}.
+   *
+   * @param message Die Nachricht der Exception, beschreibt was fehlgeschlagen ist.
+   * @param cause Die Ursache der Exception.
+   */
   public JesajaException(String message, Throwable cause)
   {
     super(message, cause);

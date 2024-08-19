@@ -22,6 +22,11 @@ public class ModalHelpDialogV1 {
    */
   private ModalDialogSizeV1 size;
 
+  /**
+   * Erstellt eine Kopie des aktuellen {@link ModalHelpDialogV1} Objekts.
+   *
+   * @param toCopy Eine Kopie des aktuellen Objekts.
+   */
   public ModalHelpDialogV1(ModalHelpDialogV1 toCopy) {
     this.url = toCopy.getUrl();
     this.caption = toCopy.getCaption();

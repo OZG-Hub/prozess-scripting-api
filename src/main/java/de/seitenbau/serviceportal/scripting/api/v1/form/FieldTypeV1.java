@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.BinaryContentV1;
+import de.seitenbau.serviceportal.scripting.api.v1.form.content.GDIKMapContentV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.GeoMapContentV1;
 
 /**
@@ -77,9 +78,12 @@ public enum FieldTypeV1 {
    */
   @Deprecated
   SUBMITTED_WITH_NPA_INFO(Boolean.class), /**
-   * Geo-Dateneingabe.
+   * Kartenanwendung GeoBaK.
    */
   GEO_MAP(GeoMapContentV1.class), /**
+   * Kartenanwendung GDIK.
+   */
+  GDIK_MAP(GDIKMapContentV1.class), /**
    * Videoanzeige.
    */
   VIDEO(String.class), /**
