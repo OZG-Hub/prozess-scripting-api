@@ -7,8 +7,6 @@ import de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalGDIKMap
 
 /**
  * Submitteter Feldwert eines GDIK Geokarten-Feldes ({@link FieldTypeV1#GDIK_MAP GDIK_MAP}).
- *
- * @see GDIKMapContentV1
  */
 public class BinaryGDIKMapContentV1 {
   /**

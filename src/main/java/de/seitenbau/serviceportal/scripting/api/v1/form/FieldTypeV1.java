@@ -7,8 +7,8 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.BinaryContentV1;
-import de.seitenbau.serviceportal.scripting.api.v1.form.content.GDIKMapContentV1;
-import de.seitenbau.serviceportal.scripting.api.v1.form.content.GeoMapContentV1;
+import de.seitenbau.serviceportal.scripting.api.v1.form.content.BinaryGDIKMapContentV1;
+import de.seitenbau.serviceportal.scripting.api.v1.form.content.BinaryGeoMapContentV1;
 
 /**
  * Enum der Feldtypen.
@@ -80,10 +80,10 @@ public enum FieldTypeV1 {
   SUBMITTED_WITH_NPA_INFO(Boolean.class), /**
    * Kartenanwendung GeoBaK.
    */
-  GEO_MAP(GeoMapContentV1.class), /**
+  GEO_MAP(BinaryGeoMapContentV1.class), /**
    * Kartenanwendung GDIK.
    */
-  GDIK_MAP(GDIKMapContentV1.class), /**
+  GDIK_MAP(BinaryGDIKMapContentV1.class), /**
    * Videoanzeige.
    */
   VIDEO(String.class), /**

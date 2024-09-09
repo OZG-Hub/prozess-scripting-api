@@ -5,8 +5,6 @@ import de.seitenbau.serviceportal.scripting.api.v1.form.FieldTypeV1;
 
 /**
  * Submitteter Feldwert eines Geokarten-Feldes ({@link FieldTypeV1#GEO_MAP GEO_MAP}).
- *
- * @see GeoMapContentV1
  */
 public class BinaryGeoMapContentV1 {
   /**

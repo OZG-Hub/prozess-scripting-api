@@ -120,4 +120,58 @@ public interface ParameterApiV1
    * @throws RuntimeException Falls beim Abrufen des Parameters ein Fehler aufgetreten ist
    */
   String get(String oeId, String leistungId, String name);
+
+  /**
+   * Gibt den Wert eines Prozessparameters vom Typ {@code String} zurück.
+   * Der Parameter wird anhand der gegebenen Leistung und Regionen-Informationen über die Fit-Connect
+   * Routing-API abgerufen. Es muss eine Leistung und genau eine Regionen-Information gesetzt sein.
+   * <p>
+   * Diese Methode wird nur auf dem OZG-Hub unterstützt.
+   *
+   * @param leistungId ID der Leistung, nicht {@code null}
+   * @param ags AGS
+   * @param ars ARS
+   * @param fitConnectAreaId Area-ID der Fit-Connect Routing-API
+   * @param name Name des Prozessparameters, nicht {@code null}
+   *
+   * @return Wert des Prozessparameters, oder {@code null} falls nicht vorhanden
+   * @throws IllegalStateException Falls die Methode auf anderen Plattform als dem OZG-Hub verwendet wird
+   * @throws NullPointerException Falls einer der Parameter der Methode gleich {@code null} ist
+   * @throws IllegalArgumentException Falls einer der Parameter der Methode der leere String ist oder keine
+   * oder mehr als eine Regioneninformation gesetzt ist
+   * @throws InvalidParameterTypeException Falls der tatsächliche Typ des Parameters nicht {@code String} ist
+   * @throws RuntimeException Falls beim Abrufen des Parameters ein Fehler aufgetreten ist
+   * @since Release 1.182
+   */
+  default String get(String leistungId, String ags, String ars, String fitConnectAreaId, String name)
+  {
+    return get(leistungId, ags, ars, fitConnectAreaId, name, String.class);
+  }
+
+  /**
+   * Gibt den Wert eines Prozessparameters vom gegebenen Typ zurück.
+   * Der Parameter wird anhand der gegebenen Leistung und Regionen-Informationen über die Fit-Connect
+   * Routing-API abgerufen. Es muss eine Leistung und genau eine Regionen-Information gesetzt sein.
+   * <p>
+   * Diese Methode wird nur auf dem OZG-Hub unterstützt.
+   *
+   * @param leistungId ID der Leistung, nicht {@code null}
+   * @param ags AGS
+   * @param ars ARS
+   * @param fitConnectAreaId Area-ID der Fit-Connect Routing-API
+   * @param name Name des Prozessparameters, nicht {@code null}
+   * @param clazz Typ des Prozessparameters, nicht {@code null}
+   * @param <T> Typ des Prozessparameters
+   *
+   * @return Wert des Prozessparameters, oder {@code null} falls nicht vorhanden
+   * @throws IllegalStateException Falls die Methode auf anderen Plattform als dem OZG-Hub verwendet wird
+   * @throws NullPointerException Falls einer der Parameter der Methode gleich {@code null} ist
+   * @throws IllegalArgumentException Falls einer der Parameter der Methode der leere String ist oder keine
+   * oder mehr als eine Regioneninformation gesetzt ist
+   * @throws InvalidParameterTypeException Falls der tatsächliche Typ des Parameters nicht zum übergebenen
+   * Typ des Parameters passt
+   * @throws RuntimeException Falls beim Abrufen des Parameters ein Fehler aufgetreten ist
+   * @since Release 1.182
+   */
+  <T> T get(String leistungId, String ags, String ars, String fitConnectAreaId, String name, Class<T> clazz);
 }
