@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.seitenbau.serviceportal</groupId>
   <artifactId>prozess-scripting-api</artifactId>
-  <version>1.183.5</version>
+  <version>1.184.4</version>
   <packaging>jar</packaging>
 
   <name>prozess-scripting-api</name>
@@ -55,8 +55,8 @@
     <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
     <jakarta.validation-api.version>2.0.2</jakarta.validation-api.version>
     <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-    <maven-javadoc-plugin.version>3.8.0</maven-javadoc-plugin.version>
-    <maven-gpg-plugin.version>3.2.5</maven-gpg-plugin.version>
+    <maven-javadoc-plugin.version>3.10.1</maven-javadoc-plugin.version>
+    <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
     <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
   </properties>
 

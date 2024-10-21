@@ -1,6 +1,10 @@
 package de.seitenbau.serviceportal.scripting.api.v1;
 
+import java.util.Collection;
+import java.util.Map;
+
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormV1;
+import de.seitenbau.serviceportal.scripting.api.v1.form.content.FormReplacementValuesV1;
 import de.seitenbau.serviceportal.scripting.api.v1.start.StartParameterV1;
 
 /**
@@ -50,6 +54,18 @@ public interface ScriptingApiV1
   }
 
   /**
+   * Gibt alle Prozessinstanzvariablen des Prozesses zurück.
+   * <br/>
+   * Interne Klassen (Klassen aus formular-api, prozess-api und api-common) werden in die entsprechenden
+   * Scripting-API-Objekte umgewandelt. Für Standard-Datentypen ist der Typ der Prozessinstanzvariable ggf.
+   * nicht mehr exakt der Typ, der als Wert geschrieben wurde. Mehr Informationen zur Typ-Umwandlung können in
+   * der JavaDoc der Methode {@link #setVariable(String, Object) setVariable} gefunden werden.
+   *
+   * @return Alle Prozessinstanzvariablen des Prozesses.
+   */
+  Map<String, Object> getVariables();
+
+  /**
    * Schreibt den gegebenen Wert in eine Prozessinstanzvariable des Prozesses.
    * <p>
    * <b>Hinweis zu unterstützten Typen:</b>
@@ -96,6 +112,13 @@ public interface ScriptingApiV1
   void removeVariable(String name);
 
   /**
+   * Entfernt alle Prozessinstanzvariablen die den übergebenen Namen entsprechen.
+   *
+   * @param names Namen der Prozessinstanzvariablen die gelöscht werden sollen, nicht {@code null}
+   */
+  void removeVariables(Collection<String> names);
+
+  /**
    * Gibt die Formulardefinition des Formulars mit der übergebenen ID zurück.
    * Das Formular muss in der Sprache deutsch deployt sein.
    *
@@ -105,6 +128,18 @@ public interface ScriptingApiV1
    * oder der leere String ist
    */
   FormV1 getForm(String id);
+
+  /**
+   * Gibt die Formulardefinition des Formulars mit der übergebenen ID und ersetzten Platzhaltern zurück.
+   * Das Formular muss in der Sprache deutsch deployt sein.
+   *
+   * @param formId Die ID des Formulars, nicht {@code null}
+   * @param replacements Platzhalter die im Formular zu ersetzen sind.
+   *
+   * @return Das Formular, oder {@code null} falls nicht vorhanden oder falls {@code id} gleich {@code null}
+   * oder der leere String ist
+   */
+  FormV1 getForm(String formId, FormReplacementValuesV1 replacements);
 
   /**
    * Gibt den beim Start eines Prozesses / Erzeugen einer Prozessinstanz zur Verfügung gestellt StartParameter
