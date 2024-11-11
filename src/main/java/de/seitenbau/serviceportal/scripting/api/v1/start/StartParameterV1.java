@@ -59,6 +59,11 @@ public class StartParameterV1 {
    * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
    */
   private Map<String, Object> parameters;
+  /**
+   * {@code true}, wenn die Prozessinstanz im Rahmen eines Test-Starts erzeugt wurde. {@code false}, wenn die
+   * Prozessinstanz regulär gestartet wurde.
+   */
+  private boolean testStart;
 
 
   @SuppressWarnings("all")
@@ -91,6 +96,9 @@ public class StartParameterV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     private Map<String, Object> parameters;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private boolean testStart;
 
     @SuppressWarnings("all")
     @lombok.Generated
@@ -206,17 +214,29 @@ public class StartParameterV1 {
       return this;
     }
 
+    /**
+     * {@code true}, wenn die Prozessinstanz im Rahmen eines Test-Starts erzeugt wurde. {@code false}, wenn die
+     * Prozessinstanz regulär gestartet wurde.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public StartParameterV1.StartParameterV1Builder testStart(final boolean testStart) {
+      this.testStart = testStart;
+      return this;
+    }
+
     @SuppressWarnings("all")
     @lombok.Generated
     public StartParameterV1 build() {
-      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.ags, this.fitConnectAreaId, this.p, this.parameters);
+      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.ags, this.fitConnectAreaId, this.p, this.parameters, this.testStart);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", p=" + this.p + ", parameters=" + this.parameters + ")";
+      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", p=" + this.p + ", parameters=" + this.parameters + ", testStart=" + this.testStart + ")";
     }
   }
 
@@ -317,11 +337,21 @@ public class StartParameterV1 {
     return this.parameters;
   }
 
+  /**
+   * {@code true}, wenn die Prozessinstanz im Rahmen eines Test-Starts erzeugt wurde. {@code false}, wenn die
+   * Prozessinstanz regulär gestartet wurde.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public boolean isTestStart() {
+    return this.testStart;
+  }
+
   @Override
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ")";
+    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ", testStart=" + this.isTestStart() + ")";
   }
 
   @Override
@@ -332,6 +362,7 @@ public class StartParameterV1 {
     if (!(o instanceof StartParameterV1)) return false;
     final StartParameterV1 other = (StartParameterV1) o;
     if (!other.canEqual((Object) this)) return false;
+    if (this.isTestStart() != other.isTestStart()) return false;
     final Object this$startTime = this.getStartTime();
     final Object other$startTime = other.getStartTime();
     if (this$startTime == null ? other$startTime != null : !this$startTime.equals(other$startTime)) return false;
@@ -374,6 +405,7 @@ public class StartParameterV1 {
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
+    result = result * PRIME + (this.isTestStart() ? 79 : 97);
     final Object $startTime = this.getStartTime();
     result = result * PRIME + ($startTime == null ? 43 : $startTime.hashCode());
     final Object $startedByUser = this.getStartedByUser();
@@ -422,10 +454,12 @@ public class StartParameterV1 {
    * Mögliche Quellen sind Jesaja und Fit-Connect.
    * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
    * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
+   * @param testStart {@code true}, wenn die Prozessinstanz im Rahmen eines Test-Starts erzeugt wurde. {@code false}, wenn die
+   * Prozessinstanz regulär gestartet wurde.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final String ags, final String fitConnectAreaId, final String p, final Map<String, Object> parameters) {
+  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final String ags, final String fitConnectAreaId, final String p, final Map<String, Object> parameters, final boolean testStart) {
     this.startTime = startTime;
     this.startedByUser = startedByUser;
     this.processName = processName;
@@ -435,5 +469,6 @@ public class StartParameterV1 {
     this.fitConnectAreaId = fitConnectAreaId;
     this.p = p;
     this.parameters = parameters;
+    this.testStart = testStart;
   }
 }
