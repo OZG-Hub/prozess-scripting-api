@@ -64,6 +64,10 @@ public class StartParameterV1 {
    * Prozessinstanz regulär gestartet wurde.
    */
   private boolean testStart;
+  /**
+   * Daten, die aus einem Vorschaltprozess via StartRootProcessTask übergeben wurden.
+   */
+  private Object startData;
 
 
   @SuppressWarnings("all")
@@ -99,6 +103,9 @@ public class StartParameterV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     private boolean testStart;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private Object startData;
 
     @SuppressWarnings("all")
     @lombok.Generated
@@ -226,17 +233,28 @@ public class StartParameterV1 {
       return this;
     }
 
+    /**
+     * Daten, die aus einem Vorschaltprozess via StartRootProcessTask übergeben wurden.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public StartParameterV1.StartParameterV1Builder startData(final Object startData) {
+      this.startData = startData;
+      return this;
+    }
+
     @SuppressWarnings("all")
     @lombok.Generated
     public StartParameterV1 build() {
-      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.ags, this.fitConnectAreaId, this.p, this.parameters, this.testStart);
+      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.ags, this.fitConnectAreaId, this.p, this.parameters, this.testStart, this.startData);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", p=" + this.p + ", parameters=" + this.parameters + ", testStart=" + this.testStart + ")";
+      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", p=" + this.p + ", parameters=" + this.parameters + ", testStart=" + this.testStart + ", startData=" + this.startData + ")";
     }
   }
 
@@ -347,11 +365,20 @@ public class StartParameterV1 {
     return this.testStart;
   }
 
+  /**
+   * Daten, die aus einem Vorschaltprozess via StartRootProcessTask übergeben wurden.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public Object getStartData() {
+    return this.startData;
+  }
+
   @Override
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ", testStart=" + this.isTestStart() + ")";
+    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ", testStart=" + this.isTestStart() + ", startData=" + this.getStartData() + ")";
   }
 
   @Override
@@ -390,6 +417,9 @@ public class StartParameterV1 {
     final Object this$parameters = this.getParameters();
     final Object other$parameters = other.getParameters();
     if (this$parameters == null ? other$parameters != null : !this$parameters.equals(other$parameters)) return false;
+    final Object this$startData = this.getStartData();
+    final Object other$startData = other.getStartData();
+    if (this$startData == null ? other$startData != null : !this$startData.equals(other$startData)) return false;
     return true;
   }
 
@@ -424,6 +454,8 @@ public class StartParameterV1 {
     result = result * PRIME + ($p == null ? 43 : $p.hashCode());
     final Object $parameters = this.getParameters();
     result = result * PRIME + ($parameters == null ? 43 : $parameters.hashCode());
+    final Object $startData = this.getStartData();
+    result = result * PRIME + ($startData == null ? 43 : $startData.hashCode());
     return result;
   }
 
@@ -456,10 +488,11 @@ public class StartParameterV1 {
    * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
    * @param testStart {@code true}, wenn die Prozessinstanz im Rahmen eines Test-Starts erzeugt wurde. {@code false}, wenn die
    * Prozessinstanz regulär gestartet wurde.
+   * @param startData Daten, die aus einem Vorschaltprozess via StartRootProcessTask übergeben wurden.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final String ags, final String fitConnectAreaId, final String p, final Map<String, Object> parameters, final boolean testStart) {
+  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final String ags, final String fitConnectAreaId, final String p, final Map<String, Object> parameters, final boolean testStart, final Object startData) {
     this.startTime = startTime;
     this.startedByUser = startedByUser;
     this.processName = processName;
@@ -470,5 +503,6 @@ public class StartParameterV1 {
     this.p = p;
     this.parameters = parameters;
     this.testStart = testStart;
+    this.startData = startData;
   }
 }

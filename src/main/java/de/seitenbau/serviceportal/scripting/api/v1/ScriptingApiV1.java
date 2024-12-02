@@ -209,4 +209,17 @@ public interface ScriptingApiV1
    * @since Release 1.174
    */
   DataStorageApiV1 getDataStorage();
+
+  /**
+   * Wirft einen {@code org.activiti.engine.delegate.BpmnError}.
+   * Dieser kann genutzt werden, um eine Fehlerbehandlung im Prozessmodell umzusetzen
+   *
+   * @param errorCode ErrorCode des BpmnErrors, nie {@code null}
+   * @param message Fehlermeldung
+   *
+   * @throws NullPointerException Falls {@code errorCode} gleich {@code null} ist
+   * @throws IllegalArgumentException Falls {@code errorCode} leer ist
+   * @since Release 1.186
+   */
+  void throwBpmnError(String errorCode, String message);
 }
