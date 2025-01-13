@@ -10,6 +10,13 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    */
   private final String provider = PaymentProviderV1.EPAY21.toString();
   /**
+   * Optionale URL des implementierten Endpunkts. Ist dieses Attribut nicht gesetzt, wird die von der
+   * Plattform hinterlegte URL verwendet.
+   *
+   * @since Release 187
+   */
+  private String serviceUrl;
+  /**
    * Mandant-Identifier.
    */
   private String mandant;
@@ -36,6 +43,9 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
   public static class Epay21PaymentConfigV1Builder {
     @SuppressWarnings("all")
     @lombok.Generated
+    private String serviceUrl;
+    @SuppressWarnings("all")
+    @lombok.Generated
     private String mandant;
     @SuppressWarnings("all")
     @lombok.Generated
@@ -53,6 +63,20 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     Epay21PaymentConfigV1Builder() {
+    }
+
+    /**
+     * Optionale URL des implementierten Endpunkts. Ist dieses Attribut nicht gesetzt, wird die von der
+     * Plattform hinterlegte URL verwendet.
+     *
+     * @since Release 187
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public Epay21PaymentConfigV1.Epay21PaymentConfigV1Builder serviceUrl(final String serviceUrl) {
+      this.serviceUrl = serviceUrl;
+      return this;
     }
 
     /**
@@ -113,14 +137,14 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     public Epay21PaymentConfigV1 build() {
-      return new Epay21PaymentConfigV1(this.mandant, this.mandantDesc, this.app, this.user, this.password);
+      return new Epay21PaymentConfigV1(this.serviceUrl, this.mandant, this.mandantDesc, this.app, this.user, this.password);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "Epay21PaymentConfigV1.Epay21PaymentConfigV1Builder(mandant=" + this.mandant + ", mandantDesc=" + this.mandantDesc + ", app=" + this.app + ", user=" + this.user + ", password=" + this.password + ")";
+      return "Epay21PaymentConfigV1.Epay21PaymentConfigV1Builder(serviceUrl=" + this.serviceUrl + ", mandant=" + this.mandant + ", mandantDesc=" + this.mandantDesc + ", app=" + this.app + ", user=" + this.user + ", password=" + this.password + ")";
     }
   }
 
@@ -137,6 +161,18 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
   @lombok.Generated
   public String getProvider() {
     return this.provider;
+  }
+
+  /**
+   * Optionale URL des implementierten Endpunkts. Ist dieses Attribut nicht gesetzt, wird die von der
+   * Plattform hinterlegte URL verwendet.
+   *
+   * @since Release 187
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public String getServiceUrl() {
+    return this.serviceUrl;
   }
 
   /**
@@ -182,6 +218,18 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
   @lombok.Generated
   public String getPassword() {
     return this.password;
+  }
+
+  /**
+   * Optionale URL des implementierten Endpunkts. Ist dieses Attribut nicht gesetzt, wird die von der
+   * Plattform hinterlegte URL verwendet.
+   *
+   * @since Release 187
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setServiceUrl(final String serviceUrl) {
+    this.serviceUrl = serviceUrl;
   }
 
   /**
@@ -240,6 +288,9 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
     final Object this$provider = this.getProvider();
     final Object other$provider = other.getProvider();
     if (this$provider == null ? other$provider != null : !this$provider.equals(other$provider)) return false;
+    final Object this$serviceUrl = this.getServiceUrl();
+    final Object other$serviceUrl = other.getServiceUrl();
+    if (this$serviceUrl == null ? other$serviceUrl != null : !this$serviceUrl.equals(other$serviceUrl)) return false;
     final Object this$mandant = this.getMandant();
     final Object other$mandant = other.getMandant();
     if (this$mandant == null ? other$mandant != null : !this$mandant.equals(other$mandant)) return false;
@@ -272,6 +323,8 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
     int result = 1;
     final Object $provider = this.getProvider();
     result = result * PRIME + ($provider == null ? 43 : $provider.hashCode());
+    final Object $serviceUrl = this.getServiceUrl();
+    result = result * PRIME + ($serviceUrl == null ? 43 : $serviceUrl.hashCode());
     final Object $mandant = this.getMandant();
     result = result * PRIME + ($mandant == null ? 43 : $mandant.hashCode());
     final Object $mandantDesc = this.getMandantDesc();
@@ -289,7 +342,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "Epay21PaymentConfigV1(provider=" + this.getProvider() + ", mandant=" + this.getMandant() + ", mandantDesc=" + this.getMandantDesc() + ", app=" + this.getApp() + ", user=" + this.getUser() + ", password=" + this.getPassword() + ")";
+    return "Epay21PaymentConfigV1(provider=" + this.getProvider() + ", serviceUrl=" + this.getServiceUrl() + ", mandant=" + this.getMandant() + ", mandantDesc=" + this.getMandantDesc() + ", app=" + this.getApp() + ", user=" + this.getUser() + ", password=" + this.getPassword() + ")";
   }
 
   @SuppressWarnings("all")
@@ -300,6 +353,10 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
   /**
    * Creates a new {@code Epay21PaymentConfigV1} instance.
    *
+   * @param serviceUrl Optionale URL des implementierten Endpunkts. Ist dieses Attribut nicht gesetzt, wird die von der
+   * Plattform hinterlegte URL verwendet.
+   *
+   * @since Release 187
    * @param mandant Mandant-Identifier.
    * @param mandantDesc Mandant-Beschreibung; der Text dient der Anzeige auf der PayPage.
    * @param app Fachverfahrens-Identifier.
@@ -308,7 +365,8 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public Epay21PaymentConfigV1(final String mandant, final String mandantDesc, final String app, final String user, final String password) {
+  public Epay21PaymentConfigV1(final String serviceUrl, final String mandant, final String mandantDesc, final String app, final String user, final String password) {
+    this.serviceUrl = serviceUrl;
     this.mandant = mandant;
     this.mandantDesc = mandantDesc;
     this.app = app;

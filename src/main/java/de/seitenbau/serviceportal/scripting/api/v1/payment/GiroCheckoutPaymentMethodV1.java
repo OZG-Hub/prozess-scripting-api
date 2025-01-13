@@ -10,12 +10,12 @@ public enum GiroCheckoutPaymentMethodV1
 
   /**
    * paydirekt. Wurde zum 01.01.2024 mit giropay zusammengelegt und wird nicht mehr unterstützt.
-   * Stattdessen {@link #GIROPAY} nutzen.
    */
   @Deprecated(since = "1.171")
   PAYDIREKT,
 
-  /** giropay. */
+  /** giropay. Wurde zum 01.01.2025 eingestellt und wird nicht mehr unterstützt */
+  @Deprecated(since = "1.187")
   GIROPAY,
 
   /** Kreditkarte. */
