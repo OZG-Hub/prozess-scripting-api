@@ -12,7 +12,7 @@ import lombok.NonNull;
 /**
  * Klasse zur Konfiguration von Ajax-Aufrufen.
  */
-public class ExternalDataSourcePropertiesV1 implements Cloneable {
+public class ExternalDataSourcePropertiesV1 implements DynamicDataSourcePropertiesV1, Cloneable {
   /**
    * URL, an die der Aufruf gesendet werden soll.
    * Für DOWNLOAD- und PDF-Felder kann ein ServiceAlias verwendet werden.

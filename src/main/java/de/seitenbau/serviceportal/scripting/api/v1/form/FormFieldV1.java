@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import de.seitenbau.serviceportal.scripting.api.v1.form.ajax.ExternalDataSourcePropertiesV1;
+import de.seitenbau.serviceportal.scripting.api.v1.form.ajax.DynamicDataSourcePropertiesV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.condition.DisplayConditionV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalFieldConfigV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.validator.ValidationRuleV1;
@@ -150,14 +150,14 @@ public class FormFieldV1 implements Cloneable {
    * Wenn {@code null}, werden die am Feld angegebenen Default Werte verwendet.
    * Für {@link FieldTypeV1#DOWNLOAD Download-} und {@link FieldTypeV1#PDF PDF-}Felder ein Pflichtattribut.
    */
-  private ExternalDataSourcePropertiesV1 externalDataSourceProperties;
+  private DynamicDataSourcePropertiesV1 externalDataSourceProperties;
   /**
    * Gibt eine externe Quelle an, aus der der Wert des Formularfeldes in Abhängigkeiten von anderen Werten im
    * Formular berechnet wird. Wenn der Benutzer einen abhängigen Wert ändert, wird der Feldwert sofort ohne
    * Abschicken des Formulars neu berechnet (per Ajax-Call). Wenn das Feld disabled ist, wird es immer
    * aktualisiert, wenn nicht, wird der Wert nur dann aktualisiert, wenn der Wert vorher leer war.
    */
-  private ExternalDataSourcePropertiesV1 externalValue;
+  private DynamicDataSourcePropertiesV1 externalValue;
   /**
    * {@code true}, wenn das Feld ein Select-Feld ist und die Einträge auf der Oberfläche durch Texteingabe
    * filterbar sind.
@@ -252,8 +252,8 @@ public class FormFieldV1 implements Cloneable {
     source = copyWithNullAsDefault(toCopy.getSource(), DataResourcePointerV1::clone);
     target = copyWithNullAsDefault(toCopy.getTarget(), DataResourcePointerV1::clone);
     possibleValuesSource = copyWithNullAsDefault(toCopy.getPossibleValuesSource(), DataResourcePointerV1::clone);
-    externalDataSourceProperties = copyWithNullAsDefault(toCopy.getExternalDataSourceProperties(), ExternalDataSourcePropertiesV1::clone);
-    externalValue = copyWithNullAsDefault(toCopy.getExternalValue(), ExternalDataSourcePropertiesV1::clone);
+    externalDataSourceProperties = copyWithNullAsDefault(toCopy.getExternalDataSourceProperties(), DynamicDataSourcePropertiesV1::clone);
+    externalValue = copyWithNullAsDefault(toCopy.getExternalValue(), DynamicDataSourcePropertiesV1::clone);
     additionalConfig = copyWithNullAsDefault(toCopy.getAdditionalConfig(), AdditionalFieldConfigV1::clone);
     initializeWithAdressField = copyWithNullAsDefault(toCopy.getInitializeWithAdressField(), c -> new FormFieldKeyV1(c.toString()));
     controlParameters = copyWithNullAsDefault(toCopy.getControlParameters(), HashMap::new);
@@ -475,10 +475,10 @@ public class FormFieldV1 implements Cloneable {
     private DataResourcePointerV1 possibleValuesSource;
     @SuppressWarnings("all")
     @lombok.Generated
-    private ExternalDataSourcePropertiesV1 externalDataSourceProperties;
+    private DynamicDataSourcePropertiesV1 externalDataSourceProperties;
     @SuppressWarnings("all")
     @lombok.Generated
-    private ExternalDataSourcePropertiesV1 externalValue;
+    private DynamicDataSourcePropertiesV1 externalValue;
     @SuppressWarnings("all")
     @lombok.Generated
     private Boolean filterable;
@@ -815,7 +815,7 @@ public class FormFieldV1 implements Cloneable {
      */
     @SuppressWarnings("all")
     @lombok.Generated
-    public FormFieldV1.FormFieldV1Builder externalDataSourceProperties(final ExternalDataSourcePropertiesV1 externalDataSourceProperties) {
+    public FormFieldV1.FormFieldV1Builder externalDataSourceProperties(final DynamicDataSourcePropertiesV1 externalDataSourceProperties) {
       this.externalDataSourceProperties = externalDataSourceProperties;
       return this;
     }
@@ -829,7 +829,7 @@ public class FormFieldV1 implements Cloneable {
      */
     @SuppressWarnings("all")
     @lombok.Generated
-    public FormFieldV1.FormFieldV1Builder externalValue(final ExternalDataSourcePropertiesV1 externalValue) {
+    public FormFieldV1.FormFieldV1Builder externalValue(final DynamicDataSourcePropertiesV1 externalValue) {
       this.externalValue = externalValue;
       return this;
     }
@@ -1176,7 +1176,7 @@ public class FormFieldV1 implements Cloneable {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public ExternalDataSourcePropertiesV1 getExternalDataSourceProperties() {
+  public DynamicDataSourcePropertiesV1 getExternalDataSourceProperties() {
     return this.externalDataSourceProperties;
   }
 
@@ -1188,7 +1188,7 @@ public class FormFieldV1 implements Cloneable {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public ExternalDataSourcePropertiesV1 getExternalValue() {
+  public DynamicDataSourcePropertiesV1 getExternalValue() {
     return this.externalValue;
   }
 
@@ -1515,7 +1515,7 @@ public class FormFieldV1 implements Cloneable {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public void setExternalDataSourceProperties(final ExternalDataSourcePropertiesV1 externalDataSourceProperties) {
+  public void setExternalDataSourceProperties(final DynamicDataSourcePropertiesV1 externalDataSourceProperties) {
     this.externalDataSourceProperties = externalDataSourceProperties;
   }
 
@@ -1527,7 +1527,7 @@ public class FormFieldV1 implements Cloneable {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public void setExternalValue(final ExternalDataSourcePropertiesV1 externalValue) {
+  public void setExternalValue(final DynamicDataSourcePropertiesV1 externalValue) {
     this.externalValue = externalValue;
   }
 
@@ -1851,7 +1851,7 @@ public class FormFieldV1 implements Cloneable {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  private FormFieldV1(@NonNull final String id, final String fimId, final String label, @NonNull final FieldTypeV1 type, final Object value, final String placeholder, final Boolean disabled, final Boolean required, final Boolean pickerDisabled, final Boolean consent, final String requiredValidationFailedMessage, final String typeValidationFailedMessage, final String thousandsSeparatorValidationFailedMessage, final String digitsAfterDecimalPointValidationFailedMessage, final String helptext, final List<PossibleValueV1> possibleValues, @NonNull final List<DisplayConditionV1> displayConditions, final int width, final String layout, @NonNull final List<ValidationRuleV1> validationRules, @NonNull final Set<ValidationMessageV1> validationMessages, final DataResourcePointerV1 source, final DataResourcePointerV1 target, final DataResourcePointerV1 possibleValuesSource, final ExternalDataSourcePropertiesV1 externalDataSourceProperties, final ExternalDataSourcePropertiesV1 externalValue, final Boolean filterable, final Map<String, String> controlParameters, final FormFieldKeyV1 initializeWithAdressField, final AdditionalFieldConfigV1 additionalConfig, final ModalHelpDialogV1 helpDialog) {
+  private FormFieldV1(@NonNull final String id, final String fimId, final String label, @NonNull final FieldTypeV1 type, final Object value, final String placeholder, final Boolean disabled, final Boolean required, final Boolean pickerDisabled, final Boolean consent, final String requiredValidationFailedMessage, final String typeValidationFailedMessage, final String thousandsSeparatorValidationFailedMessage, final String digitsAfterDecimalPointValidationFailedMessage, final String helptext, final List<PossibleValueV1> possibleValues, @NonNull final List<DisplayConditionV1> displayConditions, final int width, final String layout, @NonNull final List<ValidationRuleV1> validationRules, @NonNull final Set<ValidationMessageV1> validationMessages, final DataResourcePointerV1 source, final DataResourcePointerV1 target, final DataResourcePointerV1 possibleValuesSource, final DynamicDataSourcePropertiesV1 externalDataSourceProperties, final DynamicDataSourcePropertiesV1 externalValue, final Boolean filterable, final Map<String, String> controlParameters, final FormFieldKeyV1 initializeWithAdressField, final AdditionalFieldConfigV1 additionalConfig, final ModalHelpDialogV1 helpDialog) {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");
     }
