@@ -21,7 +21,8 @@ public class ScriptSourcePropertiesV1 implements DynamicDataSourcePropertiesV1, 
   @NonNull
   private AjaxRequestIncludedFieldsScopeV1 scope;
   /**
-   * Liste mit IDs von explizit definierten Felder, falls Scope {@link FieldScopeV1#DEFINED DEFINED} ist.
+   * Liste mit IDs von explizit definierten Felder, falls Scope
+   * {@link AjaxRequestIncludedFieldsScopeV1#DEFINED DEFINED} ist.
    */
   private List<FormFieldKeyV1> fieldIds;
 
@@ -91,7 +92,8 @@ public class ScriptSourcePropertiesV1 implements DynamicDataSourcePropertiesV1, 
     }
 
     /**
-     * Liste mit IDs von explizit definierten Felder, falls Scope {@link FieldScopeV1#DEFINED DEFINED} ist.
+     * Liste mit IDs von explizit definierten Felder, falls Scope
+     * {@link AjaxRequestIncludedFieldsScopeV1#DEFINED DEFINED} ist.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -142,7 +144,8 @@ public class ScriptSourcePropertiesV1 implements DynamicDataSourcePropertiesV1, 
   }
 
   /**
-   * Liste mit IDs von explizit definierten Felder, falls Scope {@link FieldScopeV1#DEFINED DEFINED} ist.
+   * Liste mit IDs von explizit definierten Felder, falls Scope
+   * {@link AjaxRequestIncludedFieldsScopeV1#DEFINED DEFINED} ist.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -173,7 +176,8 @@ public class ScriptSourcePropertiesV1 implements DynamicDataSourcePropertiesV1, 
   }
 
   /**
-   * Liste mit IDs von explizit definierten Felder, falls Scope {@link FieldScopeV1#DEFINED DEFINED} ist.
+   * Liste mit IDs von explizit definierten Felder, falls Scope
+   * {@link AjaxRequestIncludedFieldsScopeV1#DEFINED DEFINED} ist.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -235,7 +239,8 @@ public class ScriptSourcePropertiesV1 implements DynamicDataSourcePropertiesV1, 
    * @param script Skript, das ausgeführt werden soll
    * @param scope Typ, der definiert, auf welche Art und Weise die Felder, deren Werte mitgeschickt werden,
    * bestimmt werden sollen.
-   * @param fieldIds Liste mit IDs von explizit definierten Felder, falls Scope {@link FieldScopeV1#DEFINED DEFINED} ist.
+   * @param fieldIds Liste mit IDs von explizit definierten Felder, falls Scope
+   * {@link AjaxRequestIncludedFieldsScopeV1#DEFINED DEFINED} ist.
    */
   @SuppressWarnings("all")
   @lombok.Generated
