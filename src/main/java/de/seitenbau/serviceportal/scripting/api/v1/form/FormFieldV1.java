@@ -194,6 +194,16 @@ public class FormFieldV1 implements Cloneable {
    * Informationen zum Hilfe-Dialog, wenn ein Hilfe-Button angezeigt werden soll.
    */
   private ModalHelpDialogV1 helpDialog;
+  /**
+   * Mit diesem Attribut lässt sich Einschränken in welchen Medien das Feld dargestellt werden soll.
+   * Darf nicht gleichzeitig mit einem der Attribute ['renderOnlyIn', 'printOnly']
+   * der Feldgruppe gesetzt sein.
+   * <br/>
+   * {@code PDF}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
+   * {@code FORM}, wenn die Feldgruppe nur in der Formularansicht dargestellt werden soll.
+   * {@code null}, keine Einschränkung bei der Darstellung.
+   */
+  private RenderMediumV1 renderOnlyIn;
 
   /**
    * Erzeugt eine neue Feld-Instanz.
@@ -258,6 +268,7 @@ public class FormFieldV1 implements Cloneable {
     initializeWithAdressField = copyWithNullAsDefault(toCopy.getInitializeWithAdressField(), c -> new FormFieldKeyV1(c.toString()));
     controlParameters = copyWithNullAsDefault(toCopy.getControlParameters(), HashMap::new);
     helpDialog = copyWithNullAsDefault(toCopy.getHelpDialog(), ModalHelpDialogV1::new);
+    renderOnlyIn = toCopy.getRenderOnlyIn();
   }
 
   private <T, R> R copyWithNullAsDefault(T source, Function<T, R> function) {
@@ -494,6 +505,9 @@ public class FormFieldV1 implements Cloneable {
     @SuppressWarnings("all")
     @lombok.Generated
     private ModalHelpDialogV1 helpDialog;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private RenderMediumV1 renderOnlyIn;
 
     @SuppressWarnings("all")
     @lombok.Generated
@@ -905,6 +919,23 @@ public class FormFieldV1 implements Cloneable {
       return this;
     }
 
+    /**
+     * Mit diesem Attribut lässt sich Einschränken in welchen Medien das Feld dargestellt werden soll.
+     * Darf nicht gleichzeitig mit einem der Attribute ['renderOnlyIn', 'printOnly']
+     * der Feldgruppe gesetzt sein.
+     * <br/>
+     * {@code PDF}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
+     * {@code FORM}, wenn die Feldgruppe nur in der Formularansicht dargestellt werden soll.
+     * {@code null}, keine Einschränkung bei der Darstellung.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public FormFieldV1.FormFieldV1Builder renderOnlyIn(final RenderMediumV1 renderOnlyIn) {
+      this.renderOnlyIn = renderOnlyIn;
+      return this;
+    }
+
     @SuppressWarnings("all")
     @lombok.Generated
     public FormFieldV1 build() {
@@ -916,14 +947,14 @@ public class FormFieldV1 implements Cloneable {
       if (!this.validationRules$set) validationRules$value = FormFieldV1.$default$validationRules();
       Set<ValidationMessageV1> validationMessages$value = this.validationMessages$value;
       if (!this.validationMessages$set) validationMessages$value = FormFieldV1.$default$validationMessages();
-      return new FormFieldV1(this.id, this.fimId, this.label, this.type, this.value, this.placeholder, this.disabled, this.required, this.pickerDisabled, this.consent, this.requiredValidationFailedMessage, this.typeValidationFailedMessage, this.thousandsSeparatorValidationFailedMessage, this.digitsAfterDecimalPointValidationFailedMessage, this.helptext, this.possibleValues, displayConditions$value, width$value, this.layout, validationRules$value, validationMessages$value, this.source, this.target, this.possibleValuesSource, this.externalDataSourceProperties, this.externalValue, this.filterable, this.controlParameters, this.initializeWithAdressField, this.additionalConfig, this.helpDialog);
+      return new FormFieldV1(this.id, this.fimId, this.label, this.type, this.value, this.placeholder, this.disabled, this.required, this.pickerDisabled, this.consent, this.requiredValidationFailedMessage, this.typeValidationFailedMessage, this.thousandsSeparatorValidationFailedMessage, this.digitsAfterDecimalPointValidationFailedMessage, this.helptext, this.possibleValues, displayConditions$value, width$value, this.layout, validationRules$value, validationMessages$value, this.source, this.target, this.possibleValuesSource, this.externalDataSourceProperties, this.externalValue, this.filterable, this.controlParameters, this.initializeWithAdressField, this.additionalConfig, this.helpDialog, this.renderOnlyIn);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "FormFieldV1.FormFieldV1Builder(id=" + this.id + ", fimId=" + this.fimId + ", label=" + this.label + ", type=" + this.type + ", value=" + this.value + ", placeholder=" + this.placeholder + ", disabled=" + this.disabled + ", required=" + this.required + ", pickerDisabled=" + this.pickerDisabled + ", consent=" + this.consent + ", requiredValidationFailedMessage=" + this.requiredValidationFailedMessage + ", typeValidationFailedMessage=" + this.typeValidationFailedMessage + ", thousandsSeparatorValidationFailedMessage=" + this.thousandsSeparatorValidationFailedMessage + ", digitsAfterDecimalPointValidationFailedMessage=" + this.digitsAfterDecimalPointValidationFailedMessage + ", helptext=" + this.helptext + ", possibleValues=" + this.possibleValues + ", displayConditions$value=" + this.displayConditions$value + ", width$value=" + this.width$value + ", layout=" + this.layout + ", validationRules$value=" + this.validationRules$value + ", validationMessages$value=" + this.validationMessages$value + ", source=" + this.source + ", target=" + this.target + ", possibleValuesSource=" + this.possibleValuesSource + ", externalDataSourceProperties=" + this.externalDataSourceProperties + ", externalValue=" + this.externalValue + ", filterable=" + this.filterable + ", controlParameters=" + this.controlParameters + ", initializeWithAdressField=" + this.initializeWithAdressField + ", additionalConfig=" + this.additionalConfig + ", helpDialog=" + this.helpDialog + ")";
+      return "FormFieldV1.FormFieldV1Builder(id=" + this.id + ", fimId=" + this.fimId + ", label=" + this.label + ", type=" + this.type + ", value=" + this.value + ", placeholder=" + this.placeholder + ", disabled=" + this.disabled + ", required=" + this.required + ", pickerDisabled=" + this.pickerDisabled + ", consent=" + this.consent + ", requiredValidationFailedMessage=" + this.requiredValidationFailedMessage + ", typeValidationFailedMessage=" + this.typeValidationFailedMessage + ", thousandsSeparatorValidationFailedMessage=" + this.thousandsSeparatorValidationFailedMessage + ", digitsAfterDecimalPointValidationFailedMessage=" + this.digitsAfterDecimalPointValidationFailedMessage + ", helptext=" + this.helptext + ", possibleValues=" + this.possibleValues + ", displayConditions$value=" + this.displayConditions$value + ", width$value=" + this.width$value + ", layout=" + this.layout + ", validationRules$value=" + this.validationRules$value + ", validationMessages$value=" + this.validationMessages$value + ", source=" + this.source + ", target=" + this.target + ", possibleValuesSource=" + this.possibleValuesSource + ", externalDataSourceProperties=" + this.externalDataSourceProperties + ", externalValue=" + this.externalValue + ", filterable=" + this.filterable + ", controlParameters=" + this.controlParameters + ", initializeWithAdressField=" + this.initializeWithAdressField + ", additionalConfig=" + this.additionalConfig + ", helpDialog=" + this.helpDialog + ", renderOnlyIn=" + this.renderOnlyIn + ")";
     }
   }
 
@@ -1251,6 +1282,21 @@ public class FormFieldV1 implements Cloneable {
   @lombok.Generated
   public ModalHelpDialogV1 getHelpDialog() {
     return this.helpDialog;
+  }
+
+  /**
+   * Mit diesem Attribut lässt sich Einschränken in welchen Medien das Feld dargestellt werden soll.
+   * Darf nicht gleichzeitig mit einem der Attribute ['renderOnlyIn', 'printOnly']
+   * der Feldgruppe gesetzt sein.
+   * <br/>
+   * {@code PDF}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
+   * {@code FORM}, wenn die Feldgruppe nur in der Formularansicht dargestellt werden soll.
+   * {@code null}, keine Einschränkung bei der Darstellung.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public RenderMediumV1 getRenderOnlyIn() {
+    return this.renderOnlyIn;
   }
 
   /**
@@ -1592,6 +1638,21 @@ public class FormFieldV1 implements Cloneable {
     this.helpDialog = helpDialog;
   }
 
+  /**
+   * Mit diesem Attribut lässt sich Einschränken in welchen Medien das Feld dargestellt werden soll.
+   * Darf nicht gleichzeitig mit einem der Attribute ['renderOnlyIn', 'printOnly']
+   * der Feldgruppe gesetzt sein.
+   * <br/>
+   * {@code PDF}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
+   * {@code FORM}, wenn die Feldgruppe nur in der Formularansicht dargestellt werden soll.
+   * {@code null}, keine Einschränkung bei der Darstellung.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setRenderOnlyIn(final RenderMediumV1 renderOnlyIn) {
+    this.renderOnlyIn = renderOnlyIn;
+  }
+
   @Override
   @SuppressWarnings("all")
   @lombok.Generated
@@ -1691,6 +1752,9 @@ public class FormFieldV1 implements Cloneable {
     final Object this$helpDialog = this.getHelpDialog();
     final Object other$helpDialog = other.getHelpDialog();
     if (this$helpDialog == null ? other$helpDialog != null : !this$helpDialog.equals(other$helpDialog)) return false;
+    final Object this$renderOnlyIn = this.getRenderOnlyIn();
+    final Object other$renderOnlyIn = other.getRenderOnlyIn();
+    if (this$renderOnlyIn == null ? other$renderOnlyIn != null : !this$renderOnlyIn.equals(other$renderOnlyIn)) return false;
     return true;
   }
 
@@ -1767,6 +1831,8 @@ public class FormFieldV1 implements Cloneable {
     result = result * PRIME + ($additionalConfig == null ? 43 : $additionalConfig.hashCode());
     final Object $helpDialog = this.getHelpDialog();
     result = result * PRIME + ($helpDialog == null ? 43 : $helpDialog.hashCode());
+    final Object $renderOnlyIn = this.getRenderOnlyIn();
+    result = result * PRIME + ($renderOnlyIn == null ? 43 : $renderOnlyIn.hashCode());
     return result;
   }
 
@@ -1774,7 +1840,7 @@ public class FormFieldV1 implements Cloneable {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "FormFieldV1(id=" + this.getId() + ", fimId=" + this.getFimId() + ", label=" + this.getLabel() + ", type=" + this.getType() + ", value=" + this.getValue() + ", placeholder=" + this.getPlaceholder() + ", disabled=" + this.getDisabled() + ", required=" + this.getRequired() + ", pickerDisabled=" + this.getPickerDisabled() + ", consent=" + this.getConsent() + ", requiredValidationFailedMessage=" + this.getRequiredValidationFailedMessage() + ", typeValidationFailedMessage=" + this.getTypeValidationFailedMessage() + ", thousandsSeparatorValidationFailedMessage=" + this.getThousandsSeparatorValidationFailedMessage() + ", digitsAfterDecimalPointValidationFailedMessage=" + this.getDigitsAfterDecimalPointValidationFailedMessage() + ", helptext=" + this.getHelptext() + ", possibleValues=" + this.getPossibleValues() + ", displayConditions=" + this.getDisplayConditions() + ", width=" + this.getWidth() + ", layout=" + this.getLayout() + ", validationRules=" + this.getValidationRules() + ", validationMessages=" + this.getValidationMessages() + ", source=" + this.getSource() + ", target=" + this.getTarget() + ", possibleValuesSource=" + this.getPossibleValuesSource() + ", externalDataSourceProperties=" + this.getExternalDataSourceProperties() + ", externalValue=" + this.getExternalValue() + ", filterable=" + this.getFilterable() + ", controlParameters=" + this.getControlParameters() + ", initializeWithAdressField=" + this.getInitializeWithAdressField() + ", additionalConfig=" + this.getAdditionalConfig() + ", helpDialog=" + this.getHelpDialog() + ")";
+    return "FormFieldV1(id=" + this.getId() + ", fimId=" + this.getFimId() + ", label=" + this.getLabel() + ", type=" + this.getType() + ", value=" + this.getValue() + ", placeholder=" + this.getPlaceholder() + ", disabled=" + this.getDisabled() + ", required=" + this.getRequired() + ", pickerDisabled=" + this.getPickerDisabled() + ", consent=" + this.getConsent() + ", requiredValidationFailedMessage=" + this.getRequiredValidationFailedMessage() + ", typeValidationFailedMessage=" + this.getTypeValidationFailedMessage() + ", thousandsSeparatorValidationFailedMessage=" + this.getThousandsSeparatorValidationFailedMessage() + ", digitsAfterDecimalPointValidationFailedMessage=" + this.getDigitsAfterDecimalPointValidationFailedMessage() + ", helptext=" + this.getHelptext() + ", possibleValues=" + this.getPossibleValues() + ", displayConditions=" + this.getDisplayConditions() + ", width=" + this.getWidth() + ", layout=" + this.getLayout() + ", validationRules=" + this.getValidationRules() + ", validationMessages=" + this.getValidationMessages() + ", source=" + this.getSource() + ", target=" + this.getTarget() + ", possibleValuesSource=" + this.getPossibleValuesSource() + ", externalDataSourceProperties=" + this.getExternalDataSourceProperties() + ", externalValue=" + this.getExternalValue() + ", filterable=" + this.getFilterable() + ", controlParameters=" + this.getControlParameters() + ", initializeWithAdressField=" + this.getInitializeWithAdressField() + ", additionalConfig=" + this.getAdditionalConfig() + ", helpDialog=" + this.getHelpDialog() + ", renderOnlyIn=" + this.getRenderOnlyIn() + ")";
   }
 
   /**
@@ -1848,10 +1914,17 @@ public class FormFieldV1 implements Cloneable {
    * Ab Formularversion 2 nicht mehr verwendbar.
    * @param additionalConfig Ergänzende Informationen für spezielle Feldtypen (sonst {@code null}).
    * @param helpDialog Informationen zum Hilfe-Dialog, wenn ein Hilfe-Button angezeigt werden soll.
+   * @param renderOnlyIn Mit diesem Attribut lässt sich Einschränken in welchen Medien das Feld dargestellt werden soll.
+   * Darf nicht gleichzeitig mit einem der Attribute ['renderOnlyIn', 'printOnly']
+   * der Feldgruppe gesetzt sein.
+   * <br/>
+   * {@code PDF}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
+   * {@code FORM}, wenn die Feldgruppe nur in der Formularansicht dargestellt werden soll.
+   * {@code null}, keine Einschränkung bei der Darstellung.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  private FormFieldV1(@NonNull final String id, final String fimId, final String label, @NonNull final FieldTypeV1 type, final Object value, final String placeholder, final Boolean disabled, final Boolean required, final Boolean pickerDisabled, final Boolean consent, final String requiredValidationFailedMessage, final String typeValidationFailedMessage, final String thousandsSeparatorValidationFailedMessage, final String digitsAfterDecimalPointValidationFailedMessage, final String helptext, final List<PossibleValueV1> possibleValues, @NonNull final List<DisplayConditionV1> displayConditions, final int width, final String layout, @NonNull final List<ValidationRuleV1> validationRules, @NonNull final Set<ValidationMessageV1> validationMessages, final DataResourcePointerV1 source, final DataResourcePointerV1 target, final DataResourcePointerV1 possibleValuesSource, final DynamicDataSourcePropertiesV1 externalDataSourceProperties, final DynamicDataSourcePropertiesV1 externalValue, final Boolean filterable, final Map<String, String> controlParameters, final FormFieldKeyV1 initializeWithAdressField, final AdditionalFieldConfigV1 additionalConfig, final ModalHelpDialogV1 helpDialog) {
+  private FormFieldV1(@NonNull final String id, final String fimId, final String label, @NonNull final FieldTypeV1 type, final Object value, final String placeholder, final Boolean disabled, final Boolean required, final Boolean pickerDisabled, final Boolean consent, final String requiredValidationFailedMessage, final String typeValidationFailedMessage, final String thousandsSeparatorValidationFailedMessage, final String digitsAfterDecimalPointValidationFailedMessage, final String helptext, final List<PossibleValueV1> possibleValues, @NonNull final List<DisplayConditionV1> displayConditions, final int width, final String layout, @NonNull final List<ValidationRuleV1> validationRules, @NonNull final Set<ValidationMessageV1> validationMessages, final DataResourcePointerV1 source, final DataResourcePointerV1 target, final DataResourcePointerV1 possibleValuesSource, final DynamicDataSourcePropertiesV1 externalDataSourceProperties, final DynamicDataSourcePropertiesV1 externalValue, final Boolean filterable, final Map<String, String> controlParameters, final FormFieldKeyV1 initializeWithAdressField, final AdditionalFieldConfigV1 additionalConfig, final ModalHelpDialogV1 helpDialog, final RenderMediumV1 renderOnlyIn) {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");
     }
@@ -1898,5 +1971,6 @@ public class FormFieldV1 implements Cloneable {
     this.initializeWithAdressField = initializeWithAdressField;
     this.additionalConfig = additionalConfig;
     this.helpDialog = helpDialog;
+    this.renderOnlyIn = renderOnlyIn;
   }
 }

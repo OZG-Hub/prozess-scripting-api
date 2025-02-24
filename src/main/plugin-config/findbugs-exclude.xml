@@ -18,6 +18,16 @@
            fangen sollte. Es gibt jedoch Situationen
            (z.B. Fremdbibliotheken) bei denen man diese Option nicht hat. -->
       <Bug pattern="DCN_NULLPOINTER_EXCEPTION" />
+      <Bug pattern="CT_CONSTRUCTOR_THROW" />
+      <Bug pattern="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" />
+    </Or>
+  </Match>
+  <Match>
+    <Bug pattern="NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" />
+    <Or>
+      <Class name="de.seitenbau.serviceportal.scripting.api.v1.form.FormRowV1" />
+      <Class name="de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldV1" />
+      <Class name="de.seitenbau.serviceportal.scripting.api.v1.form.ajax.ExternalDataSourcePropertiesV1" />
     </Or>
   </Match>
 </FindBugsFilter>

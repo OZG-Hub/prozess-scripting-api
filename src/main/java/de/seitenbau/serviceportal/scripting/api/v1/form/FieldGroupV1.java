@@ -43,6 +43,15 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    */
   private boolean printOnly;
   /**
+   * Mit diesem Attribut lässt sich Einschränken in welchen Medien die Feldgruppe dargestellt werden soll.
+   * Darf nicht gleichzeitig mit dem Attribute 'renderOnlyIn' eines Feldes der Gruppe gesetzt sein.
+   * <br/>
+   * {@code PDF}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
+   * {@code FORM}, wenn die Feldgruppe nur in der Formularansicht dargestellt werden soll.
+   * {@code null}, keine Einschränkung bei der Darstellung.
+   */
+  private RenderMediumV1 renderOnlyIn;
+  /**
    * Maximal erlaubte Anzahl an Instanzen der Feldgruppe. Default ist 99.
    */
   private int maxInstanceCount;
@@ -230,6 +239,9 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     private boolean printOnly;
     @SuppressWarnings("all")
     @lombok.Generated
+    private RenderMediumV1 renderOnlyIn;
+    @SuppressWarnings("all")
+    @lombok.Generated
     private boolean maxInstanceCount$set;
     @SuppressWarnings("all")
     @lombok.Generated
@@ -328,6 +340,22 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     }
 
     /**
+     * Mit diesem Attribut lässt sich Einschränken in welchen Medien die Feldgruppe dargestellt werden soll.
+     * Darf nicht gleichzeitig mit dem Attribute 'renderOnlyIn' eines Feldes der Gruppe gesetzt sein.
+     * <br/>
+     * {@code PDF}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
+     * {@code FORM}, wenn die Feldgruppe nur in der Formularansicht dargestellt werden soll.
+     * {@code null}, keine Einschränkung bei der Darstellung.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public B renderOnlyIn(final RenderMediumV1 renderOnlyIn) {
+      this.renderOnlyIn = renderOnlyIn;
+      return self();
+    }
+
+    /**
      * Maximal erlaubte Anzahl an Instanzen der Feldgruppe. Default ist 99.
      * @return {@code this}.
      */
@@ -388,7 +416,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "FieldGroupV1.FieldGroupV1Builder(super=" + super.toString() + ", multiple=" + this.multiple + ", addRowButtonText=" + this.addRowButtonText + ", deleteRowButtonText=" + this.deleteRowButtonText + ", addRowButtonInfoText=" + this.addRowButtonInfoText + ", deleteRowButtonInfoText=" + this.deleteRowButtonInfoText + ", layout=" + this.layout + ", printOnly=" + this.printOnly + ", maxInstanceCount$value=" + this.maxInstanceCount$value + ", fixedInstanceCount=" + this.fixedInstanceCount + ", instanceTitleTemplate=" + this.instanceTitleTemplate + ", instances$value=" + this.instances$value + ")";
+      return "FieldGroupV1.FieldGroupV1Builder(super=" + super.toString() + ", multiple=" + this.multiple + ", addRowButtonText=" + this.addRowButtonText + ", deleteRowButtonText=" + this.deleteRowButtonText + ", addRowButtonInfoText=" + this.addRowButtonInfoText + ", deleteRowButtonInfoText=" + this.deleteRowButtonInfoText + ", layout=" + this.layout + ", printOnly=" + this.printOnly + ", renderOnlyIn=" + this.renderOnlyIn + ", maxInstanceCount$value=" + this.maxInstanceCount$value + ", fixedInstanceCount=" + this.fixedInstanceCount + ", instanceTitleTemplate=" + this.instanceTitleTemplate + ", instances$value=" + this.instances$value + ")";
     }
   }
 
@@ -427,6 +455,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     this.deleteRowButtonInfoText = b.deleteRowButtonInfoText;
     this.layout = b.layout;
     this.printOnly = b.printOnly;
+    this.renderOnlyIn = b.renderOnlyIn;
     if (b.maxInstanceCount$set) this.maxInstanceCount = b.maxInstanceCount$value;
      else this.maxInstanceCount = FieldGroupV1.$default$maxInstanceCount();
     this.fixedInstanceCount = b.fixedInstanceCount;
@@ -505,6 +534,20 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
   @lombok.Generated
   public boolean isPrintOnly() {
     return this.printOnly;
+  }
+
+  /**
+   * Mit diesem Attribut lässt sich Einschränken in welchen Medien die Feldgruppe dargestellt werden soll.
+   * Darf nicht gleichzeitig mit dem Attribute 'renderOnlyIn' eines Feldes der Gruppe gesetzt sein.
+   * <br/>
+   * {@code PDF}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
+   * {@code FORM}, wenn die Feldgruppe nur in der Formularansicht dargestellt werden soll.
+   * {@code null}, keine Einschränkung bei der Darstellung.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public RenderMediumV1 getRenderOnlyIn() {
+    return this.renderOnlyIn;
   }
 
   /**
@@ -602,6 +645,20 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
   }
 
   /**
+   * Mit diesem Attribut lässt sich Einschränken in welchen Medien die Feldgruppe dargestellt werden soll.
+   * Darf nicht gleichzeitig mit dem Attribute 'renderOnlyIn' eines Feldes der Gruppe gesetzt sein.
+   * <br/>
+   * {@code PDF}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
+   * {@code FORM}, wenn die Feldgruppe nur in der Formularansicht dargestellt werden soll.
+   * {@code null}, keine Einschränkung bei der Darstellung.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setRenderOnlyIn(final RenderMediumV1 renderOnlyIn) {
+    this.renderOnlyIn = renderOnlyIn;
+  }
+
+  /**
    * Maximal erlaubte Anzahl an Instanzen der Feldgruppe. Default ist 99.
    */
   @SuppressWarnings("all")
@@ -642,7 +699,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "FieldGroupV1(multiple=" + this.isMultiple() + ", addRowButtonText=" + this.getAddRowButtonText() + ", deleteRowButtonText=" + this.getDeleteRowButtonText() + ", addRowButtonInfoText=" + this.getAddRowButtonInfoText() + ", deleteRowButtonInfoText=" + this.getDeleteRowButtonInfoText() + ", layout=" + this.getLayout() + ", printOnly=" + this.isPrintOnly() + ", maxInstanceCount=" + this.getMaxInstanceCount() + ", fixedInstanceCount=" + this.isFixedInstanceCount() + ", instanceTitleTemplate=" + this.getInstanceTitleTemplate() + ", instances=" + this.getInstances() + ")";
+    return "FieldGroupV1(multiple=" + this.isMultiple() + ", addRowButtonText=" + this.getAddRowButtonText() + ", deleteRowButtonText=" + this.getDeleteRowButtonText() + ", addRowButtonInfoText=" + this.getAddRowButtonInfoText() + ", deleteRowButtonInfoText=" + this.getDeleteRowButtonInfoText() + ", layout=" + this.getLayout() + ", printOnly=" + this.isPrintOnly() + ", renderOnlyIn=" + this.getRenderOnlyIn() + ", maxInstanceCount=" + this.getMaxInstanceCount() + ", fixedInstanceCount=" + this.isFixedInstanceCount() + ", instanceTitleTemplate=" + this.getInstanceTitleTemplate() + ", instances=" + this.getInstances() + ")";
   }
 
   @Override
@@ -673,6 +730,9 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     final Object this$layout = this.getLayout();
     final Object other$layout = other.getLayout();
     if (this$layout == null ? other$layout != null : !this$layout.equals(other$layout)) return false;
+    final Object this$renderOnlyIn = this.getRenderOnlyIn();
+    final Object other$renderOnlyIn = other.getRenderOnlyIn();
+    if (this$renderOnlyIn == null ? other$renderOnlyIn != null : !this$renderOnlyIn.equals(other$renderOnlyIn)) return false;
     final Object this$instanceTitleTemplate = this.getInstanceTitleTemplate();
     final Object other$instanceTitleTemplate = other.getInstanceTitleTemplate();
     if (this$instanceTitleTemplate == null ? other$instanceTitleTemplate != null : !this$instanceTitleTemplate.equals(other$instanceTitleTemplate)) return false;
@@ -708,6 +768,8 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     result = result * PRIME + ($deleteRowButtonInfoText == null ? 43 : $deleteRowButtonInfoText.hashCode());
     final Object $layout = this.getLayout();
     result = result * PRIME + ($layout == null ? 43 : $layout.hashCode());
+    final Object $renderOnlyIn = this.getRenderOnlyIn();
+    result = result * PRIME + ($renderOnlyIn == null ? 43 : $renderOnlyIn.hashCode());
     final Object $instanceTitleTemplate = this.getInstanceTitleTemplate();
     result = result * PRIME + ($instanceTitleTemplate == null ? 43 : $instanceTitleTemplate.hashCode());
     final Object $instances = this.getInstances();
