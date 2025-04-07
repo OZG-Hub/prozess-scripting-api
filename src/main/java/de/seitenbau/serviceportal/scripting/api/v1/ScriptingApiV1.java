@@ -211,6 +211,22 @@ public interface ScriptingApiV1
   DataStorageApiV1 getDataStorage();
 
   /**
+   * Gibt die StringUtils-API zurück.
+   *
+   * @return die StringUtils-API, nie {@code null}
+   * @since Release 1.191
+   */
+  StringUtilsApiV1 getStringUtils();
+
+  /**
+   * Gibt die FormContent-API zurück.
+   *
+   * @return die FormContent-API, nie {@code null}
+   * @since Release 1.191
+   */
+  FormContentApiV1 getFormContent();
+
+  /**
    * Wirft einen {@code org.activiti.engine.delegate.BpmnError}.
    * Dieser kann genutzt werden, um eine Fehlerbehandlung im Prozessmodell umzusetzen
    *

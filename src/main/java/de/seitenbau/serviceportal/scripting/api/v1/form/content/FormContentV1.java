@@ -91,6 +91,19 @@ public class FormContentV1 {
   }
 
   /**
+   * Gibt den Wert eines Feldes zurück.
+   *
+   * @param fieldKey {@link FormFieldKeyV1 FormFieldKey} des Feldes
+   *
+   * @return Wert des Feldes oder {@code null} falls das Feld nicht vorhanden ist
+   * @throws NullPointerException Wenn {@code fieldKey} {@code null} ist
+   * @since Release 1.191
+   */
+  public Object getFieldValue(FormFieldKeyV1 fieldKey) {
+    return getFieldValue(fieldKey.toString());
+  }
+
+  /**
    * Setzt den Wert eines Feldes. Falls das Feld noch nicht vorhanden ist, wird es zuerst angelegt.
    *
    * @param combinedFieldId String-Wert des {@link FormFieldKeyV1 FormFieldKeys}
@@ -98,6 +111,19 @@ public class FormContentV1 {
    */
   public void setFieldValue(String combinedFieldId, Object value) {
     fields.put(combinedFieldId, FormFieldContentV1.builder().value(value).build());
+  }
+
+  /**
+   * Setzt den Wert eines Feldes. Falls das Feld noch nicht vorhanden ist, wird es zuerst angelegt.
+   *
+   * @param fieldKey {@link FormFieldKeyV1 FormFieldKey} des Feldes
+   * @param value Wert der gesetzt wird
+   *
+   * @throws NullPointerException Wenn {@code fieldKey} {@code null} ist
+   * @since Release 1.191
+   */
+  public void setFieldValue(FormFieldKeyV1 fieldKey, Object value) {
+    setFieldValue(fieldKey.toString(), value);
   }
 
   /**

@@ -25,6 +25,16 @@ public interface LoggerApiV1
   void info(String msg, Throwable t);
 
   /**
+   * Schreibt nur auf den Entwicklungssystemen (dev, test) einen log-Eintrag mit Level {@code INFO}. Auf den
+   * anderen Systemen (prod, integration) wird kein log-Eintrag geschrieben.
+   *
+   * @param msg Nachricht des log-Eintrags
+   *
+   * @since Release 1.191
+   */
+  void infoOnDev(String msg);
+
+  /**
    * Schreibt einen log-Eintrag mit Level {@code WARN}.
    *
    * @param msg Nachricht des log-Eintrags
@@ -38,4 +48,14 @@ public interface LoggerApiV1
    * @param t zu loggende Fehlermeldung
    */
   void warn(String msg, Throwable t);
+
+  /**
+   * Schreibt nur auf den Entwicklungssystemen (dev, test) einen log-Eintrag mit Level {@code WARN}. Auf den
+   * anderen Systemen (prod, integration) wird kein log-Eintrag geschrieben.
+   *
+   * @param msg Nachricht des log-Eintrags
+   *
+   * @since Release 1.191
+   */
+  void warnOnDev(String msg);
 }

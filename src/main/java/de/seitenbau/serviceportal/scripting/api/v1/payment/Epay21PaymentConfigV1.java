@@ -13,7 +13,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Optionale URL des implementierten Endpunkts. Ist dieses Attribut nicht gesetzt, wird die von der
    * Plattform hinterlegte URL verwendet.
    *
-   * @since Release 187
+   * @since Release 1.187
    */
   private String serviceUrl;
   /**
@@ -69,7 +69,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
      * Optionale URL des implementierten Endpunkts. Ist dieses Attribut nicht gesetzt, wird die von der
      * Plattform hinterlegte URL verwendet.
      *
-     * @since Release 187
+     * @since Release 1.187
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -167,7 +167,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Optionale URL des implementierten Endpunkts. Ist dieses Attribut nicht gesetzt, wird die von der
    * Plattform hinterlegte URL verwendet.
    *
-   * @since Release 187
+   * @since Release 1.187
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -224,7 +224,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * Optionale URL des implementierten Endpunkts. Ist dieses Attribut nicht gesetzt, wird die von der
    * Plattform hinterlegte URL verwendet.
    *
-   * @since Release 187
+   * @since Release 1.187
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -356,7 +356,7 @@ public class Epay21PaymentConfigV1 implements PaymentConfigV1 {
    * @param serviceUrl Optionale URL des implementierten Endpunkts. Ist dieses Attribut nicht gesetzt, wird die von der
    * Plattform hinterlegte URL verwendet.
    *
-   * @since Release 187
+   * @since Release 1.187
    * @param mandant Mandant-Identifier.
    * @param mandantDesc Mandant-Beschreibung; der Text dient der Anzeige auf der PayPage.
    * @param app Fachverfahrens-Identifier.
