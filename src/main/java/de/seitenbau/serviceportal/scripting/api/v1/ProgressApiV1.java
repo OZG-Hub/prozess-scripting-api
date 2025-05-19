@@ -19,7 +19,7 @@ public interface ProgressApiV1
    * @param items die Punkte der Fortschrittsanzeige
    *
    * @throws NullPointerException Falls eine der #items {@code null} ist
-   **/
+   */
   void setItems(String... items);
 
   /**
@@ -31,8 +31,25 @@ public interface ProgressApiV1
    *
    * @throws IllegalStateException Falls die Fortschrittspunkte mit {@link #setItems(String...)} noch nicht
    * gesetzt worden sind.
-   * @throws IllegalArgumentException Falls der {@code item} nicht in der Liste der Fortschrittspunkte
+   * @throws IllegalArgumentException Falls der Punkt {@code item} nicht in der Liste der Fortschrittspunkte
    * enthalten ist.
    */
   void setActiveItem(String item);
+
+  /**
+   * Setzt, dass der gegebene Punkt in der Fortschrittsanzeige übersprungen werden soll.
+   * Wird dieser Punkt auf {@link #setActiveItem(String) aktiv} gesetzt, werden folgende Formular-Tasks
+   * im Prozess übersprungen. Die Formular-Tasks werden durch die Plattform abgeschlossen und die nächsten
+   * User-Tasks werden dem Antragssteller als aktuelle Aufgabe im Prozess angezeigt.
+   *
+   * @param item zu überspringender Punkt
+   *
+   * @throws IllegalStateException Falls die Fortschrittspunkte mit {@link #setItems(String...)} noch nicht
+   * gesetzt worden sind.
+   * @throws IllegalArgumentException Falls der Punkt {@code item} nicht in der Liste der Fortschrittspunkte
+   * enthalten ist oder der gegebene Punkt der aktive Punkt, ein bereits abgeschlossener Punkt ist oder
+   * direkt auf den aktuell aktiven Punkt folgt.
+   * @since Release 1.193
+   */
+  void setSkippedItem(String item);
 }

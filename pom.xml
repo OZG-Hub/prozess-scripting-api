@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.seitenbau.serviceportal</groupId>
   <artifactId>prozess-scripting-api</artifactId>
-  <version>1.192.3</version>
+  <version>1.193.12</version>
   <packaging>jar</packaging>
 
   <name>prozess-scripting-api</name>
@@ -37,11 +37,11 @@
     <url>https://github.com/OZG-Hub/prozess-scripting-api/tree/main</url>
   </scm>
 
-  <!-- https://central.sonatype.org/publish/publish-maven/#distribution-management-and-authentication -->
+  <!-- https://central.sonatype.org/publish/publish-portal-snapshots/#publishing-via-other-methods -->
   <distributionManagement>
     <snapshotRepository>
-      <id>maven</id>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+      <id>central</id>
+      <url>https://central.sonatype.com/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -50,14 +50,14 @@
     </spotbugs.excludeFilterFile>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>17</java.version>
-    <lombok.version>1.18.36</lombok.version>
+    <lombok.version>1.18.38</lombok.version>
     <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
     <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
     <jakarta.validation-api.version>2.0.2</jakarta.validation-api.version>
     <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
     <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
     <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
-    <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
+    <central-publishing-maven-plugin.version>0.7.0</central-publishing-maven-plugin.version>
   </properties>
 
   <build>
@@ -160,16 +160,18 @@
           </execution>
         </executions>
       </plugin>
-      <!-- https://central.sonatype.org/publish/publish-maven/#distribution-management-and-authentication -->
+      <!-- https://central.sonatype.org/publish/publish-portal-maven/ -->
       <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>${nexus-staging-maven-plugin.version}</version>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>${central-publishing-maven-plugin.version}</version>
         <extensions>true</extensions>
         <configuration>
-          <serverId>maven</serverId>
-          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+          <autoPublish>true</autoPublish>
+          <deploymentName>prozess-scripting-api</deploymentName>
+          <outputDirectory>prozess-scripting-api</outputDirectory>
+          <outputFilename>prozess-scripting-api.zip</outputFilename>
+          <waitUntil>published</waitUntil>
         </configuration>
       </plugin>
     </plugins>
