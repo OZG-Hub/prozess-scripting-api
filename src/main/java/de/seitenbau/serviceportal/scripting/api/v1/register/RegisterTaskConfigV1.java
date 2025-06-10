@@ -10,6 +10,22 @@ public class RegisterTaskConfigV1 {
    * Typ des angeforderten Nachweises.
    */
   private String evidenceType;
+  /**
+   * ID der IT-Komponente in IAM für Behörden.
+   */
+  private String componentId;
+  /**
+   * Amtlicher Regionalschlüssel zur Bestimmung der Zuständigkeit.
+   */
+  private String ars;
+  /**
+   * Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung persönlichen und weiteren Daten im Task.
+   */
+  private ConfirmProcessDataUsageConfigV1 confirmProcessDataUsageConfig;
+  /**
+   * Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung des Nachweises im Task.
+   */
+  private ConfirmRegisterDataUsageConfigV1 confirmRegisterDataUsageConfig;
 
 
   @SuppressWarnings("all")
@@ -18,6 +34,18 @@ public class RegisterTaskConfigV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     private String evidenceType;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private String componentId;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private String ars;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private ConfirmProcessDataUsageConfigV1 confirmProcessDataUsageConfig;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private ConfirmRegisterDataUsageConfigV1 confirmRegisterDataUsageConfig;
 
     @SuppressWarnings("all")
     @lombok.Generated
@@ -35,17 +63,61 @@ public class RegisterTaskConfigV1 {
       return this;
     }
 
+    /**
+     * ID der IT-Komponente in IAM für Behörden.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public RegisterTaskConfigV1.RegisterTaskConfigV1Builder componentId(final String componentId) {
+      this.componentId = componentId;
+      return this;
+    }
+
+    /**
+     * Amtlicher Regionalschlüssel zur Bestimmung der Zuständigkeit.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public RegisterTaskConfigV1.RegisterTaskConfigV1Builder ars(final String ars) {
+      this.ars = ars;
+      return this;
+    }
+
+    /**
+     * Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung persönlichen und weiteren Daten im Task.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public RegisterTaskConfigV1.RegisterTaskConfigV1Builder confirmProcessDataUsageConfig(final ConfirmProcessDataUsageConfigV1 confirmProcessDataUsageConfig) {
+      this.confirmProcessDataUsageConfig = confirmProcessDataUsageConfig;
+      return this;
+    }
+
+    /**
+     * Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung des Nachweises im Task.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public RegisterTaskConfigV1.RegisterTaskConfigV1Builder confirmRegisterDataUsageConfig(final ConfirmRegisterDataUsageConfigV1 confirmRegisterDataUsageConfig) {
+      this.confirmRegisterDataUsageConfig = confirmRegisterDataUsageConfig;
+      return this;
+    }
+
     @SuppressWarnings("all")
     @lombok.Generated
     public RegisterTaskConfigV1 build() {
-      return new RegisterTaskConfigV1(this.evidenceType);
+      return new RegisterTaskConfigV1(this.evidenceType, this.componentId, this.ars, this.confirmProcessDataUsageConfig, this.confirmRegisterDataUsageConfig);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "RegisterTaskConfigV1.RegisterTaskConfigV1Builder(evidenceType=" + this.evidenceType + ")";
+      return "RegisterTaskConfigV1.RegisterTaskConfigV1Builder(evidenceType=" + this.evidenceType + ", componentId=" + this.componentId + ", ars=" + this.ars + ", confirmProcessDataUsageConfig=" + this.confirmProcessDataUsageConfig + ", confirmRegisterDataUsageConfig=" + this.confirmRegisterDataUsageConfig + ")";
     }
   }
 
@@ -65,12 +137,84 @@ public class RegisterTaskConfigV1 {
   }
 
   /**
+   * ID der IT-Komponente in IAM für Behörden.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public String getComponentId() {
+    return this.componentId;
+  }
+
+  /**
+   * Amtlicher Regionalschlüssel zur Bestimmung der Zuständigkeit.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public String getArs() {
+    return this.ars;
+  }
+
+  /**
+   * Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung persönlichen und weiteren Daten im Task.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public ConfirmProcessDataUsageConfigV1 getConfirmProcessDataUsageConfig() {
+    return this.confirmProcessDataUsageConfig;
+  }
+
+  /**
+   * Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung des Nachweises im Task.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public ConfirmRegisterDataUsageConfigV1 getConfirmRegisterDataUsageConfig() {
+    return this.confirmRegisterDataUsageConfig;
+  }
+
+  /**
    * Typ des angeforderten Nachweises.
    */
   @SuppressWarnings("all")
   @lombok.Generated
   public void setEvidenceType(final String evidenceType) {
     this.evidenceType = evidenceType;
+  }
+
+  /**
+   * ID der IT-Komponente in IAM für Behörden.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setComponentId(final String componentId) {
+    this.componentId = componentId;
+  }
+
+  /**
+   * Amtlicher Regionalschlüssel zur Bestimmung der Zuständigkeit.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setArs(final String ars) {
+    this.ars = ars;
+  }
+
+  /**
+   * Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung persönlichen und weiteren Daten im Task.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setConfirmProcessDataUsageConfig(final ConfirmProcessDataUsageConfigV1 confirmProcessDataUsageConfig) {
+    this.confirmProcessDataUsageConfig = confirmProcessDataUsageConfig;
+  }
+
+  /**
+   * Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung des Nachweises im Task.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setConfirmRegisterDataUsageConfig(final ConfirmRegisterDataUsageConfigV1 confirmRegisterDataUsageConfig) {
+    this.confirmRegisterDataUsageConfig = confirmRegisterDataUsageConfig;
   }
 
   @Override
@@ -84,6 +228,18 @@ public class RegisterTaskConfigV1 {
     final Object this$evidenceType = this.getEvidenceType();
     final Object other$evidenceType = other.getEvidenceType();
     if (this$evidenceType == null ? other$evidenceType != null : !this$evidenceType.equals(other$evidenceType)) return false;
+    final Object this$componentId = this.getComponentId();
+    final Object other$componentId = other.getComponentId();
+    if (this$componentId == null ? other$componentId != null : !this$componentId.equals(other$componentId)) return false;
+    final Object this$ars = this.getArs();
+    final Object other$ars = other.getArs();
+    if (this$ars == null ? other$ars != null : !this$ars.equals(other$ars)) return false;
+    final Object this$confirmProcessDataUsageConfig = this.getConfirmProcessDataUsageConfig();
+    final Object other$confirmProcessDataUsageConfig = other.getConfirmProcessDataUsageConfig();
+    if (this$confirmProcessDataUsageConfig == null ? other$confirmProcessDataUsageConfig != null : !this$confirmProcessDataUsageConfig.equals(other$confirmProcessDataUsageConfig)) return false;
+    final Object this$confirmRegisterDataUsageConfig = this.getConfirmRegisterDataUsageConfig();
+    final Object other$confirmRegisterDataUsageConfig = other.getConfirmRegisterDataUsageConfig();
+    if (this$confirmRegisterDataUsageConfig == null ? other$confirmRegisterDataUsageConfig != null : !this$confirmRegisterDataUsageConfig.equals(other$confirmRegisterDataUsageConfig)) return false;
     return true;
   }
 
@@ -101,6 +257,14 @@ public class RegisterTaskConfigV1 {
     int result = 1;
     final Object $evidenceType = this.getEvidenceType();
     result = result * PRIME + ($evidenceType == null ? 43 : $evidenceType.hashCode());
+    final Object $componentId = this.getComponentId();
+    result = result * PRIME + ($componentId == null ? 43 : $componentId.hashCode());
+    final Object $ars = this.getArs();
+    result = result * PRIME + ($ars == null ? 43 : $ars.hashCode());
+    final Object $confirmProcessDataUsageConfig = this.getConfirmProcessDataUsageConfig();
+    result = result * PRIME + ($confirmProcessDataUsageConfig == null ? 43 : $confirmProcessDataUsageConfig.hashCode());
+    final Object $confirmRegisterDataUsageConfig = this.getConfirmRegisterDataUsageConfig();
+    result = result * PRIME + ($confirmRegisterDataUsageConfig == null ? 43 : $confirmRegisterDataUsageConfig.hashCode());
     return result;
   }
 
@@ -108,7 +272,7 @@ public class RegisterTaskConfigV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "RegisterTaskConfigV1(evidenceType=" + this.getEvidenceType() + ")";
+    return "RegisterTaskConfigV1(evidenceType=" + this.getEvidenceType() + ", componentId=" + this.getComponentId() + ", ars=" + this.getArs() + ", confirmProcessDataUsageConfig=" + this.getConfirmProcessDataUsageConfig() + ", confirmRegisterDataUsageConfig=" + this.getConfirmRegisterDataUsageConfig() + ")";
   }
 
   @SuppressWarnings("all")
@@ -120,10 +284,18 @@ public class RegisterTaskConfigV1 {
    * Creates a new {@code RegisterTaskConfigV1} instance.
    *
    * @param evidenceType Typ des angeforderten Nachweises.
+   * @param componentId ID der IT-Komponente in IAM für Behörden.
+   * @param ars Amtlicher Regionalschlüssel zur Bestimmung der Zuständigkeit.
+   * @param confirmProcessDataUsageConfig Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung persönlichen und weiteren Daten im Task.
+   * @param confirmRegisterDataUsageConfig Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung des Nachweises im Task.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public RegisterTaskConfigV1(final String evidenceType) {
+  public RegisterTaskConfigV1(final String evidenceType, final String componentId, final String ars, final ConfirmProcessDataUsageConfigV1 confirmProcessDataUsageConfig, final ConfirmRegisterDataUsageConfigV1 confirmRegisterDataUsageConfig) {
     this.evidenceType = evidenceType;
+    this.componentId = componentId;
+    this.ars = ars;
+    this.confirmProcessDataUsageConfig = confirmProcessDataUsageConfig;
+    this.confirmRegisterDataUsageConfig = confirmRegisterDataUsageConfig;
   }
 }

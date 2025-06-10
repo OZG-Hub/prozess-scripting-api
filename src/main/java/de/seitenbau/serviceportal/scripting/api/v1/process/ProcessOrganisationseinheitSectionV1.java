@@ -17,6 +17,10 @@ public class ProcessOrganisationseinheitSectionV1 {
    * Text des Abschnitts.
    */
   private String text;
+  /**
+   * Kommunale Spezialisierung / Ergänzung des Abschnitts.
+   */
+  private String ergaenzung;
 
 
   @SuppressWarnings("all")
@@ -31,6 +35,9 @@ public class ProcessOrganisationseinheitSectionV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     private String text;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private String ergaenzung;
 
     @SuppressWarnings("all")
     @lombok.Generated
@@ -70,17 +77,28 @@ public class ProcessOrganisationseinheitSectionV1 {
       return this;
     }
 
+    /**
+     * Kommunale Spezialisierung / Ergänzung des Abschnitts.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public ProcessOrganisationseinheitSectionV1.ProcessOrganisationseinheitSectionV1Builder ergaenzung(final String ergaenzung) {
+      this.ergaenzung = ergaenzung;
+      return this;
+    }
+
     @SuppressWarnings("all")
     @lombok.Generated
     public ProcessOrganisationseinheitSectionV1 build() {
-      return new ProcessOrganisationseinheitSectionV1(this.textblockId, this.headline, this.text);
+      return new ProcessOrganisationseinheitSectionV1(this.textblockId, this.headline, this.text, this.ergaenzung);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "ProcessOrganisationseinheitSectionV1.ProcessOrganisationseinheitSectionV1Builder(textblockId=" + this.textblockId + ", headline=" + this.headline + ", text=" + this.text + ")";
+      return "ProcessOrganisationseinheitSectionV1.ProcessOrganisationseinheitSectionV1Builder(textblockId=" + this.textblockId + ", headline=" + this.headline + ", text=" + this.text + ", ergaenzung=" + this.ergaenzung + ")";
     }
   }
 
@@ -117,11 +135,20 @@ public class ProcessOrganisationseinheitSectionV1 {
     return this.text;
   }
 
+  /**
+   * Kommunale Spezialisierung / Ergänzung des Abschnitts.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public String getErgaenzung() {
+    return this.ergaenzung;
+  }
+
   @Override
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "ProcessOrganisationseinheitSectionV1(textblockId=" + this.getTextblockId() + ", headline=" + this.getHeadline() + ", text=" + this.getText() + ")";
+    return "ProcessOrganisationseinheitSectionV1(textblockId=" + this.getTextblockId() + ", headline=" + this.getHeadline() + ", text=" + this.getText() + ", ergaenzung=" + this.getErgaenzung() + ")";
   }
 
   @Override
@@ -141,6 +168,9 @@ public class ProcessOrganisationseinheitSectionV1 {
     final Object this$text = this.getText();
     final Object other$text = other.getText();
     if (this$text == null ? other$text != null : !this$text.equals(other$text)) return false;
+    final Object this$ergaenzung = this.getErgaenzung();
+    final Object other$ergaenzung = other.getErgaenzung();
+    if (this$ergaenzung == null ? other$ergaenzung != null : !this$ergaenzung.equals(other$ergaenzung)) return false;
     return true;
   }
 
@@ -162,6 +192,8 @@ public class ProcessOrganisationseinheitSectionV1 {
     result = result * PRIME + ($headline == null ? 43 : $headline.hashCode());
     final Object $text = this.getText();
     result = result * PRIME + ($text == null ? 43 : $text.hashCode());
+    final Object $ergaenzung = this.getErgaenzung();
+    result = result * PRIME + ($ergaenzung == null ? 43 : $ergaenzung.hashCode());
     return result;
   }
 
@@ -176,12 +208,14 @@ public class ProcessOrganisationseinheitSectionV1 {
    * @param textblockId ID des Abschnitts.
    * @param headline Überschrift des Abschnitts.
    * @param text Text des Abschnitts.
+   * @param ergaenzung Kommunale Spezialisierung / Ergänzung des Abschnitts.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public ProcessOrganisationseinheitSectionV1(final String textblockId, final String headline, final String text) {
+  public ProcessOrganisationseinheitSectionV1(final String textblockId, final String headline, final String text, final String ergaenzung) {
     this.textblockId = textblockId;
     this.headline = headline;
     this.text = text;
+    this.ergaenzung = ergaenzung;
   }
 }
