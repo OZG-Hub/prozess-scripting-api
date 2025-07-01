@@ -38,13 +38,22 @@ public class StartParameterV1 {
    */
   private OrganisationseinheitParameterV1 organisationseinheit;
   /**
-   * Allgemeiner Gemeindeschlüssel.
-   * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
+   * Amtlicher Regionalschlüssel.
+   * Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
+   * {@code null}, wenn der ARS Parameter nicht beim Prozessstart definiert wurde
+   * und kein gültige AGS beim Prozessstart definiert wurde.
+   */
+  private String ars;
+  /**
+   * Amtlicher Gemeindeschlüssel.
+   * Wurde vom ARS abgeleitet, falls ARS beim Prozessstart definiert wurde.
+   * {@code null}, wenn der AGS Parameter nicht beim Prozessstart definiert wurde
+   * und kein gültige ARS beim Prozessstart definiert wurde.
    */
   private String ags;
   /**
    * Area-ID der FitConnect Routing-API.
-   * NULL, wenn der Parameter nicht beim Prozessstart definiert wurde.
+   * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
    */
   private String fitConnectAreaId;
   /**
@@ -88,6 +97,9 @@ public class StartParameterV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     private OrganisationseinheitParameterV1 organisationseinheit;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private String ars;
     @SuppressWarnings("all")
     @lombok.Generated
     private String ags;
@@ -172,8 +184,24 @@ public class StartParameterV1 {
     }
 
     /**
-     * Allgemeiner Gemeindeschlüssel.
-     * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
+     * Amtlicher Regionalschlüssel.
+     * Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
+     * {@code null}, wenn der ARS Parameter nicht beim Prozessstart definiert wurde
+     * und kein gültige AGS beim Prozessstart definiert wurde.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public StartParameterV1.StartParameterV1Builder ars(final String ars) {
+      this.ars = ars;
+      return this;
+    }
+
+    /**
+     * Amtlicher Gemeindeschlüssel.
+     * Wurde vom ARS abgeleitet, falls ARS beim Prozessstart definiert wurde.
+     * {@code null}, wenn der AGS Parameter nicht beim Prozessstart definiert wurde
+     * und kein gültige ARS beim Prozessstart definiert wurde.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -185,7 +213,7 @@ public class StartParameterV1 {
 
     /**
      * Area-ID der FitConnect Routing-API.
-     * NULL, wenn der Parameter nicht beim Prozessstart definiert wurde.
+     * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -247,14 +275,14 @@ public class StartParameterV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     public StartParameterV1 build() {
-      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.ags, this.fitConnectAreaId, this.p, this.parameters, this.testStart, this.startData);
+      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.ars, this.ags, this.fitConnectAreaId, this.p, this.parameters, this.testStart, this.startData);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", p=" + this.p + ", parameters=" + this.parameters + ", testStart=" + this.testStart + ", startData=" + this.startData + ")";
+      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", ars=" + this.ars + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", p=" + this.p + ", parameters=" + this.parameters + ", testStart=" + this.testStart + ", startData=" + this.startData + ")";
     }
   }
 
@@ -314,8 +342,22 @@ public class StartParameterV1 {
   }
 
   /**
-   * Allgemeiner Gemeindeschlüssel.
-   * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
+   * Amtlicher Regionalschlüssel.
+   * Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
+   * {@code null}, wenn der ARS Parameter nicht beim Prozessstart definiert wurde
+   * und kein gültige AGS beim Prozessstart definiert wurde.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public String getArs() {
+    return this.ars;
+  }
+
+  /**
+   * Amtlicher Gemeindeschlüssel.
+   * Wurde vom ARS abgeleitet, falls ARS beim Prozessstart definiert wurde.
+   * {@code null}, wenn der AGS Parameter nicht beim Prozessstart definiert wurde
+   * und kein gültige ARS beim Prozessstart definiert wurde.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -325,7 +367,7 @@ public class StartParameterV1 {
 
   /**
    * Area-ID der FitConnect Routing-API.
-   * NULL, wenn der Parameter nicht beim Prozessstart definiert wurde.
+   * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -378,7 +420,7 @@ public class StartParameterV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ", testStart=" + this.isTestStart() + ", startData=" + this.getStartData() + ")";
+    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", ars=" + this.getArs() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ", testStart=" + this.isTestStart() + ", startData=" + this.getStartData() + ")";
   }
 
   @Override
@@ -405,6 +447,9 @@ public class StartParameterV1 {
     final Object this$organisationseinheit = this.getOrganisationseinheit();
     final Object other$organisationseinheit = other.getOrganisationseinheit();
     if (this$organisationseinheit == null ? other$organisationseinheit != null : !this$organisationseinheit.equals(other$organisationseinheit)) return false;
+    final Object this$ars = this.getArs();
+    final Object other$ars = other.getArs();
+    if (this$ars == null ? other$ars != null : !this$ars.equals(other$ars)) return false;
     final Object this$ags = this.getAgs();
     final Object other$ags = other.getAgs();
     if (this$ags == null ? other$ags != null : !this$ags.equals(other$ags)) return false;
@@ -446,6 +491,8 @@ public class StartParameterV1 {
     result = result * PRIME + ($leistung == null ? 43 : $leistung.hashCode());
     final Object $organisationseinheit = this.getOrganisationseinheit();
     result = result * PRIME + ($organisationseinheit == null ? 43 : $organisationseinheit.hashCode());
+    final Object $ars = this.getArs();
+    result = result * PRIME + ($ars == null ? 43 : $ars.hashCode());
     final Object $ags = this.getAgs();
     result = result * PRIME + ($ags == null ? 43 : $ags.hashCode());
     final Object $fitConnectAreaId = this.getFitConnectAreaId();
@@ -476,10 +523,16 @@ public class StartParameterV1 {
    * @param organisationseinheit Organisationseinheit.
    * {@code null}, wenn keine Organisationseinheit definiert wurde.
    * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
-   * @param ags Allgemeiner Gemeindeschlüssel.
-   * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
+   * @param ars Amtlicher Regionalschlüssel.
+   * Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
+   * {@code null}, wenn der ARS Parameter nicht beim Prozessstart definiert wurde
+   * und kein gültige AGS beim Prozessstart definiert wurde.
+   * @param ags Amtlicher Gemeindeschlüssel.
+   * Wurde vom ARS abgeleitet, falls ARS beim Prozessstart definiert wurde.
+   * {@code null}, wenn der AGS Parameter nicht beim Prozessstart definiert wurde
+   * und kein gültige ARS beim Prozessstart definiert wurde.
    * @param fitConnectAreaId Area-ID der FitConnect Routing-API.
-   * NULL, wenn der Parameter nicht beim Prozessstart definiert wurde.
+   * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
    * @param p Frei wählbarer Parameter.
    * {@code null}, wenn kein Parameter definiert wurde.
    * @param parameters Parameter einer externen Parameter-Quelle.
@@ -492,12 +545,13 @@ public class StartParameterV1 {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final String ags, final String fitConnectAreaId, final String p, final Map<String, Object> parameters, final boolean testStart, final Object startData) {
+  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final String ars, final String ags, final String fitConnectAreaId, final String p, final Map<String, Object> parameters, final boolean testStart, final Object startData) {
     this.startTime = startTime;
     this.startedByUser = startedByUser;
     this.processName = processName;
     this.leistung = leistung;
     this.organisationseinheit = organisationseinheit;
+    this.ars = ars;
     this.ags = ags;
     this.fitConnectAreaId = fitConnectAreaId;
     this.p = p;

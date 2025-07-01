@@ -3,6 +3,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.form;
 
 import java.util.ArrayList;
 import java.util.List;
+import de.seitenbau.serviceportal.scripting.api.v1.form.condition.section.SkipConditionV1;
 import lombok.NonNull;
 
 /**
@@ -18,10 +19,23 @@ public class FormSectionV1 {
    */
   @NonNull
   private List<FieldGroupInterfaceV1> fieldGroups;
+  /**
+   * Bedingungen zum Überspringen des Abschnitts.
+   * Werden alle Bedingungen zu {@code true} ausgewertet, wird der Abschnitt übersprungen.
+   * Ansonsten wie gewohnt angezeigt.
+   */
+  @NonNull
+  private List<SkipConditionV1> skipConditions;
 
   @SuppressWarnings("all")
   @lombok.Generated
   private static List<FieldGroupInterfaceV1> $default$fieldGroups() {
+    return new ArrayList<>();
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  private static List<SkipConditionV1> $default$skipConditions() {
     return new ArrayList<>();
   }
 
@@ -30,15 +44,22 @@ public class FormSectionV1 {
    *
    * @param title Überschrift des Abschnitts.
    * @param fieldGroups Feldgruppen dieses Abschnitts. Default ist leere Liste.
+   * @param skipConditions Bedingungen zum Überspringen des Abschnitts.
+   * Werden alle Bedingungen zu {@code true} ausgewertet, wird der Abschnitt übersprungen.
+   * Ansonsten wie gewohnt angezeigt.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  FormSectionV1(final String title, @NonNull final List<FieldGroupInterfaceV1> fieldGroups) {
+  FormSectionV1(final String title, @NonNull final List<FieldGroupInterfaceV1> fieldGroups, @NonNull final List<SkipConditionV1> skipConditions) {
     if (fieldGroups == null) {
       throw new NullPointerException("fieldGroups is marked non-null but is null");
     }
+    if (skipConditions == null) {
+      throw new NullPointerException("skipConditions is marked non-null but is null");
+    }
     this.title = title;
     this.fieldGroups = fieldGroups;
+    this.skipConditions = skipConditions;
   }
 
 
@@ -54,6 +75,12 @@ public class FormSectionV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     private List<FieldGroupInterfaceV1> fieldGroups$value;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private boolean skipConditions$set;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private List<SkipConditionV1> skipConditions$value;
 
     @SuppressWarnings("all")
     @lombok.Generated
@@ -86,19 +113,38 @@ public class FormSectionV1 {
       return this;
     }
 
+    /**
+     * Bedingungen zum Überspringen des Abschnitts.
+     * Werden alle Bedingungen zu {@code true} ausgewertet, wird der Abschnitt übersprungen.
+     * Ansonsten wie gewohnt angezeigt.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public FormSectionV1.FormSectionV1Builder skipConditions(@NonNull final List<SkipConditionV1> skipConditions) {
+      if (skipConditions == null) {
+        throw new NullPointerException("skipConditions is marked non-null but is null");
+      }
+      this.skipConditions$value = skipConditions;
+      skipConditions$set = true;
+      return this;
+    }
+
     @SuppressWarnings("all")
     @lombok.Generated
     public FormSectionV1 build() {
       List<FieldGroupInterfaceV1> fieldGroups$value = this.fieldGroups$value;
       if (!this.fieldGroups$set) fieldGroups$value = FormSectionV1.$default$fieldGroups();
-      return new FormSectionV1(this.title, fieldGroups$value);
+      List<SkipConditionV1> skipConditions$value = this.skipConditions$value;
+      if (!this.skipConditions$set) skipConditions$value = FormSectionV1.$default$skipConditions();
+      return new FormSectionV1(this.title, fieldGroups$value, skipConditions$value);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "FormSectionV1.FormSectionV1Builder(title=" + this.title + ", fieldGroups$value=" + this.fieldGroups$value + ")";
+      return "FormSectionV1.FormSectionV1Builder(title=" + this.title + ", fieldGroups$value=" + this.fieldGroups$value + ", skipConditions$value=" + this.skipConditions$value + ")";
     }
   }
 
@@ -128,6 +174,18 @@ public class FormSectionV1 {
   }
 
   /**
+   * Bedingungen zum Überspringen des Abschnitts.
+   * Werden alle Bedingungen zu {@code true} ausgewertet, wird der Abschnitt übersprungen.
+   * Ansonsten wie gewohnt angezeigt.
+   */
+  @NonNull
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public List<SkipConditionV1> getSkipConditions() {
+    return this.skipConditions;
+  }
+
+  /**
    * Überschrift des Abschnitts.
    */
   @SuppressWarnings("all")
@@ -148,6 +206,20 @@ public class FormSectionV1 {
     this.fieldGroups = fieldGroups;
   }
 
+  /**
+   * Bedingungen zum Überspringen des Abschnitts.
+   * Werden alle Bedingungen zu {@code true} ausgewertet, wird der Abschnitt übersprungen.
+   * Ansonsten wie gewohnt angezeigt.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setSkipConditions(@NonNull final List<SkipConditionV1> skipConditions) {
+    if (skipConditions == null) {
+      throw new NullPointerException("skipConditions is marked non-null but is null");
+    }
+    this.skipConditions = skipConditions;
+  }
+
   @Override
   @SuppressWarnings("all")
   @lombok.Generated
@@ -162,6 +234,9 @@ public class FormSectionV1 {
     final Object this$fieldGroups = this.getFieldGroups();
     final Object other$fieldGroups = other.getFieldGroups();
     if (this$fieldGroups == null ? other$fieldGroups != null : !this$fieldGroups.equals(other$fieldGroups)) return false;
+    final Object this$skipConditions = this.getSkipConditions();
+    final Object other$skipConditions = other.getSkipConditions();
+    if (this$skipConditions == null ? other$skipConditions != null : !this$skipConditions.equals(other$skipConditions)) return false;
     return true;
   }
 
@@ -181,6 +256,8 @@ public class FormSectionV1 {
     result = result * PRIME + ($title == null ? 43 : $title.hashCode());
     final Object $fieldGroups = this.getFieldGroups();
     result = result * PRIME + ($fieldGroups == null ? 43 : $fieldGroups.hashCode());
+    final Object $skipConditions = this.getSkipConditions();
+    result = result * PRIME + ($skipConditions == null ? 43 : $skipConditions.hashCode());
     return result;
   }
 
@@ -188,6 +265,6 @@ public class FormSectionV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "FormSectionV1(title=" + this.getTitle() + ", fieldGroups=" + this.getFieldGroups() + ")";
+    return "FormSectionV1(title=" + this.getTitle() + ", fieldGroups=" + this.getFieldGroups() + ", skipConditions=" + this.getSkipConditions() + ")";
   }
 }
