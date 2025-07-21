@@ -20,7 +20,7 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
   @NonNull
   private String url;
   /**
-   * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix 'http://').
+   * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Präfix 'http://').
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
    */
   private String proxyHost;
@@ -181,7 +181,7 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
     }
 
     /**
-     * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix 'http://').
+     * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Präfix 'http://').
      * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
      * @return {@code this}.
      */
@@ -321,7 +321,7 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
   }
 
   /**
-   * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix 'http://').
+   * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Präfix 'http://').
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
    */
   @SuppressWarnings("all")
@@ -421,7 +421,7 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
   }
 
   /**
-   * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix 'http://').
+   * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Präfix 'http://').
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
    */
   @SuppressWarnings("all")
@@ -597,7 +597,7 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
    *
    * @param url URL, an die der Aufruf gesendet werden soll.
    * Für DOWNLOAD- und PDF-Felder kann ein ServiceAlias verwendet werden.
-   * @param proxyHost Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Prefix 'http://').
+   * @param proxyHost Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Präfix 'http://').
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
    * @param proxyPort Port der URL des Proxies, der zum Senden des Requests verwendet werden soll.
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.

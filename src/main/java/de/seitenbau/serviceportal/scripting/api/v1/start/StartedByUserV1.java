@@ -6,9 +6,10 @@ package de.seitenbau.serviceportal.scripting.api.v1.start;
  */
 public class StartedByUserV1 {
   /**
-   * ID des Benutzers, der den Prozess gestartet hat. Das ist die geprefixte Organisationskonto-ID,
-   * falls diese nicht vorhanden ist, die geprefixte User-ID oder, falls diese nicht vorhanden ist, die
-   * geprefixte Session-ID.
+   * ID des Benutzers, der den Prozess gestartet hat. Das ist die mit Präfix "userId:" versehene
+   * Organisationskonto-ID, falls diese nicht vorhanden ist, die mit Präfix "userId:" versehene
+   * User-ID oder, falls diese nicht vorhanden ist, die mit Präfix "sessionId:" versehene
+   * Session-ID.
    */
   private String userId;
   /**
@@ -66,9 +67,10 @@ public class StartedByUserV1 {
     }
 
     /**
-     * ID des Benutzers, der den Prozess gestartet hat. Das ist die geprefixte Organisationskonto-ID,
-     * falls diese nicht vorhanden ist, die geprefixte User-ID oder, falls diese nicht vorhanden ist, die
-     * geprefixte Session-ID.
+     * ID des Benutzers, der den Prozess gestartet hat. Das ist die mit Präfix "userId:" versehene
+     * Organisationskonto-ID, falls diese nicht vorhanden ist, die mit Präfix "userId:" versehene
+     * User-ID oder, falls diese nicht vorhanden ist, die mit Präfix "sessionId:" versehene
+     * Session-ID.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -155,9 +157,10 @@ public class StartedByUserV1 {
   }
 
   /**
-   * ID des Benutzers, der den Prozess gestartet hat. Das ist die geprefixte Organisationskonto-ID,
-   * falls diese nicht vorhanden ist, die geprefixte User-ID oder, falls diese nicht vorhanden ist, die
-   * geprefixte Session-ID.
+   * ID des Benutzers, der den Prozess gestartet hat. Das ist die mit Präfix "userId:" versehene
+   * Organisationskonto-ID, falls diese nicht vorhanden ist, die mit Präfix "userId:" versehene
+   * User-ID oder, falls diese nicht vorhanden ist, die mit Präfix "sessionId:" versehene
+   * Session-ID.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -279,9 +282,10 @@ public class StartedByUserV1 {
   /**
    * Creates a new {@code StartedByUserV1} instance.
    *
-   * @param userId ID des Benutzers, der den Prozess gestartet hat. Das ist die geprefixte Organisationskonto-ID,
-   * falls diese nicht vorhanden ist, die geprefixte User-ID oder, falls diese nicht vorhanden ist, die
-   * geprefixte Session-ID.
+   * @param userId ID des Benutzers, der den Prozess gestartet hat. Das ist die mit Präfix "userId:" versehene
+   * Organisationskonto-ID, falls diese nicht vorhanden ist, die mit Präfix "userId:" versehene
+   * User-ID oder, falls diese nicht vorhanden ist, die mit Präfix "sessionId:" versehene
+   * Session-ID.
    * @param displayName Lesbarer Name des Benutzers, der den Prozess gestartet hat.
    * War der Nutzer im Kontext eines Behörden- oder Organisationskontos eingeloggt, ist dieses Attribut der
    * Name dieses Behörden- bzw. Organisationskontos.

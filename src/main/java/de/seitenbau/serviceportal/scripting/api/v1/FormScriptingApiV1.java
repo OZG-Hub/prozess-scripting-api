@@ -15,7 +15,7 @@ import de.seitenbau.serviceportal.scripting.api.v1.form.validator.ExternalValida
 public interface FormScriptingApiV1
 {
   /**
-   * Gibt die Id des Formulars zurück in dem sich das auszuführende Skript befindet
+   * Gibt die Id des Formulars zurück, in dem sich das auszuführende Skript befindet.
    *
    * @return Id des Formulars
    */
@@ -45,7 +45,7 @@ public interface FormScriptingApiV1
   Class<?> getReturnType();
 
   /**
-   * Gibt die im {@link ScriptSourcePropertiesV1#scope} definierten Felder und deren Werte als Map zurück
+   * Gibt die im {@link ScriptSourcePropertiesV1#scope} definierten Felder und deren Werte als Map zurück.
    *
    * @return Map von Key zu Wert der definierten Felder
    */

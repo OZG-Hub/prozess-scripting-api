@@ -106,7 +106,7 @@ public class FormV1 {
   /**
    * Gibt die Feldgruppen-Instanz innerhalb dieses Formulars für die Gruppe mit der gegebenen ID mit dem
    * gegebenen Index zurück. Medien-Akkordeons können mit dieser Methode nicht abgerufen werden, da diese
-   * keie Instanzen haben.
+   * keine Instanzen haben.
    *
    * @param id ID einer Feldgruppe, nicht {@code null}
    * @param index Index einer Feldgruppeninstanz

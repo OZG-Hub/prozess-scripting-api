@@ -17,7 +17,11 @@ public class AdditionalProcessDataV1 {
   /**
    * Technischer Wert des Datums.
    */
-  private Object value;
+  private String value;
+  /**
+   * Unique identifier des Datums.
+   */
+  private String uri;
   /**
    * Angezeigter Wert des Datums.
    */
@@ -35,7 +39,10 @@ public class AdditionalProcessDataV1 {
     private String displayedName;
     @SuppressWarnings("all")
     @lombok.Generated
-    private Object value;
+    private String value;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private String uri;
     @SuppressWarnings("all")
     @lombok.Generated
     private String displayedValue;
@@ -73,8 +80,19 @@ public class AdditionalProcessDataV1 {
      */
     @SuppressWarnings("all")
     @lombok.Generated
-    public AdditionalProcessDataV1.AdditionalProcessDataV1Builder value(final Object value) {
+    public AdditionalProcessDataV1.AdditionalProcessDataV1Builder value(final String value) {
       this.value = value;
+      return this;
+    }
+
+    /**
+     * Unique identifier des Datums.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public AdditionalProcessDataV1.AdditionalProcessDataV1Builder uri(final String uri) {
+      this.uri = uri;
       return this;
     }
 
@@ -92,14 +110,14 @@ public class AdditionalProcessDataV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     public AdditionalProcessDataV1 build() {
-      return new AdditionalProcessDataV1(this.name, this.displayedName, this.value, this.displayedValue);
+      return new AdditionalProcessDataV1(this.name, this.displayedName, this.value, this.uri, this.displayedValue);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "AdditionalProcessDataV1.AdditionalProcessDataV1Builder(name=" + this.name + ", displayedName=" + this.displayedName + ", value=" + this.value + ", displayedValue=" + this.displayedValue + ")";
+      return "AdditionalProcessDataV1.AdditionalProcessDataV1Builder(name=" + this.name + ", displayedName=" + this.displayedName + ", value=" + this.value + ", uri=" + this.uri + ", displayedValue=" + this.displayedValue + ")";
     }
   }
 
@@ -132,8 +150,17 @@ public class AdditionalProcessDataV1 {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public Object getValue() {
+  public String getValue() {
     return this.value;
+  }
+
+  /**
+   * Unique identifier des Datums.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public String getUri() {
+    return this.uri;
   }
 
   /**
@@ -168,8 +195,17 @@ public class AdditionalProcessDataV1 {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public void setValue(final Object value) {
+  public void setValue(final String value) {
     this.value = value;
+  }
+
+  /**
+   * Unique identifier des Datums.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setUri(final String uri) {
+    this.uri = uri;
   }
 
   /**
@@ -198,6 +234,9 @@ public class AdditionalProcessDataV1 {
     final Object this$value = this.getValue();
     final Object other$value = other.getValue();
     if (this$value == null ? other$value != null : !this$value.equals(other$value)) return false;
+    final Object this$uri = this.getUri();
+    final Object other$uri = other.getUri();
+    if (this$uri == null ? other$uri != null : !this$uri.equals(other$uri)) return false;
     final Object this$displayedValue = this.getDisplayedValue();
     final Object other$displayedValue = other.getDisplayedValue();
     if (this$displayedValue == null ? other$displayedValue != null : !this$displayedValue.equals(other$displayedValue)) return false;
@@ -222,6 +261,8 @@ public class AdditionalProcessDataV1 {
     result = result * PRIME + ($displayedName == null ? 43 : $displayedName.hashCode());
     final Object $value = this.getValue();
     result = result * PRIME + ($value == null ? 43 : $value.hashCode());
+    final Object $uri = this.getUri();
+    result = result * PRIME + ($uri == null ? 43 : $uri.hashCode());
     final Object $displayedValue = this.getDisplayedValue();
     result = result * PRIME + ($displayedValue == null ? 43 : $displayedValue.hashCode());
     return result;
@@ -231,7 +272,7 @@ public class AdditionalProcessDataV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "AdditionalProcessDataV1(name=" + this.getName() + ", displayedName=" + this.getDisplayedName() + ", value=" + this.getValue() + ", displayedValue=" + this.getDisplayedValue() + ")";
+    return "AdditionalProcessDataV1(name=" + this.getName() + ", displayedName=" + this.getDisplayedName() + ", value=" + this.getValue() + ", uri=" + this.getUri() + ", displayedValue=" + this.getDisplayedValue() + ")";
   }
 
   @SuppressWarnings("all")
@@ -245,14 +286,16 @@ public class AdditionalProcessDataV1 {
    * @param name Technischer Name des Datums.
    * @param displayedName Angezeigter Name des Datums.
    * @param value Technischer Wert des Datums.
+   * @param uri Unique identifier des Datums.
    * @param displayedValue Angezeigter Wert des Datums.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public AdditionalProcessDataV1(final String name, final String displayedName, final Object value, final String displayedValue) {
+  public AdditionalProcessDataV1(final String name, final String displayedName, final String value, final String uri, final String displayedValue) {
     this.name = name;
     this.displayedName = displayedName;
     this.value = value;
+    this.uri = uri;
     this.displayedValue = displayedValue;
   }
 }

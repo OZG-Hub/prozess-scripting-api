@@ -9,7 +9,7 @@ import de.seitenbau.serviceportal.scripting.api.v1.form.FieldTypeV1;
 public class AdditionalDateConfigV1 implements AdditionalFieldConfigV1 {
   /**
    * Gibt an, ob ein Date-Picker angezeigt werden soll bei der Auswahl des Feldes oder nicht.
-   * true, wenn der grafische Picker des Felds unterdrueckt werden soll.
+   * true, wenn der grafische Picker des Felds unterdrückt werden soll.
    * Nur verwendbar mit formular-engine version 2.
    */
   private Boolean pickerDisabled;
@@ -27,7 +27,7 @@ public class AdditionalDateConfigV1 implements AdditionalFieldConfigV1 {
    * Creates a new {@code AdditionalDateConfigV1} instance.
    *
    * @param pickerDisabled Gibt an, ob ein Date-Picker angezeigt werden soll bei der Auswahl des Feldes oder nicht.
-   * true, wenn der grafische Picker des Felds unterdrueckt werden soll.
+   * true, wenn der grafische Picker des Felds unterdrückt werden soll.
    * Nur verwendbar mit formular-engine version 2.
    */
   @SuppressWarnings("all")
@@ -51,7 +51,7 @@ public class AdditionalDateConfigV1 implements AdditionalFieldConfigV1 {
 
     /**
      * Gibt an, ob ein Date-Picker angezeigt werden soll bei der Auswahl des Feldes oder nicht.
-     * true, wenn der grafische Picker des Felds unterdrueckt werden soll.
+     * true, wenn der grafische Picker des Felds unterdrückt werden soll.
      * Nur verwendbar mit formular-engine version 2.
      * @return {@code this}.
      */
@@ -84,7 +84,7 @@ public class AdditionalDateConfigV1 implements AdditionalFieldConfigV1 {
 
   /**
    * Gibt an, ob ein Date-Picker angezeigt werden soll bei der Auswahl des Feldes oder nicht.
-   * true, wenn der grafische Picker des Felds unterdrueckt werden soll.
+   * true, wenn der grafische Picker des Felds unterdrückt werden soll.
    * Nur verwendbar mit formular-engine version 2.
    */
   @SuppressWarnings("all")
@@ -95,7 +95,7 @@ public class AdditionalDateConfigV1 implements AdditionalFieldConfigV1 {
 
   /**
    * Gibt an, ob ein Date-Picker angezeigt werden soll bei der Auswahl des Feldes oder nicht.
-   * true, wenn der grafische Picker des Felds unterdrueckt werden soll.
+   * true, wenn der grafische Picker des Felds unterdrückt werden soll.
    * Nur verwendbar mit formular-engine version 2.
    */
   @SuppressWarnings("all")
