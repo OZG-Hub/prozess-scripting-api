@@ -301,6 +301,21 @@ public class FormFieldV1 implements Cloneable {
     return value instanceof FormFieldValueV1;
   }
 
+  public List<String> getFieldValueAsList() {
+    Object value = getFieldValue();
+    List<String> result = new ArrayList<>();
+    if (value instanceof List<?> listValue) {
+      listValue.forEach(val -> result.add(toStringOrNull(val)));
+    } else {
+      result.add(toStringOrNull(value));
+    }
+    return result;
+  }
+
+  private String toStringOrNull(Object value) {
+    return value != null ? value.toString() : null;
+  }
+
   /**
    * Gibt an, ob dieses Feld ausgefüllt ist.
    *

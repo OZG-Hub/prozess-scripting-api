@@ -2,7 +2,6 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.condition;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FieldGroupInstanceV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldV1;
@@ -24,17 +23,13 @@ public class ShowOnFieldValueNotInValuesConditionV1 extends FieldDisplayConditio
     if (field == null) {
       return false;
     }
-    Object fieldValue = field.getValue();
-    if (fieldValue == null) {
-      return !(values == null || values.contains(null));
+    if (field.getFieldValue() == null) {
+      return values != null && !values.contains(null);
     }
     if (values == null) {
       return true;
     }
-    if (fieldValue instanceof List) {
-      return ((List<?>) fieldValue).stream().anyMatch(value -> !values.contains(value == null ? null : value.toString()));
-    }
-    return !values.contains(fieldValue.toString());
+    return field.getFieldValueAsList().stream().noneMatch(value -> values.contains(value));
   }
 
   @SuppressWarnings("all")
