@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -305,15 +306,11 @@ public class FormFieldV1 implements Cloneable {
     Object value = getFieldValue();
     List<String> result = new ArrayList<>();
     if (value instanceof List<?> listValue) {
-      listValue.forEach(val -> result.add(toStringOrNull(val)));
+      listValue.forEach(val -> result.add(Objects.toString(val, null)));
     } else {
-      result.add(toStringOrNull(value));
+      result.add(Objects.toString(value, null));
     }
     return result;
-  }
-
-  private String toStringOrNull(Object value) {
-    return value != null ? value.toString() : null;
   }
 
   /**

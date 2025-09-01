@@ -5,6 +5,8 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.geomap;
  */
 public enum GDIKOutputTypeV1
 {
+  /** PNG */
   PNG,
+  /** JPEG */
   JPEG,
 }

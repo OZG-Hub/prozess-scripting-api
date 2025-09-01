@@ -13,6 +13,10 @@ public class StartedByUserV1 {
    */
   private String userId;
   /**
+   * Kontotyp des Benutzers, der den Prozess gestartet hat.
+   */
+  private ServicekontoContextTypeV1 servicekontoType;
+  /**
    * Lesbarer Name des Benutzers, der den Prozess gestartet hat.
    * War der Nutzer im Kontext eines Behörden- oder Organisationskontos eingeloggt, ist dieses Attribut der
    * Name dieses Behörden- bzw. Organisationskontos.
@@ -38,8 +42,16 @@ public class StartedByUserV1 {
    * Postfach-Handle des Benutzers, der den Prozess gestartet hat.
    * {@code null}, falls der Benutzer nicht eingeloggt war.
    * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   * @deprecated Anstelle dieses Feldes sollte das Feld {@link #postfach} verwendet werden.
    */
+  @Deprecated
   private String postfachHandle;
+  /**
+   * Postfach des Benutzers, der den Prozess gestartet hat.
+   * {@code null}, falls der Benutzer nicht eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   */
+  private PostfachV1 postfach;
 
 
   @SuppressWarnings("all")
@@ -48,6 +60,9 @@ public class StartedByUserV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     private String userId;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private ServicekontoContextTypeV1 servicekontoType;
     @SuppressWarnings("all")
     @lombok.Generated
     private String displayName;
@@ -60,6 +75,9 @@ public class StartedByUserV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     private String postfachHandle;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private PostfachV1 postfach;
 
     @SuppressWarnings("all")
     @lombok.Generated
@@ -77,6 +95,17 @@ public class StartedByUserV1 {
     @lombok.Generated
     public StartedByUserV1.StartedByUserV1Builder userId(final String userId) {
       this.userId = userId;
+      return this;
+    }
+
+    /**
+     * Kontotyp des Benutzers, der den Prozess gestartet hat.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public StartedByUserV1.StartedByUserV1Builder servicekontoType(final ServicekontoContextTypeV1 servicekontoType) {
+      this.servicekontoType = servicekontoType;
       return this;
     }
 
@@ -127,8 +156,10 @@ public class StartedByUserV1 {
      * Postfach-Handle des Benutzers, der den Prozess gestartet hat.
      * {@code null}, falls der Benutzer nicht eingeloggt war.
      * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+     * @deprecated Anstelle dieses Feldes sollte das Feld {@link #postfach} verwendet werden.
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
     @lombok.Generated
     public StartedByUserV1.StartedByUserV1Builder postfachHandle(final String postfachHandle) {
@@ -136,17 +167,30 @@ public class StartedByUserV1 {
       return this;
     }
 
+    /**
+     * Postfach des Benutzers, der den Prozess gestartet hat.
+     * {@code null}, falls der Benutzer nicht eingeloggt war.
+     * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public StartedByUserV1.StartedByUserV1Builder postfach(final PostfachV1 postfach) {
+      this.postfach = postfach;
+      return this;
+    }
+
     @SuppressWarnings("all")
     @lombok.Generated
     public StartedByUserV1 build() {
-      return new StartedByUserV1(this.userId, this.displayName, this.primaryName, this.secondaryName, this.postfachHandle);
+      return new StartedByUserV1(this.userId, this.servicekontoType, this.displayName, this.primaryName, this.secondaryName, this.postfachHandle, this.postfach);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "StartedByUserV1.StartedByUserV1Builder(userId=" + this.userId + ", displayName=" + this.displayName + ", primaryName=" + this.primaryName + ", secondaryName=" + this.secondaryName + ", postfachHandle=" + this.postfachHandle + ")";
+      return "StartedByUserV1.StartedByUserV1Builder(userId=" + this.userId + ", servicekontoType=" + this.servicekontoType + ", displayName=" + this.displayName + ", primaryName=" + this.primaryName + ", secondaryName=" + this.secondaryName + ", postfachHandle=" + this.postfachHandle + ", postfach=" + this.postfach + ")";
     }
   }
 
@@ -166,6 +210,15 @@ public class StartedByUserV1 {
   @lombok.Generated
   public String getUserId() {
     return this.userId;
+  }
+
+  /**
+   * Kontotyp des Benutzers, der den Prozess gestartet hat.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public ServicekontoContextTypeV1 getServicekontoType() {
+    return this.servicekontoType;
   }
 
   /**
@@ -209,18 +262,31 @@ public class StartedByUserV1 {
    * Postfach-Handle des Benutzers, der den Prozess gestartet hat.
    * {@code null}, falls der Benutzer nicht eingeloggt war.
    * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   * @deprecated Anstelle dieses Feldes sollte das Feld {@link #postfach} verwendet werden.
    */
+  @Deprecated
   @SuppressWarnings("all")
   @lombok.Generated
   public String getPostfachHandle() {
     return this.postfachHandle;
   }
 
+  /**
+   * Postfach des Benutzers, der den Prozess gestartet hat.
+   * {@code null}, falls der Benutzer nicht eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public PostfachV1 getPostfach() {
+    return this.postfach;
+  }
+
   @Override
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "StartedByUserV1(userId=" + this.getUserId() + ", displayName=" + this.getDisplayName() + ", primaryName=" + this.getPrimaryName() + ", secondaryName=" + this.getSecondaryName() + ", postfachHandle=" + this.getPostfachHandle() + ")";
+    return "StartedByUserV1(userId=" + this.getUserId() + ", servicekontoType=" + this.getServicekontoType() + ", displayName=" + this.getDisplayName() + ", primaryName=" + this.getPrimaryName() + ", secondaryName=" + this.getSecondaryName() + ", postfachHandle=" + this.getPostfachHandle() + ", postfach=" + this.getPostfach() + ")";
   }
 
   @Override
@@ -234,6 +300,9 @@ public class StartedByUserV1 {
     final Object this$userId = this.getUserId();
     final Object other$userId = other.getUserId();
     if (this$userId == null ? other$userId != null : !this$userId.equals(other$userId)) return false;
+    final Object this$servicekontoType = this.getServicekontoType();
+    final Object other$servicekontoType = other.getServicekontoType();
+    if (this$servicekontoType == null ? other$servicekontoType != null : !this$servicekontoType.equals(other$servicekontoType)) return false;
     final Object this$displayName = this.getDisplayName();
     final Object other$displayName = other.getDisplayName();
     if (this$displayName == null ? other$displayName != null : !this$displayName.equals(other$displayName)) return false;
@@ -246,6 +315,9 @@ public class StartedByUserV1 {
     final Object this$postfachHandle = this.getPostfachHandle();
     final Object other$postfachHandle = other.getPostfachHandle();
     if (this$postfachHandle == null ? other$postfachHandle != null : !this$postfachHandle.equals(other$postfachHandle)) return false;
+    final Object this$postfach = this.getPostfach();
+    final Object other$postfach = other.getPostfach();
+    if (this$postfach == null ? other$postfach != null : !this$postfach.equals(other$postfach)) return false;
     return true;
   }
 
@@ -263,6 +335,8 @@ public class StartedByUserV1 {
     int result = 1;
     final Object $userId = this.getUserId();
     result = result * PRIME + ($userId == null ? 43 : $userId.hashCode());
+    final Object $servicekontoType = this.getServicekontoType();
+    result = result * PRIME + ($servicekontoType == null ? 43 : $servicekontoType.hashCode());
     final Object $displayName = this.getDisplayName();
     result = result * PRIME + ($displayName == null ? 43 : $displayName.hashCode());
     final Object $primaryName = this.getPrimaryName();
@@ -271,6 +345,8 @@ public class StartedByUserV1 {
     result = result * PRIME + ($secondaryName == null ? 43 : $secondaryName.hashCode());
     final Object $postfachHandle = this.getPostfachHandle();
     result = result * PRIME + ($postfachHandle == null ? 43 : $postfachHandle.hashCode());
+    final Object $postfach = this.getPostfach();
+    result = result * PRIME + ($postfach == null ? 43 : $postfach.hashCode());
     return result;
   }
 
@@ -286,6 +362,7 @@ public class StartedByUserV1 {
    * Organisationskonto-ID, falls diese nicht vorhanden ist, die mit Präfix "userId:" versehene
    * User-ID oder, falls diese nicht vorhanden ist, die mit Präfix "sessionId:" versehene
    * Session-ID.
+   * @param servicekontoType Kontotyp des Benutzers, der den Prozess gestartet hat.
    * @param displayName Lesbarer Name des Benutzers, der den Prozess gestartet hat.
    * War der Nutzer im Kontext eines Behörden- oder Organisationskontos eingeloggt, ist dieses Attribut der
    * Name dieses Behörden- bzw. Organisationskontos.
@@ -302,14 +379,20 @@ public class StartedByUserV1 {
    * @param postfachHandle Postfach-Handle des Benutzers, der den Prozess gestartet hat.
    * {@code null}, falls der Benutzer nicht eingeloggt war.
    * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
+   * @deprecated Anstelle dieses Feldes sollte das Feld {@link #postfach} verwendet werden.
+   * @param postfach Postfach des Benutzers, der den Prozess gestartet hat.
+   * {@code null}, falls der Benutzer nicht eingeloggt war.
+   * Auf OZG-Hub auch {@code null}, falls es sich um einen servicekontolosen Prozess handelt.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public StartedByUserV1(final String userId, final String displayName, final String primaryName, final String secondaryName, final String postfachHandle) {
+  public StartedByUserV1(final String userId, final ServicekontoContextTypeV1 servicekontoType, final String displayName, final String primaryName, final String secondaryName, final String postfachHandle, final PostfachV1 postfach) {
     this.userId = userId;
+    this.servicekontoType = servicekontoType;
     this.displayName = displayName;
     this.primaryName = primaryName;
     this.secondaryName = secondaryName;
     this.postfachHandle = postfachHandle;
+    this.postfach = postfach;
   }
 }

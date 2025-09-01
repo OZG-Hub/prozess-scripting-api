@@ -13,9 +13,27 @@ public class RegisterTaskResultV1 {
    */
   private List<RegisterItemV1> registerItems;
   /**
-   * ob die Durchführung des Registeraufrufs erfolgreich war
+   * Status des abgeschlossenen Registertasks.
    */
-  private boolean successful;
+  private RegisterTaskResultStatusV1 status;
+  /**
+   * Liste von NOOTS-ErrorCodes (urn:xoev-de:xnachweis:codeliste:nootserrorcodes), falls die Registerdaten
+   * nicht erfolgreich ausgelesen werden konnten. Der {@link #status} ist in dem Fall
+   * {@link RegisterTaskResultStatusV1#ERROR}.
+   */
+  private List<String> errorCodes;
+
+  /**
+   * Ob der Registertask erfolgreich abgeschlossen wurde. Der Registertask wurde erfolgreich abgeschlossen,
+   * wenn die Registerdaten erfolgreich ausgelesen wurden. Diese stehen im Attribut {@link #registerItems} zur
+   * Verfügung.
+   *
+   * @return <code>true</code>, wenn die Registerdaten erfolgreich ausgelesen und der Task abgeschlossen
+   * wurde, sonst <code>false</code>
+   */
+  public boolean isSuccessful() {
+    return RegisterTaskResultStatusV1.SUCCESSFUL == status;
+  }
 
 
   @SuppressWarnings("all")
@@ -26,7 +44,10 @@ public class RegisterTaskResultV1 {
     private List<RegisterItemV1> registerItems;
     @SuppressWarnings("all")
     @lombok.Generated
-    private boolean successful;
+    private RegisterTaskResultStatusV1 status;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private List<String> errorCodes;
 
     @SuppressWarnings("all")
     @lombok.Generated
@@ -45,27 +66,40 @@ public class RegisterTaskResultV1 {
     }
 
     /**
-     * ob die Durchführung des Registeraufrufs erfolgreich war
+     * Status des abgeschlossenen Registertasks.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
     @lombok.Generated
-    public RegisterTaskResultV1.RegisterTaskResultV1Builder successful(final boolean successful) {
-      this.successful = successful;
+    public RegisterTaskResultV1.RegisterTaskResultV1Builder status(final RegisterTaskResultStatusV1 status) {
+      this.status = status;
+      return this;
+    }
+
+    /**
+     * Liste von NOOTS-ErrorCodes (urn:xoev-de:xnachweis:codeliste:nootserrorcodes), falls die Registerdaten
+     * nicht erfolgreich ausgelesen werden konnten. Der {@link #status} ist in dem Fall
+     * {@link RegisterTaskResultStatusV1#ERROR}.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public RegisterTaskResultV1.RegisterTaskResultV1Builder errorCodes(final List<String> errorCodes) {
+      this.errorCodes = errorCodes;
       return this;
     }
 
     @SuppressWarnings("all")
     @lombok.Generated
     public RegisterTaskResultV1 build() {
-      return new RegisterTaskResultV1(this.registerItems, this.successful);
+      return new RegisterTaskResultV1(this.registerItems, this.status, this.errorCodes);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "RegisterTaskResultV1.RegisterTaskResultV1Builder(registerItems=" + this.registerItems + ", successful=" + this.successful + ")";
+      return "RegisterTaskResultV1.RegisterTaskResultV1Builder(registerItems=" + this.registerItems + ", status=" + this.status + ", errorCodes=" + this.errorCodes + ")";
     }
   }
 
@@ -85,12 +119,23 @@ public class RegisterTaskResultV1 {
   }
 
   /**
-   * ob die Durchführung des Registeraufrufs erfolgreich war
+   * Status des abgeschlossenen Registertasks.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public boolean isSuccessful() {
-    return this.successful;
+  public RegisterTaskResultStatusV1 getStatus() {
+    return this.status;
+  }
+
+  /**
+   * Liste von NOOTS-ErrorCodes (urn:xoev-de:xnachweis:codeliste:nootserrorcodes), falls die Registerdaten
+   * nicht erfolgreich ausgelesen werden konnten. Der {@link #status} ist in dem Fall
+   * {@link RegisterTaskResultStatusV1#ERROR}.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public List<String> getErrorCodes() {
+    return this.errorCodes;
   }
 
   /**
@@ -103,12 +148,23 @@ public class RegisterTaskResultV1 {
   }
 
   /**
-   * ob die Durchführung des Registeraufrufs erfolgreich war
+   * Status des abgeschlossenen Registertasks.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public void setSuccessful(final boolean successful) {
-    this.successful = successful;
+  public void setStatus(final RegisterTaskResultStatusV1 status) {
+    this.status = status;
+  }
+
+  /**
+   * Liste von NOOTS-ErrorCodes (urn:xoev-de:xnachweis:codeliste:nootserrorcodes), falls die Registerdaten
+   * nicht erfolgreich ausgelesen werden konnten. Der {@link #status} ist in dem Fall
+   * {@link RegisterTaskResultStatusV1#ERROR}.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setErrorCodes(final List<String> errorCodes) {
+    this.errorCodes = errorCodes;
   }
 
   @Override
@@ -119,10 +175,15 @@ public class RegisterTaskResultV1 {
     if (!(o instanceof RegisterTaskResultV1)) return false;
     final RegisterTaskResultV1 other = (RegisterTaskResultV1) o;
     if (!other.canEqual((Object) this)) return false;
-    if (this.isSuccessful() != other.isSuccessful()) return false;
     final Object this$registerItems = this.getRegisterItems();
     final Object other$registerItems = other.getRegisterItems();
     if (this$registerItems == null ? other$registerItems != null : !this$registerItems.equals(other$registerItems)) return false;
+    final Object this$status = this.getStatus();
+    final Object other$status = other.getStatus();
+    if (this$status == null ? other$status != null : !this$status.equals(other$status)) return false;
+    final Object this$errorCodes = this.getErrorCodes();
+    final Object other$errorCodes = other.getErrorCodes();
+    if (this$errorCodes == null ? other$errorCodes != null : !this$errorCodes.equals(other$errorCodes)) return false;
     return true;
   }
 
@@ -138,9 +199,12 @@ public class RegisterTaskResultV1 {
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
-    result = result * PRIME + (this.isSuccessful() ? 79 : 97);
     final Object $registerItems = this.getRegisterItems();
     result = result * PRIME + ($registerItems == null ? 43 : $registerItems.hashCode());
+    final Object $status = this.getStatus();
+    result = result * PRIME + ($status == null ? 43 : $status.hashCode());
+    final Object $errorCodes = this.getErrorCodes();
+    result = result * PRIME + ($errorCodes == null ? 43 : $errorCodes.hashCode());
     return result;
   }
 
@@ -148,7 +212,7 @@ public class RegisterTaskResultV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "RegisterTaskResultV1(registerItems=" + this.getRegisterItems() + ", successful=" + this.isSuccessful() + ")";
+    return "RegisterTaskResultV1(registerItems=" + this.getRegisterItems() + ", status=" + this.getStatus() + ", errorCodes=" + this.getErrorCodes() + ")";
   }
 
   @SuppressWarnings("all")
@@ -160,12 +224,16 @@ public class RegisterTaskResultV1 {
    * Creates a new {@code RegisterTaskResultV1} instance.
    *
    * @param registerItems Liste der abgerufenen Nachweise.
-   * @param successful ob die Durchführung des Registeraufrufs erfolgreich war
+   * @param status Status des abgeschlossenen Registertasks.
+   * @param errorCodes Liste von NOOTS-ErrorCodes (urn:xoev-de:xnachweis:codeliste:nootserrorcodes), falls die Registerdaten
+   * nicht erfolgreich ausgelesen werden konnten. Der {@link #status} ist in dem Fall
+   * {@link RegisterTaskResultStatusV1#ERROR}.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public RegisterTaskResultV1(final List<RegisterItemV1> registerItems, final boolean successful) {
+  public RegisterTaskResultV1(final List<RegisterItemV1> registerItems, final RegisterTaskResultStatusV1 status, final List<String> errorCodes) {
     this.registerItems = registerItems;
-    this.successful = successful;
+    this.status = status;
+    this.errorCodes = errorCodes;
   }
 }
