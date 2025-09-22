@@ -19,7 +19,6 @@ public class StartParameterV1 {
   private Date startTime;
   /**
    * Informationen über den Benutzer, der den Prozess gestartet hat.
-   * {@code null}, wenn der Benutzer nicht eingeloggt war.
    */
   private StartedByUserV1 startedByUser;
   /**
@@ -144,7 +143,6 @@ public class StartParameterV1 {
 
     /**
      * Informationen über den Benutzer, der den Prozess gestartet hat.
-     * {@code null}, wenn der Benutzer nicht eingeloggt war.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -321,7 +319,6 @@ public class StartParameterV1 {
 
   /**
    * Informationen über den Benutzer, der den Prozess gestartet hat.
-   * {@code null}, wenn der Benutzer nicht eingeloggt war.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -548,7 +545,6 @@ public class StartParameterV1 {
    *
    * @param startTime Zeitpunkt an dem der Prozess gestartet wurde.
    * @param startedByUser Informationen über den Benutzer, der den Prozess gestartet hat.
-   * {@code null}, wenn der Benutzer nicht eingeloggt war.
    * @param processName Name des Prozesses aus der BPMN-Datei.
    * @param leistung Leistung.
    * {@code null}, wenn keine Leistung definiert wurde.

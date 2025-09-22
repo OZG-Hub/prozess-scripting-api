@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 /**
- * Liste von Prozessmodellen mit dem Namen des Prozessmodels, Namen der Versionen
+ * Liste von Prozessmodellen mit dem Namen des Prozessmodells, Namen der Versionen
  * und IDs der vorhanden BPMN Dateien.
  *
  * @see ProcessModelV1

@@ -7,17 +7,17 @@ import de.seitenbau.serviceportal.scripting.api.v1.general.VersionNameV1;
 
 /**
  * Enthält Informationen über den Namen, die verfügbaren Versionsnamen und die IDs der BPMN Dateien
- * eines Prozessmodels. Wird verwendet als Eintrag in einer Liste von Prozessmodellen.
+ * eines Prozessmodells. Wird verwendet als Eintrag in einer Liste von Prozessmodellen.
  *
  * @see ProcessModelListV1
  */
 public class ProcessModelV1 {
   /**
-   * Der Name des Prozessmodels.
+   * Der Name des Prozessmodells.
    */
   private String name;
   /**
-   * Eine Map mit den verfügbaren Versionen dieses Prozessmodels als Key
+   * Eine Map mit den verfügbaren Versionen dieses Prozessmodells als Key
    * und den Id's der dazugehörigen BPMN Dateien als Value.
    */
   private Map<VersionNameV1, List<BpmnModelIdV1>> versions;
@@ -39,7 +39,7 @@ public class ProcessModelV1 {
     }
 
     /**
-     * Der Name des Prozessmodels.
+     * Der Name des Prozessmodells.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -50,7 +50,7 @@ public class ProcessModelV1 {
     }
 
     /**
-     * Eine Map mit den verfügbaren Versionen dieses Prozessmodels als Key
+     * Eine Map mit den verfügbaren Versionen dieses Prozessmodells als Key
      * und den Id's der dazugehörigen BPMN Dateien als Value.
      * @return {@code this}.
      */
@@ -82,7 +82,7 @@ public class ProcessModelV1 {
   }
 
   /**
-   * Der Name des Prozessmodels.
+   * Der Name des Prozessmodells.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -91,7 +91,7 @@ public class ProcessModelV1 {
   }
 
   /**
-   * Eine Map mit den verfügbaren Versionen dieses Prozessmodels als Key
+   * Eine Map mit den verfügbaren Versionen dieses Prozessmodells als Key
    * und den Id's der dazugehörigen BPMN Dateien als Value.
    */
   @SuppressWarnings("all")
@@ -101,7 +101,7 @@ public class ProcessModelV1 {
   }
 
   /**
-   * Der Name des Prozessmodels.
+   * Der Name des Prozessmodells.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -110,7 +110,7 @@ public class ProcessModelV1 {
   }
 
   /**
-   * Eine Map mit den verfügbaren Versionen dieses Prozessmodels als Key
+   * Eine Map mit den verfügbaren Versionen dieses Prozessmodells als Key
    * und den Id's der dazugehörigen BPMN Dateien als Value.
    */
   @SuppressWarnings("all")
@@ -170,8 +170,8 @@ public class ProcessModelV1 {
   /**
    * Creates a new {@code ProcessModelV1} instance.
    *
-   * @param name Der Name des Prozessmodels.
-   * @param versions Eine Map mit den verfügbaren Versionen dieses Prozessmodels als Key
+   * @param name Der Name des Prozessmodells.
+   * @param versions Eine Map mit den verfügbaren Versionen dieses Prozessmodells als Key
    * und den Id's der dazugehörigen BPMN Dateien als Value.
    */
   @SuppressWarnings("all")

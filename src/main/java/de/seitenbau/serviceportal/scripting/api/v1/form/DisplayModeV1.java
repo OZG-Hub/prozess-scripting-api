@@ -2,18 +2,21 @@ package de.seitenbau.serviceportal.scripting.api.v1.form;
 
 /**
  * Typen von Darstellungsmedien.
- * @deprecated Stattdessen 'renderFor' in 'FormFieldV1' und 'DisplayModeV1' verwenden.
  */
-@Deprecated
-public enum RenderMediumV1
+public enum DisplayModeV1
 {
+  /**
+   * Die Formular-Ansicht von Onlinediensten.
+   */
+  FORM,
+
   /**
    * Printmedien (PDF, Druckansicht, ...).
    */
   PDF,
 
   /**
-   * Die Formular-Ansicht von Onlinediensten.
+   * Zusammenfassungs-Seite.
    */
-  FORM
+  SUBMIT_PAGE;
 }

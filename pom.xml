@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.seitenbau.serviceportal</groupId>
   <artifactId>prozess-scripting-api</artifactId>
-  <version>1.198.3</version>
+  <version>1.199.6</version>
   <packaging>jar</packaging>
 
   <name>prozess-scripting-api</name>
@@ -15,7 +15,7 @@
   <licenses>
     <license>
       <name>The Apache License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
     </license>
   </licenses>
 
@@ -50,7 +50,7 @@
     </spotbugs.excludeFilterFile>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>17</java.version>
-    <lombok.version>1.18.38</lombok.version>
+    <lombok.version>1.18.40</lombok.version>
     <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
     <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
     <jakarta.validation-api.version>2.0.2</jakarta.validation-api.version>
@@ -63,7 +63,6 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven-compiler-plugin.version}</version>
         <configuration>

@@ -27,6 +27,10 @@ public class RegisterTaskConfigV1 {
    */
   private String verarbeitungszweck;
   /**
+   * Vorhaltedauer der Protokolle des Nachweisabrufs.
+   */
+  private EvidenceRequestComplianceLogRetentionPeriodV1 evidenceRequestComplianceLogRetentionPeriod;
+  /**
    * Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung persönlichen und weiteren Daten im Task.
    */
   private ConfirmProcessDataUsageConfigV1 confirmProcessDataUsageConfig;
@@ -54,6 +58,9 @@ public class RegisterTaskConfigV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     private String verarbeitungszweck;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private EvidenceRequestComplianceLogRetentionPeriodV1 evidenceRequestComplianceLogRetentionPeriod;
     @SuppressWarnings("all")
     @lombok.Generated
     private ConfirmProcessDataUsageConfigV1 confirmProcessDataUsageConfig;
@@ -122,6 +129,17 @@ public class RegisterTaskConfigV1 {
     }
 
     /**
+     * Vorhaltedauer der Protokolle des Nachweisabrufs.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public RegisterTaskConfigV1.RegisterTaskConfigV1Builder evidenceRequestComplianceLogRetentionPeriod(final EvidenceRequestComplianceLogRetentionPeriodV1 evidenceRequestComplianceLogRetentionPeriod) {
+      this.evidenceRequestComplianceLogRetentionPeriod = evidenceRequestComplianceLogRetentionPeriod;
+      return this;
+    }
+
+    /**
      * Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung persönlichen und weiteren Daten im Task.
      * @return {@code this}.
      */
@@ -146,14 +164,14 @@ public class RegisterTaskConfigV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     public RegisterTaskConfigV1 build() {
-      return new RegisterTaskConfigV1(this.evidenceType, this.componentId, this.ars, this.rechtsgrundlage, this.verarbeitungszweck, this.confirmProcessDataUsageConfig, this.confirmRegisterDataUsageConfig);
+      return new RegisterTaskConfigV1(this.evidenceType, this.componentId, this.ars, this.rechtsgrundlage, this.verarbeitungszweck, this.evidenceRequestComplianceLogRetentionPeriod, this.confirmProcessDataUsageConfig, this.confirmRegisterDataUsageConfig);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "RegisterTaskConfigV1.RegisterTaskConfigV1Builder(evidenceType=" + this.evidenceType + ", componentId=" + this.componentId + ", ars=" + this.ars + ", rechtsgrundlage=" + this.rechtsgrundlage + ", verarbeitungszweck=" + this.verarbeitungszweck + ", confirmProcessDataUsageConfig=" + this.confirmProcessDataUsageConfig + ", confirmRegisterDataUsageConfig=" + this.confirmRegisterDataUsageConfig + ")";
+      return "RegisterTaskConfigV1.RegisterTaskConfigV1Builder(evidenceType=" + this.evidenceType + ", componentId=" + this.componentId + ", ars=" + this.ars + ", rechtsgrundlage=" + this.rechtsgrundlage + ", verarbeitungszweck=" + this.verarbeitungszweck + ", evidenceRequestComplianceLogRetentionPeriod=" + this.evidenceRequestComplianceLogRetentionPeriod + ", confirmProcessDataUsageConfig=" + this.confirmProcessDataUsageConfig + ", confirmRegisterDataUsageConfig=" + this.confirmRegisterDataUsageConfig + ")";
     }
   }
 
@@ -206,6 +224,15 @@ public class RegisterTaskConfigV1 {
   @lombok.Generated
   public String getVerarbeitungszweck() {
     return this.verarbeitungszweck;
+  }
+
+  /**
+   * Vorhaltedauer der Protokolle des Nachweisabrufs.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public EvidenceRequestComplianceLogRetentionPeriodV1 getEvidenceRequestComplianceLogRetentionPeriod() {
+    return this.evidenceRequestComplianceLogRetentionPeriod;
   }
 
   /**
@@ -272,6 +299,15 @@ public class RegisterTaskConfigV1 {
   }
 
   /**
+   * Vorhaltedauer der Protokolle des Nachweisabrufs.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setEvidenceRequestComplianceLogRetentionPeriod(final EvidenceRequestComplianceLogRetentionPeriodV1 evidenceRequestComplianceLogRetentionPeriod) {
+    this.evidenceRequestComplianceLogRetentionPeriod = evidenceRequestComplianceLogRetentionPeriod;
+  }
+
+  /**
    * Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung persönlichen und weiteren Daten im Task.
    */
   @SuppressWarnings("all")
@@ -312,6 +348,9 @@ public class RegisterTaskConfigV1 {
     final Object this$verarbeitungszweck = this.getVerarbeitungszweck();
     final Object other$verarbeitungszweck = other.getVerarbeitungszweck();
     if (this$verarbeitungszweck == null ? other$verarbeitungszweck != null : !this$verarbeitungszweck.equals(other$verarbeitungszweck)) return false;
+    final Object this$evidenceRequestComplianceLogRetentionPeriod = this.getEvidenceRequestComplianceLogRetentionPeriod();
+    final Object other$evidenceRequestComplianceLogRetentionPeriod = other.getEvidenceRequestComplianceLogRetentionPeriod();
+    if (this$evidenceRequestComplianceLogRetentionPeriod == null ? other$evidenceRequestComplianceLogRetentionPeriod != null : !this$evidenceRequestComplianceLogRetentionPeriod.equals(other$evidenceRequestComplianceLogRetentionPeriod)) return false;
     final Object this$confirmProcessDataUsageConfig = this.getConfirmProcessDataUsageConfig();
     final Object other$confirmProcessDataUsageConfig = other.getConfirmProcessDataUsageConfig();
     if (this$confirmProcessDataUsageConfig == null ? other$confirmProcessDataUsageConfig != null : !this$confirmProcessDataUsageConfig.equals(other$confirmProcessDataUsageConfig)) return false;
@@ -343,6 +382,8 @@ public class RegisterTaskConfigV1 {
     result = result * PRIME + ($rechtsgrundlage == null ? 43 : $rechtsgrundlage.hashCode());
     final Object $verarbeitungszweck = this.getVerarbeitungszweck();
     result = result * PRIME + ($verarbeitungszweck == null ? 43 : $verarbeitungszweck.hashCode());
+    final Object $evidenceRequestComplianceLogRetentionPeriod = this.getEvidenceRequestComplianceLogRetentionPeriod();
+    result = result * PRIME + ($evidenceRequestComplianceLogRetentionPeriod == null ? 43 : $evidenceRequestComplianceLogRetentionPeriod.hashCode());
     final Object $confirmProcessDataUsageConfig = this.getConfirmProcessDataUsageConfig();
     result = result * PRIME + ($confirmProcessDataUsageConfig == null ? 43 : $confirmProcessDataUsageConfig.hashCode());
     final Object $confirmRegisterDataUsageConfig = this.getConfirmRegisterDataUsageConfig();
@@ -354,7 +395,7 @@ public class RegisterTaskConfigV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "RegisterTaskConfigV1(evidenceType=" + this.getEvidenceType() + ", componentId=" + this.getComponentId() + ", ars=" + this.getArs() + ", rechtsgrundlage=" + this.getRechtsgrundlage() + ", verarbeitungszweck=" + this.getVerarbeitungszweck() + ", confirmProcessDataUsageConfig=" + this.getConfirmProcessDataUsageConfig() + ", confirmRegisterDataUsageConfig=" + this.getConfirmRegisterDataUsageConfig() + ")";
+    return "RegisterTaskConfigV1(evidenceType=" + this.getEvidenceType() + ", componentId=" + this.getComponentId() + ", ars=" + this.getArs() + ", rechtsgrundlage=" + this.getRechtsgrundlage() + ", verarbeitungszweck=" + this.getVerarbeitungszweck() + ", evidenceRequestComplianceLogRetentionPeriod=" + this.getEvidenceRequestComplianceLogRetentionPeriod() + ", confirmProcessDataUsageConfig=" + this.getConfirmProcessDataUsageConfig() + ", confirmRegisterDataUsageConfig=" + this.getConfirmRegisterDataUsageConfig() + ")";
   }
 
   @SuppressWarnings("all")
@@ -370,17 +411,19 @@ public class RegisterTaskConfigV1 {
    * @param ars Amtlicher Regionalschlüssel zur Bestimmung der Zuständigkeit.
    * @param rechtsgrundlage Rechtsgrundlage.
    * @param verarbeitungszweck Verarbeitungszweck.
+   * @param evidenceRequestComplianceLogRetentionPeriod Vorhaltedauer der Protokolle des Nachweisabrufs.
    * @param confirmProcessDataUsageConfig Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung persönlichen und weiteren Daten im Task.
    * @param confirmRegisterDataUsageConfig Objekt mit den Texten der Ansicht zur Bestätigung der Verwendung des Nachweises im Task.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public RegisterTaskConfigV1(final String evidenceType, final String componentId, final String ars, final String rechtsgrundlage, final String verarbeitungszweck, final ConfirmProcessDataUsageConfigV1 confirmProcessDataUsageConfig, final ConfirmRegisterDataUsageConfigV1 confirmRegisterDataUsageConfig) {
+  public RegisterTaskConfigV1(final String evidenceType, final String componentId, final String ars, final String rechtsgrundlage, final String verarbeitungszweck, final EvidenceRequestComplianceLogRetentionPeriodV1 evidenceRequestComplianceLogRetentionPeriod, final ConfirmProcessDataUsageConfigV1 confirmProcessDataUsageConfig, final ConfirmRegisterDataUsageConfigV1 confirmRegisterDataUsageConfig) {
     this.evidenceType = evidenceType;
     this.componentId = componentId;
     this.ars = ars;
     this.rechtsgrundlage = rechtsgrundlage;
     this.verarbeitungszweck = verarbeitungszweck;
+    this.evidenceRequestComplianceLogRetentionPeriod = evidenceRequestComplianceLogRetentionPeriod;
     this.confirmProcessDataUsageConfig = confirmProcessDataUsageConfig;
     this.confirmRegisterDataUsageConfig = confirmRegisterDataUsageConfig;
   }
