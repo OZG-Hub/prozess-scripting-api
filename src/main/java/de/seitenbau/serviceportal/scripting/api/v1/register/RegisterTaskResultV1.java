@@ -28,8 +28,8 @@ public class RegisterTaskResultV1 {
    * wenn die Registerdaten erfolgreich ausgelesen wurden. Diese stehen im Attribut {@link #registerItems} zur
    * Verfügung.
    *
-   * @return <code>true</code>, wenn die Registerdaten erfolgreich ausgelesen und der Task abgeschlossen
-   * wurde, sonst <code>false</code>
+   * @return {@code true} wenn die Registerdaten erfolgreich ausgelesen und der Task abgeschlossen
+   * wurde, sonst {@code false}
    */
   public boolean isSuccessful() {
     return RegisterTaskResultStatusV1.SUCCESSFUL == status;

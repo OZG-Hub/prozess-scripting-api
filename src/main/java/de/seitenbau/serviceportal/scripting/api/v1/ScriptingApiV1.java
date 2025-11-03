@@ -71,10 +71,12 @@ public interface ScriptingApiV1
    * <b>Hinweis zu unterstützten Typen:</b>
    * <br>
    * Nicht alle Typen von Werten können gespeichert werden. So können unter anderem keine mehrdimensionalen
-   * Arrays und beispielsweise auch keine Daten vom Typ {@link java.time.Instant} gespeichert werden.
-   * Primitive Datentypen, Klassen der Scripting-API, Klassen der Datentypen von Feldwerten, sowie
-   * eindimensionale Arrays, Listen, Sets und Maps dieser Typen können geschrieben werden. Klassen der
-   * formular-api oder api-common (z.B. FormAndMapping oder BinaryContent) können nicht gespeichert werden.
+   * Arrays gespeichert werden. Primitive Datentypen, Klassen der Scripting-API, Klassen der Datentypen von
+   * Feldwerten, sowie die Klassen im {@code java.time}-Package (z.B. {@link java.time.LocalDate LocalDate},
+   * {@link java.time.LocalTime LocalTime} und {@link java.time.LocalDateTime LocalDateTime}),
+   * {@link java.util.Calendar Calendar}, eindimensionale Arrays, Listen, Sets und Maps dieser Typen können
+   * geschrieben werden. Klassen der formular-api oder api-common (z.B. FormAndMapping oder BinaryContent)
+   * können nicht gespeichert werden.
    * <p>
    * <b>Hinweis zu Typumwandlungen:</b>
    * <br>

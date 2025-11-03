@@ -15,7 +15,7 @@ public class FitConnectReplyChannelV1 {
   /**
    * Liste von eindeutigen Referenzen auf den zu verwendenden Datenaustauschstandard
    * (einschließlich der Version) mittels der offiziellen URI des Datenaustauschstandards. Zum Beispiel
-   * <code>urn:xoev-de:bmk:standard:xbau_2.4</code>.
+   * {@code urn:xoev-de:bmk:standard:xbau_2.4}.
    * <br />
    * Die Liste muss mindestens ein Element enthalten, damit es am FitConnectSubmissionService verwendet
    * werden kann.
@@ -38,7 +38,7 @@ public class FitConnectReplyChannelV1 {
     /**
      * Liste von eindeutigen Referenzen auf den zu verwendenden Datenaustauschstandard
      * (einschließlich der Version) mittels der offiziellen URI des Datenaustauschstandards. Zum Beispiel
-     * <code>urn:xoev-de:bmk:standard:xbau_2.4</code>.
+     * {@code urn:xoev-de:bmk:standard:xbau_2.4}.
      * <br />
      * Die Liste muss mindestens ein Element enthalten, damit es am FitConnectSubmissionService verwendet
      * werden kann.
@@ -74,7 +74,7 @@ public class FitConnectReplyChannelV1 {
   /**
    * Liste von eindeutigen Referenzen auf den zu verwendenden Datenaustauschstandard
    * (einschließlich der Version) mittels der offiziellen URI des Datenaustauschstandards. Zum Beispiel
-   * <code>urn:xoev-de:bmk:standard:xbau_2.4</code>.
+   * {@code urn:xoev-de:bmk:standard:xbau_2.4}.
    * <br />
    * Die Liste muss mindestens ein Element enthalten, damit es am FitConnectSubmissionService verwendet
    * werden kann.
@@ -88,7 +88,7 @@ public class FitConnectReplyChannelV1 {
   /**
    * Liste von eindeutigen Referenzen auf den zu verwendenden Datenaustauschstandard
    * (einschließlich der Version) mittels der offiziellen URI des Datenaustauschstandards. Zum Beispiel
-   * <code>urn:xoev-de:bmk:standard:xbau_2.4</code>.
+   * {@code urn:xoev-de:bmk:standard:xbau_2.4}.
    * <br />
    * Die Liste muss mindestens ein Element enthalten, damit es am FitConnectSubmissionService verwendet
    * werden kann.
@@ -147,7 +147,7 @@ public class FitConnectReplyChannelV1 {
    *
    * @param processStandards Liste von eindeutigen Referenzen auf den zu verwendenden Datenaustauschstandard
    * (einschließlich der Version) mittels der offiziellen URI des Datenaustauschstandards. Zum Beispiel
-   * <code>urn:xoev-de:bmk:standard:xbau_2.4</code>.
+   * {@code urn:xoev-de:bmk:standard:xbau_2.4}.
    * <br />
    * Die Liste muss mindestens ein Element enthalten, damit es am FitConnectSubmissionService verwendet
    * werden kann.

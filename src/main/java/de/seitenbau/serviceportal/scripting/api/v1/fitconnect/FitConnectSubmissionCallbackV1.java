@@ -22,7 +22,7 @@ public class FitConnectSubmissionCallbackV1 {
   private String eventType;
   /**
    * Die Daten der Antwort.
-   * Nur gefüllt, falls der eventType https://schema.fitko.de/fit-connect/events/submit-reply ist
+   * Nur gefüllt, falls der eventType {@code https://schema.fitko.de/fit-connect/events/submit-reply} ist
    */
   private List<FitConnectReplyV1> replies;
 
@@ -84,7 +84,7 @@ public class FitConnectSubmissionCallbackV1 {
 
     /**
      * Die Daten der Antwort.
-     * Nur gefüllt, falls der eventType https://schema.fitko.de/fit-connect/events/submit-reply ist
+     * Nur gefüllt, falls der eventType {@code https://schema.fitko.de/fit-connect/events/submit-reply} ist
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -144,7 +144,7 @@ public class FitConnectSubmissionCallbackV1 {
 
   /**
    * Die Daten der Antwort.
-   * Nur gefüllt, falls der eventType https://schema.fitko.de/fit-connect/events/submit-reply ist
+   * Nur gefüllt, falls der eventType {@code https://schema.fitko.de/fit-connect/events/submit-reply} ist
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -218,7 +218,7 @@ public class FitConnectSubmissionCallbackV1 {
    * @param eventType Typ des Events des Callbacks. Mögliche Typen siehe
    * <a href="https://docs.fitko.de/fit-connect/docs/getting-started/event-log/events">EventTypen</a>
    * @param replies Die Daten der Antwort.
-   * Nur gefüllt, falls der eventType https://schema.fitko.de/fit-connect/events/submit-reply ist
+   * Nur gefüllt, falls der eventType {@code https://schema.fitko.de/fit-connect/events/submit-reply} ist
    */
   @SuppressWarnings("all")
   @lombok.Generated

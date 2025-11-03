@@ -6,16 +6,21 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.content;
  */
 public class BinaryContentV1 {
   /**
-   * Ein Key, welcher zur Identifikation dieses Dokuments verwendet werden kann. Wird dynamisch erzeugt.
+   * Das Attribut wird nicht mehr verwendet und ist bei von Antragstellern hochgeladenen Dateien immer
+   * {@code null}.
    */
+  @Deprecated(since = "Release 1.201")
   protected String key;
   /**
-   * Der Dateiname der vom Nutzer hochgeladenen Datei.
+   * Der Dateiname, inklusive Dateiendung, der vom Nutzer hochgeladenen Datei.
+   * Zum Beispiel {@code Bescheinigung.pdf}.
    */
   protected String uploadedFilename;
   /**
-   * Der Anzeigename.
+   * Das Attribut wird nicht mehr verwendet und ist bei von Antragstellern hochgeladenen Dateien immer
+   * {@code null}.
    */
+  @Deprecated(since = "Release 1.201")
   protected String label;
   /**
    * Der Content-Type der Daten.
@@ -59,9 +64,11 @@ public class BinaryContentV1 {
     private byte[] data;
 
     /**
-     * Ein Key, welcher zur Identifikation dieses Dokuments verwendet werden kann. Wird dynamisch erzeugt.
+     * Das Attribut wird nicht mehr verwendet und ist bei von Antragstellern hochgeladenen Dateien immer
+     * {@code null}.
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
     @lombok.Generated
     public B key(final String key) {
@@ -70,7 +77,8 @@ public class BinaryContentV1 {
     }
 
     /**
-     * Der Dateiname der vom Nutzer hochgeladenen Datei.
+     * Der Dateiname, inklusive Dateiendung, der vom Nutzer hochgeladenen Datei.
+     * Zum Beispiel {@code Bescheinigung.pdf}.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -81,9 +89,11 @@ public class BinaryContentV1 {
     }
 
     /**
-     * Der Anzeigename.
+     * Das Attribut wird nicht mehr verwendet und ist bei von Antragstellern hochgeladenen Dateien immer
+     * {@code null}.
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
     @lombok.Generated
     public B label(final String label) {
@@ -170,8 +180,10 @@ public class BinaryContentV1 {
   }
 
   /**
-   * Ein Key, welcher zur Identifikation dieses Dokuments verwendet werden kann. Wird dynamisch erzeugt.
+   * Das Attribut wird nicht mehr verwendet und ist bei von Antragstellern hochgeladenen Dateien immer
+   * {@code null}.
    */
+  @Deprecated
   @SuppressWarnings("all")
   @lombok.Generated
   public String getKey() {
@@ -179,7 +191,8 @@ public class BinaryContentV1 {
   }
 
   /**
-   * Der Dateiname der vom Nutzer hochgeladenen Datei.
+   * Der Dateiname, inklusive Dateiendung, der vom Nutzer hochgeladenen Datei.
+   * Zum Beispiel {@code Bescheinigung.pdf}.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -188,8 +201,10 @@ public class BinaryContentV1 {
   }
 
   /**
-   * Der Anzeigename.
+   * Das Attribut wird nicht mehr verwendet und ist bei von Antragstellern hochgeladenen Dateien immer
+   * {@code null}.
    */
+  @Deprecated
   @SuppressWarnings("all")
   @lombok.Generated
   public String getLabel() {
@@ -215,8 +230,10 @@ public class BinaryContentV1 {
   }
 
   /**
-   * Ein Key, welcher zur Identifikation dieses Dokuments verwendet werden kann. Wird dynamisch erzeugt.
+   * Das Attribut wird nicht mehr verwendet und ist bei von Antragstellern hochgeladenen Dateien immer
+   * {@code null}.
    */
+  @Deprecated
   @SuppressWarnings("all")
   @lombok.Generated
   public void setKey(final String key) {
@@ -224,7 +241,8 @@ public class BinaryContentV1 {
   }
 
   /**
-   * Der Dateiname der vom Nutzer hochgeladenen Datei.
+   * Der Dateiname, inklusive Dateiendung, der vom Nutzer hochgeladenen Datei.
+   * Zum Beispiel {@code Bescheinigung.pdf}.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -233,8 +251,10 @@ public class BinaryContentV1 {
   }
 
   /**
-   * Der Anzeigename.
+   * Das Attribut wird nicht mehr verwendet und ist bei von Antragstellern hochgeladenen Dateien immer
+   * {@code null}.
    */
+  @Deprecated
   @SuppressWarnings("all")
   @lombok.Generated
   public void setLabel(final String label) {
@@ -274,9 +294,12 @@ public class BinaryContentV1 {
   /**
    * Creates a new {@code BinaryContentV1} instance.
    *
-   * @param key Ein Key, welcher zur Identifikation dieses Dokuments verwendet werden kann. Wird dynamisch erzeugt.
-   * @param uploadedFilename Der Dateiname der vom Nutzer hochgeladenen Datei.
-   * @param label Der Anzeigename.
+   * @param key Das Attribut wird nicht mehr verwendet und ist bei von Antragstellern hochgeladenen Dateien immer
+   * {@code null}.
+   * @param uploadedFilename Der Dateiname, inklusive Dateiendung, der vom Nutzer hochgeladenen Datei.
+   * Zum Beispiel {@code Bescheinigung.pdf}.
+   * @param label Das Attribut wird nicht mehr verwendet und ist bei von Antragstellern hochgeladenen Dateien immer
+   * {@code null}.
    * @param mimetype Der Content-Type der Daten.
    * @param data Die Binärdaten.
    */

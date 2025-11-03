@@ -6,10 +6,12 @@ package de.seitenbau.serviceportal.scripting.api.v1.submit;
  */
 public class SubmitTaskResultV1 {
   /**
-   * String der repräsentiert welcher Button vom Nutzer geclickt wurde.
+   * String der repräsentiert welcher Button vom Nutzer geklickt wurde.
    *
-   * - "submit" für den Abschicken-Button
-   * - "back" für den zurück-Button
+   * <ul>
+   * <li>{@code submit} für den Abschicken-Button</li>
+   * <li>{@code back} für den zurück-Button</li>
+   * </ul>
    */
   private String pressedButton;
 
@@ -27,10 +29,12 @@ public class SubmitTaskResultV1 {
     }
 
     /**
-     * String der repräsentiert welcher Button vom Nutzer geclickt wurde.
+     * String der repräsentiert welcher Button vom Nutzer geklickt wurde.
      *
-     * - "submit" für den Abschicken-Button
-     * - "back" für den zurück-Button
+     * <ul>
+     * <li>{@code submit} für den Abschicken-Button</li>
+     * <li>{@code back} für den zurück-Button</li>
+     * </ul>
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -61,10 +65,12 @@ public class SubmitTaskResultV1 {
   }
 
   /**
-   * String der repräsentiert welcher Button vom Nutzer geclickt wurde.
+   * String der repräsentiert welcher Button vom Nutzer geklickt wurde.
    *
-   * - "submit" für den Abschicken-Button
-   * - "back" für den zurück-Button
+   * <ul>
+   * <li>{@code submit} für den Abschicken-Button</li>
+   * <li>{@code back} für den zurück-Button</li>
+   * </ul>
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -73,10 +79,12 @@ public class SubmitTaskResultV1 {
   }
 
   /**
-   * String der repräsentiert welcher Button vom Nutzer geclickt wurde.
+   * String der repräsentiert welcher Button vom Nutzer geklickt wurde.
    *
-   * - "submit" für den Abschicken-Button
-   * - "back" für den zurück-Button
+   * <ul>
+   * <li>{@code submit} für den Abschicken-Button</li>
+   * <li>{@code back} für den zurück-Button</li>
+   * </ul>
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -125,10 +133,12 @@ public class SubmitTaskResultV1 {
   /**
    * Creates a new {@code SubmitTaskResultV1} instance.
    *
-   * @param pressedButton String der repräsentiert welcher Button vom Nutzer geclickt wurde.
+   * @param pressedButton String der repräsentiert welcher Button vom Nutzer geklickt wurde.
    *
-   * - "submit" für den Abschicken-Button
-   * - "back" für den zurück-Button
+   * <ul>
+   * <li>{@code submit} für den Abschicken-Button</li>
+   * <li>{@code back} für den zurück-Button</li>
+   * </ul>
    */
   @SuppressWarnings("all")
   @lombok.Generated

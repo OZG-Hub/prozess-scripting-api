@@ -16,5 +16,5 @@ public enum ProcessLevelOfAssuranceTypeV1
   /**
    * Entspricht Vertrauensniveau Hoch.
    */
-  HOCH;
+  HOCH
 }

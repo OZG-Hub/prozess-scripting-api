@@ -18,5 +18,5 @@ public enum DisplayModeV1
   /**
    * Zusammenfassungs-Seite.
    */
-  SUBMIT_PAGE;
+  SUBMIT_PAGE
 }

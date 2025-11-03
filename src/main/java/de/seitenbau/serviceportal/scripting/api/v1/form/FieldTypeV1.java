@@ -9,6 +9,7 @@ import java.util.List;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.BinaryContentV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.BinaryGDIKMapContentV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.BinaryGeoMapContentV1;
+import de.seitenbau.serviceportal.scripting.api.v1.form.content.ElterngeldBezugszeitraumContentV1;
 
 /**
  * Enum der Feldtypen.
@@ -33,7 +34,7 @@ public enum FieldTypeV1 {
    */
   BOOLEAN(Boolean.class), /**
    * HTML-formatierte Textanzeige (ohne Eingabemöglichkeit). HTML steht in
-   * {@link FormFieldV1#getLabel() label}.
+   * {@link FormFieldV1#label label}.
    */
   TEXT(String.class), /**
    * Liste aus mehreren Checkboxen.
@@ -67,11 +68,11 @@ public enum FieldTypeV1 {
    */
   DROPDOWN_SINGLE_SELECT_AJAX(String.class), /**
    * Überschrift einer Feldgruppe (ohne Eingabemöglichkeit). Text steht in
-   * {@link FormFieldV1#getLabel() label}.
+   * {@link FormFieldV1#label label}.
    */
   H1(String.class), /**
    * Zwischenüberschrift einer Feldgruppe (ohne Eingabemöglichkeit). Text steht in
-   * {@link FormFieldV1#getLabel() label}.
+   * {@link FormFieldV1#label label}.
    */
   H2(String.class), /**
    * Speichert, ob der Benutzer beim Absenden mit dem nPA angemeldet war oder nicht.
@@ -102,6 +103,13 @@ public enum FieldTypeV1 {
    * PDFs anzeigen mit Option zur Bestätigung der Anzeige.
    */
   PDF(String.class), /**
+   * Elterngeld-Bezugszeitraum.
+   * <br>
+   * Wird nur in Formularen mit der
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.FormV1#engineVersion Engine-Version} V2 oder
+   * höher unterstützt.
+   */
+  ELTERNGELD_BEZUGSZEITRAUM(ElterngeldBezugszeitraumContentV1.class), /**
    * Dropdown, aus dem mehrere Werte ausgewählt werden können.
    */
   @Deprecated

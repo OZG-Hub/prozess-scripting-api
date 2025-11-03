@@ -114,9 +114,12 @@ public class FormFieldV1 implements Cloneable {
    * {@link FieldTypeV1#RADIO_BUTTONS Radiobuttonfelder}).
    * Ab Formularversion 2 kann dieser Parameter nur noch über die entsprechende additionConfig
    * für das spezifische Feld konfiguriert werden:
-   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}
-   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}
-   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}
+   *
+   * <ul>
+   * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}</li>
+   * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}</li>
+   * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}</li>
+   * </ul>
    */
   @Deprecated(since = "Formularversion 2")
   private String layout;
@@ -164,10 +167,15 @@ public class FormFieldV1 implements Cloneable {
    * filterbar sind.
    * Ab Formularversion 2 kann dieser Parameter nur noch über die additionalConfig für das
    * entsprechende Feld konfiguriert werden:
-   * - {@link
-   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
-   * - {@link
-   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
+   *
+   * <ul>
+   * <li>
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
+   * </li>
+   * <li>
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
+   * </li>
+   * </ul>
    */
   @Deprecated(since = "Formularversion 2")
   private Boolean filterable;
@@ -341,7 +349,7 @@ public class FormFieldV1 implements Cloneable {
     if (type == FieldTypeV1.SINGLE_CHECKBOX) {
       return Boolean.TRUE.equals(value);
     }
-    return !"".equals(value.toString().trim());
+    return !value.toString().trim().isEmpty();
   }
 
   /**
@@ -387,15 +395,6 @@ public class FormFieldV1 implements Cloneable {
    */
   protected Set<FormFieldKeyV1> fieldsReferencedInDisplayConditions(FieldGroupInstanceV1 instance) {
     return displayConditions.stream().flatMap(DisplayConditionV1::identifyFieldDisplayConditions).map(c -> c.getReferencedFieldKey(instance)).collect(Collectors.toSet());
-  }
-
-  /**
-   * Gibt das label des Feldes zurück.
-   *
-   * @return Das label des Feldes.
-   */
-  public String getLabel() {
-    return label;
   }
 
   @SuppressWarnings("all")
@@ -770,9 +769,12 @@ public class FormFieldV1 implements Cloneable {
      * {@link FieldTypeV1#RADIO_BUTTONS Radiobuttonfelder}).
      * Ab Formularversion 2 kann dieser Parameter nur noch über die entsprechende additionConfig
      * für das spezifische Feld konfiguriert werden:
-     * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}
-     * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}
-     * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}
+     *
+     * <ul>
+     * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}</li>
+     * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}</li>
+     * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}</li>
+     * </ul>
      * @return {@code this}.
      */
     @Deprecated
@@ -882,10 +884,15 @@ public class FormFieldV1 implements Cloneable {
      * filterbar sind.
      * Ab Formularversion 2 kann dieser Parameter nur noch über die additionalConfig für das
      * entsprechende Feld konfiguriert werden:
-     * - {@link
-     * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
-     * - {@link
-     * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
+     *
+     * <ul>
+     * <li>
+     * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
+     * </li>
+     * <li>
+     * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
+     * </li>
+     * </ul>
      * @return {@code this}.
      */
     @Deprecated
@@ -1030,6 +1037,15 @@ public class FormFieldV1 implements Cloneable {
   @lombok.Generated
   public String getFimId() {
     return this.fimId;
+  }
+
+  /**
+   * Beschriftung des Feldes.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public String getLabel() {
+    return this.label;
   }
 
   /**
@@ -1187,9 +1203,12 @@ public class FormFieldV1 implements Cloneable {
    * {@link FieldTypeV1#RADIO_BUTTONS Radiobuttonfelder}).
    * Ab Formularversion 2 kann dieser Parameter nur noch über die entsprechende additionConfig
    * für das spezifische Feld konfiguriert werden:
-   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}
-   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}
-   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}
+   *
+   * <ul>
+   * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}</li>
+   * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}</li>
+   * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}</li>
+   * </ul>
    */
   @Deprecated
   @SuppressWarnings("all")
@@ -1277,10 +1296,15 @@ public class FormFieldV1 implements Cloneable {
    * filterbar sind.
    * Ab Formularversion 2 kann dieser Parameter nur noch über die additionalConfig für das
    * entsprechende Feld konfiguriert werden:
-   * - {@link
-   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
-   * - {@link
-   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
+   *
+   * <ul>
+   * <li>
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
+   * </li>
+   * <li>
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
+   * </li>
+   * </ul>
    */
   @Deprecated
   @SuppressWarnings("all")
@@ -1555,9 +1579,12 @@ public class FormFieldV1 implements Cloneable {
    * {@link FieldTypeV1#RADIO_BUTTONS Radiobuttonfelder}).
    * Ab Formularversion 2 kann dieser Parameter nur noch über die entsprechende additionConfig
    * für das spezifische Feld konfiguriert werden:
-   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}
-   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}
-   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}
+   *
+   * <ul>
+   * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}</li>
+   * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}</li>
+   * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}</li>
+   * </ul>
    */
   @Deprecated
   @SuppressWarnings("all")
@@ -1649,10 +1676,15 @@ public class FormFieldV1 implements Cloneable {
    * filterbar sind.
    * Ab Formularversion 2 kann dieser Parameter nur noch über die additionalConfig für das
    * entsprechende Feld konfiguriert werden:
-   * - {@link
-   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
-   * - {@link
-   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
+   *
+   * <ul>
+   * <li>
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
+   * </li>
+   * <li>
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
+   * </li>
+   * </ul>
    */
   @Deprecated
   @SuppressWarnings("all")
@@ -1967,9 +1999,12 @@ public class FormFieldV1 implements Cloneable {
    * {@link FieldTypeV1#RADIO_BUTTONS Radiobuttonfelder}).
    * Ab Formularversion 2 kann dieser Parameter nur noch über die entsprechende additionConfig
    * für das spezifische Feld konfiguriert werden:
-   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}
-   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}
-   * - {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}
+   *
+   * <ul>
+   * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalBooleanConfigV1}</li>
+   * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalRadioButtonConfigV1}</li>
+   * <li>{@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalCheckboxConfigV1}</li>
+   * </ul>
    * @param validationRules Validierungsregeln für das Feld.
    * @param validationMessages Texte für die Fehlermeldungen bei einfacher Formularvalidierung.
    * @param source Quelle, aus der der Feldinhalt gelesen wird. Falls {@code null}, wird ggf. eine Default-source
@@ -1990,10 +2025,15 @@ public class FormFieldV1 implements Cloneable {
    * filterbar sind.
    * Ab Formularversion 2 kann dieser Parameter nur noch über die additionalConfig für das
    * entsprechende Feld konfiguriert werden:
-   * - {@link
-   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
-   * - {@link
-   * de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
+   *
+   * <ul>
+   * <li>
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectAjaxConfigV1}
+   * </li>
+   * <li>
+   * {@link de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalDropdownSingleSelectConfigV1}
+   * </li>
+   * </ul>
    * @param controlParameters Konfigurationsparameter für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder}.
    * Für andere Feldtypen {@code null}.
    * Ab Formularversion 2 kann dieser Parameter nur noch über
