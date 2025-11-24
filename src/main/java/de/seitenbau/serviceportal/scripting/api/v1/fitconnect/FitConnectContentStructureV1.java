@@ -6,7 +6,13 @@ import java.util.List;
 
 public class FitConnectContentStructureV1 {
   private FitConnectDataV1 data;
-  private List<FitConnectApiAttachmentV1> attachments = new ArrayList<>();
+  private List<FitConnectApiAttachmentV1> attachments;
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  private static List<FitConnectApiAttachmentV1> $default$attachments() {
+    return new ArrayList<>();
+  }
 
 
   @SuppressWarnings("all")
@@ -17,7 +23,10 @@ public class FitConnectContentStructureV1 {
     private FitConnectDataV1 data;
     @SuppressWarnings("all")
     @lombok.Generated
-    private List<FitConnectApiAttachmentV1> attachments;
+    private boolean attachments$set;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private List<FitConnectApiAttachmentV1> attachments$value;
 
     @SuppressWarnings("all")
     @lombok.Generated
@@ -40,21 +49,24 @@ public class FitConnectContentStructureV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     public FitConnectContentStructureV1.FitConnectContentStructureV1Builder attachments(final List<FitConnectApiAttachmentV1> attachments) {
-      this.attachments = attachments;
+      this.attachments$value = attachments;
+      attachments$set = true;
       return this;
     }
 
     @SuppressWarnings("all")
     @lombok.Generated
     public FitConnectContentStructureV1 build() {
-      return new FitConnectContentStructureV1(this.data, this.attachments);
+      List<FitConnectApiAttachmentV1> attachments$value = this.attachments$value;
+      if (!this.attachments$set) attachments$value = FitConnectContentStructureV1.$default$attachments();
+      return new FitConnectContentStructureV1(this.data, attachments$value);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "FitConnectContentStructureV1.FitConnectContentStructureV1Builder(data=" + this.data + ", attachments=" + this.attachments + ")";
+      return "FitConnectContentStructureV1.FitConnectContentStructureV1Builder(data=" + this.data + ", attachments$value=" + this.attachments$value + ")";
     }
   }
 
@@ -134,6 +146,7 @@ public class FitConnectContentStructureV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public FitConnectContentStructureV1() {
+    this.attachments = FitConnectContentStructureV1.$default$attachments();
   }
 
   @SuppressWarnings("all")

@@ -24,13 +24,15 @@ public class SkipOnFieldValueNotInValuesConditionV1 extends ReferencedFieldSkipC
     if (field == null) {
       return false;
     }
+    Set<String> values = getValuesOrDefault();
     if (field.getFieldValue() == null) {
       return values != null && !values.contains(null);
     }
-    if (values == null) {
-      return true;
-    }
-    return field.getFieldValueAsList().stream().noneMatch(value -> values.contains(value));
+    return field.getFieldValueAsList().stream().noneMatch(values::contains);
+  }
+
+  private Set<String> getValuesOrDefault() {
+    return values == null ? new HashSet<>() : values;
   }
 
   @SuppressWarnings("all")

@@ -6,11 +6,17 @@ import java.util.List;
 
 public class FitConnectEncryptionPublicKeyV1 {
   private String kty;
-  private List<String> keyOps = new ArrayList<>();
+  private List<String> keyOps;
   private String alg;
   private String kid;
   private String n;
   private String e;
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  private static List<String> $default$keyOps() {
+    return new ArrayList<>();
+  }
 
 
   @SuppressWarnings("all")
@@ -21,7 +27,10 @@ public class FitConnectEncryptionPublicKeyV1 {
     private String kty;
     @SuppressWarnings("all")
     @lombok.Generated
-    private List<String> keyOps;
+    private boolean keyOps$set;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private List<String> keyOps$value;
     @SuppressWarnings("all")
     @lombok.Generated
     private String alg;
@@ -56,7 +65,8 @@ public class FitConnectEncryptionPublicKeyV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     public FitConnectEncryptionPublicKeyV1.FitConnectEncryptionPublicKeyV1Builder keyOps(final List<String> keyOps) {
-      this.keyOps = keyOps;
+      this.keyOps$value = keyOps;
+      keyOps$set = true;
       return this;
     }
 
@@ -103,14 +113,16 @@ public class FitConnectEncryptionPublicKeyV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     public FitConnectEncryptionPublicKeyV1 build() {
-      return new FitConnectEncryptionPublicKeyV1(this.kty, this.keyOps, this.alg, this.kid, this.n, this.e);
+      List<String> keyOps$value = this.keyOps$value;
+      if (!this.keyOps$set) keyOps$value = FitConnectEncryptionPublicKeyV1.$default$keyOps();
+      return new FitConnectEncryptionPublicKeyV1(this.kty, keyOps$value, this.alg, this.kid, this.n, this.e);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "FitConnectEncryptionPublicKeyV1.FitConnectEncryptionPublicKeyV1Builder(kty=" + this.kty + ", keyOps=" + this.keyOps + ", alg=" + this.alg + ", kid=" + this.kid + ", n=" + this.n + ", e=" + this.e + ")";
+      return "FitConnectEncryptionPublicKeyV1.FitConnectEncryptionPublicKeyV1Builder(kty=" + this.kty + ", keyOps$value=" + this.keyOps$value + ", alg=" + this.alg + ", kid=" + this.kid + ", n=" + this.n + ", e=" + this.e + ")";
     }
   }
 
@@ -258,6 +270,7 @@ public class FitConnectEncryptionPublicKeyV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public FitConnectEncryptionPublicKeyV1() {
+    this.keyOps = FitConnectEncryptionPublicKeyV1.$default$keyOps();
   }
 
   @SuppressWarnings("all")

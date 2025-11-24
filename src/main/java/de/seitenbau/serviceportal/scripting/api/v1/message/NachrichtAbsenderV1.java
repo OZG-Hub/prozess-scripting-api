@@ -2,7 +2,7 @@
 package de.seitenbau.serviceportal.scripting.api.v1.message;
 
 /**
- * Absender einer Nachricht im Servicekonto.
+ * Absender einer Nachricht.
  */
 public class NachrichtAbsenderV1 {
   /**

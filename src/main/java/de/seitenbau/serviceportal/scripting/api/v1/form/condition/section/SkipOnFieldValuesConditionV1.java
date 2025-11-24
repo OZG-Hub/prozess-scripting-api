@@ -25,17 +25,20 @@ public class SkipOnFieldValuesConditionV1 extends ReferencedFieldSkipConditionV1
     if (field == null) {
       return false;
     }
+    Set<String> values = getValuesOrDefault();
     Object fieldValue = getReferencedField(instance, form).getValue();
-    if (fieldValue == null) {
-      return values == null || values.contains(null);
+    if (fieldValue instanceof List<?> list) {
+      return list.stream().anyMatch(value -> valueExistsInValueList(value, values));
     }
-    if (values == null) {
-      return true;
-    }
-    if (fieldValue instanceof List) {
-      return ((List<?>) fieldValue).stream().anyMatch(value -> values.contains(value == null ? null : value.toString()));
-    }
-    return values.contains(fieldValue.toString());
+    return valueExistsInValueList(fieldValue, values);
+  }
+
+  private Set<String> getValuesOrDefault() {
+    return values == null ? new HashSet<>() : values;
+  }
+
+  private static boolean valueExistsInValueList(Object value, Set<String> values) {
+    return values.contains(value == null ? null : value.toString());
   }
 
   @SuppressWarnings("all")
