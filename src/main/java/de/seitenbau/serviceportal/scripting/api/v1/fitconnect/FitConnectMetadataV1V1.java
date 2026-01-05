@@ -3,7 +3,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.fitconnect;
 
 import java.util.List;
 
-public class FitConnectMetadataV1 {
+public class FitConnectMetadataV1V1 extends AbstractFitConnectMetadataV1 {
   private String schema;
   private FitConnectContentStructureV1 contentStructure;
   private List<FitConnectAuthenticationInformationV1> authenticationInformation;
@@ -20,7 +20,7 @@ public class FitConnectMetadataV1 {
 
   @SuppressWarnings("all")
   @lombok.Generated
-  public static class FitConnectMetadataV1Builder {
+  public static class FitConnectMetadataV1V1Builder {
     @SuppressWarnings("all")
     @lombok.Generated
     private String schema;
@@ -45,7 +45,7 @@ public class FitConnectMetadataV1 {
 
     @SuppressWarnings("all")
     @lombok.Generated
-    FitConnectMetadataV1Builder() {
+    FitConnectMetadataV1V1Builder() {
     }
 
     /**
@@ -53,7 +53,7 @@ public class FitConnectMetadataV1 {
      */
     @SuppressWarnings("all")
     @lombok.Generated
-    public FitConnectMetadataV1.FitConnectMetadataV1Builder schema(final String schema) {
+    public FitConnectMetadataV1V1.FitConnectMetadataV1V1Builder schema(final String schema) {
       this.schema = schema;
       return this;
     }
@@ -63,7 +63,7 @@ public class FitConnectMetadataV1 {
      */
     @SuppressWarnings("all")
     @lombok.Generated
-    public FitConnectMetadataV1.FitConnectMetadataV1Builder contentStructure(final FitConnectContentStructureV1 contentStructure) {
+    public FitConnectMetadataV1V1.FitConnectMetadataV1V1Builder contentStructure(final FitConnectContentStructureV1 contentStructure) {
       this.contentStructure$value = contentStructure;
       contentStructure$set = true;
       return this;
@@ -74,7 +74,7 @@ public class FitConnectMetadataV1 {
      */
     @SuppressWarnings("all")
     @lombok.Generated
-    public FitConnectMetadataV1.FitConnectMetadataV1Builder authenticationInformation(final List<FitConnectAuthenticationInformationV1> authenticationInformation) {
+    public FitConnectMetadataV1V1.FitConnectMetadataV1V1Builder authenticationInformation(final List<FitConnectAuthenticationInformationV1> authenticationInformation) {
       this.authenticationInformation = authenticationInformation;
       return this;
     }
@@ -84,7 +84,7 @@ public class FitConnectMetadataV1 {
      */
     @SuppressWarnings("all")
     @lombok.Generated
-    public FitConnectMetadataV1.FitConnectMetadataV1Builder paymentInformation(final FitConnectPaymentInformationV1 paymentInformation) {
+    public FitConnectMetadataV1V1.FitConnectMetadataV1V1Builder paymentInformation(final FitConnectPaymentInformationV1 paymentInformation) {
       this.paymentInformation = paymentInformation;
       return this;
     }
@@ -94,7 +94,7 @@ public class FitConnectMetadataV1 {
      */
     @SuppressWarnings("all")
     @lombok.Generated
-    public FitConnectMetadataV1.FitConnectMetadataV1Builder replyChannel(final FitConnectReplyChannelsV1 replyChannel) {
+    public FitConnectMetadataV1V1.FitConnectMetadataV1V1Builder replyChannel(final FitConnectReplyChannelsV1 replyChannel) {
       this.replyChannel = replyChannel;
       return this;
     }
@@ -104,31 +104,31 @@ public class FitConnectMetadataV1 {
      */
     @SuppressWarnings("all")
     @lombok.Generated
-    public FitConnectMetadataV1.FitConnectMetadataV1Builder additionalReferenceInfo(final FitConnectAdditionalReferenceInfoV1 additionalReferenceInfo) {
+    public FitConnectMetadataV1V1.FitConnectMetadataV1V1Builder additionalReferenceInfo(final FitConnectAdditionalReferenceInfoV1 additionalReferenceInfo) {
       this.additionalReferenceInfo = additionalReferenceInfo;
       return this;
     }
 
     @SuppressWarnings("all")
     @lombok.Generated
-    public FitConnectMetadataV1 build() {
+    public FitConnectMetadataV1V1 build() {
       FitConnectContentStructureV1 contentStructure$value = this.contentStructure$value;
-      if (!this.contentStructure$set) contentStructure$value = FitConnectMetadataV1.$default$contentStructure();
-      return new FitConnectMetadataV1(this.schema, contentStructure$value, this.authenticationInformation, this.paymentInformation, this.replyChannel, this.additionalReferenceInfo);
+      if (!this.contentStructure$set) contentStructure$value = FitConnectMetadataV1V1.$default$contentStructure();
+      return new FitConnectMetadataV1V1(this.schema, contentStructure$value, this.authenticationInformation, this.paymentInformation, this.replyChannel, this.additionalReferenceInfo);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "FitConnectMetadataV1.FitConnectMetadataV1Builder(schema=" + this.schema + ", contentStructure$value=" + this.contentStructure$value + ", authenticationInformation=" + this.authenticationInformation + ", paymentInformation=" + this.paymentInformation + ", replyChannel=" + this.replyChannel + ", additionalReferenceInfo=" + this.additionalReferenceInfo + ")";
+      return "FitConnectMetadataV1V1.FitConnectMetadataV1V1Builder(schema=" + this.schema + ", contentStructure$value=" + this.contentStructure$value + ", authenticationInformation=" + this.authenticationInformation + ", paymentInformation=" + this.paymentInformation + ", replyChannel=" + this.replyChannel + ", additionalReferenceInfo=" + this.additionalReferenceInfo + ")";
     }
   }
 
   @SuppressWarnings("all")
   @lombok.Generated
-  public static FitConnectMetadataV1.FitConnectMetadataV1Builder builder() {
-    return new FitConnectMetadataV1.FitConnectMetadataV1Builder();
+  public static FitConnectMetadataV1V1.FitConnectMetadataV1V1Builder builder() {
+    return new FitConnectMetadataV1V1.FitConnectMetadataV1V1Builder();
   }
 
   @SuppressWarnings("all")
@@ -206,11 +206,36 @@ public class FitConnectMetadataV1 {
   @Override
   @SuppressWarnings("all")
   @lombok.Generated
+  public String toString() {
+    return "FitConnectMetadataV1V1(schema=" + this.getSchema() + ", contentStructure=" + this.getContentStructure() + ", authenticationInformation=" + this.getAuthenticationInformation() + ", paymentInformation=" + this.getPaymentInformation() + ", replyChannel=" + this.getReplyChannel() + ", additionalReferenceInfo=" + this.getAdditionalReferenceInfo() + ")";
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FitConnectMetadataV1V1() {
+    this.contentStructure = FitConnectMetadataV1V1.$default$contentStructure();
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FitConnectMetadataV1V1(final String schema, final FitConnectContentStructureV1 contentStructure, final List<FitConnectAuthenticationInformationV1> authenticationInformation, final FitConnectPaymentInformationV1 paymentInformation, final FitConnectReplyChannelsV1 replyChannel, final FitConnectAdditionalReferenceInfoV1 additionalReferenceInfo) {
+    this.schema = schema;
+    this.contentStructure = contentStructure;
+    this.authenticationInformation = authenticationInformation;
+    this.paymentInformation = paymentInformation;
+    this.replyChannel = replyChannel;
+    this.additionalReferenceInfo = additionalReferenceInfo;
+  }
+
+  @Override
+  @SuppressWarnings("all")
+  @lombok.Generated
   public boolean equals(final Object o) {
     if (o == this) return true;
-    if (!(o instanceof FitConnectMetadataV1)) return false;
-    final FitConnectMetadataV1 other = (FitConnectMetadataV1) o;
+    if (!(o instanceof FitConnectMetadataV1V1)) return false;
+    final FitConnectMetadataV1V1 other = (FitConnectMetadataV1V1) o;
     if (!other.canEqual((Object) this)) return false;
+    if (!super.equals(o)) return false;
     final Object this$schema = this.getSchema();
     final Object other$schema = other.getSchema();
     if (this$schema == null ? other$schema != null : !this$schema.equals(other$schema)) return false;
@@ -235,7 +260,7 @@ public class FitConnectMetadataV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   protected boolean canEqual(final Object other) {
-    return other instanceof FitConnectMetadataV1;
+    return other instanceof FitConnectMetadataV1V1;
   }
 
   @Override
@@ -243,7 +268,7 @@ public class FitConnectMetadataV1 {
   @lombok.Generated
   public int hashCode() {
     final int PRIME = 59;
-    int result = 1;
+    int result = super.hashCode();
     final Object $schema = this.getSchema();
     result = result * PRIME + ($schema == null ? 43 : $schema.hashCode());
     final Object $contentStructure = this.getContentStructure();
@@ -257,29 +282,5 @@ public class FitConnectMetadataV1 {
     final Object $additionalReferenceInfo = this.getAdditionalReferenceInfo();
     result = result * PRIME + ($additionalReferenceInfo == null ? 43 : $additionalReferenceInfo.hashCode());
     return result;
-  }
-
-  @Override
-  @SuppressWarnings("all")
-  @lombok.Generated
-  public String toString() {
-    return "FitConnectMetadataV1(schema=" + this.getSchema() + ", contentStructure=" + this.getContentStructure() + ", authenticationInformation=" + this.getAuthenticationInformation() + ", paymentInformation=" + this.getPaymentInformation() + ", replyChannel=" + this.getReplyChannel() + ", additionalReferenceInfo=" + this.getAdditionalReferenceInfo() + ")";
-  }
-
-  @SuppressWarnings("all")
-  @lombok.Generated
-  public FitConnectMetadataV1() {
-    this.contentStructure = FitConnectMetadataV1.$default$contentStructure();
-  }
-
-  @SuppressWarnings("all")
-  @lombok.Generated
-  public FitConnectMetadataV1(final String schema, final FitConnectContentStructureV1 contentStructure, final List<FitConnectAuthenticationInformationV1> authenticationInformation, final FitConnectPaymentInformationV1 paymentInformation, final FitConnectReplyChannelsV1 replyChannel, final FitConnectAdditionalReferenceInfoV1 additionalReferenceInfo) {
-    this.schema = schema;
-    this.contentStructure = contentStructure;
-    this.authenticationInformation = authenticationInformation;
-    this.paymentInformation = paymentInformation;
-    this.replyChannel = replyChannel;
-    this.additionalReferenceInfo = additionalReferenceInfo;
   }
 }

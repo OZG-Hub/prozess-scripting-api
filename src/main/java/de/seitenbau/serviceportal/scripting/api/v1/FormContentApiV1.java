@@ -12,6 +12,14 @@ import de.seitenbau.serviceportal.scripting.api.v1.form.content.FormFieldContent
  * <p>
  * Mit der globalen Variable {@code apiV1.formContent} kann die FormContent-API in einen
  * Groovy-Scripttask eingebunden und die hier dokumentierten Methoden verwendet werden.
+ * <p>
+ * Die Methoden dieser API führen die Operationen (z.B. das Setzen eines Feldwertes via
+ * {@link #setFieldValue(String, FormFieldKeyV1, Object) setFieldValue}) direkt auf dem internen
+ * {@code FormContent}-Objekt der gegebenen Prozessinstanzvariable durch. Entsprechend sind diese Änderungen
+ * nicht an zuvor gelesenen {@link FormContentV1}-Objekten der Prozessinstanzvariablen vorhanden. Sollen
+ * nach der Verwendung dieser API noch weitere Änderungen am gleichen {@link FormContentV1} gemacht werden,
+ * muss die Prozessinstanzvariable zuvor erneut gelesen werden, damit die Änderungen im
+ * {@link FormContentV1} vorhanden sind.
  *
  * @since Release 1.191
  */

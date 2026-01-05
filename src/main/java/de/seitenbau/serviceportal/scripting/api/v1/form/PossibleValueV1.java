@@ -21,6 +21,17 @@ public class PossibleValueV1 {
   private ModalHelpDialogV1 helpDialog;
 
   /**
+   * Erzeugt eine neue {@code PossibleValueV1}.
+   *
+   * @param label Anzeigetext
+   * @param value Interner Wert
+   */
+  public PossibleValueV1(String label, String value) {
+    setLabel(label);
+    setValue(value);
+  }
+
+  /**
    * Erstellt eine Kopie eines bereits bestehenden {@link PossibleValueV1} Objekts.
    *
    * @param toCopy Das Objekt das kopiert werden soll.

@@ -17,7 +17,7 @@ public class FitConnectReplyV1 {
   /**
    * Die FiT-Connect-Metadaten der Antwort
    */
-  private FitConnectMetadataV1 metadata;
+  private AbstractFitConnectMetadataV1 metadata;
   /**
    * {@code true}, wenn die Antwort bei Fit-Connect erfolgreich als empfangen markiert werden konnte,
    * {@code false} sonst.
@@ -39,7 +39,7 @@ public class FitConnectReplyV1 {
     private String content;
     @SuppressWarnings("all")
     @lombok.Generated
-    private FitConnectMetadataV1 metadata;
+    private AbstractFitConnectMetadataV1 metadata;
     @SuppressWarnings("all")
     @lombok.Generated
     private boolean acceptSuccessful;
@@ -88,7 +88,7 @@ public class FitConnectReplyV1 {
      */
     @SuppressWarnings("all")
     @lombok.Generated
-    public FitConnectReplyV1.FitConnectReplyV1Builder metadata(final FitConnectMetadataV1 metadata) {
+    public FitConnectReplyV1.FitConnectReplyV1Builder metadata(final AbstractFitConnectMetadataV1 metadata) {
       this.metadata = metadata;
       return this;
     }
@@ -157,7 +157,7 @@ public class FitConnectReplyV1 {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public FitConnectMetadataV1 getMetadata() {
+  public AbstractFitConnectMetadataV1 getMetadata() {
     return this.metadata;
   }
 
@@ -203,7 +203,7 @@ public class FitConnectReplyV1 {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public void setMetadata(final FitConnectMetadataV1 metadata) {
+  public void setMetadata(final AbstractFitConnectMetadataV1 metadata) {
     this.metadata = metadata;
   }
 
@@ -289,7 +289,7 @@ public class FitConnectReplyV1 {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public FitConnectReplyV1(final String replyId, final String caseId, final String content, final FitConnectMetadataV1 metadata, final boolean acceptSuccessful) {
+  public FitConnectReplyV1(final String replyId, final String caseId, final String content, final AbstractFitConnectMetadataV1 metadata, final boolean acceptSuccessful) {
     this.replyId = replyId;
     this.caseId = caseId;
     this.content = content;
