@@ -38,16 +38,16 @@ public class StartParameterV1 {
   private OrganisationseinheitParameterV1 organisationseinheit;
   /**
    * Amtlicher Regionalschlüssel.
-   * Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
+   * Auf service-bw und Amt24: Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
    * {@code null}, wenn der ARS Parameter nicht beim Prozessstart definiert wurde
-   * und kein gültige AGS beim Prozessstart definiert wurde.
+   * oder kein gültiger AGS beim Prozessstart definiert wurde.
    */
   private String ars;
   /**
    * Amtlicher Gemeindeschlüssel.
-   * Wurde vom ARS abgeleitet, falls ARS beim Prozessstart definiert wurde.
+   * Auf service-bw und Amt24: Wurde vom ARS abgeleitet, falls ARS beim Prozessstart definiert wurde.
    * {@code null}, wenn der AGS Parameter nicht beim Prozessstart definiert wurde
-   * und kein gültige ARS beim Prozessstart definiert wurde.
+   * oder kein gültiger ARS beim Prozessstart definiert wurde.
    */
   private String ags;
   /**
@@ -190,9 +190,9 @@ public class StartParameterV1 {
 
     /**
      * Amtlicher Regionalschlüssel.
-     * Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
+     * Auf service-bw und Amt24: Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
      * {@code null}, wenn der ARS Parameter nicht beim Prozessstart definiert wurde
-     * und kein gültige AGS beim Prozessstart definiert wurde.
+     * oder kein gültiger AGS beim Prozessstart definiert wurde.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -204,9 +204,9 @@ public class StartParameterV1 {
 
     /**
      * Amtlicher Gemeindeschlüssel.
-     * Wurde vom ARS abgeleitet, falls ARS beim Prozessstart definiert wurde.
+     * Auf service-bw und Amt24: Wurde vom ARS abgeleitet, falls ARS beim Prozessstart definiert wurde.
      * {@code null}, wenn der AGS Parameter nicht beim Prozessstart definiert wurde
-     * und kein gültige ARS beim Prozessstart definiert wurde.
+     * oder kein gültiger ARS beim Prozessstart definiert wurde.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -358,9 +358,9 @@ public class StartParameterV1 {
 
   /**
    * Amtlicher Regionalschlüssel.
-   * Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
+   * Auf service-bw und Amt24: Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
    * {@code null}, wenn der ARS Parameter nicht beim Prozessstart definiert wurde
-   * und kein gültige AGS beim Prozessstart definiert wurde.
+   * oder kein gültiger AGS beim Prozessstart definiert wurde.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -370,9 +370,9 @@ public class StartParameterV1 {
 
   /**
    * Amtlicher Gemeindeschlüssel.
-   * Wurde vom ARS abgeleitet, falls ARS beim Prozessstart definiert wurde.
+   * Auf service-bw und Amt24: Wurde vom ARS abgeleitet, falls ARS beim Prozessstart definiert wurde.
    * {@code null}, wenn der AGS Parameter nicht beim Prozessstart definiert wurde
-   * und kein gültige ARS beim Prozessstart definiert wurde.
+   * oder kein gültiger ARS beim Prozessstart definiert wurde.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -552,13 +552,13 @@ public class StartParameterV1 {
    * {@code null}, wenn keine Organisationseinheit definiert wurde.
    * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
    * @param ars Amtlicher Regionalschlüssel.
-   * Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
+   * Auf service-bw und Amt24: Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
    * {@code null}, wenn der ARS Parameter nicht beim Prozessstart definiert wurde
-   * und kein gültige AGS beim Prozessstart definiert wurde.
+   * oder kein gültiger AGS beim Prozessstart definiert wurde.
    * @param ags Amtlicher Gemeindeschlüssel.
-   * Wurde vom ARS abgeleitet, falls ARS beim Prozessstart definiert wurde.
+   * Auf service-bw und Amt24: Wurde vom ARS abgeleitet, falls ARS beim Prozessstart definiert wurde.
    * {@code null}, wenn der AGS Parameter nicht beim Prozessstart definiert wurde
-   * und kein gültige ARS beim Prozessstart definiert wurde.
+   * oder kein gültiger ARS beim Prozessstart definiert wurde.
    * @param fitConnectAreaId Area-ID der FitConnect Routing-API.
    * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
    * @param p Frei wählbarer Parameter.
