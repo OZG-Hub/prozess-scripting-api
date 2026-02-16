@@ -131,6 +131,14 @@ public enum FieldTypeV1 {
     valueClasses = Collections.singletonList(valueClass);
   }
 
+  @SuppressWarnings("checkstyle:Indentation")
+  boolean isListType() {
+    return switch (this) {
+      case MULTIPLE_FILE, CHECKBOX, DROPDOWN_MULTIPLE_SELECT, TWO_LIST_SELECT -> true;
+      default -> false;
+    };
+  }
+
   /**
    * Liste der Klassen / Typen, die ein Feldwert eines Feldes mit dem entsprechenden Typ annehmen kann.
    * <p>

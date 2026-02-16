@@ -52,6 +52,18 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    */
   private RenderMediumV1 renderOnlyIn;
   /**
+   * Mit diesem Attribut lässt sich Einschränken, wo die Gruppe dargestellt werden soll.
+   * Darf nicht gleichzeitig mit den Attributen ['renderOnlyIn', 'printOnly'] gesetzt werden.
+   * Darf nicht gleichzeitig mit einem der Attribute ['renderOnlyIn', 'renderFor'], der Felder
+   * dieser Gruppe gesetzt werden.
+   * <br/>
+   * {@code PDF}, wenn die Gruppe in einem erzeugten PDF dargestellt werden soll.
+   * {@code FORM}, wenn die Gruppe in der Formularansicht dargestellt werden soll.
+   * {@code SUBMIT_TASK}, wenn die Gruppe auf der Zusammenfassungsseite im Prozess dargestellt werden soll.
+   * {@code null}, keine Einschränkung bei der Darstellung.
+   */
+  private List<DisplayModeV1> renderFor;
+  /**
    * Maximal erlaubte Anzahl an Instanzen der Feldgruppe. Default ist 99.
    */
   private int maxInstanceCount;
@@ -242,6 +254,9 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     private RenderMediumV1 renderOnlyIn;
     @SuppressWarnings("all")
     @lombok.Generated
+    private List<DisplayModeV1> renderFor;
+    @SuppressWarnings("all")
+    @lombok.Generated
     private boolean maxInstanceCount$set;
     @SuppressWarnings("all")
     @lombok.Generated
@@ -356,6 +371,25 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     }
 
     /**
+     * Mit diesem Attribut lässt sich Einschränken, wo die Gruppe dargestellt werden soll.
+     * Darf nicht gleichzeitig mit den Attributen ['renderOnlyIn', 'printOnly'] gesetzt werden.
+     * Darf nicht gleichzeitig mit einem der Attribute ['renderOnlyIn', 'renderFor'], der Felder
+     * dieser Gruppe gesetzt werden.
+     * <br/>
+     * {@code PDF}, wenn die Gruppe in einem erzeugten PDF dargestellt werden soll.
+     * {@code FORM}, wenn die Gruppe in der Formularansicht dargestellt werden soll.
+     * {@code SUBMIT_TASK}, wenn die Gruppe auf der Zusammenfassungsseite im Prozess dargestellt werden soll.
+     * {@code null}, keine Einschränkung bei der Darstellung.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public B renderFor(final List<DisplayModeV1> renderFor) {
+      this.renderFor = renderFor;
+      return self();
+    }
+
+    /**
      * Maximal erlaubte Anzahl an Instanzen der Feldgruppe. Default ist 99.
      * @return {@code this}.
      */
@@ -416,7 +450,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "FieldGroupV1.FieldGroupV1Builder(super=" + super.toString() + ", multiple=" + this.multiple + ", addRowButtonText=" + this.addRowButtonText + ", deleteRowButtonText=" + this.deleteRowButtonText + ", addRowButtonInfoText=" + this.addRowButtonInfoText + ", deleteRowButtonInfoText=" + this.deleteRowButtonInfoText + ", layout=" + this.layout + ", printOnly=" + this.printOnly + ", renderOnlyIn=" + this.renderOnlyIn + ", maxInstanceCount$value=" + this.maxInstanceCount$value + ", fixedInstanceCount=" + this.fixedInstanceCount + ", instanceTitleTemplate=" + this.instanceTitleTemplate + ", instances$value=" + this.instances$value + ")";
+      return "FieldGroupV1.FieldGroupV1Builder(super=" + super.toString() + ", multiple=" + this.multiple + ", addRowButtonText=" + this.addRowButtonText + ", deleteRowButtonText=" + this.deleteRowButtonText + ", addRowButtonInfoText=" + this.addRowButtonInfoText + ", deleteRowButtonInfoText=" + this.deleteRowButtonInfoText + ", layout=" + this.layout + ", printOnly=" + this.printOnly + ", renderOnlyIn=" + this.renderOnlyIn + ", renderFor=" + this.renderFor + ", maxInstanceCount$value=" + this.maxInstanceCount$value + ", fixedInstanceCount=" + this.fixedInstanceCount + ", instanceTitleTemplate=" + this.instanceTitleTemplate + ", instances$value=" + this.instances$value + ")";
     }
   }
 
@@ -456,6 +490,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     this.layout = b.layout;
     this.printOnly = b.printOnly;
     this.renderOnlyIn = b.renderOnlyIn;
+    this.renderFor = b.renderFor;
     if (b.maxInstanceCount$set) this.maxInstanceCount = b.maxInstanceCount$value;
      else this.maxInstanceCount = FieldGroupV1.$default$maxInstanceCount();
     this.fixedInstanceCount = b.fixedInstanceCount;
@@ -548,6 +583,23 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
   @lombok.Generated
   public RenderMediumV1 getRenderOnlyIn() {
     return this.renderOnlyIn;
+  }
+
+  /**
+   * Mit diesem Attribut lässt sich Einschränken, wo die Gruppe dargestellt werden soll.
+   * Darf nicht gleichzeitig mit den Attributen ['renderOnlyIn', 'printOnly'] gesetzt werden.
+   * Darf nicht gleichzeitig mit einem der Attribute ['renderOnlyIn', 'renderFor'], der Felder
+   * dieser Gruppe gesetzt werden.
+   * <br/>
+   * {@code PDF}, wenn die Gruppe in einem erzeugten PDF dargestellt werden soll.
+   * {@code FORM}, wenn die Gruppe in der Formularansicht dargestellt werden soll.
+   * {@code SUBMIT_TASK}, wenn die Gruppe auf der Zusammenfassungsseite im Prozess dargestellt werden soll.
+   * {@code null}, keine Einschränkung bei der Darstellung.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public List<DisplayModeV1> getRenderFor() {
+    return this.renderFor;
   }
 
   /**
@@ -659,6 +711,23 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
   }
 
   /**
+   * Mit diesem Attribut lässt sich Einschränken, wo die Gruppe dargestellt werden soll.
+   * Darf nicht gleichzeitig mit den Attributen ['renderOnlyIn', 'printOnly'] gesetzt werden.
+   * Darf nicht gleichzeitig mit einem der Attribute ['renderOnlyIn', 'renderFor'], der Felder
+   * dieser Gruppe gesetzt werden.
+   * <br/>
+   * {@code PDF}, wenn die Gruppe in einem erzeugten PDF dargestellt werden soll.
+   * {@code FORM}, wenn die Gruppe in der Formularansicht dargestellt werden soll.
+   * {@code SUBMIT_TASK}, wenn die Gruppe auf der Zusammenfassungsseite im Prozess dargestellt werden soll.
+   * {@code null}, keine Einschränkung bei der Darstellung.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setRenderFor(final List<DisplayModeV1> renderFor) {
+    this.renderFor = renderFor;
+  }
+
+  /**
    * Maximal erlaubte Anzahl an Instanzen der Feldgruppe. Default ist 99.
    */
   @SuppressWarnings("all")
@@ -699,7 +768,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "FieldGroupV1(multiple=" + this.isMultiple() + ", addRowButtonText=" + this.getAddRowButtonText() + ", deleteRowButtonText=" + this.getDeleteRowButtonText() + ", addRowButtonInfoText=" + this.getAddRowButtonInfoText() + ", deleteRowButtonInfoText=" + this.getDeleteRowButtonInfoText() + ", layout=" + this.getLayout() + ", printOnly=" + this.isPrintOnly() + ", renderOnlyIn=" + this.getRenderOnlyIn() + ", maxInstanceCount=" + this.getMaxInstanceCount() + ", fixedInstanceCount=" + this.isFixedInstanceCount() + ", instanceTitleTemplate=" + this.getInstanceTitleTemplate() + ", instances=" + this.getInstances() + ")";
+    return "FieldGroupV1(multiple=" + this.isMultiple() + ", addRowButtonText=" + this.getAddRowButtonText() + ", deleteRowButtonText=" + this.getDeleteRowButtonText() + ", addRowButtonInfoText=" + this.getAddRowButtonInfoText() + ", deleteRowButtonInfoText=" + this.getDeleteRowButtonInfoText() + ", layout=" + this.getLayout() + ", printOnly=" + this.isPrintOnly() + ", renderOnlyIn=" + this.getRenderOnlyIn() + ", renderFor=" + this.getRenderFor() + ", maxInstanceCount=" + this.getMaxInstanceCount() + ", fixedInstanceCount=" + this.isFixedInstanceCount() + ", instanceTitleTemplate=" + this.getInstanceTitleTemplate() + ", instances=" + this.getInstances() + ")";
   }
 
   @Override
@@ -733,6 +802,9 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     final Object this$renderOnlyIn = this.getRenderOnlyIn();
     final Object other$renderOnlyIn = other.getRenderOnlyIn();
     if (this$renderOnlyIn == null ? other$renderOnlyIn != null : !this$renderOnlyIn.equals(other$renderOnlyIn)) return false;
+    final Object this$renderFor = this.getRenderFor();
+    final Object other$renderFor = other.getRenderFor();
+    if (this$renderFor == null ? other$renderFor != null : !this$renderFor.equals(other$renderFor)) return false;
     final Object this$instanceTitleTemplate = this.getInstanceTitleTemplate();
     final Object other$instanceTitleTemplate = other.getInstanceTitleTemplate();
     if (this$instanceTitleTemplate == null ? other$instanceTitleTemplate != null : !this$instanceTitleTemplate.equals(other$instanceTitleTemplate)) return false;
@@ -770,6 +842,8 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     result = result * PRIME + ($layout == null ? 43 : $layout.hashCode());
     final Object $renderOnlyIn = this.getRenderOnlyIn();
     result = result * PRIME + ($renderOnlyIn == null ? 43 : $renderOnlyIn.hashCode());
+    final Object $renderFor = this.getRenderFor();
+    result = result * PRIME + ($renderFor == null ? 43 : $renderFor.hashCode());
     final Object $instanceTitleTemplate = this.getInstanceTitleTemplate();
     result = result * PRIME + ($instanceTitleTemplate == null ? 43 : $instanceTitleTemplate.hashCode());
     final Object $instances = this.getInstances();
