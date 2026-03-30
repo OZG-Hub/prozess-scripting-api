@@ -14,8 +14,8 @@ public class LeistungParameterV1 {
    */
   private String id;
   /**
-   * Leistungsschlüssel-Schlüssel / LeiKa-Schlüssel der Leistung. Wurden beim Prozessstart für die Leistung
-   * im Admincenter keine LeiKa-Schlüssel gefunden oder ist dabei ein Fehler aufgetreten, ist das Attribut
+   * Leistungsschlüssel der Leistung. Wurden beim Prozessstart für die Leistung
+   * im Admincenter keine Leistungsschlüssel gefunden oder ist dabei ein Fehler aufgetreten, ist das Attribut
    * <code>null</code>. Das Attribut wird auf OZG-Hub nicht gesetzt.
    */
   private List<String> leistungsschluessel;
@@ -48,8 +48,8 @@ public class LeistungParameterV1 {
     }
 
     /**
-     * Leistungsschlüssel-Schlüssel / LeiKa-Schlüssel der Leistung. Wurden beim Prozessstart für die Leistung
-     * im Admincenter keine LeiKa-Schlüssel gefunden oder ist dabei ein Fehler aufgetreten, ist das Attribut
+     * Leistungsschlüssel der Leistung. Wurden beim Prozessstart für die Leistung
+     * im Admincenter keine Leistungsschlüssel gefunden oder ist dabei ein Fehler aufgetreten, ist das Attribut
      * <code>null</code>. Das Attribut wird auf OZG-Hub nicht gesetzt.
      * @return {@code this}.
      */
@@ -90,8 +90,8 @@ public class LeistungParameterV1 {
   }
 
   /**
-   * Leistungsschlüssel-Schlüssel / LeiKa-Schlüssel der Leistung. Wurden beim Prozessstart für die Leistung
-   * im Admincenter keine LeiKa-Schlüssel gefunden oder ist dabei ein Fehler aufgetreten, ist das Attribut
+   * Leistungsschlüssel der Leistung. Wurden beim Prozessstart für die Leistung
+   * im Admincenter keine Leistungsschlüssel gefunden oder ist dabei ein Fehler aufgetreten, ist das Attribut
    * <code>null</code>. Das Attribut wird auf OZG-Hub nicht gesetzt.
    */
   @SuppressWarnings("all")
@@ -152,8 +152,8 @@ public class LeistungParameterV1 {
    * Creates a new {@code LeistungParameterV1} instance.
    *
    * @param id ID der Leistung.
-   * @param leistungsschluessel Leistungsschlüssel-Schlüssel / LeiKa-Schlüssel der Leistung. Wurden beim Prozessstart für die Leistung
-   * im Admincenter keine LeiKa-Schlüssel gefunden oder ist dabei ein Fehler aufgetreten, ist das Attribut
+   * @param leistungsschluessel Leistungsschlüssel der Leistung. Wurden beim Prozessstart für die Leistung
+   * im Admincenter keine Leistungsschlüssel gefunden oder ist dabei ein Fehler aufgetreten, ist das Attribut
    * <code>null</code>. Das Attribut wird auf OZG-Hub nicht gesetzt.
    */
   @SuppressWarnings("all")

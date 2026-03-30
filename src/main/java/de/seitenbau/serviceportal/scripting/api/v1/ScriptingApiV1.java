@@ -5,6 +5,7 @@ import java.util.Map;
 
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.FormReplacementValuesV1;
+import de.seitenbau.serviceportal.scripting.api.v1.process.ProcessEngineConfigV1;
 import de.seitenbau.serviceportal.scripting.api.v1.start.StartParameterV1;
 
 /**
@@ -227,6 +228,15 @@ public interface ScriptingApiV1
    * @since Release 1.191
    */
   FormContentApiV1 getFormContent();
+
+  /**
+   * Gibt die Konfiguration der Prozess-Engine / Plattform zurück.<br>
+   * Die Methode ersetzt die Prozessinstanzvariable {@code processEngineConfig}.
+   *
+   * @return Konfiguration der Prozess-Engine, nie {@code null}
+   * @since Release 1.207
+   */
+  ProcessEngineConfigV1 getProcessEngineConfig();
 
   /**
    * Wirft einen {@code org.activiti.engine.delegate.BpmnError}.
