@@ -22,13 +22,26 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
   /**
    * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Präfix 'http://').
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   *
+   * @deprecated Stattdessen {@link #proxyType} verwenden
    */
+  @Deprecated(since = "Release 1.208")
   private String proxyHost;
   /**
    * Port der URL des Proxies, der zum Senden des Requests verwendet werden soll.
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   *
+   * @deprecated Stattdessen {@link #proxyType} verwenden
    */
+  @Deprecated(since = "Release 1.208")
   private Integer proxyPort;
+  /**
+   * Der Proxy, der zum Senden des Requests verwendet werden soll.
+   * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   *
+   * @since Release 1.208
+   */
+  private ProxyTypeV1 proxyType;
   /**
    * Map der HTTP-Header die beim AJAX-Request gesetzt werden sollen. Die Header müssen der Allow-List
    * entsprechen. Keys und Values können Platzhalter enthalten.
@@ -98,6 +111,7 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
     this.url = toCopy.url;
     this.proxyHost = toCopy.proxyHost;
     this.proxyPort = toCopy.proxyPort;
+    this.proxyType = toCopy.proxyType;
     this.scope = toCopy.scope;
     this.variableName = toCopy.variableName;
     this.truststore = toCopy.truststore;
@@ -138,6 +152,9 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
     @SuppressWarnings("all")
     @lombok.Generated
     private Integer proxyPort;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private ProxyTypeV1 proxyType;
     @SuppressWarnings("all")
     @lombok.Generated
     private Map<String, String> headers;
@@ -183,8 +200,11 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
     /**
      * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Präfix 'http://').
      * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+     *
+     * @deprecated Stattdessen {@link #proxyType} verwenden
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
     @lombok.Generated
     public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder proxyHost(final String proxyHost) {
@@ -195,12 +215,29 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
     /**
      * Port der URL des Proxies, der zum Senden des Requests verwendet werden soll.
      * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+     *
+     * @deprecated Stattdessen {@link #proxyType} verwenden
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
     @lombok.Generated
     public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder proxyPort(final Integer proxyPort) {
       this.proxyPort = proxyPort;
+      return this;
+    }
+
+    /**
+     * Der Proxy, der zum Senden des Requests verwendet werden soll.
+     * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+     *
+     * @since Release 1.208
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder proxyType(final ProxyTypeV1 proxyType) {
+      this.proxyType = proxyType;
       return this;
     }
 
@@ -292,14 +329,14 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
     @SuppressWarnings("all")
     @lombok.Generated
     public ExternalDataSourcePropertiesV1 build() {
-      return new ExternalDataSourcePropertiesV1(this.url, this.proxyHost, this.proxyPort, this.headers, this.scope, this.fieldIds, this.variableName, this.authentication, this.truststore, this.truststorePassword);
+      return new ExternalDataSourcePropertiesV1(this.url, this.proxyHost, this.proxyPort, this.proxyType, this.headers, this.scope, this.fieldIds, this.variableName, this.authentication, this.truststore, this.truststorePassword);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder(url=" + this.url + ", proxyHost=" + this.proxyHost + ", proxyPort=" + this.proxyPort + ", headers=" + this.headers + ", scope=" + this.scope + ", fieldIds=" + this.fieldIds + ", variableName=" + this.variableName + ", authentication=" + this.authentication + ", truststore=" + this.truststore + ", truststorePassword=" + this.truststorePassword + ")";
+      return "ExternalDataSourcePropertiesV1.ExternalDataSourcePropertiesV1Builder(url=" + this.url + ", proxyHost=" + this.proxyHost + ", proxyPort=" + this.proxyPort + ", proxyType=" + this.proxyType + ", headers=" + this.headers + ", scope=" + this.scope + ", fieldIds=" + this.fieldIds + ", variableName=" + this.variableName + ", authentication=" + this.authentication + ", truststore=" + this.truststore + ", truststorePassword=" + this.truststorePassword + ")";
     }
   }
 
@@ -323,7 +360,10 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
   /**
    * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Präfix 'http://').
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   *
+   * @deprecated Stattdessen {@link #proxyType} verwenden
    */
+  @Deprecated
   @SuppressWarnings("all")
   @lombok.Generated
   public String getProxyHost() {
@@ -333,11 +373,26 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
   /**
    * Port der URL des Proxies, der zum Senden des Requests verwendet werden soll.
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   *
+   * @deprecated Stattdessen {@link #proxyType} verwenden
    */
+  @Deprecated
   @SuppressWarnings("all")
   @lombok.Generated
   public Integer getProxyPort() {
     return this.proxyPort;
+  }
+
+  /**
+   * Der Proxy, der zum Senden des Requests verwendet werden soll.
+   * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   *
+   * @since Release 1.208
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public ProxyTypeV1 getProxyType() {
+    return this.proxyType;
   }
 
   /**
@@ -423,7 +478,10 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
   /**
    * Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Präfix 'http://').
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   *
+   * @deprecated Stattdessen {@link #proxyType} verwenden
    */
+  @Deprecated
   @SuppressWarnings("all")
   @lombok.Generated
   public void setProxyHost(final String proxyHost) {
@@ -433,11 +491,26 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
   /**
    * Port der URL des Proxies, der zum Senden des Requests verwendet werden soll.
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   *
+   * @deprecated Stattdessen {@link #proxyType} verwenden
    */
+  @Deprecated
   @SuppressWarnings("all")
   @lombok.Generated
   public void setProxyPort(final Integer proxyPort) {
     this.proxyPort = proxyPort;
+  }
+
+  /**
+   * Der Proxy, der zum Senden des Requests verwendet werden soll.
+   * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   *
+   * @since Release 1.208
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setProxyType(final ProxyTypeV1 proxyType) {
+    this.proxyType = proxyType;
   }
 
   /**
@@ -526,6 +599,9 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
     final Object this$proxyHost = this.getProxyHost();
     final Object other$proxyHost = other.getProxyHost();
     if (this$proxyHost == null ? other$proxyHost != null : !this$proxyHost.equals(other$proxyHost)) return false;
+    final Object this$proxyType = this.getProxyType();
+    final Object other$proxyType = other.getProxyType();
+    if (this$proxyType == null ? other$proxyType != null : !this$proxyType.equals(other$proxyType)) return false;
     final Object this$headers = this.getHeaders();
     final Object other$headers = other.getHeaders();
     if (this$headers == null ? other$headers != null : !this$headers.equals(other$headers)) return false;
@@ -568,6 +644,8 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
     result = result * PRIME + ($url == null ? 43 : $url.hashCode());
     final Object $proxyHost = this.getProxyHost();
     result = result * PRIME + ($proxyHost == null ? 43 : $proxyHost.hashCode());
+    final Object $proxyType = this.getProxyType();
+    result = result * PRIME + ($proxyType == null ? 43 : $proxyType.hashCode());
     final Object $headers = this.getHeaders();
     result = result * PRIME + ($headers == null ? 43 : $headers.hashCode());
     final Object $scope = this.getScope();
@@ -589,7 +667,7 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "ExternalDataSourcePropertiesV1(url=" + this.getUrl() + ", proxyHost=" + this.getProxyHost() + ", proxyPort=" + this.getProxyPort() + ", headers=" + this.getHeaders() + ", scope=" + this.getScope() + ", fieldIds=" + this.getFieldIds() + ", variableName=" + this.getVariableName() + ", authentication=" + this.getAuthentication() + ", truststore=" + this.getTruststore() + ", truststorePassword=" + this.getTruststorePassword() + ")";
+    return "ExternalDataSourcePropertiesV1(url=" + this.getUrl() + ", proxyHost=" + this.getProxyHost() + ", proxyPort=" + this.getProxyPort() + ", proxyType=" + this.getProxyType() + ", headers=" + this.getHeaders() + ", scope=" + this.getScope() + ", fieldIds=" + this.getFieldIds() + ", variableName=" + this.getVariableName() + ", authentication=" + this.getAuthentication() + ", truststore=" + this.getTruststore() + ", truststorePassword=" + this.getTruststorePassword() + ")";
   }
 
   /**
@@ -599,8 +677,16 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
    * Für DOWNLOAD- und PDF-Felder kann ein ServiceAlias verwendet werden.
    * @param proxyHost Host des Proxies, der zum Senden des Requests verwendet werden soll (inklusive Präfix 'http://').
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   *
+   * @deprecated Stattdessen {@link #proxyType} verwenden
    * @param proxyPort Port der URL des Proxies, der zum Senden des Requests verwendet werden soll.
    * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   *
+   * @deprecated Stattdessen {@link #proxyType} verwenden
+   * @param proxyType Der Proxy, der zum Senden des Requests verwendet werden soll.
+   * {@code null}, falls eine direkte Netzwerkverbindung verwendet werden kann.
+   *
+   * @since Release 1.208
    * @param headers Map der HTTP-Header die beim AJAX-Request gesetzt werden sollen. Die Header müssen der Allow-List
    * entsprechen. Keys und Values können Platzhalter enthalten.
    * @param scope Typ, der definiert, auf welche Art und Weise die Felder, deren Werte mitgeschickt werden,
@@ -617,7 +703,7 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  private ExternalDataSourcePropertiesV1(@NonNull final String url, final String proxyHost, final Integer proxyPort, final Map<String, String> headers, @NonNull final AjaxRequestIncludedFieldsScopeV1 scope, final List<FormFieldKeyV1> fieldIds, final String variableName, final AuthenticationConfigV1 authentication, final String truststore, final String truststorePassword) {
+  private ExternalDataSourcePropertiesV1(@NonNull final String url, final String proxyHost, final Integer proxyPort, final ProxyTypeV1 proxyType, final Map<String, String> headers, @NonNull final AjaxRequestIncludedFieldsScopeV1 scope, final List<FormFieldKeyV1> fieldIds, final String variableName, final AuthenticationConfigV1 authentication, final String truststore, final String truststorePassword) {
     if (url == null) {
       throw new NullPointerException("url is marked non-null but is null");
     }
@@ -627,6 +713,7 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
     this.url = url;
     this.proxyHost = proxyHost;
     this.proxyPort = proxyPort;
+    this.proxyType = proxyType;
     this.headers = headers;
     this.scope = scope;
     this.fieldIds = fieldIds;

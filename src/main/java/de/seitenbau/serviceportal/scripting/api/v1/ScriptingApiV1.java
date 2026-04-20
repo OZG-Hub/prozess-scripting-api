@@ -250,4 +250,12 @@ public interface ScriptingApiV1
    * @since Release 1.186
    */
   void throwBpmnError(String errorCode, String message);
+
+  /**
+   * Gibt die Messaging-API zurück.
+   *
+   * @return die Messaging-API, nie {@code null}
+   * @since Release 1.208
+   */
+  MessagingApiV1 getMessaging();
 }
