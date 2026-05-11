@@ -62,4 +62,9 @@ public class RequiredOnEmptyFieldValidatorV1 extends ConditionalFieldValidationR
 	public static RequiredOnEmptyFieldValidatorV1.RequiredOnEmptyFieldValidatorV1Builder<?, ?> builder() {
 		return new RequiredOnEmptyFieldValidatorV1.RequiredOnEmptyFieldValidatorV1BuilderImpl();
 	}
+
+	@SuppressWarnings("all")
+	@lombok.Generated
+	public RequiredOnEmptyFieldValidatorV1() {
+	}
 }

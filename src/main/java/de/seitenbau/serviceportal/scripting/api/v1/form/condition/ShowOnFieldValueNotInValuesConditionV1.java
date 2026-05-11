@@ -3,6 +3,9 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.condition;
 
 import java.util.HashSet;
 import java.util.Set;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FieldGroupInstanceV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormV1;
@@ -15,8 +18,10 @@ public class ShowOnFieldValueNotInValuesConditionV1 extends FieldDisplayConditio
   /**
    * Werte, für die das Zielfeld nicht angezeigt wird.
    */
+  @JsonInclude(Include.NON_NULL)
   private Set<String> values;
 
+  @JsonIgnore
   @Override
   public boolean isShown(FieldGroupInstanceV1 instance, FormV1 form) {
     FormFieldV1 field = getReferencedField(instance, form);
@@ -174,5 +179,22 @@ public class ShowOnFieldValueNotInValuesConditionV1 extends FieldDisplayConditio
     final Object $values = this.getValues();
     result = result * PRIME + ($values == null ? 43 : $values.hashCode());
     return result;
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public ShowOnFieldValueNotInValuesConditionV1() {
+    this.values = ShowOnFieldValueNotInValuesConditionV1.$default$values();
+  }
+
+  /**
+   * Creates a new {@code ShowOnFieldValueNotInValuesConditionV1} instance.
+   *
+   * @param values Werte, für die das Zielfeld nicht angezeigt wird.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public ShowOnFieldValueNotInValuesConditionV1(final Set<String> values) {
+    this.values = values;
   }
 }

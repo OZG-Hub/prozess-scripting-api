@@ -140,4 +140,20 @@ public class FileNameRegexValidatorV1 extends ValidationRuleV1 {
     result = result * PRIME + ($regex == null ? 43 : $regex.hashCode());
     return result;
   }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FileNameRegexValidatorV1() {
+  }
+
+  /**
+   * Creates a new {@code FileNameRegexValidatorV1} instance.
+   *
+   * @param regex Regex für die Überprüfung (in Java Regex Syntax).
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FileNameRegexValidatorV1(final String regex) {
+    this.regex = regex;
+  }
 }

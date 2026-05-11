@@ -32,6 +32,12 @@ public class BinaryContentV1 {
   private byte[] data;
 
   /**
+   * Setter für JSON Deserialisierung. Der Wert wird aber aus data berechnet.
+   */
+  public void setSize(long size) {
+  }
+
+  /**
    * Gibt die Größe der Datei in Bytes zurück.
    *
    * @return Größe der Datei in Bytes.

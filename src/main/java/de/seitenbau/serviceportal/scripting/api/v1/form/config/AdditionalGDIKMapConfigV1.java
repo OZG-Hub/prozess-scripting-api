@@ -39,26 +39,6 @@ public class AdditionalGDIKMapConfigV1 implements AdditionalFieldConfigV1 {
     }
   }
 
-  /**
-   * Creates a new {@code AdditionalGDIKMapConfigV1} instance.
-   *
-   * @param configUrl URL zur Konfigurationsdatei.
-   * @param mode Modus der Kartenanwendung. Im Modus {@link GDIKModeV1#INPUT} kann der Antragssteller ein Element in die
-   * Karte einzeichnen. Im Modus {@link GDIKModeV1#SELECT} können Elemente auf der Karte ausgewählt werden,
-   * aber keine eigenen Elemente eingezeichnet werden.
-   * @param searchString Text, nach dem in der Karte gesucht werden soll. Ist ein Suchtext definiert, wird nach diesem Text in der
-   * Kartenanwendung über das Suchfeld gesucht und die Suchergebnisse / Vorschläge werden angezeigt.
-   * @param outputTypes Liste an Dateitypen, in die die Karte exportiert werden soll.
-   */
-  @SuppressWarnings("all")
-  @lombok.Generated
-  AdditionalGDIKMapConfigV1(final String configUrl, final GDIKModeV1 mode, final String searchString, final List<GDIKOutputTypeV1> outputTypes) {
-    this.configUrl = configUrl;
-    this.mode = mode;
-    this.searchString = searchString;
-    this.outputTypes = outputTypes;
-  }
-
 
   @SuppressWarnings("all")
   @lombok.Generated
@@ -277,5 +257,30 @@ public class AdditionalGDIKMapConfigV1 implements AdditionalFieldConfigV1 {
   @lombok.Generated
   public String toString() {
     return "AdditionalGDIKMapConfigV1(configUrl=" + this.getConfigUrl() + ", mode=" + this.getMode() + ", searchString=" + this.getSearchString() + ", outputTypes=" + this.getOutputTypes() + ")";
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public AdditionalGDIKMapConfigV1() {
+  }
+
+  /**
+   * Creates a new {@code AdditionalGDIKMapConfigV1} instance.
+   *
+   * @param configUrl URL zur Konfigurationsdatei.
+   * @param mode Modus der Kartenanwendung. Im Modus {@link GDIKModeV1#INPUT} kann der Antragssteller ein Element in die
+   * Karte einzeichnen. Im Modus {@link GDIKModeV1#SELECT} können Elemente auf der Karte ausgewählt werden,
+   * aber keine eigenen Elemente eingezeichnet werden.
+   * @param searchString Text, nach dem in der Karte gesucht werden soll. Ist ein Suchtext definiert, wird nach diesem Text in der
+   * Kartenanwendung über das Suchfeld gesucht und die Suchergebnisse / Vorschläge werden angezeigt.
+   * @param outputTypes Liste an Dateitypen, in die die Karte exportiert werden soll.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public AdditionalGDIKMapConfigV1(final String configUrl, final GDIKModeV1 mode, final String searchString, final List<GDIKOutputTypeV1> outputTypes) {
+    this.configUrl = configUrl;
+    this.mode = mode;
+    this.searchString = searchString;
+    this.outputTypes = outputTypes;
   }
 }

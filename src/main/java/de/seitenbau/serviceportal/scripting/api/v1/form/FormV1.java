@@ -11,16 +11,25 @@ import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import de.seitenbau.serviceportal.scripting.api.v1.form.button.CustomButtonV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.button.CustomButtonsV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.FormContentV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.FormFieldContentV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.FormReplacementValuesV1;
+import de.seitenbau.serviceportal.scripting.api.v1.form.json.DeserializerWithTypeInfo;
+import de.seitenbau.serviceportal.scripting.api.v1.form.json.SerializerWithTypeInfo;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.NonNull;
 
 /**
  * Formular.
  */
+@SuppressFBWarnings(value = "NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR", justification = "no-args constructor is for Jackson deserialization only")
 public class FormV1 {
   /**
    * ID des Formulars.
@@ -36,10 +45,12 @@ public class FormV1 {
   /**
    * Titel dieses Formulars.
    */
+  @JsonInclude(Include.NON_NULL)
   private String title;
   /**
    * Sprache dieses Formulars.
    */
+  @JsonInclude(Include.NON_NULL)
   private String language;
   /**
    * Liste der Formularabschnitte. Default ist eine leere Liste.
@@ -49,29 +60,37 @@ public class FormV1 {
   /**
    * Quelle, aus der die Inhalte des gesamten Formulars gelesen werden.
    */
+  @JsonInclude(Include.NON_NULL)
   private DataResourcePointerV1 source;
   /**
    * Ziel, in das der Inhalt des gesamten Formulars geschrieben werden.
    */
+  @JsonInclude(Include.NON_NULL)
   private DataResourcePointerV1 target;
   /**
    * Validierungsmeldungen des gesamten Formulars. Default ist leere Menge.
    */
   @NonNull
+  @JsonInclude(Include.NON_EMPTY)
   private Set<ValidationMessageV1> validationMessages;
   /**
    * Kontext, in dem das Formular abgeschickt wurde.
    */
+  @JsonSerialize(contentUsing = SerializerWithTypeInfo.class)
+  @JsonDeserialize(contentUsing = DeserializerWithTypeInfo.class)
+  @JsonInclude(Include.NON_NULL)
   private Map<String, Object> context;
   /**
    * Enthält die Custom-Buttons.
    */
+  @JsonInclude(Include.NON_NULL)
   private CustomButtonsV1 customButtons;
   /**
    * Die Ersetzungswerte für Platzhalter in der Formulardefinition, die verwendet wurden, um die
    * Formulardefinition zu vervollständigen. Dient dazu, um aus der Formulardefinition mit Platzhaltern wieder
    * eine vollständige Formulardefinition machen zu können.
    */
+  @JsonInclude(Include.NON_EMPTY)
   private FormReplacementValuesV1 appliedReplacements;
 
   /**
@@ -99,6 +118,7 @@ public class FormV1 {
    * @return Feldgruppe mit der gegebenen ID oder {@code null} wenn keine Feldgruppe gefunden wurde
    * @throws NullPointerException Falls die gegebene ID {@code null} ist
    */
+  @JsonIgnore
   public FieldGroupV1 getGroupTemplate(String id) {
     return sections.stream().flatMap(section -> section.getFieldGroups().stream()).filter(FieldGroupV1.class::isInstance).map(FieldGroupV1.class::cast).filter(group -> id.equals(group.getId())).findFirst().orElse(null);
   }
@@ -116,6 +136,7 @@ public class FormV1 {
    * oder die Feldgruppe keine Instanz mit dem gegebenen Index hat
    * @throws NullPointerException Falls die gegebene ID {@code null} ist
    */
+  @JsonIgnore
   public FieldGroupInstanceV1 getGroupInstance(String id, int index) {
     FieldGroupV1 group = getGroupTemplate(id);
     return group == null ? null : group.getGroupInstance(index);
@@ -127,6 +148,7 @@ public class FormV1 {
    * @return Liste aller Feldgruppen-Instanzen
    * @see #getGroupInstancesWith
    */
+  @JsonIgnore
   public List<FieldGroupInstanceV1> getGroupInstances() {
     return getGroupInstancesWith(g -> Boolean.TRUE);
   }
@@ -139,6 +161,7 @@ public class FormV1 {
    * @return Liste der Feldgruppen-Instanzen die das Predicate erfüllen
    * @throws NullPointerException Wenn das gegebene Predicate {@code null} ist
    */
+  @JsonIgnore
   public List<FieldGroupInstanceV1> getGroupInstancesWith(Predicate<FieldGroupInstanceV1> predicate) {
     return sections.stream().flatMap(s -> s.getFieldGroups().stream()).filter(FieldGroupV1.class::isInstance).map(FieldGroupV1.class::cast).flatMap(g -> g.getInstances().stream()).filter(predicate).collect(Collectors.toList());
   }
@@ -151,6 +174,7 @@ public class FormV1 {
    * @return Feld für den gegebene FormFieldKey oder {@code null} wenn das gegebene Feld nicht existiert
    * @throws NullPointerException Falls der gegebene FormFieldKey {@code null} ist
    */
+  @JsonIgnore
   public FormFieldV1 getFieldInInstance(FormFieldKeyV1 key) {
     FieldGroupV1 group = getGroupTemplate(key.getGroupId());
     return group == null ? null : group.getFieldInInstance(key.getGroupIndex(), key.getFieldId());
@@ -164,6 +188,7 @@ public class FormV1 {
    * @return Liste der Felder mit dem gegebene Typ
    * @throws NullPointerException Falls der gegebene Typ {@code null} ist
    */
+  @JsonIgnore
   public List<FormFieldV1> getInstanceFieldsWith(FieldTypeV1 type) {
     return getInstanceFieldsWith(f -> type == f.getType());
   }
@@ -176,6 +201,7 @@ public class FormV1 {
    * @return Liste der Felder aus den Feldgruppen-Instanzen, die das gegebene Predicate erfüllen
    * @throws NullPointerException Falls das gegebene Predicate {@code null} ist
    */
+  @JsonIgnore
   public List<FormFieldV1> getInstanceFieldsWith(Predicate<FormFieldV1> predicate) {
     return sections.stream().flatMap(section -> section.getFieldGroups().stream()).filter(FieldGroupV1.class::isInstance).map(FieldGroupV1.class::cast).flatMap(group -> group.getFieldsInInstanceWith(predicate).stream()).collect(Collectors.toList());
   }
@@ -186,6 +212,7 @@ public class FormV1 {
    *
    * @return Liste der Validierungsmeldungen am Formular
    */
+  @JsonIgnore
   public List<String> getValidationMessagesAsString() {
     return validationMessages.stream().map(ValidationMessageV1::getMessageText).collect(Collectors.toList());
   }
@@ -207,14 +234,17 @@ public class FormV1 {
    *
    * @return FormContent mit den Inhalten des Formulars
    */
+  @JsonIgnore
   public FormContentV1 getContent() {
     return FormContentV1.builder().appliedReplacements(appliedReplacements).formId(id).formTitle(title).validationMessages(new ArrayList<>(validationMessages)).createdOn(new Date()).context(getContextForContent()).fields(getFieldsForContent()).pressedCustomButton(getPressedCustomButtonForContent()).build();
   }
 
+  @JsonIgnore
   private Map<String, Object> getContextForContent() {
     return context == null ? null : new HashMap<>(context);
   }
 
+  @JsonIgnore
   private Map<String, FormFieldContentV1> getFieldsForContent() {
     Map<String, FormFieldContentV1> fields = new HashMap<>();
     boolean traverseSuccessful = traverseFormConsideringDisplayConditions((f, g) -> addField(fields, g, f));
@@ -272,6 +302,7 @@ public class FormV1 {
     formContent.put(key, content);
   }
 
+  @JsonIgnore
   private String getPressedCustomButtonForContent() {
     if (customButtons == null) {
       return null;
@@ -293,6 +324,7 @@ public class FormV1 {
    *
    * @throws NullPointerException Falls der gegebene Formularinhalt {@code null} ist
    */
+  @JsonIgnore
   public void setContent(FormContentV1 content) {
     this.validationMessages = new HashSet<>(content.getValidationMessages());
     if (content.getContext() != null) {
@@ -307,6 +339,7 @@ public class FormV1 {
     content.getFields().entrySet().forEach(this::setFieldContent);
   }
 
+  @JsonIgnore
   private void setFieldContent(Map.Entry<String, FormFieldContentV1> entry) {
     FormFieldKeyV1 key = new FormFieldKeyV1(entry.getKey());
     FormFieldV1 field = getFieldInInstanceOrCreateInstanceIfPossible(key);
@@ -321,6 +354,7 @@ public class FormV1 {
     }
   }
 
+  @JsonIgnore
   private FormFieldV1 getFieldInInstanceOrCreateInstanceIfPossible(FormFieldKeyV1 key) {
     FieldGroupV1 group = getGroupTemplate(key.getGroupId());
     if (group == null) {
@@ -509,6 +543,7 @@ public class FormV1 {
      * Kontext, in dem das Formular abgeschickt wurde.
      * @return {@code this}.
      */
+    @JsonDeserialize(contentUsing = DeserializerWithTypeInfo.class)
     @SuppressWarnings("all")
     @lombok.Generated
     public FormV1.FormV1Builder context(final Map<String, Object> context) {
@@ -872,6 +907,14 @@ public class FormV1 {
     return "FormV1(id=" + this.getId() + ", engineVersion=" + this.getEngineVersion() + ", title=" + this.getTitle() + ", language=" + this.getLanguage() + ", sections=" + this.getSections() + ", source=" + this.getSource() + ", target=" + this.getTarget() + ", validationMessages=" + this.getValidationMessages() + ", context=" + this.getContext() + ", customButtons=" + this.getCustomButtons() + ", appliedReplacements=" + this.getAppliedReplacements() + ")";
   }
 
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FormV1() {
+    this.engineVersion = FormV1.$default$engineVersion();
+    this.sections = FormV1.$default$sections();
+    this.validationMessages = FormV1.$default$validationMessages();
+  }
+
   /**
    * Creates a new {@code FormV1} instance.
    *
@@ -893,7 +936,7 @@ public class FormV1 {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  private FormV1(@NonNull final String id, final FormularEngineVersionV1 engineVersion, final String title, final String language, @NonNull final List<FormSectionV1> sections, final DataResourcePointerV1 source, final DataResourcePointerV1 target, @NonNull final Set<ValidationMessageV1> validationMessages, final Map<String, Object> context, final CustomButtonsV1 customButtons, final FormReplacementValuesV1 appliedReplacements) {
+  public FormV1(@NonNull final String id, final FormularEngineVersionV1 engineVersion, final String title, final String language, @NonNull final List<FormSectionV1> sections, final DataResourcePointerV1 source, final DataResourcePointerV1 target, @NonNull final Set<ValidationMessageV1> validationMessages, final Map<String, Object> context, final CustomButtonsV1 customButtons, final FormReplacementValuesV1 appliedReplacements) {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");
     }

@@ -4,6 +4,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.form;
 import java.util.ArrayList;
 import java.util.List;
 import de.seitenbau.serviceportal.scripting.api.v1.form.condition.DisplayConditionV1;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.NonNull;
 
 /**
@@ -14,6 +15,7 @@ import lombok.NonNull;
  * um Felder der Typen {@link FieldTypeV1#H1 H1}, {@link FieldTypeV1#H2 H2}, {@link FieldTypeV1#TEXT TEXT},
  * {@link FieldTypeV1#IMAGE IMAGE}, und {@link FieldTypeV1#VIDEO VIDEO}. Jedes Feld hat die maximale Breite.
  */
+@SuppressFBWarnings(value = "NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR", justification = "no-args constructor is for Jackson deserialization only")
 public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
   /**
    * ID des Medien-Akkordeons.
@@ -46,33 +48,6 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
   @lombok.Generated
   private static List<DisplayConditionV1> $default$displayConditions() {
     return new ArrayList<>();
-  }
-
-  /**
-   * Creates a new {@code MediaAccordionV1} instance.
-   *
-   * @param id ID des Medien-Akkordeons.
-   * @param title Überschrift der Feldgruppe.
-   * @param elements Akkordeon-Elemente des Akkordeons. Diese enthalten die Formularfelder.
-   * @param displayConditions Sichtbarkeitsbedingungen, über die die Feldgruppe dynamisch ein- oder ausgeblendet werden kann.
-   * Default ist eine leere Liste.
-   */
-  @SuppressWarnings("all")
-  @lombok.Generated
-  MediaAccordionV1(@NonNull final String id, final String title, @NonNull final List<MediaAccordionElementV1> elements, @NonNull final List<DisplayConditionV1> displayConditions) {
-    if (id == null) {
-      throw new NullPointerException("id is marked non-null but is null");
-    }
-    if (elements == null) {
-      throw new NullPointerException("elements is marked non-null but is null");
-    }
-    if (displayConditions == null) {
-      throw new NullPointerException("displayConditions is marked non-null but is null");
-    }
-    this.id = id;
-    this.title = title;
-    this.elements = elements;
-    this.displayConditions = displayConditions;
   }
 
 
@@ -320,5 +295,39 @@ public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
   @lombok.Generated
   public String toString() {
     return "MediaAccordionV1(id=" + this.getId() + ", title=" + this.getTitle() + ", elements=" + this.getElements() + ", displayConditions=" + this.getDisplayConditions() + ")";
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MediaAccordionV1() {
+    this.elements = MediaAccordionV1.$default$elements();
+    this.displayConditions = MediaAccordionV1.$default$displayConditions();
+  }
+
+  /**
+   * Creates a new {@code MediaAccordionV1} instance.
+   *
+   * @param id ID des Medien-Akkordeons.
+   * @param title Überschrift der Feldgruppe.
+   * @param elements Akkordeon-Elemente des Akkordeons. Diese enthalten die Formularfelder.
+   * @param displayConditions Sichtbarkeitsbedingungen, über die die Feldgruppe dynamisch ein- oder ausgeblendet werden kann.
+   * Default ist eine leere Liste.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MediaAccordionV1(@NonNull final String id, final String title, @NonNull final List<MediaAccordionElementV1> elements, @NonNull final List<DisplayConditionV1> displayConditions) {
+    if (id == null) {
+      throw new NullPointerException("id is marked non-null but is null");
+    }
+    if (elements == null) {
+      throw new NullPointerException("elements is marked non-null but is null");
+    }
+    if (displayConditions == null) {
+      throw new NullPointerException("displayConditions is marked non-null but is null");
+    }
+    this.id = id;
+    this.title = title;
+    this.elements = elements;
+    this.displayConditions = displayConditions;
   }
 }

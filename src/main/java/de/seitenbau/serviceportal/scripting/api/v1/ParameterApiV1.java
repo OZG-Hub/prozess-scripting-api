@@ -39,7 +39,7 @@ public interface ParameterApiV1
   <T> T get(String oeId, String name, Class<T> clazz);
 
   /**
-   * Gibt den Wert eines String-Prozessparameters des Prozesses vom Typ {@code <T>} zurück.
+   * Gibt den Wert eines String-Prozessparameters des Prozesses vom Typ {@code String} zurück.
    * Wird diese Methode auf OZG-Hub aufgerufen, wird immer eine NullPointerException geworfen, da die ID einer
    * Organisationseinheit fehlt.
    *
@@ -48,9 +48,7 @@ public interface ParameterApiV1
    * @return Wert des Prozessparameters, oder {@code null} falls nicht vorhanden
    * @throws NullPointerException Falls diese Methode auf OZG-Hub verwendet wird oder falls {@code name}
    * gleich {@code null} ist
-   * @throws IllegalArgumentException Falls der Typ {@code <T>} nicht unterstützt wird
-   * @throws InvalidParameterTypeException Falls der tatsächliche Typ des Parameters nicht zum übergebenen
-   * Typ des Parameters passt
+   * @throws InvalidParameterTypeException Falls der tatsächliche Typ des Parameters nicht {@code String} ist
    */
   default String get(String name)
   {
@@ -104,10 +102,12 @@ public interface ParameterApiV1
   }
 
   /**
-   * Gibt den Wert eines Prozessparameters einer Organisationseinheit (OE) und Leistung vom Typ {@code String}
-   * zurück. Der Parameter wird anhand der Parameter bei Jesaja abgerufen.
+   * Gibt den Wert eines {@code String}-Prozessparameters einer Organisationseinheit (OE) und Leistung zurück.
+   * <ul>
+   * <li>OZG-Hub: wird der Parameter bei Jesaja abgerufen.</li>
+   * <li>SBW oder AMT24: der Parameter über den Admincenter abgerufen.</li>
+   * </ul>
    * <p>
-   * Diese Methode wird nur auf dem OZG-Hub unterstützt.
    *
    * @param oeId ID der Organisationseinheit
    * @param leistungId ID der Leistung
@@ -122,7 +122,7 @@ public interface ParameterApiV1
   String get(String oeId, String leistungId, String name);
 
   /**
-   * Gibt den Wert eines Prozessparameters vom Typ {@code String} zurück.
+   * Gibt den Wert eines {@code String}-Prozessparameters vom zurück.
    * Der Parameter wird anhand der gegebenen Leistung und Regionen-Informationen über die Fit-Connect
    * Routing-API abgerufen. Es muss eine Leistung und genau eine Regionen-Information gesetzt sein.
    * <p>

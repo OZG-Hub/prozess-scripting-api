@@ -2,6 +2,8 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form;
 
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.NonNull;
 
 /**
@@ -27,6 +29,19 @@ public class FormFieldKeyV1 {
    */
   @NonNull
   private final String fieldId;
+
+  @JsonCreator
+  public FormFieldKeyV1(@JsonProperty("groupId") @NonNull String groupId, @JsonProperty("groupIndex") int groupIndex, @JsonProperty("fieldId") @NonNull String fieldId) {
+    if (groupId == null) {
+      throw new NullPointerException("groupId is marked non-null but is null");
+    }
+    if (fieldId == null) {
+      throw new NullPointerException("fieldId is marked non-null but is null");
+    }
+    this.groupId = groupId;
+    this.groupIndex = groupIndex;
+    this.fieldId = fieldId;
+  }
 
   /**
    * Erzeugt eine neue FormFieldKey-Instanz basierend auf dem gegebenen String, der eine String-Repräsentation
@@ -199,26 +214,5 @@ public class FormFieldKeyV1 {
   @lombok.Generated
   public String getFieldId() {
     return this.fieldId;
-  }
-
-  /**
-   * Creates a new {@code FormFieldKeyV1} instance.
-   *
-   * @param groupId ID der Feldgruppen-Instanz.
-   * @param groupIndex Index der Feldgruppen-Instanz.
-   * @param fieldId ID des Feldes innerhalb der Feldgruppen-Instanz.
-   */
-  @SuppressWarnings("all")
-  @lombok.Generated
-  public FormFieldKeyV1(@NonNull final String groupId, final int groupIndex, @NonNull final String fieldId) {
-    if (groupId == null) {
-      throw new NullPointerException("groupId is marked non-null but is null");
-    }
-    if (fieldId == null) {
-      throw new NullPointerException("fieldId is marked non-null but is null");
-    }
-    this.groupId = groupId;
-    this.groupIndex = groupIndex;
-    this.fieldId = fieldId;
   }
 }

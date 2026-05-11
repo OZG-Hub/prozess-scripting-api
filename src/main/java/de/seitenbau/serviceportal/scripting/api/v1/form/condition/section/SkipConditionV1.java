@@ -2,12 +2,16 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.condition.section;
 
 import java.util.stream.Stream;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FieldGroupInstanceV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormV1;
 
 /**
  * Abstrakte Elternklasse für Bedingungen zum Überspringen von Elementen.
  */
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "@type")
+@JsonSubTypes({@JsonSubTypes.Type(value = SkipOnEmptyFieldConditionV1.class, name = "SkipOnEmptyFieldCondition"), @JsonSubTypes.Type(value = SkipOnFieldValueNotInValuesConditionV1.class, name = "SkipOnFieldValueNotInValuesCondition"), @JsonSubTypes.Type(value = SkipOnFieldValuesConditionV1.class, name = "SkipOnFieldValuesCondition"), @JsonSubTypes.Type(value = SkipOnFilledFieldConditionV1.class, name = "SkipOnFilledFieldCondition"), @JsonSubTypes.Type(value = SkipOnBooleanConditionV1.class, name = "SkipOnBooleanCondition"), @JsonSubTypes.Type(value = SkipOnProcessVariableInValuesConditionV1.class, name = "SkipOnProcessVariableInValuesCondition"), @JsonSubTypes.Type(value = SkipOnProcessVariableNotInValuesConditionV1.class, name = "SkipOnProcessVariableNotInValuesCondition")})
 public abstract class SkipConditionV1 implements Cloneable {
   /**
    * Prüft, ob die Bedingung in der gegebenen Gruppeninstanz im gegebenen Formular erfüllt

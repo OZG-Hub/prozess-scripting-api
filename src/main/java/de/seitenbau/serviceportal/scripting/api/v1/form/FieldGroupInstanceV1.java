@@ -3,6 +3,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.form;
 
 import java.util.Set;
 import java.util.stream.Collectors;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import de.seitenbau.serviceportal.scripting.api.v1.form.condition.DisplayConditionV1;
 
 /**
@@ -44,6 +45,7 @@ public class FieldGroupInstanceV1 extends AbstractFieldGroupV1 {
    * @return {@code true}, wenn diese Instanz sichtbar ist, sonst {@code false}
    * @throws NullPointerException falls das gegebene Formular {@code null} ist
    */
+  @JsonIgnore
   public boolean isShown(FormV1 form) {
     return getDisplayConditions().isEmpty() || getDisplayConditions().stream().anyMatch(c -> c.isShown(this, form));
   }

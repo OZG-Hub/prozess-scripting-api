@@ -95,4 +95,9 @@ public class IBANValidatorV1 extends ValidationRuleV1 {
 		final int result = 1;
 		return result;
 	}
+
+	@SuppressWarnings("all")
+	@lombok.Generated
+	public IBANValidatorV1() {
+	}
 }

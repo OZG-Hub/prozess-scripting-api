@@ -137,4 +137,20 @@ public class MaxFileCountValidatorV1 extends ValidationRuleV1 {
     result = result * PRIME + this.getMaxFileCount();
     return result;
   }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MaxFileCountValidatorV1() {
+  }
+
+  /**
+   * Creates a new {@code MaxFileCountValidatorV1} instance.
+   *
+   * @param maxFileCount Maximale Anzahl an Dateien.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MaxFileCountValidatorV1(final int maxFileCount) {
+    this.maxFileCount = maxFileCount;
+  }
 }

@@ -5,12 +5,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import de.seitenbau.serviceportal.scripting.api.v1.form.condition.DisplayConditionV1;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.NonNull;
 
 /**
  * Abstrakte Elternklasse für Feldgruppen und deren Instanzen.
  */
+@SuppressFBWarnings(value = "NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR", justification = "no-args constructor is for Jackson deserialization only")
 public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
   /**
    * Default und Maximum der maximalen Anzahl an Instanzen, die eine mehrfach-ausfüllbare Feldgruppe haben
@@ -25,6 +30,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
   /**
    * Die ID der Feldgruppe als Datenfeldgruppe im FIM-Standard (Föderales Informationsmanagement).
    */
+  @JsonInclude(Include.NON_NULL)
   private String fimId;
   /**
    * Überschrift der Feldgruppe.
@@ -40,6 +46,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
    * Default ist eine leere Liste.
    */
   @NonNull
+  @JsonInclude(Include.NON_EMPTY)
   private List<DisplayConditionV1> displayConditions;
 
   /**
@@ -66,6 +73,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
    * @return Feld mit gegebener ID oder {@code null}, wenn nicht gefunden
    * @throws NullPointerException Wenn die gegebene ID {@code null} ist
    */
+  @JsonIgnore
   public FormFieldV1 getField(String id) {
     return getFieldsWith(f -> id.equals(f.getId())).stream().findFirst().orElse(null);
   }
@@ -78,6 +86,7 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
    * @return die Felder, die die Bedingung erfüllen, nicht {@code null}
    * @throws NullPointerException Wenn die gegebene Bedingung {@code null} ist
    */
+  @JsonIgnore
   protected List<FormFieldV1> getFieldsWith(Predicate<FormFieldV1> predicate) {
     return rows.stream().flatMap(r -> r.getFields().stream()).filter(predicate).collect(Collectors.toList());
   }
@@ -384,5 +393,41 @@ public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
   @lombok.Generated
   public String toString() {
     return "AbstractFieldGroupV1(id=" + this.getId() + ", fimId=" + this.getFimId() + ", title=" + this.getTitle() + ", rows=" + this.getRows() + ", displayConditions=" + this.getDisplayConditions() + ")";
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public AbstractFieldGroupV1() {
+    this.rows = AbstractFieldGroupV1.$default$rows();
+    this.displayConditions = AbstractFieldGroupV1.$default$displayConditions();
+  }
+
+  /**
+   * Creates a new {@code AbstractFieldGroupV1} instance.
+   *
+   * @param id ID der Feldgruppe.
+   * @param fimId Die ID der Feldgruppe als Datenfeldgruppe im FIM-Standard (Föderales Informationsmanagement).
+   * @param title Überschrift der Feldgruppe.
+   * @param rows Formularzeilen der Feldgruppe. Default ist eine leere Liste.
+   * @param displayConditions Sichtbarkeitsbedingungen, über die die Feldgruppe dynamisch ein- oder ausgeblendet werden kann.
+   * Default ist eine leere Liste.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public AbstractFieldGroupV1(@NonNull final String id, final String fimId, final String title, @NonNull final List<FormRowV1> rows, @NonNull final List<DisplayConditionV1> displayConditions) {
+    if (id == null) {
+      throw new NullPointerException("id is marked non-null but is null");
+    }
+    if (rows == null) {
+      throw new NullPointerException("rows is marked non-null but is null");
+    }
+    if (displayConditions == null) {
+      throw new NullPointerException("displayConditions is marked non-null but is null");
+    }
+    this.id = id;
+    this.fimId = fimId;
+    this.title = title;
+    this.rows = rows;
+    this.displayConditions = displayConditions;
   }
 }

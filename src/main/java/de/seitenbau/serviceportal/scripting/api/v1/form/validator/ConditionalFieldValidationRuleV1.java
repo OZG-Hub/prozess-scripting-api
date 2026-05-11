@@ -111,4 +111,20 @@ public abstract class ConditionalFieldValidationRuleV1 extends ValidationRuleV1 
     result = result * PRIME + ($sourceFieldKey == null ? 43 : $sourceFieldKey.hashCode());
     return result;
   }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public ConditionalFieldValidationRuleV1() {
+  }
+
+  /**
+   * Creates a new {@code ConditionalFieldValidationRuleV1} instance.
+   *
+   * @param sourceFieldKey Schlüssel des Feldes, auf das sich die Validierungsregel bezieht.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public ConditionalFieldValidationRuleV1(final FormFieldKeyV1 sourceFieldKey) {
+    this.sourceFieldKey = sourceFieldKey;
+  }
 }

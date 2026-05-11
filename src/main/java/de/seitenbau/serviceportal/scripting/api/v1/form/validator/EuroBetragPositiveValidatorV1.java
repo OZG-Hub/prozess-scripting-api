@@ -139,4 +139,20 @@ public class EuroBetragPositiveValidatorV1 extends ValidationRuleV1 {
     result = result * PRIME + ($strictlyPositive == null ? 43 : $strictlyPositive.hashCode());
     return result;
   }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public EuroBetragPositiveValidatorV1() {
+  }
+
+  /**
+   * Creates a new {@code EuroBetragPositiveValidatorV1} instance.
+   *
+   * @param strictlyPositive {@code true}, wenn der Betrag nicht 0 sein darf.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public EuroBetragPositiveValidatorV1(final Boolean strictlyPositive) {
+    this.strictlyPositive = strictlyPositive;
+  }
 }

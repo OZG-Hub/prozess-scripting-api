@@ -3,6 +3,8 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.button;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import de.seitenbau.serviceportal.scripting.api.v1.form.DataResourcePointerV1;
 import lombok.NonNull;
 
@@ -14,10 +16,12 @@ public class CustomButtonsV1 {
    * Liste der Buttons. Default ist eine leere Liste.
    */
   @NonNull
+  @JsonInclude(Include.NON_EMPTY)
   private List<CustomButtonV1> buttons;
   /**
    * Prozessinstanzvariable, in die der Wert des geklickten Buttons geschrieben wird.
    */
+  @JsonInclude(Include.NON_NULL)
   private DataResourcePointerV1 target;
 
   @SuppressWarnings("all")
@@ -190,7 +194,7 @@ public class CustomButtonsV1 {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  private CustomButtonsV1(@NonNull final List<CustomButtonV1> buttons, final DataResourcePointerV1 target) {
+  public CustomButtonsV1(@NonNull final List<CustomButtonV1> buttons, final DataResourcePointerV1 target) {
     if (buttons == null) {
       throw new NullPointerException("buttons is marked non-null but is null");
     }

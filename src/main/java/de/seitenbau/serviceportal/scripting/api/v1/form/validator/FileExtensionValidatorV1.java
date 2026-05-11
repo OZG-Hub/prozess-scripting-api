@@ -2,6 +2,8 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.validator;
 
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
  * Validierungsregel, die prüft, dass eine hochgeladene Datei einen der erlaubten Dateitypen hat.
@@ -10,6 +12,7 @@ public class FileExtensionValidatorV1 extends ValidationRuleV1 {
   /**
    * Liste der erlaubten Dateiendungen.
    */
+  @JsonInclude(Include.NON_NULL)
   private List<String> values;
 
 
@@ -140,5 +143,21 @@ public class FileExtensionValidatorV1 extends ValidationRuleV1 {
     final Object $values = this.getValues();
     result = result * PRIME + ($values == null ? 43 : $values.hashCode());
     return result;
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FileExtensionValidatorV1() {
+  }
+
+  /**
+   * Creates a new {@code FileExtensionValidatorV1} instance.
+   *
+   * @param values Liste der erlaubten Dateiendungen.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FileExtensionValidatorV1(final List<String> values) {
+    this.values = values;
   }
 }

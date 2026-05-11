@@ -1,9 +1,17 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.auth;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 /**
  * Interface für alle Authentifizierungsmöglichkeiten bei der Kommunikation mit externen Servern.
  * Zum Beispiel für die externe Dateiablage (Speichern von hochgeladenen Dateien außerhalb des Portals).
  */
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "@type")
+@JsonSubTypes({
+    @JsonSubTypes.Type(value = BasicAuthAuthenticationConfigV1.class, name = "BasicAuth"),
+    @JsonSubTypes.Type(value = KeystoreAuthenticationConfigV1.class, name = "Keystore")
+})
 public interface AuthenticationConfigV1 extends Cloneable
 {
   /**

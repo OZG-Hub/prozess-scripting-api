@@ -165,6 +165,12 @@ public class FormRowV1 implements Cloneable {
     return "FormRowV1(fields=" + this.getFields() + ")";
   }
 
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FormRowV1() {
+    this.fields = FormRowV1.$default$fields();
+  }
+
   /**
    * Creates a new {@code FormRowV1} instance.
    *

@@ -6,41 +6,54 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 /**
  * Feldgruppe in einem Formular.
  */
+@SuppressFBWarnings(value = "RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE", justification = "no-args constructor is for Jackson deserialization only")
 public class FieldGroupV1 extends AbstractFieldGroupV1 {
   /**
    * {@code true}, wenn beim Ausfüllen des Formulars mehrere Feldgruppen dieser Art angelegt werden können.
    */
+  @JsonInclude(Include.NON_DEFAULT)
   private boolean multiple;
   /**
    * Beschriftung des Buttons zum Hinzufügen einer neuen Feldgruppen-Instanz.
    */
+  @JsonInclude(Include.NON_DEFAULT)
   private String addRowButtonText;
   /**
    * Beschriftung des Buttons zum Entfernen einer Feldgruppen-Instanz.
    */
+  @JsonInclude(Include.NON_DEFAULT)
   private String deleteRowButtonText;
   /**
    * Text des Tooltips am Button zum Hinzufügen einer neuen Instanz, warum keine weitere
    * Feldgruppen-Instanz hinzugefügt werden kann.
    */
+  @JsonInclude(Include.NON_DEFAULT)
   private String addRowButtonInfoText;
   /**
    * Text des Tooltips am Button zum Entfernen einer existierenden Instanz, warum die Instanz nicht entfernt
    * werden kann.
    */
+  @JsonInclude(Include.NON_DEFAULT)
   private String deleteRowButtonInfoText;
   /**
    * Layout der Feldgruppen-Instanzen, wenn es eine mehrfach-ausfüllbare Feldgruppe ist.
    */
+  @JsonInclude(Include.NON_DEFAULT)
   private FieldGroupLayoutV1 layout;
   /**
    * {@code true}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
    * Auf der Oberfläche beim Ausfüllen des Formulars ist die Gruppe dann nicht sichtbar.
    */
+  @Deprecated
+  @JsonInclude(Include.NON_DEFAULT)
   private boolean printOnly;
   /**
    * Mit diesem Attribut lässt sich Einschränken in welchen Medien die Feldgruppe dargestellt werden soll.
@@ -50,6 +63,8 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * {@code FORM}, wenn die Feldgruppe nur in der Formularansicht dargestellt werden soll.
    * {@code null}, keine Einschränkung bei der Darstellung.
    */
+  @Deprecated
+  @JsonInclude(Include.NON_DEFAULT)
   private RenderMediumV1 renderOnlyIn;
   /**
    * Mit diesem Attribut lässt sich Einschränken, wo die Gruppe dargestellt werden soll.
@@ -62,19 +77,23 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * {@code SUBMIT_TASK}, wenn die Gruppe auf der Zusammenfassungsseite im Prozess dargestellt werden soll.
    * {@code null}, keine Einschränkung bei der Darstellung.
    */
+  @JsonInclude(Include.NON_NULL)
   private List<DisplayModeV1> renderFor;
   /**
    * Maximal erlaubte Anzahl an Instanzen der Feldgruppe. Default ist 99.
    */
+  @JsonInclude(Include.NON_NULL)
   private int maxInstanceCount;
   /**
    * {@code true}, wenn die Anzahl an Feldgruppen-Instanzen beim Bearbeiten des Formulars und Submit nicht
    * geändert werden.
    */
+  @JsonInclude(Include.NON_DEFAULT)
   private boolean fixedInstanceCount;
   /**
    * Gibt an, wie der Titel der Instanzen der Feldgruppe generiert werden soll.
    */
+  @JsonInclude(Include.NON_NULL)
   private String instanceTitleTemplate;
   /**
    * Instanzen dieser Feldgruppe.
@@ -103,11 +122,13 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    *
    * @return Liste der Instanzen
    */
+  @JsonIgnore
   public List<FieldGroupInstanceV1> getInstances() {
     createFirstInstanceIfNecessary();
     return instances;
   }
 
+  @JsonIgnore
   private List<FieldGroupInstanceV1> getGroupInstancesWith(Predicate<FieldGroupInstanceV1> predicate) {
     createFirstInstanceIfNecessary();
     return instances.stream().filter(predicate).collect(Collectors.toList());
@@ -121,6 +142,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * @return Instanz mit dem gegebenen Index oder {@code null} wenn keine Instanz mit dem gegebenen Index
    * existiert.
    */
+  @JsonIgnore
   public FieldGroupInstanceV1 getGroupInstance(int index) {
     return getGroupInstancesWith(i -> index == i.getIndex()).stream().findFirst().orElse(null);
   }
@@ -133,6 +155,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    *
    * @return Die Instanz mit dem gegebenen Index, nicht {@code null}.
    */
+  @JsonIgnore
   protected FieldGroupInstanceV1 getGroupInstanceOrCreateIfPossible(int index) {
     if (getGroupInstance(index) == null) {
       addInstance(index);
@@ -150,6 +173,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * oder {@code null}, wenn Instanz oder Feld nicht existieren
    * @throws NullPointerException Wenn die gegebene ID {@code null} ist
    */
+  @JsonIgnore
   public FormFieldV1 getFieldInInstance(int index, String id) {
     FieldGroupInstanceV1 instance = getGroupInstance(index);
     return instance == null ? null : instance.getField(id);
@@ -163,6 +187,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * @return Liste der Felder, die das gegebene Predicate erfüllen
    * @throws NullPointerException Wenn das gegebene Predicate {@code null} ist
    */
+  @JsonIgnore
   public List<FormFieldV1> getFieldsInInstanceWith(Predicate<FormFieldV1> predicate) {
     createFirstInstanceIfNecessary();
     return instances.stream().flatMap(i -> i.getFieldsWith(predicate).stream()).collect(Collectors.toList());
@@ -202,6 +227,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     }
   }
 
+  @JsonIgnore
   private int getNextIndex() {
     return instances.isEmpty() ? 0 : instances.get(instances.size() - 1).getIndex() + 1;
   }
@@ -347,6 +373,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
      * Auf der Oberfläche beim Ausfüllen des Formulars ist die Gruppe dann nicht sichtbar.
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
     @lombok.Generated
     public B printOnly(final boolean printOnly) {
@@ -363,6 +390,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
      * {@code null}, keine Einschränkung bei der Darstellung.
      * @return {@code this}.
      */
+    @Deprecated
     @SuppressWarnings("all")
     @lombok.Generated
     public B renderOnlyIn(final RenderMediumV1 renderOnlyIn) {
@@ -565,6 +593,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * {@code true}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
    * Auf der Oberfläche beim Ausfüllen des Formulars ist die Gruppe dann nicht sichtbar.
    */
+  @Deprecated
   @SuppressWarnings("all")
   @lombok.Generated
   public boolean isPrintOnly() {
@@ -579,6 +608,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * {@code FORM}, wenn die Feldgruppe nur in der Formularansicht dargestellt werden soll.
    * {@code null}, keine Einschränkung bei der Darstellung.
    */
+  @Deprecated
   @SuppressWarnings("all")
   @lombok.Generated
   public RenderMediumV1 getRenderOnlyIn() {
@@ -690,6 +720,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * {@code true}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
    * Auf der Oberfläche beim Ausfüllen des Formulars ist die Gruppe dann nicht sichtbar.
    */
+  @Deprecated
   @SuppressWarnings("all")
   @lombok.Generated
   public void setPrintOnly(final boolean printOnly) {
@@ -704,6 +735,7 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    * {@code FORM}, wenn die Feldgruppe nur in der Formularansicht dargestellt werden soll.
    * {@code null}, keine Einschränkung bei der Darstellung.
    */
+  @Deprecated
   @SuppressWarnings("all")
   @lombok.Generated
   public void setRenderOnlyIn(final RenderMediumV1 renderOnlyIn) {
@@ -849,5 +881,64 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
     final Object $instances = this.getInstances();
     result = result * PRIME + ($instances == null ? 43 : $instances.hashCode());
     return result;
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FieldGroupV1() {
+    this.maxInstanceCount = FieldGroupV1.$default$maxInstanceCount();
+    this.instances = FieldGroupV1.$default$instances();
+  }
+
+  /**
+   * Creates a new {@code FieldGroupV1} instance.
+   *
+   * @param multiple {@code true}, wenn beim Ausfüllen des Formulars mehrere Feldgruppen dieser Art angelegt werden können.
+   * @param addRowButtonText Beschriftung des Buttons zum Hinzufügen einer neuen Feldgruppen-Instanz.
+   * @param deleteRowButtonText Beschriftung des Buttons zum Entfernen einer Feldgruppen-Instanz.
+   * @param addRowButtonInfoText Text des Tooltips am Button zum Hinzufügen einer neuen Instanz, warum keine weitere
+   * Feldgruppen-Instanz hinzugefügt werden kann.
+   * @param deleteRowButtonInfoText Text des Tooltips am Button zum Entfernen einer existierenden Instanz, warum die Instanz nicht entfernt
+   * werden kann.
+   * @param layout Layout der Feldgruppen-Instanzen, wenn es eine mehrfach-ausfüllbare Feldgruppe ist.
+   * @param printOnly {@code true}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
+   * Auf der Oberfläche beim Ausfüllen des Formulars ist die Gruppe dann nicht sichtbar.
+   * @param renderOnlyIn Mit diesem Attribut lässt sich Einschränken in welchen Medien die Feldgruppe dargestellt werden soll.
+   * Darf nicht gleichzeitig mit dem Attribute 'renderOnlyIn' eines Feldes der Gruppe gesetzt sein.
+   * <br/>
+   * {@code PDF}, wenn die Feldgruppe nur in einem erzeugten PDF dargestellt werden soll.
+   * {@code FORM}, wenn die Feldgruppe nur in der Formularansicht dargestellt werden soll.
+   * {@code null}, keine Einschränkung bei der Darstellung.
+   * @param renderFor Mit diesem Attribut lässt sich Einschränken, wo die Gruppe dargestellt werden soll.
+   * Darf nicht gleichzeitig mit den Attributen ['renderOnlyIn', 'printOnly'] gesetzt werden.
+   * Darf nicht gleichzeitig mit einem der Attribute ['renderOnlyIn', 'renderFor'], der Felder
+   * dieser Gruppe gesetzt werden.
+   * <br/>
+   * {@code PDF}, wenn die Gruppe in einem erzeugten PDF dargestellt werden soll.
+   * {@code FORM}, wenn die Gruppe in der Formularansicht dargestellt werden soll.
+   * {@code SUBMIT_TASK}, wenn die Gruppe auf der Zusammenfassungsseite im Prozess dargestellt werden soll.
+   * {@code null}, keine Einschränkung bei der Darstellung.
+   * @param maxInstanceCount Maximal erlaubte Anzahl an Instanzen der Feldgruppe. Default ist 99.
+   * @param fixedInstanceCount {@code true}, wenn die Anzahl an Feldgruppen-Instanzen beim Bearbeiten des Formulars und Submit nicht
+   * geändert werden.
+   * @param instanceTitleTemplate Gibt an, wie der Titel der Instanzen der Feldgruppe generiert werden soll.
+   * @param instances Instanzen dieser Feldgruppe.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FieldGroupV1(final boolean multiple, final String addRowButtonText, final String deleteRowButtonText, final String addRowButtonInfoText, final String deleteRowButtonInfoText, final FieldGroupLayoutV1 layout, final boolean printOnly, final RenderMediumV1 renderOnlyIn, final List<DisplayModeV1> renderFor, final int maxInstanceCount, final boolean fixedInstanceCount, final String instanceTitleTemplate, final List<FieldGroupInstanceV1> instances) {
+    this.multiple = multiple;
+    this.addRowButtonText = addRowButtonText;
+    this.deleteRowButtonText = deleteRowButtonText;
+    this.addRowButtonInfoText = addRowButtonInfoText;
+    this.deleteRowButtonInfoText = deleteRowButtonInfoText;
+    this.layout = layout;
+    this.printOnly = printOnly;
+    this.renderOnlyIn = renderOnlyIn;
+    this.renderFor = renderFor;
+    this.maxInstanceCount = maxInstanceCount;
+    this.fixedInstanceCount = fixedInstanceCount;
+    this.instanceTitleTemplate = instanceTitleTemplate;
+    this.instances = instances;
   }
 }

@@ -145,8 +145,10 @@ public interface ScriptingApiV1
   FormV1 getForm(String formId, FormReplacementValuesV1 replacements);
 
   /**
-   * Gibt den beim Start eines Prozesses / Erzeugen einer Prozessinstanz zur Verfügung gestellt StartParameter
-   * zurück.
+   * Gibt das StartParameter-Objekt der Hauptprozessinstanz zurück.
+   * <p>
+   * Die Methode kann in Unterprozessen genutzt werden, um auf den StartParameter zuzugreifen. Es ist nicht
+   * notwendig die Prozessinstanzvariable zuvor über die CallActivity an den Unterprozess zu übergeben.
    *
    * @return Der StartParameter, nicht {@code null}.
    * @throws IllegalStateException Falls der StartParameter nicht aufgerufen werden konnte
@@ -230,8 +232,12 @@ public interface ScriptingApiV1
   FormContentApiV1 getFormContent();
 
   /**
-   * Gibt die Konfiguration der Prozess-Engine / Plattform zurück.<br>
-   * Die Methode ersetzt die Prozessinstanzvariable {@code processEngineConfig}.
+   * Gibt die Konfiguration der Prozess-Engine / Plattform zurück.
+   * <p>
+   * Die Methode ersetzt die Prozessinstanzvariable {@code processEngineConfig}. Die Methode kann auch in
+   * Unterprozessen genutzt werden, um auf die ProcessEngineConfig zuzugreifen. Es ist nicht notwendig die
+   * Prozessinstanzvariable zuvor über die CallActivity an den Unterprozess zu übergeben. Die Klasse
+   * {@code ProcessEngineConfigV1} kann nicht als Prozessinstanzvariable gespeichert werden.
    *
    * @return Konfiguration der Prozess-Engine, nie {@code null}
    * @since Release 1.207

@@ -2,6 +2,8 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.validator;
 
 import java.math.BigDecimal;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
  * Validierungsregel, die prüft, dass die Nutzereingabe eine Zahl ist
@@ -11,10 +13,12 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
   /**
    * Maximalwert, der nicht überschritten werden darf.
    */
+  @JsonInclude(Include.NON_NULL)
   private BigDecimal maxValue;
   /**
    * Benutzerdefinierter Fehlertext bei ungültiger Eingabe.
    */
+  @JsonInclude(Include.NON_EMPTY)
   private String validationInvalidNumberMessage;
 
 
@@ -183,5 +187,23 @@ public class MaxNumberValueValidatorV1 extends ValidationRuleV1 {
     final Object $validationInvalidNumberMessage = this.getValidationInvalidNumberMessage();
     result = result * PRIME + ($validationInvalidNumberMessage == null ? 43 : $validationInvalidNumberMessage.hashCode());
     return result;
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MaxNumberValueValidatorV1() {
+  }
+
+  /**
+   * Creates a new {@code MaxNumberValueValidatorV1} instance.
+   *
+   * @param maxValue Maximalwert, der nicht überschritten werden darf.
+   * @param validationInvalidNumberMessage Benutzerdefinierter Fehlertext bei ungültiger Eingabe.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MaxNumberValueValidatorV1(final BigDecimal maxValue, final String validationInvalidNumberMessage) {
+    this.maxValue = maxValue;
+    this.validationInvalidNumberMessage = validationInvalidNumberMessage;
   }
 }

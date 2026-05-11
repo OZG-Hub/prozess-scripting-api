@@ -139,4 +139,20 @@ public class EuroBetragNegativeValidatorV1 extends ValidationRuleV1 {
     result = result * PRIME + ($strictlyNegative == null ? 43 : $strictlyNegative.hashCode());
     return result;
   }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public EuroBetragNegativeValidatorV1() {
+  }
+
+  /**
+   * Creates a new {@code EuroBetragNegativeValidatorV1} instance.
+   *
+   * @param strictlyNegative {@code true}, wenn der Betrag nicht 0 sein darf.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public EuroBetragNegativeValidatorV1(final Boolean strictlyNegative) {
+    this.strictlyNegative = strictlyNegative;
+  }
 }

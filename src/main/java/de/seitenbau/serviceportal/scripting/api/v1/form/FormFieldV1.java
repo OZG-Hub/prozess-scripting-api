@@ -11,15 +11,21 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import de.seitenbau.serviceportal.scripting.api.v1.form.ajax.DynamicDataSourcePropertiesV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.condition.DisplayConditionV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.config.AdditionalFieldConfigV1;
+import de.seitenbau.serviceportal.scripting.api.v1.form.json.FormFieldV1Deserializer;
 import de.seitenbau.serviceportal.scripting.api.v1.form.validator.ValidationRuleV1;
 import lombok.NonNull;
 
 /**
  * Feld in einem Formular.
  */
+@JsonDeserialize(using = FormFieldV1Deserializer.class)
 public class FormFieldV1 implements Cloneable {
   /**
    * ID des Feldes (eindeutig in Feldgruppen-Instanz).
@@ -29,6 +35,7 @@ public class FormFieldV1 implements Cloneable {
   /**
    * ID des Feldes als Datenfeld im FIM-Standard (Föderales Informationsmanagement).
    */
+  @JsonInclude(Include.NON_NULL)
   private String fimId;
   /**
    * Beschriftung des Feldes.
@@ -46,14 +53,17 @@ public class FormFieldV1 implements Cloneable {
   /**
    * Platzhalter, falls Feld nicht ausgefüllt.
    */
+  @JsonInclude(Include.NON_EMPTY)
   private String placeholder;
   /**
    * {@code true}, wenn das Feld nicht editierbar / deaktiviert ist.
    */
+  @JsonInclude(Include.NON_NULL)
   private Boolean disabled;
   /**
    * {@code true}, wenn das Feld ein Pflichtfeld ist.
    */
+  @JsonInclude(Include.NON_NULL)
   private Boolean required;
   /**
    * {@code true}, wenn das Feld ein {@link FieldTypeV1#DATE Datum-Feld} ist und der grafische Picker des
@@ -63,14 +73,17 @@ public class FormFieldV1 implements Cloneable {
    * konfiguriert werden.
    */
   @Deprecated(since = "Formularversion 2")
+  @JsonInclude(Include.NON_NULL)
   private Boolean pickerDisabled;
   /**
    * {@code true}, wenn das Feld ein Einwilligungsfeld ist.
    */
+  @JsonInclude(Include.NON_NULL)
   private Boolean consent;
   /**
    * Individueller Fehlertext - Pflichtfeld nicht ausgefüllt.
    */
+  @JsonInclude(Include.NON_EMPTY)
   private String requiredValidationFailedMessage;
   /**
    * Individueller Fehlertext - Inhalt passt nicht zum Datentyp des Feldes ({@link FieldTypeV1#DATE Datums-},
@@ -78,12 +91,14 @@ public class FormFieldV1 implements Cloneable {
    * Ab Formularversion 2 nicht mehr verwendbar.
    */
   @Deprecated
+  @JsonInclude(Include.NON_EMPTY)
   private String typeValidationFailedMessage;
   /**
    * Individueller Fehlertext - falsches Tausendertrennzeichen (nur für
    * {@link FieldTypeV1#EURO_BETRAG Euro-Betragsfelder}).
    */
   @Deprecated(since = "Formularversion 2")
+  @JsonInclude(Include.NON_EMPTY)
   private String thousandsSeparatorValidationFailedMessage;
   /**
    * Individueller Fehlertext - falsche Anzahl an Nachkommastellen (nur für
@@ -91,19 +106,23 @@ public class FormFieldV1 implements Cloneable {
    * Ab Formularversion 2 nicht mehr verwendbar.
    */
   @Deprecated(since = "Formularversion 2")
+  @JsonInclude(Include.NON_EMPTY)
   private String digitsAfterDecimalPointValidationFailedMessage;
   /**
    * Hilfetext zum Feld.
    */
+  @JsonInclude(Include.NON_EMPTY)
   private String helptext;
   /**
    * Mögliche Werte bei Auswahllisten.
    */
+  @JsonInclude(Include.NON_NULL)
   private List<PossibleValueV1> possibleValues;
   /**
    * Bedingungen, über die das Feld dynamisch ein- oder ausgeblendet werden kann.
    */
   @NonNull
+  @JsonInclude(Include.NON_EMPTY)
   private List<DisplayConditionV1> displayConditions;
   /**
    * Breite des Felds (die gesamte Formularbreite entspricht 12).
@@ -122,25 +141,30 @@ public class FormFieldV1 implements Cloneable {
    * </ul>
    */
   @Deprecated(since = "Formularversion 2")
+  @JsonInclude(Include.NON_NULL)
   private String layout;
   /**
    * Validierungsregeln für das Feld.
    */
   @NonNull
+  @JsonInclude(Include.NON_EMPTY)
   private List<ValidationRuleV1> validationRules;
   /**
    * Texte für die Fehlermeldungen bei einfacher Formularvalidierung.
    */
   @NonNull
+  @JsonInclude(Include.NON_EMPTY)
   private Set<ValidationMessageV1> validationMessages;
   /**
    * Quelle, aus der der Feldinhalt gelesen wird. Falls {@code null}, wird ggf. eine Default-source
    * verwendet.
    */
+  @JsonInclude(Include.NON_NULL)
   private DataResourcePointerV1 source;
   /**
    * Ziel, in das der Feldinhalt geschrieben wird.
    */
+  @JsonInclude(Include.NON_NULL)
   private DataResourcePointerV1 target;
   /**
    * Quelle, aus der die Select-Items für das Formularfeld gelesen werden (es kann {@code null}
@@ -148,12 +172,14 @@ public class FormFieldV1 implements Cloneable {
    * an PossibleValue Objekten zurückgegeben werden). Wenn {@code null}, dann werden die im Feld definierten
    * verwendet.
    */
+  @JsonInclude(Include.NON_NULL)
   private DataResourcePointerV1 possibleValuesSource;
   /**
    * Properties für Felder, die AJAX-Calls absetzen.
    * Wenn {@code null}, werden die am Feld angegebenen Default Werte verwendet.
    * Für {@link FieldTypeV1#DOWNLOAD Download-} und {@link FieldTypeV1#PDF PDF-}Felder ein Pflichtattribut.
    */
+  @JsonInclude(Include.NON_NULL)
   private DynamicDataSourcePropertiesV1 externalDataSourceProperties;
   /**
    * Gibt eine externe Quelle an, aus der der Wert des Formularfeldes in Abhängigkeiten von anderen Werten im
@@ -161,6 +187,7 @@ public class FormFieldV1 implements Cloneable {
    * Abschicken des Formulars neu berechnet (per Ajax-Call). Wenn das Feld disabled ist, wird es immer
    * aktualisiert, wenn nicht, wird der Wert nur dann aktualisiert, wenn der Wert vorher leer war.
    */
+  @JsonInclude(Include.NON_NULL)
   private DynamicDataSourcePropertiesV1 externalValue;
   /**
    * {@code true}, wenn das Feld ein Select-Feld ist und die Einträge auf der Oberfläche durch Texteingabe
@@ -178,6 +205,7 @@ public class FormFieldV1 implements Cloneable {
    * </ul>
    */
   @Deprecated(since = "Formularversion 2")
+  @JsonInclude(Include.NON_NULL)
   private Boolean filterable;
   /**
    * Konfigurationsparameter für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder}.
@@ -187,6 +215,7 @@ public class FormFieldV1 implements Cloneable {
    * konfiguriert werden.
    */
   @Deprecated(since = "Formularversion 2")
+  @JsonInclude(Include.NON_NULL)
   private Map<String, String> controlParameters;
   /**
    * Schlüssel des Feldes, das als Address-Suchfeld für {@link FieldTypeV1#GEO_MAP Geo-Datenfelder} dient.
@@ -194,14 +223,17 @@ public class FormFieldV1 implements Cloneable {
    * Ab Formularversion 2 nicht mehr verwendbar.
    */
   @Deprecated(since = "Formularversion 2")
+  @JsonInclude(Include.NON_NULL)
   private FormFieldKeyV1 initializeWithAdressField;
   /**
    * Ergänzende Informationen für spezielle Feldtypen (sonst {@code null}).
    */
+  @JsonInclude(Include.NON_NULL)
   private AdditionalFieldConfigV1 additionalConfig;
   /**
    * Informationen zum Hilfe-Dialog, wenn ein Hilfe-Button angezeigt werden soll.
    */
+  @JsonInclude(Include.NON_NULL)
   private ModalHelpDialogV1 helpDialog;
   /**
    * Mit diesem Attribut lässt sich Einschränken in welchen Medien das Feld dargestellt werden soll.
@@ -211,9 +243,11 @@ public class FormFieldV1 implements Cloneable {
    * {@code PDF}, wenn das Feld nur in einem erzeugten PDF dargestellt werden soll.
    * {@code FORM}, wenn das Feld nur in der Formularansicht dargestellt werden soll.
    * {@code null}, keine Einschränkung bei der Darstellung.
+   *
    * @deprecated Stattdessen 'renderFor' verwenden.
    */
   @Deprecated
+  @JsonInclude(Include.NON_NULL)
   private RenderMediumV1 renderOnlyIn;
   /**
    * Mit diesem Attribut lässt sich Einschränken, wo das Feld dargestellt werden soll.
@@ -226,6 +260,7 @@ public class FormFieldV1 implements Cloneable {
    * {@code SUBMIT_TASK}, wenn das Feld auf der Zusammenfassungsseite im Prozess dargestellt werden soll.
    * {@code null}, keine Einschränkung bei der Darstellung.
    */
+  @JsonInclude(Include.NON_NULL)
   private List<DisplayModeV1> renderFor;
 
   /**
@@ -317,6 +352,7 @@ public class FormFieldV1 implements Cloneable {
    * @return handelt es sich beim Wert um ein {@link FormFieldValueV1}, wird der Value des Objekts
    * zurückgegeben. Ist es kein FormFieldValueV1, so wird der Wert direkt zurückgegeben.
    */
+  @JsonIgnore
   public Object getFieldValue() {
     return hasFormFieldValue() ? ((FormFieldValueV1) value).getValue() : value;
   }
@@ -325,6 +361,7 @@ public class FormFieldV1 implements Cloneable {
     return value instanceof FormFieldValueV1;
   }
 
+  @JsonIgnore
   public List<String> getFieldValueAsList() {
     Object value = getFieldValue();
     List<String> result = new ArrayList<>();
@@ -342,6 +379,7 @@ public class FormFieldV1 implements Cloneable {
    * @return {@code true} genau dann, wenn der Feldwert ungleich {@code null}, nicht leer oder nicht nur
    * Whitespaces enthält.
    */
+  @JsonIgnore
   public boolean isFilled() {
     Object value = getFieldValue();
     if (value == null) {
@@ -364,6 +402,7 @@ public class FormFieldV1 implements Cloneable {
    *
    * @return {@code true} genau dann, wenn dieses Feld angezeigt wird.
    */
+  @JsonIgnore
   public boolean isShown(FieldGroupInstanceV1 instance, FormV1 form) {
     return displayConditions.isEmpty() || displayConditions.stream().anyMatch(c -> c.isShown(instance, form));
   }
@@ -374,6 +413,7 @@ public class FormFieldV1 implements Cloneable {
    *
    * @return Liste der Validierungsmeldungen am Feld
    */
+  @JsonIgnore
   public List<String> getValidationMessagesAsString() {
     return validationMessages.stream().map(ValidationMessageV1::getMessageText).collect(Collectors.toList());
   }
@@ -967,6 +1007,7 @@ public class FormFieldV1 implements Cloneable {
      * {@code PDF}, wenn das Feld nur in einem erzeugten PDF dargestellt werden soll.
      * {@code FORM}, wenn das Feld nur in der Formularansicht dargestellt werden soll.
      * {@code null}, keine Einschränkung bei der Darstellung.
+     *
      * @deprecated Stattdessen 'renderFor' verwenden.
      * @return {@code this}.
      */
@@ -1370,6 +1411,7 @@ public class FormFieldV1 implements Cloneable {
    * {@code PDF}, wenn das Feld nur in einem erzeugten PDF dargestellt werden soll.
    * {@code FORM}, wenn das Feld nur in der Formularansicht dargestellt werden soll.
    * {@code null}, keine Einschränkung bei der Darstellung.
+   *
    * @deprecated Stattdessen 'renderFor' verwenden.
    */
   @Deprecated
@@ -1751,6 +1793,7 @@ public class FormFieldV1 implements Cloneable {
    * {@code PDF}, wenn das Feld nur in einem erzeugten PDF dargestellt werden soll.
    * {@code FORM}, wenn das Feld nur in der Formularansicht dargestellt werden soll.
    * {@code null}, keine Einschränkung bei der Darstellung.
+   *
    * @deprecated Stattdessen 'renderFor' verwenden.
    */
   @Deprecated
@@ -1972,6 +2015,15 @@ public class FormFieldV1 implements Cloneable {
     return "FormFieldV1(id=" + this.getId() + ", fimId=" + this.getFimId() + ", label=" + this.getLabel() + ", type=" + this.getType() + ", value=" + this.getValue() + ", placeholder=" + this.getPlaceholder() + ", disabled=" + this.getDisabled() + ", required=" + this.getRequired() + ", pickerDisabled=" + this.getPickerDisabled() + ", consent=" + this.getConsent() + ", requiredValidationFailedMessage=" + this.getRequiredValidationFailedMessage() + ", typeValidationFailedMessage=" + this.getTypeValidationFailedMessage() + ", thousandsSeparatorValidationFailedMessage=" + this.getThousandsSeparatorValidationFailedMessage() + ", digitsAfterDecimalPointValidationFailedMessage=" + this.getDigitsAfterDecimalPointValidationFailedMessage() + ", helptext=" + this.getHelptext() + ", possibleValues=" + this.getPossibleValues() + ", displayConditions=" + this.getDisplayConditions() + ", width=" + this.getWidth() + ", layout=" + this.getLayout() + ", validationRules=" + this.getValidationRules() + ", validationMessages=" + this.getValidationMessages() + ", source=" + this.getSource() + ", target=" + this.getTarget() + ", possibleValuesSource=" + this.getPossibleValuesSource() + ", externalDataSourceProperties=" + this.getExternalDataSourceProperties() + ", externalValue=" + this.getExternalValue() + ", filterable=" + this.getFilterable() + ", controlParameters=" + this.getControlParameters() + ", initializeWithAdressField=" + this.getInitializeWithAdressField() + ", additionalConfig=" + this.getAdditionalConfig() + ", helpDialog=" + this.getHelpDialog() + ", renderOnlyIn=" + this.getRenderOnlyIn() + ", renderFor=" + this.getRenderFor() + ")";
   }
 
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FormFieldV1() {
+    this.displayConditions = FormFieldV1.$default$displayConditions();
+    this.width = FormFieldV1.$default$width();
+    this.validationRules = FormFieldV1.$default$validationRules();
+    this.validationMessages = FormFieldV1.$default$validationMessages();
+  }
+
   /**
    * Creates a new {@code FormFieldV1} instance.
    *
@@ -2058,6 +2110,7 @@ public class FormFieldV1 implements Cloneable {
    * {@code PDF}, wenn das Feld nur in einem erzeugten PDF dargestellt werden soll.
    * {@code FORM}, wenn das Feld nur in der Formularansicht dargestellt werden soll.
    * {@code null}, keine Einschränkung bei der Darstellung.
+   *
    * @deprecated Stattdessen 'renderFor' verwenden.
    * @param renderFor Mit diesem Attribut lässt sich Einschränken, wo das Feld dargestellt werden soll.
    * Darf nicht gleichzeitig mit dem Attribut [`renderOnlyIn'] gesetzt werden.
@@ -2071,7 +2124,7 @@ public class FormFieldV1 implements Cloneable {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  private FormFieldV1(@NonNull final String id, final String fimId, final String label, @NonNull final FieldTypeV1 type, final Object value, final String placeholder, final Boolean disabled, final Boolean required, final Boolean pickerDisabled, final Boolean consent, final String requiredValidationFailedMessage, final String typeValidationFailedMessage, final String thousandsSeparatorValidationFailedMessage, final String digitsAfterDecimalPointValidationFailedMessage, final String helptext, final List<PossibleValueV1> possibleValues, @NonNull final List<DisplayConditionV1> displayConditions, final int width, final String layout, @NonNull final List<ValidationRuleV1> validationRules, @NonNull final Set<ValidationMessageV1> validationMessages, final DataResourcePointerV1 source, final DataResourcePointerV1 target, final DataResourcePointerV1 possibleValuesSource, final DynamicDataSourcePropertiesV1 externalDataSourceProperties, final DynamicDataSourcePropertiesV1 externalValue, final Boolean filterable, final Map<String, String> controlParameters, final FormFieldKeyV1 initializeWithAdressField, final AdditionalFieldConfigV1 additionalConfig, final ModalHelpDialogV1 helpDialog, final RenderMediumV1 renderOnlyIn, final List<DisplayModeV1> renderFor) {
+  public FormFieldV1(@NonNull final String id, final String fimId, final String label, @NonNull final FieldTypeV1 type, final Object value, final String placeholder, final Boolean disabled, final Boolean required, final Boolean pickerDisabled, final Boolean consent, final String requiredValidationFailedMessage, final String typeValidationFailedMessage, final String thousandsSeparatorValidationFailedMessage, final String digitsAfterDecimalPointValidationFailedMessage, final String helptext, final List<PossibleValueV1> possibleValues, @NonNull final List<DisplayConditionV1> displayConditions, final int width, final String layout, @NonNull final List<ValidationRuleV1> validationRules, @NonNull final Set<ValidationMessageV1> validationMessages, final DataResourcePointerV1 source, final DataResourcePointerV1 target, final DataResourcePointerV1 possibleValuesSource, final DynamicDataSourcePropertiesV1 externalDataSourceProperties, final DynamicDataSourcePropertiesV1 externalValue, final Boolean filterable, final Map<String, String> controlParameters, final FormFieldKeyV1 initializeWithAdressField, final AdditionalFieldConfigV1 additionalConfig, final ModalHelpDialogV1 helpDialog, final RenderMediumV1 renderOnlyIn, final List<DisplayModeV1> renderFor) {
     if (id == null) {
       throw new NullPointerException("id is marked non-null but is null");
     }

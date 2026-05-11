@@ -2,6 +2,8 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.validator;
 
 import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
  * Validierungsregel, die prüft, dass die Nutzereingabe in einem Datums- oder Uhrzeit-Feld nicht vor einem
@@ -11,6 +13,7 @@ public class MinDateValueValidatorV1 extends ValidationRuleV1 {
   /**
    * Frühestes erlaubtes Datum.
    */
+  @JsonInclude(Include.NON_NULL)
   private Date minValue;
 
 
@@ -141,5 +144,21 @@ public class MinDateValueValidatorV1 extends ValidationRuleV1 {
     final Object $minValue = this.getMinValue();
     result = result * PRIME + ($minValue == null ? 43 : $minValue.hashCode());
     return result;
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MinDateValueValidatorV1() {
+  }
+
+  /**
+   * Creates a new {@code MinDateValueValidatorV1} instance.
+   *
+   * @param minValue Frühestes erlaubtes Datum.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MinDateValueValidatorV1(final Date minValue) {
+    this.minValue = minValue;
   }
 }

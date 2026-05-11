@@ -12,6 +12,7 @@ public interface MapperApiV1
 {
   /**
    * Konvertiert ein Objekt in seine JSON Repräsentation.
+   * Ab Release 1.209 wird das Objekt FormV1 auch explizit unterstützt.
    *
    * @param value Das zu konvertierende Objekt
    *
@@ -21,6 +22,7 @@ public interface MapperApiV1
 
   /**
    * Konvertiert ein Objekt in seine JSON Repräsentation mit Einrückung.
+   * Ab Release 1.209 wird das Objekt FormV1 auch explizit unterstützt.
    *
    * @param value Das zu konvertierende Objekt
    *
@@ -30,6 +32,7 @@ public interface MapperApiV1
 
   /**
    * Konvertiert ein Objekt in seine JSON Repräsentation.
+   * Ab Release 1.209 wird das Objekt FormV1 auch explizit unterstützt.
    *
    * @param value Das zu konvertierende Objekt
    *

@@ -141,4 +141,20 @@ public class ExternalValidatorV1 extends ValidationRuleV1 {
     result = result * PRIME + ($settings == null ? 43 : $settings.hashCode());
     return result;
   }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public ExternalValidatorV1() {
+  }
+
+  /**
+   * Creates a new {@code ExternalValidatorV1} instance.
+   *
+   * @param settings Daten für die externe Validierung. Das hier hinterlegte externe System führt die Validierung durch.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public ExternalValidatorV1(final DynamicDataSourcePropertiesV1 settings) {
+    this.settings = settings;
+  }
 }

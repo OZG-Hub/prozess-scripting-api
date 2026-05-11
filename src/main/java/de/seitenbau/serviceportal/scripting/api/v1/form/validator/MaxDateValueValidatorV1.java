@@ -2,6 +2,8 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.validator;
 
 import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
  * Validierungsregel, die prüft, dass die Nutzereingabe ein Datum oder eine Uhrzeit ist und nicht nach einem
@@ -11,6 +13,7 @@ public class MaxDateValueValidatorV1 extends ValidationRuleV1 {
   /**
    * Spätestes erlaubtes Datum.
    */
+  @JsonInclude(Include.NON_NULL)
   private Date maxValue;
 
 
@@ -141,5 +144,21 @@ public class MaxDateValueValidatorV1 extends ValidationRuleV1 {
     final Object $maxValue = this.getMaxValue();
     result = result * PRIME + ($maxValue == null ? 43 : $maxValue.hashCode());
     return result;
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MaxDateValueValidatorV1() {
+  }
+
+  /**
+   * Creates a new {@code MaxDateValueValidatorV1} instance.
+   *
+   * @param maxValue Spätestes erlaubtes Datum.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MaxDateValueValidatorV1(final Date maxValue) {
+    this.maxValue = maxValue;
   }
 }

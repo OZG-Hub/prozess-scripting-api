@@ -3,6 +3,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.form;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import de.seitenbau.serviceportal.scripting.api.v1.form.condition.section.SkipConditionV1;
 import lombok.NonNull;
 
@@ -25,6 +26,7 @@ public class FormSectionV1 {
    * Ansonsten wie gewohnt angezeigt.
    */
   @NonNull
+  @JsonInclude(JsonInclude.Include.NON_EMPTY)
   private List<SkipConditionV1> skipConditions;
 
   @SuppressWarnings("all")
@@ -37,29 +39,6 @@ public class FormSectionV1 {
   @lombok.Generated
   private static List<SkipConditionV1> $default$skipConditions() {
     return new ArrayList<>();
-  }
-
-  /**
-   * Creates a new {@code FormSectionV1} instance.
-   *
-   * @param title Überschrift des Abschnitts.
-   * @param fieldGroups Feldgruppen dieses Abschnitts. Default ist leere Liste.
-   * @param skipConditions Bedingungen zum Überspringen des Abschnitts.
-   * Werden alle Bedingungen zu {@code true} ausgewertet, wird der Abschnitt übersprungen.
-   * Ansonsten wie gewohnt angezeigt.
-   */
-  @SuppressWarnings("all")
-  @lombok.Generated
-  FormSectionV1(final String title, @NonNull final List<FieldGroupInterfaceV1> fieldGroups, @NonNull final List<SkipConditionV1> skipConditions) {
-    if (fieldGroups == null) {
-      throw new NullPointerException("fieldGroups is marked non-null but is null");
-    }
-    if (skipConditions == null) {
-      throw new NullPointerException("skipConditions is marked non-null but is null");
-    }
-    this.title = title;
-    this.fieldGroups = fieldGroups;
-    this.skipConditions = skipConditions;
   }
 
 
@@ -266,5 +245,35 @@ public class FormSectionV1 {
   @lombok.Generated
   public String toString() {
     return "FormSectionV1(title=" + this.getTitle() + ", fieldGroups=" + this.getFieldGroups() + ", skipConditions=" + this.getSkipConditions() + ")";
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FormSectionV1() {
+    this.fieldGroups = FormSectionV1.$default$fieldGroups();
+    this.skipConditions = FormSectionV1.$default$skipConditions();
+  }
+
+  /**
+   * Creates a new {@code FormSectionV1} instance.
+   *
+   * @param title Überschrift des Abschnitts.
+   * @param fieldGroups Feldgruppen dieses Abschnitts. Default ist leere Liste.
+   * @param skipConditions Bedingungen zum Überspringen des Abschnitts.
+   * Werden alle Bedingungen zu {@code true} ausgewertet, wird der Abschnitt übersprungen.
+   * Ansonsten wie gewohnt angezeigt.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FormSectionV1(final String title, @NonNull final List<FieldGroupInterfaceV1> fieldGroups, @NonNull final List<SkipConditionV1> skipConditions) {
+    if (fieldGroups == null) {
+      throw new NullPointerException("fieldGroups is marked non-null but is null");
+    }
+    if (skipConditions == null) {
+      throw new NullPointerException("skipConditions is marked non-null but is null");
+    }
+    this.title = title;
+    this.fieldGroups = fieldGroups;
+    this.skipConditions = skipConditions;
   }
 }

@@ -94,4 +94,9 @@ public class PdfAValidatorV1 extends ValidationRuleV1 {
 		final int result = 1;
 		return result;
 	}
+
+	@SuppressWarnings("all")
+	@lombok.Generated
+	public PdfAValidatorV1() {
+	}
 }

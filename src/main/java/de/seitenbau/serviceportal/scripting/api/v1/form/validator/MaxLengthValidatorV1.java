@@ -137,4 +137,20 @@ public class MaxLengthValidatorV1 extends ValidationRuleV1 {
     result = result * PRIME + this.getMaxLength();
     return result;
   }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MaxLengthValidatorV1() {
+  }
+
+  /**
+   * Creates a new {@code MaxLengthValidatorV1} instance.
+   *
+   * @param maxLength Maximallänge des Strings.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MaxLengthValidatorV1(final int maxLength) {
+    this.maxLength = maxLength;
+  }
 }

@@ -2,8 +2,10 @@
 package de.seitenbau.serviceportal.scripting.api.v1.start;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import de.seitenbau.serviceportal.scripting.api.v1.ScriptingApiV1;
+import de.seitenbau.serviceportal.scripting.api.v1.process.ProcessOrganisationseinheitExtendedV1;
 
 /**
  * Objekt, das beim Start eines Prozesses / Erzeugen einer Prozessinstanz zur Verfügung gestellt wird.
@@ -37,6 +39,14 @@ public class StartParameterV1 {
    */
   private OrganisationseinheitParameterV1 organisationseinheit;
   /**
+   * Zuständige Organisationseinheiten.
+   * Die zuständigen Organisationseinheiten werden anhand der Leistung und Regionalisierung beim Prozessstart
+   * ermittelt. Es werden nur Organisationseinheiten für Mandanten ermittelt, welche den Prozess für die
+   * Leistung aktiviert haben.{@code null} oder leere Liste, wenn keine Organisationseinheiten ermittelt
+   * wurden. Das Attribut wird auf OZG-Hub nicht gesetzt.
+   */
+  private List<ProcessOrganisationseinheitExtendedV1> zustaendigeOrganisationseinheiten;
+  /**
    * Amtlicher Regionalschlüssel.
    * Auf service-bw und Amt24: Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
    * {@code null}, wenn der ARS Parameter nicht beim Prozessstart definiert wurde
@@ -61,10 +71,10 @@ public class StartParameterV1 {
    */
   private String p;
   /**
-   * Parameter einer externen Parameter-Quelle.
-   * Mögliche Quellen sind Jesaja und Fit-Connect.
+   * Parameter einer Parameter-Quelle.
+   * Mögliche Quellen auf OZG-Hub sind Jesaja und Fit-Connect.
+   * Auf service-bw und Amt24 kommen die Parameter aus der Parameterverwaltung im Admincenter.
    * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
-   * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
    */
   private Map<String, Object> parameters;
   /**
@@ -100,6 +110,9 @@ public class StartParameterV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     private OrganisationseinheitParameterV1 organisationseinheit;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private List<ProcessOrganisationseinheitExtendedV1> zustaendigeOrganisationseinheiten;
     @SuppressWarnings("all")
     @lombok.Generated
     private String ars;
@@ -189,6 +202,21 @@ public class StartParameterV1 {
     }
 
     /**
+     * Zuständige Organisationseinheiten.
+     * Die zuständigen Organisationseinheiten werden anhand der Leistung und Regionalisierung beim Prozessstart
+     * ermittelt. Es werden nur Organisationseinheiten für Mandanten ermittelt, welche den Prozess für die
+     * Leistung aktiviert haben.{@code null} oder leere Liste, wenn keine Organisationseinheiten ermittelt
+     * wurden. Das Attribut wird auf OZG-Hub nicht gesetzt.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public StartParameterV1.StartParameterV1Builder zustaendigeOrganisationseinheiten(final List<ProcessOrganisationseinheitExtendedV1> zustaendigeOrganisationseinheiten) {
+      this.zustaendigeOrganisationseinheiten = zustaendigeOrganisationseinheiten;
+      return this;
+    }
+
+    /**
      * Amtlicher Regionalschlüssel.
      * Auf service-bw und Amt24: Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
      * {@code null}, wenn der ARS Parameter nicht beim Prozessstart definiert wurde
@@ -241,10 +269,10 @@ public class StartParameterV1 {
     }
 
     /**
-     * Parameter einer externen Parameter-Quelle.
-     * Mögliche Quellen sind Jesaja und Fit-Connect.
+     * Parameter einer Parameter-Quelle.
+     * Mögliche Quellen auf OZG-Hub sind Jesaja und Fit-Connect.
+     * Auf service-bw und Amt24 kommen die Parameter aus der Parameterverwaltung im Admincenter.
      * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
-     * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -291,14 +319,14 @@ public class StartParameterV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     public StartParameterV1 build() {
-      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.ars, this.ags, this.fitConnectAreaId, this.p, this.parameters, this.testStart, this.authentication, this.startData);
+      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.zustaendigeOrganisationseinheiten, this.ars, this.ags, this.fitConnectAreaId, this.p, this.parameters, this.testStart, this.authentication, this.startData);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", ars=" + this.ars + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", p=" + this.p + ", parameters=" + this.parameters + ", testStart=" + this.testStart + ", authentication=" + this.authentication + ", startData=" + this.startData + ")";
+      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", zustaendigeOrganisationseinheiten=" + this.zustaendigeOrganisationseinheiten + ", ars=" + this.ars + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", p=" + this.p + ", parameters=" + this.parameters + ", testStart=" + this.testStart + ", authentication=" + this.authentication + ", startData=" + this.startData + ")";
     }
   }
 
@@ -357,6 +385,19 @@ public class StartParameterV1 {
   }
 
   /**
+   * Zuständige Organisationseinheiten.
+   * Die zuständigen Organisationseinheiten werden anhand der Leistung und Regionalisierung beim Prozessstart
+   * ermittelt. Es werden nur Organisationseinheiten für Mandanten ermittelt, welche den Prozess für die
+   * Leistung aktiviert haben.{@code null} oder leere Liste, wenn keine Organisationseinheiten ermittelt
+   * wurden. Das Attribut wird auf OZG-Hub nicht gesetzt.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public List<ProcessOrganisationseinheitExtendedV1> getZustaendigeOrganisationseinheiten() {
+    return this.zustaendigeOrganisationseinheiten;
+  }
+
+  /**
    * Amtlicher Regionalschlüssel.
    * Auf service-bw und Amt24: Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
    * {@code null}, wenn der ARS Parameter nicht beim Prozessstart definiert wurde
@@ -401,10 +442,10 @@ public class StartParameterV1 {
   }
 
   /**
-   * Parameter einer externen Parameter-Quelle.
-   * Mögliche Quellen sind Jesaja und Fit-Connect.
+   * Parameter einer Parameter-Quelle.
+   * Mögliche Quellen auf OZG-Hub sind Jesaja und Fit-Connect.
+   * Auf service-bw und Amt24 kommen die Parameter aus der Parameterverwaltung im Admincenter.
    * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
-   * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -444,7 +485,7 @@ public class StartParameterV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", ars=" + this.getArs() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ", testStart=" + this.isTestStart() + ", authentication=" + this.getAuthentication() + ", startData=" + this.getStartData() + ")";
+    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", zustaendigeOrganisationseinheiten=" + this.getZustaendigeOrganisationseinheiten() + ", ars=" + this.getArs() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ", testStart=" + this.isTestStart() + ", authentication=" + this.getAuthentication() + ", startData=" + this.getStartData() + ")";
   }
 
   @Override
@@ -471,6 +512,9 @@ public class StartParameterV1 {
     final Object this$organisationseinheit = this.getOrganisationseinheit();
     final Object other$organisationseinheit = other.getOrganisationseinheit();
     if (this$organisationseinheit == null ? other$organisationseinheit != null : !this$organisationseinheit.equals(other$organisationseinheit)) return false;
+    final Object this$zustaendigeOrganisationseinheiten = this.getZustaendigeOrganisationseinheiten();
+    final Object other$zustaendigeOrganisationseinheiten = other.getZustaendigeOrganisationseinheiten();
+    if (this$zustaendigeOrganisationseinheiten == null ? other$zustaendigeOrganisationseinheiten != null : !this$zustaendigeOrganisationseinheiten.equals(other$zustaendigeOrganisationseinheiten)) return false;
     final Object this$ars = this.getArs();
     final Object other$ars = other.getArs();
     if (this$ars == null ? other$ars != null : !this$ars.equals(other$ars)) return false;
@@ -518,6 +562,8 @@ public class StartParameterV1 {
     result = result * PRIME + ($leistung == null ? 43 : $leistung.hashCode());
     final Object $organisationseinheit = this.getOrganisationseinheit();
     result = result * PRIME + ($organisationseinheit == null ? 43 : $organisationseinheit.hashCode());
+    final Object $zustaendigeOrganisationseinheiten = this.getZustaendigeOrganisationseinheiten();
+    result = result * PRIME + ($zustaendigeOrganisationseinheiten == null ? 43 : $zustaendigeOrganisationseinheiten.hashCode());
     final Object $ars = this.getArs();
     result = result * PRIME + ($ars == null ? 43 : $ars.hashCode());
     final Object $ags = this.getAgs();
@@ -551,6 +597,11 @@ public class StartParameterV1 {
    * @param organisationseinheit Organisationseinheit.
    * {@code null}, wenn keine Organisationseinheit definiert wurde.
    * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
+   * @param zustaendigeOrganisationseinheiten Zuständige Organisationseinheiten.
+   * Die zuständigen Organisationseinheiten werden anhand der Leistung und Regionalisierung beim Prozessstart
+   * ermittelt. Es werden nur Organisationseinheiten für Mandanten ermittelt, welche den Prozess für die
+   * Leistung aktiviert haben.{@code null} oder leere Liste, wenn keine Organisationseinheiten ermittelt
+   * wurden. Das Attribut wird auf OZG-Hub nicht gesetzt.
    * @param ars Amtlicher Regionalschlüssel.
    * Auf service-bw und Amt24: Wurde vom AGS abgeleitet, falls ARS nicht beim Prozessstart definiert wurde.
    * {@code null}, wenn der ARS Parameter nicht beim Prozessstart definiert wurde
@@ -563,10 +614,10 @@ public class StartParameterV1 {
    * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
    * @param p Frei wählbarer Parameter.
    * {@code null}, wenn kein Parameter definiert wurde.
-   * @param parameters Parameter einer externen Parameter-Quelle.
-   * Mögliche Quellen sind Jesaja und Fit-Connect.
+   * @param parameters Parameter einer Parameter-Quelle.
+   * Mögliche Quellen auf OZG-Hub sind Jesaja und Fit-Connect.
+   * Auf service-bw und Amt24 kommen die Parameter aus der Parameterverwaltung im Admincenter.
    * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
-   * Für amt24 und service-bw wird immer {@code null} zurück gegeben.
    * @param testStart {@code true}, wenn die Prozessinstanz im Rahmen eines Test-Starts erzeugt wurde. {@code false}, wenn die
    * Prozessinstanz regulär gestartet wurde.
    * @param authentication Enthält Informationen über die Authentifizierungsanforderungen dieser Prozessinstanz.
@@ -574,12 +625,13 @@ public class StartParameterV1 {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final String ars, final String ags, final String fitConnectAreaId, final String p, final Map<String, Object> parameters, final boolean testStart, final AuthenticationInfoV1 authentication, final Object startData) {
+  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final List<ProcessOrganisationseinheitExtendedV1> zustaendigeOrganisationseinheiten, final String ars, final String ags, final String fitConnectAreaId, final String p, final Map<String, Object> parameters, final boolean testStart, final AuthenticationInfoV1 authentication, final Object startData) {
     this.startTime = startTime;
     this.startedByUser = startedByUser;
     this.processName = processName;
     this.leistung = leistung;
     this.organisationseinheit = organisationseinheit;
+    this.zustaendigeOrganisationseinheiten = zustaendigeOrganisationseinheiten;
     this.ars = ars;
     this.ags = ags;
     this.fitConnectAreaId = fitConnectAreaId;

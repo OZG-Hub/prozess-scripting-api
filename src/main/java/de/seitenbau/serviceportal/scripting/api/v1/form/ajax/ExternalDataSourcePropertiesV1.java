@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldKeyV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.auth.AuthenticationConfigV1;
 import lombok.NonNull;
@@ -12,7 +14,7 @@ import lombok.NonNull;
 /**
  * Klasse zur Konfiguration von Ajax-Aufrufen.
  */
-public class ExternalDataSourcePropertiesV1 implements DynamicDataSourcePropertiesV1, Cloneable {
+public class ExternalDataSourcePropertiesV1 implements DynamicDataSourcePropertiesV1 {
   /**
    * URL, an die der Aufruf gesendet werden soll.
    * Für DOWNLOAD- und PDF-Felder kann ein ServiceAlias verwendet werden.
@@ -26,6 +28,7 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
    * @deprecated Stattdessen {@link #proxyType} verwenden
    */
   @Deprecated(since = "Release 1.208")
+  @JsonInclude(Include.NON_NULL)
   private String proxyHost;
   /**
    * Port der URL des Proxies, der zum Senden des Requests verwendet werden soll.
@@ -33,6 +36,7 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
    *
    * @deprecated Stattdessen {@link #proxyType} verwenden
    */
+  @JsonInclude(Include.NON_NULL)
   @Deprecated(since = "Release 1.208")
   private Integer proxyPort;
   /**
@@ -41,11 +45,13 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
    *
    * @since Release 1.208
    */
+  @JsonInclude(Include.NON_NULL)
   private ProxyTypeV1 proxyType;
   /**
    * Map der HTTP-Header die beim AJAX-Request gesetzt werden sollen. Die Header müssen der Allow-List
    * entsprechen. Keys und Values können Platzhalter enthalten.
    */
+  @JsonInclude(Include.NON_NULL)
   private Map<String, String> headers;
   /**
    * Typ, der definiert, auf welche Art und Weise die Felder, deren Werte mitgeschickt werden,
@@ -61,6 +67,7 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
   /**
    * Name der Variable aus der gelesen werden soll. Nur für DOWNLOAD- und PDF-Felder.
    */
+  @JsonInclude(Include.NON_NULL)
   private String variableName;
   /**
    * Authentifizierungs-Informationen.
@@ -68,16 +75,19 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
    * ({@link de.seitenbau.serviceportal.scripting.api.v1.form.auth.KeystoreAuthenticationConfigV1
    * KeystoreAuthenticationConfigV1}).
    */
+  @JsonInclude(Include.NON_NULL)
   private AuthenticationConfigV1 authentication;
-  /*
+  /**
    * Base64-Repräsentation des Truststores mit Server-Zertifikaten.
    * Pflicht, wenn der externe Server Zertifikate nutzt, die nicht Teil des Standard-Java-Truststores sind.
    * Wenn nicht gesetzt, wird der Standard-Java-Truststore verwendet.
    */
+  @JsonInclude(Include.NON_NULL)
   private String truststore;
   /**
    * Passwort des Truststores. Pflicht, wenn ein Truststore in {@link #truststore} definiert wurde.
    */
+  @JsonInclude(Include.NON_NULL)
   private String truststorePassword;
 
   /**
@@ -306,6 +316,9 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
     }
 
     /**
+     * Base64-Repräsentation des Truststores mit Server-Zertifikaten.
+     * Pflicht, wenn der externe Server Zertifikate nutzt, die nicht Teil des Standard-Java-Truststores sind.
+     * Wenn nicht gesetzt, wird der Standard-Java-Truststore verwendet.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -447,6 +460,11 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
     return this.authentication;
   }
 
+  /**
+   * Base64-Repräsentation des Truststores mit Server-Zertifikaten.
+   * Pflicht, wenn der externe Server Zertifikate nutzt, die nicht Teil des Standard-Java-Truststores sind.
+   * Wenn nicht gesetzt, wird der Standard-Java-Truststore verwendet.
+   */
   @SuppressWarnings("all")
   @lombok.Generated
   public String getTruststore() {
@@ -567,6 +585,11 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
     this.authentication = authentication;
   }
 
+  /**
+   * Base64-Repräsentation des Truststores mit Server-Zertifikaten.
+   * Pflicht, wenn der externe Server Zertifikate nutzt, die nicht Teil des Standard-Java-Truststores sind.
+   * Wenn nicht gesetzt, wird der Standard-Java-Truststore verwendet.
+   */
   @SuppressWarnings("all")
   @lombok.Generated
   public void setTruststore(final String truststore) {
@@ -670,6 +693,11 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
     return "ExternalDataSourcePropertiesV1(url=" + this.getUrl() + ", proxyHost=" + this.getProxyHost() + ", proxyPort=" + this.getProxyPort() + ", proxyType=" + this.getProxyType() + ", headers=" + this.getHeaders() + ", scope=" + this.getScope() + ", fieldIds=" + this.getFieldIds() + ", variableName=" + this.getVariableName() + ", authentication=" + this.getAuthentication() + ", truststore=" + this.getTruststore() + ", truststorePassword=" + this.getTruststorePassword() + ")";
   }
 
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public ExternalDataSourcePropertiesV1() {
+  }
+
   /**
    * Creates a new {@code ExternalDataSourcePropertiesV1} instance.
    *
@@ -698,12 +726,14 @@ public class ExternalDataSourcePropertiesV1 implements DynamicDataSourceProperti
    * Aktuell wird nur die Authentifizierung mittels Keystore unterstützt
    * ({@link de.seitenbau.serviceportal.scripting.api.v1.form.auth.KeystoreAuthenticationConfigV1
    * KeystoreAuthenticationConfigV1}).
-   * @param truststore
+   * @param truststore Base64-Repräsentation des Truststores mit Server-Zertifikaten.
+   * Pflicht, wenn der externe Server Zertifikate nutzt, die nicht Teil des Standard-Java-Truststores sind.
+   * Wenn nicht gesetzt, wird der Standard-Java-Truststore verwendet.
    * @param truststorePassword Passwort des Truststores. Pflicht, wenn ein Truststore in {@link #truststore} definiert wurde.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  private ExternalDataSourcePropertiesV1(@NonNull final String url, final String proxyHost, final Integer proxyPort, final ProxyTypeV1 proxyType, final Map<String, String> headers, @NonNull final AjaxRequestIncludedFieldsScopeV1 scope, final List<FormFieldKeyV1> fieldIds, final String variableName, final AuthenticationConfigV1 authentication, final String truststore, final String truststorePassword) {
+  public ExternalDataSourcePropertiesV1(@NonNull final String url, final String proxyHost, final Integer proxyPort, final ProxyTypeV1 proxyType, final Map<String, String> headers, @NonNull final AjaxRequestIncludedFieldsScopeV1 scope, final List<FormFieldKeyV1> fieldIds, final String variableName, final AuthenticationConfigV1 authentication, final String truststore, final String truststorePassword) {
     if (url == null) {
       throw new NullPointerException("url is marked non-null but is null");
     }

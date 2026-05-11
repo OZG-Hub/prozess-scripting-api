@@ -139,4 +139,20 @@ public class RegexValidatorV1 extends ValidationRuleV1 {
     result = result * PRIME + ($regex == null ? 43 : $regex.hashCode());
     return result;
   }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public RegexValidatorV1() {
+  }
+
+  /**
+   * Creates a new {@code RegexValidatorV1} instance.
+   *
+   * @param regex Regex für die Überprüfung (in Java Regex Syntax).
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public RegexValidatorV1(final String regex) {
+    this.regex = regex;
+  }
 }

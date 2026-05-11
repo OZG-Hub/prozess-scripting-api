@@ -2,12 +2,16 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.condition;
 
 import java.util.stream.Stream;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FieldGroupInstanceV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormV1;
 
 /**
  * Abstrakte Elternklasse für alle Sichtbarkeitsbedingungen.
  */
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "@type")
+@JsonSubTypes({@JsonSubTypes.Type(value = ShowOnEmptyFieldConditionV1.class, name = "ShowOnEmptyFieldCondition"), @JsonSubTypes.Type(value = ShowOnFieldValueNotInValuesConditionV1.class, name = "ShowOnFieldValueNotInValuesCondition"), @JsonSubTypes.Type(value = ShowOnFieldValuesConditionV1.class, name = "ShowOnFieldValuesCondition"), @JsonSubTypes.Type(value = ShowOnFilledFieldConditionV1.class, name = "ShowOnFilledFieldCondition"), @JsonSubTypes.Type(value = ShowOnBooleanConditionV1.class, name = "ShowOnBooleanDisplayCondition"), @JsonSubTypes.Type(value = AndConditionV1.class, name = "AndCondition"), @JsonSubTypes.Type(value = OrConditionV1.class, name = "OrCondition"), @JsonSubTypes.Type(value = ShowOnProcessVariableInValuesConditionV1.class, name = "ShowOnProcessVariableInValuesCondition"), @JsonSubTypes.Type(value = ShowOnProcessVariableNotInValuesConditionV1.class, name = "ShowOnProcessVariableNotInValuesCondition")})
 public abstract class DisplayConditionV1 implements Cloneable {
   /**
    * Prüft, ob die Sichtbarkeitsbedingung in der gegebenen Gruppeninstanz im gegebenen Formular erfüllt

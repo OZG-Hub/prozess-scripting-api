@@ -137,4 +137,20 @@ public class MaxFilesizeValidatorV1 extends ValidationRuleV1 {
     result = result * PRIME + this.getMaxFilesize();
     return result;
   }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MaxFilesizeValidatorV1() {
+  }
+
+  /**
+   * Creates a new {@code MaxFilesizeValidatorV1} instance.
+   *
+   * @param maxFilesize Maximale Größe der Datei (in Bytes).
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MaxFilesizeValidatorV1(final int maxFilesize) {
+    this.maxFilesize = maxFilesize;
+  }
 }

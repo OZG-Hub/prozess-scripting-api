@@ -2,6 +2,8 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.validator;
 
 import java.math.BigDecimal;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
  * Validierungsregel, die prüft, dass ein Feldwert eine Zahl ist
@@ -11,10 +13,12 @@ public class MinNumberValueValidatorV1 extends ValidationRuleV1 {
   /**
    * Minimalwert, der nicht unterschritten werden darf.
    */
+  @JsonInclude(Include.NON_NULL)
   private BigDecimal minValue;
   /**
    * Benutzerdefinierter Fehlertext bei ungültiger Eingabe.
    */
+  @JsonInclude(Include.NON_EMPTY)
   private String validationInvalidNumberMessage;
 
 
@@ -183,5 +187,23 @@ public class MinNumberValueValidatorV1 extends ValidationRuleV1 {
     final Object $validationInvalidNumberMessage = this.getValidationInvalidNumberMessage();
     result = result * PRIME + ($validationInvalidNumberMessage == null ? 43 : $validationInvalidNumberMessage.hashCode());
     return result;
+  }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MinNumberValueValidatorV1() {
+  }
+
+  /**
+   * Creates a new {@code MinNumberValueValidatorV1} instance.
+   *
+   * @param minValue Minimalwert, der nicht unterschritten werden darf.
+   * @param validationInvalidNumberMessage Benutzerdefinierter Fehlertext bei ungültiger Eingabe.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public MinNumberValueValidatorV1(final BigDecimal minValue, final String validationInvalidNumberMessage) {
+    this.minValue = minValue;
+    this.validationInvalidNumberMessage = validationInvalidNumberMessage;
   }
 }

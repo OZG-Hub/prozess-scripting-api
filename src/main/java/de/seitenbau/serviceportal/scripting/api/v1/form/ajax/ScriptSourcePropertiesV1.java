@@ -4,12 +4,14 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.ajax;
 import java.util.ArrayList;
 import java.util.List;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldKeyV1;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.NonNull;
 
 /**
  * Klasse zur Konfiguration von Skript-Ausführungen.
  */
-public class ScriptSourcePropertiesV1 implements DynamicDataSourcePropertiesV1, Cloneable {
+@SuppressFBWarnings(value = "NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR", justification = "no-args constructor is for Jackson deserialization only")
+public class ScriptSourcePropertiesV1 implements DynamicDataSourcePropertiesV1 {
   /**
    * Skript, das ausgeführt werden soll
    */
@@ -233,6 +235,11 @@ public class ScriptSourcePropertiesV1 implements DynamicDataSourcePropertiesV1, 
     return "ScriptSourcePropertiesV1(script=" + this.getScript() + ", scope=" + this.getScope() + ", fieldIds=" + this.getFieldIds() + ")";
   }
 
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public ScriptSourcePropertiesV1() {
+  }
+
   /**
    * Creates a new {@code ScriptSourcePropertiesV1} instance.
    *
@@ -244,7 +251,7 @@ public class ScriptSourcePropertiesV1 implements DynamicDataSourcePropertiesV1, 
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  private ScriptSourcePropertiesV1(final String script, @NonNull final AjaxRequestIncludedFieldsScopeV1 scope, final List<FormFieldKeyV1> fieldIds) {
+  public ScriptSourcePropertiesV1(final String script, @NonNull final AjaxRequestIncludedFieldsScopeV1 scope, final List<FormFieldKeyV1> fieldIds) {
     if (scope == null) {
       throw new NullPointerException("scope is marked non-null but is null");
     }
