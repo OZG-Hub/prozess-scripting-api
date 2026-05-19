@@ -3,7 +3,6 @@ package de.seitenbau.serviceportal.scripting.api.v1.form;
 
 import java.util.ArrayList;
 import java.util.List;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.NonNull;
 
 /**
@@ -11,7 +10,6 @@ import lombok.NonNull;
  *
  * @see MediaAccordionV1
  */
-@SuppressFBWarnings(value = "NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR", justification = "no-args constructor is for Jackson deserialization only")
 public class MediaAccordionElementV1 {
   /**
    * Titel des Akkordeon-Elements.

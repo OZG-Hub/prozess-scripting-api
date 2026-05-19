@@ -36,7 +36,7 @@ public interface MapperApiV1
    *
    * @param value Das zu konvertierende Objekt
    *
-   * @return JSON als Byte-Array. Entspricht funktionell dem Aufruf von toJson(value).getBytes(UTF-8),
+   * @return JSON als Byte-Array. Entspricht funktionell dem Aufruf von {@code toJson(value).getBytes(UTF-8)},
    * ist aber effizienter.
    */
   byte[] toJsonBytes(Object value);
@@ -80,5 +80,59 @@ public interface MapperApiV1
    * @return Das String-Objekt
    */
   String toString(byte[] utf8StringBytes);
-}
 
+  /**
+   * Konvertiert ein Objekt in seine XML-Repräsentation.
+   *
+   * @param value Das zu konvertierende Objekt
+   *
+   * @return XML als String
+   * @since Release 1.210
+   */
+  String toXml(Object value);
+
+  /**
+   * Konvertiert ein Objekt in seine XML-Repräsentation mit Einrückung.
+   *
+   * @param value Das zu konvertierende Objekt
+   *
+   * @return XML als String
+   * @since Release 1.210
+   */
+  String toXmlFormatted(Object value);
+
+  /**
+   * Konvertiert ein Objekt in seine XML-Repräsentation.
+   *
+   * @param value Das zu konvertierende Objekt
+   *
+   * @return XML als Byte-Array. Entspricht funktionell dem Aufruf von {@code toXml(value).getBytes(UTF-8)},
+   * ist aber effizienter.
+   * @since Release 1.210
+   */
+  byte[] toXmlBytes(Object value);
+
+  /**
+   * Konvertiert die XML-Repräsentation eines Objekts in das Java-Objekt.
+   *
+   * @param xml Die XML-Repräsentation eines Objekts
+   * @param clazz Die Klasse des zurückzugebenden Java-Objekts
+   * @param <T> Der Typ des zurückzugebenden Java-Objekts
+   *
+   * @return das Java-Objekt
+   * @since Release 1.210
+   */
+  <T> T toObjectFromXml(String xml, Class<T> clazz);
+
+  /**
+   * Konvertiert die XML-Repräsentation eines Objekts in das Java-Objekt.
+   *
+   * @param xmlBytes Die XML-Repräsentation eines Objekts
+   * @param clazz Die Klasse des zurückzugebenden Java-Objekts
+   * @param <T> Der Typ des zurückzugebenden Java-Objekts
+   *
+   * @return das Java-Objekt
+   * @since Release 1.210
+   */
+  <T> T toObjectFromXml(byte[] xmlBytes, Class<T> clazz);
+}

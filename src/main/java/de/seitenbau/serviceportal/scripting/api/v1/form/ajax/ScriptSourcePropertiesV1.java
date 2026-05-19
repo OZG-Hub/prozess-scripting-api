@@ -4,13 +4,11 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.ajax;
 import java.util.ArrayList;
 import java.util.List;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldKeyV1;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.NonNull;
 
 /**
  * Klasse zur Konfiguration von Skript-Ausführungen.
  */
-@SuppressFBWarnings(value = "NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR", justification = "no-args constructor is for Jackson deserialization only")
 public class ScriptSourcePropertiesV1 implements DynamicDataSourcePropertiesV1 {
   /**
    * Skript, das ausgeführt werden soll

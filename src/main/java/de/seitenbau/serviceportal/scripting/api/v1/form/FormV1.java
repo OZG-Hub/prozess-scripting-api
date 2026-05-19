@@ -23,13 +23,11 @@ import de.seitenbau.serviceportal.scripting.api.v1.form.content.FormFieldContent
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.FormReplacementValuesV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.json.DeserializerWithTypeInfo;
 import de.seitenbau.serviceportal.scripting.api.v1.form.json.SerializerWithTypeInfo;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.NonNull;
 
 /**
  * Formular.
  */
-@SuppressFBWarnings(value = "NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR", justification = "no-args constructor is for Jackson deserialization only")
 public class FormV1 {
   /**
    * ID des Formulars.

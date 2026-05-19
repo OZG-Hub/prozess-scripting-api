@@ -2,13 +2,11 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.json;
 
 import com.fasterxml.jackson.core.TreeNode;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.NonNull;
 
 /**
  * Eine Repräsentation für ein empfangenes Objekt, dessen Klasse unbekannt ist.
  */
-@SuppressFBWarnings("NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR")
 public class UnknownTypeValue {
   @NonNull
   private String type;

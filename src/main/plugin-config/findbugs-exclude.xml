@@ -25,9 +25,16 @@
   <Match>
     <Bug pattern="NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" />
     <Or>
+      <Class name="de.seitenbau.serviceportal.scripting.api.v1.form.AbstractFieldGroupV1" />
+      <Class name="de.seitenbau.serviceportal.scripting.api.v1.form.DataResourcePointerV1" />
+      <Class name="de.seitenbau.serviceportal.scripting.api.v1.form.FormV1" />
       <Class name="de.seitenbau.serviceportal.scripting.api.v1.form.FormRowV1" />
       <Class name="de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldV1" />
+      <Class name="de.seitenbau.serviceportal.scripting.api.v1.form.MediaAccordionV1" />
+      <Class name="de.seitenbau.serviceportal.scripting.api.v1.form.MediaAccordionElementV1" />
       <Class name="de.seitenbau.serviceportal.scripting.api.v1.form.ajax.ExternalDataSourcePropertiesV1" />
+      <Class name="de.seitenbau.serviceportal.scripting.api.v1.form.ajax.ScriptSourcePropertiesV1" />
+      <Class name="de.seitenbau.serviceportal.scripting.api.v1.form.json.UnknownTypeValue" />
     </Or>
   </Match>
 </FindBugsFilter>

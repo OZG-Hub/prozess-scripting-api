@@ -9,13 +9,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import de.seitenbau.serviceportal.scripting.api.v1.form.condition.DisplayConditionV1;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.NonNull;
 
 /**
  * Abstrakte Elternklasse für Feldgruppen und deren Instanzen.
  */
-@SuppressFBWarnings(value = "NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR", justification = "no-args constructor is for Jackson deserialization only")
 public abstract class AbstractFieldGroupV1 implements FieldGroupInterfaceV1 {
   /**
    * Default und Maximum der maximalen Anzahl an Instanzen, die eine mehrfach-ausfüllbare Feldgruppe haben

@@ -4,7 +4,6 @@ package de.seitenbau.serviceportal.scripting.api.v1.form;
 import java.util.ArrayList;
 import java.util.List;
 import de.seitenbau.serviceportal.scripting.api.v1.form.condition.DisplayConditionV1;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.NonNull;
 
 /**
@@ -15,7 +14,6 @@ import lombok.NonNull;
  * um Felder der Typen {@link FieldTypeV1#H1 H1}, {@link FieldTypeV1#H2 H2}, {@link FieldTypeV1#TEXT TEXT},
  * {@link FieldTypeV1#IMAGE IMAGE}, und {@link FieldTypeV1#VIDEO VIDEO}. Jedes Feld hat die maximale Breite.
  */
-@SuppressFBWarnings(value = "NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR", justification = "no-args constructor is for Jackson deserialization only")
 public class MediaAccordionV1 implements FieldGroupInterfaceV1 {
   /**
    * ID des Medien-Akkordeons.

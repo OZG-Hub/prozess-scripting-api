@@ -9,12 +9,10 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 /**
  * Feldgruppe in einem Formular.
  */
-@SuppressFBWarnings(value = "RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE", justification = "no-args constructor is for Jackson deserialization only")
 public class FieldGroupV1 extends AbstractFieldGroupV1 {
   /**
    * {@code true}, wenn beim Ausfüllen des Formulars mehrere Feldgruppen dieser Art angelegt werden können.
