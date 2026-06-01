@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldKeyV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.MessageTypeV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.ValidationMessageV1;
@@ -132,6 +133,7 @@ public class FormContentV1 {
    *
    * @return Liste der Validierungsmeldungen am Formular
    */
+  @JsonIgnore
   public List<String> getValidationMessagesAsString() {
     return validationMessages.stream().map(ValidationMessageV1::getMessageText).collect(Collectors.toList());
   }

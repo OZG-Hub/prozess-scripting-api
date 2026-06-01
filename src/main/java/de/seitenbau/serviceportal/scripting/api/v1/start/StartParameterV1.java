@@ -73,8 +73,8 @@ public class StartParameterV1 {
   /**
    * Parameter einer Parameter-Quelle.
    * Mögliche Quellen auf OZG-Hub sind Jesaja und Fit-Connect.
-   * Auf service-bw und Amt24 kommen die Parameter aus der Parameterverwaltung im Admincenter.
-   * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
+   * Auf service-bw und Amt24 auf der Prozess-Engine V2 kommen die Parameter aus der Parameterverwaltung im
+   * Admincenter. {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
    */
   private Map<String, Object> parameters;
   /**
@@ -271,8 +271,8 @@ public class StartParameterV1 {
     /**
      * Parameter einer Parameter-Quelle.
      * Mögliche Quellen auf OZG-Hub sind Jesaja und Fit-Connect.
-     * Auf service-bw und Amt24 kommen die Parameter aus der Parameterverwaltung im Admincenter.
-     * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
+     * Auf service-bw und Amt24 auf der Prozess-Engine V2 kommen die Parameter aus der Parameterverwaltung im
+     * Admincenter. {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -444,8 +444,8 @@ public class StartParameterV1 {
   /**
    * Parameter einer Parameter-Quelle.
    * Mögliche Quellen auf OZG-Hub sind Jesaja und Fit-Connect.
-   * Auf service-bw und Amt24 kommen die Parameter aus der Parameterverwaltung im Admincenter.
-   * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
+   * Auf service-bw und Amt24 auf der Prozess-Engine V2 kommen die Parameter aus der Parameterverwaltung im
+   * Admincenter. {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -616,8 +616,8 @@ public class StartParameterV1 {
    * {@code null}, wenn kein Parameter definiert wurde.
    * @param parameters Parameter einer Parameter-Quelle.
    * Mögliche Quellen auf OZG-Hub sind Jesaja und Fit-Connect.
-   * Auf service-bw und Amt24 kommen die Parameter aus der Parameterverwaltung im Admincenter.
-   * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
+   * Auf service-bw und Amt24 auf der Prozess-Engine V2 kommen die Parameter aus der Parameterverwaltung im
+   * Admincenter. {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
    * @param testStart {@code true}, wenn die Prozessinstanz im Rahmen eines Test-Starts erzeugt wurde. {@code false}, wenn die
    * Prozessinstanz regulär gestartet wurde.
    * @param authentication Enthält Informationen über die Authentifizierungsanforderungen dieser Prozessinstanz.

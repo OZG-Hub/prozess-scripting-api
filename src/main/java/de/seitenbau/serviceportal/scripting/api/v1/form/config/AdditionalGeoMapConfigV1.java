@@ -33,6 +33,11 @@ public class AdditionalGeoMapConfigV1 implements AdditionalFieldConfigV1 {
    */
   @JsonInclude(Include.NON_NULL)
   private String controlParametersExpression;
+  /**
+   * Daten eines Service-Layers, der via der GeoBAK-API auf der Karte erstellt wird.
+   */
+  @JsonInclude(JsonInclude.Include.NON_NULL)
+  private String serviceLayer;
 
   @Override
   public AdditionalGeoMapConfigV1 clone() {
@@ -56,6 +61,9 @@ public class AdditionalGeoMapConfigV1 implements AdditionalFieldConfigV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     private String controlParametersExpression;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private String serviceLayer;
 
     @SuppressWarnings("all")
     @lombok.Generated
@@ -100,17 +108,28 @@ public class AdditionalGeoMapConfigV1 implements AdditionalFieldConfigV1 {
       return this;
     }
 
+    /**
+     * Daten eines Service-Layers, der via der GeoBAK-API auf der Karte erstellt wird.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public AdditionalGeoMapConfigV1.AdditionalGeoMapConfigV1Builder serviceLayer(final String serviceLayer) {
+      this.serviceLayer = serviceLayer;
+      return this;
+    }
+
     @SuppressWarnings("all")
     @lombok.Generated
     public AdditionalGeoMapConfigV1 build() {
-      return new AdditionalGeoMapConfigV1(this.hideElements, this.controlParameters, this.controlParametersExpression);
+      return new AdditionalGeoMapConfigV1(this.hideElements, this.controlParameters, this.controlParametersExpression, this.serviceLayer);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "AdditionalGeoMapConfigV1.AdditionalGeoMapConfigV1Builder(hideElements=" + this.hideElements + ", controlParameters=" + this.controlParameters + ", controlParametersExpression=" + this.controlParametersExpression + ")";
+      return "AdditionalGeoMapConfigV1.AdditionalGeoMapConfigV1Builder(hideElements=" + this.hideElements + ", controlParameters=" + this.controlParameters + ", controlParametersExpression=" + this.controlParametersExpression + ", serviceLayer=" + this.serviceLayer + ")";
     }
   }
 
@@ -152,6 +171,15 @@ public class AdditionalGeoMapConfigV1 implements AdditionalFieldConfigV1 {
   }
 
   /**
+   * Daten eines Service-Layers, der via der GeoBAK-API auf der Karte erstellt wird.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public String getServiceLayer() {
+    return this.serviceLayer;
+  }
+
+  /**
    * Elemente der Kartenanwendung die nicht dargestellt werden sollen. Wenn {@code null} oder leer wird die
    * Kartenanwendung unverändert dem Antragssteller zur Verfügung gestellt.
    */
@@ -182,6 +210,15 @@ public class AdditionalGeoMapConfigV1 implements AdditionalFieldConfigV1 {
     this.controlParametersExpression = controlParametersExpression;
   }
 
+  /**
+   * Daten eines Service-Layers, der via der GeoBAK-API auf der Karte erstellt wird.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public void setServiceLayer(final String serviceLayer) {
+    this.serviceLayer = serviceLayer;
+  }
+
   @Override
   @SuppressWarnings("all")
   @lombok.Generated
@@ -199,6 +236,9 @@ public class AdditionalGeoMapConfigV1 implements AdditionalFieldConfigV1 {
     final Object this$controlParametersExpression = this.getControlParametersExpression();
     final Object other$controlParametersExpression = other.getControlParametersExpression();
     if (this$controlParametersExpression == null ? other$controlParametersExpression != null : !this$controlParametersExpression.equals(other$controlParametersExpression)) return false;
+    final Object this$serviceLayer = this.getServiceLayer();
+    final Object other$serviceLayer = other.getServiceLayer();
+    if (this$serviceLayer == null ? other$serviceLayer != null : !this$serviceLayer.equals(other$serviceLayer)) return false;
     return true;
   }
 
@@ -220,6 +260,8 @@ public class AdditionalGeoMapConfigV1 implements AdditionalFieldConfigV1 {
     result = result * PRIME + ($controlParameters == null ? 43 : $controlParameters.hashCode());
     final Object $controlParametersExpression = this.getControlParametersExpression();
     result = result * PRIME + ($controlParametersExpression == null ? 43 : $controlParametersExpression.hashCode());
+    final Object $serviceLayer = this.getServiceLayer();
+    result = result * PRIME + ($serviceLayer == null ? 43 : $serviceLayer.hashCode());
     return result;
   }
 
@@ -227,7 +269,7 @@ public class AdditionalGeoMapConfigV1 implements AdditionalFieldConfigV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "AdditionalGeoMapConfigV1(hideElements=" + this.getHideElements() + ", controlParameters=" + this.getControlParameters() + ", controlParametersExpression=" + this.getControlParametersExpression() + ")";
+    return "AdditionalGeoMapConfigV1(hideElements=" + this.getHideElements() + ", controlParameters=" + this.getControlParameters() + ", controlParametersExpression=" + this.getControlParametersExpression() + ", serviceLayer=" + this.getServiceLayer() + ")";
   }
 
   @SuppressWarnings("all")
@@ -245,12 +287,14 @@ public class AdditionalGeoMapConfigV1 implements AdditionalFieldConfigV1 {
    * Nur verwendbar mit formular-engine version 2.
    * @param controlParametersExpression Platzhalter zum Befüllen des 'controlParameters' Attribut.
    * Nur verwendbar mit formular-engine version 2.
+   * @param serviceLayer Daten eines Service-Layers, der via der GeoBAK-API auf der Karte erstellt wird.
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public AdditionalGeoMapConfigV1(final Set<GeoMapElementV1> hideElements, final Map<String, String> controlParameters, final String controlParametersExpression) {
+  public AdditionalGeoMapConfigV1(final Set<GeoMapElementV1> hideElements, final Map<String, String> controlParameters, final String controlParametersExpression, final String serviceLayer) {
     this.hideElements = hideElements;
     this.controlParameters = controlParameters;
     this.controlParametersExpression = controlParametersExpression;
+    this.serviceLayer = serviceLayer;
   }
 }

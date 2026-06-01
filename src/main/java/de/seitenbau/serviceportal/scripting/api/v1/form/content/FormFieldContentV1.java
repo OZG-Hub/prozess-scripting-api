@@ -4,6 +4,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.content;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FieldTypeV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.MessageTypeV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.PossibleValueV1;
@@ -38,6 +39,7 @@ public class FormFieldContentV1 {
    *
    * @return {@code true}, wenn keine Validierungsmeldungen existieren, sonst {@code false}
    */
+  @JsonIgnore
   public boolean isValid() {
     return validationMessages.isEmpty();
   }
@@ -48,6 +50,7 @@ public class FormFieldContentV1 {
    *
    * @return Liste der Validierungsmeldungen am Feld
    */
+  @JsonIgnore
   public List<String> getValidationMessagesAsString() {
     return validationMessages.stream().map(ValidationMessageV1::getMessageText).collect(Collectors.toList());
   }
