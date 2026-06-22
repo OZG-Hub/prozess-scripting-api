@@ -55,17 +55,17 @@ public class FormFieldKeyV1 {
    */
   public FormFieldKeyV1(String key) {
     if (key == null || key.isEmpty()) {
-      throw new NullPointerException(String.format("Parameter %s darf nicht null oder leer sein.", key));
+      throw new NullPointerException("Parameter %s darf nicht null oder leer sein.".formatted(key));
     }
     String[] parts = key.split(SEPARATOR);
     if (parts.length != 3) {
-      throw new IllegalArgumentException(String.format("Parameter %s muss den Separator %s zweimal enthalten.", key, SEPARATOR));
+      throw new IllegalArgumentException("Parameter %s muss den Separator %s zweimal enthalten.".formatted(key, SEPARATOR));
     }
     groupId = parts[0];
     try {
       groupIndex = Integer.parseInt(parts[1]);
     } catch (NumberFormatException e) {
-      throw new IllegalArgumentException(String.format("GroupIndex %s muss vom Typ int sein.", parts[1]));
+      throw new IllegalArgumentException("GroupIndex %s muss vom Typ int sein.".formatted(parts[1]));
     }
     fieldId = parts[2];
   }

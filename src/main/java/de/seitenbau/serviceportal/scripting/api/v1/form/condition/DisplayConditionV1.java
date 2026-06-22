@@ -49,11 +49,11 @@ public abstract class DisplayConditionV1 implements Cloneable {
    * niemals {@code null}.
    */
   public static Stream<FieldDisplayConditionV1> identifyFieldDisplayConditions(DisplayConditionV1 condition) {
-    if (condition instanceof FieldDisplayConditionV1) {
-      return Stream.of((FieldDisplayConditionV1) condition);
+    if (condition instanceof FieldDisplayConditionV1 v1) {
+      return Stream.of(v1);
     }
-    if (condition instanceof AggregatorDisplayConditionV1) {
-      return ((AggregatorDisplayConditionV1) condition).getConditions().stream().flatMap(DisplayConditionV1::identifyFieldDisplayConditions);
+    if (condition instanceof AggregatorDisplayConditionV1 v1) {
+      return v1.getConditions().stream().flatMap(DisplayConditionV1::identifyFieldDisplayConditions);
     }
     return Stream.of();
   }

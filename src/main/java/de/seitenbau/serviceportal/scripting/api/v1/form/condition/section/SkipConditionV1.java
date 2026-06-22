@@ -11,7 +11,7 @@ import de.seitenbau.serviceportal.scripting.api.v1.form.FormV1;
  * Abstrakte Elternklasse für Bedingungen zum Überspringen von Elementen.
  */
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "@type")
-@JsonSubTypes({@JsonSubTypes.Type(value = SkipOnEmptyFieldConditionV1.class, name = "SkipOnEmptyFieldCondition"), @JsonSubTypes.Type(value = SkipOnFieldValueNotInValuesConditionV1.class, name = "SkipOnFieldValueNotInValuesCondition"), @JsonSubTypes.Type(value = SkipOnFieldValuesConditionV1.class, name = "SkipOnFieldValuesCondition"), @JsonSubTypes.Type(value = SkipOnFilledFieldConditionV1.class, name = "SkipOnFilledFieldCondition"), @JsonSubTypes.Type(value = SkipOnBooleanConditionV1.class, name = "SkipOnBooleanCondition"), @JsonSubTypes.Type(value = SkipOnProcessVariableInValuesConditionV1.class, name = "SkipOnProcessVariableInValuesCondition"), @JsonSubTypes.Type(value = SkipOnProcessVariableNotInValuesConditionV1.class, name = "SkipOnProcessVariableNotInValuesCondition")})
+@JsonSubTypes({@JsonSubTypes.Type(value = SkipOnEmptyFieldConditionV1.class, name = "SkipOnEmptyFieldCondition"), @JsonSubTypes.Type(value = SkipOnFieldValueNotInValuesConditionV1.class, name = "SkipOnFieldValueNotInValuesCondition"), @JsonSubTypes.Type(value = SkipOnFieldValuesConditionV1.class, name = "SkipOnFieldValuesCondition"), @JsonSubTypes.Type(value = SkipOnFilledFieldConditionV1.class, name = "SkipOnFilledFieldCondition"), @JsonSubTypes.Type(value = SkipOnBooleanConditionV1.class, name = "SkipOnBooleanCondition"), @JsonSubTypes.Type(value = SkipOnProcessVariableInValuesConditionV1.class, name = "SkipOnProcessVariableInValuesCondition"), @JsonSubTypes.Type(value = SkipOnProcessVariableNotInValuesConditionV1.class, name = "SkipOnProcessVariableNotInValuesCondition"), @JsonSubTypes.Type(value = AndSkipConditionV1.class, name = "AndSkipCondition"), @JsonSubTypes.Type(value = OrSkipConditionV1.class, name = "OrSkipCondition")})
 public abstract class SkipConditionV1 implements Cloneable {
   /**
    * Prüft, ob die Bedingung in der gegebenen Gruppeninstanz im gegebenen Formular erfüllt
@@ -44,8 +44,8 @@ public abstract class SkipConditionV1 implements Cloneable {
    * niemals {@code null}.
    */
   public static Stream<ReferencedFieldSkipConditionV1> identifyFieldDisplayConditions(SkipConditionV1 condition) {
-    if (condition instanceof ReferencedFieldSkipConditionV1) {
-      return Stream.of((ReferencedFieldSkipConditionV1) condition);
+    if (condition instanceof ReferencedFieldSkipConditionV1 v1) {
+      return Stream.of(v1);
     }
     return Stream.of();
   }

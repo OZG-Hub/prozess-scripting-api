@@ -120,7 +120,6 @@ public class FieldGroupV1 extends AbstractFieldGroupV1 {
    *
    * @return Liste der Instanzen
    */
-  @JsonIgnore
   public List<FieldGroupInstanceV1> getInstances() {
     createFirstInstanceIfNecessary();
     return instances;

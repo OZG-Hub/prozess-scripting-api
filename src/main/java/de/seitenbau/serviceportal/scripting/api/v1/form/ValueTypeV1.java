@@ -65,12 +65,12 @@ public enum ValueTypeV1
     {
       return DATE;
     }
-    if (value instanceof VerifiedFormFieldValueV1)
+    if (value instanceof VerifiedFormFieldValueV1 v1)
     {
-      return getTypeOfValue(((VerifiedFormFieldValueV1) value).getValue());
+      return getTypeOfValue(v1.getValue());
     }
 
     throw new IllegalArgumentException(
-        String.format("Value hat keinen bekannten Typ: %s.", value.getClass().getName()));
+        "Value hat keinen bekannten Typ: %s.".formatted(value.getClass().getName()));
   }
 }

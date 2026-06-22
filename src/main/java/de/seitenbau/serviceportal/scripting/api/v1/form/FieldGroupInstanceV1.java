@@ -206,4 +206,20 @@ public class FieldGroupInstanceV1 extends AbstractFieldGroupV1 {
     result = result * PRIME + this.getIndex();
     return result;
   }
+
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FieldGroupInstanceV1() {
+  }
+
+  /**
+   * Creates a new {@code FieldGroupInstanceV1} instance.
+   *
+   * @param index Index der Feldgruppen-Instanz innerhalb der umschließenden Feldgruppe.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FieldGroupInstanceV1(final int index) {
+    this.index = index;
+  }
 }
