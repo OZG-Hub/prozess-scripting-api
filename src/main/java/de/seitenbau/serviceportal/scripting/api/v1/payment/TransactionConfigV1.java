@@ -13,7 +13,7 @@ public class TransactionConfigV1 {
    */
   private Long betrag;
   /**
-   * Verwendungszweck. Für pmPayment wird der Verwendungszweck ignoriert.
+   * Verwendungszweck.
    */
   private String verwendungszweck;
   /**
@@ -66,7 +66,7 @@ public class TransactionConfigV1 {
     }
 
     /**
-     * Verwendungszweck. Für pmPayment wird der Verwendungszweck ignoriert.
+     * Verwendungszweck.
      * @return {@code this}.
      */
     @SuppressWarnings("all")
@@ -139,7 +139,7 @@ public class TransactionConfigV1 {
   }
 
   /**
-   * Verwendungszweck. Für pmPayment wird der Verwendungszweck ignoriert.
+   * Verwendungszweck.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -184,7 +184,7 @@ public class TransactionConfigV1 {
   }
 
   /**
-   * Verwendungszweck. Für pmPayment wird der Verwendungszweck ignoriert.
+   * Verwendungszweck.
    */
   @SuppressWarnings("all")
   @lombok.Generated
@@ -286,7 +286,7 @@ public class TransactionConfigV1 {
    * Creates a new {@code TransactionConfigV1} instance.
    *
    * @param betrag Bruttobetrag in Cents.
-   * @param verwendungszweck Verwendungszweck. Für pmPayment wird der Verwendungszweck ignoriert.
+   * @param verwendungszweck Verwendungszweck.
    * @param beschreibung Beschreibung.
    * @param artikel Artikel.
    * @param bezahlerinfo Auslöser der Bezahlung.
