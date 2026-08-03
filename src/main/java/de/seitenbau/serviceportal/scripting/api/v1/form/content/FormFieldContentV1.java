@@ -5,10 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FieldTypeV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.MessageTypeV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.PossibleValueV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.ValidationMessageV1;
+import de.seitenbau.serviceportal.scripting.api.v1.form.json.DeserializerWithTypeInfo;
+import de.seitenbau.serviceportal.scripting.api.v1.form.json.SerializerWithTypeInfo;
 
 /**
  * Inhalt eines Feldes im Formular-Content.
@@ -19,6 +23,8 @@ public class FormFieldContentV1 {
   /**
    * Wert des Feldes zum Zeitpunkt des Submits.
    */
+  @JsonSerialize(using = SerializerWithTypeInfo.class)
+  @JsonDeserialize(using = DeserializerWithTypeInfo.class)
   private Object value;
   /**
    * Validierungsmeldungen am Feld.
@@ -97,6 +103,7 @@ public class FormFieldContentV1 {
      * Wert des Feldes zum Zeitpunkt des Submits.
      * @return {@code this}.
      */
+    @JsonDeserialize(using = DeserializerWithTypeInfo.class)
     @SuppressWarnings("all")
     @lombok.Generated
     public FormFieldContentV1.FormFieldContentV1Builder value(final Object value) {

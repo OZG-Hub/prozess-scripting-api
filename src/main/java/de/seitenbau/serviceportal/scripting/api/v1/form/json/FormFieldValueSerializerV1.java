@@ -16,6 +16,7 @@ public class FormFieldValueSerializerV1 extends JsonSerializer<FormFieldValueV1>
 {
   public static final String KEY_VALUE = "value";
   public static final String KEY_ADDITIONAL_INFO = "additionalInfo";
+  public static final String KEY_TYPE = "@type";
 
   @Override
   public void serialize(

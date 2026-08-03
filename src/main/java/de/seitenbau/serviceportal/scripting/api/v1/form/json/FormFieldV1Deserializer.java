@@ -1,22 +1,20 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.json;
 
-import static de.seitenbau.serviceportal.scripting.api.v1.form.FieldTypeV1.FILE;
-import static de.seitenbau.serviceportal.scripting.api.v1.form.FieldTypeV1.GDIK_MAP;
-import static de.seitenbau.serviceportal.scripting.api.v1.form.FieldTypeV1.GEO_MAP;
 import static de.seitenbau.serviceportal.scripting.api.v1.form.FieldTypeV1.MULTIPLE_FILE;
 
 import java.io.IOException;
 import java.io.Serial;
 import java.math.BigDecimal;
-import java.nio.charset.StandardCharsets;
+import java.math.RoundingMode;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
-import java.util.Base64;
-import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -43,8 +41,8 @@ public class FormFieldV1Deserializer extends StdDeserializer<FormFieldV1>
   private static final long serialVersionUID = 1L;
 
   private static final ObjectMapper OBJECT_MAPPER;
-  private static final Set<FieldTypeV1>
-      BINARY_CONTENT_VALUE_TYPES = Set.of(FILE, GEO_MAP, GDIK_MAP, MULTIPLE_FILE);
+  private static final DateTimeFormatter LOCAL_DATE_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+  private static final DateTimeFormatter LOCAL_TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm");
 
   static
   {
@@ -69,19 +67,16 @@ public class FormFieldV1Deserializer extends StdDeserializer<FormFieldV1>
     parser.nextToken();
     FormFieldV1 result = ctxt.readValue(parser, FormFieldV1Deser.class);
 
-    if (valueNode == null)
+    if (valueNode == null || valueNode.isNull())
     {
       return result;
     }
 
-    if (BINARY_CONTENT_VALUE_TYPES.contains(result.getType()))
+    FormFieldValueV1 formFieldValue = tryDeserializeFormFieldValue(mapper, valueNode);
+    if (formFieldValue != null)
     {
-      FormFieldValueV1 formFieldValue = tryDeserializeFormFieldValue(mapper, valueNode);
-      if (formFieldValue != null)
-      {
-        result.setValue(formFieldValue);
-        return result;
-      }
+      result.setValue(formFieldValue);
+      return result;
     }
 
     Object value = mapValueToType(valueNode, result.getType());
@@ -96,7 +91,7 @@ public class FormFieldV1Deserializer extends StdDeserializer<FormFieldV1>
       return null;
     }
 
-    if (!node.has("type"))
+    if (!node.has(FormFieldValueSerializerV1.KEY_TYPE))
     {
       return null;
     }
@@ -113,19 +108,9 @@ public class FormFieldV1Deserializer extends StdDeserializer<FormFieldV1>
 
   private Object mapValueToType(JsonNode valueNode, FieldTypeV1 fieldType)
   {
-    if (valueNode == null)
-    {
-      return null;
-    }
-
     if (fieldType == MULTIPLE_FILE && valueNode.isArray())
     {
       return deserializeMultipleFiles(valueNode);
-    }
-
-    if (fieldType == null || fieldType.getValueClasses().isEmpty())
-    {
-      return toObject(valueNode);
     }
 
     for (Class<?> valueClass : fieldType.getValueClasses())
@@ -142,25 +127,21 @@ public class FormFieldV1Deserializer extends StdDeserializer<FormFieldV1>
 
   private Object tryMapToType(JsonNode valueNode, Class<?> valueClass)
   {
-    if (valueClass == Date.class)
-    {
-      return tryDeserializeDate(valueNode);
-    }
-    if (valueClass == BinaryContentV1.class)
-    {
-      return tryDeserializeBinaryContent(valueNode);
-    }
-    if (valueClass == BigDecimal.class)
-    {
-      return tryDeserializeBigDecimal(valueNode);
-    }
-    if (valueClass == String.class)
-    {
-      return toString(valueNode);
-    }
-
     try
     {
+      if (valueClass == LocalDate.class)
+      {
+        return tryDeserializeLocalDate(valueNode);
+      }
+      if (valueClass == LocalDateTime.class)
+      {
+        return tryDeserializeLocalTime(valueNode);
+      }
+      if (valueClass == BigDecimal.class)
+      {
+        return tryDeserializeBigDecimal(valueNode);
+      }
+
       return OBJECT_MAPPER.treeToValue(valueNode, valueClass);
     }
     catch (JsonProcessingException e)
@@ -169,93 +150,80 @@ public class FormFieldV1Deserializer extends StdDeserializer<FormFieldV1>
     }
   }
 
-  private BigDecimal tryDeserializeBigDecimal(JsonNode valueNode)
-  {
-    if (valueNode.isNumber())
-    {
-      return valueNode.decimalValue().setScale(2);
-    }
-
-    if (valueNode.isTextual())
-    {
-      try
-      {
-        return new BigDecimal(valueNode.asText()).setScale(2);
-      }
-      catch (NumberFormatException e)
-      {
-        return null;
-      }
-    }
-
-    return null;
-  }
-
-  private Date tryDeserializeDate(JsonNode valueNode)
+  private LocalDate tryDeserializeLocalDate(JsonNode valueNode) throws JsonProcessingException
   {
     if (valueNode.isLong())
     {
-      return new Date(valueNode.asLong());
+      return Instant.ofEpochMilli(valueNode.asLong()).atZone(ZoneId.systemDefault()).toLocalDate();
     }
 
     if (valueNode.isInt())
     {
-      return new Date(valueNode.asInt() & 0xFFFFFFFFL);
+      return Instant.ofEpochMilli(valueNode.asInt()).atZone(ZoneId.systemDefault()).toLocalDate();
     }
 
-    if (!valueNode.isTextual())
+    if (valueNode.isTextual())
     {
-      return null;
+      return parseLocalDate(valueNode.textValue());
     }
 
-    String text = valueNode.asText();
-    Long epochMilli = parseDateTime(text);
-    if (epochMilli != null)
-    {
-      return new Date(epochMilli);
-    }
-
-    return parseDate(text);
+    return OBJECT_MAPPER.treeToValue(valueNode, LocalDate.class);
   }
 
-  private Long parseDateTime(String text)
+  private static LocalDate parseLocalDate(String str)
   {
     try
     {
-      return LocalDateTime.parse(text)
-          .atZone(ZoneId.systemDefault())
-          .toInstant()
-          .toEpochMilli();
+      return LocalDate.parse(str, LOCAL_DATE_FORMATTER);
     }
-    catch (Exception e)
+    catch (DateTimeParseException e)
     {
       return null;
     }
   }
 
-  private Date parseDate(String text)
+  private LocalTime tryDeserializeLocalTime(JsonNode valueNode) throws JsonProcessingException
+  {
+    if (valueNode.isLong())
+    {
+      return Instant.ofEpochMilli(valueNode.asLong()).atZone(ZoneId.systemDefault()).toLocalTime();
+    }
+
+    if (valueNode.isInt())
+    {
+      return Instant.ofEpochMilli(valueNode.asInt()).atZone(ZoneId.systemDefault()).toLocalTime();
+    }
+
+    if (valueNode.isTextual())
+    {
+      return parseLocalTime(valueNode.textValue());
+    }
+
+    return OBJECT_MAPPER.treeToValue(valueNode, LocalTime.class);
+  }
+
+  private static LocalTime parseLocalTime(String str)
   {
     try
     {
-      long epochMilli = LocalDate.parse(text)
-          .atStartOfDay(ZoneId.systemDefault())
-          .toInstant()
-          .toEpochMilli();
-      return new Date(epochMilli);
+      return LocalTime.parse(str, LOCAL_TIME_FORMATTER);
     }
-    catch (Exception e)
+    catch (DateTimeParseException e)
     {
       return null;
     }
   }
 
-  private String toString(JsonNode valueNode)
+  private BigDecimal tryDeserializeBigDecimal(JsonNode valueNode) throws JsonProcessingException
   {
-    if (valueNode == null || valueNode.isNull())
+    try
+    {
+      return OBJECT_MAPPER.treeToValue(valueNode, BigDecimal.class).setScale(2, RoundingMode.HALF_UP);
+    }
+    catch (Exception ignored)
     {
       return null;
     }
-    return valueNode.asText();
   }
 
   private Object toObject(JsonNode valueNode)
@@ -275,11 +243,6 @@ public class FormFieldV1Deserializer extends StdDeserializer<FormFieldV1>
     if (valueNode == null)
     {
       return null;
-    }
-
-    if (valueNode.isArray())
-    {
-      return deserializeMultipleFiles(valueNode);
     }
 
     if (valueNode instanceof ObjectNode obj)
@@ -310,64 +273,13 @@ public class FormFieldV1Deserializer extends StdDeserializer<FormFieldV1>
 
   private BinaryContentV1 deserializeBinaryContent(ObjectNode obj)
   {
-    String key = getTextOrNull(obj, "key");
-    String uploadedFilename = getTextOrNull(obj, "uploadedFilename");
-    String label = getTextOrNull(obj, "label");
-    String mimetype = getTextOrNull(obj, "mimetype");
-    byte[] data = getBinaryData(obj, "data");
-
-    return BinaryContentV1.builder()
-        .key(key)
-        .uploadedFilename(uploadedFilename)
-        .label(label)
-        .mimetype(mimetype)
-        .data(data)
-        .build();
-  }
-
-  private String getTextOrNull(ObjectNode obj, String fieldName)
-  {
-    JsonNode node = obj.get(fieldName);
-    return node != null ? node.asText() : null;
-  }
-
-  private byte[] getBinaryData(ObjectNode obj, String fieldName)
-  {
-    JsonNode dataNode = obj.get(fieldName);
-    if (dataNode == null)
-    {
-      return null;
-    }
-
-    if (dataNode.isTextual())
-    {
-      return decodeBase64OrFallback(dataNode);
-    }
-
-    if (dataNode.isBinary())
-    {
-      try
-      {
-        return dataNode.binaryValue();
-      }
-      catch (IOException e)
-      {
-        return null;
-      }
-    }
-
-    return null;
-  }
-
-  private byte[] decodeBase64OrFallback(JsonNode dataNode)
-  {
     try
     {
-      return Base64.getDecoder().decode(dataNode.asText());
+      return OBJECT_MAPPER.convertValue(obj, BinaryContentV1.class);
     }
-    catch (IllegalArgumentException e)
+    catch (Exception e)
     {
-      return dataNode.asText().getBytes(StandardCharsets.UTF_8);
+      return null;
     }
   }
 

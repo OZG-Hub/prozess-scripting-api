@@ -16,6 +16,9 @@ public interface DataStorageApiV1
   /**
    * Ermöglicht es, Daten im Dateisystem abzulegen und mit einer Referenz auf diese Daten zu arbeiten.
    * Auf diese Weise werden große Datenmengen nicht in der Datenbank abgelegt.
+   * <p>
+   * Nach dem Ende der Hauptprozessinstanz, im Rahmen derer die Daten gespeichert wurde, bleiben die Daten
+   * noch für bis zu 182 Tage erhalten und werden anschließend automatisch gelöscht.
    *
    * @param data die zu speichernden Daten als Byte-Array
    *
@@ -29,6 +32,13 @@ public interface DataStorageApiV1
   /**
    * Speichert Daten im Dateisystem und gibt ein verschlüsseltes Zugriffstoken zurück.
    * Diese Methode wird nur auf der Prozess-Engine V2 unterstützt.
+   * <p>
+   * Die Methode kann genutzt werden, um Daten zwischen Prozessen zu teilen. Eine Prozessinstanz, der
+   * gegebenen ProzessKeys, kann die Daten über die Methode
+   * {@link #readFromFileAccessor(String) readFromFileAccessor} abrufen.
+   * <p>
+   * Nach dem Ende der Hauptprozessinstanz, im Rahmen derer die Daten gespeichert wurde, bleiben die Daten
+   * noch für bis zu 182 Tage erhalten und werden anschließend automatisch gelöscht.
    *
    * @param data die zu speichernden Daten als Byte-Array
    * @param targetProcessDefinitionKeys ProzessKeys, die Zugriff auf die Daten erhalten sollen
@@ -42,10 +52,12 @@ public interface DataStorageApiV1
    */
   String saveAndReturnFileAccessor(byte[] data, List<String> targetProcessDefinitionKeys);
 
-
   /**
    * Liest die Daten aus dem durch den File-Accessor referenzierten Speicher.
    * Diese Methode wird nur auf der Prozess-Engine V2 unterstützt.
+   * <p>
+   * Nach dem Ende der Hauptprozessinstanz, im Rahmen derer die Daten gespeichert wurden, bleiben die Daten
+   * noch für bis zu 182 Tage erhalten und werden anschließend automatisch gelöscht.
    *
    * @param fileAccessor das verschlüsselte Token, das den Speicherort und die Zugriffsberechtigung definiert
    *

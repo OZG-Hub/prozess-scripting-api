@@ -585,6 +585,13 @@ public class FormContentV1 {
     return "FormContentV1(formId=" + this.getFormId() + ", formTitle=" + this.getFormTitle() + ", context=" + this.getContext() + ", fields=" + this.getFields() + ", validationMessages=" + this.getValidationMessages() + ", pressedCustomButton=" + this.getPressedCustomButton() + ", createdOn=" + this.getCreatedOn() + ", appliedReplacements=" + this.getAppliedReplacements() + ")";
   }
 
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public FormContentV1() {
+    this.fields = FormContentV1.$default$fields();
+    this.validationMessages = FormContentV1.$default$validationMessages();
+  }
+
   /**
    * Creates a new {@code FormContentV1} instance.
    *

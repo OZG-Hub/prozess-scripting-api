@@ -1,6 +1,7 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.json;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
@@ -31,7 +32,9 @@ public class SerializerWithTypeInfo extends JsonSerializer<Object>
     jgen.writeStartObject();
     if (bean != null)
     {
-      String className = bean.getClass().getName();
+      String className = Optional.ofNullable(bean.getClass().getAnnotation(OverwriteJsonClassName.class))
+          .map(OverwriteJsonClassName::value)
+          .orElse(bean.getClass().getName());
       jgen.writeStringField("type", className);
     }
     else

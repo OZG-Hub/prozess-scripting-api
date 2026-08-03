@@ -19,7 +19,7 @@ import de.seitenbau.serviceportal.scripting.api.v1.form.json.FormFieldValueSeria
  * Abstrakte Elternklasse für verifizierte Feldwerte.
  */
 @JsonSerialize(using = FormFieldValueSerializerV1.class)
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "@type")
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = FormFieldValueSerializerV1.KEY_TYPE)
 @JsonSubTypes({@Type(VerifiedFormFieldValueV1.class)})
 public abstract class FormFieldValueV1 {
   public static final String VALUE_TYPE_KEY = "valueType";
@@ -121,8 +121,9 @@ public abstract class FormFieldValueV1 {
     if (value instanceof java.util.ArrayList<?> parts) {
       int hours = ((Number) parts.get(0)).intValue();
       int minutes = ((Number) parts.get(1)).intValue();
-      int seconds = ((Number) parts.get(2)).intValue();
-      return LocalTime.of(hours, minutes, seconds);
+      int seconds = parts.size() > 2 ? ((Number) parts.get(2)).intValue() : 0;
+      int nanos = parts.size() > 3 ? ((Number) parts.get(3)).intValue() : 0;
+      return LocalTime.of(hours, minutes, seconds, nanos);
     }
     if (value instanceof LocalTime) {
       return (LocalTime) value;

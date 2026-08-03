@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.seitenbau.serviceportal</groupId>
   <artifactId>prozess-scripting-api</artifactId>
-  <version>1.212.9</version>
+  <version>1.213.2</version>
   <packaging>jar</packaging>
 
   <name>prozess-scripting-api</name>
@@ -60,7 +60,7 @@
     <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
     <central-publishing-maven-plugin.version>0.11.0</central-publishing-maven-plugin.version>
     <jackson-annotations.version>2.22</jackson-annotations.version>
-    <jackson-databind.version>2.22.0</jackson-databind.version>
+    <jackson-databind.version>2.22.1</jackson-databind.version>
     <jakarta.version>4.0.0</jakarta.version>
   </properties>
 

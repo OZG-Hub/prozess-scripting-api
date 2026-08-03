@@ -1,8 +1,15 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.content;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 /**
  * Objekt mit Informationen zur Authentifizierung an einem externen Server
  **/
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "@type")
+@JsonSubTypes({
+    @JsonSubTypes.Type(value = BasicAuthAuthenticationV1.class, name = "BasicAuth")
+})
 public interface AuthenticationV1 extends Cloneable
 {
   /**

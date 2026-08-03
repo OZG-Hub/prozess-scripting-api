@@ -2,7 +2,10 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
@@ -54,10 +57,10 @@ public enum FieldTypeV1 {
   PLACEHOLDER(String.class), /**
    * Datumseingabe.
    */
-  DATE(Date.class), /**
+  DATE(Date.class, LocalDate.class), /**
    * Uhrzeiteingabe.
    */
-  TIME(Date.class), /**
+  TIME(Date.class, LocalTime.class), /**
    * Geldbetrageingabe (nur Euro).
    */
   EURO_BETRAG(BigDecimal.class), /**
@@ -127,8 +130,8 @@ public enum FieldTypeV1 {
    */
   private final List<Class<?>> valueClasses;
 
-  FieldTypeV1(Class<?> valueClass) {
-    valueClasses = Collections.singletonList(valueClass);
+  FieldTypeV1(Class<?>... valueClass) {
+    valueClasses = Collections.unmodifiableList(Arrays.asList(valueClass));
   }
 
   @SuppressWarnings("checkstyle:Indentation")

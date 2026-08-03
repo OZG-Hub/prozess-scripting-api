@@ -96,7 +96,7 @@ public class DeserializerWithTypeInfo extends JsonDeserializer<Object>
     }
 
     Object value = ctxt.readValue(jp, typeAsClass);
-    if (JsonToken.END_OBJECT.equals(jp.nextToken()))
+    if (!JsonToken.END_OBJECT.equals(jp.nextToken()))
     {
       throw new IllegalStateException("End Object expected");
     }
