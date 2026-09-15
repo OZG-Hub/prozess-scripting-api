@@ -49,4 +49,11 @@ public interface ProcessInstanceApiV1
    * @return Definition-Key der aktiven Prozessinstanz
    */
   String getDefinitionKey();
+
+  /**
+   * Gibt den Prozessmodellversionsnamen der aktiven Hauptprozessinstanz zurück.
+   *
+   * @return Prozessmodellversionsnamen der aktiven Hauptprozessinstanz
+   */
+  String getRootVersionName();
 }

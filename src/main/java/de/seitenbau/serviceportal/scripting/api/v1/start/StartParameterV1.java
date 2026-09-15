@@ -66,6 +66,14 @@ public class StartParameterV1 {
    */
   private String fitConnectAreaId;
   /**
+   * ID des Zustellpunkts bei FitConnect, der für die Parametrisierung über die Routing-API ermittelt wurde.
+   * {@code null}, wenn Jesaja zur Parametrisierung beim Prozessstart genutzt wurde.
+   * Auf service-bw und Amt24 immer {@code null}.
+   *
+   * @since Release 1.215
+   */
+  private String fitConnectDestinationId;
+  /**
    * Frei wählbarer Parameter.
    * {@code null}, wenn kein Parameter definiert wurde.
    */
@@ -122,6 +130,9 @@ public class StartParameterV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     private String fitConnectAreaId;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private String fitConnectDestinationId;
     @SuppressWarnings("all")
     @lombok.Generated
     private String p;
@@ -257,6 +268,21 @@ public class StartParameterV1 {
     }
 
     /**
+     * ID des Zustellpunkts bei FitConnect, der für die Parametrisierung über die Routing-API ermittelt wurde.
+     * {@code null}, wenn Jesaja zur Parametrisierung beim Prozessstart genutzt wurde.
+     * Auf service-bw und Amt24 immer {@code null}.
+     *
+     * @since Release 1.215
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public StartParameterV1.StartParameterV1Builder fitConnectDestinationId(final String fitConnectDestinationId) {
+      this.fitConnectDestinationId = fitConnectDestinationId;
+      return this;
+    }
+
+    /**
      * Frei wählbarer Parameter.
      * {@code null}, wenn kein Parameter definiert wurde.
      * @return {@code this}.
@@ -319,14 +345,14 @@ public class StartParameterV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     public StartParameterV1 build() {
-      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.zustaendigeOrganisationseinheiten, this.ars, this.ags, this.fitConnectAreaId, this.p, this.parameters, this.testStart, this.authentication, this.startData);
+      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.zustaendigeOrganisationseinheiten, this.ars, this.ags, this.fitConnectAreaId, this.fitConnectDestinationId, this.p, this.parameters, this.testStart, this.authentication, this.startData);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", zustaendigeOrganisationseinheiten=" + this.zustaendigeOrganisationseinheiten + ", ars=" + this.ars + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", p=" + this.p + ", parameters=" + this.parameters + ", testStart=" + this.testStart + ", authentication=" + this.authentication + ", startData=" + this.startData + ")";
+      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", zustaendigeOrganisationseinheiten=" + this.zustaendigeOrganisationseinheiten + ", ars=" + this.ars + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", fitConnectDestinationId=" + this.fitConnectDestinationId + ", p=" + this.p + ", parameters=" + this.parameters + ", testStart=" + this.testStart + ", authentication=" + this.authentication + ", startData=" + this.startData + ")";
     }
   }
 
@@ -432,6 +458,19 @@ public class StartParameterV1 {
   }
 
   /**
+   * ID des Zustellpunkts bei FitConnect, der für die Parametrisierung über die Routing-API ermittelt wurde.
+   * {@code null}, wenn Jesaja zur Parametrisierung beim Prozessstart genutzt wurde.
+   * Auf service-bw und Amt24 immer {@code null}.
+   *
+   * @since Release 1.215
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public String getFitConnectDestinationId() {
+    return this.fitConnectDestinationId;
+  }
+
+  /**
    * Frei wählbarer Parameter.
    * {@code null}, wenn kein Parameter definiert wurde.
    */
@@ -485,7 +524,7 @@ public class StartParameterV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", zustaendigeOrganisationseinheiten=" + this.getZustaendigeOrganisationseinheiten() + ", ars=" + this.getArs() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ", testStart=" + this.isTestStart() + ", authentication=" + this.getAuthentication() + ", startData=" + this.getStartData() + ")";
+    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", zustaendigeOrganisationseinheiten=" + this.getZustaendigeOrganisationseinheiten() + ", ars=" + this.getArs() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", fitConnectDestinationId=" + this.getFitConnectDestinationId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ", testStart=" + this.isTestStart() + ", authentication=" + this.getAuthentication() + ", startData=" + this.getStartData() + ")";
   }
 
   @Override
@@ -524,6 +563,9 @@ public class StartParameterV1 {
     final Object this$fitConnectAreaId = this.getFitConnectAreaId();
     final Object other$fitConnectAreaId = other.getFitConnectAreaId();
     if (this$fitConnectAreaId == null ? other$fitConnectAreaId != null : !this$fitConnectAreaId.equals(other$fitConnectAreaId)) return false;
+    final Object this$fitConnectDestinationId = this.getFitConnectDestinationId();
+    final Object other$fitConnectDestinationId = other.getFitConnectDestinationId();
+    if (this$fitConnectDestinationId == null ? other$fitConnectDestinationId != null : !this$fitConnectDestinationId.equals(other$fitConnectDestinationId)) return false;
     final Object this$p = this.getP();
     final Object other$p = other.getP();
     if (this$p == null ? other$p != null : !this$p.equals(other$p)) return false;
@@ -570,6 +612,8 @@ public class StartParameterV1 {
     result = result * PRIME + ($ags == null ? 43 : $ags.hashCode());
     final Object $fitConnectAreaId = this.getFitConnectAreaId();
     result = result * PRIME + ($fitConnectAreaId == null ? 43 : $fitConnectAreaId.hashCode());
+    final Object $fitConnectDestinationId = this.getFitConnectDestinationId();
+    result = result * PRIME + ($fitConnectDestinationId == null ? 43 : $fitConnectDestinationId.hashCode());
     final Object $p = this.getP();
     result = result * PRIME + ($p == null ? 43 : $p.hashCode());
     final Object $parameters = this.getParameters();
@@ -612,6 +656,11 @@ public class StartParameterV1 {
    * oder kein gültiger ARS beim Prozessstart definiert wurde.
    * @param fitConnectAreaId Area-ID der FitConnect Routing-API.
    * {@code null}, wenn der Parameter nicht beim Prozessstart definiert wurde.
+   * @param fitConnectDestinationId ID des Zustellpunkts bei FitConnect, der für die Parametrisierung über die Routing-API ermittelt wurde.
+   * {@code null}, wenn Jesaja zur Parametrisierung beim Prozessstart genutzt wurde.
+   * Auf service-bw und Amt24 immer {@code null}.
+   *
+   * @since Release 1.215
    * @param p Frei wählbarer Parameter.
    * {@code null}, wenn kein Parameter definiert wurde.
    * @param parameters Parameter einer Parameter-Quelle.
@@ -625,7 +674,7 @@ public class StartParameterV1 {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final List<ProcessOrganisationseinheitExtendedV1> zustaendigeOrganisationseinheiten, final String ars, final String ags, final String fitConnectAreaId, final String p, final Map<String, Object> parameters, final boolean testStart, final AuthenticationInfoV1 authentication, final Object startData) {
+  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final List<ProcessOrganisationseinheitExtendedV1> zustaendigeOrganisationseinheiten, final String ars, final String ags, final String fitConnectAreaId, final String fitConnectDestinationId, final String p, final Map<String, Object> parameters, final boolean testStart, final AuthenticationInfoV1 authentication, final Object startData) {
     this.startTime = startTime;
     this.startedByUser = startedByUser;
     this.processName = processName;
@@ -635,6 +684,7 @@ public class StartParameterV1 {
     this.ars = ars;
     this.ags = ags;
     this.fitConnectAreaId = fitConnectAreaId;
+    this.fitConnectDestinationId = fitConnectDestinationId;
     this.p = p;
     this.parameters = parameters;
     this.testStart = testStart;

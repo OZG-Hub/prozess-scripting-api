@@ -264,4 +264,12 @@ public interface ScriptingApiV1
    * @since Release 1.208
    */
   MessagingApiV1 getMessaging();
+
+  /**
+   * Gibt die Schema-Validation-API zurück.
+   *
+   * @return die Validation-API, nie {@code null}
+   * @since Release 1.215
+   */
+  SchemaValidationApiV1 getSchemaValidation();
 }

@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "@type")
 @JsonSubTypes({
     @JsonSubTypes.Type(value = BasicAuthAuthenticationConfigV1.class, name = "BasicAuth"),
-    @JsonSubTypes.Type(value = KeystoreAuthenticationConfigV1.class, name = "Keystore")
+    @JsonSubTypes.Type(value = KeystoreAuthenticationConfigV1.class, name = "Keystore"),
+    @JsonSubTypes.Type(value = OAuthAuthenticationConfigV1.class, name = "OAuth")
 })
 public interface AuthenticationConfigV1 extends Cloneable
 {
