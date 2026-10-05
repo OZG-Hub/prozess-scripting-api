@@ -17,14 +17,15 @@ public interface DataStorageApiV1
    * Ermöglicht es, Daten im Dateisystem abzulegen und mit einer Referenz auf diese Daten zu arbeiten.
    * Auf diese Weise werden große Datenmengen nicht in der Datenbank abgelegt.
    * <p>
-   * Nach dem Ende der Hauptprozessinstanz, im Rahmen derer die Daten gespeichert wurde, bleiben die Daten
-   * noch für bis zu 182 Tage erhalten und werden anschließend automatisch gelöscht.
+   * Nach dem Ende der Hauptprozessinstanz, im Rahmen derer die Daten gespeichert wurde, wird das Löschdatum
+   * entsprechend der Konfiguration in den Metadaten für den Prozess (completedProcessDataRetentionDays) oder
+   * entsprechend dem Default-Value (process.historic-data.clean-up.retentionPeriod) für die Umgebung gesetzt.
+   * Wenn das Datum des Löschdatums erreicht ist, werden die Dateien automatisch gelöscht.
    *
    * @param data die zu speichernden Daten als Byte-Array
    *
    * @return Referenz auf die gespeicherten Daten; das Attribut label ist nicht gesetzt, mimetype ist
    * application/octet-stream, uploadedFilename ist eine UUID
-   *
    * @throws IllegalArgumentException falls der Parameter {@code data} den Wert {@code null} hat
    */
   BinaryContentV1 toBinaryContent(byte[] data);
@@ -44,10 +45,8 @@ public interface DataStorageApiV1
    * @param targetProcessDefinitionKeys ProzessKeys, die Zugriff auf die Daten erhalten sollen
    *
    * @return verschlüsseltes Token zum Lesen der Daten
-   *
    * @throws IllegalArgumentException falls {@code data} oder {@code targetProcessDefinitionKeys} den Wert
    * {@code null} haben
-   *
    * @since Release 1.208
    */
   String saveAndReturnFileAccessor(byte[] data, List<String> targetProcessDefinitionKeys);
@@ -62,10 +61,18 @@ public interface DataStorageApiV1
    * @param fileAccessor das verschlüsselte Token, das den Speicherort und die Zugriffsberechtigung definiert
    *
    * @return die gelesenen Daten als Byte-Array
-   *
    * @throws IllegalArgumentException falls der Parameter {@code fileAccessor} den Wert {@code null} hat
-   *
    * @since Release 1.208
    */
   byte[] readFromFileAccessor(String fileAccessor);
+
+  /**
+   * Löscht die Daten durch den File-Accessor referenzierten Daten aus dem Dateisystem.
+   * Diese Methode wird nur auf der Prozess-Engine V2 unterstützt.
+   * <p>
+   * @param fileAccessor das verschlüsselte Token, das den Speicherort und die Zugriffsberechtigung definiert
+   *
+   * @throws IllegalArgumentException falls der Parameter {@code fileAccessor} den Wert {@code null} hat
+   */
+  void deleteAccessibleFile(String fileAccessor);
 }

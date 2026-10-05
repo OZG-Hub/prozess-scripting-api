@@ -4,6 +4,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.validator;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Validierungsregel, die prüft, dass die Nutzereingabe ein Datum oder eine Uhrzeit ist und nicht nach einem

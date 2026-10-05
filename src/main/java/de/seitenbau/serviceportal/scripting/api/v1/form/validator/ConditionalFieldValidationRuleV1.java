@@ -2,6 +2,7 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.validator;
 
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldKeyV1;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Abstrakte Elternklasse für Validierungsregeln, die auf ein Feld referenzieren.

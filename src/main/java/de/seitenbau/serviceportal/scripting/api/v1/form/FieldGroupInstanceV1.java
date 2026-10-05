@@ -5,6 +5,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import de.seitenbau.serviceportal.scripting.api.v1.form.condition.DisplayConditionV1;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Instanz einer Feldgruppe.

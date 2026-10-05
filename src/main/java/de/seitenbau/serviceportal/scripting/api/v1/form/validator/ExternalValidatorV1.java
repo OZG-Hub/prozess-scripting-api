@@ -2,6 +2,7 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.validator;
 
 import de.seitenbau.serviceportal.scripting.api.v1.form.ajax.DynamicDataSourcePropertiesV1;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Validierungsregel, die ein externes System zum Prüfen nutzt.

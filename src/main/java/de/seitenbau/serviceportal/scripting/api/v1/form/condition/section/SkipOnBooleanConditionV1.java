@@ -4,6 +4,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.condition.section;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FieldGroupInstanceV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormV1;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Eine Bedingung zum Überspringen von Elementen.

@@ -8,6 +8,7 @@ import de.seitenbau.serviceportal.scripting.api.v1.form.FieldGroupInstanceV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldKeyV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormV1;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Abstrakte Elternklasse für Sichtbarkeitsbedingungen, deren Sichtbarkeiten von einem Feldwert abhängen.

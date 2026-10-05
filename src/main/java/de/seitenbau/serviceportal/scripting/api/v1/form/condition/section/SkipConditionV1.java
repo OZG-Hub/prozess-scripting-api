@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FieldGroupInstanceV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormV1;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Abstrakte Elternklasse für Bedingungen zum Überspringen von Elementen.

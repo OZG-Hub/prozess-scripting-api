@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import de.seitenbau.serviceportal.scripting.api.v1.form.content.FormFieldVerificationLevelV1;
 import lombok.NonNull;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Validierungsregel, die prüft, dass der Wert eines Feldes eine bestimmte Herkunft hat.

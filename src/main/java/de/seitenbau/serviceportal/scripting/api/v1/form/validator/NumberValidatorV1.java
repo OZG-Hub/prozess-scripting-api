@@ -3,6 +3,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.validator;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Validierungsregel, die prüft, dass ein Feldwert eine Zahl ist.

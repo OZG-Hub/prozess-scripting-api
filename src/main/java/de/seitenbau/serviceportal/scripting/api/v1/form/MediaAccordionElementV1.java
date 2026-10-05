@@ -4,6 +4,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.form;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.NonNull;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Ein Tab / Element im Medien-Akkordeon.

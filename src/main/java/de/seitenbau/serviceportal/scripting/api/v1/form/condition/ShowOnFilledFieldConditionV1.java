@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FieldGroupInstanceV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormFieldV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormV1;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Sichtbarkeitsbedingung, die erfüllt ist, wenn das referenzierte Feld befüllt ist.

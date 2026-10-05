@@ -6,6 +6,7 @@ import java.util.Set;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Validierungsregel, die ein Feld zum Pflichtfeld macht, wenn das referenziertes

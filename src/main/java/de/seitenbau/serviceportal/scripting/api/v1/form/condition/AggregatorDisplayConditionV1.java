@@ -3,6 +3,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.condition;
 
 import java.util.ArrayList;
 import java.util.List;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Abstrakte Elternklasse für komplexe Sichtbarkeitsbedingungen.

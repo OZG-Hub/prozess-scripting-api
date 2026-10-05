@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FieldGroupInstanceV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormV1;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Bedingung zum Überspringen von Elementen.

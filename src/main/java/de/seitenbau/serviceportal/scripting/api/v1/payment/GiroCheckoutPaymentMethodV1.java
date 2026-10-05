@@ -22,5 +22,33 @@ public enum GiroCheckoutPaymentMethodV1
   KREDITKARTE,
 
   /** PayPal. */
-  PAYPAL
+  PAYPAL,
+
+  /**
+   * Direktüberweisung.
+   *
+   * @since Release 1.216
+   */
+  DIRECT_BANK_TRANSFER,
+
+  /**
+   * WERO.
+   *
+   * @since Release 1.216
+   */
+  WERO,
+
+  /**
+   * Google Pay.
+   *
+   * @since Release 1.216
+   */
+  GOOGLE_PAY,
+
+  /**
+   * Apple Pay.
+   *
+   * @since Release 1.216
+   */
+  APPLE_PAY
 }

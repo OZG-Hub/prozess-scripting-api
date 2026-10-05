@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import de.seitenbau.serviceportal.scripting.api.v1.form.condition.DisplayConditionV1;
 import lombok.NonNull;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Abstrakte Elternklasse für Feldgruppen und deren Instanzen.

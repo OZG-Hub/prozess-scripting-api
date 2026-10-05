@@ -2,6 +2,7 @@
 package de.seitenbau.serviceportal.scripting.api.v1.form.content;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Datei die auf einer externen Dateiablage gespeichert wird.

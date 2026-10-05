@@ -4,6 +4,7 @@ package de.seitenbau.serviceportal.scripting.api.v1.form.condition;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FieldGroupInstanceV1;
 import de.seitenbau.serviceportal.scripting.api.v1.form.FormV1;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Komplexe Sichtbarkeitsbedingung, bei der mindestens eine der enthaltenen Sichtbarkeitsbedingungen erfüllt

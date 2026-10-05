@@ -86,6 +86,12 @@ public class StartParameterV1 {
    */
   private Map<String, Object> parameters;
   /**
+   * Parameter aus dem EfA-Parameter-Portal.
+   * Auf service-bw und Amt24 nie gesetzt und immer {@code null}.
+   * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
+   */
+  private Map<String, Object> efaParameters;
+  /**
    * {@code true}, wenn die Prozessinstanz im Rahmen eines Test-Starts erzeugt wurde. {@code false}, wenn die
    * Prozessinstanz regulär gestartet wurde.
    */
@@ -139,6 +145,9 @@ public class StartParameterV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     private Map<String, Object> parameters;
+    @SuppressWarnings("all")
+    @lombok.Generated
+    private Map<String, Object> efaParameters;
     @SuppressWarnings("all")
     @lombok.Generated
     private boolean testStart;
@@ -309,6 +318,19 @@ public class StartParameterV1 {
     }
 
     /**
+     * Parameter aus dem EfA-Parameter-Portal.
+     * Auf service-bw und Amt24 nie gesetzt und immer {@code null}.
+     * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
+     * @return {@code this}.
+     */
+    @SuppressWarnings("all")
+    @lombok.Generated
+    public StartParameterV1.StartParameterV1Builder efaParameters(final Map<String, Object> efaParameters) {
+      this.efaParameters = efaParameters;
+      return this;
+    }
+
+    /**
      * {@code true}, wenn die Prozessinstanz im Rahmen eines Test-Starts erzeugt wurde. {@code false}, wenn die
      * Prozessinstanz regulär gestartet wurde.
      * @return {@code this}.
@@ -345,14 +367,14 @@ public class StartParameterV1 {
     @SuppressWarnings("all")
     @lombok.Generated
     public StartParameterV1 build() {
-      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.zustaendigeOrganisationseinheiten, this.ars, this.ags, this.fitConnectAreaId, this.fitConnectDestinationId, this.p, this.parameters, this.testStart, this.authentication, this.startData);
+      return new StartParameterV1(this.startTime, this.startedByUser, this.processName, this.leistung, this.organisationseinheit, this.zustaendigeOrganisationseinheiten, this.ars, this.ags, this.fitConnectAreaId, this.fitConnectDestinationId, this.p, this.parameters, this.efaParameters, this.testStart, this.authentication, this.startData);
     }
 
     @Override
     @SuppressWarnings("all")
     @lombok.Generated
     public String toString() {
-      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", zustaendigeOrganisationseinheiten=" + this.zustaendigeOrganisationseinheiten + ", ars=" + this.ars + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", fitConnectDestinationId=" + this.fitConnectDestinationId + ", p=" + this.p + ", parameters=" + this.parameters + ", testStart=" + this.testStart + ", authentication=" + this.authentication + ", startData=" + this.startData + ")";
+      return "StartParameterV1.StartParameterV1Builder(startTime=" + this.startTime + ", startedByUser=" + this.startedByUser + ", processName=" + this.processName + ", leistung=" + this.leistung + ", organisationseinheit=" + this.organisationseinheit + ", zustaendigeOrganisationseinheiten=" + this.zustaendigeOrganisationseinheiten + ", ars=" + this.ars + ", ags=" + this.ags + ", fitConnectAreaId=" + this.fitConnectAreaId + ", fitConnectDestinationId=" + this.fitConnectDestinationId + ", p=" + this.p + ", parameters=" + this.parameters + ", efaParameters=" + this.efaParameters + ", testStart=" + this.testStart + ", authentication=" + this.authentication + ", startData=" + this.startData + ")";
     }
   }
 
@@ -493,6 +515,17 @@ public class StartParameterV1 {
   }
 
   /**
+   * Parameter aus dem EfA-Parameter-Portal.
+   * Auf service-bw und Amt24 nie gesetzt und immer {@code null}.
+   * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
+   */
+  @SuppressWarnings("all")
+  @lombok.Generated
+  public Map<String, Object> getEfaParameters() {
+    return this.efaParameters;
+  }
+
+  /**
    * {@code true}, wenn die Prozessinstanz im Rahmen eines Test-Starts erzeugt wurde. {@code false}, wenn die
    * Prozessinstanz regulär gestartet wurde.
    */
@@ -524,7 +557,7 @@ public class StartParameterV1 {
   @SuppressWarnings("all")
   @lombok.Generated
   public String toString() {
-    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", zustaendigeOrganisationseinheiten=" + this.getZustaendigeOrganisationseinheiten() + ", ars=" + this.getArs() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", fitConnectDestinationId=" + this.getFitConnectDestinationId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ", testStart=" + this.isTestStart() + ", authentication=" + this.getAuthentication() + ", startData=" + this.getStartData() + ")";
+    return "StartParameterV1(startTime=" + this.getStartTime() + ", startedByUser=" + this.getStartedByUser() + ", processName=" + this.getProcessName() + ", leistung=" + this.getLeistung() + ", organisationseinheit=" + this.getOrganisationseinheit() + ", zustaendigeOrganisationseinheiten=" + this.getZustaendigeOrganisationseinheiten() + ", ars=" + this.getArs() + ", ags=" + this.getAgs() + ", fitConnectAreaId=" + this.getFitConnectAreaId() + ", fitConnectDestinationId=" + this.getFitConnectDestinationId() + ", p=" + this.getP() + ", parameters=" + this.getParameters() + ", efaParameters=" + this.getEfaParameters() + ", testStart=" + this.isTestStart() + ", authentication=" + this.getAuthentication() + ", startData=" + this.getStartData() + ")";
   }
 
   @Override
@@ -572,6 +605,9 @@ public class StartParameterV1 {
     final Object this$parameters = this.getParameters();
     final Object other$parameters = other.getParameters();
     if (this$parameters == null ? other$parameters != null : !this$parameters.equals(other$parameters)) return false;
+    final Object this$efaParameters = this.getEfaParameters();
+    final Object other$efaParameters = other.getEfaParameters();
+    if (this$efaParameters == null ? other$efaParameters != null : !this$efaParameters.equals(other$efaParameters)) return false;
     final Object this$authentication = this.getAuthentication();
     final Object other$authentication = other.getAuthentication();
     if (this$authentication == null ? other$authentication != null : !this$authentication.equals(other$authentication)) return false;
@@ -618,6 +654,8 @@ public class StartParameterV1 {
     result = result * PRIME + ($p == null ? 43 : $p.hashCode());
     final Object $parameters = this.getParameters();
     result = result * PRIME + ($parameters == null ? 43 : $parameters.hashCode());
+    final Object $efaParameters = this.getEfaParameters();
+    result = result * PRIME + ($efaParameters == null ? 43 : $efaParameters.hashCode());
     final Object $authentication = this.getAuthentication();
     result = result * PRIME + ($authentication == null ? 43 : $authentication.hashCode());
     final Object $startData = this.getStartData();
@@ -667,6 +705,9 @@ public class StartParameterV1 {
    * Mögliche Quellen auf OZG-Hub sind Jesaja und Fit-Connect.
    * Auf service-bw und Amt24 auf der Prozess-Engine V2 kommen die Parameter aus der Parameterverwaltung im
    * Admincenter. {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
+   * @param efaParameters Parameter aus dem EfA-Parameter-Portal.
+   * Auf service-bw und Amt24 nie gesetzt und immer {@code null}.
+   * {@code null}, wenn keine Parameter abgefragt wurden, weil Daten zum Abfragen fehlten.
    * @param testStart {@code true}, wenn die Prozessinstanz im Rahmen eines Test-Starts erzeugt wurde. {@code false}, wenn die
    * Prozessinstanz regulär gestartet wurde.
    * @param authentication Enthält Informationen über die Authentifizierungsanforderungen dieser Prozessinstanz.
@@ -674,7 +715,7 @@ public class StartParameterV1 {
    */
   @SuppressWarnings("all")
   @lombok.Generated
-  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final List<ProcessOrganisationseinheitExtendedV1> zustaendigeOrganisationseinheiten, final String ars, final String ags, final String fitConnectAreaId, final String fitConnectDestinationId, final String p, final Map<String, Object> parameters, final boolean testStart, final AuthenticationInfoV1 authentication, final Object startData) {
+  public StartParameterV1(final Date startTime, final StartedByUserV1 startedByUser, final String processName, final LeistungParameterV1 leistung, final OrganisationseinheitParameterV1 organisationseinheit, final List<ProcessOrganisationseinheitExtendedV1> zustaendigeOrganisationseinheiten, final String ars, final String ags, final String fitConnectAreaId, final String fitConnectDestinationId, final String p, final Map<String, Object> parameters, final Map<String, Object> efaParameters, final boolean testStart, final AuthenticationInfoV1 authentication, final Object startData) {
     this.startTime = startTime;
     this.startedByUser = startedByUser;
     this.processName = processName;
@@ -687,6 +728,7 @@ public class StartParameterV1 {
     this.fitConnectDestinationId = fitConnectDestinationId;
     this.p = p;
     this.parameters = parameters;
+    this.efaParameters = efaParameters;
     this.testStart = testStart;
     this.authentication = authentication;
     this.startData = startData;
